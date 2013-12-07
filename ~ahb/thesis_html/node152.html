@@ -1,0 +1,474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Tension matrix expansion</TITLE>
+<META NAME="description" CONTENT="Tension matrix expansion">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node153.html">
+<LINK REL="previous" HREF="node151.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node153.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1907"
+  HREF="node153.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1905"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1899"
+  HREF="node151.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1908"
+  HREF="node153.html">Useful geometric boundary integrals</A>
+<B> Up:</B> <A NAME="tex2html1906"
+  HREF="node148.html">Appendix I: Scaling expansion</A>
+<B> Previous:</B> <A NAME="tex2html1900"
+  HREF="node151.html">Applying boundary conditions and</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001840000000000000000">
+Tension matrix expansion</A>
+</H1>
+
+<P>
+The tension matrix (using the `dilation' weighting function <IMG
+ WIDTH="97" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1948.gif"
+ ALT="$w(s) = 1/r_n$">)
+in the scaling eigenfunction basis has elements
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\tilde{F}_{\mu\nu}(k) \ = \ \oint \! \frac{ds}{r_n} \,
+	\psi_\mu(k_\mu + \delta_\mu) \, \psi_\nu(k_\nu + \delta_\nu),
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:tensmatdef"></A><IMG
+ WIDTH="434" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1949.gif"
+ ALT="\begin{displaymath}
+\tilde{F}_{\mu\nu}(k) \ = \ \oint \! \frac{ds}{r_n} \,
+\psi_\mu(k_\mu + \delta_\mu) \, \psi_\nu(k_\nu + \delta_\nu),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the wavenumber shifts for the two states involved are
+<!-- MATH
+ $\delta_\mu \equiv k - k_\mu$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img869.gif"
+ ALT="$\delta_\mu \equiv k-k_\mu$"> and <!-- MATH
+ $\delta_\nu \equiv k - k_\nu$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1950.gif"
+ ALT="$\delta_\nu \equiv k - k_\nu$">.
+As usual I define the wavenumber difference
+<!-- MATH
+ $\kappa \equiv k_\mu - k_\nu = \delta_\nu - \delta_\mu$
+ -->
+<IMG
+ WIDTH="172" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1951.gif"
+ ALT="$\kappa \equiv k_\mu - k_\nu = \delta_\nu - \delta_\mu$">.
+Substitution of (<A HREF="node151.html#eq:psiexp">I.18</A>) gives a power series in the <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">'s,
+which we will study and make estimates for
+unknown boundary integrals to grasp the general structure.
+We will assume for simplicity that the billiard size <!-- MATH
+ ${\mathsf{L}}\approx 1$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1002.gif"
+ ALT="${\mathsf{L}}\approx 1$">, and
+remain in <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$">.
+We will ignore differences in <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1952.gif"
+ ALT="$k_\nu$"> from <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> when appropriate,
+and look only for the dominant off-diagonal terms.
+
+<P>
+The <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1947.gif"
+ ALT="$O(\delta^2)$"> term in <IMG
+ WIDTH="18" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img876.gif"
+ ALT="$\tilde{F}$"> comes
+from the lowest order in (<A HREF="node151.html#eq:psiexp">I.18</A>),
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\tilde{F}^{(2)}_{\mu\nu}(k) \ = \ 
+	\frac{\delta_\mu \delta_\nu}{k_\mu k_\nu} \oint \! ds \,r_n
+	\, \psi_\mu^n \psi_\nu^n
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="393" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1953.gif"
+ ALT="\begin{displaymath}
+\tilde{F}^{(2)}_{\mu\nu}(k) \ = \
+\frac{\delta_\mu \delta_\nu}{k_\mu k_\nu} \oint \! ds \,r_n
+\, \psi_\mu^n \psi_\nu^n
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which we can write as <!-- MATH
+ $2\delta_\mu \delta_\nu M_{\mu\nu}$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1954.gif"
+ ALT="$2\delta_\mu \delta_\nu M_{\mu\nu}$">
+(see Section&nbsp;<A HREF="node73.html#sec:scaling">6.1.1</A>),
+where <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> is quasi-diagonal.
+The diagonal is <!-- MATH
+ $M_{\mu\mu} = 1$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1955.gif"
+ ALT="$M_{\mu\mu} = 1$">, and
+we have from the considerations of Section&nbsp;<A HREF="node75.html#sec:prefactor">6.1.2</A>
+small off-diagonal elements of size <!-- MATH
+ $M_{\mu\nu} \sim k^{-1/2} \kappa^2 O(1)$
+ -->
+<IMG
+ WIDTH="156" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1956.gif"
+ ALT="$M_{\mu\nu} \sim k^{-1/2} \kappa^2 O(1)$">,
+for <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$">.
+
+<P>
+The <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1957.gif"
+ ALT="$O(\delta^3)$"> term in <IMG
+ WIDTH="18" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img876.gif"
+ ALT="$\tilde{F}$"> is, after some rearrangement,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\tilde{F}^{(3)}_{\mu\nu}(k) \ = \ -\frac{2 \delta_\mu^3}{k} M_{\mu\nu}
+	- \frac{\delta_\mu\delta_\nu}{2k^3} \kappa \oint \! ds \, r_n r_t
+	\, (\psi_\nu^n \psi_\mu^{nt} - \psi_\mu^n \psi_\nu^{nt}) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:f3"></A><IMG
+ WIDTH="498" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1958.gif"
+ ALT="\begin{displaymath}
+\tilde{F}^{(3)}_{\mu\nu}(k) \ = \ -\frac{2 \delta_\mu^3}{k}...
+..._t
+\, (\psi_\nu^n \psi_\mu^{nt} - \psi_\mu^n \psi_\nu^{nt}) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where an integral of <!-- MATH
+ $r_n r_t \partial_t(\psi_\mu^n \psi_\nu^n)$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1959.gif"
+ ALT="$r_n r_t \partial_t(\psi_\mu^n \psi_\nu^n)$">
+was performed by parts.
+This required use of <!-- MATH
+ $\partial_t(r_n r_t) = r_n + \alpha(r_n^2 - r_t^2)$
+ -->
+<IMG
+ WIDTH="204" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1960.gif"
+ ALT="$\partial_t(r_n r_t) = r_n + \alpha(r_n^2 - r_t^2)$">,
+a different expression than found by VS.
+It can be proved easily using <!-- MATH
+ $\partial_t r_n = \alpha r_t$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1961.gif"
+ ALT="$\partial_t r_n = \alpha r_t$"> and
+<!-- MATH
+ $\partial_t r_t = 1 - \alpha r_n$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1962.gif"
+ ALT="$\partial_t r_t = 1 - \alpha r_n$">, which follow from (<A HREF="node150.html#eq:brules1">I.8</A>)
+and (<A HREF="node150.html#eq:brules2">I.9</A>).
+Remarkably, the <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1025.gif"
+ ALT="$\alpha$"> dependence then cancels out, giving the same
+<!-- MATH
+ $\tilde{F}^{(3)}$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1963.gif"
+ ALT="$\tilde{F}^{(3)}$"> diagonal term as that of VS.
+We believe that the integral in (<A HREF="node152.html#eq:f3">I.21</A>) does not have any
+quasi-orthogonal property, so can be estimated using random waves.
+The estimate gives <IMG
+ WIDTH="71" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1964.gif"
+ ALT="$k^{5/2} O(1)$"> for this integral, and shows that this term
+dominates over any off-diagonal contribution from the first term (involving <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$">).
+The factor of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img391.gif"
+ ALT="$\kappa$"> in this term means that there is a weak form
+of quasi-diagonality at this order. 
+Importantly, for <IMG
+ WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1965.gif"
+ ALT="$\kappa \ll 1$"> the off-diagonal <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1957.gif"
+ ALT="$O(\delta^3)$"> error
+renders the <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1947.gif"
+ ALT="$O(\delta^2)$"> error insignificant.
+Hence we expect the quasi-diagonality property of <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> to play no role in errors
+in the scaling method.
+
+<P>
+The <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1966.gif"
+ ALT="$O(\delta^4)$"> and higher terms in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> become very messy.
+I believe that the
+dominant <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1966.gif"
+ ALT="$O(\delta^4)$"> terms, both on and off the diagonal, are
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\tilde{F}^{(4)}_{\mu\nu}(k) \ = \ -\frac{\delta_\mu\delta_\nu
+(\delta_\mu^2 + \delta_\nu^2)}{6 k^2} \oint \! ds \, r_n^3 \, \psi_\mu^n \psi_\nu^n
+	\ + \ \frac{\delta_\mu^2\delta_\nu^2}{k^4} \oint \! ds \, r_n^2 r_t^2 \,
+	\psi_\mu^{nt} \psi_\nu^{nt} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:f4"></A><IMG
+ WIDTH="533" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1967.gif"
+ ALT="\begin{displaymath}
+\tilde{F}^{(4)}_{\mu\nu}(k) \ = \ -\frac{\delta_\mu\delta_\...
+...} \oint \! ds \, r_n^2 r_t^2 \,
+\psi_\mu^{nt} \psi_\nu^{nt} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This can be seen by comparing powers of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> and using random-wave estimates.
+A random-wave estimate of the integrals then gives
+<!-- MATH
+ $\tilde{F}^{(4)} \approx \delta_\mu^4 O(1)$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1968.gif"
+ ALT="$\tilde{F}^{(4)} \approx \delta_\mu^4 O(1)$"> on the diagonal and
+<!-- MATH
+ $\delta_\mu^4 k^{-1/2} O(1)$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1969.gif"
+ ALT="$\delta_\mu^4 k^{-1/2} O(1)$"> off-diagonal.
+Note that the off-diagonal has no quasi-diagonality property at this or higher
+orders.
+For higher orders <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1970.gif"
+ ALT="$O(\delta^m)$"> for <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img264.gif"
+ ALT="$m$"> even, we expect 
+<!-- MATH
+ $\tilde{F}^{(m)} \approx \delta_\mu^m O(1)$
+ -->
+<IMG
+ WIDTH="122" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1971.gif"
+ ALT="$\tilde{F}^{(m)} \approx \delta_\mu^m O(1)$"> on the diagonal and
+<!-- MATH
+ $O(\delta^m) k^{-1/2} O(1)$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1972.gif"
+ ALT="$O(\delta^m) k^{-1/2} O(1)$"> off-diagonal.
+For <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img264.gif"
+ ALT="$m$"> odd, the leading diagonal
+terms are down by a factor of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> which renders them
+insignificant.
+
+<P>
+To summarize, the diagonal of the tension matrix has the form given in
+Eq.(<A HREF="node84.html#eq:tensdiagexp">6.27</A>), and for  <!-- MATH
+ $\delta_\mu, \delta_\nu \ll 1$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img877.gif"
+ ALT="$\delta_\mu, \delta_\nu \ll 1$"> the
+dominant off-diagonal terms are
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\tilde{F}_{\mu\nu}(k) \ \approx \
+	\frac{\delta_\mu\delta_\nu}{k^{1/2}} \left[
+	\kappa O(1) + (\delta_\mu^2 + \delta_\nu^2) O(1) +
+	\delta_\mu\delta_\nu O(1) \rule{0in}{0.2in} \right] .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:foffdiag"></A><IMG
+ WIDTH="484" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1973.gif"
+ ALT="\begin{displaymath}
+\tilde{F}_{\mu\nu}(k) \ \approx \
+\frac{\delta_\mu\delta_\...
+... O(1) +
+\delta_\mu\delta_\nu O(1) \rule{0in}{0.2in} \right] .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.23)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Here contributions from orders 3 and 4 were included because it may be
+that the 4th order (the lowest order with <EM>no</EM> quasi-diagonality,
+<I>i.e. </I>no powers of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img391.gif"
+ ALT="$\kappa$">) contributes most to errors in the scaling method.
+It is important to note that the 2nd order term (due to off-diagonal strength
+of <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$">) is negligible.
+It is clear that more research is needed on the properties of the higher-order
+terms, especially if an explanation of the tension error <IMG
+ WIDTH="20" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1974.gif"
+ ALT="$\delta^6$"> power-law
+growth (Section&nbsp;<A HREF="node87.html#sec:6th">6.3.1</A>) is sought.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1907"
+  HREF="node153.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1905"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1899"
+  HREF="node151.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1908"
+  HREF="node153.html">Useful geometric boundary integrals</A>
+<B> Up:</B> <A NAME="tex2html1906"
+  HREF="node148.html">Appendix I: Scaling expansion</A>
+<B> Previous:</B> <A NAME="tex2html1900"
+  HREF="node151.html">Applying boundary conditions and</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

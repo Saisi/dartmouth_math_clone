@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Chapters 5 and 6:
+Improved billiard quantization methods</TITLE>
+<META NAME="description" CONTENT="Chapters 5 and 6:
+Improved billiard quantization methods">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html348"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html346"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html340"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html349"
+  HREF="node10.html">Chapter&nbsp;7: Quantum point contact</A>
+<B> Up:</B> <A NAME="tex2html347"
+  HREF="node6.html">Chapter 1: Introduction and summary</A>
+<B> Previous:</B> <A NAME="tex2html341"
+  HREF="node8.html">Chapters 2,3 and 4:</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00230000000000000000">
+Chapters </A><A HREF="node49.html#ch:ipwdm">5</A> and <A HREF="node71.html#ch:verg">6</A>:
+Improved billiard quantization methods
+</H1>
+
+<P>
+The rapid development of electronic computing machines in the last 50 years
+has had an impact on scientific research whose size is hard to
+grasp<A NAME="tex2html2"
+  HREF="footnode.html#foot828"><SUP>1.2</SUP></A>.
+The interplay between numerical simulations and theoretical models now plays a
+crucial role in most areas of physics, chemistry, engineering, and other
+sciences.
+However, this impact would have been be drastically reduced were it not for
+the parallel development of efficient numerical algorithms.
+For instance, the invention of two techniques alone--the
+diagonalization of dense matrices[<A
+ HREF="node161.html#golub+vanloan">81</A>],
+and the Fast Fourier Transform[<A
+ HREF="node161.html#numrec">161</A>]--has allowed scientists
+to handle hitherto undreamed-of problems on a daily basis.
+
+<P>
+Quantum chaos [<A
+ HREF="node161.html#hellerleshouches">91</A>] is no exception: it has relied heavily
+on numerical solutions almost since its inception
+(as did its forebear, classical chaotic dynamics[<A
+ HREF="node161.html#ottbook">154</A>]).
+Billiards in <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$"> (or sometimes 3) dimensions have been popular systems for
+study because
+use of the free-space Green's function allows formulation as a boundary problem.
+Thus
+quantum eigenstates can be calculated at much higher energy than with the
+traditional (<I>e.g. </I>finite element) methods which cover the entire domain.
+High energies are so sought-after because most of the theoretical predictions
+involve the semiclassical limit <!-- MATH
+ $\hbar\rightarrow0$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img77.gif"
+ ALT="$\hbar\rightarrow0$">.
+In this part of the thesis I will present new and efficient
+methods for finding these high-energy eigenstates.
+
+<P>
+The time-independent Schrodinger's equation in such a system is
+the Helmholtz wave equation,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+(\nabla^2 + k^2) \psi{({\mathbf r})}\ = \ 0,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:i_helm"></A><IMG
+ WIDTH="357" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img78.gif"
+ ALT="\begin{displaymath}
+(\nabla^2 + k^2) \psi{({\mathbf r})}\ = \ 0,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+with certain boundary conditions.
+This problem is common to many other areas of physics and engineering
+(mesoscopic devices, acoustics, elastodynamics of thin plates,
+scalar electromagnetics and optics),
+and there
+has been some (but not that much) exchange of ideas between those communities
+and that of quantum chaos.
+If the boundary conditions are open then we have a scattering problem;
+if closed, an eigenvalue problem.
+I will be concerned only with the latter.
+In Section&nbsp;<A HREF="node50.html#sec:eigreview">5.1</A> I present a review, and
+categorize solution methods dependent on whether the basis
+does not (Class A) or does (Class B) depend on energy.
+Only Class B allows formulation as a boundary problem.
+The pioneering chaotic eigenstate studies of
+McDonald and Kaufman [<A
+ HREF="node161.html#macdonald">145</A>]
+and Berry and Wilkinson [<A
+ HREF="node161.html#berrywilk">28</A>] used the Boundary Integral Method
+[<A
+ HREF="node161.html#bim1">36</A>,<A
+ HREF="node161.html#bim2">121</A>]
+(BIM or BEM), while those of Heller
+[<A
+ HREF="node161.html#Heller84">90</A>,<A
+ HREF="node161.html#hellerleshouches">91</A>] used the Plane Wave Decomposition Method (PWDM,
+an original technique).
+Semiclassical quantization methods have also been developed based
+on boundary matching [<A
+ HREF="node161.html#berrykkr">23</A>] or the surface of section
+[<A
+ HREF="node161.html#bogomolny">34</A>].
+All these methods are Class B, and all require an expensive search
+(`sweep' or `hunt') in energy-space for zero-determinants of a matrix.
+
+<P>
+In Chapter&nbsp;<A HREF="node49.html#ch:ipwdm">5</A> I present an original
+Class B sweep method which is a simplified
+version of Heller's PWDM. The problems of missing states and sensitivity to
+basis size choice and matching point density have been solved,
+and the efficieny increased.
+The coefficient vector <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$"> of the nearest eigenfunction to a given
+wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> is given by the largest-eigenvalue (<IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img80.gif"
+ ALT="$\lambda_1$">) solution to
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left[ G(k) - \lambda F(k) \right] {\mathbf x} \ = \ {\mathbf 0} ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="i_geneigprob"></A><IMG
+ WIDTH="368" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img81.gif"
+ ALT="\begin{displaymath}
+\left[ G(k) - \lambda F(k) \right] {\mathbf x} \ = \ {\mathbf 0} ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the matrix <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> takes the norm in the domain,
+and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> takes the norm of the boundary condition error (the `tension').
+I show that <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> can be expressed entirely on the boundary, and discuss
+improved `hunt' methods for zeros of <!-- MATH
+ $\lambda_1^{-1}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img82.gif"
+ ALT="$\lambda_1^{-1}$"> (which give the desired
+eigenwavenumbers <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">). However, a few diagonalizations of (<A HREF="node9.html#i_geneigprob">1.4</A>)
+are still required per state found.
+
+<P>
+Of much more significance is Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A>.
+Here I analyse the
+`scaling method' of Vergini and Saraceno
+[<A
+ HREF="node161.html#v+s">195</A>,<A
+ HREF="node161.html#verginithesis">194</A>],
+which despite being little-understood and little-used, is without doubt the
+most significant advance in numerical billiard quantization in the last 15 years.
+Eigenstates are given by the large-<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img83.gif"
+ ALT="$\lambda$"> solutions of
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left[ \frac{dF}{dk}(k) - \lambda F(k) \right] {\mathbf x} \ = \ {\mathbf 0} ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="i_vergep"></A><IMG
+ WIDTH="378" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img84.gif"
+ ALT="\begin{displaymath}
+\left[ \frac{dF}{dk}(k) - \lambda F(k) \right] {\mathbf x} \ = \ {\mathbf 0} ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+however, through a certain choice of boundary weighting function
+an amazing property of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> and <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img22.gif"
+ ALT="$dF/dk$"> emerges:
+they are <EM>quasi-diagonal</EM> (have very small off-diagonal elements)
+in a basis of
+the exact eigenfunctions rescaled to all have the same wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+This allows (<A HREF="node9.html#i_vergep">1.5</A>) to return up to <IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img85.gif"
+ ALT="$N/10$"> useful eigenfunctions
+for a <EM>single</EM> diagonalization,
+and entirely eliminates the need for `hunt' procedures.
+Here <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> is the matrix size (semiclassical basis size).
+The relative efficiency over sweep methods is <IMG
+ WIDTH="48" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img86.gif"
+ ALT="$\sim 10^3$"> when there are
+several hundred wavelengths across the system, and moreover,
+increases further with increasing <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> and dimension <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">!
+Remarkably, no adequate explanation of the key quasi-diagonality property
+has been known until now.
+I give, for the first time, a semiclassical
+explanation in terms of the `special' nature of
+the dilation deformation (from Chapter&nbsp;<A HREF="node32.html#ch:dil">3</A>).
+I also correct errors in the original authors' derivation
+[<A
+ HREF="node161.html#v+s">195</A>,<A
+ HREF="node161.html#verginithesis">194</A>] of higher-order tension terms.
+
+<P>
+Both chapters are presented as a practical `how-to' guide to the diagonalization
+of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">-dimensional billiards, and I hope they may be of use
+to other communities who solve the Helmholtz eigenproblem.
+I thoroughly analyse the various types of error in both the sweep
+and scaling methods, compare results from the two, and discuss
+the use of real and evanescent plane
+wave basis sets.
+For illustration, I use Bunimovich's stadium billiard (a shape known to
+be classically-chaotic [<A
+ HREF="node161.html#bunimovich">40</A>]), in which
+evanescent basis sets have been pioneered by Vergini[<A
+ HREF="node161.html#verginithesis">194</A>].
+Currently the scaling method applies only to Dirichlet boundary conditions.
+Adequate basis
+sets for more general shapes is an area in dire need of future research.
+My work has involved deriving a collection of useful new formulae for
+boundary evaluation of domain integrals of Helmholtz solutions:
+these are presented in Appendix&nbsp;<A HREF="node137.html#ap:perim">H</A>.
+
+<P>
+Two applications of the scaling method are presented in this thesis.
+The first is the quantum band-profile calculations for Chapters&nbsp;2-4.
+The second is an efficient
+evaluation of overlaps of eigenstates of a billiard with
+eigenstates of the same billiard deformed by various finite amounts
+(Section&nbsp;<A HREF="node90.html#sec:pnm">6.4</A>).
+The profiles of the resulting matrices can be viewed as local densities
+of states (`line shapes'), which are analysed in our publication [<A
+ HREF="node161.html#pnm">48</A>].
+The diagonalization of the deformed stadium billiard is believed to be new.
+
+<P>
+During this work,
+I have benefitted much from fruitful exchanges with Eduardo Vergini.
+I must thank Doron Cohen for first alerting me to the
+semiclassical estimation of the band profile of matrix
+elements on the boundary.
+Finally,
+Appendix&nbsp;<A HREF="node137.html#ap:perim">H</A> resulted from collaboration with Michael Haggerty.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html348"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html346"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html340"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html349"
+  HREF="node10.html">Chapter&nbsp;7: Quantum point contact</A>
+<B> Up:</B> <A NAME="tex2html347"
+  HREF="node6.html">Chapter 1: Introduction and summary</A>
+<B> Previous:</B> <A NAME="tex2html341"
+  HREF="node8.html">Chapters 2,3 and 4:</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

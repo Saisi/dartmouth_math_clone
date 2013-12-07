@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta6 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>oct23</TITLE>
+<META NAME="description" CONTENT="oct23">
+<META NAME="keywords" CONTENT="oct23">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta6">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="oct23.css">
+
+</HEAD>
+
+<BODY >
+
+<P>
+
+<UL>
+<LI><B>Covered today:</B> (NOTE: this is not in the book) System of linear equations
+and techniques for solving them.
+
+<P>
+</LI>
+<LI><B>For Next time:</B>
+
+<P>
+<DL COMPACT>
+<DT>1.</DT>
+<DD>Determine whether <IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img1.gif"
+ ALT="$ (t,2t,3t)$">, where <IMG
+ WIDTH="11" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img2.gif"
+ ALT="$ t$"> is a parameter is a solution of
+the  linear system:
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccc}
+x  & +&y& -z&  =& 0\\
+3x   &-&2y  & +z& =&1
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="172" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img3.gif"
+ ALT="\begin{displaymath}
+\begin{array}{ccccccc}
+x &amp; +&amp;y&amp; -z&amp; =&amp; 0\\
+3x &amp;-&amp;2y &amp; +z&amp; =&amp;1
+\end{array}\end{displaymath}">
+</DIV><P></P>
+</DD>
+<DT>2.</DT>
+<DD>Solve the given linear system without matrix notation:
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccccc}
+x_1   & + & x_2 & - & x_3  & + & x_4  & =& 2\\
+-2x_1 &   &     & + & x_3  &   &      & =& 0\\
+x_1   &-  & x_2 & - & 2x_3 & + & 2x_4 & =&-1
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="309" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img4.gif"
+ ALT="\begin{displaymath}
+\begin{array}{ccccccccc}
+x_1 &amp; + &amp; x_2 &amp; - &amp; x_3 &amp; + &amp; x_4 &amp;...
+... =&amp; 0\\
+x_1 &amp;- &amp; x_2 &amp; - &amp; 2x_3 &amp; + &amp; 2x_4 &amp; =&amp;-1
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</DD>
+<DT>3.</DT>
+<DD>Find the value of <IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img5.gif"
+ ALT="$ c$"> such that the system
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccc}
+cx  & &     & + & z   &=& 0\\
+    & & 2y  &-  & 4z  &=& 0\\
+2x  &-&  y  &   &     &=& 0
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="197" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img6.gif"
+ ALT="\begin{displaymath}
+\begin{array}{ccccccc}
+cx &amp; &amp; &amp; + &amp; z &amp;=&amp; 0\\
+&amp; &amp; 2y &amp;- &amp; 4z &amp;=&amp; 0\\
+2x &amp;-&amp; y &amp; &amp; &amp;=&amp; 0
+\end{array}\end{displaymath}">
+</DIV><P></P>
+has a solution other than <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img7.gif"
+ ALT="$ (0,0,0)$">.
+
+<P>
+</DD>
+<DT>4.</DT>
+<DD>Find all values of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img8.gif"
+ ALT="$ k$"> such that the system 
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccc}
+x_1 & - & x_2   & + & 2x_3  & = & 0\\
+    &   & x_2   & - & x_3   & = & k\\
+-x_1& + & 2x_2  & - & 3x_3  & = & 1
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="226" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img9.gif"
+ ALT="\begin{displaymath}
+\begin{array}{ccccccc}
+x_1 &amp; - &amp; x_2 &amp; + &amp; 2x_3 &amp; = &amp; 0\\
+...
+...&amp; x_3 &amp; = &amp; k\\
+-x_1&amp; + &amp; 2x_2 &amp; - &amp; 3x_3 &amp; = &amp; 1
+\end{array}\end{displaymath}">
+</DIV><P></P>
+has no solution.
+
+<P>
+</DD>
+<DT>5.</DT>
+<DD>Show that the linear system 
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccc}
+ax  & + & by &  = & e\\
+cx  & + & dy &  = & f
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="136" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img10.gif"
+ ALT="\begin{displaymath}
+\begin{array}{ccccc}
+ax &amp; + &amp; by &amp; = &amp; e\\
+cx &amp; + &amp; dy &amp; = &amp; f
+\end{array}\end{displaymath}">
+</DIV><P></P>
+where <IMG
+ WIDTH="74" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img11.gif"
+ ALT="$ a,b,c,d,e$">, and <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img12.gif"
+ ALT="$ f$"> are constants, has a unique solution if <!-- MATH
+ $ad-bc \neq 0$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img13.gif"
+ ALT="$ ad-bc \neq 0$">. 
+Express this solution in terms of <IMG
+ WIDTH="74" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img11.gif"
+ ALT="$ a,b,c,d,e$">, and <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img12.gif"
+ ALT="$ f$">.
+
+<P>
+</DD>
+<DT>6.</DT>
+<DD>Solve each linear system by the Gauss-Jordan matrix elimination method and
+by  Gauss elimination:
+<DL COMPACT>
+<DT>(a)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccc}
+x   & - & 2y & + & z  &  = & 5\\
+-2x & + & 3y & + & z  &  = & 1\\
+x   & + & 3y & + & 2z &  = & 2
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="210" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img14.gif"
+ ALT="\begin{displaymath}
+\begin{array}{ccccccc}
+x &amp; - &amp; 2y &amp; + &amp; z &amp; = &amp; 5\\
+-2x &amp; ...
+...3y &amp; + &amp; z &amp; = &amp; 1\\
+x &amp; + &amp; 3y &amp; + &amp; 2z &amp; = &amp; 2
+\end{array}\end{displaymath}">
+</DIV><P></P>
+</DD>
+<DT>(b)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccc}
+2x_1   & - & x_2 & + & 3x_3 &  = & 4\\
+-x_1 & + & 2x_2& - & x_3  &  = & 0\\
+2x_1 & + & x_2 & + & x_3 &  = & 4
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="225" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img15.gif"
+ ALT="\begin{displaymath}
+\begin{array}{ccccccc}
+2x_1 &amp; - &amp; x_2 &amp; + &amp; 3x_3 &amp; = &amp; 4\\  ...
+...&amp; x_3 &amp; = &amp; 0\\
+2x_1 &amp; + &amp; x_2 &amp; + &amp; x_3 &amp; = &amp; 4
+\end{array}\end{displaymath}">
+</DIV><P></P>
+</DD>
+</DL>
+</DD>
+<DT>7.</DT>
+<DD>List the possible row-reduced echelon forms of the matrix
+<!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{cc}
+a & b\\
+c& d
+\end{array}
+\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="80" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img16.gif"
+ ALT="$\displaystyle \left( \begin{array}{cc}
+a &amp; b\\
+c&amp; d
+\end{array}\right)
+$">
+</DIV><P></P>
+
+<P>
+</DD>
+<DT>8.</DT>
+<DD>Prove that if we multiply any equation of an arbitrary linear system by a 
+nonzero scalar, the resultant system is equivalent to the original one. 
+
+<P>
+</DD>
+<DT>9.</DT>
+<DD>Given a system of linear equations in three variables with the augmented
+matrix 
+<!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{ccccc}
+1 & 0 & 1 & | & 1\\
+0 & 1 & 1 & | & 2\\
+0 & 2 & k & | & k
+\end{array}
+\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="157" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img17.gif"
+ ALT="$\displaystyle \left( \begin{array}{ccccc}
+1 &amp; 0 &amp; 1 &amp; \vert &amp; 1\\
+0 &amp; 1 &amp; 1 &amp; \vert &amp; 2\\
+0 &amp; 2 &amp; k &amp; \vert &amp; k
+\end{array}\right)
+$">
+</DIV><P></P>
+for what values of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img8.gif"
+ ALT="$ k$"> is there no solution for the system? Is there any value of 
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct23/img8.gif"
+ ALT="$ k$"> for which there are infinitely many solutions?
+
+<P>
+</DD>
+</DL>
+</LI>
+</UL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Math 9 Fall 2000
+2000-10-18
+</ADDRESS>
+</BODY>
+</HTML>

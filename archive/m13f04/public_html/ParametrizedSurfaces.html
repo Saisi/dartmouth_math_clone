@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ParametrizedSurfaces.html</title>
+<!-- Created by Maple 9.50, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="ParametrizedSurfaces.html#MapleAutoBookmark1">ParametrizedSurfaces.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><strong></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 13 Fall 2004</strong></u></font></p>
+<p align="center"><font size="4"><strong></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Calculus of Vector-valued Functions</strong></u></font></p>
+<p align="center"><font size="4"><strong></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Examples of Parametrized Surfaces</strong></font></p>
+<p align="center"><font size="4"><strong></font><font color="#0000cc" size="5" face="Lucida Bright"><u>November 16, 2004</strong></u></font></p>
+<p><font size="5" face="Lucida Bright"><strong>
+<br> &nbsp;&nbsp;&nbsp;</strong></font><font size="4" face="Lucida Bright"><strong>Define a parametrized surface in the space</strong></font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>X := (s, t) -&gt; [2 * cos(s) * sin(t), 2 * sin(s) * sin(t), 2 * cos(t)];</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/ParametrizedSurfaces_1.gif" width="287" height="15" alt="X := proc (s, t) options operator, arrow; [2*cos(s)*sin(t), 2*sin(s)*sin(t), 2*cos(t)] end proc" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;</strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong>Let's render it with parameters taking values in some rectangle.</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;Looks like a slice of a sphere!</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>plot3d(X(s,t), s = 0 .. 2, t = 0 .. 1);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/ParametrizedSurfaces_2.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;</strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> Make the parametrizing rectangle larger . . .</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>plot3d(X(s,t), s = 0 .. 4, t = 0 .. 2);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/ParametrizedSurfaces_3.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;</strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong>. . . and larger.</font><font color="#000000" size="4" face="Lucida Bright"> It's indeed a sphere!</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;Black lines are the coordinate curves. "Meridians" and "latitude circles"</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;correspond to s and t being constants, respecively.</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>plot3d(X(s,t), s = 0 .. 2*Pi, t = 0 .. Pi);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/ParametrizedSurfaces_4.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong></strong></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+</body>
+</html>

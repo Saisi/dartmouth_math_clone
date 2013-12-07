@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>section-2-1.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000 size=4>Math 3</font></b>
+</p>
+<p align=left>
+<b><font color=#000000 size=4>Winter 2004</font></b>
+</p>
+<p align=left>
+<b><font color=#000000 size=4>Section 2.1, Tangent and velocity</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>We show the graphs of a function f and some secants.</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>f:=x-&gt;x^3/3: x0:=1:y0:=f(x0):                                                                 printf("        x1            f(x1)      m=(f(x1)-f(x0))/(x1-x0) \n\n"):<br>
+for n from 0 to 4 do<br>
+x1 := x0+2^(-n): m[n] := (f(x1)-f(x0))/(x1-x0):                                             printf("%15.10f %15.10f %15.10f\n",x1,f(x1),m[n]);<br>
+end do:</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>        x1            f(x1)      m=(f(x1)-f(x0))/(x1-x0) </font></pre></tt>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>   2.0000000000    2.6666666670    2.3333333330</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>   1.5000000000    1.1250000000    1.5833333330</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>   1.2500000000     .6510416667    1.2708333330</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>   1.1250000000     .4746093750    1.1302083330</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>   1.0625000000     .3998209635    1.0638020830</font></pre></tt>
+</p>
+<p align=left>
+<font color=#000000>A graph is always good:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot([f(x),m[0]*(x-x0)+y0,m[1]*(x-x0)+y0,m[2]*(x-x0)+y0,m[3]*(x-x0)+y0],x=0.7..2,y=-1..3, color=[black,blue,red,green,yellow]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-2-11.gif" width=642 height=786 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ZommIn.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE1:=proc(T0,I0,N,T,a)<br>
+local i,List,Deltat,Val,Time;<br>
+Digits:=10;<br>
+Val:=I0;<br>
+Time:=T0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(<br>
+-(Val[1])^2-a*Val[1]*Val[2]<br>
+-(1/a)*Val[1]<br>
+-<br>
+Val[2]<br>
+<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(a*Val[1]*Val[2]+<br>
+(1-(1/a))*Val[1]<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+<br>
+<br>
+DE2:=proc(T0,I0,N,T,a)<br>
+local i,List,Deltat,Val,Time;<br>
+Digits:=10;<br>
+Val:=I0;<br>
+Time:=T0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(<br>
+<br>
+-(1/a)*Val[1]<br>
+-<br>
+Val[2]<br>
+<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+(1-(1/a))*Val[1]<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][2][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,[1,1],3,100,1,1);<br>
+<br>
+S2:=DE2(0,[1,1],3,100,1,1);</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/zoom/ZommIn1.gif" width=491 height=29 alt="S1 := [[0, [1, 1]], [100/3, [-65.66666667, 1.]], [2...">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/zoom/ZommIn2.gif" width=491 height=29 alt="S2 := [[0, [1, 1]], [100/3, [-65.66666667, 1.]], [2...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE1(0,[1,1],1000,50,1.1):<br>
+V1:=Make3(S1):<br>
+P1:=listplot(V1,color=red):<br>
+<br>
+<br>
+S2:=DE2(0,[1,1],1000,50,1.1):<br>
+<br>
+V2:=Make3(S2):<br>
+P2:=listplot(V2,color=blue):<br>
+<br>
+<br>
+display(P1,P2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/zoom/ZommIn3.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE1(0,[.1,.1],1000,50,1.1):<br>
+V1:=Make3(S1):<br>
+P1:=listplot(V1,color=red):<br>
+<br>
+<br>
+S2:=DE2(0,[.1,.1],1000,50,1.1):<br>
+<br>
+V2:=Make3(S2):<br>
+P2:=listplot(V2,color=blue):<br>
+<br>
+<br>
+display(P1,P2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/zoom/ZommIn4.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE1(0,[.01,.01],1000,50,1.1):<br>
+V1:=Make3(S1):<br>
+P1:=listplot(V1,color=red):<br>
+<br>
+<br>
+S2:=DE2(0,[.01,.01],1000,50,1.1):<br>
+<br>
+V2:=Make3(S2):<br>
+P2:=listplot(V2,color=blue):<br>
+<br>
+<br>
+display(P1,P2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/zoom/ZommIn5.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE1(0,[.001,.001],1000,50,1.1):<br>
+V1:=Make3(S1):<br>
+P1:=listplot(V1,color=red):<br>
+<br>
+<br>
+S2:=DE2(0,[.001,.001],1000,50,1.1):<br>
+<br>
+V2:=Make3(S2):<br>
+P2:=listplot(V2,color=blue):<br>
+<br>
+<br>
+display(P1,P2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/zoom/ZommIn6.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

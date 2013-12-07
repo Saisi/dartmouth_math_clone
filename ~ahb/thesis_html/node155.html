@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Basis `badness' </TITLE>
+<META NAME="description" CONTENT="Basis `badness' ">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node156.html">
+<LINK REL="previous" HREF="node154.html">
+<LINK REL="up" HREF="node154.html">
+<LINK REL="next" HREF="node156.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1939"
+  HREF="node156.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1937"
+  HREF="node154.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1931"
+  HREF="node154.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1940"
+  HREF="node156.html">Real plane waves (RPWs)</A>
+<B> Up:</B> <A NAME="tex2html1938"
+  HREF="node154.html">Appendix J: Helmholtz basis</A>
+<B> Previous:</B> <A NAME="tex2html1932"
+  HREF="node154.html">Appendix J: Helmholtz basis</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001910000000000000000">
+Basis `badness' <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img39.gif"
+ ALT="$\gamma $"></A>
+</H1>
+
+<P>
+Generally the best (in the least squares sense in the linear Helmholtz
+function space)
+coefficient vector <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$"> able to represent a true
+(domain-normalized) eigenstate
+has exponentially large coefficients.
+This can be expressed (following Vergini [<A
+ HREF="node161.html#verginithesis">194</A>])
+in terms of a basis `badness',
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\gamma \ \equiv \ |{\mathbf x}|^2 ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="318" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1982.gif"
+ ALT="\begin{displaymath}
+\gamma \ \equiv \ \vert{\mathbf x}\vert^2 ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(J.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which diverges exponentially once the basis set size <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> is increased
+beyond <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img723.gif"
+ ALT="$N_{sc}$">.
+Numerically, because of the null-space truncation of Section&nbsp;<A HREF="node60.html#sec:trunc">5.3.2</A>,
+<IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img39.gif"
+ ALT="$\gamma $"> has an upper limit of <!-- MATH
+ $\epsilon^{-1} \sim 10^14$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1983.gif"
+ ALT="$\epsilon^{-1} \sim 10^14$">.
+This issue is identical to the divergence of basis coefficients found
+by Dietz <I>et al. </I>when attempting to expand a `cake billiard' eigenfunction in terms
+of plane waves (or angular-momentum states) [<A
+ HREF="node161.html#dietzcake">63</A>].
+The problem is that of representing evanescent components, which are
+generally present in billiard eigenfunctions, by distributions
+of real plane waves.
+As Berry has shown [<A
+ HREF="node161.html#berryepws">26</A>], rapidly-oscillating distributions
+are required which grow exponentially with the number of
+wavelengths across the system and with the evanescence parameter.
+This was well understood by Vergini, who demonstrated that
+improving the basis by adding a small number of evanescent plane waves
+(in the case of the stadium only)
+enabled <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img39.gif"
+ ALT="$\gamma $"> to reach <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img731.gif"
+ ALT="$O(1)$">.
+This improved the basis tension error <!-- MATH
+ $\epsilon_{{\mbox{\tiny typ}}}$
+ -->
+<IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img828.gif"
+ ALT="$\epsilon_{{\mbox{\tiny typ}}}$"> from about <IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1984.gif"
+ ALT="$10^{-6}$">
+to about <IMG
+ WIDTH="47" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img760.gif"
+ ALT="$10^{-11}$">.
+
+<P>
+In general the requirements of a good basis are small <!-- MATH
+ $\epsilon_{{\mbox{\tiny typ}}}$
+ -->
+<IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img828.gif"
+ ALT="$\epsilon_{{\mbox{\tiny typ}}}$">
+and, if possible, <!-- MATH
+ $\gamma \sim O(1)$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1985.gif"
+ ALT="$\gamma \sim O(1)$"> for most states.
+I first give the real plane waves,
+which work well in many billiard shapes,
+then give Vergini's evanescent plane
+waves which currently are well-adapted only to the stadium billiard (and shapes
+close to it).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1939"
+  HREF="node156.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1937"
+  HREF="node154.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1931"
+  HREF="node154.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1940"
+  HREF="node156.html">Real plane waves (RPWs)</A>
+<B> Up:</B> <A NAME="tex2html1938"
+  HREF="node154.html">Appendix J: Helmholtz basis</A>
+<B> Previous:</B> <A NAME="tex2html1932"
+  HREF="node154.html">Appendix J: Helmholtz basis</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

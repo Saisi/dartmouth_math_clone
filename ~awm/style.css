@@ -1,0 +1,27 @@
+body { text-color: black;
+       background-color: whitesmoke;
+       font-family: Book Antiqua, Palatino, Times, serif;
+       font-size: 14px;
+       SCROLLBAR-BASE-COLOR: LightSteelBlue; 
+       SCROLLBAR-ARROW-COLOR: NavyBlue; 
+       SCROLLBAR-3DLIGHT-COLOR: AliceBlue;
+       SCROLLBAR-HIGHLIGHT-COLOR: AliceBlue;
+       SCROLLBAR-SHADOW-COLOR: #000000;
+       SCROLLBAR-DARKSHADOW-COLOR: LightGray;
+       SCROLLBAR-FACE-COLOR: Snow2;
+       SCROLLBAR-TRACK-COLOR: GhostWhite;
+     }
+
+td { font-size: 14px; }
+
+a:link { color: #004242;
+         font-weight: bold;
+         text-decoration: none; }  
+         
+a:visited { color: seagreen;
+            font-weight: bold;
+            text-decoration: none; }   
+
+a:hover   { color: #6AC3D0;
+            font-weight: bold;
+            text-decoration: none; }

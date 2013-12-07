@@ -1,0 +1,32 @@
+body {background-image: url('http://www.math.dartmouth.edu/~mathteam/bluegreen.jpg')}
+
+#outer {margin-top: 0px; margin-left: 10%; width: 80%}
+#outer tr {margin-left: 0px; padding-left: 0px}
+#outer td {margin-left: 0px; padding-left: 0px}
+
+#logo {width: 100%; margin-top: 50px; text-align: center; color: #006666; font-family: verdana; font-size: 37px; margin-bottom: 20px}
+
+#maintd {width: 100%}
+
+#main {width: 100%; margin-top: 0px; margin-left: 0px; border-top: 2px solid #006666; border-bottom: 2px solid #006666; font-family: arial}
+#main td {padding-top: 0px; padding-bottom: 20px}
+#main li {font-size: 14px}
+#main .maintitle {width: 100%; margin-top: 0px; margin-left: 0px; margin-bottom: 3px; padding-top: 0px; padding-left: 4px; padding-top: 1px; padding-bottom: 0px; border-bottom: medium solid #006666; border-width: 2px; font-weight: bold; font-size: 13px; color: #ffffff; background: #006666}
+
+.date {margin-top: 3px; margin-bottom: 1px; font-style: italic; font-size: 12px}
+.location {margin-top: 0px; margin-bottom: 6px; font-style: italic; font-size: 12px}
+.speaker {margin-top: 0px; margin-bottom: 3px; font-size: 13px}
+
+#buttons {margin-top: 0px; margin-right: 30px; padding-top: 0px; border-top: medium double #006666; border-bottom: medium double #006666; font-family: verdana; font-weight: bold; font-size: 15px}
+#buttons td {padding-top: 10px; padding-right: 10px; padding-bottom: 10px; text-align: left}
+
+#copyright {text-align: right; padding-top: 30px; padding-right: 10px; font-family: verdana; font-size: 10px}
+
+A:link {color: #000000; font-weight: bold; text-decoration: none}
+A:visited {color: #000000; font-weight: bold; text-decoration: none}
+A:hover {color: #006666; font-weight: bold; text-decoration: none}
+
+UL {margin-top: 8px}
+
+FIELDSET {border: 1px double #006666}
+LEGEND {font-family: arial; font-size: 13px; color: #006666; margin-bottom: 10px}

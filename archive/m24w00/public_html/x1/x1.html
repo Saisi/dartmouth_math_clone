@@ -1,0 +1,758 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>x1</TITLE>
+<META NAME="description" CONTENT="x1">
+<META NAME="keywords" CONTENT="x1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="x1.css">
+</HEAD>
+<BODY >
+
+<P>
+<B>The First  Math 24 Winter 2000 Exam </B>
+Use only <B>our</B> text book, class notes and maple;  this exam is due by
+9:00 AM Thursday the Feb. 3.
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Let <I>u</I> be a unit vector in the inner product spce (<I>V</I>,&lt;-,-&gt;).  Let 
+the reflection though 
+<!-- MATH
+ $(span\{u\})^{\perp}$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="16" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img1.gif"
+ ALT="$(span\{u\})^{\perp}$">
+be the
+map from  the innner product space
+to itself given by
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+R_u(v) = v - 2 \left<v,u\right> u.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="78" HEIGHT="34" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img2.gif"
+ ALT="\begin{displaymath}R_u(v) = v - 2 \left&lt;v,u\right&gt; u. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We are studying these mapping because (in finite dimensions)  they turn
+out to be  the building blocks of <B>all</B> isometries!    One interesting
+result,
+which we will prove later in the term, is that <B>every</B> isometry of
+<I>V</I> with <I>dim</I>(<I>V</I>)=<I>n</I> can  be expressed as the a
+composition of <I>n</I> or fewer of these reflections.
+
+<P>
+<DL COMPACT>
+<DT>(a)
+<DD>Show for each <I>u</I> that <I>R</I><SUB><I>u</I></SUB> is not only a linear map but an inner-product
+isometry as well.
+<P>
+<DT>(b)
+<DD><A NAME="capp"></A>Given <I>u</I><SUB>1</SUB> and <I>u</I><SUB>2</SUB> find a formula for 
+<!-- MATH
+ $R_{u_2} R_{u_1}$
+ -->
+<I>R</I><SUB><I>u</I><SUB>2</SUB></SUB> <I>R</I><SUB><I>u</I><SUB>1</SUB></SUB>, in other 
+words compute
+
+<!-- MATH
+ $R_{u_2}(R_{u_1}(v))$
+ -->
+<I>R</I><SUB><I>u</I><SUB>2</SUB></SUB>(<I>R</I><SUB><I>u</I><SUB>1</SUB></SUB>(<I>v</I>)).
+
+<P>
+<DT>(c)
+<DD>Use the formula in <A HREF="x1.html#capp"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/cross_ref_motif.gif"></A>  to show <I>R</I><SUB><I>u</I></SUB><SUP>2</SUP> is the identity, in
+other words that
+
+<!-- MATH
+ $R_{u}(R_{u}(v)) = v$
+ -->
+<I>R</I><SUB><I>u</I></SUB>(<I>R</I><SUB><I>u</I></SUB>(<I>v</I>)) = <I>v</I> for each <I>v</I>.
+
+<P>
+<DT>(d)
+<DD>Use the formula in <A HREF="x1.html#capp"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/cross_ref_motif.gif"></A> to show if <I>u</I><SUB>1</SUB> and <I>u</I><SUB>2</SUB> are orthogonal 
+then the corresponding reflections commute, i.e.
+
+<!-- MATH
+ $R_{u_1} R_{u_2} = R_{u_2} R_{u_1}$
+ -->
+<I>R</I><SUB><I>u</I><SUB>1</SUB></SUB> <I>R</I><SUB><I>u</I><SUB>2</SUB></SUB> = <I>R</I><SUB><I>u</I><SUB>2</SUB></SUB> <I>R</I><SUB><I>u</I><SUB>1</SUB></SUB>.
+
+<P>
+<DT>(e)
+<DD>Given an ordered orthonoral set 
+<!-- MATH
+ $\{u_i\}_{i=1}^m$
+ -->
+{u<SUB><I>i</I></SUB>}<SUB><I>i</I>=1</SUB><SUP><I>m</I></SUP> <B>use induction</B> to
+carefully find and justify a formula for   the composition  of all the
+isometries in
+
+<!-- MATH
+ $\{R_{u_i}\}_{i=1}^m$
+ -->
+{R<SUB><I>u</I><SUB><I>i</I></SUB></SUB>}<SUB><I>i</I>=1</SUB><SUP><I>m</I></SUP>, in other words compute 
+
+<!-- MATH
+ $R_{u_m}(R_{u_{m-1}}(\cdots R_{u_1}(v) \cdots ))$
+ -->
+<IMG
+ WIDTH="209" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img3.gif"
+ ALT="$R_{u_m}(R_{u_{m-1}}(\cdots R_{u_1}(v) \cdots ))$">.
+
+<P>
+<DT>(f)
+<DD>Let {u<SUB><I>i</I></SUB>} be an ordered orthonormal basis of <I>E</I><SUP><I>n</I></SUP>.  Use the
+previous exercise to show that 
+
+<!-- MATH
+ $R_{u_n}(R_{u_{n-1}}( \cdots R_{u_1}(v) \cdots )) = -v$
+ -->
+<IMG
+ WIDTH="195" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img4.gif"
+ ALT="$R_{u_n}(R_{u_{n-1}}( \cdots R_{u_1}(v) \cdots )) = -v$">
+for all <I>v</I>. 
+
+<P>
+<DT>(g)
+<DD>Describe in words and/or pictures what reflections do
+to <IMG
+ WIDTH="37" HEIGHT="26" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img5.gif"
+ ALT="${\bf E}^3$">.
+
+<P>
+<DT>(h)
+<DD>Recall from calculus
+that every unit vector in <IMG
+ WIDTH="37" HEIGHT="26" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img5.gif"
+ ALT="${\bf E}^3$">
+can be written as 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+u = \cos(\theta) \sin(\psi) e_i  + \sin(\theta) \sin(\psi)e_2
++  \cos(\psi)e_3
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="18" HEIGHT="17" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img6.gif"
+ ALT="\begin{displaymath}u = \cos(\theta) \sin(\psi) e_i + \sin(\theta) \sin(\psi)e_2
++ \cos(\psi)e_3 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+in the standard basis 
+<!-- MATH
+ $\beta = \{e_i\}_{i=1}^3$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img7.gif"
+ ALT="$\beta = \{e_i\}_{i=1}^3$">.
+Write down the matrix 
+<!-- MATH
+ $\left[ R_u \right]_{\beta}^{\beta}.$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img8.gif"
+ ALT="$ \left[ R_u \right]_{\beta}^{\beta}. $"></DL>
+
+<P>
+<DT>2.
+<DD>Special relativity is perhaps the best place to play with  the
+notion of a coordinate vector <B>relative</B> to a basis. 
+For simplicity we will be working in a one dimensional world
+whose ``space-time" will be our bilinear form space  <IMG
+ WIDTH="46" HEIGHT="26" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img9.gif"
+ ALT="${\bf M}^{1+1}$">.
+For starters here is a completely   linear algebraic way of stating
+the fundamental <B>principle of relativity</B> (in part <A HREF="x1.html#lip"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/cross_ref_motif.gif"></A> we will
+discuss why).
+
+<P>
+<I>In a one dimensional space, all results of physics are equally true
+when viewed using any ordered basis
+of the form </I>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\beta_s =  \{e^s_1,e^s_2\} = \{ \cosh(s) e_1 + \sinh(s)e_2,
+ \sinh(s) e_1 + \cosh(s)e_2\} .
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="39" HEIGHT="17" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img10.gif"
+ ALT="\begin{displaymath}\beta_s = \{e^s_1,e^s_2\} = \{ \cosh(s) e_1 + \sinh(s)e_2,
+\sinh(s) e_1 + \cosh(s)e_2\} .\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+A point <IMG
+ WIDTH="86" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img11.gif"
+ ALT="$p \in M^{1+1}$">
+is called an event and
+the time and position of an event is observer dependent.  Namely each
+observer is using a  basis <IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img12.gif"
+ ALT="$\beta_s$">
+and in this basis the event <I>p</I>
+happens at 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{l} position \\time \end{array} \right) = \left[ p
+\right]_{\beta_s},
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="14" HEIGHT="29" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img13.gif"
+ ALT="\begin{displaymath}\left( \begin{array}{l} position \\ time \end{array} \right) = \left[ p
+\right]_{\beta_s},\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+from that observer's point of view.  In other words each basis determines
+a coordinate system with which to measure position and time.  (These
+different basis choices are sometimes called the "admissible frames".) 
+
+<P>
+For all the the problems below  let us <B>suppose you are using the
+basis <IMG
+ WIDTH="44" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img14.gif"
+ ALT="$\beta_0$">
+and I am using the basis
+<IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img12.gif"
+ ALT="$\beta_s$"></B>. 
+
+<P>
+<DL COMPACT>
+<DT>(a)
+<DD>Suppose I  observe two events
+happen at the same time, i.e.  in my coordinates I see 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{l} x_0 \\t_0 \end{array} \right)  \mbox{   
+and    } \left( \begin{array}{l} x_1 \\t_0 \end{array} \right).
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="15" HEIGHT="29" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img15.gif"
+ ALT="\begin{displaymath}\left( \begin{array}{l} x_0 \\ t_0 \end{array} \right) \mbox{
+and } \left( \begin{array}{l} x_1 \\ t_0 \end{array} \right). \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+At
+what times do these event appear to happen form you viewpoint?
+
+<P>
+<DT>(b)
+<DD><A NAME="sting"></A>Suppose I see a particle sitting at position <I>x</I><SUB>0</SUB>, what do
+you see? In particular, what speed does the particle appear to moving in
+your coordinates? 
+
+<P>
+ <I>( Some Helpful Hints: The history of a point is called its world
+line. For example:   the world line of this point sitting at <I>x</I><SUB>0</SUB> is in
+my coordinates given by 
+</I>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\left\{\left( \begin{array}{l} x_0 \\t \end{array} \right) : t \in
+(-\infty,\infty)\right\}.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="156" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img16.gif"
+ ALT="\begin{displaymath}\left\{\left( \begin{array}{l} x_0 \\ t \end{array} \right) : t \in
+(-\infty,\infty)\right\}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><I>  The question can be phrased: what is
+this set  relative to  your coordinates?)</I>
+
+<P>
+<DT>(c)
+<DD>Suppose I see a 
+a bar described by the interval  [1,2] for all time.  
+<DL COMPACT>
+<DT>i.
+<DD>Sketch in your space-time coordinate plane what  the bar looks like.
+<DT>ii.
+<DD>How long does the bar appear to be to you?  
+<DT>iii.
+<DD>If the bar happens to look like it is moving to you, then describe its
+movement. 
+</DL>
+
+<P>
+<DT>(d)
+<DD>Using the above problems and the fundamental <B>principle of relativity</B>
+(as stated above), why must we call the notions of simultaneity,
+length, and  stationarity ``relative"?
+</DL>
+
+<P>
+<DT>3.
+<DD><A NAME="lip"></A>In this problem we will connect the <IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img12.gif"
+ ALT="$\beta_s$">
+of the previous problem
+directly with relativity. 
+
+<P>
+Perhaps the most important thing in relativity is not what
+is relative but what is not.  Namely, the physical assumption at the
+foundation of  special relativity is that <I>all admissible  observers
+should agree upon two things: that light travels  at the same constant
+speed and that light travels  in a straight line.</I> That the <IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img12.gif"
+ ALT="$\beta_s$">
+are 
+precisely  the different view points which agree about these properties
+is where the relativity principle as stated the problem 2 was
+born. 
+
+<P>
+Once again  <B>suppose you are using the
+basis <IMG
+ WIDTH="44" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img14.gif"
+ ALT="$\beta_0$">
+and I am using the basis
+<IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img12.gif"
+ ALT="$\beta_s$"></B>. 
+
+<P>
+<DL COMPACT>
+<DT>(a)
+<DD>I see a particle of light start at position <I>x</I><SUB>0</SUB> and time
+<I>t</I><SUB>0</SUB>. One second later at time <I>t</I><SUB>0</SUB> +1 I find the
+particle of light  is at
+<I>x</I><SUB>1</SUB>.  Suppose that I find light travels at unit speed, i.e.  I notice
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{x_1 -x_0}{(t_0+1) -t_0} = 1.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="185" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img17.gif"
+ ALT="\begin{displaymath}\frac{x_1 -x_0}{(t_0+1) -t_0} = 1.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Show that you too  observed that this particle of light was traveling at
+unit speed.  
+
+<P>
+<DT>(b)
+<DD>Suppose light travels at unit speed in a staight line.
+A light 
+is turned on for an instant at time <I>t</I>=0 and position <I>x</I> =0 (in your
+coordinates!) so that one particle of light travels in the positive <I>x</I>
+direction and one in the negative <I>x</I> direction.
+<DL COMPACT>
+<DT>i.
+<DD>In your coordinates draw the world lines corresponding to these two
+particles of light (This set is called the ``light cone"; for the
+definition of a world line see <A HREF="x1.html#sting"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/cross_ref_motif.gif"></A>. ). 
+<DT>ii.
+<DD>Shade in the region of your coordinate  plane which could be arrived
+at by a particle starting at position <I>x</I> =0 and time <I>t</I>=0 traveling
+slower than the speed of light, and explain why.
+</DL> 
+
+<P>
+</DL>  
+
+<P>
+<DT>4.
+<DD>Here we will use our notion of basis to explore some fundamental objects
+in  quantum mechanics.
+
+<P>
+Let  
+<!-- MATH
+ $\beta = \{x^i e^{-\frac{x^2}{2}}\}_{i =0}^{\infty}$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="79" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img18.gif"
+ ALT="$ \beta = \{x^i e^{-\frac{x^2}{2}}\}_{i =0}^{\infty} $">
+and  let 
+<!-- MATH
+ $Q = span\{\beta\}$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img19.gif"
+ ALT="$Q = span\{\beta\}$">
+be called the state space.   (Physically <I>Q</I>
+is a subspace of the vector space of possible "states" that a physical
+system could be in).   
+
+<P>
+Let us also isolate  certain finite-dimensional pieces of our
+state space by letting  
+
+<!-- MATH
+ $\beta^N = \{x^i e^{-\frac{x^2}{2}}\}_{i =0}^{N}$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img20.gif"
+ ALT="$ \beta^N = \{x^i e^{-\frac{x^2}{2}}\}_{i =0}^{N}$">
+and 
+
+<!-- MATH
+ $Q^N = span\{\beta_N\}$
+ -->
+<IMG
+ WIDTH="131" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img21.gif"
+ ALT="$Q^N = span\{\beta_N\}$">.
+
+<P>
+One of the axioms of quantum mechanics requires that a geometry
+be placed on these spaces, and on <I>Q</I> and <I>Q</I><SUP><I>N</I></SUP> we  will use the inner
+product
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\left<f,g \right> = \int_{-\infty}^{\infty} f(x) g(x) dx .
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="115" HEIGHT="34" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img22.gif"
+ ALT="\begin{displaymath}\left&lt;f,g \right&gt; = \int_{-\infty}^{\infty} f(x) g(x) dx .\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The process of  Gram-Schmidting <IMG
+ WIDTH="54" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img23.gif"
+ ALT="$\{\beta\}$">
+produces the functions
+
+<!-- MATH
+ $\beta_Q = \{\psi_i\}_{i=0}^{\infty}$
+ -->
+<IMG
+ WIDTH="30" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img24.gif"
+ ALT="$\beta_Q = \{\psi_i\}_{i=0}^{\infty} $">
+known as the ``energy states" of the ``quantum harmonic oscillator". 
+As above let 
+<!-- MATH
+ $\beta^N_Q = \{\psi_i\}_{i=0}^{N}$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img25.gif"
+ ALT="$\beta^N_Q = \{\psi_i\}_{i=0}^{N} $">.
+These vectors are some of the most important functions in mathematics
+and are at the heart of the most important model in quantum mechanics: the
+quantum harmonic oscillator.  Here we will play with them.
+
+<P>
+<DL COMPACT>
+<DT>(a)
+<DD><A NAME="ding"></A>Prove <IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img26.gif"
+ ALT="$\beta$">
+is a basis of <I>Q</I>
+<I>(Hint: Feel free to exploit your understanding of the polynomials.)</I>
+<P>
+<DT>(b)
+<DD>Prove <IMG
+ WIDTH="14" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img27.gif"
+ ALT="$\beta^N$">
+is a basis of <I>Q</I><SUP><I>N</I></SUP> with the shortest completely
+rigorous proof you can <I>(Hint:  Feel free to use part <A HREF="x1.html#ding"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/cross_ref_motif.gif"></A>)</I>.
+
+<P>
+<DT>(c)
+<DD><A NAME="lop"></A>Use the Gram-Schmidt process to explicitly compute <IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img28.gif"
+ ALT="$\beta^3_Q$">
+and
+explain why it is  a basis of <I>Q</I><SUP>3</SUP>.
+<I>(See the hint below)</I>
+</DL>
+
+<P>
+A hint for part <A HREF="x1.html#lop"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/cross_ref_motif.gif"></A>. To do this many integrals  in the form 
+
+<!-- MATH
+ $\int_{-\infty}^{\infty} p(x)
+e^{-x^2} dx$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img29.gif"
+ ALT="$ \int_{-\infty}^{\infty} p(x)
+e^{-x^2} dx $">
+will arise.   Fortunately, many are  seen to be zero by
+inspection (integrating odd functions) and maple can do the rest quite
+easily.   Simply type into maple  
+<!-- MATH
+ ${\tt {
+int((p(x))*exp(-x^2),x=-infinity..infinity);} }$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img30.gif"
+ ALT="${\tt {
+int((p(x))*exp(-x^2),x=-infinity..infinity);} }$">
+where
+(<I>p</I>(<I>x</I>)) is your polynomial written so maple can understand it.   For
+example if
+
+<!-- MATH
+ $p(x) = 2 x^2 + 3x +1$
+ -->
+<I>p</I>(<I>x</I>) = 2 <I>x</I><SUP>2</SUP> + 3<I>x</I> +1 in maple you would write (<I>p</I>(<I>x</I>)) as 
+ 
+<!-- MATH
+ ${ \tt {  (2*x^2 + 3*x + 1)} }$
+ -->
+<IMG
+ WIDTH="148" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img31.gif"
+ ALT="${ \tt { (2*x^2 + 3*x + 1)} }$">.
+You are encouraged to use maple for this
+problem.   If you don't like maple feel free to use the fact
+
+<!-- MATH
+ $\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$
+ -->
+<IMG
+ WIDTH="134" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img32.gif"
+ ALT="$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$">,
+and be prepared for
+some seriouis integration by parts!)
+
+<P>
+<DT>5.
+<DD><P>
+There is a clever construction of the above 
+<!-- MATH
+ $\{\psi_k\}_{i=0}^{\infty}$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img33.gif"
+ ALT="$\{\psi_k\}_{i=0}^{\infty}$">
+functions  via applying a linear maps to the functions in <I>Q</I>.  
+Namely we will apply  what physicists call the "creation" operator:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+A^{\star} = - \frac{d}{dx} + x.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="53" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img34.gif"
+ ALT="\begin{displaymath}A^{\star} = - \frac{d}{dx} + x.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+To see why it is called the creation operator 
+we define a  recursion algorithm via letting 
+<IMG
+ WIDTH="81" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img35.gif"
+ ALT="$f_0 = \psi_0$">
+and letting 
+
+<!-- MATH
+ $f_k = \frac{1}{\sqrt{2 k}} A^{\star} f_{k-1}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img36.gif"
+ ALT="$f_k = \frac{1}{\sqrt{2 k}} A^{\star} f_{k-1}$">.
+
+<P>
+<DL COMPACT>
+<DT>(a)
+<DD>Notice that we may restcrict <IMG
+ WIDTH="35" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img37.gif"
+ ALT="$A^{\star}$">
+to 
+<I>Q</I><SUB>2</SUB> and view its range as  <I>Q</I><SUB>3</SUB>.
+With this view compute the matricies 
+<!-- MATH
+ $\left[  A^{\star}
+\right]_{\beta^2}^{\beta^3}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="14" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img38.gif"
+ ALT="$\left[ A^{\star}
+\right]_{\beta^2}^{\beta^3}$">
+and 
+<!-- MATH
+ $\left[  A^{\star}
+\right]_{\beta_Q^2}^{\beta^3_Q}$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img39.gif"
+ ALT="$\left[ A^{\star}
+\right]_{\beta_Q^2}^{\beta^3_Q}$">.
+<P>
+<DT>(b)
+<DD><A NAME="lipp"></A> Compute 
+
+<!-- MATH
+ $\{f_i\}_{i =0}^{3}$
+ -->
+{f<SUB><I>i</I></SUB>}<SUB><I>i</I> =0</SUB><SUP>3</SUP> using the recursion algorithm and show for these
+<I>i</I> that <IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img40.gif"
+ ALT="$\psi_i = f_i$">.
+
+<P>
+</DL>
+
+<P>
+As you might guess form part <A HREF="x1.html#lipp"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/cross_ref_motif.gif"></A>  the <IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img40.gif"
+ ALT="$\psi_i = f_i$">
+for
+all <I>i</I>, and hence form an orthonormal basis for <I>Q</I>.  While a bit 
+tough to do with no hints,  I highly recommend trying to prove
+this.     In particular note the creation operator <B>creates</B> the
+<IMG
+ WIDTH="37" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img41.gif"
+ ALT="$\psi_k$">
+energy state form the <IMG
+ WIDTH="22" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img42.gif"
+ ALT="$\psi_{k-1}$">
+energy state.
+  
+It is also worth mentioning  that linear mappings like <IMG
+ WIDTH="35" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/x1/img37.gif"
+ ALT="$A^{\star}$">
+naturally arrise in quantum mechanics as the "observables".
+
+<P>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 24 Winter 2000</I>
+<BR><I>2000-02-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

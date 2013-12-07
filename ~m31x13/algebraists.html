@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "math31style.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Famous Algebraists</title>
+<link rel="stylesheet" type="text/css" href="math31style.css">
+<script src="https://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Math 31: Topics in Algebra</h1>
+<h2>Summer 2013</h2>
+<br>
+
+<!-- Javascript for automatically generating the date and time of last update. Prints in
+	the format "Last updated (Month) (Day), (Year) at xx:xx am/pm EDT".
+-->
+<div style="text-align:center;">
+<span style="color:DarkSlateGray;">
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+</span>
+</div>
+<br>
+
+    
+<!-- Generates header with links to other components of the course webpage. -->
+<table class="header">
+<tbody>
+
+<tr>
+<td class="header"><p class="header"><a class="header" href="index.html">Main Page
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="info.html">Course Information
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="syllabus.html">Syllabus
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="homework.html">Homework
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="exams.html">Exams & Quizzes
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="projects.html">Projects
+</a></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+
+<!-- Insert picture of famous algebraists. -->
+<div class="alg">
+<a href="algebraists.html"><img style="height:400px" src="https://www.math.dartmouth.edu/~m31x13/Algebraists.png"></a>
+</div>
+<br>
+
+
+<p class="alg">
+The picture on the front page of the course website is a collage of portraits of famous 
+mathematicians, each of whom made significant contributions to the field that we now know 
+as abstract algebra. Some of them will likely be mentioned in class when we cover results 
+to which they contributed. Below are descriptions of these people and their work.
+</p>
+
+<p class="alg">
+Top row, from left to right:
+<ul class="alg">
+    <li>
+        <b>Niccol&ograve; Fontana Tartaglia</b> (1499/1500&ndash;1557)
+        
+        Tartaglia was an Italian mathematician. The name "Tartaglia" is actually a 
+        nickname meaning "stammerer," a reference to his injury-induced speech impediment. 
+        He was largely self-taught, and he was the first person to translate Euclid's 
+        <i>Elements</i> into a modern European language. He is best remembered for his 
+        contributions to algebra, namely his discovery of a formula for the solutions to 
+        a cubic equation. Such a formula was also found by Gerolamo Cardano at roughly 
+        the same time, and the modern formula is known as the Cardano-Tartaglia formula. 
+        Cardano also found a solution to the general quartic equation.
+    </li>
+    <br>
+    
+    <li>
+        <b>Joseph-Louis Lagrange</b> (1736&ndash;1813)
+        
+        Despite his French-sounding name, Lagrange was born in modern-day Italy. Like many
+        of the great mathematicians of his time, he made contributions to many different 
+        areas of mathematics, including his development of the theory of differential 
+        equations and the calculus of variations. In particular, he performed some very 
+        early work in abstract algebra and number theory, and one of the most fundamental 
+        results in elementary group theory is named in his honor. He has been described 
+        as a "timid and nervous" man, but he was highly respected during his lifetime.
+    </li>
+    <br>
+    
+    <li>
+        <b>&Eacute;variste Galois</b> (1811&ndash;1832)
+        
+        Galois was a very gifted young French mathematician, and his story is one of the 
+        most tragic in the history of mathematics. He was killed at the age of 20 in a 
+        duel that is still veiled in mystery. Before that, he made huge contributions to 
+        abstract algebra. He helped to lay the foundation for group theory as we know it 
+        today, and he was even the first person to use the term "group." Perhaps most 
+        importantly, he proved that it is impossible to solve a fifth-degree polynomial 
+        (or a polynomial of any higher degree) using radicals by studying permutation 
+        groups associated to polynomials. This area of algebra is still important today, 
+        and it is known as <i>Galois theory</i> in memory of him.
+    </li>
+    <br>
+    
+    <li>
+        <b>Carl Friedrich Gauss</b> (1777&ndash;1855)
+        
+        Along with Leonhard Euler, Gauss is considered to be one of the greatest and most 
+        prolific mathematicians of all time. He made significant contributions to algebra, 
+        number theory, geometry, and physics, among other areas. In algebra, there are 
+        several results in ring theory (specifically regarding rings of polynomials) 
+        bearing his name. He also gave the first correct proof of the Fundamental Theorem 
+        of Algebra. Modern number theory grew out of the work of Gauss, with most of his 
+        contributions contained in his 1801 book <i>Disquisitiones Arithmeticae</i>. In 
+        this book, he showed algebraically that a regular heptadecagon (which can be found 
+        on the cover of our textbook) can be constructed with a compass and straightedge 
+        alone.
+    </li>
+</ul>
+</p>
+
+<br>
+
+<p class="alg">
+Bottom row, left to right:
+<ul class="alg">
+    <li>
+        <b>Niels Henrik Abel</b> (1802&ndash;1829)
+        Abel was a Norwegian mathematician who, like Galois, did seminal work in algebra 
+        before dying at a very young age. Strangely enough, he proved similar results 
+        regarding the insolvability of the quintic independently from Galois. In honor of 
+        his work in group theory, <i>abelian groups</i> are named after him. The Abel 
+        Prize in mathematics, which (along with the Fields Medal) is sometimes thought of 
+        as a "Nobel Prize in Mathematics," is also named for him.
+    </li>
+    <br>
+    
+    <li>
+        <b>Emmy Noether</b> (1882&ndash;1935)
+        Noether is widely considered to be the greatest female mathematician of all time, 
+        and in fact one of the greatest mathematicians ever. Her most important work was 
+        related to abstract algebra, specifically the theory of rings and fields. The 
+        concept of a <i>Noetherian ring</i>, as well as several theorems in algebra, are 
+        named in her honor. She became a lecturer at the University of G&ouml;ttingen in 
+        1915, at the invitation of David Hilbert. She was forced to leave in 1933, when 
+        Adolf Hitler expelled Jewish faculty members from G&ouml;ttingen. She emigrated 
+        to the United States, where she took up a position at Bryn Mawr, which she held 
+        until her death in 1935.
+    </li>
+    <br>
+    
+    <li>
+        <b>Arthur Cayley</b> (1821&ndash;1895)
+        Cayley was a British mathematician whose work is known to students of abstract 
+        algebra and linear algebra. The Cayley-Hamilton Theorem for matrices is named 
+        after him (along with William Rowan Hamilton). He was the also the first person 
+        to use the modern definition of a group, and a fundamental theorem in group theory 
+        (aptly known as Cayley's Theorem) is due to him.
+    </li>
+    <br>
+    
+    <li>
+        <b>Richard Dedekind</b> (1831&ndash;1916) 
+        Dedekind was born in modern-day Germany, and his major mathematical contributions 
+        lie in abstract algebra and the theory of real numbers. Perhaps most notably, he 
+        developed a rigorous method for constructing the set of real numbers via 
+        <i>Dedekind cuts</i>. In algebra, he coined the term <i>ideal</i> for one of the 
+        fundamental notions in ring theory. His work also heavily influenced the field of 
+        algebraic number theory, where one of the key objects of study is a particular 
+        type of ring called a <i>Dedekind domain</i>.    
+    </li>
+</ul>
+</p>
+
+
+<BR>
+<hr class="footer">
+<BR>
+<BR>
+
+
+
+</BODY>
+</HTML>

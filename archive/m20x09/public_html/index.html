@@ -1,0 +1,317 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Math 20. Discrete Probability</title></head>
+<body alink="#FF0000" bgcolor="#ffffff" link="#0055AA" vlink="#0055AA">
+
+
+<center>
+<h1><span style="font-weight: 400">Math 20.</span> Discrete Probability</h1>
+<p><font size="5"><b>Summer 2009</b></font></p>
+</center>
+
+<ul>
+  <li>
+
+<p align="left"><b><font size="4">Instructor:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Enrique Trevino</font></b></p>
+  </li>
+  <li>
+<p align="left"><b><font size="4">Lectures:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></b>
+<font size="4">MWF 11:15-12:20 in Kemeny 006</font></p>
+  </li>
+  <li>
+
+<p align="left"><font size="4"><b>X-period:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Tu 12:00 - 12:50.  X-hours will be used unless otherwise stated in class.</font></p> 
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Office Hours:&nbsp;&nbsp;&nbsp; </b>MW 
+1:30-3:00 and by appointment</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Office:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ 
+
+Kemeny 216 (six cubed)</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Email:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<script>
+secondpart = "trevino";
+thirdpart = "dartmouth.";
+fourthpart = "edu";
+middlepart = "@";
+firstpart = "enrique.";
+document.write("<a href=mailto:"+firstpart + secondpart+ middlepart + thirdpart +fourthpart+">");
+document.write(firstpart + secondpart + middlepart + thirdpart +fourthpart+"</a>");
+</script>
+
+</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Phone:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 646-9810</font></p>
+
+  </li>
+</ul>
+
+<hr>
+
+<p align="left"><font size="4"><b>Announcements</b></font></p>
+
+<p align="left"> Office hours from 1pm to 5pm on Thursday and Friday.</p>
+
+<p align="left">To practice for the final I suggest trying out the earlier homeworks, midterms and exercises from 5.1 (this is useful because it doesn't
+mention which distribution to use, so it helps in practicing figuring out the distribution just like in a test). Section 11.2 has a lot of good exercises and 
+I will likely grab a problem from this section (as I like it a lot). If you want to know if you are solving the problems correctly, feel free to email me or 
+come to office hours (I will hold office hours on Tuesday, Wednesday and Friday in the afternoon).
+</p>
+
+<p align="left"> Homework 8 is due on Wednesday August 26, 2009 (note that Homework 7 is due the same day, homework 8 is meant to represent class on Friday):<br>
+Section 11.3: 1,2,3, 6, 24
+</p>
+
+<p align="left">Homework 7 is due on Wednesday August 26, 2009: <br>
+Section 11.1: 2, 4, 8, 11, 19<br>
+Section 11.2: 2, 4, 6, 8, 9, 13, 15
+</p>
+
+<p align="left">Here's the solution to the <a href="http://math.dartmouth.edu/~m20x09/Solutions5.pdf">fifth homework set</a> <br>
+I won't post solutions for the fourth homework set, if you have any questions about that homework, just email me.
+
+<p align="left">Here's the solution to the <a href="http://math.dartmouth.edu/~m20x09/SolutionsPE.pdf">Practice Exam</a></p>
+
+<p align="left"> Solutions to the third homework set can be read <a href="http://math.dartmouth.edu/~m20x09/Solutions3.pdf">here</a></p>
+
+
+<p align="left"> Solutions to the first homework set found <a href="http://math.dartmouth.edu/~m20x09/Solutions1.pdf">here</a><br>
+Solutions to the second homework set found <a href="http://math.dartmouth.edu/~m20x09/Solutions2.pdf">here</a></p>
+
+<br>
+<p align="left"> The midterms have been scheduled: July 20, 2009 from 5pm-7pm at room 008. August 10, 2009 from 5pm to 7pm at room 008.</p> 
+
+<p align="left"> The final exam is Sunday August 30, 2009 at 8am. Room to be announced</p>
+
+<hr>
+
+<p>
+
+
+<font size="4"><b>Textbook</b></font></p>
+
+<p><i>Introduction to Probability</i> (2nd revised edition) by Charles M. 
+Grinstead and J. Laurie Snell</p>
+<p>This book is available at Wheelock Books for $50, and also may be downloaded 
+from
+
+<a href="http://www.dartmouth.edu/~chance/teaching_aids/book_articles/probability_book/pdf.html">
+http://www.dartmouth.edu/~chance/teaching_aids/book_articles/probability_book/pdf.html</a></p>
+
+<hr>
+
+<p>
+
+
+<font size="4"><b>Tentative syllabus</b></font></p>
+
+<p>
+
+
+This syllabus is subject to change, but it should give you an idea of the topics 
+we will cover.</p>
+
+<div class="Section1">
+  <div class="MsoNormal" style="text-align: center;" align="center">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+    <table style="width: 621" border="1" cellspacing="0">
+      <tr>
+        <td valign="top" width="98"><br>
+&nbsp;</td>
+        <td style="color: rgb(0, 33, 0);" valign="top" width="114">
+        <p align="center"><b><font face="Arial" style="font-size: smaller">
+        Sections in the textbook</font></b></td>
+
+        <td style="color: rgb(0, 33, 0);" valign="top" width="395">
+        <p align="center"><small><b><font face="Arial">Brief Description</font></b></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 1</font></b></small></small></td>
+        <td valign="top" width="114"><small><small><small><b>
+        <font face="Arial" size="2">1.2, 3.1</font></b></small></small></small></td>
+
+        <td valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Basic  </font></small></small></small>
+        <font face="Garamond" size="2">probability. Combinatorics: permutations.<br>
+&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 2</font></b></small></small></td>
+
+        <td valign="top" width="114"><b>
+        <font face="Arial" style="font-size: smaller">3.2, 4.1</font></b></td>
+        <td valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Combinations. Conditional probability.<br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+
+        <font size="2" face="Arial">Week 3</font></b></small></small></td>
+        <td valign="top" width="114"><b><font face="Arial" size="2">6</font></b><small><small><small><b><font face="Arial" size="2">.1, 
+        6.2</font></b></small></small></small></td>
+        <td valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Expected value. Variance.<br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 4</font></b></small></small></td>
+        <td valign="top" width="114"><b><font face="Arial" size="2">5.1</font></b></td>
+        <td valign="top" width="395">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <font face="Garamond" size="2"> <i>Midterm 1. </i></font>
+    </span>
+
+        <font face="Garamond" size="2">Important 
+        distributions.</font><small><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 5</font></b></small></small></td>
+        <td valign="top" width="114"><b><font face="Arial" size="2">8.1</font></b></td>
+        <td valign="top" width="395">
+
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <font face="Garamond" size="2">Law of large numbers.</font></span><small><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 6</font></b></small></small></td>
+        <td valign="top" width="114">
+
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <b><font face="Arial" size="2">9</font></b><small><small><small><font face="Arial" size="2"><b>.1</b></font></small></small></small></span></td>
+        <td valign="top" width="395"><font face="Garamond" size="2">
+    <span style="color: rgb(0, 51, 0)">
+        Central Limit Theorem: Bernoulli trials</span></font><small><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 7</font></b></small></small></td>
+        <td valign="top" width="114">
+    <b><font face="Arial" size="2" color="#003300">9.2</font></b><span style="font-size: 14pt; color: rgb(0, 51, 0);"><small><small><small><b><font face="Arial" size="2"><br>
+&nbsp;</font></b></small></small></small></span></td>
+        <td valign="top" width="395">
+        <font face="Garamond" size="2" color="#003300">Central Limit Theorem: 
+        Independent trials. <i>Midterm 2.</i></font><span style="font-size: 14pt; color: rgb(0, 51, 0);"><small><small><small><font size="2" face="Garamond"><br>
+
+&nbsp;</font></small></small></small></span></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 8</font></b></small></small></td>
+        <td valign="top" width="114">
+    <b><font face="Arial" size="2" color="#003300">11</font></b><span style="font-size: 14pt; color: rgb(0, 51, 0);"><small><small><small><b><font face="Arial" size="2">.1, 
+    11.2</font></b></small></small></small></span></td>
+        <td valign="top" width="395">
+
+    <small><small><small><font size="2" face="Garamond">
+    <span style="color: #003300">Introduction to Markov chains. Absorbing Markov 
+    chains.</span><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 9</font></b></small></small></td>
+        <td valign="top" width="114">
+
+    <b><font face="Arial" size="2" color="#003300">11.3</font></b></td>
+        <td valign="top" width="395"><small>
+        <font face="Garamond" color="#003300">Regular Markov chains, ergodic 
+        Markov chains</font><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      </table>
+    </span>
+  </div>
+
+</div>
+
+Besides these topics there will be Bonus Lectures given on x-hours about Probability Gems such as Card Shuffling (Chapter 3.3). The bonus lectures will be for students that want to learn extra stuff not covered in the exams.
+
+<p>
+<img src="http://www.math.dartmouth.edu/~m20f05/images/surfbar-75x1.png" width="75" height="1"></p>
+<hr>
+
+<p>
+
+
+<font size="4"><b>Grading</b></font></p>
+
+<p>
+
+
+The course grade will be based on: <br> Homework  15%, <br> Midterm 1    25% , <br> Midterm 2    25% 
+and <br> Final Exam   35%.</p>
+
+<p>
+
+
+<font size="4"><b>Homework</b></font></p>
+
+<p>
+
+
+There will be <a href="homework.html">homework</a> due 
+roughly every week. It will consist typically of a reading assignment 
+(of the part of the book covered in class) and some problems. Collaboration in 
+the homework is permitted, 
+but you are not allowed to copy someone else's work. The solutions must be 
+written individually. You have to mention on your problem set the names of the 
+students that you worked with.</p>
+
+<p>
+
+<font size="4"><b>Exams</b></font><br>
+<br>
+On the midterms and the final exam you must work on the problems on 
+your own. <b>No collaboration permitted</b> in the exams<b>.<br>
+&nbsp;</b><br>
+The first midterm will be on Monday July 20, 2009 from 5pm to 7pm in Kemeny 008<br><br>
+The second midterm will be on Monday August 10, 2009 from 5pm to 7pm in Kemeny 008</p>
+The final exam will be on Sunday August 30, 2009 from 8am to 11am Room TBA</p>
+<hr>
+<p class="MsoNormal"><span style="font-family:Times"><b>Students with 
+disabilities: </b>Students with learning, 
+physical, or psychiatric disabilities enrolled in this course that may need 
+disability-related classroom accommodations are encouraged to make an office 
+appointment to see me before the end of the second week of the term. All 
+discussions will remain </span>confidential, although the Student Disability 
+Services office may be consulted to discuss <span style="font-family:Times">
+
+appropriate implementation of any accommodation requested.</span><br>
+<small>
+<img src="http://www.math.dartmouth.edu/website_dartmouth/Sample%20Web%20Page_files/surfbar-75x1.gif" width="75" height="1">
+</small></p>
+
+<p>
+
+<font size="4"><b>Honor Principle</b></font><br>
+<br>
+A recap of what is stated above. On homeworks, collaboration is permitted, but each student writes his/her own solutions.<br>
+In the midterms and exams, <b>No collaboration</b> is permitted.
+</p>
+
+
+<p>
+<small><i>Last modified on June 26, 2009.
+</i></small>
+
+
+</p></body></html>

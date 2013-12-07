@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "SMLstyle.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Scott.M.LaLonde</title>
+<link rel="stylesheet" type="text/css" href="http://www.math.dartmouth.edu/SMLstyle.css">
+<link rel="icon" href="http://www.math.dartmouth.edu/images-static/latinsq.png" type="image/png" />
+<script src="http://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- Build navigation bar. -->
+<div id="navigation">
+
+<table>
+<tr>
+<td><a class="current" href="http://www.math.dartmouth.edu/index.html">Home</a></td>
+<td><a href="http://www.math.dartmouth.edu/research.html">Research</a></td>
+<td><a href="http://www.math.dartmouth.edu/teaching.html">Teaching</a></td>
+<td><a href="http://www.math.dartmouth.edu/personal.html">Personal</a></td>
+</tr>
+</table>
+
+<div class="hr"> <hr /> </div>
+</div>   
+<!-- End of navigation div -->
+
+<div id="name">
+Scott LaLonde
+</div>
+
+<div id="main">
+<img src="http://www.math.dartmouth.edu/images-static/SaturnVlow.jpg" width="375">
+
+<div id="right">
+<table>
+<!-- <tr><td><span class="bigger"><u>Contact Information</u></span></td></tr>
+</table>
+
+<table> -->
+<th>Contact Information</th>
+<tr><td>Dartmouth College</td></tr>
+<tr><td>Department of Mathematics</td></tr>
+<tr><td>27 N. Main Street </td></tr>
+<tr><td>Hanover, NH 03755</td></tr>
+</table>
+
+<table>
+<tr><td><bold>Office:</bold> 219 Kemeny Hall</td> </tr>
+<tr><td><bold>Phone:</bold> (603) 646-9807</td> </tr>
+<tr><td><bold>Fax:</bold> (603) 646-1312</td> </tr>
+<tr><td><bold>Email:</bold> <a class="important" 
+href="mailto:scott.m.lalonde.gr@dartmouth.edu">scott.m.lalonde.gr@dartmouth.edu</a></td> 
+</tr>
+</table>
+
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<div id="maintext">
+<span class="bigger">
+<u>About me</u>
+</span>
+<p>
+I am a fifth-year graduate student in mathematics at Dartmouth, working in the theory of 
+Operator Algebras with Dana Williams. I received a B.S. in Mathematics from Clarkson 
+University in 2008, and an M.S. in Mathematics in 2009 from Clarkson. I also earned an 
+A.M. here at Dartmouth, and I am now a Ph.D candidate. If you are a prospective student 
+and would like to learn more about what life as a graduate student is like here, please 
+feel free to email me.
+
+<br>
+<br>
+Here is a current PDF version of my <a class="important" href="http://www.math.dartmouth.edu/files/LaLondeCV.pdf">CV</a>.
+</p>
+</div>
+
+<div id="footer">
+
+<br clear="all" />
+<br>
+<br>
+
+<hr>
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+
+</div>
+
+
+
+</body>
+</html>

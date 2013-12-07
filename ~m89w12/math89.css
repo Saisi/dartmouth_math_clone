@@ -1,0 +1,66 @@
+body {background-color:#BBBBBB;
+ 	background-image: url('https://www.math.dartmouth.edu/~m89w12/column-bg.gif');
+	background-position: top center;
+	background-repeat: repeat-y;
+font-family: helvetica, arial, georgia, sans-serif;}
+
+#container {
+	width: 980px;
+	margin: 0 auto;
+	padding: 10px;
+/*	background-color:#8ABEA1; */
+	/* set margin-left and margin-right to auto to center the column 
+	within its parent.
+	That shorthand sets top and bottom to 0 and left-right to auto */
+}
+
+#header-top {
+	width: 100%;
+	background-color: #8ABEA1;
+	height: 10px;
+	}
+
+.header {
+	background-color:#BCDAC9; 
+	font-size:200%; 
+	padding:20px 20px 20px 20px; 
+	display:block; 
+	text-align:center;
+	}
+
+/* for the light bars that head each section of the main page */
+h2 {display:block; font-size:125%; font-weight:bold; padding:10px 10px 10px 50px; background-color:#DEECE4;}
+
+
+/* syllabus table styling */
+.syllabus {width:85%; border:1px solid #000000;}
+
+.syllabus th {background-color:#DEECE4; padding-top:5px; padding-bottom:5px;}
+
+.syllabus td {background-color:#BCDAC9; border:1px solid #000000; padding:10px 10px 10px 10px;}
+
+.syllabus tr.special td {background-color:#FFFFFF; font-weight:bold;}
+
+
+/* main page info tables styling */
+.info {width:650px; background-color:#BCDAC9; border:1px solid #000000;}
+
+.info tr {text-align:center;}
+
+.info td {border:1px solid #000000; padding:10px 10px 10px 10px;}
+
+.info th {padding-top:5px; padding-bottom:5px;}
+
+
+.smallinfo {width:450px; background-color:#BCDAC9; border:1px solid #000000;}
+
+.smallinfo tr {text-align:center;}
+
+.smallinfo td {border:1px solid #000000; padding:10px 10px 10px 10px;}
+
+.smallinfo th {padding-top:5px; padding-bottom:5px;}
+
+
+.links {width:450px; padding-top:10px; }
+
+.links tr {text-align:center;}

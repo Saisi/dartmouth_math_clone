@@ -1,0 +1,164 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51C-SGI [en] (X11; I; IRIX64 6.5 IP26) [Netscape]">
+   <meta name="Author" content="Alex Barnett">
+   <meta name="Keywords" content="thesis format, harvard">
+   <title>Harvard Thesis LaTeX Format</title>
+</head>
+<body text="#000000" bgcolor="#FFFFF0" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<center>
+<h1>
+<b><font size=+4>&nbsp;</font></b></h1></center>
+
+<center>
+<h1>
+<b><font color="#660000"><font size=+4>Harvard GSAS PhD Thesis LaTeX Template</font></font></b></h1></center>
+
+<br><b><i><font color="#AA3377"><font size=+1>NOTE: This page has nothing
+to do with `Harvmac' (outdated Harvard TeX macros), or the `Harvard' bibliography
+style! Rather, it is intended to help those using the LaTeX scientific
+typesetting package format their PhD theses for submission to Graduate
+School of Arts and Sciences, Harvard University.
+<p>
+NOTE: It is also rather out of date; I make no claim that any of the below is still relevant. Please consider hosting it yourself!</font></font></i></b></center>
+
+<p>Related pages:
+<ul>
+<li> Jordan Suchow's new <a href="https://github.com/suchow/LaTeX-template-for-Harvard-dissertation">LaTeX and XeLaTeX template</a>, which can produce
+<a href="Sachow_example_thesis.pdf">this example</a>. Note cool ligatures, overall beauty (Dec 2011.)
+
+<li> My <a href="latex2html_tips.html">advice</a> on how to use latex2html to
+put your thesis <a href="../thesis_html/index.html">online</a>
+</ul>
+
+<p>This page is my attempt to pass on something useful from what I learned
+during my not-so-recent thesis completion, in October 2000. I hope it may save
+some of you from pain and late-night LaTeX formatting nightmares.
+<p>Notice that the Harvard GSAS format is only necessary for the bound
+(Archives) copy of the thesis, and its associated unbound (boxed) copy,
+both of which are submitted to the Registar's Office. Copies for your research
+group, copies for your departmental library (in my case Physics Research
+Library), personal copies, etc, <b>need not follow this format</b>, and
+will certainly look more professional if you play with the format (see
+below).
+<h4>
+HARVARD GSAS FORMAT</h4>
+In January 2000 the Harvard University GSAS format was updated. The new
+`Form of the Doctoral Thesis' handbook is available online <a href="http://www.gsas.harvard.edu/academic/studentaffairs/thesis.html">here.</a>
+As well as the two people it lists to contact at Pusey library (whose expertees
+lie mainly with the physical requirements), I found the <b>Registrar's
+Office</b> (<b>5-1519</b>, I spoke to <b>Lauren Lemire</b> but there may
+be others there who can help) most useful. It seems some issues with the
+new format are being ironed out and it is best to ask.
+<p>One of the crucial things I learned from her was the <b>preferred font
+size: 12pt Times New Roman</b>. So put away that ruler and stop counting
+average characters per inch (CPI) - this is an outdated specification (thankfully).
+Also the new format of the Abstract is not crucial: as long as you have
+the new information (your name, advisor's name, thesis title) on the page
+somewhere then it's fine. I have updated the .cls file to include a <b>new
+Abstract format</b> that I designed. The page-numbering in the front matter
+is also not crucial, she told me; as long as arabic-numbered pages start
+at 1 on the first page of Chapter 1, then this is fine (for instance, my
+style file below does not put iii on the first page of the Abstract, but
+does put iv on the second, etc).
+<h4>
+LATEX2e STYLE CLASS</h4>
+Here is <a href="http://www.math.dartmouth.edu/~ahb/thesis/huthesis.cls">huthesis.cls</a> (version 1.4, Sep 2007),
+which I modified from Adam Lupu-Sax's port from UCTHESIS (from students
+at University of California). It has correct margin spacing, handles single-
+and double-sided, has my updated Abstract format (including correct headering
+of multi-page Abstracts), correct page numbering (roman in frontmatter,
+arabic in main body - however not all frontmatter pages are of a format
+where a number appears on that page), and has three different spacing options:
+\ssp (1.0 single spaced), \hsp (1.37 "one and a half"-spaced), and \dsp
+(1.8 "double"-spaced). Harvard GSAS requires "double"-spacing for the Abstract,
+Acknowledments, main body of the text, etc. But true 2.0 double-spacing
+is so horrendous (in my opinion) that you wouldn't want to use it. Besides,
+1.8 allows you to cram in that all-important extra line or two per page.
+You could easily change the spacing options by editing this .cls file.
+This style file also uses the fancy-header package <b>fancyhdr.sty</b>
+which I believe is standard with current LaTeX distributions.
+<p>You will also need the font specification files: <a href="http://www.math.dartmouth.edu/~ahb/thesis/hut10.clo">hut10.clo</a>,
+<a href="http://www.math.dartmouth.edu/~ahb/thesis/hut11.clo">hut11.clo</a>,
+<a href="http://www.math.dartmouth.edu/~ahb/thesis/hut12.clo">hut12.clo</a>,
+depending on which font size you use (remember 10pt is <i>smaller</i> than
+12pt). I found that for my own thesis copies, 11pt was more appropriate
+than the almost childishly-large 12pt required for Harvard.
+<p>Also you might want to read <a href="http://www.math.dartmouth.edu/~ahb/thesis/ucthesis.readme">ucthesis.readme</a>
+which is a description of the features of the original style file. I found
+that 'draft' mode was not so good as simply using \ssp at the beginning
+of the document.
+<p>To get you going, you can latex my <b>thesis skeleton</b>, get that
+working, then inject your content and play around. You will need:
+<blockquote><a href="http://www.math.dartmouth.edu/~ahb/thesis/thesis.tex">thesis.tex</a>
+(main file: chooses packages, gives order of chapters and appendices)
+<br><a href="http://www.math.dartmouth.edu/~ahb/thesis/frontmatter.tex">frontmatter.tex</a>
+(abstract, acknowledments, citations to published work, dedication, etc)
+<br><a href="http://www.math.dartmouth.edu/~ahb/thesis/mathdefs.tex">mathdefs.tex</a>
+(I include in case you find any of my equation abbreviations in there useful
+- certainly the \be and \ee save your wrists. It also includes a semi-workable
+version of the APS <b>mathletters macro</b> which allows you to number
+blocks of equations 3a,3b, etc... however the referencing of these equation numbers still has
+errors! Let me know if you solve this one.)
+<br><a href="http://www.math.dartmouth.edu/~ahb/thesis/ch1.tex">ch1.tex</a>
+(my actual chapter 1 - includes references to other chapters which will
+not be resolved [appear as ??])
+<br><a href="http://www.math.dartmouth.edu/~ahb/thesis/ap1.tex">ap1.tex</a>
+(dummy appendix A)
+<br><a href="http://www.math.dartmouth.edu/~ahb/thesis/fig1.eps">fig1.eps</a>
+(example Encapsulated PostScript figure used in appendix A)
+<br><a href="http://www.math.dartmouth.edu/~ahb/thesis/b.tex">b.tex</a>
+(wrapper for bibliography)
+<br><a href="http://www.math.dartmouth.edu/~ahb/thesis/bibs.bib">bibs.bib</a>
+(actual bibliography - in BibTeX format)</blockquote>
+<i>The whole package (huthesis.cls, hut*.clo, ucthesis.readme, and my skeleton)
+can be downloaded here as a <a href="http://www.math.dartmouth.edu/~ahb/thesis/huthesis_pack.tar.gz">gzipped
+tar file</a>.</i>
+<p>You will need to ensure that the huthesis.cls and hut*.clo files are
+accessible in a directory which is included on your TEXINPUTS environment
+variable, so latex can find them. Then simply execute the command '<b>latex
+thesis</b>', and you will get a prompt asking which files you want to process.
+Type eg 'frontmatter,ch1' to latex those two sections, or any combination
+of chapters and appendices separated by commas. This feature really saves
+some time while editing single chapters. Enter 'all' to latex the whole
+thing. This should run without errors, and give the .dvi file. As usual
+you will need to rerun it, and run 'bibtex thesis' at the appropriate times.
+(For latex info see <a href="http://www.giss.nasa.gov/latex/">here</a>, 
+<a href="http://wol.ra.phy.cam.ac.uk/mackay/latex_demo/Welcome.html">here</a>,
+<a href="http://www.ma.man.ac.uk/~higham/latex.html">here</a>
+and <a href="http://home.eunet.no/~shoiset/latex/digest.html#manualdelimetersize">here</a>,
+etc. and the usual books.) I included (using epsfig) an example <b>figure</b>
+placed using the float package.
+<p>Also maybe relevant is a Harvard <a href="http://www.courses.fas.harvard.edu/toolkit/scidoc/Mythesis/Mythesis.html">thesis.cls
+page</a>, which I did not find useful at all (it seems to have vanished anyway).
+<h4>
+YOUR OWN FORMAT</h4>
+I suggest for you own copies of the thesis: changing to 11pt font, \ssp
+or \hsp spacing, and double-sided pages. This looks a lot more like a professional
+publication and less like a draft of a children's book. You may also want
+to experiment with altering the definitions of figure caption environments
+in huthesis.cls, to have smaller text in these captions (\smallssp etc).
+Note that there is a complication with double-sided pages, namely that
+the 'parity' (physics term for whether the page is odd [wide left margin]
+or even [wide right margin]) is determined from the page number. Therefore
+if your frontmatter has an odd number of pages, the parity will be incorrect
+when the page counter is reset to 1 at the beginning of Chapter 1. To correct
+this, you will need to add an extra blank page in the frontmatter, probably
+after the dedication is best. My resulting thesis is downloadable as gzipped
+postscript (2.6Mb) <a href="http://www.math.dartmouth.edu/~ahb/thesis/thesis.ps.gz">here</a>.
+<blockquote>
+<blockquote>Please email me with any suggestions or additions: <b>ahb <i>at</i> math <i>dot</i> dartmouth <i>dot</i> edu</b>
+
+<p><font color="red">Better still</font>: become the new maintainer
+of this page, since I've been out 11 years now... !
+
+<p><i>Alex Barnett</i>
+<br><i>Dec 8, 2011</i>
+<p><i>Additional thanks to:&nbsp;&nbsp;&nbsp; Bill Bies; Marc Hill; Nusrat Rabbee (abstract debug); Jamie Kellogg and David Kastrup (for preview-latex compatibility); Frederick Matsen, Dan Hopkins (minor fixes).</i></blockquote>
+</blockquote>
+
+</body>
+</html>

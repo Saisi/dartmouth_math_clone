@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Lecture_1a.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000>ON A HOMEWORK PROBLEM</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>This is intended to give you some hints for problem 5 of the WeBWorK assignment "set s03day1".</font>
+</p>
+<p align=left>
+<b><font color=#000000> </font></b>
+</p>
+<p align=left>
+<font color=#000000>Load first the differential equations library:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(DEtools ):</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>Next we enter the differential equation:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(y(x),x)=y^3-x^3:</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>Now ask Maple to do a direction field plot of this differential equation on a suitable domain:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE ,y(x), x=-3..3, y=-3..3, color=BLUE);</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>Warning, y is present as both a dependent variable and a name. Inconsistent specification of the dependent variable is deprecated, and will be removed in the next release.<br>
+</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_1a1.gif" width=563 height=548 alt="[Maple Plot]">
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><font color=#000000>Question: </font></b>
+<i><font color=#000000>What information do you think is important in this graph? What does the picture say? In what respect is it different from the</font></i>
+</p>
+<p align=left>
+<i><font color=#000000>direction field of dy/dx=y-x?</font></i>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>Well, one can look for example at the points where the derivative is zero. This amounts to solving for the first DE the equation </font>
+</p>
+<p align=left>
+<font color=#000000>y^3=x^3, with solutions y=x. Note that these are exactly the places where the arrows in the direction field are horizontal. </font>
+</p>
+<p align=left>
+<font color=#000000>The same description of the zeros holds for the direction field of the second equation. </font>
+<font color=#000000>We can further look at the points where </font>
+</p>
+<p align=left>
+<font color=#000000>the derivative is constant. This amounts to solving for the second DE the equation y-x=constant, which gives y=x+constant. </font>
+</p>
+<p align=left>
+<font color=#000000>These are exactly the lines parallel to the line y=x. In other words the arrows in the direction field of dy/dx=y-x  have the same </font>
+</p>
+<p align=left>
+<font color=#000000>inclination (slope) on </font>
+<i><font color=#000000>each</font></i>
+<font color=#000000> line parallel to the line y=x. This is not the case for the direction field above, so we can say for sure </font>
+</p>
+<p align=left>
+<font color=#000000>that it does not represent the DE dy/dx=y-x.</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>_________________________________________________________________________________________________________</font>
+</p>
+<p align=left>
+<font color=#000000>Another feature of Maple is that it can draw the solutions of differential equation which pass through several points:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(y(x),x)=y^3-x^3:</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE , y(x), x=-3..3, y=-3..3,<br>
+[[y(0)=0], [y( 0)=1], [y(0)=-1]], arrows=SMALL, <br>
+dirgrid=[30, 30], stepsize=.1,<br>
+linecolor=RED, color=BLUE);</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>Warning, y is present as both a dependent variable and a name. Inconsistent specification of the dependent variable is deprecated, and will be removed in the next release.<br>
+</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_1a2.gif" width=441 height=343 alt="[Maple Plot]">
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>Such information, together with the similar graphs for the other direction field, can also be used to distinguish </font>
+</p>
+<p align=left>
+<font color=#000000>between the vector fields, and to understand some qualitative things about the diferential equations.</font>
+</p>
+<p align=center>
+<font color=#AAAAAA size="-1">
+Maple
+<sup>TM</sup> is a registered trademark of <a href="http://www.maplesoft.com" target=new><font color=#AAAAAA size="-1">Waterloo Maple Inc.</font></a><br>
+<font color=#AAAAAA size="-2">Math rendered by 
+<a href="http://www.dessci.com" target=new>
+<font color=#AAAAAA size="-2">
+WebEQ
+</font>
+</a>
+</font>
+</font>
+</p>
+</basefont>
+</body>
+</html>

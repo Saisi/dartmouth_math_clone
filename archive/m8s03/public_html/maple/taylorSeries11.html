@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>taylorSeries1.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000 size=4>12.10 Taylor series</font></b>
+</p>
+<p align=left>
+<b><font color=#000000 size=4>12.12 Approximation of functions using Taylor polynomials</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><font color=#000000>Example 1. </font></b>
+<font color=#000000>We begin by looking at the Taylor polynomials for </font>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries11.gif" width=70 height=46 alt="f(x) = e^x" align=middle>
+<font color=#000000> . Recall that </font>
+</p>
+<p align=center>
+<font color=#000000>nth degree Taylor polynomial of </font>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries12.gif" width=31 height=46 alt="e^x" align=middle>
+<font color=#000000> = Taylor(exp)(x,n) = </font>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries13.gif" width=61 height=72 alt="sum(x^j/j!,j = 0 .. n)" align=middle>
+<font color=#000000>.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Taylor(exp) := (x,n) -&gt; sum(x^j/j!, j=0..n);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries14.gif" width=204 height=62 alt="Taylor(exp) := proc (x, n) options operator, arrow;...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Taylor(exp)(x,8);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries15.gif" width=417 height=45 alt="1+x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+1/720*x^6+1/...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>evalf(Taylor(exp)(1,8));</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries16.gif" width=89 height=20 alt="2.718278770">
+</p>
+<p align=left>
+<font color=#000000>These Taylor polynomials are the partial sums of a series that converges to </font>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries17.gif" width=70 height=46 alt="f(x) = e^x" align=middle>
+<font color=#000000> pretty quickly.  To see this, look at the case </font>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries18.gif" width=46 height=28 alt="x = 1" align=middle>
+<font color=#000000>.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>printf("  n     approximation    true value\n");<br>
+for i from 1 to 10 by 1 do<br>
+printf("%3d   %12.8f     %12.8f\n",i,evalf(Taylor(exp)(1,i)),evalf(exp(1)));<br>
+end do;</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  n     approximation    true value</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  1     2.00000000       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  2     2.50000000       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  3     2.66666667       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  4     2.70833333       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  5     2.71666667       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  6     2.71805556       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  7     2.71825397       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  8     2.71827877       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>  9     2.71828153       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2> 10     2.71828180       2.71828183</font></pre></tt>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><font color=#000000>Example 2. </font></b>
+<font color=#000000>Next we look at the MacLaurin series of </font>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries19.gif" width=90 height=28 alt="f(x) = sin(x)" align=middle>
+<font color=#000000>.</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Taylor(sin):= (x,n) -&gt; sum((-1)^(k+1)*x^(2*k-1)/(2*k-1)!,k=1..(ceil(n/2)));</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries110.gif" width=341 height=84 alt="Taylor(sin) := proc (x, n) options operator, arrow;...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Taylor(sin)(x,5);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries111.gif" width=119 height=45 alt="x-1/6*x^3+1/120*x^5">
+</p>
+<p align=left>
+<font color=#000000>We want to see how well the Taylor polynomials approximate sin(x) for different values of x.</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot([sin(x),Taylor(sin)(x,1),Taylor(sin)(x,5)],x=-2*Pi..2*Pi,y=-2..2,color=[red,blue,green]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/taylorSeries112.gif" width=757 height=285 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000 size=2>(Note. Thanks to Dana Williams for this file.)</font>
+</p>
+</basefont>
+</body>
+</html>

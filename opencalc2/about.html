@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>About Open Calculus</title>
+<LINK href="opencalc.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<center>
+<img src="http://www.math.dartmouth.edu/opencalc2/images/oc04.3.31-400x150.jpg" alt="logo">
+</center>
+<p>
+
+<!--
+The contributors to Open Calculus believe that:
+<UL type="disc">
+<LI> Calculus is fun and useful, and you can do it.
+<LI> Everyone should have a good introduction to calculus.
+<LI> Everyone should be able to take calculus when they are ready for it.
+<LI> Everyone should be able to study for the AP exam in calculus.
+<LI> Everyone should be able to pursue a career in science,
+technology, engineering,<br> or mathematics if they so desire.
+</UL>
+-->
+
+Open Calculus is an exportable distance-learning/self-study
+environment for learning calculus.  Embodied in this open source
+project is a calculus text, online homework problems, videotapes of
+worked examples, and more, which have been organized and linked
+together in a flexible fashion.
+<p>
+
+The intent is for an institution to take all of these materials,
+install them locally, and serve their local constituency as a center
+for distance learning of calculus, or as a vehicle for students to
+learn calculus outside of a formal course.  Being open source, these
+materials can be reorganized or augmented to suit local needs.
+<p>
+
+<h3>User and Host system requirements</h3>
+
+<h4>Requirements for the student/user</h4>
+
+<ul>
+<li>A computer with a modern browser (e.g. mozilla (or
+mozilla-firefox)), which is capable of playing the video and rendering
+pdf files.  At the moment the video is streamed in <a
+href="http://www.real.com/">realplayer</a> format, but may soon be
+available in mpeg format.  <li> Note that while the text portion and
+homework problems may be done over a dialup connection, the video (if
+streamed) would be impractical without a highspeed connection.  </ul>
+<p>
+
+<h4>Requirements for the host</h4>
+
+The host requires a server (at the moment Unix/Linux or MacOSX) with
+the following software installed and configured: Apache, LaTeX, MySQL,
+Perl, PHP, and (at the moment) Helixserver (to stream the video).  The
+homework problems are served via an open source project called <a
+href="http://devel.webwork.rochester.edu/twiki/bin/view/Webwork/WebHome">WeBWorK</a>,
+which imposes some of the above 
+<a href="http://devel.webwork.rochester.edu/twiki/bin/view/Webwork/InstallationManualV2pt0#Satisfying_system_requirements">requirements</a>.
+<p>
+At Dartmouth, the various aspects of the project are hosted by
+different servers with the following constraints:
+
+
+<ul> 
+<li>Rendering the Open Calculus pages:  Any (Apache) server with PHP
+and MySQL.
+<li>For doing the WeBWorK homework problems:  Depending on the number
+of people accessing the system, it is generally advisable to have a
+dual processor server with Apache (mod_perl), LaTeX, MySQL, Perl
+installed.
+<li>At the moment with the video being streamed, we have a dedicated
+video server to stream the realvideo.  While CPU and memory is not a
+critical issue, bandwidth is, though the free publix Helixserver
+limits the number of simultaneous connects to between 4 and 10.  It is
+for this reason that we are investigating the conversion of the video
+to an alternate format which can be downloaded and played locally on
+the client machine.
+
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Volume integrals of scalar quantities</TITLE>
+<META NAME="description" CONTENT="Volume integrals of scalar quantities">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node143.html">
+<LINK REL="previous" HREF="node141.html">
+<LINK REL="up" HREF="node141.html">
+<LINK REL="next" HREF="node143.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1805"
+  HREF="node143.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1803"
+  HREF="node141.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1797"
+  HREF="node141.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1806"
+  HREF="node143.html">Volume integrals of vector</A>
+<B> Up:</B> <A NAME="tex2html1804"
+  HREF="node141.html">Matrix trick for pushing</A>
+<B> Previous:</B> <A NAME="tex2html1798"
+  HREF="node141.html">Matrix trick for pushing</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001721000000000000000"></A>
+<A NAME="sec:hagsc"></A>
+<BR>
+Volume integrals of scalar quantities
+</H2>
+
+<P>
+By taking the divergence of all the types of terms appearing in relevant
+vector identities, the following matrix relation is reached,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\nabla \cdot \left( \begin{array}{c}
+{\mathbf r} a^* b \\a^* \nabla b \\b \nabla a^* \\
+{\mathbf r} \nabla a^* \nabla b \\a^* ({\mathbf r}\cdot\nabla) \nabla b \\
+b ({\mathbf r}\cdot\nabla) \nabla a^*
+\end{array} \right)
+\; \; = \; \;
+\left( \begin{array}{cccccc}
+	d & 1 & 1 & 0 & 0 & 0\\
+	-k_b^2 & 0  & 0& 1 &0 &0 \\
+	-k_a^2 & 0  & 0& 1 &0 &0 \\
+	0 & 0 & 0 & d & 1 & 1 \\
+	-k_b^2 & -k_b^2 & 0& 0 &1 &0 \\
+	-k_a^2 & 0 &-k_a^2 & 0& 0 &1  \\
+\end{array} \right)
+\left( \begin{array}{c}
+a^* b \\a^* {\mathbf r}\cdot\nabla b \\b {\mathbf r}\cdot\nabla a^* \\
+\nabla a^* \cdot \nabla b \\\nabla a^* \cdot ({\mathbf r}\cdot\nabla) \nabla b \\
+\nabla b \cdot ({\mathbf r}\cdot\nabla) \nabla a^*
+\end{array} \right) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:hagm"></A><IMG
+ WIDTH="606" HEIGHT="137" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1826.gif"
+ ALT="\begin{displaymath}
+\nabla \cdot \left( \begin{array}{c}
+{\mathbf r} a^* b \\ a^...
+...cdot ({\mathbf r}\cdot\nabla) \nabla a^*
+\end{array} \right) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The scalar coefficient matrix is formed by finding
+the linear amounts of each of the 6 scalar functions which result
+from performing the divergences on each vector term.
+Deducing a few of the entries requires Einstein summation form,
+and substitution of the Helmholtz equation, but all are simple.
+It is convenient that 6 inputs gives 6 outputs since the matrix is
+then possibly invertible. Its determinant is found to be <!-- MATH
+ $(k_a^2 - k_b^2)^2$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1827.gif"
+ ALT="$(k_a^2 - k_b^2)^2$">,
+implying that it is invertible for <IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1800.gif"
+ ALT="$k_a \neq k_b$">.
+The relation (<A HREF="node142.html#eq:hagm">H.10</A>) can be written
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\nabla \cdot {\mathbf v}_\alpha \; = \; {\mathcal{M}}_{\alpha \beta} \,s_\beta ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="351" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1828.gif"
+ ALT="\begin{displaymath}
+\nabla \cdot {\mathbf v}_\alpha \; = \; {\mathcal{M}}_{\alpha \beta} \,s_\beta ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the sum over <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1041.gif"
+ ALT="$\beta$"> is implied. Care should be taken not to
+confuse spatial coordinates (boldface vectors) with coefficient
+indices <!-- MATH
+ $\alpha,\beta = 1\cdots6$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1829.gif"
+ ALT="$\alpha,\beta = 1\cdots6$"> (Greek letters).
+Integrating over the domain <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1830.gif"
+ ALT="${\mathcal{D}}$">, applying Gauss' theorem and
+premultiplying by the inverse of <IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1831.gif"
+ ALT="$\mathcal{M}$"> gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\int_{\mathcal{D}} \!\! d{\mathbf r} \, s_\alpha \; = \;
+	({\mathcal{M}}^{-1})_{\alpha \beta} \oint_\Gamma \!\! d{\mathbf s} \,{\mathbf n}\cdot {\mathbf v}_\beta .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="401" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1832.gif"
+ ALT="\begin{displaymath}
+\int_{\mathcal{D}} \!\! d{\mathbf r} \, s_\alpha \; = \;
+(...
+...Gamma \!\! d{\mathbf s} \,{\mathbf n}\cdot {\mathbf v}_\beta .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Thus we have closed-form expressions for the volume integrals of any of the
+6 scalar functions, in terms of boundary integrals.
+That is, we have `pushed' the problem onto the boundary, as desired.
+
+<P>
+The symbolic inverse can be found
+(<I>e.g. </I>using the <EM>Mathematica</EM> software package),
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathcal{M}}^{-1}\; \; = \; \;
+\frac{1}{\varepsilon } \left( \begin{array}{cccccc}
+0 & 1 & -1 & 0& 0&0 \\
+k_a^2 &(k_a^2 + k_b^2)/\varepsilon &d - (k_a^2 + k_b^2)/\varepsilon & -1 &1 &1 \\
+-k_b^2 &-d -(k_a^2 + k_b^2)/\varepsilon &(k_a^2 + k_b^2)/\varepsilon & 1 &-1 &-1 \\
+0 & k_a^2 & -k_b^2 & 0& 0&0 \\
+k_a^2k_b^2 & 2k_a^2k_b^2/\varepsilon & k_b^2(d - 2k_a^2/\varepsilon ) & -k_b^2 & k_a^2 & k_b^2\\
+-k_a^2k_b^2 &k_a^2(-d - 2k_b^2/\varepsilon ) &  2k_a^2k_b^2/\varepsilon & k_a^2 &
+-k_a^2 & -k_b^2\\
+\end{array} \right) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:haginv"></A><IMG
+ WIDTH="616" HEIGHT="137" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1833.gif"
+ ALT="\begin{displaymath}
+{\mathcal{M}}^{-1}\; \; = \; \;
+\frac{1}{\varepsilon } \left...
+...\varepsilon &amp; k_a^2 &amp;
+-k_a^2 &amp; -k_b^2\\
+\end{array} \right) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $\varepsilon \equiv k_a^2 - k_b^2$
+ -->
+<IMG
+ WIDTH="91" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1834.gif"
+ ALT="$\varepsilon \equiv k_a^2 - k_b^2$"> is the `energy difference'.
+Rows of this matrix give the desired expressions for volume integrals.
+For instance, (<A HREF="node139.html#eq:genoverlap">H.5</A>) results from row 1.
+
+<P>
+When <IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img34.gif"
+ ALT="$k_a = k_b = k$"> rows 2 and 3 of <IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1831.gif"
+ ALT="$\mathcal{M}$">
+become identical, so the matrix is
+singular and the above inversion fails.
+However, it is still possible to extract solutions to this singular
+problem by finding a vector <IMG
+ WIDTH="13" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1835.gif"
+ ALT="${\mathbf \xi}$"> such that
+<!-- MATH
+ ${\mathcal{M}}^T {\mathbf \xi} = {\mathbf e}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1836.gif"
+ ALT="${\mathcal{M}}^T {\mathbf \xi} = {\mathbf e}$">
+for a desired unit vector <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img546.gif"
+ ALT="${\mathbf e}$">.
+This is only possible if the unit vector lies entirely
+within the <EM>row space</EM>
+of <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> [<A
+ HREF="node161.html#strangbook">188</A>].
+For instance, the first unit vector <!-- MATH
+ $e_\alpha = \delta_{\alpha 1}$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1837.gif"
+ ALT="$e_\alpha = \delta_{\alpha 1}$"> gives
+<!-- MATH
+ ${\mathbf \xi} = (k^2, d/2, d/2, -1, 1, 1)^T$
+ -->
+<IMG
+ WIDTH="209" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1838.gif"
+ ALT="${\mathbf \xi} = (k^2, d/2, d/2, -1, 1, 1)^T$">,
+corresponding to
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:boasgen"></A>
+<!-- MATH
+ \begin{eqnarray}
+\left\langle a \left|b\right.\right\rangle _{\mathcal{D}} \;& = \;& -\frac{1}{2k^2} \oint_\Gamma \!\! d{\mathbf s} \,
+	\left[ \mbox{\small$\frac{1}{2}$}d (a^* \partial_n b + b \partial_n a^*) + ({\mathbf n}\cdot{\mathbf r})
+	( k^2 a^* b - \nabla a^* \cdot \nabla b )
+	\rule{0in}{0.2in}  \right. \nonumber \\
+	& & \hspace{1in} \left. \rule{0in}{0.2in}
+	+ \; a^* {\mathbf n}\cdot({\mathbf r}\cdot\nabla) \nabla b
+	+ a^*\!{\leftrightarrow}b\right] .
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1839.gif"
+ ALT="$\displaystyle \left\langle a \left\vert b\right.\right\rangle _{\mathcal{D}} \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="447" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1840.gif"
+ ALT="$\displaystyle -\frac{1}{2k^2} \oint_\Gamma \!\! d{\mathbf s} \,
+\left[ \mbox{\s...
+...\mathbf r})
+( k^2 a^* b - \nabla a^* \cdot \nabla b )
+\rule{0in}{0.2in} \right.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="335" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1841.gif"
+ ALT="$\displaystyle \hspace{1in} \left. \rule{0in}{0.2in}
++ \; a^* {\mathbf n}\cdot({\mathbf r}\cdot\nabla) \nabla b
++ a^*\!{\leftrightarrow}b\right] .$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.14)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This is a manifestly symmetric form of (<A HREF="node140.html#eq:alexoverlap">H.7</A>).
+Its derivation is much more routine than that of Boasman[<A
+ HREF="node161.html#boasman">33</A>] because
+the matrix method automatically handles the coefficients.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1805"
+  HREF="node143.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1803"
+  HREF="node141.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1797"
+  HREF="node141.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1806"
+  HREF="node143.html">Volume integrals of vector</A>
+<B> Up:</B> <A NAME="tex2html1804"
+  HREF="node141.html">Matrix trick for pushing</A>
+<B> Previous:</B> <A NAME="tex2html1798"
+  HREF="node141.html">Matrix trick for pushing</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

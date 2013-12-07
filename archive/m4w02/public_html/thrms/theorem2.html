@@ -1,0 +1,63 @@
+  
+  <HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>The Linearization Theorem</TITLE>
+</HEAD>
+
+
+<BODY BGCOLOR="#FFFFFF"
+      LINK="#white"
+      VLINK="#0055AA"
+      ALINK="#FF0000">
+
+
+<CENTER>
+<H1> 
+The Linearization  Theorem  </H1>
+</CENTER>
+
+
+This goal of the following is to give us a practical feel in order to
+use the linearization theorem.   For now let us think a bout a system of
+two equations and the system's  phase portrait.  Usually if we zoom into a
+point on the phase plane we see nothing but a bunch of parallel straight
+lines.  The phase portrait only become locally interesting looking near an
+equilibrium point.  It is useful to understand what we see as we zoom
+into an equilibrium point.  The wonderful fact is that we can
+mathematically zoom into the equilibrium point and as we've seen this can
+be accomplished by looking at the equations linearization at the
+equilibrium point. In
+practice we can accomplish this by running the <a
+href="../temps/ZoomIt.html">
+ZoomIn
+</a> program, which will take a system of equation and a specified
+equilibrium point and produce its linearization and evaluates the
+linear system's determinant. We have the following
+theorem: 
+
+
+<p>
+<b> The Linearization Theorem :</b>
+Take a system of equations and linearize it at an equilibrium point.
+If the determinant of the linear system  is non-zero then as we zoom into
+the equilibrium point we see very nearly the same solutions as we see
+when zooming into the origin of the linear system.
+
+<p>
+
+In practical terms the linear system acts like a magnifying glass
+allowing us to readily see what solutions behave like near an equilibrium
+point. Its nice to see this theorem in action by <a
+href="../temps/ZommIn.html"> zooming
+</a> into the equilibrium point of a system and its associated
+linearization  and comparing what we see.  The sequence of pictures in
+this program is doing precisely that.  As another <a
+href="../temps/LinSysX.html"> example
+</a> we can zoom into
+the equilibrium point (1/a,1/a-1/a^2) of 
+the system 
+dx/dt=x(1-x)-axy and 
+dy/dt=-y+axy
+when the parameter a is set to 1.1 and when  a is set to 2.
+

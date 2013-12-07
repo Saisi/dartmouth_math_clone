@@ -1,0 +1,109 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>future.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE2:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Position,Time;<br>
+Digits:=5;<br>
+Position:=I0;<br>
+Time:=T0;                                                                   List:=[[Time,Position]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Position:=evalf(<br>
+Position+Deltat*<br>
+(<br>
+((2.5/7-1/55)*Position)*(1-Position/5000)*((Position/75)-1)<br>
+<br>
+)<br>
+<br>
+);<br>
+Time:=evalf(Time+Deltat);<br>
+List:=[op(List),[Time,Position]];<br>
+od;<br>
+List;<br>
+end:                                                                                                                                                                                                                                            Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][2],List[i][2]]];<br>
+od;<br>
+NewList <br>
+end: <br>
+<br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,62,300,10):<br>
+<br>
+P1:=listplot(S1,color=red,legend="Kakapo"):<br>
+display(P1,title="Current Kakapo Population",labels=[Years,Population]);<br>
+<br>
+S1:=DE2(0,74,300,10):<br>
+<br>
+P1:=listplot(S1,color=red,legend="Kakapo"):<br>
+display(P1,title="Below Unstable Equilibrium Point",labels=[Years,Population]);<br>
+<br>
+S1:=DE2(0,75,300,10):<br>
+<br>
+P1:=listplot(S1,color=red,legend="Kakapo"):<br>
+display(P1,title="At Unstable Equilibrium Point",labels=[Years,Population]);<br>
+<br>
+S1:=DE2(0,76,300,10):<br>
+<br>
+P1:=listplot(S1,color=red,legend="Kakapo"):<br>
+display(P1,title="Above Unstable Equilibrium Point",labels=[Years,Population]);<br>
+<br>
+S1:=DE2(0,2500,300,10):<br>
+<br>
+P1:=listplot(S1,color=red,legend="Kakapo"):<br>
+display(P1,title="Below Stable Equilibrium",labels=[Years,Population]);<br>
+<br>
+S1:=DE2(0,5000,300,10):<br>
+<br>
+P1:=listplot(S1,color=red,legend="Kakapo"):<br>
+display(P1,title="At Stable Equilibrium",labels=[Years,Population]);<br>
+<br>
+S1:=DE2(0,5050,300,10):<br>
+V0:=Make1(S1):<br>
+P1:=listplot(S1,color=red,legend="Kakapo"):<br>
+display(P1,title="Above Stable Equilibrium",labels=[Years,Population]);<br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/future1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/future2.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/future3.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/future4.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/future5.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/future6.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/future7.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+</basefont>
+</body>
+</html>

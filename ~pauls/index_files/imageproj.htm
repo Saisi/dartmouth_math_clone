@@ -1,0 +1,829 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<!--[if !mso]>
+<style>v\:* {behavior:url("imageproj.htm#default%23VML");}
+o\:* {behavior:url("imageproj.htm#default%23VML");}
+b\:* {behavior:url("imageproj.htm#default%23VML");}
+.shape {behavior:url("imageproj.htm#default%23VML");}
+</style>
+<![endif]-->
+<title>Digital Occlusion Problems</title>
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Elephant;
+	panose-1:2 2 9 4 9 5 5 2 3 3;}
+@font-face
+	{font-family:"Arial Black";
+	panose-1:2 11 10 4 2 1 2 2 2 4;}
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:Arial;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{text-indent:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:"Times New Roman";
+	font-size:10.0pt;
+	color:black;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{text-indent:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:8.0pt;
+	text-align:left;
+	font-family:Arial;
+	font-size:10.0pt;
+	color:black;}
+p.MsoTitle3, li.MsoTitle3, div.MsoTitle3
+	{text-indent:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:"Courier New";
+	font-size:24.0pt;
+	color:black;
+	font-weight:bold;}
+h4
+	{text-indent:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:"Courier New";
+	font-size:10.0pt;
+	color:black;
+	font-weight:bold;}
+p.MsoAccentText, li.MsoAccentText, div.MsoAccentText
+	{text-indent:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:"Courier New";
+	font-size:9.0pt;
+	color:black;
+	font-weight:bold;}
+ol
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:.25in;}
+ul
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:.25in;}
+@page
+	{size:8.5in 11.0in;}
+-->
+</style>
+</head>
+
+<body link=purple vlink=navy style='margin:0'>
+
+<div style='position:absolute;width:7.9319in;height:10.9944in'>
+<!--[if gte vml 1]><v:rect id="_x0000_s1512" style='position:absolute;left:.27pt;
+ top:.23pt;width:428.81pt;height:143.77pt;z-index:78;visibility:visible;
+ mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' fillcolor="#9c9 [2]"
+ stroked="f" strokecolor="black [0]" strokeweight="0" o:cliptowrap="t">
+ <v:fill color2="white [7]"/>
+ <v:stroke>
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+ <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+</v:rect><![endif]--><![if !vml]><span style='position:absolute;z-index:78;
+left:0px;top:0px;width:572px;height:192px'><img width=572 height=192
+src="https://www.math.dartmouth.edu/~pauls/index_files/image354.gif" v:shapes="_x0000_s1512"></span><![endif]><!--[if gte vml 1]><v:rect
+ id="_x0000_s1513" style='position:absolute;left:130.46pt;top:108.32pt;width:47.02pt;
+ height:81pt;z-index:79;visibility:visible;mso-wrap-edited:f;
+ mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' fillcolor="white [7]"
+ stroked="f" strokecolor="black [0]" o:cliptowrap="t">
+ <v:stroke color2="white [7]">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+ <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+</v:rect><![endif]--><![if !vml]><span style='position:absolute;z-index:79;
+left:174px;top:144px;width:63px;height:108px'><img width=63 height=108
+src="https://www.math.dartmouth.edu/~pauls/index_files/image308.gif" v:shapes="_x0000_s1513"></span><![endif]><!--[if gte vml 1]><v:rect
+ id="_x0000_s1514" style='position:absolute;left:1.3pt;top:58.57pt;width:129.91pt;
+ height:732.3pt;z-index:80;visibility:visible;mso-wrap-edited:f;
+ mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' fillcolor="#9c9 [2]"
+ stroked="f" strokecolor="black [0]" strokeweight="0" o:cliptowrap="t">
+ <v:fill color2="white [7]"/>
+ <v:stroke>
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+ <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+</v:rect><![endif]--><![if !vml]><span style='position:absolute;z-index:80;
+left:2px;top:78px;width:173px;height:977px'><img width=173 height=977
+src="https://www.math.dartmouth.edu/~pauls/index_files/image309.gif" v:shapes="_x0000_s1514"></span><![endif]><!--[if gte vml 1]><v:roundrect
+ id="_x0000_s1515" style='position:absolute;left:129.83pt;top:54.88pt;width:393.75pt;
+ height:108pt;z-index:81;visibility:visible;mso-wrap-edited:f;
+ mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' arcsize=".5"
+ fillcolor="white [7]" stroked="f" strokecolor="black [0]" strokeweight="0"
+ o:cliptowrap="t">
+ <v:fill color2="white [7]"/>
+ <v:stroke>
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+ <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+</v:roundrect><![endif]--><![if !vml]><span style='position:absolute;
+z-index:81;left:173px;top:73px;width:526px;height:145px'><img width=526
+height=145 src="https://www.math.dartmouth.edu/~pauls/index_files/image310.gif" v:shapes="_x0000_s1515"></span><![endif]><!--[if gte vml 1]><v:group
+ id="_x0000_s1517" style='position:absolute;left:20.95pt;top:5.69pt;width:108pt;
+ height:54.01pt;z-index:82' coordorigin="106831872,88311989" coordsize="1371594,685801">
+ <v:rect id="_x0000_s1518" style='position:absolute;left:106831872;top:88311990;
+  width:1371594;height:685800;visibility:hidden;mso-wrap-edited:f;
+  mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="black [0]" stroked="f" strokecolor="white [7]" strokeweight="0"
+  o:cliptowrap="t">
+  <v:fill color2="white [7]"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:rect id="_x0000_s1519" style='position:absolute;left:107412489;
+  top:88311989;width:210358;height:226540;visibility:visible;mso-wrap-edited:f;
+  mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="black [0]" stroked="f" strokecolor="black [0]" strokeweight="0"
+  o:cliptowrap="t">
+  <v:fill color2="white [7]"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:imagedata src="image315.jpg" o:title="dartshield1"/>
+  <v:shadow color="#ccc [4]"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+ </v:rect><v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
+  path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s1520" type="#_x0000_t202" style='position:absolute;
+  left:106831872;top:88538530;width:1371594;height:276225;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="white [7]" stroked="f" strokecolor="black [0]" strokeweight="0"
+  o:cliptowrap="t">
+  <v:fill color2="white [7]"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox style='mso-column-margin:5.7pt' inset="0,0,0,0">
+   <div dir=ltr>
+   <p class=MsoNormal style='text-align:center;text-align:center'><span
+   style='font-size:9.85pt;font-family:Elephant;letter-spacing:.5pt;language:
+   EN'>Dartmouth College</span></p>
+   </div>
+  </v:textbox>
+ </v:shape></v:group><![endif]--><![if !vml]><span style='position:absolute;
+z-index:82;left:28px;top:8px;width:144px;height:72px'><img width=144 height=72
+src="https://www.math.dartmouth.edu/~pauls/index_files/image312.gif" v:shapes="_x0000_s1517 _x0000_s1519 _x0000_s1520"></span><![endif]><!--[if gte vml 1]><v:group
+ id="_x0000_s1526" style='position:absolute;left:1.16pt;top:70.5pt;width:126pt;
+ height:126pt;z-index:83' coordorigin="106580483,89134950" coordsize="1600200,1600204">
+ <v:rect id="_x0000_s1527" alt="" style='position:absolute;left:106580483;
+  top:89134950;width:1600200;height:320040;visibility:hidden;mso-wrap-edited:f;
+  mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="white [7]" stroked="f" strokecolor="black [0]" o:cliptowrap="t">
+  <v:stroke dashstyle="1 1" endcap="round">
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:rect id="_x0000_s1528" alt="" style='position:absolute;left:106580483;
+  top:89157810;width:1600200;height:274320;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' o:regroupid="1"
+  fillcolor="#9c9 [2]" stroked="f" strokecolor="#9c9 [2]" o:cliptowrap="t">
+  <v:fill rotate="t" focus="100%" type="gradient"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:line id="_x0000_s1529" style='position:absolute;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' from="106580483,89161620"
+  to="108180683,89161620" o:regroupid="1" strokecolor="navy [1]"
+  strokeweight="2.25pt" o:cliptowrap="t">
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+ </v:line><v:shape id="_x0000_s1530" type="#_x0000_t202" alt="" style='position:absolute;
+  left:106603343;top:89148666;width:1554480;height:292608;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="white [7]" stroked="f" strokecolor="black [0]" o:cliptowrap="t">
+  <v:stroke dashstyle="dash">
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox style='mso-column-margin:5.76pt' inset="2.88pt,2.88pt,2.88pt,2.88pt">
+   <div dir=ltr style='padding-top:1.62pt'>
+   <p class=MsoNormal style='text-align:center;line-height:113%;text-align:
+   center'><span style='font-size:8.0pt;line-height:113%;font-family:"Arial Black";
+   color:black;language:EN'>Home</span></p>
+   </div>
+  </v:textbox>
+ </v:shape><v:rect id="_x0000_s1531" alt="" href="../index.htm" style='position:absolute;
+  left:106580483;top:89134950;width:1600200;height:320040;visibility:visible;
+  mso-wrap-edited:f' filled="f" fillcolor="white [7]" stroked="f" o:cliptowrap="t">
+  <v:fill color2="white [7]"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:path strokeok="f" fillok="f" insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:rect id="_x0000_s1532" alt="" style='position:absolute;left:106580483;
+  top:89477851;width:1600200;height:274320;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' o:regroupid="1"
+  fillcolor="#9c9 [2]" stroked="f" strokecolor="#9c9 [2]" o:cliptowrap="t">
+  <v:fill rotate="t" focus="100%" type="gradient"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:line id="_x0000_s1533" style='position:absolute;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' from="106580483,89481661"
+  to="108180683,89481661" o:regroupid="1" strokecolor="navy [1]"
+  strokeweight="2.25pt" o:cliptowrap="t">
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+ </v:line><v:shape id="_x0000_s1534" type="#_x0000_t202" alt="" style='position:absolute;
+  left:106603343;top:89468707;width:1554480;height:292608;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="white [7]" stroked="f" strokecolor="black [0]" o:cliptowrap="t">
+  <v:stroke dashstyle="dash">
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox style='mso-column-margin:5.76pt' inset="2.88pt,2.88pt,2.88pt,2.88pt">
+   <div dir=ltr style='padding-top:1.62pt'>
+   <p class=MsoNormal style='text-align:center;line-height:113%;text-align:
+   center'><span style='font-size:8.0pt;line-height:113%;font-family:"Arial Black";
+   color:black;language:EN'>Teaching</span></p>
+   </div>
+  </v:textbox>
+ </v:shape><v:rect id="_x0000_s1535" alt="" href="teaching.htm" style='position:absolute;
+  left:106580483;top:89454991;width:1600200;height:320040;visibility:visible;
+  mso-wrap-edited:f' filled="f" fillcolor="white [7]" stroked="f" o:cliptowrap="t">
+  <v:fill color2="white [7]"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:path strokeok="f" fillok="f" insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:rect id="_x0000_s1536" alt="" style='position:absolute;left:106580483;
+  top:89797892;width:1600200;height:274320;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' o:regroupid="1"
+  fillcolor="#9c9 [2]" stroked="f" strokecolor="#9c9 [2]" o:cliptowrap="t">
+  <v:fill rotate="t" focus="100%" type="gradient"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:line id="_x0000_s1537" style='position:absolute;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' from="106580483,89801702"
+  to="108180683,89801702" o:regroupid="1" strokecolor="navy [1]"
+  strokeweight="2.25pt" o:cliptowrap="t">
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+ </v:line><v:shape id="_x0000_s1538" type="#_x0000_t202" alt="" style='position:absolute;
+  left:106603343;top:89788748;width:1554480;height:292608;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="white [7]" stroked="f" strokecolor="black [0]" o:cliptowrap="t">
+  <v:stroke dashstyle="dash">
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox style='mso-column-margin:5.76pt' inset="2.88pt,2.88pt,2.88pt,2.88pt">
+   <div dir=ltr style='padding-top:1.62pt'>
+   <p class=MsoNormal style='text-align:center;line-height:113%;text-align:
+   center'><span style='font-size:8.0pt;line-height:113%;font-family:"Arial Black";
+   color:black;language:EN'>Research</span></p>
+   </div>
+  </v:textbox>
+ </v:shape><v:rect id="_x0000_s1539" alt="" href="research.htm" style='position:absolute;
+  left:106580483;top:89775032;width:1600200;height:320040;visibility:visible;
+  mso-wrap-edited:f' filled="f" fillcolor="white [7]" stroked="f" o:cliptowrap="t">
+  <v:fill color2="white [7]"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:path strokeok="f" fillok="f" insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:rect id="_x0000_s1540" alt="" style='position:absolute;left:106580483;
+  top:90117933;width:1600200;height:274320;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' o:regroupid="1"
+  fillcolor="#9c9 [2]" stroked="f" strokecolor="#9c9 [2]" o:cliptowrap="t">
+  <v:fill rotate="t" focus="100%" type="gradient"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:line id="_x0000_s1541" style='position:absolute;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' from="106580483,90121743"
+  to="108180683,90121743" o:regroupid="1" strokecolor="navy [1]"
+  strokeweight="2.25pt" o:cliptowrap="t">
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+ </v:line><v:shape id="_x0000_s1542" type="#_x0000_t202" alt="" style='position:absolute;
+  left:106603343;top:90108789;width:1554480;height:292608;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="white [7]" stroked="f" strokecolor="black [0]" o:cliptowrap="t">
+  <v:stroke dashstyle="dash">
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox style='mso-column-margin:5.76pt' inset="2.88pt,2.88pt,2.88pt,2.88pt">
+   <div dir=ltr style='padding-top:1.62pt'>
+   <p class=MsoNormal style='text-align:center;line-height:113%;text-align:
+   center'><span style='font-size:8.0pt;line-height:113%;font-family:"Arial Black";
+   color:black;language:EN'>CC research page</span></p>
+   </div>
+  </v:textbox>
+ </v:shape><v:rect id="_x0000_s1543" alt=""
+  href="http://www.math.dartmouth.edu/~pauls/ccpage.htm" style='position:absolute;
+  left:106580483;top:90095073;width:1600200;height:320040;visibility:visible;
+  mso-wrap-edited:f' filled="f" fillcolor="white [7]" stroked="f" o:cliptowrap="t">
+  <v:fill color2="white [7]"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:path strokeok="f" fillok="f" insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:rect id="_x0000_s1544" alt="" style='position:absolute;left:106580483;
+  top:90437974;width:1600200;height:274320;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' o:regroupid="1"
+  fillcolor="#9c9 [2]" stroked="f" strokecolor="#9c9 [2]" o:cliptowrap="t">
+  <v:fill rotate="t" focus="100%" type="gradient"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect><v:line id="_x0000_s1545" style='position:absolute;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' from="106580483,90441784"
+  to="108180683,90441784" o:regroupid="1" strokecolor="navy [1]"
+  strokeweight="2.25pt" o:cliptowrap="t">
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+ </v:line><v:shape id="_x0000_s1546" type="#_x0000_t202" alt="" style='position:absolute;
+  left:106603343;top:90428830;width:1554480;height:292608;visibility:visible;
+  mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+  fillcolor="white [7]" stroked="f" strokecolor="black [0]" o:cliptowrap="t">
+  <v:stroke dashstyle="dash">
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:shadow color="#ccc [4]"/>
+  <v:path insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox style='mso-column-margin:5.76pt' inset="2.88pt,2.88pt,2.88pt,2.88pt">
+   <div dir=ltr style='padding-top:1.62pt'>
+   <p class=MsoNormal style='text-align:center;line-height:113%;text-align:
+   center'><span style='font-size:8.0pt;line-height:113%;font-family:"Arial Black";
+   color:black;language:EN'>Undergraduate Research</span></p>
+   </div>
+  </v:textbox>
+ </v:shape><v:rect id="_x0000_s1547" alt="" href="ugrad.htm" style='position:absolute;
+  left:106580483;top:90415114;width:1600200;height:320040;visibility:visible;
+  mso-wrap-edited:f' filled="f" fillcolor="white [7]" stroked="f" o:cliptowrap="t">
+  <v:fill color2="white [7]"/>
+  <v:stroke>
+   <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+   <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+  </v:stroke>
+  <v:path strokeok="f" fillok="f" insetpenok="f"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+  <v:textbox inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+ </v:rect></v:group><![endif]--><![if !vml]><span style='position:absolute;
+z-index:83;left:0px;top:94px;width:172px;height:168px'><map
+name=MicrosoftOfficeMap0><area shape=Rect
+coords="2, 134, 170, 168" href="ugrad.htm"><area shape=Rect
+coords="2, 101, 170, 134" href="../ccpage.htm"><area
+shape=Rect coords="2, 67, 170, 101" href="research.htm"><area shape=Rect
+coords="2, 34, 170, 67" href="teaching.htm"><area shape=Rect
+coords="2, 0, 170, 34" href="../index.htm"></map><img border=0 width=172
+height=168 src="https://www.math.dartmouth.edu/~pauls/index_files/image527.gif" usemap="#MicrosoftOfficeMap0" v:shapes="_x0000_s1526 _x0000_s1528 _x0000_s1529 _x0000_s1530 _x0000_s1531 _x0000_s1532 _x0000_s1533 _x0000_s1534 _x0000_s1535 _x0000_s1536 _x0000_s1537 _x0000_s1538 _x0000_s1539 _x0000_s1540 _x0000_s1541 _x0000_s1542 _x0000_s1543 _x0000_s1544 _x0000_s1545 _x0000_s1546 _x0000_s1547"></span><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1550" type="#_x0000_t202" style='position:absolute;left:147.3pt;
+ top:72.75pt;width:417.73pt;height:40.7pt;z-index:84;visibility:visible;
+ mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+ fillcolor="black [0]" stroked="f" strokecolor="#9c9 [2]" strokeweight="0"
+ o:cliptowrap="t">
+ <v:fill color2="white [7]"/>
+ <v:stroke dashstyle="dash">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+ <v:textbox style='mso-column-margin:5.7pt' inset="2.85pt,2.85pt,2.85pt,2.85pt"/>
+</v:shape><![endif]--><![if !vml]><span style='position:absolute;z-index:84;
+left:196px;top:97px;width:557px;height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=557 height=55 style='vertical-align:top'><![endif]>
+  <div v:shape="_x0000_s1550" style='padding:2.85pt 2.85pt 2.85pt 2.85pt'
+  class=shape>
+  <p class=MsoTitle3><span style='language:EN'>Digital Occlusion Problems</span></p>
+  </div>
+  <![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1551" type="#_x0000_t202"
+ style='position:absolute;left:147.3pt;top:161.28pt;width:276.41pt;height:474.72pt;
+ z-index:85;visibility:visible;mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;
+ mso-wrap-distance-top:2.88pt;mso-wrap-distance-right:2.88pt;
+ mso-wrap-distance-bottom:2.88pt' filled="f" fillcolor="black [0]" stroked="f"
+ strokecolor="#9c9 [2]" strokeweight="0" o:cliptowrap="t">
+ <v:fill color2="white [7]"/>
+ <v:stroke dashstyle="dash">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+ <v:textbox style='mso-column-margin:5.7pt' inset="2.85pt,2.85pt,2.85pt,2.85pt"/>
+</v:shape><![endif]--><![if !vml]><span style='position:absolute;z-index:85;
+left:196px;top:215px;width:369px;height:633px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=369 height=633 style='vertical-align:top'><![endif]>
+  <div v:shape="_x0000_s1551" style='padding:2.85pt 2.85pt 2.85pt 2.85pt'
+  class=shape>
+  <p class=MsoBodyText3><span style='language:EN'>My recent work (with Rob Hladky) on minimal surfaces in the roto-translation group provides a new framework for filling in occluded regions within digital images using the same process as the first layer of the visual cortex uses in the brain (at least according to the model).  Initial work, again with Hladky, has produced an implementation of this algorithm that, when it works, is significantly factor than known algorithm (the images on the right show examples of the algorithm at work).  However, there are still a number of situation where the algorithm performs poorly or fails altogether.   These seem to occur when the mathematical model produces multiple possible completions or partial completions — we are currently missing a plausible way to make choices and/or combine the various choices into a single completion.  This is related to the problem, described in the section on “</span><span
+  style='language:EN'><a href="https://www.math.dartmouth.edu/~pauls/index_files/mathproj.html">Minimal surfaces in the roto-translation group</a></span><span
+  style='language:EN'>”, regarding non-smooth minimal surfaces and gluing operations.   Projects in this area might include:</span></p>
+  <p class=MsoBodyText3><span style='language:EN'><![if !supportEmptyParas]>&nbsp;<![endif]></span></p>
+  <p class=MsoBodyText3 style='text-indent:-36.0pt;margin-left:36.0pt'><![if !supportLists]><span
+  style='direction:ltr;unicode-bidi:embed;font-family:Arial;font-size:10.0pt;
+  language:EN;color:black'>1.</span><span style='width:28.5pt'>&nbsp;</span><![endif]><span
+  style='language:EN'>Experimental combination of multiple completions to look for examples of non-smooth completions.</span></p>
+  <p class=MsoBodyText3 style='text-indent:-36.0pt;margin-left:36.0pt'><![if !supportLists]><span
+  style='direction:ltr;unicode-bidi:embed;font-family:Arial;font-size:10.0pt;
+  language:EN;color:black'>2.</span><span style='width:28.5pt'>&nbsp;</span><![endif]><span
+  style='language:EN'>Revamping existing algorithms to add new features of the occlusion problem  and/or improve efficiency.</span></p>
+  <p class=MsoBodyText3><span style='language:EN'><![if !supportEmptyParas]>&nbsp;<![endif]></span></p>
+  <p class=MsoBodyText3><span style='font-family:Arial;font-weight:bold;
+  language:EN'>Experience and requirements</span><span style='language:EN'>:  Students interested in this area should have completed at least math 13 (or its equivalent) and have an interest in digital image manipulation.  Experience with matlab coding would be helpful as all of the implementations of the algorithm have, to this point, been in matlab.  </span></p>
+  </div>
+  <![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1553" type="#_x0000_t202"
+ style='position:absolute;left:146.2pt;top:113.45pt;width:277.51pt;height:30.01pt;
+ z-index:86;visibility:visible;mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;
+ mso-wrap-distance-top:2.88pt;mso-wrap-distance-right:2.88pt;
+ mso-wrap-distance-bottom:2.88pt' filled="f" fillcolor="white [7]" stroked="f"
+ strokecolor="#9c9 [2]" o:cliptowrap="t">
+ <v:fill color2="black [0]"/>
+ <v:stroke dashstyle="dash">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+ <v:textbox style='mso-column-margin:5.76pt' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+</v:shape><![endif]--><![if !vml]><span style='position:absolute;z-index:86;
+left:195px;top:151px;width:371px;height:41px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=371 height=41 style='vertical-align:top'><![endif]>
+  <div v:shape="_x0000_s1553" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
+  class=shape></div>
+  <![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1554" type="#_x0000_t202"
+ style='position:absolute;left:147.67pt;top:143.46pt;width:276.04pt;height:17.82pt;
+ z-index:87;visibility:visible;mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;
+ mso-wrap-distance-top:2.88pt;mso-wrap-distance-right:2.88pt;
+ mso-wrap-distance-bottom:2.88pt' filled="f" fillcolor="white [7]" stroked="f"
+ strokecolor="#9c9 [2]" o:cliptowrap="t">
+ <v:fill color2="black [0]"/>
+ <v:stroke dashstyle="dash">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+ <v:textbox style='mso-column-margin:5.76pt' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
+</v:shape><![endif]--><![if !vml]><span style='position:absolute;z-index:87;
+left:197px;top:191px;width:369px;height:24px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=369 height=24 style='vertical-align:top'><![endif]>
+  <div v:shape="_x0000_s1554" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
+  class=shape></div>
+  <![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:rect id="_x0000_s1555" style='position:absolute;
+ left:426pt;top:164.57pt;width:2in;height:129.85pt;z-index:88;visibility:visible;
+ mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+ fillcolor="white [7]" stroked="f" strokecolor="#9c9 [2]" o:cliptowrap="t">
+ <v:fill color2="black [0]"/>
+ <v:stroke dashstyle="dash">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:imagedata src="image701.png" o:title="alg1"/>
+ <v:shadow color="#ccc [4]"/>
+ <v:path o:extrusionok="f" insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+</v:rect><![endif]--><![if !vml]><span style='position:absolute;z-index:88;
+left:568px;top:219px;width:192px;height:174px'><img width=192 height=174
+src="https://www.math.dartmouth.edu/~pauls/index_files/image7011.jpg" v:shapes="_x0000_s1555"></span><![endif]><!--[if gte vml 1]><v:line
+ id="_x0000_s1556" style='position:absolute;z-index:89;visibility:visible;
+ mso-wrap-edited:f;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' from="146.66pt,113.45pt"
+ to="565.03pt,113.45pt" strokecolor="black [0]" strokeweight="1.5pt"
+ o:cliptowrap="t">
+ <v:stroke color2="white [7]">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:shadow color="#ccc [4]"/>
+ <v:path insetpenok="f"/>
+</v:line><![endif]--><![if !vml]><span style='position:absolute;z-index:89;
+left:194px;top:150px;width:561px;height:3px'><img width=561 height=3
+src="https://www.math.dartmouth.edu/~pauls/index_files/image345.gif" v:shapes="_x0000_s1556"></span><![endif]><!--[if gte vml 1]><v:rect
+ id="_x0000_s1557" style='position:absolute;left:426pt;top:327pt;width:2in;
+ height:141.52pt;z-index:94;visibility:visible;mso-wrap-edited:f;
+ mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+ fillcolor="white [7]" stroked="f" strokecolor="#9c9 [2]" o:cliptowrap="t">
+ <v:fill color2="black [0]"/>
+ <v:stroke dashstyle="dash">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:imagedata src="image702.png" o:title="occl-eg"/>
+ <v:shadow color="#ccc [4]"/>
+ <v:path o:extrusionok="f" insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+</v:rect><![endif]--><![if !vml]><span style='position:absolute;z-index:94;
+left:568px;top:436px;width:192px;height:189px'><img width=192 height=189
+src="https://www.math.dartmouth.edu/~pauls/index_files/image7021.jpg" v:shapes="_x0000_s1557"></span><![endif]><!--[if gte vml 1]><v:rect
+ id="_x0000_s1558" style='position:absolute;left:426pt;top:501pt;width:2in;
+ height:162pt;z-index:95;visibility:visible;mso-wrap-edited:f;
+ mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
+ mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
+ fillcolor="white [7]" stroked="f" strokecolor="#9c9 [2]" o:cliptowrap="t">
+ <v:fill color2="black [0]"/>
+ <v:stroke dashstyle="dash">
+  <o:left v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:top v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:right v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:bottom v:ext="view" color="black [0]" color2="white [7]"/>
+  <o:column v:ext="view" color="black [0]" color2="white [7]"/>
+ </v:stroke>
+ <v:imagedata src="image572.jpg" o:title="airplane"/>
+ <v:shadow color="#ccc [4]"/>
+ <v:path o:extrusionok="f" insetpenok="f"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+</v:rect><![endif]--><![if !vml]><span style='position:absolute;z-index:95;
+left:568px;top:668px;width:192px;height:216px'><img width=192 height=216
+src="https://www.math.dartmouth.edu/~pauls/index_files/image5721.jpg" v:shapes="_x0000_s1558"></span><![endif]>
+</div>
+
+</body>
+
+</html>

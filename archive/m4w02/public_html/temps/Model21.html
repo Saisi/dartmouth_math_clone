@@ -1,0 +1,201 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Model2.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000> with(plots):<br>
+<br>
+with(linalg):<br>
+<br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][3]]];<br>
+od;<br>
+NewList <br>
+end: <br>
+<br>
+Make4:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][4]]];<br>
+od;<br>
+NewList <br>
+end: </font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>Warning, the name changecoords has been redefined<br>
+</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>Warning, the protected names norm and trace have been redefined and unprotected<br>
+</font></pre></tt>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Mod2:=proc(T0,N,F,w,m,n,k,L,lr)<br>
+local S,E,In,R,Val,K,T,v,s,u,a,b,p,C,g,r,Deltat,List,i,Time;<br>
+Digits:=5;<br>
+Time:=T0;<br>
+K:=1.62*w^(-.7);<br>
+r:=0.6*w^(-.27);<br>
+u:=0.4*w^(-.26);<br>
+p:=n*u;<br>
+s:=k*u;<br>
+g:=r+u;<br>
+v:=K*g+u;<br>
+C:=(K*v)/(v-u);<br>
+a:=(m-1)*u;<br>
+b:=L*(2.47)*(10^(-2))*(m+n)*w^(.44);<br>
+Val:=[0.7*K,0.3*K,0,0];<br>
+List:=[[0,Val]];<br>
+Deltat:=(F-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+S:=Val[1];<br>
+E:=Val[2];<br>
+In:=Val[3];<br>
+R:=Val[4];<br>
+T:=Val[1]+Val[2]+Val[4];<br>
+Val:=<br>
+[<br>
+evalf(<br>
+S+Deltat*(<br>
+v*(1-T/C)*S<br>
+-u*S<br>
++lr*R<br>
+-b*S*In<br>
++v*(1-T/C)*R<br>
+)<br>
+),<br>
+evalf(<br>
+E+Deltat*(<br>
+b*In*S<br>
+-s*E<br>
+-u*E<br>
++v*(1-T/C)*E<br>
+)<br>
+)<br>
+,<br>
+evalf(<br>
+In+Deltat*(<br>
+s*E<br>
+-a*In<br>
+-u*In<br>
+-p*In<br>
+)<br>
+),<br>
+evalf(<br>
+R+Deltat*(<br>
+p*In<br>
+-u*R<br>
+-lr*R<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=Mod2(0,3,100,1,10,1,1,5,1);</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Models/Model21.gif" width=329 height=29 alt="S0 := [[0, [1.134, .486, 0, 0]], [100/3, [1.134, -5...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Models/Model22.gif" width=483 height=29 alt="S0 := [[0, [1.134, .486, 0, 0]], [100/3, [1.134, -5...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"T0,N,T,w,m,n,k,L":<br>
+<br>
+S0:=Mod2(0,3000,100,1,2,5,5,60,0):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+V3:=Make4(S0):<br>
+<br>
+P0:=listplot(V0,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V1,color=blue,legend="Exposed"):<br>
+<br>
+P2:=listplot(V2,color=green,legend="Infected"):<br>
+<br>
+P3:=listplot(V3,color=cyan,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,P3,title="An Epidemic Model");</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Models/Model23.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"T0,N,T,w,m,n,k,L":<br>
+<br>
+S0:=Mod2(0,3000,100,1,10,5,5,20,0):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+V3:=Make4(S0):<br>
+<br>
+P0:=listplot(V0,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V1,color=blue,legend="Exposed"):<br>
+<br>
+P2:=listplot(V2,color=green,legend="Infected"):<br>
+<br>
+P3:=listplot(V3,color=cyan,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,P3,title="An Epidemic Model");</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Models/Model24.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

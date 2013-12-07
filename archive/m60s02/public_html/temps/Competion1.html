@@ -1,0 +1,209 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Competion.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000> "This is an example of a maple worksheet. If this is your first time using maple I recommend hitting return. By doing<br>
+this you will teach the computer the following commands. If you want to modify the commands you can, but maybe not<br>
+your first time.": <br>
+<br>
+<br>
+Spikegraph:=proc(distributionlist,xmin,xmax,show,c)<br>
+local num,linelist,j,i,templist:<br>
+templist:=[]:<br>
+if ((distributionlist[1][1]&lt;xmin) or <br>
+(distributionlist[nops(distributionlist)][1]&gt;xmax)<br>
+) then<br>
+lprint(`Note: some data values lie outside the user-defined interval.`)<br>
+fi:<br>
+for i from 1 to nops(distributionlist) do<br>
+if not((distributionlist[i][1]&lt;xmin) or (distributionlist[i][1]&gt;xmax)) then<br>
+templist:=[op(templist),<br>
+[distributionlist[i][1],<br>
+distributionlist[i][2]<br>
+]<br>
+]:<br>
+fi:<br>
+od:<br>
+num:=nops(templist):<br>
+linelist:=[]:<br>
+for j from 1 to num do<br>
+linelist:=[op(linelist),[templist[j][1],0]]:<br>
+linelist:=[op(linelist),[templist[j][1],templist[j][2]]]:<br>
+linelist:=[op(linelist),[templist[j][1],0]]:<br>
+od:<br>
+if show then plot(linelist,style=LINE,color=c) fi;<br>
+end:<br>
+<br>
+<br>
+Bin:=proc(n,p,k)<br>
+(binomial(n,k))*(p^k)*((1-p)^(n-k));<br>
+end:<br>
+<br>
+with(plots):<br>
+"This programs computes for us the probabilty that our result is due to chance error givne the null hypothesis is true. Its<br>
+ofeten called a significane measure. ":<br>
+<br>
+<br>
+BinomialPlot:=proc(n,m,p,q)<br>
+local length,i,j1,j2,j3,j4,j5,spikelist1,spikelist2,spikelist3,<br>
+spikelist4,spikelist5,A1,A2,A3,A4,A5:<br>
+spikelist1:=[]:<br>
+spikelist2:=[]:<br>
+spikelist3:=[]:<br>
+spikelist4:=[]:<br>
+spikelist5:=[]:<br>
+for j2 from 0 to n <br>
+do<br>
+spikelist2:=[op(spikelist2),Bin(n,p,j2)] ;<br>
+od:<br>
+<br>
+for j1 from 0 to m-1 <br>
+do<br>
+spikelist1:=[op(spikelist1),[j1+.2,Bin(n,p,j1)]] ;<br>
+od:<br>
+<br>
+for j5 from m to n do<br>
+spikelist5:=[op(spikelist5),[j5+.2,Bin(n,p,j5)]] ;<br>
+od:<br>
+<br>
+for j3 from 0 to m <br>
+do<br>
+spikelist3:=[op(spikelist3),[j3 -.2,Bin(n,q,j3)]] ;<br>
+od:<br>
+<br>
+for j4 from m+1 to n do<br>
+spikelist4:=[op(spikelist4),[j4 +.2 .2,Bin(n,q,j4)]] ;<br>
+od:<br>
+<br>
+A1:= Spikegraph(spikelist1,0,m,true,black);<br>
+A5:=Spikegraph(spikelist5,m-1,n,true,red);<br>
+<br>
+A3:= Spikegraph(spikelist3,0,m+1,true,green);<br>
+A4:=Spikegraph(spikelist4,m,n,true,blue);<br>
+<br>
+A2:=Spikegraph([[m,max(op(spikelist2))]],m,m,true,orange);<br>
+<br>
+display(A1,A5,A3,A4,A2);<br>
+end: <br>
+<br>
+<br>
+<br>
+<br>
+Hyp:=proc(n,m,p,q)<br>
+local r,s;<br>
+r:=sum(<br>
+binomial(n,k)*(p^k)*((1-p)^(n-k)),k=m...n<br>
+);<br>
+s:=sum(<br>
+binomial(n,k)*(q^k)*((1-q)^(n-k)),k=0...m<br>
+);<br>
+lprint("There is a",100*r,"percent chance that p will loose given that the p hypothesis is correct while there is a ",<br>
+100*s,"percent  chance that q  loose when the q hypothesis is correct.");<br>
+BinomialPlot(n,m,p,q);<br>
+end:</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Hyp(58,32,.5,.62);</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"There is a", 25.59211542, "percent chance that p will loose given that the p hypothesis is correct while there is a ", 17.42969845, "percent  chance that q  loose when the q hypothesis is correct."</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m60s02/temps/compi/Competion1.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Hyp(25,17,.5,.8); </font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"There is a", 5.387607217, "percent chance that p will loose given that the p hypothesis is correct while there is a ", 10.91227960, "percent  chance that q  loose when the q hypothesis is correct."</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m60s02/temps/compi/Competion2.gif" width=380 height=282 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Hyp(50,33,.5,.8); </font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"There is a", 1.641956878, "percent chance that p will loose given that the p hypothesis is correct while there is a ", 1.444165732, "percent  chance that q  loose when the q hypothesis is correct."</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m60s02/temps/compi/Competion3.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Hyp(100,65,.5,.8); </font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"There is a", .1758820861, "percent chance that p will loose given that the p hypothesis is correct while there is a ", .3360871616e-1, "percent  chance that q  loose when the q hypothesis is correct."</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m60s02/temps/compi/Competion4.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Hyp(200,79,.3,.5); </font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"There is a", .2606229066, "percent chance that p will loose given that the p hypothesis is correct while there is a ", .1817473976, "percent  chance that q  loose when the q hypothesis is correct."</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>`Note: some data values lie outside the user-defined interval.`</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m60s02/temps/compi/Competion5.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+</basefont>
+</body>
+</html>

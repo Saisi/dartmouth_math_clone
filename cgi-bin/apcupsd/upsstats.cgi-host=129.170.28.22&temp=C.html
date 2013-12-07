@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>129.170.28.22 UPS Status</title>
+ <meta http-equiv="Cache-Control" content="no-cache" />
+ <meta http-equiv="Pragma" content="no-cache" />
+ <meta name="generator" content="apcupsd 3.14.10, See: http://www.apcupsd.com/" />
+ <meta http-equiv="Refresh" content="30" />
+ <style>
+body {
+
+	color: black;
+
+	background: white;
+
+}
+
+
+
+div.Center {
+
+	text-align: center;
+
+}
+
+
+
+img {
+
+	border-style: none;
+
+}
+
+
+
+pre {
+
+	text-align: left;
+
+}
+
+
+
+strong {
+
+	color: red;
+
+}
+
+
+
+table.Outer {
+
+	color: black;
+
+	background: #60a0a0;
+
+	empty-cells: show; border: solid #60a0a0
+
+}
+
+
+
+th.Outer {
+
+	color: black;
+
+	background: #60b0b0
+
+}
+
+
+
+.Title {
+
+	font-size: 18pt;
+
+}
+
+
+
+.SubTitle {
+
+	font-size: 12pt;
+
+}
+
+
+
+.Empty {
+
+	color: black;
+
+	background: aqua;
+
+}
+
+
+
+.Fault {
+
+	color: black;
+
+	background: red;
+
+}
+
+
+
+.Label {
+
+	color: black;
+
+	background: aqua;
+
+}
+
+
+
+.Normal {
+
+	color: black;
+
+	background: lime;
+
+}
+
+
+
+.Warning {
+
+	color: black;
+
+	background: yellow;
+
+}
+
+ </style>
+</head>
+<body>
+<div class="Center">
+<table border="2" cellspacing="10" cellpadding="5">
+<tr><th>2013-11-25 13:49:41 -0500  </th>
+<th>
+       <form method="get" action="upsstats.cgi"><div>
+       <input type="hidden" name="host" value="129.170.28.22" />
+       <select onchange="this.form.submit()" name="img1">
+               <option value="1" selected="selected">Battery Capacity</option>
+               <option value="2">Battery Voltage</option>
+               <option value="3">Utility Voltage</option>
+               <option value="4">Output Voltage</option>
+               <option value="5">UPS Load</option>
+               <option value="6">Run Time Remaining</option>
+       </select>
+       <input type="hidden" name="img2" value="6" />
+       <input type="hidden" name="img3" value="5" />
+       <input type="hidden" name="temp" value="C" />
+       <input type="hidden" name="refresh" value="30" />
+       </div></form>
+</th>
+<th>
+       <form method="get" action="upsstats.cgi"><div>
+       <input type="hidden" name="host" value="129.170.28.22" />
+       <input type="hidden" name="img1" value="1" />
+       <select onchange="this.form.submit()" name="img2">
+               <option value="1">Battery Capacity</option>
+               <option value="2">Battery Voltage</option>
+               <option value="3">Utility Voltage</option>
+               <option value="4">Output Voltage</option>
+               <option value="5">UPS Load</option>
+               <option value="6" selected="selected">Run Time Remaining</option>
+       </select>
+       <input type="hidden" name="img3" value="5" />
+       <input type="hidden" name="temp" value="C" />
+       <input type="hidden" name="refresh" value="30" />
+       </div></form>
+</th>
+<th>
+       <form method="get" action="upsstats.cgi"><div>
+       <input type="hidden" name="host" value="129.170.28.22" />
+       <input type="hidden" name="img1" value="1" />
+       <input type="hidden" name="img2" value="6" />
+       <select onchange="this.form.submit()" name="img3">
+               <option value="1">Battery Capacity</option>
+               <option value="2">Battery Voltage</option>
+               <option value="3">Utility Voltage</option>
+               <option value="4">Output Voltage</option>
+               <option value="5" selected="selected">UPS Load</option>
+               <option value="6">Run Time Remaining</option>
+       </select>
+       <input type="hidden" name="temp" value="C" />
+       <input type="hidden" name="refresh" value="30" />
+       </div></form>
+</th></tr>
+<tr><td><pre>
+Monitoring: euler
+ UPS Model: Smart-UPS 1500 RM 
+  UPS Name: UPS-3
+   APCUPSD: Version 3.14.10
+    Status: ONLINE 
+</pre></td>
+<td rowspan="3">
+<img src="https://www.math.dartmouth.edu/cgi-bin/apcupsd/upsimage.cgi?display=battcap&value=100.0&value2=5" alt="Battery Capacity 100.0%" width="150" height="350" />
+</td>
+<td rowspan="3">
+<img src="https://www.math.dartmouth.edu/cgi-bin/apcupsd/upsimage.cgi?display=runtime&value=23.0&value2=3" alt="Run time remaining 23.0 minutes" width="150" height="350" />
+</td>
+<td rowspan="3">
+<img src="https://www.math.dartmouth.edu/cgi-bin/apcupsd/upsimage.cgi?display=upsload&value=29.9" alt="UPS Load 29.9%" width="150" height="350" />
+</td>
+</tr>
+<tr><td><pre>
+Last UPS Self Test: NO
+Last Test Date: 2013-11-19 11:41
+</pre></td></tr>
+<tr><td><pre>
+Utility Voltage: 118.8 VAC
+   Line Minimum: Not found VAC
+   Line Maximum: Not found VAC
+    Output Freq: 60.2 Hz
+</pre>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td colspan="2">
+<pre>
+       UPS Temp: 18.9 
+</pre>
+</td>
+<td>
+       <form method="get" action="upsstats.cgi"><div>
+       <input type="hidden" name="host" value="129.170.28.22" />
+       <input type="hidden" name="img1" value="1" />
+       <input type="hidden" name="img2" value="6" />
+       <input type="hidden" name="img3" value="5" />
+       <input type="hidden" name="refresh" value="30" />
+       <select onchange="this.form.submit()" name="temp">
+         <option selected="selected" value="C">&deg; C</option>
+         <option value="F">&deg; F</option>
+         <option value="K">&deg; K</option>
+       </select>
+       </div></form>
+</td></tr></table>
+</td></tr>
+<tr><td colspan="4"><b>Recent Events</b><br />
+<textarea rows="5" cols="95">
+2013-11-19 11:41:53 -0500  UPS Self Test completed: Battery OK
+2013-11-19 11:41:45 -0500  UPS Self Test switch to battery.
+2013-11-05 11:43:16 -0500  UPS Self Test completed: Battery OK
+2013-11-05 11:43:10 -0500  UPS Self Test switch to battery.
+2013-10-23 08:00:02 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-10-23 04:41:06 -0400  apcupsd shutdown succeeded
+2013-10-23 04:41:06 -0400  apcupsd exiting, signal 15
+2013-10-22 14:44:24 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-10-22 14:25:58 -0400  apcupsd shutdown succeeded
+2013-10-22 14:25:58 -0400  apcupsd exiting, signal 15
+2013-10-22 12:48:51 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-10-22 12:47:35 -0400  apcupsd shutdown succeeded
+2013-10-22 12:47:35 -0400  apcupsd exiting, signal 15
+2013-10-22 12:45:52 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-10-22 12:40:43 -0400  apcupsd exiting, signal 15
+2013-10-22 12:07:36 -0400  UPS battery must be replaced.
+2013-10-22 03:07:28 -0400  UPS battery must be replaced.
+2013-10-21 18:07:13 -0400  UPS battery must be replaced.
+2013-10-21 09:07:05 -0400  UPS battery must be replaced.
+2013-10-21 00:07:04 -0400  UPS battery must be replaced.
+2013-10-20 15:06:55 -0400  UPS battery must be replaced.
+2013-10-20 06:06:53 -0400  UPS battery must be replaced.
+2013-10-19 21:06:39 -0400  UPS battery must be replaced.
+2013-10-19 12:06:34 -0400  UPS battery must be replaced.
+2013-10-19 03:06:20 -0400  UPS battery must be replaced.
+2013-10-18 18:06:18 -0400  UPS battery must be replaced.
+2013-10-18 09:06:16 -0400  UPS battery must be replaced.
+2013-10-18 08:56:16 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-10-18 06:02:00 -0400  UPS battery must be replaced.
+2013-10-17 21:01:57 -0400  UPS battery must be replaced.
+2013-10-17 12:01:45 -0400  UPS battery must be replaced.
+2013-10-17 03:01:44 -0400  UPS battery must be replaced.
+2013-10-16 18:01:40 -0400  UPS battery must be replaced.
+2013-10-16 09:01:39 -0400  UPS battery must be replaced.
+2013-10-16 00:01:08 -0400  UPS battery must be replaced.
+2013-10-15 15:00:26 -0400  UPS battery must be replaced.
+2013-10-15 06:00:14 -0400  UPS battery must be replaced.
+2013-10-14 21:00:05 -0400  UPS battery must be replaced.
+2013-10-14 11:59:58 -0400  UPS battery must be replaced.
+2013-10-14 02:59:48 -0400  UPS battery must be replaced.
+2013-10-13 17:59:43 -0400  UPS battery must be replaced.
+2013-10-13 08:59:42 -0400  UPS battery must be replaced.
+2013-10-12 23:59:27 -0400  UPS battery must be replaced.
+2013-10-12 14:58:30 -0400  UPS battery must be replaced.
+2013-10-12 05:58:25 -0400  UPS battery must be replaced.
+2013-10-11 20:58:12 -0400  UPS battery must be replaced.
+2013-10-11 11:58:04 -0400  UPS battery must be replaced.
+2013-10-11 02:57:46 -0400  UPS battery must be replaced.
+2013-10-10 17:57:41 -0400  UPS battery must be replaced.
+2013-10-10 08:57:36 -0400  UPS battery must be replaced.
+</textarea>
+</td></tr>
+</table></div>
+</body></html>

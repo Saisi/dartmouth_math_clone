@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Statistics in Excel</title></head>
+
+
+<body bgcolor="#BFFDBF" link="black" vlink="black">
+
+<hr>
+
+<p> </p>
+
+<center>The general who wins the battle makes many calculations in his temple before the battle is fought. The general who loses makes but few calculations beforehand.<br>
+	Sun Tzu</center>
+
+<p> </p>
+
+<hr>
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="+1"><b>Excel Commands for Math 10: Introductory Statistics</b></font></p>
+
+<p>I've tried to alphabetize and cross-reference as much as possible.</p>
+
+<hr>
+
+<hr>
+
+<p>In all of the below, "data" ("x-data", "y-data") stands in for giving an explicit cell range as reference, such as A2:A41.  These commands are not case-sensitive; =min(A1:A10) will give the same result as =Min(a1:a10) and =MIN(A1:a10).</p>
+
+<p><ul>
+
+<li><b>Average:</b> the arithmetic mean may be obtained by the command =average(data).<br> - </li>
+
+<li><b>Bins:</b> see <i>frequency</i>.<br> - </li>
+
+<li><b>Cell referencing:</b> see <i>standard units</i>.<br> - </li>
+
+<li><b>Chi-squared test:</b> The Excel function for the chi-squared test actually returns the P-value, as a decimal.  If you are testing a distribution, your actual and expected values must each be in a single row or column.  If you are testing for independence of a variable with m values from a variable with n values, your actual and expected values must be in m by n tables where corresponding positions in each table contain values for the same pair of values (i.e., if you labeled the rows and columns, the labels would be identical between the two tables).  Excel needs this formatting to determine the correct number of degrees of freedom.  The command itself is =CHITEST(observed frequencies, expected frequencies).  Example: if you had observed data in the first 5 cells of the first column, and expected frequencies next to them, the command would be =chitest(A1:A5,B1:B5).  If you had a 3x3 table where the observed values were in the second, third, and fourth rows of columns B-D and the expected values were in the same rows of F-H, the command would be =chitest(B2:D4,F2:H4).<br> - </li>
+
+<li><b>Continuing series of values:</b>  See also <i>standard units</i>. If you would like a column of evenly-spaced values, such as for frequency bins, Excel can fill them in for you.  Put the first two values in and highlight those two cells.  Click on the lower right-hand corner and drag downward; Excel will continue the pattern you began.  There should be a little yellow tag that tells you the value that will be in the current bottommost highlighted cell so you know where to stop.  This is very convenient but be careful because it will also overwrite data - if you highlight one cell in a column of values and drag the lower right corner, it will replace the cells you highlight with that original value.<br> - </li>
+
+<li><b>Correlation coefficient:</b> To compute the correlation coefficient in Excel, your data must be in columns (or rows) and the points must be in the correct corresponding order for variables x and y.  The command is =correl(x-data, y-data).  The data need not be in standard units, but it will not change the outcome if it is.<br> - </li>
+
+<li><b>Frequency:</b> See also <i>continuing series of values</i>.  If you originally have just a list of outcomes and you need to count the appearences of each value or range of values, you want the frequency command.  For example, if your data is heights of plants that range from 1 to 5 inches, you might want to count inch-wide ranges: 1-2, 2-3, 3-4, and 4-5.  The first step is to make a list of range delimiters called <i>bins</i>.  These will be the top end of each range; here you would want 2, 3, 4, and 5.  Excel automatically includes the top value, so these bins will give you the half-open intervals (-infinity, 2], (2, 3], (3, 4], (4, 5].  (Note that if your data only takes on certain specific values this means the counting will be appropriate if you use those values as your bins: if instead of measurements ranging from 1 to 5 you only got the integer values 1 through 5, you would use bins 1, 2, 3, 4, 5 to count them.)  Highlight a column of blank cells as tall as your column of bins, type<br>
+=frequency(data range, bins range)<br>
+and do the special array-function version of "enter".  On a Mac this is command-enter (&#8984;-enter) and on Windows it is ctrl-shift-enter.  For example, if you have 5 bins in cells B2 to B6, and your data is in A1 to A50, it makes the most sense (for later histogram creation) to highlight C2 to C6.  The command is then<br>
+=frequency(A1:A50,B2:B6) &nbsp;&nbsp;&nbsp; (&#8984;-enter / ctrl-shift-enter).<br> - </li>
+
+<li><b>Highlight-and-drag:</b> see <i>continuing series of values</i> and <i>standard units</i>.<br> - </li>
+
+<li><b>Histograms:</b>  See also <i>frequency</i>.  To make a histogram, create one column of x-axis values (events or outcomes) and make the next column to the right y-axis values (frequencies or percentages).  Leave the cell above the left column blank and put the title of the histogram in the cell above the right column.  Highlight both columns including the top row described in the previous sentence, and click the "charts" button or option in the "insert" drop-down menu (depending on your version of Excel); follow the instructions.  If you do not have the blank upper left cell, Excel will interpret your columns as two paired variables and give you a chart with pairs of columns.  If you want to change the color or separation of the columns, double-click on one of them once the chart has been made.<br> - </li>
+
+<li><b>Maximum:</b> the largest value of a data set may be obtained by the command =max(data).<br> - </li>
+
+<li><b>Mean:</b> see <i>average</i>.<br> - </li>
+
+<li><b>Median:</b> the median may be obtained by the command =median(data) or =quartile(data, 2).<br> - </li>
+
+<li><b>Minimum:</b> the smallest value of a data set may be obtained by the command =min(data).<br> - </li>
+
+<li><b>Mode:</b> the mode may be obtained by the command =mode(data).  Note that in Excel only the value which reaches maximum count first is reported as the mode, so the data set {2,2,2,3,3,3} will have mode 2 and {3,3,2,3,2,2} will have mode 3 when in fact it is the same data set, bimodal with modes 2 and 3.<br> - </li>
+
+<li><b>Quartile:</b> the quartiles of a data set, the values marking the 25th percentile, 50th percentile (i.e., median), and 75th percentile, may be obtained respectively with the commands =quartile(data, 1), =quartile(data, 2), and =quartile(data, 3).<br> - </li>
+
+<li><b>r:</b> see <i>correlation coefficient</i>.<br> - </li>
+
+<li><b>Range:</b> see <i>minimum</i> and <i>maximum</i>.<br> - </li>
+
+<li><b>Regression line:</b> Once you have created a <i>scatter plot</i>, click the dots to highlight them, and go to the "charts" drop-down menu.  There will be an option reading "Add trendline", and you want a linear trendline/regression.<br> - </li>
+
+<li><b>Scatter plot:</b> Have your data in two columns, with the x-axis on the left and the y-axis on the right, corresponding values in side-by-side cells.  Highlight the columns (the top row can be the first data point, or it can be labels), click the "charts" button or option in the "insert" menu (depending on how your Excel looks), and choose the option labeled "XY (Scatter)".<br>
+I do not know any easier way to swap which variable is on the x-axis and which on the y-axis than to swap your data columns.  If you have variables A and B and want to be able to plot with each one playing the role of x, it might be easiest to make three columns, A, B, and A again, and then highlight either the first two (putting A on the x-axis) or the second two (putting B on the x-axis) to make the scatter plot.<br> - </li>
+
+<li><b>Standard deviation:</b> Currently we are only using what is called the population standard deviation, =stdevp(data).<br> - </li>
+
+<li><b>Standard units:</b> See also <i>continuing series of values</i>. If you want to put all the data into standard units, there are two ways to take advantage of Excel's highlight-and-drag feature (see <i>continuing series of values</i>).  If your mean is in B1, SD in B2, data in column A, and you simply put "=(A1-B1)/B2" when you drag Excel will change not only A1 but B1 and B2.  Instead, you can either replace B1 and B2 with the numerical values of the mean and SD, or, if those values are complicated, you can put "=(A1-$B$1)/$B$2".  The dollar signs tell Excel not to change those reference cells.  In either case when you highlight that cell and drag the bottom right corner downward, A1 will change but the rest will not.<!--<br> - --></li>
+
+</ul></p>
+
+<hr>
+
+<hr>
+
+<p><a href="index.html">Back</a> to the main Math 10 page</p>
+
+<p><font size="-1">Last modified May 20, 2010</font></p>
+
+</body></html>

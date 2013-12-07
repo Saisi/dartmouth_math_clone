@@ -1,0 +1,666 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Energy spreading--constant velocity case</TITLE>
+<META NAME="description" CONTENT="Energy spreading--constant velocity case">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html431"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html429"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html423"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html432"
+  HREF="node16.html">Energy spreading periodic driving</A>
+<B> Up:</B> <A NAME="tex2html430"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html424"
+  HREF="node14.html">Adiabatic invariance of phase-space</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00312000000000000000"></A>
+<A NAME="sec:spreadcon"></A>
+<BR>
+Energy spreading--constant velocity case
+</H2>
+
+<P>
+We now derive the next-order correction to the adiabatic limit,
+namely spreading in energy (or equivalently in <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">),
+which causes the
+<EM>irreversible</EM> heating.
+This was first found by Ott&nbsp;[<A
+ HREF="node161.html#ott79">153</A>] using `multiple-time-scale analysis'.
+To derive the spreading rate,
+we now assume
+constant parameter velocity <IMG
+ WIDTH="58" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img129.gif"
+ ALT="$x = Vt$"> over a time interval
+long enough to establish diffusive behaviour
+(following [<A
+ HREF="node161.html#doroncrs">47</A>,<A
+ HREF="node161.html#doronfrc">46</A>]).
+The longer-time evolution for a general <IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img103.gif"
+ ALT="$x(t)$"> can
+then be built from these short constant-velocity segments.
+
+<P>
+For any given particle trajectory <!-- MATH
+ $({\mathbf q}(t),{\mathbf p}(t))$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img130.gif"
+ ALT="$({\mathbf q}(t),{\mathbf p}(t))$">
+(ensemble member
+launched at <!-- MATH
+ $({\mathbf q_0},{\mathbf p_0})$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img131.gif"
+ ALT="$({\mathbf q_0},{\mathbf p_0})$"> at <IMG
+ WIDTH="43" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img132.gif"
+ ALT="$t=0$">)
+there is an associated stochastic time-dependent `force'
+<!-- MATH
+ $-\frac{\partial \mathcal{H}}{\partial x}({\mathbf q}(t),{\mathbf p}(t),x(t))$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img133.gif"
+ ALT="$-\frac{\partial \mathcal{H}}{\partial x}({\mathbf q}(t),{\mathbf p}(t),x(t))$">
+on the parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">.
+The time-dependence arises from that of the trajectory.
+In the billiard case, this is simply the impulses
+the particle exerts on the deforming part of the wall.
+We extract the fluctuation of this quantity about
+its average (which from (<A HREF="node14.html#eq:force">2.3</A>) is just the conservative
+force <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img108.gif"
+ ALT="$F(x)$">), giving the definition
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathcal{F}}(t)
+	\; \equiv \;
+	-\frac{\partial \mathcal{H}}{\partial x}({\mathbf q}(t),{\mathbf p}(t),x(t))
+	\; - \; F(x(t)) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fluct"></A><IMG
+ WIDTH="440" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img134.gif"
+ ALT="\begin{displaymath}
+{\mathcal{F}}(t)
+\; \equiv \;
+-\frac{\partial \mathcal{H}...
+...tial x}({\mathbf q}(t),{\mathbf p}(t),x(t))
+\; - \; F(x(t)) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The external work done in changing the parameter from 0 to <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> can
+be found by integrating force over distance to give
+<!-- MATH
+ $Q = - \int_0^x dx' [ {\mathcal{F}}(t(x')) + F(x') ]$
+ -->
+<IMG
+ WIDTH="238" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img135.gif"
+ ALT="$Q = - \int_0^x dx' [ {\mathcal{F}}(t(x')) + F(x') ]$">,
+which must be converted to an increase in the
+particle energy.
+Writing this as a time integral, the
+particle's energy difference at time <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">
+from the adiabatic value <IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img136.gif"
+ ALT="$E(x(t))$"> is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathcal{H}}(t) - E(x(t)) = - V \; \int_0^t dt_1 {\mathcal{F}}(t_1).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:hdiff"></A><IMG
+ WIDTH="412" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img137.gif"
+ ALT="\begin{displaymath}
+{\mathcal{H}}(t) - E(x(t)) = - V \; \int_0^t dt_1 {\mathcal{F}}(t_1).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Now <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> has a finite correlation time <!-- MATH
+ $\tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img139.gif"
+ ALT="$\tau_{{\mbox{\tiny cl}}}$"> which is
+similar to or less than the ergodic time.
+For <!-- MATH
+ $t \gg \tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img140.gif"
+ ALT="$t \gg \tau_{{\mbox{\tiny cl}}}$"> then the above expression is
+simply the final energy change resulting from a `random walk' of step size
+<!-- MATH
+ $\sim \tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img141.gif"
+ ALT="$\sim \tau_{{\mbox{\tiny cl}}}$">.
+Squaring this and taking a microcanonical average 
+(at energy <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">)
+gives the energy variance
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:diffuse"></A><A NAME="eq:lingrow"></A>
+<!-- MATH
+ \begin{eqnarray}
+\langle [ {\mathcal{H}}(t) - E(x(t)) ]^2 \rangle_{{\mbox{\tiny E}}}
+	\; & =\; &
+	V^2 \, \int_0^t \int_0^t dt_1 dt_2 \;
+	\langle {\mathcal{F}}(t_1) {\mathcal{F}}(t_2) \rangle_{{\mbox{\tiny E}}} \\& \approx & 2 D_{{\mbox{\tiny E}}} \cdot t
+	\hspace{0.5in} \mbox{for} \; t \gg \tau_{{\mbox{\tiny cl}}}.
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="162" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img142.gif"
+ ALT="$\displaystyle \langle [ {\mathcal{H}}(t) - E(x(t)) ]^2 \rangle_{{\mbox{\tiny E}}}
+\;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="237" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img144.gif"
+ ALT="$\displaystyle V^2 \, \int_0^t \int_0^t dt_1 dt_2 \;
+\langle {\mathcal{F}}(t_1) {\mathcal{F}}(t_2) \rangle_{{\mbox{\tiny E}}}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.8)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img145.gif"
+ ALT="$\textstyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="193" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img146.gif"
+ ALT="$\displaystyle 2 D_{{\mbox{\tiny E}}} \cdot t
+\hspace{0.5in} \mbox{for} \; t \gg \tau_{{\mbox{\tiny cl}}}.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.9)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This last approximation is good for <!-- MATH
+ $t \gg \tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img140.gif"
+ ALT="$t \gg \tau_{{\mbox{\tiny cl}}}$">,
+where the double integral grows linearly
+in <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$"> (with fractional error from linearity dying like <!-- MATH
+ $\tau_{{\mbox{\tiny cl}}}/ t$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img147.gif"
+ ALT="$\tau_{{\mbox{\tiny cl}}}/ t$">).
+This is simply the variance of a random walk growing linearly in time.
+It can also be shown using a transform of variables to
+<!-- MATH
+ $t' = (t_2+t_1)/2$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img148.gif"
+ ALT="$t' = (t_2+t_1)/2$"> and <!-- MATH
+ $\tau = t_2-t_1$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img149.gif"
+ ALT="$\tau = t_2-t_1$">,
+with the range of <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img150.gif"
+ ALT="$t'$"> being <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img151.gif"
+ ALT="$[0,t]$">, and
+the range of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img152.gif"
+ ALT="$\tau$"> can be taken to <!-- MATH
+ $[-\infty,\infty]$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img153.gif"
+ ALT="$[-\infty,\infty]$">,
+as illustrated in Fig.&nbsp;<A HREF="node15.html#fig:spread">2.2</A>a.
+We will write <!-- MATH
+ $D_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img154.gif"
+ ALT="$D_{{\mbox{\tiny E}}}$"> in terms of <!-- MATH
+ $C_{{\mbox{\tiny E}}}(\tau)$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img155.gif"
+ ALT="$C_{{\mbox{\tiny E}}}(\tau)$">, the
+autocorrelation function of the fluctuating force.
+<!-- MATH
+ $C_{{\mbox{\tiny E}}}(\tau)$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img155.gif"
+ ALT="$C_{{\mbox{\tiny E}}}(\tau)$"> depends on both the classical motion at
+energy <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> and on the particular deformation chosen,
+and is defined by
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:cdef"></A>
+<!-- MATH
+ \begin{eqnarray}
+C_{{\mbox{\tiny E}}}(\tau) \; &\equiv \;&
+	\langle {\mathcal{F}}(0) {\mathcal{F}}(\tau) \rangle_{{\mbox{\tiny E}}} \\
+	& = &
+	\langle {\mathcal{F}}(t') {\mathcal{F}}(t' + \tau) \rangle_{{\mbox{\tiny E}}} ,
+	\hspace{0.5in} 0 < t' < t
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img156.gif"
+ ALT="$\displaystyle C_{{\mbox{\tiny E}}}(\tau) \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img157.gif"
+ ALT="$\textstyle \equiv \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="100" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img158.gif"
+ ALT="$\displaystyle \langle {\mathcal{F}}(0) {\mathcal{F}}(\tau) \rangle_{{\mbox{\tiny E}}}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.10)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="272" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img160.gif"
+ ALT="$\displaystyle \langle {\mathcal{F}}(t') {\mathcal{F}}(t' + \tau) \rangle_{{\mbox{\tiny E}}} ,
+\hspace{0.5in} 0 &lt; t' &lt; t$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.11)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the second equality states the assumption
+that the autocorrelation does not change over the
+timescale <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">.
+This latter condition restricts <IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img161.gif"
+ ALT="$Vt$"> to be much smaller than
+<!-- MATH
+ $\delta x_c^{cl}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img162.gif"
+ ALT="$\delta x_c^{cl}$">, the parametric change which
+changes the classical Hamiltonian (and hence the statistical
+properties of the system) significantly.
+In combination with the limit <!-- MATH
+ $t \gg \tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img140.gif"
+ ALT="$t \gg \tau_{{\mbox{\tiny cl}}}$">,
+this gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V \; \ll \; \delta x_c^{cl} / \tau_{{\mbox{\tiny cl}}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:trivslow"></A><IMG
+ WIDTH="331" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img163.gif"
+ ALT="\begin{displaymath}
+V \; \ll \; \delta x_c^{cl} / \tau_{{\mbox{\tiny cl}}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+(this is the `trivial slowness condition' of Cohen [<A
+ HREF="node161.html#doronfrc">46</A>]).
+
+<P>
+We now have established diffusive energy spreading
+with a rate
+(given by substitution of (<A HREF="node15.html#eq:cdef">2.10</A>) into (<A HREF="node15.html#eq:diffuse">2.8</A>))
+of
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+D_{{\mbox{\tiny E}}} \; = \; \mbox{\small$\frac{1}{2}$}\nu_{{\mbox{\tiny E}}}V^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:de"></A><IMG
+ WIDTH="331" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img164.gif"
+ ALT="\begin{displaymath}
+D_{{\mbox{\tiny E}}} \; = \; \mbox{\small$\frac{1}{2}$}\nu_{{\mbox{\tiny E}}}V^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> is the (zero-frequency) ``noise intensity''
+of the fluctuating force,
+equal to the first moment of the autocorrelation function:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\nu_{{\mbox{\tiny E}}}\; \equiv \; \int_{-\infty}^\infty d\tau C_{{\mbox{\tiny E}}}(\tau)
+	\; \equiv \;
+	\tilde{C}_{{\mbox{\tiny E}}}(\omega = 0) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:noise"></A><IMG
+ WIDTH="411" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img165.gif"
+ ALT="\begin{displaymath}
+\nu_{{\mbox{\tiny E}}}\; \equiv \; \int_{-\infty}^\infty d\...
+...tau)
+\; \equiv \;
+\tilde{C}_{{\mbox{\tiny E}}}(\omega = 0) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The <EM>correlation power spectrum</EM> or
+<EM>spectral density</EM> of <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> is called
+<!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$">, and is the fourier transform of the
+autocorrelation function. I use the convention
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\tilde{C}_{{\mbox{\tiny E}}}(\omega)\; \equiv \; 
+	\int_{-\infty}^\infty C_{{\mbox{\tiny E}}}(\tau) e^{i \omega \tau} d\tau .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ft"></A><IMG
+ WIDTH="385" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img166.gif"
+ ALT="\begin{displaymath}
+\tilde{C}_{{\mbox{\tiny E}}}(\omega)\; \equiv \;
+\int_{-\...
+...y}^\infty C_{{\mbox{\tiny E}}}(\tau) e^{i \omega \tau} d\tau .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Now that diffusion is
+established for short time-steps <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">,
+the evolution over longer times with a general <IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img103.gif"
+ ALT="$x(t)$">
+can be composed of independent diffusive steps
+each operating on the probability distribution <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img3.gif"
+ ALT="$\rho (E,t)$">
+given by the previous step.
+This `memory-less' stochastic approximation is called <EM>Markovian</EM>
+[<A
+ HREF="node161.html#gard">79</A>].
+Note that, in this picture,
+if <IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img103.gif"
+ ALT="$x(t)$"> ever becomes comparable to <!-- MATH
+ $\delta x_c^{cl}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img162.gif"
+ ALT="$\delta x_c^{cl}$">
+then the  diffusion rate should be treated as parameter-dependent
+<!-- MATH
+ $D_{{\mbox{\tiny E}}}(x(t))$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img167.gif"
+ ALT="$D_{{\mbox{\tiny E}}}(x(t))$">.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:spread"></A><A NAME="1682"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+
+<B>a)</B> Plot of the microcanonical average of
+<!-- MATH
+ ${\mathcal{F}}(t_1){\mathcal{F}}(t_2)$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img168.gif"
+ ALT="${\mathcal{F}}(t_1){\mathcal{F}}(t_2)$">, showing how its
+double integral (Eq.&nbsp;<A HREF="node15.html#eq:diffuse">2.8</A>)
+from time 0 to <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$"> can be rewritten as <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">
+times the
+first moment of the autocorrelation function <!-- MATH
+ $C_{{\mbox{\tiny E}}}(\tau)$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img169.gif"
+ ALT="$C_{{\mbox{\tiny E}}}(\tau)$">.
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img170.gif"
+ ALT="$C(\tau)$"> itself is shown shaded, and it is significant only for <!-- MATH
+ $|\tau|<\tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img171.gif"
+ ALT="$\vert\tau\vert&lt;\tau_{{\mbox{\tiny cl}}}$">.
+<B>b)</B> Evolution of <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img3.gif"
+ ALT="$\rho (E,t)$"> (shaded) showing drift and diffusion.
+Energy-dependence of both the diffusion constant and
+the density of states causes an asymmetric distribution, and additional
+drift.
+This causes the centroid <!-- MATH
+ $\langle E \rangle$
+ -->
+<IMG
+ WIDTH="32" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img172.gif"
+ ALT="$\langle E \rangle$">
+(shown by black dot) to be become higher than the adiabatic value <IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img136.gif"
+ ALT="$E(x(t))$">
+(shown by dashed line).
+This drift never becomes larger than the width due to spreading.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="498" HEIGHT="233" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img173.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_review/spread.eps,width=0.9\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html431"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html429"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html423"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html432"
+  HREF="node16.html">Energy spreading periodic driving</A>
+<B> Up:</B> <A NAME="tex2html430"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html424"
+  HREF="node14.html">Adiabatic invariance of phase-space</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

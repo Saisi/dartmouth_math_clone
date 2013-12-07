@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "math31style.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Course Information</title>
+<link rel="stylesheet" type="text/css" href="math31style.css">
+<script src="https://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Math 31: Topics in Algebra</h1>
+<h2>Summer 2013</h2>
+<br>
+
+<!-- Javascript for automatically generating the date and time of last update. Prints in
+	the format "Last updated (Month) (Day), (Year) at xx:xx am/pm EDT".
+-->
+<div style="text-align:center;">
+<span style="color:DarkSlateGray;">
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+</span>
+</div>
+<br>
+
+    
+<!-- Generates header with links to other components of the course webpage. -->
+<table class="header">
+<tbody>
+
+<tr>
+<td class="header"><p class="header"><a class="header" href="index.html">Main Page
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="info.html">Course Information
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="syllabus.html">Syllabus
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="homework.html">Homework
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="exams.html">Exams & Quizzes
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="projects.html">Projects
+</a></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+<!-- Title of this page: Course Information -->
+<h1>Course Information</h1>
+
+<!-- Generate table with links to the various sections covered on this page. -->
+<table class="info">
+<tbody>
+
+<tr>
+<td class="info"><p class="info"><a class="header" href="info.html#objectives">Course Objectives
+</a></p></td>
+
+<td class="info"><p class="info"><a class="header" href="info.html#structure">Course Structure
+</a></p></td>
+
+<td class="info"><p class="info"><a class="header" href="info.html#textbook">Textbook</a></p></td>
+</tr>
+
+<tr>
+<td class="info"><p class="info"><a class="header" href="info.html#grading">Grading</a></p></td>
+
+<td class="info"><p class="info"><a class="header" href="info.html#attendance">Attendance
+</a></p></td>
+
+<td class="info"><p class="info"><a class="header" href="info.html#honor">Honor Principle
+</a></p></td>
+</tr>
+
+<tr>
+<td class="info"><p class="info"></p></td>
+
+<td class="info"><p class="info"><a class="header" href="info.html#disabilities">Disabilities and 
+Religious Observances</a></p></td>
+
+<td class="info"><p class="info"></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+<!-- Generate section heading: Course Objectives -->
+<p class="blocktext">
+<table class="section">
+<tbody>
+<tr>
+<td><a name="objectives"><b>Course Objectives</b></a></td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<p class="blocktext">Math 31 serves two purposes. The first is suggested by the course 
+title: students should learn the basics of abstract algebra. This means that students 
+should leave Math 31 with a solid understanding of various algebraic structures, 
+specifically structures called <i>groups</i> and <i>rings</i>. In particular, we aim to 
+address the following core questions:
+</p>
+
+<ul class="blocktext">
+<li>What is a group? What are some fundamental examples of groups?</li>
+<li>How can we tell when two groups are the same or different?</li>
+<li>How can we analyze the structure of a group?</li>
+<li>What is a ring? How do rings differ from groups?</li>
+<li>How can we use abstract algebra to analyze polynomials and their roots?</li>
+</ul>
+
+<p class="blocktext">
+The first three questions involve the study of structure and classification of groups. 
+This will require students to become familiar with the concept of <i>isomorphism</i>. The 
+last question leads to the beginnings of Galois theory (which is itself a beautiful branch 
+of algebra). Along the way, we will emphasize the use of groups in the study of symmetries 
+of mathematical objects. This will give a more concrete interpretation of algebra, and it 
+will lend some insight into the origins of group theory.
+</p>
+
+
+<p class="blocktext">The second objective of Math 31 is much broader. En route to becoming 
+well-versed in the ideas of modern algebra, students should learn to think like a modern 
+mathematician. In particular, a course like this should help the students learn to read 
+and write abstract mathematics. Both are very much acquired skills, and their development 
+will be nurtured in the course. The most central skill to be developed will be the 
+understanding of <i>mathematical proofs</i>. Students will need to learn how to read 
+proofs, study how they are composed, and become proficient at constructing their own 
+proofs. In addition, the students should learn to convey mathematical ideas clearly and 
+correctly.</p>
+
+<p class="blocktext" style="text-align: center;"><a href="info.html#top">Back to top</a></p>
+
+
+<!-- Generate header for section: Course Structure -->
+<p class="blocktext">
+<table class="section">
+<tbody>
+<tr>
+<td><a name="structure"><b>Course Structure</b></a></td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<p class="blocktext">The course will progress tentatively as follows. We will begin with 
+a historical overview and some motivating examples, and from there we will begin our study 
+of group theory. This should take roughly the first half of the course, and it will end 
+with the midterm exam. We will then spend two to three weeks on ring theory and 
+polynomials. The course will end with some special topics and possibly applications of 
+algebra, depending on the interests of the class. Class presentations will also take place 
+in the last two weeks of the term. A more detailed schedule will be available on the 
+<a href="syllabus.html">syllabus</a> portion of the course webpage, and any updates to the 
+course structure will appear there.
+</p>
+
+<p class="blocktext">Since the reading and writing of proofs is high on our list of 
+objectives, many aspects of the course will be designed to develop these skills. For 
+example, you will be strongly encouraged to read the textbook regularly. Also, the first 
+two or three x-hours will be used as "workshops" for developing proof-writing skills. 
+These will be purely for your benefit, and if you've already taken a proof-intensive 
+class, you need not come regularly. After the first few weeks, we may continue the 
+workshops as needed, or we might begin using the x-hours as problem sessions. 
+Alternatively, we could use the x-hours to cover extra material and/or special topics.
+</p>
+
+<p class="blocktext" style="text-align: center;"><a href="info.html#top">Back to top</a></p>
+
+
+<!-- Generate header for section: Textbook -->
+<p class="blocktext">
+<table class="section">
+<tbody>
+<tr>
+<td><a name="textbook"><b>Textbook</b></a></td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<div class="textbook">
+<img class="textbook" id="text.jpg" src="https://www.math.dartmouth.edu/~m31x13/text.jpg">
+<span class="textbook"><i>Abstract Algebra: A First Course</i>,  Second Edition <br>
+by Dan Saracino <br>
+Waveland Press <br>
+ISBN: 978-1577665366
+</span>
+</div>
+
+<p class="blocktext">This is the required textbook for the course. It will be available at 
+Wheelock Books. It is also likely that you can find used copies from other sources, but 
+please make sure that you have the current (second) edition.
+</p>
+
+
+<p class="blocktext">In addition to the required text, there will be a supplementary 
+text:</p>
+
+<div class="textbook" style="height: 225px">
+<img class="textbook" id="gallian.jpg" src="https://www.math.dartmouth.edu/~m31x13/gallian.jpg">
+<span class="textbook"<i>Contemporary Abstract Algebra</i>,  Seventh Edition <br>
+by Joseph A. Gallian <br>
+Cengage Learning <br>
+ISBN: 978-0547165097
+</span>
+</div>
+
+<p class="blocktext">This book will be placed on reserve at Baker-Berry Library, along 
+with a copy of the third edition. I <b>do not</b> recommend that you purchase a copy. 
+However, it has been used quite often in the past as the textbook for this course, and it 
+may be helpful to consult from time to time.
+</p>
+
+<p class="blocktext" style="text-align: center;"><a href="info.html#top">Back to top</a></p>
+
+
+<!-- Generate section heading: Grading -->
+<p class="blocktext">
+<table class="section">
+<tbody>
+<tr>
+<td><a name="grading"><b>Grading</b></a></td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<p class="blocktext">
+The course grade will be computed as follows:
+</p>
+
+
+<table class="grades" border="1">
+<tbody>
+<tr>
+<td class="grades">
+<u>Assignment</u>
+</td>
+
+<td class="grades">
+<u>Number</u>
+</td>
+
+<td class="grades">
+<u>Percent of Grade</u>
+</td>
+</tr>
+
+<tr>
+<td class="assign">
+Midterm
+</td>
+
+<td class="grades">
+1
+</td>
+
+<td class="grades">
+30
+</td>
+</tr>
+
+<tr>
+<td class="assign">
+Final
+</td>
+
+<td class="grades">
+1
+</td>
+
+<td class="grades">
+25
+</td>
+</tr>
+
+<tr>
+<td class="assign">
+Quizzes
+</td>
+
+<td class="grades">
+8
+</td>
+
+<td class="grades">
+10
+</td>
+</tr>
+
+<tr>
+<td class="assign">
+Homework
+</td>
+
+<td class="grades">
+8
+</td>
+
+<td class="grades">
+20
+</td>
+</tr>
+
+<tr>
+<td class="assign">
+Project
+</td>
+
+<td class="grades">
+1
+</td>
+
+<td class="grades">
+15
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<p class="blocktext" style="text-align: center;"><a href="info.html#top">Back to top</a></p>
+
+
+<!-- Attendance -->
+<p class="blocktext">
+<table class="section">
+<tbody>
+<tr>
+<td><a name="attendance"><b>Attendance</b></a></td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<p class="blocktext">
+I expect that you will attend class every day. Though it is not officially a part of the 
+course grade, missing class could indirectly affect your performance through homework and 
+exams. In particular, I will not always cover topics from the same perspective as the 
+textbook, and we will even cover some things in class that are not mentioned in the book. 
+Therefore, it would be best to attend class regularly. Additionally, a course like Math 31 
+is intended to help you build mathematical maturity by learning to read and write proofs, 
+and lectures and in-class discussion will help greatly with this.
+</p>
+
+<p class="blocktext">
+On a side note, I will give suggested reading assignments after each class. I highly 
+recommend that you look at them, since they will give you a preview of the next lecture, 
+and they will help you become more comfortable with reading mathematics. I don't expect 
+you to understand every single theorem and its proof on a first reading, but seeing the 
+material ahead of time will likely help you to follow the next day's lecture.
+</p>
+
+<p class="blocktext" style="text-align: center;"><a href="info.html#top">Back to top</a></p>
+
+
+<!-- Honor Principle -->
+<p class="blocktext">
+<table class="section">
+<tbody>
+<tr>
+<td><a name="honor"><b>Honor Principle</b></a></td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<p class="blocktext">
+<b>Exams:</b> Any exam labeled as in-class is closed book, with no notes or textbooks 
+allowed. No help will be given or received. On take-home exams, collaboration is not 
+permitted in any form, and no help will be given or received. The use of books and notes 
+on take-home exams will be allowed at the instructor's discretion. Such sources will 
+generally be limited to the course text(s) and your lecture notes. Electronic resources 
+(i.e., the internet) will be forbidden.
+</p>
+
+<p class="blocktext">
+<b>Homework:</b> You are welcome to discuss your homework with your classmates and the 
+instructor, but the final result should be your own work. You are actually encouraged to 
+collaborate with your classmates, but in the end you should always write up <i>your 
+own</i> solutions. That is, you are free to discuss problems with each other and even work 
+out ideas together, but you should write up your solutions by yourself. You should also 
+credit the classmates with whom you worked when you write up your solutions. See the 
+<a href="homework.html#collaboration"> homework page</a> for more details on 
+collaboration. Also, you may not look up solutions to homework problems on the internet.
+</p>
+
+<p class="blocktext" style="text-align: center;"><a href="info.html#top">Back to top</a></p>
+
+
+<!-- Disabilities, Religious Observances, Etc. -->
+<p class="blocktext">
+<table class="section">
+<tbody>
+<tr>
+<td><a name="disabilities"><b>Disabilities, Religious Observances, Etc.</b></a></td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<p class="blocktext">
+Students with disabilities enrolled in this course and who may need disability-related 
+classroom accommodations are encouraged to make an appointment to see your instructor 
+before the end of the second week of the term. All discussions will remain confidential, 
+although the Student Accessibility Services office may be consulted to discuss appropriate 
+implementation of any accommodation requested.</p>
+
+<p class="blocktext">
+Some students may wish to take part in religious observances that occur during this 
+academic term. If you have a religious observance that conflicts with your participation 
+in the course, please meet with your instructor before the end of the second week of the 
+term to discuss appropriate accommodations.
+</p>
+
+<p class="blocktext" style="text-align: center;"><a href="info.html#top">Back to top</a></p>
+
+<hr class="footer">
+<br>
+
+</body>
+</html>

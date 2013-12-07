@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>$FILE</TITLE>
+<META NAME="description" CONTENT="$FILE">
+<META NAME="keywords" CONTENT="vector_space">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vector_space.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+
+<P>
+<DIV ALIGN="CENTER">
+Introduction to Vector Spaces
+
+</DIV>
+
+<P>
+[Notation: <IMG
+ WIDTH="35" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img1.gif"
+ ALT="$\exists =$">
+``there exists'', <IMG
+ WIDTH="35" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img2.gif"
+ ALT="$\forall = $">
+``for all'',
+<IMG
+ WIDTH="25" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img3.gif"
+ ALT="${\mathbbR} =$">
+``the reals,'' i.e. 
+<!-- MATH
+ $(-\infty,\infty)$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img4.gif"
+ ALT="$(-\infty,\infty)$">]
+
+<P>
+
+<BR>
+A <U>vector space</U>, <I>V</I>, is a set together with two
+operations, vector addition and scalar multiplication, that satisfies
+the following properties:
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Closure under addition:
+<BR>
+<BR>
+If <IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img5.gif"
+ ALT="$u,v \in V$">,
+then <IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img6.gif"
+ ALT="$u + v \in V$">.
+<P>
+<DT>2.
+<DD>Commutativity of vector addition:
+<BR>
+<BR>
+<I>u</I> + <I>v</I> = <I>v</I> + <I>u</I>
+
+<P>
+<DT>3.
+<DD>Associativity of vector addition:
+<BR>
+<BR>
+
+<!-- MATH
+ $(u + v) + w = u + (v + w)$
+ -->
+(<I>u</I> + <I>v</I>) + <I>w</I> = <I>u</I> + (<I>v</I> + <I>w</I>)
+
+<P>
+<DT>4.
+<DD>Existence of an additive identity
+<BR>
+<BR>
+
+<!-- MATH
+ $\exists \: {\bf0} \in V, \textrm{such that} \: u + {\bf0} = u, \forall u \in
+V$
+ -->
+<IMG
+ WIDTH="303" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img7.gif"
+ ALT="$\exists \: {\bf 0} \in V, \textrm{such that} \: u + {\bf 0} = u, \forall u \in
+V$">
+(the zero vector)
+
+<P>
+<DT>5.
+<DD>Existence of additive inverses
+<BR>
+<BR>
+
+<!-- MATH
+ $\forall u \in V, \exists v \in V, \textrm{such that}\: u + v = {\bf   0}.$
+ -->
+<IMG
+ WIDTH="299" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img8.gif"
+ ALT="$\forall u \in V, \exists v \in V, \textrm{such that}\: u + v = {\bf
+0}.$">
+<BR>
+We generally denote such a <I>v</I> as -<I>u</I>.
+
+<P>
+<DT>6.
+<DD>Closure under scalar multiplication
+<BR>
+<BR>
+If <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img9.gif"
+ ALT="$v \in V$">,
+then <IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img10.gif"
+ ALT="$cv \in V$">,
+for all 
+<!-- MATH
+ $c \in {\mathbb R}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img11.gif"
+ ALT="$c \in {\mathbb R}$">.
+
+<P>
+<DT>7.
+<DD>Distributive property 1
+<BR>
+<BR>
+
+<!-- MATH
+ $c(u + v) = cu + cv$
+ -->
+<I>c</I>(<I>u</I> + <I>v</I>) = <I>cu</I> + <I>cv</I>
+
+<P>
+<DT>8.
+<DD>Distributive property 2
+<BR>
+<BR>
+
+<!-- MATH
+ $(c + d)u = cu + du$
+ -->
+(<I>c</I> + <I>d</I>)<I>u</I> = <I>cu</I> + <I>du</I>
+
+<P>
+<DT>9.
+<DD>Associative property for scalar multiplication
+<BR>
+<BR>
+If <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img12.gif"
+ ALT="$u \in V$">,
+then <I>c</I>(<I>du</I>) = (<I>cd</I>)<I>u</I>, 
+<!-- MATH
+ $\forall c,d \in {\mathbb R}$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img13.gif"
+ ALT="$\forall c,d \in {\mathbb R}$">.
+
+<P>
+<DT>10.
+<DD>Scalar identity
+<BR>
+<BR>
+
+<!-- MATH
+ $\forall u \in V, 1(u) = u.$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img14.gif"
+ ALT="$\forall u \in V, 1(u) = u.$"></DL>
+
+<P>
+
+<P>
+A set of vectors, 
+<!-- MATH
+ $S = \{v_1, v_2, ..., v_n\}$
+ -->
+<I>S</I> = {v<SUB>1</SUB>, <I>v</I><SUB>2</SUB>, ..., <I>v</I><SUB><I>n</I></SUB>} is linearly independent
+if the only solution (in the <I>c</I><SUB><I>i</I></SUB>'s) to the equation 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+c_1v_1 + c_2v_2 + ... + c_nv_n = {\bf0}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="218" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img15.gif"
+ ALT="\begin{displaymath}c_1v_1 + c_2v_2 + ... + c_nv_n = {\bf 0}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+occurs with 
+<!-- MATH
+ $c_1 = c_2 = ... = c_n = 0$
+ -->
+<I>c</I><SUB>1</SUB> = <I>c</I><SUB>2</SUB> = ... = <I>c</I><SUB><I>n</I></SUB> = 0.  If there is some solution
+where some of the <I>c</I><SUB><I>i</I></SUB>'s are nonzero, then the set <I>S</I> is
+<U>linearly dependent</U>.
+
+<P>
+<BR>
+<BR>
+<BR>
+<BR>
+A <U>basis</U> is a set, <I>B</I>, of vectors that satisfies the
+following properties:
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD><I>B</I> is linearly independent
+<DT>2.
+<DD>
+<!-- MATH
+ $\forall v \in V$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img16.gif"
+ ALT="$\forall v \in V$">,
+<IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img17.gif"
+ ALT="$B \cup \{v\}$">
+is linearly dependent.
+</DL>
+
+<P>
+Let <I>V</I> be a vector space.  If <I>B</I><SUB>1</SUB> and <I>B</I><SUB>2</SUB> are
+bases for <I>V</I>, then |B<SUB>1</SUB>| = |B<SUB>2</SUB>| (<I>B</I><SUB>1</SUB> and <I>B</I><SUB>2</SUB> have the same
+size).
+
+<P>
+<BR>
+<BR>
+<BR>
+<BR>
+The <U>dimension</U> of a vector space <I>V</I> is the size of a set
+of basis vectors.  If <I>B</I> is a basis for <I>V</I>, we write <IMG
+ WIDTH="105" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja26/vector_space/img18.gif"
+ ALT="$\dim{V} = \vert B\vert$">.
+
+<P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-29</I>
+</ADDRESS>
+</BODY>
+</HTML>

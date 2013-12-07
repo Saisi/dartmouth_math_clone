@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>Standard Configuration - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="Standard Configuration">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/standard.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Getting Started">
+
+<P ALIGN="CENTER"><B>Search in
+Standard Configuration:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l1"><A HREF="options-TOPIC=Getting+Started&QUERY=.html">Command-Line Printing and Options</A></P>
+<P CLASS="l1"><A HREF="glossary-TOPIC=Getting+Started&QUERY=.html">Glossary</A></P>
+<P CLASS="l1"><A HREF="policies-TOPIC=Getting+Started&QUERY=.html">Managing Operation Policies</A></P>
+<P CLASS="l1"><A HREF="overview-TOPIC=Getting+Started&QUERY=.html">Overview of CUPS</A></P>
+<P CLASS="l1"><A HREF="accounting-TOPIC=Getting+Started&QUERY=.html">Printer Accounting Basics</A></P>
+<P CLASS="l1"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html">Printer Sharing</A></P>
+<P CLASS="l1"><A HREF="security-TOPIC=Getting+Started&QUERY=.html">Server Security</A></P>
+<P CLASS="l1"><A HREF="license-TOPIC=Getting+Started&QUERY=.html">Software License Agreement</A></P>
+<P CLASS="l1"><A HREF="standard-TOPIC=Getting+Started&QUERY=.html">Standard Configuration</A></P>
+<P CLASS="l2"><A HREF="standard-TOPIC=Getting+Started&QUERY=.html#CUPSD">cupsd Configuration</A></P>
+<P CLASS="l2"><A HREF="standard-TOPIC=Getting+Started&QUERY=.html#DIRECTORIES">Directories</A></P>
+<P CLASS="l2"><A HREF="standard-TOPIC=Getting+Started&QUERY=.html#SETTINGS">Settings</A></P>
+<P CLASS="l1"><A HREF="translation-TOPIC=Getting+Started&QUERY=.html">Translating and Customizing CUPS</A></P>
+<P CLASS="l1"><A HREF="cgi-TOPIC=Getting+Started&QUERY=.html">Using CGI Programs</A></P>
+<P CLASS="l1"><A HREF="kerberos-TOPIC=Getting+Started&QUERY=.html">Using Kerberos Authentication</A></P>
+<P CLASS="l1"><A HREF="network-TOPIC=Getting+Started&QUERY=.html">Using Network Printers</A></P>
+<P CLASS="l1"><A HREF="whatsnew-TOPIC=Getting+Started&QUERY=.html">What&#39;s New in CUPS 1.6</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>Standard Configuration</H1>
+<FORM ACTION="/help/standard.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">Standard Configuration</H1>
+
+<P>This document describes the standard configuration for this CUPS
+server.</P>
+
+<BLOCKQUOTE><B>Note:</B>
+
+<!-- Packagers: Change the following statement and the following sections
+     if you make any changes to the standard CUPS distribution that are
+     not automatically updated by the configure script. -->
+<P>This file reflects the standard CUPS configuration as distributed
+by Apple Inc, the developer of CUPS.</P>
+
+</BLOCKQUOTE>
+
+
+<H2 CLASS="title"><A NAME="CUPSD">cupsd Configuration</A></H2>
+
+<P><CODE>cupsd(8)</CODE> is configured by default to show
+printers shared by other systems and only allow local access to
+the system and its printers. Administration operations require
+Basic authentication with membership in the group
+"lp".</P>
+
+<P>Connections are accepted via domain socket
+(<VAR>/var/run/cups/cups.sock</VAR>) or "localhost"
+(127.0.0.1).</P>
+
+<H3><A NAME="SETTINGS">Settings</A></H3>
+
+<DIV CLASS="table"><TABLE SUMMARY="Default Values">
+<CAPTION>Table 1: Default Values</CAPTION>
+<TR>
+	<TH>Directive</TH>
+	<TH>Value</TH>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#Browsing">Browsing</A></CODE></TD>
+	<TD><CODE>Yes</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#BrowseLocalProtocols">BrowseLocalProtocols</A></CODE></TD>
+	<TD><CODE>dnssd</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#BrowseRemoteProtocols">BrowseRemoteProtocols</A></CODE></TD>
+	<TD><CODE>@CUPS_BROWSE_REMOTE_PROTOCOLS@</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#BrowseShortNames">BrowseShortNames</A></CODE></TD>
+	<TD><CODE>@CUPS_BROWSE_SHORT_NAMES@</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#ConfigFilePerm">ConfigFilePerm</A></CODE></TD>
+	<TD><CODE>640</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#DefaultShared">DefaultShared</A></CODE></TD>
+	<TD><CODE>Yes</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#ImplicitClasses">ImplicitClasses</A></CODE></TD>
+	<TD><CODE>@CUPS_IMPLICIT_CLASSES@</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#LogFilePerm">LogFilePerm</A></CODE></TD>
+	<TD><CODE>0640</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#MaxCopies">MaxCopies</A></CODE></TD>
+	<TD><CODE>9999</CODE></TD>
+</TR>
+<TR>
+	<TD><CODE><A HREF="ref-cupsd-conf.html#UseNetworkDefault">UseNetworkDefault</A></CODE></TD>
+	<TD><CODE>@CUPS_USE_NETWORK_DEFAULT@</CODE></TD>
+</TR>
+</TABLE></DIV>
+
+
+<H2 CLASS="title"><A NAME="DIRECTORIES">Directories</A></H2>
+
+<DIV CLASS="table"><TABLE SUMMARY="Directories">
+<CAPTION>Table 2: Directories</CAPTION>
+<TR>
+	<TH>Directory</TH>
+	<TH>Purpose</TH>
+</TR>
+<TR>
+	<TD><VAR>/etc/cups</VAR></TD>
+	<TD>The location of configuration files such as
+	<VAR>printers.conf</VAR>. Overridden by the <A
+	HREF="ref-cupsd-conf.html#ServerRoot"><CODE>ServerRoot</CODE></A>
+	directive in <VAR>cupsd.conf</VAR>.</TD>
+</TR>
+<TR>
+	<TD><VAR>/usr/bin</VAR></TD>
+	<TD>The location of user programs.</TD>
+</TR>
+<TR>
+	<TD><VAR>${prefix}/include</VAR></TD>
+	<TD>The location of CUPS include files.</TD>
+</TR>
+<TR>
+	<TD><VAR>${prefix}/lib/x86_64-linux-gnu</VAR></TD>
+	<TD>The location of CUPS library files.</TD>
+</TR>
+<TR>
+	<TD><VAR>/usr/lib/cups</VAR></TD>
+	<TD>The location of server programs such as backends and
+	filters. Overridden by the <A
+	HREF="ref-cupsd-conf.html#ServerBin"><CODE>ServerBin</CODE></A>
+	directive in <VAR>cupsd.conf</VAR>.</TD>
+</TR>
+<TR>
+	<TD><VAR>/usr/sbin</VAR></TD>
+	<TD>The location of administrator programs.</TD>
+</TR>
+<TR>
+	<TD><VAR>/usr/share/cups</VAR></TD>
+	<TD>The location of data files such as fonts. Overridden
+	by the <A
+	HREF="ref-cupsd-conf.html#DataDir"><CODE>DataDir</CODE></A>
+	directive in <VAR>cupsd.conf</VAR>.</TD>
+</TR>
+<TR>
+	<TD><VAR>/usr/share/cups/doc-root</VAR></TD>
+	<TD>The location of documentation files. Overridden by
+	the <A
+	HREF="ref-cupsd-conf.html#DocumentRoot"><CODE>DocumentRoot</CODE></A>
+	directive in <VAR>cupsd.conf</VAR>.</TD>
+</TR>
+<TR>
+	<TD><VAR>/usr/share/cups/locale</VAR></TD>
+	<TD>The location of localization files.</TD>
+</TR>
+<TR>
+	<TD><VAR>/var/cache/cups</VAR></TD>
+	<TD>The location of cache files such as
+	<VAR>ppds.dat</VAR> and <VAR>remote.cache</VAR>.
+	Overridden by the <A
+	HREF="ref-cupsd-conf.html#CacheDir"><CODE>CacheDir</CODE></A>
+	directive in <VAR>cupsd.conf</VAR>.</TD>
+</TR>
+<TR>
+	<TD><VAR>/var/log/cups</VAR></TD>
+	<TD>The location of the <VAR>access_log</VAR>,
+	<VAR>error_log</VAR>, and <VAR>page_log</VAR> files.
+	Overridden by the <A
+	HREF="ref-cupsd-conf.html#AccessLog"><CODE>AccessLog</CODE></A>,
+	<A
+	HREF="ref-cupsd-conf.html#ErrorLog"><CODE>ErrorLog</CODE></A>,
+	<A
+	HREF="ref-cupsd-conf.html#PageLog"><CODE>PageLog</CODE></A>,
+	directive in <VAR>cupsd.conf</VAR>.</TD>
+</TR>
+<TR>
+	<TD><VAR>/var/run/cups</VAR></TD>
+	<TD>The location of the domain socket file and state data
+	such as authentication certificates. Overridden by the <A
+	HREF="ref-cupsd-conf.html#StateDir"><CODE>StateDir</CODE></A>
+	directive in <VAR>cupsd.conf</VAR>.</TD>
+</TR>
+<TR>
+	<TD><VAR>/var/spool/cups</VAR></TD>
+	<TD>The location of spooled print jobs. Overridden by the
+	<A
+	HREF="ref-cupsd-conf.html#RequestRoot"><CODE>RequestRoot</CODE></A>
+	directive in <VAR>cupsd.conf</VAR>.</TD>
+</TR>
+</TABLE></DIV>
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

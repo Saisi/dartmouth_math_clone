@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Chapter 4: Improving upon the white noise approximation: a new `wall formula'</TITLE>
+<META NAME="description" CONTENT="Chapter 4: Improving upon the white noise approximation: a new `wall formula'">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node49.html">
+<LINK REL="previous" HREF="node32.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node43.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html709"
+  HREF="node43.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html707"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html701"
+  HREF="node41.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html710"
+  HREF="node43.html">Decomposition of general deformations</A>
+<B> Up:</B> <A NAME="tex2html708"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html702"
+  HREF="node41.html">The WNA revisited cavity</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00500000000000000000"></A>
+<A NAME="ch:wall"></A>
+<BR>
+Chapter 4: Improving upon the white noise approximation: a new `wall formula'
+</H1>
+
+<P>
+For calculating the rate of energy absorption 
+due to time-dependent deformation of the 
+confining potential, in this chapter I introduce an improved version 
+of the wall formula.
+The formulation takes into account 
+the `special' class of deformations that cause no heating 
+in the zero-frequency limit, which was identified in the previous
+chapter.
+Recall that since calculation of the exact kernel (<A HREF="node34.html#eq:kernel">3.5</A>) is
+very complicated, we are interested in an approximate prediction for
+<!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$">, and for the noise intensity <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> in particular.
+From this follows the friction coefficient <IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">, according to
+the recipe in Section&nbsp;<A HREF="node18.html#sec:irrev">2.1.5</A>.
+
+<P>
+The simplest estimate for <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> is
+the white noise approximation (WNA) introduced in the previous chapter,
+and it leads
+(for a 3D cavity) to the well known `wall formula' [<A
+ HREF="node161.html#wall">29</A>]
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e4"></A>
+<!-- MATH
+ \begin{eqnarray}
+\mu_{{\mbox{\tiny E}}} = \frac{N}{\mathsf{V}} 
+	m v_{{\mbox{\tiny E}}} \oint D({\mathbf s})^2 d{\mathbf s}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="182" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img580.gif"
+ ALT="$\displaystyle \mu_{{\mbox{\tiny E}}} = \frac{N}{\mathsf{V}}
+m v_{{\mbox{\tiny E}}} \oint D({\mathbf s})^2 d{\mathbf s}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the subscript <!-- MATH
+ ${\mbox{\tiny E}}$
+ -->
+<IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img122.gif"
+ ALT="${\mbox{\tiny E}}$"> implies that we are considering 
+a microcanonical ensemble <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img312.gif"
+ ALT="$\rho(E)$">, the number 
+of particles is <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$">, and the volume of the cavity 
+is <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img69.gif"
+ ALT="${\mathsf{V}}$">.
+The deformation of the cavity is described by <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$">.
+A general <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img312.gif"
+ ALT="$\rho(E)$"> can be handled simply by replacing <!-- MATH
+ $v_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img68.gif"
+ ALT="$v_{{\mbox{\tiny E}}}$"> by the
+enesemble average particle speed <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img581.gif"
+ ALT="$\bar{v}$">.
+The above version of the wall formula was originally derived 
+for the purpose of calculating the so-called one-body 
+dissipation rate in nuclei.
+The original 
+derivation of this formula is based on a simplified
+kinetic (gas particle) picture [<A
+ HREF="node161.html#wall">29</A>].
+For an alternate derivation using linear response see [<A
+ HREF="node161.html#kooninqm">118</A>,<A
+ HREF="node161.html#koonincl">120</A>].
+Cohen[<A
+ HREF="node161.html#doronfrc">46</A>]
+provides the generalization to 
+any dimension <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">.
+
+<P>
+The main purpose is to introduce an improved version of the 
+wall formula, in the form of an improved estimate for <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$">, which I
+will call the `IFIF' (Section&nbsp;<A HREF="node46.html#sec:beywna">4.3</A>).
+This improvement involves
+projecting out the special components of a general deformation, 
+and only then to estimate <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> using the WNA.
+This will give an estimate which handles many forms of <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$"> better
+than the plain WNA, as I demonstrate numerically.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:wna_gen"></A><A NAME="7011"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.1:</STRONG>
+
+The failure of the WNA estimate for <!-- MATH
+ $\tilde{C}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img471.gif"
+ ALT="$\tilde{C}(\omega)$">
+for deformation types CO (similar to DI)
+and SX (similar to TX).
+The WNA is clearly a vast overestimate of the small-<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$"> limit.
+See Tables&nbsp;<A HREF="node35.html#tbl:deftypes">3.1</A> and <A HREF="node37.html#tbl:specdefs">3.2</A> for
+explanation of deformation types.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="313" HEIGHT="246" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img582.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_wall/wna_gen.eps,width=0.6\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html711"
+  HREF="node43.html">Decomposition of general deformations</A>
+<LI><A NAME="tex2html712"
+  HREF="node44.html">Addition of deformations: numerical tests</A>
+<UL>
+<LI><A NAME="tex2html713"
+  HREF="node45.html">Symmetry effects</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html714"
+  HREF="node46.html">Beyond the WNA</A>
+<UL>
+<LI><A NAME="tex2html715"
+  HREF="node47.html">Numercial tests of the improved formula</A>
+<LI><A NAME="tex2html716"
+  HREF="node48.html">Historical remarks and conclusion</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html709"
+  HREF="node43.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html707"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html701"
+  HREF="node41.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html710"
+  HREF="node43.html">Decomposition of general deformations</A>
+<B> Up:</B> <A NAME="tex2html708"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html702"
+  HREF="node41.html">The WNA revisited cavity</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

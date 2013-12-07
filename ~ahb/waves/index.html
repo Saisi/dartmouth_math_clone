@@ -1,0 +1,295 @@
+<html>
+<body bgcolor = #ffffff >
+
+<br>
+<center>
+
+<h1><font face="Helvetica">V63.0394 Mathematical Wave Dynamics: <font size=+2>SPRING 2004</font></font></h1>
+
+<h2><a href="http://www.cims.nyu.edu/~obuhler">Oliver Buhler</a> and
+<a href="../index.html">Alex Barnett</a></h2>
+
+</center>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=10 WIDTH="100%" BGCOLOR="#BFDAC4"
+NOSAVE>
+<tr>
+<td align=left><a href="http://www.math.dartmouth.edu/~ahb/waves/soliton.jpg"><img src="http://www.math.dartmouth.edu/~ahb/waves/soliton.jpg" height=200></a>
+<p>colliding NLSE solitons <font size=-2>(Valdman)</font>
+</td>
+<td align=left><a href="http://www.math.dartmouth.edu/~ahb/waves/bober.jpg"><img src="http://www.math.dartmouth.edu/~ahb/waves/bober.jpg" height=200></a>
+<p>cavity resonances <font size=-2>(Bober)</font>
+</td>
+<td>
+  <h5><font size=+2>J</font>UMP TO...</h5>
+  <p><a href="index.html#lec">Lecture notes</a>
+  <p><a href="index.html#pset">Problem sets</a>
+  <p><a href="index.html#res">Resources</a>
+  <p><a href="index.html#proj"><b>Final reports</b> &amp; code</a>
+  <p><a href="http://www.cims.nyu.edu/vigrenew/index.htm">CIMS VIGRE program</a>
+</td>
+</tr>
+</table>
+
+<p>
+Download: <a href="flyer.pdf"><font size=+1>Course flyer</a>, and
+<a href="syl.pdf">Syllabus</font></a>.
+Notice that our assigned room is now <b>1314 Warren Weaver Hall</b>.
+
+<p>Waves and wave propagation are ubiquitous in nature
+and lead to many puzzling questions.  For instance, what produces
+mirages in the desert?  Why is it that a storm over the ocean sets off
+a steady swell of small-amplitude waves, but an earthquake at the sea
+floor can release an enormous flood wave? Can you hear the shape of a
+drum? In response to these questions, a great deal of mathematics has
+been developed to understand and predict the dynamics of light or
+sound waves, the propagation of quantum (matter) waves, the vibration
+patterns of elastic bodies, or the peculiar nature of water waves.
+This course will give a guided tour of mathematical wave theory
+together with physical applications, including normal mode theory, the
+linear wave equation, superposition, interference and diffraction,
+short-wavelength asymptotics and ray theory, dispersion, and nonlinear
+waves and solitons.  By the last few weeks of the course, each student
+will have chosen a topic for more intensive study, and will work
+towards a final oral presentation and written report.  Typically this
+will involve numerical investigation on a computer (in which case
+programming experience is helpful), but a theoretical topic is also
+possible.
+
+<p>This new course is part of the
+<a href="http://www.cims.nyu.edu/vigrenew/index.htm">Courant's VIGRE program</a>,
+and uses the `undergraduate mathematics laboratory' concept of bringing advanced
+undergraduates together with postdocs and professors to work on current
+pure or applied research topics, usually with computer experiments.
+
+<p><img src="http://www.math.dartmouth.edu/~ahb/waves/line.gif" width=100%>
+<br>
+
+
+<p> <a name="lec"></a>
+<h4>Lecture theory summary notes, weekly schedule:</h4>
+<ol>
+<li><a href="notes1.pdf">Simple harmonic motion and normal modes</a>
+and <a href="http://www.falstad.com/coupled">applet</a> which
+demonstrates this (slow the simulation speed way down and go to 2 masses).
+<li><a href="notes2.pdf">Variational method, continuous wave equation,
+Fourier modes</a>, and
+<a href="http://www.falstad.com/loadedstring">applet</a> for playing with
+the wave equation (string under tension).
+<li><a href="notes3.pdf">Traveling solutions, reflection, energy,
+plane waves, material interface</a>
+<li><a href="notes4.pdf">WKB, 2D wave equation and plane waves,
+2D refraction</a>,
+Matlab <a href="http://www.math.dartmouth.edu/~ahb/waves/wkb.m">code</a> for today's WKB plot.
+(Kac drum problem links are below).
+<li><a href="notes5.pdf">Dispersion and ray method, Hamilton's equations</a>,
+applets illustrating dispersion (Schrodinger equation):
+<a href="http://www.fen.bilkent.edu.tr/~yalabik/applets/t_d_quant.html">
+1d quantum mechanics</a> and <a href="http://www.sgi.com/fun/java/john/wave-sim.html">another</a>.
+<li><a href="notes6.pdf">Nonlinear waves, traffic flow, shocks, solitons</a>,
+<a href="http://www.scottsarra.org/shock/shockApplet.html">Burger's applet</a>
+and links on <a href="http://www.eng.vt.edu/fluids/msc/gallery/shocks/shock.htm">shocks</a> and this amazing <a href="http://www.eng.vt.edu/fluids/msc/gallery/conden/mpegf14.htm">supersonic flyby</a>,
+and
+<a href="http://www.math.h.kyoto-u.ac.jp/~takasaki/soliton-lab/gallery/solitons/index-e.html">solitons</a>.
+<li><a href="projects.pdf">Presentation of available student projects</a>.
+<li>Finite Difference methods for the time-dependent Schrodinger equation,
+see R. LeVeque notes Ch. 1, 2.4, 6.2, Numerical Recipes Ch. 19.0, 19.4
+(both linked below).
+<li>Up-winding FD schemes and finite volume techniques for 1-way wave equation
+(advection & traffic flow). <a href="http://www.math.dartmouth.edu/~ahb/waves/ddwave3.m">matlab code</a> for
+O(dx) Godunov method.
+<li>Radiating systems and the Greens function. In-class project work.
+<li>April 6: <i><font color="red">Preliminary student presentations</font></i>
+(10 minutes each).
+<li>Assessing convergence of a numerical scheme. In-class project work.
+<li>More in-class project work.
+<li>April 27th: <i><font color="red">Final Presentations</font></i> (20 minutes each).
+<font color="red">Final written reports due 2pm May 4th!</font>
+For ideas on typesetting your report,
+and giving a scientific talk, see Other resources below.
+</ol>
+
+<p> <a name="pset"></a>
+<h4>Problem set related:</h4>
+<ol>
+<li><a href="http://www.math.dartmouth.edu/~ahb/waves/hw1.m">Matlab code solution</a> for problem set #1.
+<li><a href="hw2.pdf">Problem Set #2</a>, due Feb 17, 2004.
+<a href="http://www.math.dartmouth.edu/~ahb/waves/hw2.m">Matlab code</a> to generate solutions.
+</ol>
+
+<p> <a name="res"></a>
+<h3><font size=+2>R</font>ESOURCES</h3>
+
+<p>
+<h4>Wave theory resources and demonstrations:</h4>
+<ul>
+<li>BOOKS:<ul>
+  <li> J. Billingham and A. C. King, <i>Wave motion</i> (Cambridge, 2000).
+  <li> A. P. French, <i>Vibrations and waves</i> (Norton, NY, 1971).
+  <li> I. G. Main, <i>Vibrations and waves in physics</i> (Cambridge, 1993).
+  </ul>
+<li> Sir Michael Berry's
+<a href="http://www.phy.bris.ac.uk/research/theory/Berry/gallery.html">
+gallery of (mainly) wave phenomena</a>.
+<li> <a href="http://www.math.dartmouth.edu/~ahb/waves/Brewer2002intro_wave_physics.ps">Intro to waves</a> from
+<a href="http://musr.physics.ubc.ca/~jess/hr/skept">Skeptic's
+Guide to Physics</a> by Jess H. Brewer.
+<li> <a href="http://www.falstad.com/mathphysics.html">Paul Falstad's beautiful
+applets</a>, especially the <a href="http://www.falstad.com/ripple">ripple
+tank</a>. This one applet can demonstrate much of the
+linear wave material in this course!
+<li>  <a href="http://www.kettering.edu/~drussell/demos.html">
+Acoustics and vibration animations</a> by Dan Russell.
+<li> <a href="http://www.sodaplay.com">Soda Constructor</a> allows you to
+explore normal modes in arbitrary 2d mass-spring systems (turn off gravity
+and friction for that). It's also a lot of fun to play with and has its
+own online community!
+<li> <a href="http://gershwin.ens.fr/vdaniel/Doc-Locale/Cours-Mirrored/Methodes-Maths/white/math/s2/s2intro/s2intro.html">John White's ODE notes</a>.
+</ul>
+
+<p>
+<h4>Numerical resources:</h4>
+<ul>
+<li> <a href="http://www.library.cornell.edu/nr/cbookcpdf.html">
+Numerical Recipes in C (online)</a>, great place to start, intuitive
+rather than rigorous analysis. Don't use their code without checking it.
+<li> <a
+href="http://web.comlab.ox.ac.uk/oucl/work/nick.trefethen/pdetext.html">
+Lloyd N. Trefethen's online book</a>
+on Finite Difference and Spectral Methods
+for ODEs and PDEs.
+<li> <a href="ftp://amath.washington.edu/pub/rjl/papers/amath58X.ps.gz">
+Randy LeVeque's excellent online book</a> on
+Finite Difference Methods for Differential Equations.
+<li> <a href="http://www.math.dartmouth.edu/~ahb/waves/wave.m">wave.m</a>: Matlab code for crude
+simulation of 2d waves in time-domain (Alex Barnett).
+</ul>
+
+<p>
+<h4>MATLAB resources:</h4>
+<ul>
+<li> <a href="http://www-h.eng.cam.ac.uk/help/tpl/programs/matlab.html">
+Cambridge University Engineering Department</a>.
+<li> <a href="http://www.math.dartmouth.edu/~ahb/waves/wkb.m">wkb.m</a>: Matlab code for Lecture 4 WKB plot
+in medium of exponentially-growing density.
+</ul>
+
+<p>
+<h4>Other resources:</h4>
+<ul>
+<li> <a href="http://www.cs.technion.ac.il/~yogi/Courses/CS-Scientific-Writing/NAMSSpeakersGuide.pdf">Speaker's Guide</a> (for computer science field but
+almost everything applies to any branch of science).
+<li> <a href="http://web.reed.edu/cis/help/latex.html">LaTeX Intro</a>
+<li> <a href="http://www-h.eng.cam.ac.uk/help/tpl/textprocessing">Another LaTeX starting point</a>. Has short example documents: modify them for your needs. 
+</ul>
+
+
+
+
+<p> <a name="proj"></a>
+<h3><font size=+2>P</font>ROJECTS</h3>
+
+<p>
+<h4>Initial topic ideas
+</h4>
+<ul>
+<li> Sobolev's problem of dispersive
+waves in a rotating tank.
+<li> Traffic flow and shock waves.
+<li> Bose-Einstein Condensate, numerical simulation of non-linear Schrodinger
+Equation.
+<li> <a href="http://www.optics.rochester.edu:8080/users/stroud/animations">
+High-n wavepacket in Coulomb potential</a> (Rydberg states of hydrogen).
+<li> Resonances of elastic membranes (drums) of various shapes,
+<a href="http://www.cims.nyu.edu/~barnett/talks/que.pdf">quantum chaos</a>.
+<li> Kac's problem: can you hear the shape of a drum (isospectral drums)?
+<a href="http://www.ams.org/new-in-math/cover/199706.html">Introduction</a>
+and <a href="http://www.maths.ox.ac.uk/~chapman/Publications/drum.ps.gz">paper</a> (in gzipped PostScript - ask if you can't display) on this.
+<li> Wave scattering from obstacles in 1D or 2D.
+<li> Solitons in fiber-optic communication (1D).
+<li> Time-reversed acoustics.
+<li> Arterial pulse propagation in the human vascular system.
+<li> Resonant modes of mechanical or musical systems.
+</ul>
+
+<p>
+<b>Mid-semester project choice</b>: <a href="projects.pdf">download list</a> (as of week 7).
+
+<p>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH="100%" BGCOLOR="#BFDAC4"
+NOSAVE>
+<tr>
+<td align=left>
+<h2>Final student reports</h2>
+</td>
+</tr>
+</table>
+
+<ul>
+
+<li> <b>Jon Bober</b>: Eigenvalue statistics for some quantum billiard systems. <a href="projects/bober/bober_waves.pdf">PDF (1.2MB)</a> / <a href="http://www.math.dartmouth.edu/~ahb/waves/projects/bober/bober_waves.ps.gz">.ps.gz (1.6MB)</a>
+
+<p>
+<li> <b>Yael Elmatad</b>: Comparison of Finite Differences and WKB Method for Approximating Tunneling Times of the One Dimensional Schrodinger Equation. <a href="projects/elmatad/paper.pdf">PDF (250kB)</a>
+  <ul>
+  <li> All MATLAB code is available <a href="http://homepages.nyu.edu/~yse200/waves">here</a>.
+  </ul>
+
+<p>
+<li> <b>Pete Johanson</b>: Traffic models using continua and cellular automata.
+<a href="http://www.math.dartmouth.edu/~ahb/waves/projects/johansen/TrafficModel.ps">.ps (460kB)
+</a>
+  <ul>
+  <li> <a href="projects/johansen/index.html">Some MATLAB codes</a> (for continuum
+  problem: Burger's equation).
+  </ul>
+
+<p>
+<li> <b>Sameep Sangankar</b>: Simulation of an atomic sample traveling around an oval waveguide.
+<a href="http://www.math.dartmouth.edu/~ahb/waves/projects/sangankar/mathpaper.doc">.doc (44kB)
+</a>
+  <ul>
+  <li> <a href="projects/sangankar/index.html">Some MATLAB codes</a> (final.m: can enter "1" for all entries).
+  <li> Note this work relates to research in the
+  <a href="http://atomsun.harvard.edu/">Prentiss Group</a>
+  at <a href="http://www.physics.harvard.edu">Harvard Physics Department</a>
+  </ul>
+
+<p>
+<li> <b>Gabriel Shaykin</b>: Effect of a vortex on a wave-packet.
+(<a href="projects/shaykin/index.html">.doc 200kB</a>, and
+<a href="projects/shaykin/index.html">figures</a>)
+  <ul>
+  <li> <a href="projects/shaykin/index.html">Some MATLAB codes</a>.
+  </ul>
+
+<p>
+<li> <b>Ed Suh</b>: One-dimensional model of sea ice movement.
+<a href="projects/suh/iceproject.pdf">PDF (4.3MB).
+</a>
+  <ul>
+  <li> <a href="projects/suh/index.html">All MATLAB codes</a> (including relevant continuum codes
+and <a href="projects/suh/Notes.pdf">explanatory notes</a>
+by Helga Schaffrin).
+  <li> <a href="http://www.math.dartmouth.edu/~ahb/waves/projects/suh/ed.ppt">Slides from final presentation (PPT 1.2MB)</a>
+  </ul>
+
+<p>
+<li> <b>David Valdman</b>: Soliton solutions of the nonlinear Schrodinger equation with application to Bose-Einstein Condensation.
+<a href="http://www.math.dartmouth.edu/~ahb/waves/projects/valdman/Valdman_report.doc">.doc (850kB)
+</a>
+  <ul>
+  <li> <a href="projects/valdman/index.html">Some MATLAB codes</a>.
+  </ul>
+
+</ul>
+
+<p><img src="http://www.math.dartmouth.edu/~ahb/waves/line.gif" width=100%>
+<br>
+
+
+</body>
+</html>
+
+
+

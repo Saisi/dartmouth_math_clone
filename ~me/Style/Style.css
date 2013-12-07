@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'sofia';
+    src: url('http://www.math.dartmouth.edu/~me/Style/sofiaprolight-webfont-webfont.eot');
+    src: url('http://www.math.dartmouth.edu/~me/Style/sofiaprolight-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.math.dartmouth.edu/~me/Style/sofiaprolight-webfont-webfont.woff') format('woff'),
+         url('http://www.math.dartmouth.edu/~me/Style/sofiaprolight-webfont-webfont.ttf') format('truetype'),
+         url('http://www.math.dartmouth.edu/~me/Style/sofiaprolight-webfont-webfont.svg#sofia_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+
+img#Logo {
+	display:block;
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+body {
+	font-family: "Century Gothic","sofia","Raleway","Apple Gothic", AppleGothic,"URW Gothic L","Avant Garde",Futura,sans-serif;
+	color:rgb(66,66,66);
+	background-color:rgb(254,251,161);
+	background-image:url("http://www.math.dartmouth.edu/~me/Images/YellowTextureTile2.jpg");
+	background-repeat:repeat;
+	}
+
+.BodyContainer {
+	margin-top:20px;
+	margin-bottom:25px;
+    margin-left:auto;
+    margin-right:auto;
+	float:center;
+	width:900px;
+	background-color:white;
+	padding-bottom:60px;
+	box-shadow: 3px 3px 3px rgb(208,207,94), -3px 3px 3px rgb(208,207,94);
+	}
+
+div.Header {
+	text-align:center;
+	}
+
+#Navigation ul { 
+	margin-top: -5px; 
+	padding: 2px; 
+	list-style-type: none; 
+	text-align: center; 
+	background-color: rgb(115,168,53); 
+	} 
+ 
+#Navigation ul li {  
+	display: inline; 
+	} 
+	
+
+ 
+#Navigation ul li a { 
+	text-decoration: none;
+	font-size: 110%;
+	padding: 2px; 
+	padding-bottom: 2px;
+	color: rgb(255,255,255); 
+	background-color: rgb(115,168,53); 
+	} 
+
+#Navigation ul li a:hover { 
+	color: rgb(66,66,66); 
+	background-color: rgb(255,255,255); 
+	font-size: 110%;
+	} 
+	
+#BodyText a {
+	text-decoration: none;
+	color: rgb(115,168,53);
+	font-weight: bold;
+	}
+	
+#BodyText a:hover {	
+	color: rgb(66,66,66);
+	font-weight: bold;
+	}
+
+#BodyText {
+	margin-left:60px;
+	margin-right:60px;
+	}
+	
+.HeadShot {
+	float:right;
+	padding-left: 30px;
+	}
+	
+.Pictures {
+	float:right;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+
+h1 {
+	color:rgb(115,168,53);
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size:300%;
+	}
+
+h2 {
+	color:rgb(115,168,53);
+	margin-top:0px;
+	}
+
+h3 {
+	color:rgb(115,168,53);
+	font-size:180%;
+	}
+	
+h4 {
+	color:rgb(115,168,53);
+	font-size:125%;
+	text-weight:extra bold;
+	margin-bottom:2px;
+	}
+	
+li {
+	margin: 15px;
+	}
+	
+hr {
+	color:rgb(115,168,53);
+	background:rgb(115,168,53);
+	height:2px;
+	margin-top:0px;
+	margin-bottom:0px;
+	}
+	
+.NoBullet li {
+		list-style-type: none;
+		}
+		
+.photos {
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+}
+	

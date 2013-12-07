@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Math3-S2-Demo1_tangents.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="Math3-S2-Demo1_tangents.html#MapleAutoBookmark1">Math3-S2-Demo1_tangents.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 3 Winter 2004</b></u></font></p>
+<p align="center"><font size="5"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Introduction to Calculus</b></u></font></p>
+<p align="center"><font size="5"><b></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Class Demo for the Tangent Problem</b></font></p>
+<p align="center"><font size="5"><b></font><font color="#0000cc" size="5" face="Lucida Bright"><u>January 5, 2004</b></u></font></p>
+<p><font size="5"><b></b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Load additional plotting functions</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>with(plots):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;First we define the function under investigation </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo1_tangents_1.gif" width="74" height="42" alt="f(x) = x/(1+x^2)" align="center">
+</p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>f := x -&gt; x / (1 + x^2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo1_tangents_2.gif" width="87" height="41" alt="f := proc (x) options operator, arrow; x/(1+x^2) end proc" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Plot this function</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot(f(x), x = 0..10, y = 0..0.6);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo1_tangents_3.gif" width="704" height="286" alt="[Plot]" align="center"></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the point P we would like to find the tangent line at</b></font></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and a helping point Q to draw a secant through.</b></font></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We need to know only their x-coordinates, of course.</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>Px := 3;</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>Qx := 0.5;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo1_tangents_4.gif" width="41" height="13" alt="Px := 3" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo1_tangents_5.gif" width="53" height="13" alt="Qx := .5" align="center">
+</font></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute the slope of the secant</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>mpq:= (f(Qx) - f(Px)) / (Qx - Px);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo1_tangents_6.gif" width="140" height="13" alt="mpq := -0.4000000000e-1" align="center">
+</font></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Draw the secant line through P with splope mpq</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>display(plot([f(x), mpq * (x - Px) + f(Px)], x = 0..10, y = 0..0.6), textplot({[Px, f(Px), `P`], [Qx, f(Qx), `Q`]}, align={BELOW, LEFT}));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo1_tangents_7.gif" width="702" height="333" alt="[Plot]" align="center"></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

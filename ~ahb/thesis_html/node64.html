@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Exact form on the boundary and Dirichlet approximation</TITLE>
+<META NAME="description" CONTENT="Exact form on the boundary and Dirichlet approximation">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node63.html">
+<LINK REL="up" HREF="node62.html">
+<LINK REL="next" HREF="node65.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html959"
+  HREF="node65.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html957"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html953"
+  HREF="node63.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html960"
+  HREF="node65.html">The hunt for local</A>
+<B> Up:</B> <A NAME="tex2html958"
+  HREF="node62.html">The choice of norm</A>
+<B> Previous:</B> <A NAME="tex2html954"
+  HREF="node63.html">Estimation by interior points</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00642000000000000000">
+Exact form on the boundary and Dirichlet approximation</A>
+</H2>
+
+<P>
+It is possible to calculate <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> <EM>exactly</EM> using <IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img761.gif"
+ ALT="$O(NM)$"> basis function
+(or derivative) evaluations.
+The equivalent expressions (<A HREF="node142.html#eq:boasgen">H.14</A>) and (<A HREF="node140.html#eq:alexoverlap">H.7</A>)
+both give the domain overlap of two Helmholtz solutions
+(with no particular BCs) at the same wavenumber,
+purely in terms of boundary integrals.
+Taking for example the former expression, it can be approximated
+(using the discretization of Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A>) as
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G \; = \; \frac{{\mathsf{A}}}{M} \, \frac{1}{2k^2} \left[
+	C^{{\mbox{\tiny T}}} C + D^{{\mbox{\tiny T}}} D - k^2 A^{{\mbox{\tiny T}}} A
+	- (A^{{\mbox{\tiny T}}} B + B^{{\mbox{\tiny T}}} A) \right] ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:gexactform"></A><IMG
+ WIDTH="492" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img791.gif"
+ ALT="\begin{displaymath}
+G \; = \; \frac{{\mathsf{A}}}{M} \, \frac{1}{2k^2} \left[
+...
+... - (A^{{\mbox{\tiny T}}} B + B^{{\mbox{\tiny T}}} A) \right] ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the four rectangular matrices are defined by
+<!-- MATH
+ $A_{in} = p_i \phi_n({\mathbf r}_i)$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img792.gif"
+ ALT="$A_{in} = p_i \phi_n({\mathbf r}_i)$">,
+<!-- MATH
+ $B_{in} = p_i^{-1} {\mathbf n}_i \cdot
+(\nabla \nabla \phi_n)({\mathbf r}_i) \cdot {\mathbf r}_i$
+ -->
+<IMG
+ WIDTH="226" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img793.gif"
+ ALT="$B_{in} = p_i^{-1} {\mathbf n}_i \cdot
+(\nabla \nabla \phi_n)({\mathbf r}_i) \cdot {\mathbf r}_i$">,
+<!-- MATH
+ $C_{in} = p_i \partial_x \phi_n({\mathbf r}_i)$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img794.gif"
+ ALT="$C_{in} = p_i \partial_x \phi_n({\mathbf r}_i)$">, and
+<!-- MATH
+ $D_{in} = p_i \partial_y \phi_n({\mathbf r}_i)$
+ -->
+<IMG
+ WIDTH="134" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img795.gif"
+ ALT="$D_{in} = p_i \partial_y \phi_n({\mathbf r}_i)$">.
+At each boundary point <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img796.gif"
+ ALT="${\mathbf r}_i$"> for <IMG
+ WIDTH="87" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img797.gif"
+ ALT="$i=1\cdots M$">, the weight is
+<!-- MATH
+ $p_i \equiv ({\mathbf r}_i \cdot {\mathbf n}_i)^{1/2}$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img798.gif"
+ ALT="$p_i \equiv ({\mathbf r}_i \cdot {\mathbf n}_i)^{1/2}$">.
+The outward normal at this point is <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img799.gif"
+ ALT="${\mathbf n}_i$">.
+Notice that the (Hessian) matrix of second derivatives is required for <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img482.gif"
+ ALT="$B$">.
+
+<P>
+This formidable expression has been coded and tested. It has been found
+that for the Dirichlet eigenproblem, it can be replaced by a much
+simpler form which is valid only when the wavefunctions in question
+vanish on the boundary, namely (<A HREF="node140.html#eq:berrynorm">H.9</A>).
+When written in a basis this gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G_{ij} \; = \; \frac{1}{2k^2} \oint_\Gamma \!\! d{\mathbf s} \,r_n \, (\partial_n \phi_i)
+	\partial_n \phi_j ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:gberrynormnodisc"></A><IMG
+ WIDTH="396" HEIGHT="44" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img800.gif"
+ ALT="\begin{displaymath}
+G_{ij} \; = \; \frac{1}{2k^2} \oint_\Gamma \!\! d{\mathbf s} \,r_n \, (\partial_n \phi_i)
+\partial_n \phi_j ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img801.gif"
+ ALT="$\partial_n$"> means derivative in the normal direction.
+The discretized version is therefore
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G \; = \; \frac{{\mathsf{A}}}{M} \, \frac{1}{2k^2}  C^{{\mbox{\tiny T}}} C ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:gberrynorm"></A><IMG
+ WIDTH="350" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img802.gif"
+ ALT="\begin{displaymath}
+G \; = \; \frac{{\mathsf{A}}}{M} \, \frac{1}{2k^2} C^{{\mbox{\tiny T}}} C ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $C_{in} = p_i \partial_n \phi_n({\mathbf r}_i)$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img803.gif"
+ ALT="$C_{in} = p_i \partial_n \phi_n({\mathbf r}_i)$">.
+The largest few resulting generalized eigenvalues <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img83.gif"
+ ALT="$\lambda$">
+(and eigenfunctions) of
+(<A HREF="node58.html#eq:geneigprob">5.14</A>) are indistiguishable from those resulting from
+(<A HREF="node64.html#eq:gexactform">5.20</A>).
+That this works is not entirely obvious, because the basis functions <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img804.gif"
+ ALT="$\phi_n$">
+do not vanish on the boundary.
+However all the relevant vectors <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$"> contain combinations of basis
+functions which <EM>are</EM> very small on the boundary.
+For the tension plots in this chapter, (<A HREF="node64.html#eq:gberrynorm">5.22</A>) has been used.
+
+<P>
+As a bonus, the eigenstates with Neumann BCs are to be found at the
+minima of the <EM>smallest</EM> <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img83.gif"
+ ALT="$\lambda$">.
+This is true because exchanging Dirichlet for Neumann in the tension
+function definition is equivalent to swapping <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> in
+(<A HREF="node58.html#eq:geneigprob">5.14</A>).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html959"
+  HREF="node65.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html957"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html953"
+  HREF="node63.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html960"
+  HREF="node65.html">The hunt for local</A>
+<B> Up:</B> <A NAME="tex2html958"
+  HREF="node62.html">The choice of norm</A>
+<B> Previous:</B> <A NAME="tex2html954"
+  HREF="node63.html">Estimation by interior points</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

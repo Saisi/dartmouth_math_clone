@@ -1,0 +1,713 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>$FILE</TITLE>
+<META NAME="description" CONTENT="$FILE">
+<META NAME="keywords" CONTENT="comparison">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="comparison.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+_n=k^
+
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER"><FONT SIZE="+3">
+Comparison Test
+<BR>
+Examples
+</FONT></DIV>
+<P>
+When using the comparison test, you have to try and find a suitable
+series to which you compare the one being tested.  The comparison test
+requires making an educated guess as to whether or not the series will
+converge.  If you think the series will converge, you have to find a
+bigger series that also converges.  If you think the series will
+diverge, you have to find a smaller series that converges.
+
+<P>
+We will frequently be making use to two arithmetic properties of
+sequences:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="266" HEIGHT="136" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img1.gif"
+ ALT="\begin{eqnarray*}
+\sum_{n=k}^{\infty} (a_n + b_n) &amp; = &amp; \sum_{n=k}^{\infty} a_n ...
+... [.1in]
+\sum_{n=k}^{\infty} c a_n &amp; = &amp; c\sum_{n=k}^{\infty} a_n
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+
+<P>
+Thus, if two series converge, then their sum converges (what if one of
+the series converged, and the other diverged?), and if you multiply a
+series by a constant, you do not affect whether or not it converges.
+Moreover, if 
+<!-- MATH
+ $\sum_{n=k}^{\infty} a_n = A$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img2.gif"
+ ALT="$\sum_{n=k}^{\infty} a_n = A$">,
+then 
+<!-- MATH
+ $\sum_{n=k}^{\infty}
+c a_n = cA$
+ -->
+<IMG
+ WIDTH="129" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img3.gif"
+ ALT="$\sum_{n=k}^{\infty}
+c a_n = cA$">,
+which is exactly what we should expect.
+
+<P>
+Here is the statement of the comparison test:
+
+<P>
+<B>Comparison test</B>: Let <I>c</I><SUB><I>n</I></SUB> be a sequence of nonnegative numbers.
+
+<UL><LI>If <IMG
+ WIDTH="45" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img4.gif"
+ ALT="$\sum
+c_n$">
+converges, and 
+<!-- MATH
+ $0 \leq a_n \leq c_n$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img5.gif"
+ ALT="$0 \leq a_n \leq c_n$">
+for all (large enough) <I>n</I>, then <IMG
+ WIDTH="47" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img6.gif"
+ ALT="$\sum
+a_n$">
+converges.
+
+<LI>If <IMG
+ WIDTH="45" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img4.gif"
+ ALT="$\sum
+c_n$">
+diverges, and <IMG
+ WIDTH="66" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img7.gif"
+ ALT="$a_n \geq c_n$">
+for all (large enough) <I>n</I>, then <IMG
+ WIDTH="47" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img6.gif"
+ ALT="$\sum
+a_n$">
+diverges.
+
+</UL>
+
+<P>
+Now, in order to compare two series using the comparison test, it
+would be nice to know a few convergence results to compare with.
+
+<P>
+
+<UL><LI>p-series: 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{n^p}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img8.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{n^p}$">
+converges if and only if <I>p</I> &gt;
+  1.
+
+<UL><LI>Note: We will make frequent use of the special case for <I>p</I>=1
+  (called the Harmonic Series), since it a simple, divergent sequence.
+
+</UL>
+
+<LI>Geometric Series: 
+<!-- MATH
+ $\sum_{n=k}^{\infty}a r^n = \frac{ar^k}{1-r}$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img9.gif"
+ ALT="$\sum_{n=k}^{\infty}a r^n = \frac{ar^k}{1-r}$">
+(This is
+  essentially the result you are asked to prove in problem 4, modified
+  slightly to accomodate a lower index of <I>k</I> instead of 0)
+
+</UL>
+
+<hr>
+
+<P>
+Now let's look at a few examples of using the comparison test.
+
+<P>
+1. Determine whether the series 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{n!}$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img10.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{n!}$">
+converges or
+   diverges.
+
+<P>
+First we need to guess whether the series converges or diverges.
+Well, since <I>n</I>! grows pretty fast, it seems like the terms
+<IMG
+ WIDTH="21" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img11.gif"
+ ALT="$\frac{1}{n!}$">
+will go to zero pretty quickly, so perhaps the series
+converges.  Let's try comparing it to the series 
+<!-- MATH
+ $\sum_{n=k}^{\infty}
+\frac{1}{n^2}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img12.gif"
+ ALT="$\sum_{n=k}^{\infty}
+\frac{1}{n^2}$">.
+
+<P>
+Now, if <I>n</I>! &gt; <I>n</I><SUP>2</SUP> for sufficiently large <I>n</I>, then
+we will be able to say 
+<!-- MATH
+ $\frac{1}{n!} < \frac{1}{n^2}$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img13.gif"
+ ALT="$\frac{1}{n!} &lt; \frac{1}{n^2}$">
+(the direction
+of inequality reverses when you take reciprocals).  
+
+<P>
+So is it true that
+<I>n</I>! &gt; <I>n</I><SUP>2</SUP> as <I>n</I> gets large?  Well, if <I>n</I>&gt;3, we can say
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+n! = n(n-1)(n-2)...3\cdot 2 \cdot 1 \geq n(n-1)(n-2).
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="398" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img14.gif"
+ ALT="\begin{displaymath}n! = n(n-1)(n-2)...3\cdot 2 \cdot 1 \geq n(n-1)(n-2).\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+because a product of numbers that are all greater than or equal to 1
+is certainly greater than or equal to a product of any three factors.
+
+<P>
+So
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+n! \geq n(n-1)(n-2) = n^3 - 3n^2 + 2n > n^2, \textrm{ for
+  sufficiently large } n,
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="550" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img15.gif"
+ ALT="\begin{displaymath}n! \geq n(n-1)(n-2) = n^3 - 3n^2 + 2n &gt; n^2, \textrm{ for
+sufficiently large } n,\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+because any <I>k</I>th degree polynomial will eventually grow larger than
+any (<I>k</I>-1)th degree (or lower) polynomial.
+
+<P>
+We have shown that as <I>n</I> gets larger, eventually <I>n</I>! &gt; <I>n</I><SUP>2</SUP> (if
+you check, you'll see this holds for <IMG
+ WIDTH="51" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img16.gif"
+ ALT="$n\geq4$">).  So we can then deduce
+that, for sufficiently large <I>n</I>,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+0 < \frac{1}{n!} < \frac{1}{n^2}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="99" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img17.gif"
+ ALT="\begin{displaymath}0 &lt; \frac{1}{n!} &lt; \frac{1}{n^2}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>.
+
+<P>
+Therefore, we have satisfied the hypotheses of the comparison test, and since
+I gave you the information regarding <I>p</I>-series, we know that 
+<!-- MATH
+ $\sum_{n=k}^{\infty}
+\frac{1}{n^2}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img12.gif"
+ ALT="$\sum_{n=k}^{\infty}
+\frac{1}{n^2}$">
+converges.  Hence, by the comparison test, so does
+
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{n!}.$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img18.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{n!}.$">
+
+<P>
+Having shown that 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{n!}$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img10.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{n!}$">
+converges, we are now free to
+use that fact in other comparison test problems.
+
+<hr>
+
+<P>
+2.  Determine whether the series 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{3\sin^2{n}}{n!}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img19.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{3\sin^2{n}}{n!}$">
+    converges or diverges.
+
+<P>
+Now that we know 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{n!}$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img10.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{n!}$">
+converges, picking a candidate
+to compare this series to should be simple...
+
+<P>
+We make use of the fact that 
+<!-- MATH
+ $0 \leq |\sin{n}| \leq 1,$
+ -->
+<IMG
+ WIDTH="131" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img20.gif"
+ ALT="$0 \leq \vert\sin{n}\vert \leq 1,$">
+and therefore
+
+<!-- MATH
+ $0 \leq \sin^2{n} \leq 1,$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img21.gif"
+ ALT="$0 \leq \sin^2{n} \leq 1,$">
+(absolute value bars are not necessary,
+since we're squaring the sine function)
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+0 < \frac{3\sin^2{n}}{n!} \leq \frac{3}{n!}, (\textrm{ for all }n)
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="233" HEIGHT="49" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img22.gif"
+ ALT="\begin{displaymath}0 &lt; \frac{3\sin^2{n}}{n!} \leq \frac{3}{n!}, (\textrm{ for all }n)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+And that's about all we need to show.  Since constant multiples of
+convergent series are convergent (i.e. 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{3}{n!} = 3
+\sum_{n=k}^{\infty}\frac{1}{n!}$
+ -->
+<IMG
+ WIDTH="174" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img23.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{3}{n!} = 3
+\sum_{n=k}^{\infty}\frac{1}{n!}$">), we've satisfied the comparison test
+hypotheses.  Hence 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{3\sin^2{n}}{n!}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img19.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{3\sin^2{n}}{n!}$">
+converges.
+
+<hr>
+
+<P>
+Let's do another one.
+
+<P>
+3. Determine whether the series 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n} - 1}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img24.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n} - 1}$">
+   converges or diverges.
+
+<P>
+Well, as we look at this series, the most pertinent feature seems to
+be that <IMG
+ WIDTH="32" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img25.gif"
+ ALT="$\sqrt{n}$">
+in the denominator.  Ignoring the other numbers for
+a moment, it seems similar to the series 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img26.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{\sqrt{n}}$">,
+which is a <I>p</I>-series with 
+<!-- MATH
+ $p = \frac{1}{2}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img27.gif"
+ ALT="$p = \frac{1}{2}$">.
+Since <IMG
+ WIDTH="49" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img28.gif"
+ ALT="$p \leq 1$">
+in
+this case, 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img26.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{\sqrt{n}}$">
+diverges.  Let's see if we can
+use this fact to work out the problem at hand.
+
+<P>
+Let's try and compare this series with
+
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img29.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n}}$">.
+After all, if 
+<!-- MATH
+ $\sum_{n=k}^{\infty}
+\frac{1}{\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img26.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{\sqrt{n}}$">
+diverges, then so must 
+<!-- MATH
+ $\frac{1}{2}\sum_{n=k}^{\infty}
+\frac{1}{\sqrt{n}} = \sum_{n=k}^{\infty}\frac{1}{2\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="197" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img30.gif"
+ ALT="$\frac{1}{2}\sum_{n=k}^{\infty}
+\frac{1}{\sqrt{n}} = \sum_{n=k}^{\infty}\frac{1}{2\sqrt{n}}$">.
+
+<P>
+We make the casual observation that
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+2\sqrt{n} - 1 < 2\sqrt{n}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="131" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img31.gif"
+ ALT="\begin{displaymath}2\sqrt{n} - 1 &lt; 2\sqrt{n}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+hence
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{2\sqrt{n} - 1} > \frac{1}{2\sqrt{n}} \geq 0
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="171" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img32.gif"
+ ALT="\begin{displaymath}\frac{1}{2\sqrt{n} - 1} &gt; \frac{1}{2\sqrt{n}} \geq 0\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+So we have satisfied the divergence hypothesis of the comparison
+test.  Since 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img29.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n}}$">
+diverges, so must 
+<!-- MATH
+ $\sum_{n=k}^{\infty}
+\frac{1}{2\sqrt{n} - 1}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img24.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n} - 1}$">.
+
+<P>
+Finally, it's interesting that this problem gets a little trickier if
+you change 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n} - 1}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img24.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{1}{2\sqrt{n} - 1}$">
+to 
+<!-- MATH
+ $\sum_{n=k}^{\infty}
+\frac{1}{2\sqrt{n} + 1}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img33.gif"
+ ALT="$\sum_{n=k}^{\infty}
+\frac{1}{2\sqrt{n} + 1}$">
+(the -1 in the denominator changes to a +1).
+Now, the first inequality
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+2\sqrt{n} + 1 > 2\sqrt{n}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="130" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img34.gif"
+ ALT="\begin{displaymath}2\sqrt{n} + 1 &gt; 2\sqrt{n}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+is pointing the wrong way, because when you take reciprocals, you get
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{2\sqrt{n} + 1} < \frac{1}{2\sqrt{n}}.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="140" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img35.gif"
+ ALT="\begin{displaymath}\frac{1}{2\sqrt{n} + 1} &lt; \frac{1}{2\sqrt{n}}. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Showing that a series is less than a divergent series (or greater than
+a convergent series) doesn't tell you anything at all.  There's an
+easy solution though.  Instead of comparing with 
+<!-- MATH
+ $\sum_{n=k}^{\infty}
+\frac{1}{2\sqrt{n}},$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img36.gif"
+ ALT="$\sum_{n=k}^{\infty}
+\frac{1}{2\sqrt{n}},$">
+just bump the coefficient of <IMG
+ WIDTH="32" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img25.gif"
+ ALT="$\sqrt{n}$">
+in the
+denominator up to 3; i.e. use the series 
+<!-- MATH
+ $\frac{1}{3\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img37.gif"
+ ALT="$\frac{1}{3\sqrt{n}}$">.
+For
+large enough <I>n</I>, <IMG
+ WIDTH="41" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img38.gif"
+ ALT="$3\sqrt{n}$">
+will be greater than <IMG
+ WIDTH="74" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img39.gif"
+ ALT="$2\sqrt{n} + 1$">
+(
+or <IMG
+ WIDTH="72" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/comparison/img40.gif"
+ ALT="$2\sqrt{n} + c$">
+for that matter, for any constant <I>c</I>).
+
+<P>
+Hence, adding or subtracting constant terms to polynomials in the
+denominator doesn't really affect convergence or divergence at all.
+
+<P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

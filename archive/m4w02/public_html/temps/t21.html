@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>t2.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"Below is a program for modeling the behavior of a SYSTEM of differential equations. The jth dependent variable is Val[j]<br>
+while Time is the name of the independent variable. You can vary the number of dependent variables by putting the correct<br>
+number of term in the Val:= part of the program and by entering the initial condition as I0=[a1,a2,...,ak] where k is the<br>
+number of dependent variables. The equation model below are (up to the choice of constants) equivalent to the equation from<br>
+the HIV paper. ":<br>
+<br>
+with(plots):<br>
+<br>
+<br>
+DE2:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Val,Time;<br>
+Digits:=5;<br>
+Val:=I0;<br>
+Time:=T0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(.06*Val[2]-1.2*Val[1])<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(-.13*Val[2])<br>
+),<br>
+evalf(Val[3]+Deltat*(.59*Val[1]-.14*Val[3])<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end:</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"Here we produce the solution to the above equation <br>
+with time 0 final time 50 and initial condition .1 for the first variable, .12 for the second and 0 for the third, i.e I0=[.1,.12,0].<br>
+The number of increments has been chosen to be 40 in the list that you view (semicolon) and 400 in the second list which you<br>
+are not viewing (colon). Notice the form of the list S0, and in particular that the ith term is in the form<br>
+S0[i]=[time,[Val[1](time),Val[2](time),Val[3](time)]": <br>
+<br>
+S0:=DE2(0,[.1,.1,.0],10,50);<br>
+<br>
+S1:=DE2(0,[.1,.1,.0],400,50):</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t2Im/t21.gif" width=387 height=13 alt="S0 := [[0, [.1, .1, 0.]], [5, [-.470, .35e-1, .295]...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t2Im/t22.gif" width=520 height=13 alt="S0 := [[0, [.1, .1, 0.]], [5, [-.470, .35e-1, .295]...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t2Im/t23.gif" width=359 height=13 alt="S0 := [[0, [.1, .1, 0.]], [5, [-.470, .35e-1, .295]...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t2Im/t24.gif" width=379 height=19 alt="S0 := [[0, [.1, .1, 0.]], [5, [-.470, .35e-1, .295]...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t2Im/t25.gif" width=209 height=19 alt="S0 := [[0, [.1, .1, 0.]], [5, [-.470, .35e-1, .295]...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"Now what we'd like to do is take this data and graph the value of the second plus the third variable against time, which<br>
+is the viral load function from the HIV paper. So we make a new list. This idea of creating a new list from an old list with<br>
+sensible modifications will be very useful, and in different situation you may be interested in graphing different information<br>
+deduced form the original list, so you will need to learn to modify this program. In this particular case we are making a new<br>
+list with terms in the from [time,Val[2](time)+Val[3](time)]=[time,ViralLoad(time)] as need to form he Viral load<br>
+function from the HIV example. ":<br>
+<br>
+Make:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]+List[i][2][3]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+V0:=Make(S0);<br>
+<br>
+V1:=Make(S1):</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t2Im/t26.gif" width=475 height=13 alt="V0 := [[0, .1], [5, .330], [10, -1.28575], [15, 6.5...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t2Im/t27.gif" width=503 height=13 alt="V0 := [[0, .1], [5, .330], [10, -1.28575], [15, 6.5...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000> "Now we are in a position to plot these lists so first we create the plot (we do this first in case later we want to display this<br>
+plot together with other plots)":<br>
+<br>
+P1:=listplot(V1,color=red):<br>
+<br>
+"and now we may display the plot.":<br>
+<br>
+display(P1); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t2Im/t28.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

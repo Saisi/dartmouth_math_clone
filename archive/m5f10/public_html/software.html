@@ -1,0 +1,167 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Math 5:  Software
+</title>
+</head>
+
+<body bgcolor = #efffef>
+
+<center>
+<h1><font face="Helvetica">Math 5:  Software
+- <font size=+2>FALL 2008</font></font></h1>
+</center>
+
+
+A word about computer audio <a href="http://en.wikipedia.org/wiki/Audio_file_format">formats</a>:
+<ul>
+<li>
+WAV (.wav, `Microsoft Wave format') is
+high quality but gives large files
+(1MB gives only 6 seconds of stereo CD-quality)
+<li> MP3 (.mp3, 'MPEG 3') is a proprietary format,
+compressed so gives much smaller files
+(1MB gives a full minute of stereo CD-sounding-quality at default
+'128 kbit' rate). For our purposes this quality will be fine.
+<li> OGG (.ogg 'Ogg Vorbis') is a free (non-proprietary)
+format, equally compressed as MP3, sounding equally good. 
+</ul>
+I strongly
+recommend exporting to OGG (eg using audacity) for all your Aural postings.
+
+
+<h2>Audio analysis, editing, conversion</h2>
+<ul>
+
+<li><a href="http://audacity.sourceforge.net/"><font size=+2>audacity</font></a><br>
+Great for basic editing, viewing, multitrack, applying effects,
+power spectrum of a selection,
+reading/writing/converting MP3, OGG, WAV formats.
+<font color=red>[Windows,MacOSX,Linux]</font><br>
+<font color=#800040><i>Useful keystrokes:</i>
+<ul>
+<li><i>Ctrl-1</i> zoom in, <i>Ctrl-3</i> zoom out timescale
+<li>Highlight a (mono) sound, not too short,
+then <code>Analyze->Plot Spectrum</code>.
+For better resolution change 512 to the largest size possible
+(and choose a longer selection),
+change
+<code>Linear frequency</code> to <code>Log frequency</code> and make it
+fill the screen.
+</ul>
+</font>
+
+<li><a href="http://www.fon.hum.uva.nl/praat/"><font size=+2>praat</font></a><br>
+Powerful tool for spectrograms, spectra, voice analysis,
+formant extraction and modification (<i>eg</i> gender changing!)
+Interface is dorky, but is worth it. Reads WAV, not MP3 or OGG.
+<font color=red>[Windows,MacOSX,Linux]</font>
+<br> 
+<font color=#800040><i>Useful keystrokes:
+(also see <a href="http://www.fon.hum.uva.nl/praat/manual/Intro_3__Spectral_analysis.html">online help</a>)
+</i>
+<ul>
+<li>Once you've loaded a sound object, choose <code>Edit</code>,
+switch off <code>Formant</code>, <code>Pitch</code>,
+and switch on <code>Spectrum->Show spectrogram</code>
+<li><i>Ctrl-n</i> zooms to a (pink) selection
+<li><i>Tab</i> plays a selection
+<li><code>Spectrum->Spectrogram settings...</code> I recommend
+View range 0 to 2000 Hz, Window length 0.05 - 0.2 s (depending
+on desired frequency resolution), dynamic range 40 - 50 dB.
+<li><i>Ctrl-l</i> takes power spectrum of selection, very useful to
+then zoom in on to measure partial frequencies.
+</ul>
+</font>
+
+
+<li><a href="http://www.birds.cornell.edu/brp/raven/Raven.html"><font size=+2>Raven</font></a><br>
+Professional audio analysis software, for playback,
+spectrogram, spectrum. Comes in two versions: Raven Lite (free; does spectrogram but not spectrum),
+and Raven Pro (free demo version runs for 10 mins;
+otherwise $50 student license).
+<font color=red>[Windows,MaxOSX]</font>
+
+<li><a href="http://www.baudline.com/"><font size=+2>baudline</font></a><br>
+Beautiful interface, very flexible,
+for recording, variable-speed playback, real-time spectrogram, spectrum.
+Nearly as powerful as Raven or praat, easy to use, colorful, my favorite.
+Reads WAV, OGG, not MP3.
+<font color=red>[Linux]</font><br>
+<font color=#800040><i>Useful keystrokes:</i>
+<ul>
+<li><i>Pause</i> start recording or stop, <i>Alt-P</i> play (highlighted section)
+<li><i>Right-mouse-button</i> brings menu up, <i>eg</i> to choose input source
+<li><i>Alt-right</i>, <i>Alt-left</i> zoom waveform timescale;
+<i>Alt-up</i>, <i>Alt-down</i> zoom spectrogram timescale or waveform
+amplitude
+<li>Set <code>process->transform size->4096</code>,
+or larger, for good resolution on frequency axis.
+<li>To take power spectrum of a selection: <code>displays->average</code>
+then use <i>Middle-mouse-button</i> to grab spectrum (then set
+<code>Clear->auto-clear</code>)
+<li><i>Middle-mouse-button</i> on spectrogram
+brings up variable harmonic series lines 
+</ul>
+</font>
+
+<li><a href="http://www.math.dartmouth.edu/~m5f10/glscope.tar.gz"><font size=+2>glScope</font></a><br>
+
+An elegant and useful little oscilloscope for real-time input only
+by <a href="http://luke.no-ip.org/code/">Luke Campagnola</a>,
+tweaked by yours truly. <font color=red>[Linux]</font><br>
+<font color=#800040><i>Useful keystrokes:</i>
+<ul>
+<li><i>spacebar</i> toggle capture/restart
+<li><i>1,2</i> make line thinner/fatter
+<li><i>Tab</i> align view so trigger on right side
+</ul>
+</font>
+
+<li><a href="http://www.speech.kth.se/wavesurfer/"><font size=+2>wavesurfer</font></a><br>
+Spectrum (including averaged over a selection) and spectrogram, formants,
+of sound files, and basic editing. Easy to use, not very flexible (<i>eg</i>
+spectrogram length limited to 512 samples). <font color=red>[Windows,MacOSX,Linux]</font><br>
+<font color=#800040><i>Useful keystrokes:</i>
+<ul>
+<li><i>spacebar</i> plays selection
+</ul>
+</font>
+
+<li><a href="http://www.hairersoft.com/Amadeus.html"><font size=+2>Amadeus II</font></a><br>
+Very nice real-time spectrogram and spectrum, editing, effects, conversion.
+Trial version is free; $30 to buy.
+WAV, MP3, OGG, many formats. <font color=red>[MacOSX only]</font>
+
+<li><a href="http://www.mathworks.com/"><font size=+2>MATLAB</font></a></br>
+Can read audio files into arrays of numbers for analysis, graphing, processing.
+Very powerful programming environment; I don't recommend it for this
+course unless you already use it.
+See <a href="../../m46s07/public_html/res.html">Matlab
+help</a> on my Math 46 site.<font color=red> [Windows,MacOSX,Linux]</font>
+
+</ul>
+
+
+
+<h2>Audio synthesis</h2>
+<ul>
+<li><a href="http://www.falstad.com/fourier">Falstad's Fourier synthesis</a>
+[applet]
+<li><a href="http://www.phy.ntnu.edu.tw/ntnujava/index.php?topic=17.0">Hwang's Fourier synthesis</a> [applet]
+<li><a href="http://faculty.washington.edu/dillon/PhonResources/javoice/vowjavoice2.html">Spectrogram synthesis</a> from a picture format,
+is fun for composition of a loop. [applet].
+<li><a href="http://www.mathworks.com/">MATLAB</a>
+can write audio files from arrays of numbers; see above comments.
+<li><a href="http://www.jbum.com/syd/">Syd</a> can hook up sound sources
+and filters to synthesize sounds. I have tried only briefly. Uses java
+runtime environment.
+<font color=red>[Windows,MacOSX,Linux]</font>
+</ul>
+
+
+
+<br>
+<img src="http://www.math.dartmouth.edu/~m5f10/line.gif" width=100%>
+
+</body>
+</html>

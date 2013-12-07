@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>CUPS Command File Format - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="CUPS Command File Format">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/spec-command.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Specifications">
+
+<P ALIGN="CENTER"><B>Search in
+CUPS Command File Format:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+<P CLASS="l1"><A HREF="spec-banner-TOPIC=Specifications&QUERY=.html">CUPS Banner File Format</A></P>
+<P CLASS="l1"><A HREF="spec-browsing-TOPIC=Specifications&QUERY=.html">CUPS Browse Protocol</A></P>
+<P CLASS="l1"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html">CUPS Command File Format</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#AutoConfigure">AutoConfigure</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#Clean">Clean</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#SYNTAX">File Syntax</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#INTRODUCTION">Introduction</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#PrintAlignmentPage">PrintAlignmentPage</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#PrintSelfTestPage">PrintSelfTestPage</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#ReportLevels">ReportLevels</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#ReportStatus">ReportStatus</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#SetAlignment">SetAlignment</A></P>
+<P CLASS="l2"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html#COMMANDS">Standard Commands</A></P>
+<P CLASS="l1"><A HREF="spec-design-TOPIC=Specifications&QUERY=.html">CUPS Design Description</A></P>
+<P CLASS="l1"><A HREF="spec-cmp-TOPIC=Specifications&QUERY=.html">CUPS Developer Guide</A></P>
+<P CLASS="l1"><A HREF="spec-ipp-TOPIC=Specifications&QUERY=.html">CUPS Implementation of IPP</A></P>
+<P CLASS="l1"><A HREF="spec-pdf-TOPIC=Specifications&QUERY=.html">CUPS PDF Format</A></P>
+<P CLASS="l1"><A HREF="spec-ppd-TOPIC=Specifications&QUERY=.html">CUPS PPD Extensions </A></P>
+<P CLASS="l1"><A HREF="spec-raster-TOPIC=Specifications&QUERY=.html">CUPS Raster Format</A></P>
+<P CLASS="l1"><A HREF="spec-stp-TOPIC=Specifications&QUERY=.html">CUPS Software Test Plan</A></P>
+<P CLASS="l1"><A HREF="spec-postscript-TOPIC=Specifications&QUERY=.html">Generating PostScript for CUPS</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>CUPS Command File Format</H1>
+<FORM ACTION="/help/spec-command.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+<!--
+  "$Id: spec-command.html 9727 2011-04-28 21:20:12Z mike $"
+
+  CUPS command file format specification for CUPS.
+
+  Copyright 2007-2011 by Apple Inc.
+  Copyright 1997-2006 by Easy Software Products.
+
+  These coded instructions, statements, and computer programs are the
+  property of Apple Inc. and are protected by Federal copyright
+  law.  Distribution and use rights are outlined in the file "LICENSE.txt"
+  which should have been included with this file.  If this file is
+  file is missing or damaged, see the license at "http://www.cups.org/".
+-->
+
+<H1 CLASS="title">CUPS Command File Format</H1>
+
+<h2 class='title'><a name='INTRODUCTION'>Introduction</a></h2>
+
+<p>This specification describes the CUPS command file format
+(application/vnd.cups-command) which is used to send printer
+maintenance commands to a printer in a device-independent way.
+The current specification supports basic maintenance functions
+such as head cleaning and self-test pages and query functions
+such as auto-configure, report supply levels, and report status.</p>
+
+<p>Printer drivers advertise support for the CUPS command file
+format by providing a filter for the
+<var>application/vnd.cups-command</var> file type. Applications
+can determine if a printer supports printing of CUPS command
+files by checking the <code>printer-type</code> attribute for the
+<code>CUPS_PRINTER_COMMANDS</code> capability bit.</p>
+
+<p>In addition, the PPD file for a printer can contain a
+<code>cupsCommands</code> keyword that provides a list of supported
+commands separated by spaces, for example:</p>
+
+<pre class='command'>
+*cupsCommand: "AutoConfigure Clean PrintSelfTestPage ReportLevels ReportStatus"
+</pre>
+
+<p>If no <code>cupsCommands</code> keyword is provided, the command filter
+must support <a href='spec-command-TOPIC=Specifications&QUERY=.html#AutoConfigure'><code>AutoConfigure</code></a>,
+<a href='spec-command-TOPIC=Specifications&QUERY=.html#Clean'><code>Clean</code></a>,
+<a href='spec-command-TOPIC=Specifications&QUERY=.html#PrintSelfTestPage'><code>PrintSelfTestPage</code></a>,
+and <a href='spec-command-TOPIC=Specifications&QUERY=.html#ReportLevels'><code>ReportLevels</code></a>. The scheduler also
+provides the <code>printer-commands</code> attribute containing the list of
+supported commands.</p>
+
+
+<h2 class='title'><a name='SYNTAX'>File Syntax</a></h2>
+
+<p>CUPS command files are ASCII text files.  The first line of a
+CUPS command file MUST contain:</p>
+
+<pre class='command'>
+#CUPS-COMMAND
+</pre>
+
+<p>After that, each line is either a command or a comment.
+Comments begin with the # character, e.g.:</p>
+
+<pre class='command'>
+# This is a comment
+</pre>
+
+<p>Commands are any sequence of letters, numbers, and punctuation characters
+optionally followed by parameters separated by whitespace, e.g.:</p>
+
+<pre class='command'>
+Clean all
+PrintSelfTestPage
+</pre>
+
+<p>Command names are case-insensitive, so "PRINTSELFTESTPAGE",
+"printselftestpage", and "PrintSelfTestPage" are equivalent. Vendor-specific
+commands should use a domain name prefix, e.g.:</p>
+
+<pre class='command'>
+com.vendor.foo
+com.vendor.bar param param2 ... paramN
+</pre>
+
+
+<h2 class='title'><a name='COMMANDS'>Standard Commands</a></h2>
+
+<p>The following are the standard commands supported by the format. The only
+required command is
+<a href='spec-command-TOPIC=Specifications&QUERY=.html#PrintSelfTestPage'><code>PrintSelfTestPage</code></a>.</p>
+
+
+<h3><a name='AutoConfigure'>AutoConfigure</a></h3>
+
+<p class='summary'>AutoConfigure</p>
+
+<p>The <code>AutoConfigure</code> command updates the printer's PPD file
+and driver state information to reflect the current configuration of the
+printer. There are no arguments for this command.</p>
+
+<p>Example:</p>
+
+<pre class='command'>
+#CUPS-COMMAND
+AutoConfigure
+</pre>
+
+
+<h3><a name='Clean'>Clean</a></h3>
+
+<p class='summary'>Clean <i>colorname</i></p>
+
+<p>The <code>Clean</code> command performs a standard print head cleaning. The
+"colorname" parameter specifies which color or head to clean. If a printer does
+not support cleaning of individual colors or cartridges, then all colors are
+cleaned. Command filters MUST support the "all" colorname. Other standard color
+names include "black", "color", "photo", "cyan", "magenta", "yellow",
+"light-cyan", "light-magenta", "light-black", "light-gray", and "dark-gray".</p>
+
+<p>Example:</p>
+
+<pre class='command'>
+#CUPS-COMMAND
+Clean all
+</pre>
+
+
+<h3><a name='PrintAlignmentPage'>PrintAlignmentPage</a></h3>
+
+<p class='summary'>PrintAlignmentPage pass</p>
+
+<p>The <code>PrintAlignmentPage</code> command prints a head alignment page on
+the printer. The "pass" parameter provides a pass number from 1 to N. The number
+of passes is device-dependent.</p>
+
+<p>Example:</p>
+
+<pre class='command'>
+#CUPS-COMMAND
+PrintAlignmentPage 1
+</pre>
+
+
+<h3><a name='PrintSelfTestPage'>PrintSelfTestPage</a></h3>
+
+<p class='summary'>PrintSelfTestPage</p>
+
+<p>The <code>PrintSelfTestPage</code> command prints a self-test page on the
+printer. Typically this page shows whether all jets on a print head are
+functioning and that the print feed mechanisms are working properly.</p>
+
+<p>Example:</p>
+
+<pre class='command'>
+#CUPS-COMMAND
+PrintSelfTestPage
+</pre>
+
+
+<h3><a name='ReportLevels'>ReportLevels</a></h3>
+
+<p class='summary'>ReportLevels</p>
+
+<p>The <code>ReportLevels</code> command queries the supply levels on a printer
+and reports "marker-colors", "marker-levels", "marker-names", and
+"marker-types" attributes using "ATTR:" messages sent to the scheduler. This
+command should also report the current printer status using "STATE:" messages
+like the <a href='spec-command-TOPIC=Specifications&QUERY=.html#ReportStatus'><code>ReportStatus</code></a> command.</p>
+
+<p>Example:</p>
+
+<pre class='command'>
+#CUPS-COMMAND
+ReportLevels
+</pre>
+
+
+<h3><a name='ReportStatus'>ReportStatus</a></h3>
+
+<p class='summary'>ReportStatus</p>
+
+<p>The <code>ReportStatus</code> command queries the printer for its current
+status and reports it using "STATE:" messages sent to the scheduler.</p>
+
+<p>Example:</p>
+
+<pre class='command'>
+#CUPS-COMMAND
+ReportLevels
+</pre>
+
+
+<h3><a name='SetAlignment'>SetAlignment</a></h3>
+
+<p class='summary'>SetAlignment pass value ... valueN</p>
+
+<p>The <code>SetAlignment</code> command sets print head alignment values. The
+"pass" parameter is a number from 1 to N. All parameters are
+device-dependent.</p>
+
+<p>Example:</p>
+
+<pre class='command'>
+#CUPS-COMMAND
+SetAlignment 1 14
+</pre>
+
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

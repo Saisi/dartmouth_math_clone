@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>client.conf - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="client.conf">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/ref-client-conf.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="References">
+
+<P ALIGN="CENTER"><B>Search in
+client.conf:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l1"><A HREF="ref-access_log-TOPIC=References&QUERY=.html">access_log</A></P>
+<P CLASS="l1"><A HREF="ref-classes-conf-TOPIC=References&QUERY=.html">classes.conf</A></P>
+<P CLASS="l1"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html">client.conf</A></P>
+<P CLASS="l2"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html#Encryption">Encryption</A></P>
+<P CLASS="l2"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html#GSSServiceName">GSSServiceName</A></P>
+<P CLASS="l2"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html#ServerName">ServerName</A></P>
+<P CLASS="l2"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html#User">User</A></P>
+<P CLASS="l1"><A HREF="ref-cups-files-conf-TOPIC=References&QUERY=.html">cups-files.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cupsd-conf-TOPIC=References&QUERY=.html">cupsd.conf</A></P>
+<P CLASS="l1"><A HREF="ref-error_log-TOPIC=References&QUERY=.html">error_log</A></P>
+<P CLASS="l1"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html">mailto.conf</A></P>
+<P CLASS="l1"><A HREF="ref-page_log-TOPIC=References&QUERY=.html">page_log</A></P>
+<P CLASS="l1"><A HREF="ref-ppdcfile-TOPIC=References&QUERY=.html">PPD Compiler Driver Information File Reference</A></P>
+<P CLASS="l1"><A HREF="ref-printers-conf-TOPIC=References&QUERY=.html">printers.conf</A></P>
+<P CLASS="l1"><A HREF="ref-snmp-conf-TOPIC=References&QUERY=.html">snmp.conf</A></P>
+<P CLASS="l1"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html">subscriptions.conf</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>client.conf</H1>
+<FORM ACTION="/help/ref-client-conf.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">client.conf</H1>
+
+<P>The <VAR>/etc/cups/client.conf</VAR> and
+<VAR>~/.cups/client.conf</VAR> files contain up to two directives
+that determine how the client behaves. Each directive is listed
+on a line by itself followed by its value. Comments are
+introduced using the number sign ("#") character at the beginning
+of a line.</P>
+
+<H2 CLASS="title"><A NAME="Encryption">Encryption</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+Encryption Never
+Encryption IfRequested
+Encryption Required
+Encryption Always
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Encryption</CODE> directive specifies the default
+encryption settings for the client.</P>
+
+<P>The default setting is <VAR>IfRequested</VAR>.</P>
+
+
+<H2 CLASS="title"><SPAN CLASS="info">CUPS 1.6/OS X 10.8</SPAN><A NAME="GSSServiceName">GSSServiceName</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+GSSServiceName http
+GSSServiceName ipp
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>GSSServiceName</CODE> directive sets the Kerberos service name to use. The default is <CODE>http</CODE> for compatibility with Microsoft Windows.</P>
+
+
+<H2 CLASS="title"><A NAME="ServerName">ServerName</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+ServerName foo.bar.com
+ServerName 11.22.33.44
+ServerName foo.bar.com:8631
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>ServerName</CODE> directive specifies sets the remote server that is to be used for all client operations. That is, it redirects all client requests to the remote server.</P>
+
+<P>The default port number is 631 but can be overridden by adding a colon followed by the desired port number to the value.</P>
+
+<P>The default is to use the local server ("<VAR>localhost</VAR>") or domain socket, if so configured.</P>
+
+<BLOCKQUOTE><B>Note:</B>
+<P>Only one <CODE>ServerName</CODE> directive may appear. If multiple names are
+present, only the last one is used. This directive is not supported on OS X 10.7 or later.</P>
+</BLOCKQUOTE>
+
+
+<H2 CLASS="title"><SPAN CLASS="info">CUPS 1.6/OS X 10.8</SPAN><A NAME="User">User</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+User joe
+User bob
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>User</CODE> directive sets the user name to use. The default is the username associated with the current login.</P>
+
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

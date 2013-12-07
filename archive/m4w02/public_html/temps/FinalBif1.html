@@ -1,0 +1,153 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>FinalBif.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE2:=proc(T0,I0,N,T,C1,a1)<br>
+local i,List,Deltat,Val,Time;<br>
+Digits:=5;<br>
+Val:=I0;<br>
+Time:=T0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(<br>
+<br>
+Val[1]*(1-Val[1]/C1)<br>
+-<br>
+a1*<br>
+Val[2]*Val[1]<br>
+<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+a1<br>
+*Val[1]*Val[2]-Val[2]<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][2][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=DE2(0,[.6,.15],2000,40,1,2):<br>
+V0:=Make3(S0):<br>
+P0:=listplot(V0,color=red):<br>
+<br>
+S1:=DE2(0,[.6,.15],1000,40,1,1.22):<br>
+V1:=Make3(S1):<br>
+P1:=listplot(V1,color=red):<br>
+<br>
+S2:=DE2(0,[.6,.15],1000,40,1,1.22):<br>
+V2:=Make3(S2):<br>
+P2:=listplot(V2,color=red):<br>
+<br>
+S3:=DE2(0,[.6,.15],1000,40,1,1.24):<br>
+V3:=Make3(S3):<br>
+P3:=listplot(V3,color=red):<br>
+<br>
+S4:=DE2(0,[.6,.15],1000,40,1,1.26):<br>
+V4:=Make3(S4):<br>
+P4:=listplot(V4,color=red):<br>
+<br>
+S5:=DE2(0,[.6,.15],1000,40,1,1.28):<br>
+V5:=Make3(S5):<br>
+P5:=listplot(V5,color=red):<br>
+<br>
+S6:=DE2(0,[.6,.15],1000,40,1,1.3):<br>
+V6:=Make3(S6):<br>
+P6:=listplot(V6,color=red):<br>
+<br>
+S7:=DE2(0,[.6,.15],1000,40,1,1.32):<br>
+V7:=Make3(S7):<br>
+P7:=listplot(V7,color=red):<br>
+<br>
+S8:=DE2(0,[.6,.15],1000,40,1,1.4):<br>
+V8:=Make3(S8):<br>
+P8:=listplot(V8,color=red):<br>
+<br>
+S9:=DE2(0,[.6,.15],1000,40,1,1.5):<br>
+V9:=Make3(S9):<br>
+P9:=listplot(V9,color=red):<br>
+<br>
+S10:=DE2(0,[.6,.15],1000,40,1,1.6):<br>
+V10:=Make3(S10):<br>
+P10:=listplot(V10,color=red):<br>
+<br>
+S11:=DE2(0,[.6,.15],1000,40,1,1.7):<br>
+V11:=Make3(S11):<br>
+P11:=listplot(V11,color=red):<br>
+<br>
+S12:=DE2(0,[.6,.15],1000,40,1,1.9):<br>
+V12:=Make3(S12):<br>
+P12:=listplot(V12,color=red):<br>
+<br>
+S13:=DE2(0,[.6,.15],1000,40,1,2.1):<br>
+V13:=Make3(S13):<br>
+P13:=listplot(V13,color=red):<br>
+<br>
+<br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(P0,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,insequence=true,title="A bifurcation",labels=[Pray,Predator]); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Bif3/FinalBif1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

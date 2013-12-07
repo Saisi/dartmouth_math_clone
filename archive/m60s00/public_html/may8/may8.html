@@ -1,0 +1,437 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>may8</TITLE>
+<META NAME="description" CONTENT="may8">
+<META NAME="keywords" CONTENT="may8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="may8.css">
+</HEAD>
+<BODY >
+
+<P>
+<B>Monday</B>
+
+<P>
+Homework: section 8.1 numbers  8,9,10,12 and section 8.2 numbers
+8,10,11,13.
+
+<P>
+Note that the next exam will be handed out on Wednesday.
+<B>Comments</B>
+Here is the program from class used to explore standardized sums.
+
+<P>
+<P>
+<TT>with(plots):   
+</TT>
+<P>
+<TT>Areabargraph:=proc(data,xmin,xmax,k) 
+</TT>
+<P>
+<TT>local sorteddata, dx, lines,graphicslist,
+f: sorteddata:=[]: dx:=(xmax-xmin)/k: lines:=[]: graphicslist:=[]:
+ sorteddata:=sort(data): if ((op(1,sorteddata)&lt;xmin) or
+(op(nops(sorteddata),sorteddata)&gt;xmax)) then lprint(`Note: some data
+ values lie outside the user-defined
+interval.`) fi: f:=proc(k,sorteddata,xmin,dx,xmax,lines::evaln) local
+ i,j,currentupperlim,leng,index,counter,result,
+finallist,q,numb,linelist: finallist:=[]: linelist:=[]: index:=1:
+ leng:=nops(sorteddata): currentupperlim:=xmin+dx: result:=[]: for q from
+1 to leng do if ((op(q,sorteddata)&gt;=xmin) and
+ (op(q,sorteddata)&lt;=xmax)) then
+finallist:=[op(finallist),op(q,sorteddata)]
+fi: od: numb:=nops(finallist): for i from 1 to k
+ do counter:=0: while ((index&lt;=numb) and
+(op(index,finallist)&lt;=currentupperlim)) do
+counter:=counter+1: index:=index+1: od:
+result:=[op(result),counter]: currentupperlim:=currentupperlim+dx: od: for
+j from 1 to k do linelist:=[op(linelist),[xmin +
+ (j-1)*dx,0]]: linelist:=[op(linelist),[xmin +
+(j-1)*dx,op(j,result)/(leng*dx)]]: linelist:=[op(linelist),[xmin +
+ j*dx,op(j,result)/(leng*dx)]]: linelist:=[op(linelist),[xmin +
+j*dx,0]]: od: lines:=linelist: end:
+ f(k,sorteddata,xmin,dx,xmax,lines): plot(lines,style=LINE); end: 
+ 
+</TT>
+<P>
+<TT>"Here we plug in the function f of the uniform random variable on the
+unit interval , the number of times n we will average
+ an experiment with this distribution, m the numbers of trials of this
+average, and  the mean and variance of the the random variable whose
+inverse distribution is f.  We get out a comparison of the standadr normal
+to the normalized sum."; 
+ 
+</TT>
+<P>
+<TT>Ssum := proc(f,n,m,u,v) 
+ 
+</TT>
+<P>
+<TT>local trans, U,V, explist, i , j, l, sum,standard,avlist,xmin,xmax: 
+ 
+ with(stats): 
+ 
+ avlist:=[]; 
+ 
+ for l from 1 to m 
+ 
+ do; 
+ 
+ explist:=[]; 
+ 
+ for i from 1 to n 
+ 
+ do; 
+ 
+ trans:=unapply(f,x): 
+ 
+ U := random[uniform[0,1]](); 
+ 
+explist := [op(explist), trans(U)]; 
+</TT>
+<P>
+<TT>od; 
+</TT>
+<P>
+<TT>sum:=0;  
+ for j from 1 to n 
+ 
+ do 
+ 
+ sum := sum + explist[j]; 
+</TT>
+<P>
+<TT>od; 
+</TT>
+<P>
+<TT>standard := evalf((sum - n*u)/(sqrt(v*n))); 
+</TT>
+<P>
+<TT>avlist := [op(avlist),standard]; 
+ 
+ od; 
+ 
+ xmax := max(op(avlist)); 
+ 
+ xmin:= min(op(avlist)); 
+ 
+ U := Areabargraph(avlist,xmin - .5,xmax + .5,30); 
+</TT>
+<P>
+<TT>V := plot((1/(sqrt(2*Pi)))*exp(-x^2/2),x = xmin - .5 .. xmax +
+.5); display(U,V);
+</TT>
+<P>
+<TT>end: 
+</TT>
+<P>
+<TT>"The uniform example"; 
+ 
+</TT>
+<P>
+<TT>Ssum(x,100,100,1/2,1/12);  
+</TT>
+<P>
+
+<P>
+<B>Wednesday:</B>
+
+<P>
+The only homework is the exam due by this Friday.  
+Here is a list of typos and some clarifications in response to questions I
+received.
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>(Actual typo!!!) In problem 3 imaging should be imagine.  
+<P>
+<DT>2.
+<DD>(Actual typo!!!!)
+In 1(b) I want you to figure out the varience of your winning in problem
+1(a)  (which you would have perhaps done any  how to solve part 1(c),  so 
+in principle this  makes you life easier).
+
+<P>
+<DT>3.
+<DD>(Clarification.) 
+The game in 1(d) is much simpler than the game in 1(a).  If you play the game 
+you receive (<I>N</I><SUB><I>t</I></SUB>) ! dollars.  We
+view it as a game by imagining how much you should be willing to pay
+inorder to play it! 
+
+<P>
+<DT>4.
+<DD>(Clarification) In 1(e) the question is why is the constructed game is
+analogous to the Saint Petersberg
+paradox which we've played with and is explained in the text.
+
+<P>
+<DT>5.
+<DD>(Clarification) In 3(d) indeed the programs have "frills" that can ignored
+when answering the question.  For example you may simply explain the sense
+in which   the distribtion
+produced by  
+<!-- MATH
+ $Weak(f(x),1,n)$
+ -->
+<I>Weak</I>(<I>f</I>(<I>x</I>),1,<I>n</I>) from  week 6 is indeed capturing the the
+distribution of
+the random variable <I>f</I>(<I>X</I>) with <I>X</I> uniformly distributed on the unit
+interval.    
+</DL>
+
+<P>
+<P>
+<TT>with(plots):  
+</TT>
+<P>
+<TT>E1 := plot(exp(-x),x=0..10):
+E2 := plot((exp(-x)*x)/(1),x=0..10):
+E3 := plot((exp(-x)*x^2)/(2!),x=0..10):
+E4 := plot((exp(-x)*x^3)/(3!),x=0..10):
+E5 := plot((exp(-x)*x^4)/(4!),x=0..10):
+display(E1,E2,E3,E4,E5);
+</TT>
+<P>
+<TT>A1 := plot(exp(-x),x=0..4):
+A2 := plot((2*exp(-2*x)*2*x)/(1),x=0..4):
+A3 := plot(6*(exp(-6*x)*(6*x)^5)/(5!),x=0..4):
+A4 := plot(28*(exp(-28*x)*(28*x)^27)/(27!),x=0..4):
+A5 := plot(18*(exp(-18*x)*(18*x)^17)/(17!),x=0..4):
+display(A1,A2,A3,A4,A5);
+</TT>
+<P>
+<TT>S3 := plot(sqrt(26)*(exp(-(sqrt(26)*x + 26))*(sqrt(26)*x +
+26)^25)/(25!),x=-3..3):
+S4 := plot(sqrt(8)*(exp(-(sqrt(8)*x + 8))*(sqrt(8)*x +
+8)^7)/(7!),x=-3..3):
+S5 := plot(sqrt(4)*(exp(-(sqrt(4)*x + 4))*(sqrt(4)*x +
+4)^3)/(3!),x=-2..3):
+S2:= plot(sqrt(14)*(exp(-(sqrt(14)*x + 14))*(sqrt(14)*x +
+14)^13)/(13!),x=-3..3):
+S1 := plot(sqrt(2)*(exp(-(sqrt(2)*x + 2))*(sqrt(2)*x + 2))/(1!),x=-.5..3):
+display(S1,S2,S3,S4,S5);
+</TT>
+<P>
+<TT>N1 := plot((sqrt(1)/(sqrt(2*Pi)))*exp(-(x^2)/2),x = -1..1):
+N2 := plot((sqrt(50)/(sqrt(2*Pi)))*exp(-(50*x^2)/2),x = -1..1):
+N3 := plot((sqrt(100)/(sqrt(2*Pi)))*exp(-(100*x^2)/2),x = -1..1):
+N4 := plot((sqrt(200)/(sqrt(2*Pi)))*exp(-(200*x^2)/2),x = -1..1):
+N5 := plot((sqrt(400)/(sqrt(2*Pi)))*exp(-(400*x^2)/2),x = -1..1):
+display(N1,N2,N3,N4,N5);
+</TT>
+<P>
+<TT>simplify(int((n/(pi^2))*(1/((x-t)^2+ 1))*(1/(x^2 + abs(n^2))),x =
+-infinity..infinity));
+</TT>
+<P>
+<TT>simplify(-I*n*Pi*(I+3*I*t^2+3*I*t^4-2*I*t^2*n^2+3*I*n^4-3*I*n^2+I*(n)*t^6+4*I*(n)^3*t^4-I*(n)+3*I*(n)*n^2+I*(n)*t^4-4*I*(n)^3*t^2+I*(n)*n^6+I*t^4*n^2-I*t^2*n^4+8*(n)^3*t^3+2*I*(n)*t^2*n^2-I*(n)*t^2*n^4-I*(n)*t^4*n^2+4*I*(n)^3*n^2*t^2-I*t^2*(n)-8*(n)*t^3*n^2-3*I*(n)*n^4-I*n^6+I*t^6)/(pi^2*(1+2*t^2-2*n^2+t^4+2*t^2*n^2+n^4)*(n^4-2*t^2*n^2-2*n^2+t^4+2*t^2+1+4*t^2*(n)^2)*(n)));
+</TT>
+<P>
+
+<P>
+<B>Friday</B>
+
+<P>
+<B>Homework</B>
+
+<P>
+Chapter 7.1 numbers 3,5 and 6;  and chapter 7.2 numbers  4,5 and 10. 
+
+<P>
+<B>Comments</B>
+Here are the programs for chapter 7. 
+<a
+href = "http://www.dartmouth.edu/~chance/teaching_aids/books_articles/">
+Computer Demos.</a>
+
+<P>
+Here are the program explored during fridays lecture
+
+<P>
+ConsolidateList:=proc(inputlist)
+ 	local
+i,outputlist,temp,counter,templist,storelist,current,remember:
+ 	outputlist:=[]:  templist:=[]:
+ 	storelist:=inputlist:
+ 	counter:=0:
+ 	while nops(templist)&lt;nops(inputlist) do
+ 		current:=op(1,storelist):
+ 		remember:=1:
+ 		for i from 1 to nops(storelist) do
+ 			if (op(1,op(i,storelist))&lt;op(1,current)) or
+ 			 	(op(1,op(i,storelist))=op(1,current)
+ 			 	and op(2,op(i,storelist))&lt;op(2,current))
+ 				then current:=op(i,storelist):
+ 					 remember:=i:
+ 			fi: 	
+ 		od:
+ 		templist:=[op(templist),current]:
+ 		storelist:=subsop(remember=NULL,storelist):
+ 	od:
+ 	temp:=op(1,op(1,templist)):
+ 	for i from 1 to nops(inputlist) do
+ 		if op(1,op(i,templist))=temp and i&lt;nops(templist) then
+ 			counter:=counter+op(2,op(i,templist))
+ 		elif op(1,op(i,templist))=temp and i=nops(templist) then 
+ 			counter:=counter+op(2,op(i,templist)):
+ 			outputlist:=[op(outputlist),[temp,counter]]
+ 		elif op(1,op(i,templist))&lt;&gt;temp and i&lt;nops(templist) then
+ 			outputlist:=[op(outputlist),[temp,counter]]:
+ 			temp:=op(1,op(i,templist)):
+ 			counter:=op(2,op(i,templist))
+ 		else
+ 			outputlist:=[op(outputlist),[temp,counter]]:
+ 			outputlist:=[op(outputlist),op(i,templist)]:
+ 		fi:		
+ 	od:
+ 	outputlist;
+ end:
+
+<P>
+Convolution:=proc(distributionlist1,distributionlist2)
+ 	local i,j,outputlist,temp1,temp2:
+ 	outputlist:=[]:
+ 	for i from 1 to nops(distributionlist1) do
+ 		for j from 1 to nops(distributionlist2) do
+ 			temp1:=op(1,op(i,distributionlist1)) +
+op(1,op(j,distributionlist2)):
+ 			temp2:=op(2,op(i,distributionlist1)) *
+op(2,op(j,distributionlist2)):
+ 			outputlist:=[op(outputlist),[temp1,temp2]]:
+ 		od:
+ 	od:
+ 	outputlist:=ConsolidateList(outputlist):
+ end:
+
+<P>
+NFoldConvolution:=proc(distributionlist,n)
+ 	local k,currentlist:
+ 	currentlist:=distributionlist:
+ 	for k from 2 to n do
+ 		currentlist:=Convolution(currentlist,distributionlist):
+ 	od:
+ end:
+
+<P>
+SpikeData:=proc(data)
+ 	local sorteddata,i,olist,plist,current,j,temp,distributionlist:
+ 	olist:=sort(convert(convert(data,set),list)):  
+ 	sorteddata:=sort(data):
+ 	plist:=[seq(0,j=1..nops(olist))]:  current:=1:  
+ 	for i from 1 to nops(data) do
+ 		if op(i,sorteddata)=op(current,olist)
+ 			then
+ 				temp:=op(current,plist):
+ 				plist:=subsop(current=temp+1,plist):
+ 			else
+ 				current:=current+1:
+ 				temp:=op(current,plist):
+ 				plist:=subsop(current=temp+1,plist)
+ 		fi:
+ 	od:
+ 	plist:=map(proc(x,data) evalf(x/nops(data)) end,plist,data):
+ 	distributionlist:=zip(proc(x,y) [x,y] end,olist,plist):
+ 	distributionlist:
+ end:
+
+<P>
+Spikegraph:=proc(distributionlist,xmin,xmax,show)
+ 	local num,linelist,j,i,templist:
+ 	templist:=[]:
+ 	if ((distributionlist[1][1]&lt;xmin) or 
+ 	    (distributionlist[nops(distributionlist)][1]&gt;xmax)
+ 	   ) then
+ 		lprint(`Note:  some data values lie outside the
+user-defined interval.`)
+ 	fi:
+ 	for i from 1 to nops(distributionlist) do
+ 		if not((distributionlist[i][1]&lt;xmin) or
+(distributionlist[i][1]&gt;xmax)) then
+ 			templist:=[op(templist),
+ 			           [distributionlist[i][1],
+ 			            distributionlist[i][2]
+ 			           ]
+ 			          ]:
+ 		fi:
+ 	od:
+ 	num:=nops(templist):
+ 	linelist:=[]:
+ 	for j from 1 to num do
+ 		linelist:=[op(linelist),[templist[j][1],0]]:
+ 		linelist:=[op(linelist),[templist[j][1],templist[j][2]]]:
+ 		linelist:=[op(linelist),[templist[j][1],0]]:
+ 	od:
+ 	if show then plot(linelist,style=LINE) fi;
+ end:
+
+<P>
+Summ := proc(n)
+   local i,new,U;
+   U :=
+NFoldConvolution([[1,1/6],[2,1/6],[3,1/6],[4,1/6],[5,1/6],[6,1/6]],n);
+   new := [];
+   for i from 1 to 6*n - n  do
+   new  := [op(new), [U[i][1],U[i][2]]];
+   od;
+   Spikegraph(new, n,6*n,true );
+   end:
+
+<P>
+Summ(10);
+
+<P>
+Weak := proc(n)
+   local i,new,U;
+    U :=
+NFoldConvolution([[1,1/6],[2,1/6],[3,1/6],[4,1/6],[5,1/6],[6,1/6]],n);
+    new := [];
+    for i from 1 to 6*n - n  do
+    new  := [op(new), [U[i][1]/n,n*U[i][2]]];
+    od;
+    Spikegraph(new, 0,6,true );
+    end:
+
+ Weak(10);
+
+<P>
+Central := proc(n)
+   local i,new,U,X,Y;
+    U :=
+NFoldConvolution([[1,1/6],[2,1/6],[3,1/6],[4,1/6],[5,1/6],[6,1/6]],n);
+    new := [];
+    for i from 1 to 6*n - n  do
+    new  := [op(new), [evalf(((U[i][1]-
+n*(3.5))/sqrt(n*(35/12))) ),evalf(sqrt(n*(35/12))*(U[i][2]))]];
+    od;  new;
+    X := Spikegraph(new, -6,6,true );
+  Y  := plot((1/(sqrt(2*Pi)))*exp(-x^2/2),x = -6
+.. 6); display(X,Y);  end:
+
+<P>
+Central(10);
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 60 Spring 2000</I>
+<BR><I>2000-05-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

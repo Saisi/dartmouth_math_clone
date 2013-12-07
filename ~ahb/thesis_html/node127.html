@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Smoothing</TITLE>
+<META NAME="description" CONTENT="Smoothing">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node126.html">
+<LINK REL="up" HREF="node125.html">
+<LINK REL="next" HREF="node128.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1642"
+  HREF="node128.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1640"
+  HREF="node125.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1636"
+  HREF="node126.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1643"
+  HREF="node128.html">Appendix D: How Many</A>
+<B> Up:</B> <A NAME="tex2html1641"
+  HREF="node125.html">Appendix C: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1637"
+  HREF="node126.html">Deformation matrix elements</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001220000000000000000"></A>
+<A NAME="sec:binning"></A>
+<BR>
+Smoothing
+</H1>
+
+<P>
+As is clear from Fig.&nbsp;<A HREF="node29.html#fig:matimage">2.7</A>, individual matrix elements
+are random quantities.
+Recalling the definition (<A HREF="node22.html#eq:avgrecipe">2.48</A>), the average square
+matrix element a certain distance <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$"> from the diagonal
+is proportional to the desired band profile <!-- MATH
+ $\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img243.gif"
+ ALT="$\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$">.
+I estimate <!-- MATH
+ $\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img243.gif"
+ ALT="$\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$"> only at equally-spaced frequency points <!-- MATH
+ $\omega_j =
+(j + \mbox{\small$\frac{1}{2}$}\omega_s )$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1634.gif"
+ ALT="$\omega_j =
+(j + \mbox{\small$\frac{1}{2}$}\omega_s )$">, where integer <IMG
+ WIDTH="44" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1635.gif"
+ ALT="$j \ge 0$">.
+The value at each point <IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1556.gif"
+ ALT="$j$"> is found by averaging the squared elements
+whose frequency difference <!-- MATH
+ $|\omega_n - \omega_m|$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1636.gif"
+ ALT="$\vert\omega_n - \omega_m\vert$">
+falls within the `bin' from <IMG
+ WIDTH="30" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1637.gif"
+ ALT="$j\omega_s$"> to <IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1638.gif"
+ ALT="$(j+1)\omega_s$">.
+The constant bin width <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1117.gif"
+ ALT="$\omega_s$"> determines the resulting
+frequency resolution.
+This is seen to be simply smoothing via `histogram binning'.
+All such bin averages are multiplied by <!-- MATH
+ $2\pi \hbar/\Delta$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1639.gif"
+ ALT="$2\pi \hbar/\Delta$">, if needed
+to give <!-- MATH
+ $\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img243.gif"
+ ALT="$\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$"> in the correct units.
+Since the distance from the diagonal
+is classically small (<!-- MATH
+ $\hbar |\omega_n - \omega_m| \ll E$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1640.gif"
+ ALT="$\hbar \vert\omega_n - \omega_m\vert \ll E$">), linearization
+of the dispersion relation is a good approximation giving
+<!-- MATH
+ $k_n - k_m = (\omega_n - \omega_m)/v$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1641.gif"
+ ALT="$k_n - k_m = (\omega_n - \omega_m)/v$">.
+In practice, I bin in terms of the wavenumber difference <!-- MATH
+ $\kappa
+\equiv k_n - k_m$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1642.gif"
+ ALT="$\kappa
+\equiv k_n - k_m$">.
+Note that the phrase `distance from the diagonal' would
+strictly imply an <EM>integer</EM>
+<IMG
+ WIDTH="83" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1643.gif"
+ ALT="$r \equiv n-m$">.
+The difference between this interpretation (<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1262.gif"
+ ALT="$r$">) and the continuous version
+based
+on the corresponding eigenvalues (<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img391.gif"
+ ALT="$\kappa$">) is small,
+having jitter on the scale of
+a single level-spacing. This small size of jitter is due to spectral
+rigidity[<A
+ HREF="node161.html#Berry85">24</A>].
+The choice of continuous over integer variable is therefore arbitrary
+if only features larger than the level spacing are desired.
+The only time my choice is important is in Section&nbsp;<A HREF="node31.html#sec:sublevel">2.3.4</A>.
+
+<P>
+The diagonal elements <IMG
+ WIDTH="53" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1644.gif"
+ ALT="$n=m$"> are not treated as part of the band profile,
+and are removed before binning.
+Since the band profile is symmetric (the matrix is Hermitian), a
+`single-sided' band profile was taken (discarding the sign of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img391.gif"
+ ALT="$\kappa$">).
+However the above can easily be extended to a two-sided
+version (preserving the sign of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img391.gif"
+ ALT="$\kappa$">) if the band profile
+of a non-Hermitian, possibly rectangular, matrix is desired.
+
+<P>
+Statistical errors result from any estimation of average value.
+If the number of matrix elements collected in a bin is <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1645.gif"
+ ALT="$\mathcal{N}_j$">,
+then the fractional error is Gaussian with standard deviation
+<!-- MATH
+ ${\mathcal{N}}_j^{-1/2}$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1646.gif"
+ ALT="${\mathcal{N}}_j^{-1/2}$"> (for <!-- MATH
+ $\mathcal{N}_j \gg 1$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1647.gif"
+ ALT="$\mathcal{N}_j \gg 1$">).
+This assumes that all elements were uncorrelated random variables.
+This was found to be a good assumption, <EM>except</EM> at certain
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img391.gif"
+ ALT="$\kappa$"> in billiards which have strong scarring.
+As discussed in Section&nbsp;<A HREF="node29.html#sec:qcctest">2.3.2</A>, at these <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img391.gif"
+ ALT="$\kappa$">
+the average is determined by a few
+very large values of <!-- MATH
+ $|(\partial {\mathcal{H}} / \partial x)_{nm}|^2$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img285.gif"
+ ALT="$\vert(\partial {\mathcal{H}} / \partial x)_{nm}\vert^2$">, giving
+poorer estimation errors at certain places in the band profile.
+For the quarter-stadium example at <IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img11.gif"
+ ALT="$k \approx 400$">,
+I used <IMG
+ WIDTH="70" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1648.gif"
+ ALT="$N=451$"> states, giving an estimation error
+(varying with distance from the diagonal) at the 10% level.
+
+<P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1642"
+  HREF="node128.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1640"
+  HREF="node125.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1636"
+  HREF="node126.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1643"
+  HREF="node128.html">Appendix D: How Many</A>
+<B> Up:</B> <A NAME="tex2html1641"
+  HREF="node125.html">Appendix C: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1637"
+  HREF="node126.html">Deformation matrix elements</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

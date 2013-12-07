@@ -1,0 +1,714 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Basis choice, perturbation theory and the FGR</TITLE>
+<META NAME="description" CONTENT="Basis choice, perturbation theory and the FGR">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node20.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html495"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html493"
+  HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html487"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html496"
+  HREF="node22.html">Generalized force-force correlation and</A>
+<B> Up:</B> <A NAME="tex2html494"
+  HREF="node20.html">Review of the linear</A>
+<B> Previous:</B> <A NAME="tex2html488"
+  HREF="node20.html">Review of the linear</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00321000000000000000"></A>
+<A NAME="sec:fopt"></A>
+<BR>
+Basis choice, perturbation theory and the FGR
+</H2>
+
+<P>
+Dissipation in a quantum system will be the result of `driving' a
+parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> on which the Hamiltonian depends.
+The parameter is externally controllable with any (real)
+function of time <IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img103.gif"
+ ALT="$x(t)$">;
+it does not have any dynamics of its own (it is not a degree of freedom).
+We start by linearizing about <IMG
+ WIDTH="46" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img244.gif"
+ ALT="$x=0$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathcal{H}}(x) \; \approx \; {\mathcal{H}}(0) + \frac{\partial \mathcal{H}}{\partial x}x .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:hamil"></A><IMG
+ WIDTH="366" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img245.gif"
+ ALT="\begin{displaymath}
+{\mathcal{H}}(x) \; \approx \; {\mathcal{H}}(0) + \frac{\partial \mathcal{H}}{\partial x}x .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.34)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The hermitian operator <!-- MATH
+ $-\partial {\mathcal{H}} / \partial x\equiv {\mathcal{F}}$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img246.gif"
+ ALT="$-\partial {\mathcal{H}} / \partial x\equiv {\mathcal{F}}$"> is the `generalized force'
+conjugate to the parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">:
+it is an actual force
+if <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> is a displacement, it is a dipole moment if <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> is an applied
+electric field magnetic
+field, it is a current around a ring (magnetization) if <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> is magnetic
+flux enclosed by the ring, and so forth.
+I shall now use time-dependent perturbation theory, choosing
+to perform this in a <EM>fixed basis</EM>
+of the eigenstates of <!-- MATH
+ ${\mathcal{H}}(0)$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img247.gif"
+ ALT="${\mathcal{H}}(0)$">, which we call
+the `unperturbed' Hamiltonian.
+This choice of basis is conventional in textbooks
+[<A
+ HREF="node161.html#landauqm">128</A>,<A
+ HREF="node161.html#imrybook">99</A>,<A
+ HREF="node161.html#kooninqm">118</A>] so is ideal for introductory purposes.
+However this choice does not allow an understanding of the limitations
+of conventional LRT; to understand breakdown and possible extensions
+to LRT
+it is necessary to consider transitions in the so-called `adiabatic'
+basis of the local eigenstates of <!-- MATH
+ ${\mathcal{H}}(x)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img248.gif"
+ ALT="${\mathcal{H}}(x)$">
+([<A
+ HREF="node161.html#wilk88">200</A>,<A
+ HREF="node161.html#doronfrc">46</A>,<A
+ HREF="node161.html#pnm">48</A>].
+The adiabatic
+basis is much more natural for unifying with the classical picture
+[<A
+ HREF="node161.html#doronfrc">46</A>].
+It also removes certain difficulties, for instance that of the infinite
+matrix elements <!-- MATH
+ $\frac{\partial \mathcal{H}}{\partial x}$
+ -->
+<IMG
+ WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img249.gif"
+ ALT="$\frac{\partial \mathcal{H}}{\partial x}$"> which would
+otherwise occur for any deformation <IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img250.gif"
+ ALT="$x \neq 0$"> of a hard-walled billiard system.
+As another example, the case of constant velocity driving
+<IMG
+ WIDTH="58" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img129.gif"
+ ALT="$x = Vt$"> cannot be shown to give diffusive <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> spreading
+in a fixed basis--the adiabatic basis is required
+(Appendix&nbsp;B of [<A
+ HREF="node161.html#doronfrc">46</A>]).
+
+<P>
+The Schrodinger-picture wavefunction is represented as
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:fixedbasis"></A>
+<!-- MATH
+ \begin{eqnarray}
+\left|\psi(t)\right\rangle  \; = \; \sum_n a_n(t) \left|n(t)\right\rangle  , \hspace{.8in}
+	\left|n(t)\right\rangle  \; = \; e^{\frac{1}{i\hbar} E_n t} \left|n(0)\right\rangle ,
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="469" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img251.gif"
+ ALT="$\displaystyle \left\vert\psi(t)\right\rangle \; = \; \sum_n a_n(t) \left\vert n...
+...\right\rangle \; = \; e^{\frac{1}{i\hbar} E_n t} \left\vert n(0)\right\rangle ,$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.35)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the time-independent states <!-- MATH
+ $\left|n\right\rangle  \equiv \left|n(0)\right\rangle$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img252.gif"
+ ALT="$\left\vert n\right\rangle \equiv \left\vert n(0)\right\rangle $"> are eigenstates
+of the unperturbed Hamiltonian: <!-- MATH
+ ${\mathcal{H}}(0) \left|n\right\rangle  = E_n \left|n\right\rangle$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img253.gif"
+ ALT="${\mathcal{H}}(0) \left\vert n\right\rangle = E_n \left\vert n\right\rangle $">.
+The basis vectors are fixed but include phase evolution under <!-- MATH
+ ${\mathcal{H}}(0)$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img247.gif"
+ ALT="${\mathcal{H}}(0)$">
+(following [<A
+ HREF="node161.html#landauqm">128</A>,<A
+ HREF="node161.html#pinesnoz">160</A>]), thus the
+coefficients <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img254.gif"
+ ALT="$a_n(t)$"> are equivalent to an `interaction picture' representation.
+The full time-evolution
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+i\hbar \frac{d}{dt} \left|\psi(t)\right\rangle  \; = \; {\mathcal{H}}(x(t)) \left|\psi(t)\right\rangle
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:tdse"></A><IMG
+ WIDTH="387" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img255.gif"
+ ALT="\begin{displaymath}
+i\hbar \frac{d}{dt} \left\vert\psi(t)\right\rangle \; = \; {\mathcal{H}}(x(t)) \left\vert\psi(t)\right\rangle
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.36)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+gives a first-order differential equation for the coefficients
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{da_n}{dt} \; = \; \frac{1}{i\hbar} x(t) \sum_m
+	{\mathcal{F}}_{nm}(t) a_m
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="388" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img256.gif"
+ ALT="\begin{displaymath}
+\frac{da_n}{dt} \; = \; \frac{1}{i\hbar} x(t) \sum_m
+{\mathcal{F}}_{nm}(t) a_m
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.37)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where
+<!-- MATH
+ ${\mathcal{F}}_{nm}(t) \equiv (\partial {\mathcal{H}} / \partial x)_{nm} e^{-i \omega_{nm} t}$
+ -->
+<IMG
+ WIDTH="225" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img257.gif"
+ ALT="${\mathcal{F}}_{nm}(t) \equiv (\partial {\mathcal{H}} / \partial x)_{nm} e^{-i \omega_{nm} t}$">
+and <!-- MATH
+ $\hbar \omega_{nm} \equiv E_n - E_m$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img258.gif"
+ ALT="$\hbar \omega_{nm} \equiv E_n - E_m$">.
+The formal solution (using notation <!-- MATH
+ ${\mathbf a} \equiv \{ a_n \}$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img259.gif"
+ ALT="${\mathbf a} \equiv \{ a_n \}$">, and the
+matrix <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img260.gif"
+ ALT="$\mathcal{F}$">) is
+a time-ordered exponential (Dyson series [<A
+ HREF="node161.html#sakurai">174</A>])
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathbf a}(t)  \; = \; \exp \left( \frac{1}{i\hbar} \int_0^t dt'
+	x(t') {\mathcal{F}}(t') \right)
+	{\mathbf a}(0) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:dyson"></A><IMG
+ WIDTH="426" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img261.gif"
+ ALT="\begin{displaymath}
+{\mathbf a}(t) \; = \; \exp \left( \frac{1}{i\hbar} \int_0^t dt'
+x(t') {\mathcal{F}}(t') \right)
+{\mathbf a}(0) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.38)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+I take the initial condition as
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+a_n(0) \; = \; \delta_{nm} \hspace{.5in}
+	\mbox{microcanonical distribution} ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:anzero"></A><IMG
+ WIDTH="466" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img262.gif"
+ ALT="\begin{displaymath}
+a_n(0) \; = \; \delta_{nm} \hspace{.5in}
+\mbox{microcanonical distribution} ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.39)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+that is, a single initial pure eigenstate <!-- MATH
+ $\left|m\right\rangle$
+ -->
+<IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img263.gif"
+ ALT="$\left\vert m\right\rangle $">, well above the ground state.
+The generalization to any incoherent ensemble of initial eigenstates
+(<I>e.g. </I>canonical ensemble)
+can be achieved by an occupation-weighted average of the results over <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img264.gif"
+ ALT="$m$">. 
+Formulations of LRT ([<A
+ HREF="node161.html#kubo">122</A>,<A
+ HREF="node161.html#greenwood">84</A>,<A
+ HREF="node161.html#imrybook">99</A>,<A
+ HREF="node161.html#kooninqm">118</A>,<A
+ HREF="node161.html#wilk88">200</A>],
+and Ingold in [<A
+ HREF="node161.html#dittrich">65</A>]) using the density matrix are equivalent to
+this, although the notation may superficially look different.
+Using (<A HREF="node21.html#eq:anzero">2.39</A>) and keeping only the first-order term in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> in
+(<A HREF="node21.html#eq:dyson">2.38</A>) gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+a_n(t) \; = \; \frac{1}{i\hbar} \left( \frac{\partial \mathcal{H}}{\partial x} \right)_{\!nm}\int_0^t dt' \, x(t')
+	e^{-i \omega_{nm} t'} , \hspace{0.5in} n \neq m,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fopt"></A><IMG
+ WIDTH="493" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img265.gif"
+ ALT="\begin{displaymath}
+a_n(t) \; = \; \frac{1}{i\hbar} \left( \frac{\partial \math...
+...t' \, x(t')
+e^{-i \omega_{nm} t'} , \hspace{0.5in} n \neq m,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.40)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which is called first-order perturbation theory (FOPT).
+Clearly this is a  valid approximation only when <IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img266.gif"
+ ALT="$a_m(t)$"> remains
+close to unity and <IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img267.gif"
+ ALT="$a_n(t) \ll 1$"> for all <IMG
+ WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img268.gif"
+ ALT="$n \neq m$">.
+If this is true, the response of any expectation value is linear in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">:
+this is what is meant by the word `linear' in LRT (rather that the
+linearization (<A HREF="node21.html#eq:hamil">2.34</A>)).
+
+<P>
+I will now specialize to the case of periodic driving at amplitude <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img52.gif"
+ ALT="$A$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+x(t) \; = \; A \sin(\omega t) \; = \;
+	\mbox{\small$\frac{1}{2}$}A (e^{i\omega t} - e^{-i\omega t}) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:driving"></A><IMG
+ WIDTH="425" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img269.gif"
+ ALT="\begin{displaymath}
+x(t) \; = \; A \sin(\omega t) \; = \;
+\mbox{\small$\frac{1}{2}$}A (e^{i\omega t} - e^{-i\omega t}) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.41)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Substituting into FOPT and squaring the absolute value gives
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+|a_n(t)|^2 &\; = \;& \frac{1}{\hbar^2} \frac{A^2}{4} \left| \left( \frac{\partial \mathcal{H}}{\partial x} \right)_{\!nm} \right| ^2\cdot
+	t \left[ \mbox{sinc}^2 \mbox{\small$\frac{1}{2}$}(\omega_{nm} - \omega)t +
+	\mbox{sinc}^2 \mbox{\small$\frac{1}{2}$}(\omega_{nm} + \omega)t \right] \nonumber \\
+	& & \hspace{2in} +  \mbox{interference terms} ,
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="60" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img270.gif"
+ ALT="$\displaystyle \vert a_n(t)\vert^2$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img271.gif"
+ ALT="$\textstyle \; = \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="463" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img272.gif"
+ ALT="$\displaystyle \frac{1}{\hbar^2} \frac{A^2}{4} \left\vert \left( \frac{\partial ...
+...ega)t +
+\mbox{sinc}^2 \mbox{\small$\frac{1}{2}$}(\omega_{nm} + \omega)t \right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="389" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img273.gif"
+ ALT="$\displaystyle \hspace{2in} + \mbox{interference terms} ,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.42)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where sinc<IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img274.gif"
+ ALT="$(x)$"> as usual means <IMG
+ WIDTH="68" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img275.gif"
+ ALT="$\sin(x)/x$">.
+After many periods (<!-- MATH
+ $t \gg 1/\omega$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img276.gif"
+ ALT="$t \gg 1/\omega$">) the sinc<IMG
+ WIDTH="12" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img277.gif"
+ ALT="$^2$"> functions become localized
+delta-like functions of width <!-- MATH
+ $\varepsilon \sim 1/t$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img278.gif"
+ ALT="$\varepsilon \sim 1/t$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lim_{t\rightarrow\infty} t \, \mbox{sinc}^2 (\alpha t) \; = \;
+	\pi \delta_{\varepsilon}(\alpha),
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:sincdelta"></A><IMG
+ WIDTH="378" HEIGHT="39" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img279.gif"
+ ALT="\begin{displaymath}
+\lim_{t\rightarrow\infty} t \, \mbox{sinc}^2 (\alpha t) \; = \;
+\pi \delta_{\varepsilon}(\alpha),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.43)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+and the interference terms become irrelevant as these functions
+become separated.
+In order that these delta-like functions do not become narrow enough to
+resolve discrete energy levels, we are limited by the Heisenberg time,
+<!-- MATH
+ $t \ll t_{{\mbox{\tiny H}}}$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img280.gif"
+ ALT="$t \ll t_{{\mbox{\tiny H}}}$">.
+Substituting the delta functions (from which I now drop the width subscript
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img281.gif"
+ ALT="$\varepsilon$">),
+the probabilities in states <IMG
+ WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img268.gif"
+ ALT="$n \neq m$"> can be seen to
+grow linearly, with transition rates
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:fgrw"></A><A NAME="eq:fgr"></A>
+<!-- MATH
+ \begin{eqnarray}
+\Gamma_{nm}(\omega) \;& = \; &\frac{2\pi}{\hbar^2}
+	\frac{A^2}{4} \left| \left( \frac{\partial \mathcal{H}}{\partial x} \right)_{\!nm} \right| ^2
+	[ \delta(\omega_{nm} - \omega) + \delta(\omega_{nm} - \omega)] \\& = & \frac{2\pi}{\hbar} \frac{A^2}{4} \left| \left( \frac{\partial \mathcal{H}}{\partial x} \right)_{\!nm} \right| ^2
+	[ \delta(E_n - E_m - \hbar\omega) +  \delta(E_n - E_m + \hbar\omega)]
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img282.gif"
+ ALT="$\displaystyle \Gamma_{nm}(\omega) \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="351" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img283.gif"
+ ALT="$\displaystyle \frac{2\pi}{\hbar^2}
+\frac{A^2}{4} \left\vert \left( \frac{\parti...
+...} \right\vert ^2
+[ \delta(\omega_{nm} - \omega) + \delta(\omega_{nm} - \omega)]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.44)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="445" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img284.gif"
+ ALT="$\displaystyle \frac{2\pi}{\hbar} \frac{A^2}{4} \left\vert \left( \frac{\partial...
+...ht\vert ^2
+[ \delta(E_n - E_m - \hbar\omega) + \delta(E_n - E_m + \hbar\omega)]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.45)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+recognizable as the usual Fermi Golden Rule (FGR)
+in the presence of both positive and
+negative frequency driving.
+
+<P>
+In textbook treatments of the FGR [<A
+ HREF="node161.html#landauqm">128</A>],
+the squared matrix element <!-- MATH
+ $|(\partial {\mathcal{H}} / \partial x)_{nm}|^2$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img285.gif"
+ ALT="$\vert(\partial {\mathcal{H}} / \partial x)_{nm}\vert^2$"> is assumed
+to be a smooth function of <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img286.gif"
+ ALT="$E_n$">, enabling it to be taken as constant
+over the width of the delta-function--
+this is often true in integrable systems.
+In contrast, in
+a chaotic system
+it takes essentially
+random, uncorrelated values at each <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$"> and <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img264.gif"
+ ALT="$m$"> (this assumption
+underlies any Random Matrix Theory[<A
+ HREF="node161.html#bohigasleshouches">35</A>,<A
+ HREF="node161.html#mehta">146</A>]
+description of chaos).
+The <EM>average</EM> transition rate
+is given by the local mean value near the location <IMG
+ WIDTH="30" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img288.gif"
+ ALT="$nm$"> in the matrix
+(see Fig.&nbsp;<A HREF="node21.html#fig:bandgeom">2.3</A>).
+This will next be formalised using the `band profile' of the matrix.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:bandgeom"></A><A NAME="3263"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+
+Relation of the band profile <!-- MATH
+ $\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img289.gif"
+ ALT="$\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$"> to the squared matrix elements
+<!-- MATH
+ $|(\partial {\mathcal{H}} / \partial x)_{nm}|^2$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img285.gif"
+ ALT="$\vert(\partial {\mathcal{H}} / \partial x)_{nm}\vert^2$"> around <!-- MATH
+ $E_n \approx E_m \approx E$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img290.gif"
+ ALT="$E_n \approx E_m \approx E$">.
+The diagram of the matrix has energy units in both axes.
+The local average of the transition rate <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">
+is taken over an ellipse whose horizontal width is
+an energy range <IMG
+ WIDTH="38" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img291.gif"
+ ALT="$M\Delta$">, and whose width in the
+off-diagonal direction is and energy range <!-- MATH
+ $\hbar \varepsilon$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img292.gif"
+ ALT="$\hbar \varepsilon$">.
+Both widths are <IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img293.gif"
+ ALT="$\gg \Delta$">, the mean level spacing.
+The width <IMG
+ WIDTH="79" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img294.gif"
+ ALT="$M\Delta \ll E$"> is classically small.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="552" HEIGHT="510" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img296.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_review/bandgeom.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html495"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html493"
+  HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html487"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html496"
+  HREF="node22.html">Generalized force-force correlation and</A>
+<B> Up:</B> <A NAME="tex2html494"
+  HREF="node20.html">Review of the linear</A>
+<B> Previous:</B> <A NAME="tex2html488"
+  HREF="node20.html">Review of the linear</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

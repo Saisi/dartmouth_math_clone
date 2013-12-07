@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The white noise approximation (WNA)</TITLE>
+<META NAME="description" CONTENT="The white noise approximation (WNA)">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node38.html">
+<LINK REL="previous" HREF="node33.html">
+<LINK REL="up" HREF="node32.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html652"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html650"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html644"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html653"
+  HREF="node37.html">Relation to random wave</A>
+<B> Up:</B> <A NAME="tex2html651"
+  HREF="node32.html">Chapter 3: Dissipation rate</A>
+<B> Previous:</B> <A NAME="tex2html645"
+  HREF="node35.html">Conversion of time averages</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00420000000000000000"></A>
+<A NAME="sec:wna"></A>
+<BR>
+The white noise approximation (WNA)
+</H1>
+
+<P>
+The most naive estimate of the fluctuations intensity 
+is based on the `white noise approximation' (WNA).
+Namely, one assumes that the 
+correlation between bounces can be neglected.
+This corresponds [<A
+ HREF="node161.html#koonincl">120</A>] to the <EM>local</EM> part of the
+kernel (<A HREF="node34.html#eq:kernel">3.5</A>).
+In such a case 
+only the self-correlation of the spikes <!-- MATH
+ $C_{{\mbox{\tiny E}}}^{{\mbox{\tiny self}}}(\tau)$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img515.gif"
+ ALT="$C_{{\mbox{\tiny E}}}^{{\mbox{\tiny self}}}(\tau)$">
+is taken into 
+consideration.
+Using (<A HREF="node34.html#e8">3.2</A>) and (<A HREF="node34.html#e10">3.4</A>) one obtains
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\nu_{{\mbox{\tiny E}}}\ \approx \ \nu_{{\mbox{\tiny E}}}^{{\mbox{\tiny WNA}}} \ = \
+	\int_{-\infty}^{\infty} \!\!d\tau \,C_{{\mbox{\tiny E}}}^{{\mbox{\tiny self}}}(\tau)
+	\ = \
+	(2mv_{{\mbox{\tiny E}}})^2 \left\langle 
+	\sum_{i} \cos^2(\theta_i) 
+	\ D_i^2 \ \delta(t-t_i) \right\rangle_{{\mbox{\tiny E}}} ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e11"></A><IMG
+ WIDTH="556" HEIGHT="57" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img516.gif"
+ ALT="\begin{displaymath}
+\nu_{{\mbox{\tiny E}}}\ \approx \ \nu_{{\mbox{\tiny E}}}^{{...
+...)
+\ D_i^2 \ \delta(t-t_i) \right\rangle_{{\mbox{\tiny E}}} ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the microcanonical average can then be replaced by the time average.
+(The same expression also results from
+considering the time-averaged contribution of the shaded parts in
+Fig.&nbsp;<A HREF="node34.html#fig:f+c">3.3</A>b).
+From here
+the result (<A HREF="node35.html#eq:walluseful">3.10</A>) can be used, giving the WNA result
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e12"></A><A NAME="eq:wna"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nu_{{\mbox{\tiny E}}}^{{\mbox{\tiny WNA}}} \ = \ 
+2m^2 v_{{\mbox{\tiny E}}}^3 \, \langle|\cos\theta|^3\rangle 
+\frac{1}{{\mathsf V}} \oint [D({\mathbf s})]^2 d{\mathbf s} ,
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="309" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img517.gif"
+ ALT="$\displaystyle \nu_{{\mbox{\tiny E}}}^{{\mbox{\tiny WNA}}} \ = \
+2m^2 v_{{\mbox...
+...eta\vert^3\rangle
+\frac{1}{{\mathsf V}} \oint [D({\mathbf s})]^2 d{\mathbf s} ,$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.12)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the geometric factor <!-- MATH
+ $\langle|\cos\theta|^3\rangle$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img518.gif"
+ ALT="$\langle\vert\cos\theta\vert^3\rangle$"> is given above.
+If we can use the convention <!-- MATH
+ $|D({\mathbf s})| \sim 1$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img519.gif"
+ ALT="$\vert D({\mathbf s})\vert \sim 1$"> 
+over the deformed region (and zero otherwise), 
+then  we can write the WNA as 
+<!-- MATH
+ $\nu_{{\mbox{\tiny E}}}^{{\mbox{\tiny WNA}}} = (2mv_{{\mbox{\tiny E}}})^2 \times (1/\tau_{{\mbox{\tiny col}}})$
+ -->
+<IMG
+ WIDTH="204" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img520.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}^{{\mbox{\tiny WNA}}} = (2mv_{{\mbox{\tiny E}}})^2 \times (1/\tau_{{\mbox{\tiny col}}})$"> 
+which defines <!-- MATH
+ $(1/\tau_{{\mbox{\tiny col}}})$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img521.gif"
+ ALT="$(1/\tau_{{\mbox{\tiny col}}})$"> as the effective
+collision rate (for more discussion of this convention
+see Appendix&nbsp;F of [<A
+ HREF="node161.html#doronfrc">46</A>], and [<A
+ HREF="node161.html#pnm">48</A>]).
+Again, <!-- MATH
+ $\tau_{{\mbox{\tiny col}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img458.gif"
+ ALT="$\tau_{{\mbox{\tiny col}}}$"> can 
+be much larger than the
+ballistic time <!-- MATH
+ $\tau_{{\mbox{\tiny bl}}}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img459.gif"
+ ALT="$\tau_{{\mbox{\tiny bl}}}$"> in the case that only a small piece 
+of the boundary is being deformed.
+
+<P>
+For hard walls, the band profile
+<!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> is non-zero for all omega, corresponding to an infinite
+bandwidth of the matrix <!-- MATH
+ $(\partial {\mathcal{H}} / \partial x)_{nm}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img295.gif"
+ ALT="$(\partial {\mathcal{H}} / \partial x)_{nm}$">.
+The band profile at <!-- MATH
+ $\omega \gg \tau_{{\mbox{\tiny bl}}}^{-1}$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img522.gif"
+ ALT="$\omega \gg \tau_{{\mbox{\tiny bl}}}^{-1}$"> is
+entirely due to the `self' component,
+so is constant and given by the WNA (see Fig.&nbsp;<A HREF="node34.html#fig:f+c">3.3</A>d).
+This convergence at large <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">
+has been tested numerically: the decay to the constant WNA value
+is found to be quite oscillatory.
+
+<P>
+The use of the WNA can be justified whenever  
+successive collisions are effectively 
+uncorrelated.  The applicability of such  an
+assumption depends on the shape of the cavity
+(which will determine the decay of correlations via the
+typical Lyapunov exponent)
+as well as on the type of deformation involved. 
+If we have the cavity of Fig.&nbsp;<A HREF="node33.html#fig:gsinai">3.2</A>a, and the deformation 
+involves only a small piece of the boundary (<I>e.g. </I>see Fig.&nbsp;<A HREF="node33.html#fig:gsinai">3.2</A>b), 
+then successive collisions with the <EM>deformed part</EM> of the boundary 
+are effectively uncorrelated.
+This is so because there 
+are many collisions with static pieces of the boundary 
+before the next effective collision (with non zero <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img449.gif"
+ ALT="$D_i$">)
+takes place.
+If the deformation involves a large 
+piece (or all) of the boundary, one can still argue 
+that successive collisions are effectively uncorrelated
+provided  <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$"> is `oscillatory' enough
+(<I>i.e. </I>changes sign many times along the boundary).
+
+<P>
+These expectations are qualitatively confirmed 
+by the numerical results of Fig.&nbsp;<A HREF="node35.html#fig:wna_corr">3.4</A>, where
+I show a sequence of deformations
+for which the WNA performs increasingly well.
+The numerical method and estimation error for finding the classical
+<!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> are presented in Appendix&nbsp;<A HREF="node121.html#ap:band_cl">B</A>.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html654"
+  HREF="node37.html">Relation to random wave approximation</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html652"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html650"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html644"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html653"
+  HREF="node37.html">Relation to random wave</A>
+<B> Up:</B> <A NAME="tex2html651"
+  HREF="node32.html">Chapter 3: Dissipation rate</A>
+<B> Previous:</B> <A NAME="tex2html645"
+  HREF="node35.html">Conversion of time averages</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Beyond the WNA</TITLE>
+<META NAME="description" CONTENT="Beyond the WNA">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node44.html">
+<LINK REL="up" HREF="node42.html">
+<LINK REL="next" HREF="node47.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html752"
+  HREF="node47.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html750"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html746"
+  HREF="node45.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html753"
+  HREF="node47.html">Numercial tests of the</A>
+<B> Up:</B> <A NAME="tex2html751"
+  HREF="node42.html">Chapter 4: Improving upon</A>
+<B> Previous:</B> <A NAME="tex2html747"
+  HREF="node45.html">Symmetry effects</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00530000000000000000"></A>
+<A NAME="sec:beywna"></A>
+<BR>
+Beyond the WNA
+</H1>
+
+<P>
+It is possible now to consider the case of general 
+deformation, and to go beyond the WNA.
+Given a general 
+deformation <!-- MATH
+ $D({\mathbf s})$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img57.gif"
+ ALT="$D({\mathbf s})$"> we should project out (subtract) all the special 
+components, leaving the normal component,
+and only then apply the WNA.
+In Fig.&nbsp;<A HREF="node47.html#fig:decomp">4.8</A> we demonstrate 
+this decomposition for the deformation
+(CO + W16) and the deformation SX.
+Here and elsewhere, all boundary deformation function integrals
+(of the form (<A HREF="node43.html#e20">4.5</A>)) are evaluated using the technique
+of Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A>.
+
+<P>
+The special deformations constitute a linear space
+which is spanned by the basis functions: one dilation, <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> translations, 
+and <IMG
+ WIDTH="84" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img543.gif"
+ ALT="$d(d-1)/2$"> rotations.
+(For <IMG
+ WIDTH="36" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img620.gif"
+ ALT="$d{=}2$"> they are listed in Table&nbsp;<A HREF="node37.html#tbl:specdefs">3.2</A>).
+For a general cavity shape these basis functions are not orthogonal.
+However, because they are linearly independent,
+we can use standard linear algebra to build an orthonormal
+basis <!-- MATH
+ $\{ D_i({\mathbf s}) \}$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img621.gif"
+ ALT="$\{ D_i({\mathbf s}) \}$"> of special deformations.
+The special (<IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img622.gif"
+ ALT="$\parallel$">) and the normal (<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img623.gif"
+ ALT="$\perp$">) components of any given
+deformation <!-- MATH
+ $D({\mathbf s})$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img57.gif"
+ ALT="$D({\mathbf s})$"> are therefore
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e_dcmp"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nonumber
+D_{\parallel}({\mathbf s}) &=& 
+\mbox{$\sum_i \alpha_i D_i({\mathbf s})$} 
+\\D_{\perp}({\mathbf s}) &=& D({\mathbf s})-D_{\parallel}({\mathbf s})
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img624.gif"
+ ALT="$\displaystyle D_{\parallel}({\mathbf s})$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img625.gif"
+ ALT="$\displaystyle \mbox{$\sum_i \alpha_i D_i({\mathbf s})$}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img626.gif"
+ ALT="$\displaystyle D_{\perp}({\mathbf s})$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="106" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img627.gif"
+ ALT="$\displaystyle D({\mathbf s})-D_{\parallel}({\mathbf s})$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.9)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the coefficients are
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\alpha_i \; = \; \oint \! D({\mathbf s}) D_i({\mathbf s}) \, d{\mathbf s}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:alphai"></A><IMG
+ WIDTH="363" HEIGHT="42" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img628.gif"
+ ALT="\begin{displaymath}
+\alpha_i \; = \; \oint \! D({\mathbf s}) D_i({\mathbf s}) \, d{\mathbf s}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The improved approximation for <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img583.gif"
+ ALT="$\nu$"> applies the WNA
+only to the normal component, giving
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e23"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nu_{{\mbox{\tiny E}}} \ \approx \ 
+	2m^2 v_{{\mbox{\tiny E}}}^3\langle|\cos\theta|^3\rangle 
+	\frac{1}{{\mathsf V}} 
+	\oint d{\mathbf s} [D_{\perp}({\mathbf s})]^2
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="292" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img629.gif"
+ ALT="$\displaystyle \nu_{{\mbox{\tiny E}}} \ \approx \
+2m^2 v_{{\mbox{\tiny E}}}^3\l...
+...rt^3\rangle
+\frac{1}{{\mathsf V}}
+\oint d{\mathbf s} [D_{\perp}({\mathbf s})]^2$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.11)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+which we name the IFIF (Improved Fluctuations Intensity Formula).
+In the particular case of <IMG
+ WIDTH="36" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img630.gif"
+ ALT="$d{=}3$">,
+substitution of this result into the microcanonical FD relation
+gives an `improved wall formula'
+consisting of the replacement of
+<!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$"> by <!-- MATH
+ $D_{\perp}{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img631.gif"
+ ALT="$D_{\perp}{({\mathbf s})}$"> in Eq.&nbsp;(<A HREF="node42.html#e4">4.1</A>).
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html754"
+  HREF="node47.html">Numercial tests of the improved formula</A>
+<LI><A NAME="tex2html755"
+  HREF="node48.html">Historical remarks and conclusion</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html752"
+  HREF="node47.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html750"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html746"
+  HREF="node45.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html753"
+  HREF="node47.html">Numercial tests of the</A>
+<B> Up:</B> <A NAME="tex2html751"
+  HREF="node42.html">Chapter 4: Improving upon</A>
+<B> Previous:</B> <A NAME="tex2html747"
+  HREF="node45.html">Symmetry effects</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

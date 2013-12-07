@@ -1,0 +1,442 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="http://www.math.dartmouth.edu/~m28w10/index_archivos/filelist.xml">
+<link rel=Edit-Time-Data href="http://www.math.dartmouth.edu/~m28w10/index_archivos/editdata.mso">
+<!--[if !mso]>
+<style>v\:* {behavior:url("index.html#default%23VML");}
+o\:* {behavior:url("index.html#default%23VML");}
+w\:* {behavior:url("index.html#default%23VML");}
+.shape {behavior:url("index.html#default%23VML");}
+</style>
+<![endif]-->
+<title>Math 28. Introduction to Combinatorics</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Sergi Elizalde</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Pompilio</o:LastAuthor>
+  <o:Revision>104</o:Revision>
+  <o:TotalTime>1525</o:TotalTime>
+  <o:Created>2008-03-04T01:33:00Z</o:Created>
+  <o:LastSaved>2010-03-08T22:24:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>417</o:Words>
+  <o:Characters>2377</o:Characters>
+  <o:Company> </o:Company>
+  <o:Lines>19</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2919</o:CharactersWithSpaces>
+  <o:Version>9.4402</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:18.0pt;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:#0055AA;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#0055AA;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1068383338;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-656373212 353943610 348551364 1742607894 -1869737590 1465940044 -1736440858 -521076812 1406430286 1982898138;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1695383036;
+	mso-list-type:hybrid;
+	mso-list-template-ids:511886344 -600169632 -2078644822 -1273699398 173313116 398880354 36871920 -325809274 648183652 -958391908;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:53.4pt;
+	mso-level-number-position:left;
+	margin-left:53.4pt;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:89.4pt;
+	mso-level-number-position:left;
+	margin-left:89.4pt;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:125.4pt;
+	mso-level-number-position:left;
+	margin-left:125.4pt;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:161.4pt;
+	mso-level-number-position:left;
+	margin-left:161.4pt;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:197.4pt;
+	mso-level-number-position:left;
+	margin-left:197.4pt;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:233.4pt;
+	mso-level-number-position:left;
+	margin-left:233.4pt;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:269.4pt;
+	mso-level-number-position:left;
+	margin-left:269.4pt;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:305.4pt;
+	mso-level-number-position:left;
+	margin-left:305.4pt;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:341.4pt;
+	mso-level-number-position:left;
+	margin-left:341.4pt;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027">
+  <o:colormru v:ext="edit" colors="#ccecff,#cff,#ffc"/>
+  <o:colormenu v:ext="edit" fillcolor="#ffc"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="#ffffcc" background="http://www.math.dartmouth.edu/~m28w10/index_archivos/image001.jpg" lang=ES
+link="#0055aa" vlink="#0055aa" style='tab-interval:35.4pt' alink="#FF0000">
+<!--[if gte mso 9]><xml>
+ <v:background id="_x0000_s1025" o:bwmode="white" fillcolor="#ffc">
+  <v:fill src="" o:title="Pergamino" type="tile"/>
+ </v:background></xml><![endif]-->
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-US style='mso-ansi-language:
+EN-US;font-weight:normal'>Math 28.</span><span lang=EN-US style='mso-ansi-language:
+EN-US'> <span style='color:#993300'>Introduction to Combinatorics</span><o:p></o:p></span></h1>
+
+<p align=center style='text-align:center'><b><span style='font-size:18.0pt'>Winter
+2010</span></b></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span style='font-size:13.5pt'>Instructor:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'><a
+href="../../../~sergi/index.html"><span lang=ES style='mso-ansi-language:
+ES'>Sergi Elizalde</span></a></span></b></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Lectures:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>MWF </span><span
+lang=EN-US style='font-size:13.5pt;mso-bidi-font-size:12.0pt;mso-ansi-language:
+EN-US'>12:30-1:35 in Kemeny 108</span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>X-hour:<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style="mso-spacerun: yes">    </span></b>Tu </span><span lang=EN-US
+style='font-size:13.5pt;mso-bidi-font-size:12.0pt;mso-ansi-language:EN-US'>1:00-1:50
+</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Office Hours:&nbsp;&nbsp;&nbsp; </span></b><span lang=EN-US
+style='font-size:13.5pt;mso-ansi-language:EN-US'>MF 11:05-12:00, M 1:35-2:30</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Office:</span></b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Kemeny 332</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Email:</span></b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<script>
+secondpart = "elizalde";
+thirdpart = "dartmouth.";
+fourthpart = "edu";
+middlepart = "@";
+firstpart = "sergi.";
+document.write("<a href=mailto:"+firstpart + secondpart+ middlepart + thirdpart +fourthpart+">");
+document.write(firstpart + secondpart + middlepart + thirdpart +fourthpart+"</a>");
+</script></span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Phone:</span></b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+646-8191</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN-US
+style='font-size:16.0pt;mso-bidi-font-size:12.0pt;mso-ansi-language:EN-US'><a
+href="homework.html">Schedule and
+homework assignments</a><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Announcements</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='text-indent:35.4pt'><span lang=EN-US style='mso-ansi-language:EN-US'>The
+final exam will be at 9 am on Friday, March 12, in Kemeny 108.<o:p></o:p></span></p>
+
+<p style='text-indent:35.4pt'><span lang=EN-US style='mso-ansi-language:EN-US'>The
+grader for the course is Will Chen.<o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Course
+description</span></b><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:35.4pt'><span lang=EN-US style='mso-ansi-language:EN-US'>Math
+28 is a course in combinatorial mathematics. Combinatorics is a branch of
+mathematics that studies sets (usually finite) of objects that satisfy some
+properties. In particular, it is concerned with &quot;counting&quot; the
+objects in a set (enumerative combinatorics), with determining when an object
+with a required list of properties exist, with constructing and analyzing
+objects meeting certain properties (as in combinatorial designs and matroid
+theory), with finding &quot;largest&quot;, &quot;smallest&quot;, or
+&quot;optimal&quot; objects (extremal combinatorics and combinatorial
+optimization), and with finding algebraic structures these objects may have
+(algebraic combinatorics).<o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Textbook<o:p></o:p></span></b></p>
+
+<p style='margin-left:35.4pt'><b><i><span lang=EN-US style='mso-ansi-language:
+EN-US'>Combinatorics Through Guided Discovery</span></i></b><span lang=EN-US
+style='mso-ansi-language:EN-US'>, November 2004 edition, by Ken Bogart,
+available online <a
+href="http://math.dartmouth.edu/news-resources/electronic/kpbogart/ComboNoteswHints11-06-04.pdf">here</a>
+and printed at the Copy Center.<o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Grading<o:p></o:p></span></b></p>
+
+<p style='text-indent:35.4pt'><span lang=EN-US style='mso-ansi-language:EN-US'>The
+course grade will be based on<u1:p></u1:p><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:53.4pt;text-indent:-.25in;mso-list:l1 level1 lfo4;tab-stops:list 53.4pt'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>homework
+(25%)<u1:p></u1:p>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:53.4pt;text-indent:-.25in;mso-list:l1 level1 lfo4;tab-stops:list 53.4pt'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>midterm
+exam (20%)<u1:p></u1:p>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:53.4pt;text-indent:-.25in;mso-list:l1 level1 lfo4;tab-stops:list 53.4pt'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>final
+exam (35%)<u1:p></u1:p>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:53.4pt;text-indent:-.25in;mso-list:l1 level1 lfo4;tab-stops:list 53.4pt'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>class
+participation (20%).<o:p></o:p></span></p>
+
+<p style='margin-left:35.4pt'><span lang=EN-US style='mso-ansi-language:EN-US'>Homework
+will be assigned daily, and due every Monday. All the homework assignments are
+posted <a href="homework.html">here</a>. <b>No
+late homework will be accepted.</b></span><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;mso-ansi-language:EN-US'><br>
+</span><span lang=EN-US style='mso-ansi-language:EN-US'>You are encouraged to
+collaborate on the homework, but what you write has to be your own
+understanding of how to do the problem. You must state what sources you have
+consulted, with whom you have collaborated, and from whom you have received
+help.<o:p></o:p></span></p>
+
+<p style='text-indent:35.4pt'><span lang=EN-US style='mso-ansi-language:EN-US'>No
+collaboration is permitted on exams.<o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Extra
+material<o:p></o:p></span></b></p>
+
+<p><span lang=EN-US style='mso-bidi-font-size:13.5pt;mso-ansi-language:EN-US'><span
+style='mso-tab-count:1'>            </span></span><span lang=EN-US
+style='mso-ansi-language:EN-US'>Tips on </span><a
+href="proofs.pdf"><span lang=EN-US
+style='mso-ansi-language:EN-US'>writing proofs</span></a><span lang=EN-US
+style='mso-ansi-language:EN-US'> (2-page pdf).<o:p></o:p></span></p>
+
+<p style='margin-left:35.4pt'><span lang=EN-US style='mso-ansi-language:EN-US'>If
+you want to learn the LaTeX typesetting system for writing up homework (highly
+recommended), here is a </span><a
+href="http://www.math.dartmouth.edu/~rweber/latex/"><span lang=EN-US
+style='mso-ansi-language:EN-US'>page of resources</span></a><span lang=EN-US
+style='mso-ansi-language:EN-US'> (courtesy of Rebecca Weber). <o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>Students with disabilities: </span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'>Students with disabilities enrolled
+in this course that may need disability-related classroom accommodations are
+encouraged to make an office appointment to see me before the end of the second
+week of the term. All discussions will remain confidential, although the
+Student Accessibility Services office may be consulted to discuss appropriate
+implementation of any accommodation requested.<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

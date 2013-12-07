@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "math31style.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Homework</title>
+<link rel="stylesheet" type="text/css" href="math31style.css">
+<script src="https://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Math 31: Topics in Algebra</h1>
+<h2>Summer 2013</h2>
+<br>
+
+<!-- Javascript for automatically generating the date and time of last update. Prints in
+	the format "Last updated (Month) (Day), (Year) at xx:xx am/pm EDT".
+-->
+<div style="text-align:center;">
+<span style="color:DarkSlateGray;">
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+</span>
+</div>
+<br>
+
+    
+<!-- Generates header with links to other components of the course webpage. -->
+<table class="header">
+<tbody>
+
+<tr>
+<td class="header"><p class="header"><a class="header" href="index.html">Main Page
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="info.html">Course Information
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="syllabus.html">Syllabus
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="homework.html">Homework
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="exams.html">Exams & Quizzes
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="projects.html">Projects
+</a></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+<!-- Title of this page: Homework -->
+<h1>Homework</h1>
+
+<p class="alg">Homework will be assigned most weeks, for a total of 8 assignments. 
+Assignments will usually be given on Wednesdays, due the following Wednesday at the 
+beginning of class. Homework solutions should be written legibly in pen or pencil or 
+typed. All proofs should be written in complete sentences. I reserve the right to reject 
+any papers that are illegible. Also, please be sure to staple all papers before handing 
+them in.
+</p>
+
+<p class="alg">The homework assignments will consist of both proofs and computational 
+problems. Many of the problems will come from the textbook, but I may also take 
+problems from other sources. The assignments will be divided into three sections 
+corresponding to the difficulty of the problems:
+</p>
+
+<ul class="alg">
+	<li>
+	<b>Easy:</b> These are fairly basic problems that are intended to check your 
+	understanding of the key concepts.
+	</li>
+
+	<br>
+	<li>
+	<b>Medium:</b> These are slightly more difficult problems that will require you to 
+	apply the concepts you have learned to more interesting situations. The problems in 
+	this range are of the type that you should expect to see on the exams.
+	</li>
+
+	<br>
+	<li>
+	<b>Hard:</b> These are fairly difficult problems. They will either require you to 
+	explore certain concepts beyond what we have done in class, or the solutions may 
+	involve some creativity.
+	</li>
+</ul>
+
+
+<p class="alg">You will come to learn that an attempt at writing a mathematical proof 
+either ends with a correct proof, or it does not. In other words, the solution to a proof 
+question is either right or wrong. This idea will inform the grading of the homework 
+problems to a certain extent. Each problem will be graded on a scale of 0 to 5, and the 
+score will depend on both content and presentation. Roughly, the grading scheme will be as 
+follows:
+</p>
+
+<ul class="alg">
+	<li>
+	<b>5:</b> Your solution is a correct proof of the given statement, and it is written 
+	clearly, coherently, and in complete sentences.
+	</li>
+
+	<br>
+	<li>
+	<b>4:</b> The solution is mostly correct, but there are some small defects 
+	that keep it from being an airtight argument. It is also written clearly and in 
+	complete sentences.
+	</li>
+
+	<br>
+	<li>
+	<b>3:</b> The solution appears to be headed in the right direction, but there are 
+	some fundamental flaws in the argument or in the exposition. In other words, a score 
+	of 3 could result from a partially correct proof, or from cutting some corners in the 
+	written presentation of your proof.
+	</li>
+	
+	<br>
+	<li>
+	<b>2:</b> The proof is fundamentally flawed and/or not well-written.
+	</li>
+	
+	<br>
+	<li>
+	<b>1:</b> The proof is incorrect or incoherent.
+	</li>
+	
+	<br>
+	<li>
+	<b>0:</b> You did not make a reasonable attempt at solving the problem.
+	</li>
+</ul>
+
+<p class="alg">
+<a name="collaboration"><b>Notes on collaboration:</b></a> As noted in the honor statement 
+for the course, I encourage you to talk to your classmates when working on the homework 
+assignments. When learning abstract mathematics, it is often quite helpful to discuss 
+ideas with others, and it can be easier to discern what one does and does not understand 
+when trying to explain things to others. Therefore, collaboration is a valuable learning 
+tool. However, you should keep the following guidelines in mind when working on homework.
+</p>
+
+<ul class="alg">
+	<li>
+	The solutions that you turn in to me should be written up by you in your own words. 
+	It is fine to discuss ideas with others, but I want each person to think individually 
+	about how to put those ideas down on paper.
+	</li>
+
+	<br>
+	<li>
+	If you have worked with others on a particular problem, say so when you write up the 
+	solution. If you got a particular idea from someone else, give them the appropriate 
+	credit.
+	</li>
+</ul>
+
+<p class="alg">
+In summary, I encourage you to work on homework together, and to possibly work out ideas 
+in groups. However, I do not want you to write up complete proofs as a group&mdash;this 
+should be done individually. Look <a href="collaboration.html">here</a> for examples of 
+what I think are acceptable levels of collaboration.
+</p>
+
+<br>
+<div class="syllabus">
+<h3>Homework announcements</h3>
+
+<ul class="subalg">
+	<li>
+	The first homework assignment is now posted: <a href="M31%20HW%201.pdf">HW 1</a>. It is
+	due on Friday (6/28/13) at the beginning of class.
+	</li>
+	
+	<li>
+	The second homework assignment is now posted: <a href="M31%20HW%202.pdf">HW 2</a>. It is
+	due on Wednesday (7/3/13) at the beginning of class.
+	</li>
+	
+	<li>
+	The third homework assignment is now posted: <a href="M31%20HW%203.pdf">HW 3</a>. It is
+	due on Wednesday (7/10/13) at the beginning of class. (<b>Note:</b> Problems 5, 9, and
+	10 will be moved to the next assignment.)
+	</li>
+	
+	<li>
+	The fourth homework assignment is now posted: <a href="M31%20HW%204.pdf">HW 4</a>. It is
+	due on Wednesday (7/17/13) at the beginning of class.
+	</li>
+	
+	<li>
+	The fifth homework assignment is now posted: <a href="M31%20HW%205.pdf">HW 5</a>. It is
+	due on Friday (8/2/13) at the beginning of class.
+	</li>
+</ul>
+</div>
+
+
+<br>
+<hr class="footer">
+<br>
+
+<br>
+<h2>Homework Schedule</h2>
+<br>
+
+
+<div class="syllabus">
+<table class="sched">
+<tbody>
+
+<tr class="head">
+<th class="left">
+Date
+</th>
+
+<th class="middle">
+Assignment(s) due
+</th>
+
+<th class="right">
+Notes
+</th>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 6/21 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 6/22 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 6/24 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 6/26 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 6/28 </td>
+<td class="syllabus"> <a href="M31%20HW%201.pdf">Homework 1</a></td>
+<td class="syllabus"> Here is the LaTeX code: <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%201.tex">HW 1</a></td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/1 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/3 </td>
+<td class="syllabus"><a href="M31%20HW%202.pdf">Homework 2</a> </td>
+<td class="syllabus">Here is the LaTeX code: <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%202.tex">HW 2</a> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 7/5 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/8 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/10 </td>
+<td class="syllabus"><a href="M31%20HW%203.pdf">Homework 3</a> </td>
+<td class="syllabus">Here is the LaTeX code: <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%203.tex">HW 3</a> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 7/12 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/15 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/17 </td>
+<td class="syllabus"><a href="M31%20HW%204.pdf">Homework 4</a> </td>
+<td class="syllabus">Here is the LaTeX code: <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%204.tex">HW 4</a> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 7/19 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/22 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/24 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 7/26 </td>
+<td class="syllabus">Take home midterm due. </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/29 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/31 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 8/2 </td>
+<td class="syllabus"><a href="M31%20HW%205.pdf">Homework 5</a> </td>
+<td class="syllabus">Here is the LaTeX code: <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%205.tex">HW 5</a> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 8/5 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 8/7 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 8/9 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 8/12 </td>
+<td class="syllabus"><a href="M31%20HW%206.pdf">Homework 6</a> (Note the change in due date.)
+</td>
+<td class="syllabus">Here is the LaTeX code: <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%206.tex">HW 6</a> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 8/14 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 8/16 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 8/19 </td>
+<td class="syllabus"> Individual papers for the project are due. </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 8/21 </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+</tbody>
+</table>
+
+<br>
+<br>
+ 
+</body>
+</html>

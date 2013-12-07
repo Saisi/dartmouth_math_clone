@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>3Dcurves.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<font color=#000000>                                    </font>
+<b><font color=#000000 size=4>Space curves</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>Try to match the curves given below by the parametric equation with the graphs:</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>(1) x(t) = t^2-2,  y(t) = t^3,   z(t) = t^2+1;</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>(2) x(t) = (6+sin(20 t)) cos(t),   y(t) = (6+sin(20 t)) sin(t),   z(t) = cos(20 t);</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>(3) x(t) = t,  y(t) = sin(t),   z(t) =cos(t);</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>(4) x(t) = t/2,  y(t) = sin(5t),   z(t) =cos(5t).</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>spacecurve({[(6+sin(20*t))*cos(t),(6+sin(20*t))*sin(t),cos(20*t), numpoints=1000,color=black], [t,0,0,color=blue], [0,t,0,color=blue], [0,0,t,color=blue]}, t=0..2*Pi, axes=frame);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/3Dcurves1.gif" width=440 height=312 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>spacecurve({[t,sin(t),cos(t), numpoints=100,color=black], [t,0,0,color=blue], [0,t/10,0,color=blue], [0,0,t/10,color=blue]}, t=0..10*Pi, axes=frame);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/3Dcurves2.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>spacecurve({[t/2,sin(2*t),cos(2*t), numpoints=1000,color=black], [t,0,0,color=blue], [0,t/10,0,color=blue], [0,0,t/10,color=blue]}, t=0..10*Pi, axes=frame);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/3Dcurves3.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>spacecurve({[t^2-2,t^3,t^2+1, numpoints=100,color=black], [2*t,0,0,color=blue], [0,2*t,0,color=blue], [0,0,t+2,color=blue]}, t=-2..2.5, axes=frame,orientation=[10,60]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/3Dcurves4.gif" width=558 height=314 alt="[Maple Plot]">
+</p>
+</basefont>
+</body>
+</html>

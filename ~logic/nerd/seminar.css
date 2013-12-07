@@ -1,0 +1,130 @@
+
+body {
+	margin: 0 0 0 0;
+	font-family: helvetica, arial, georgia, sans-serif;
+	background-image: url('http://www.math.dartmouth.edu/~logic/nerd/column-bg.gif');
+	background-position: top center;
+	background-repeat: repeat-y;
+	/*the background should repeat DOWN the page, not across */
+	background-color: #cccccc;
+	}
+
+/* we wrappin the WHOLE PAGE in a div called container and fixing it at 
+980px - a safe width for a 1024-wide screen, which is safe for anyone with 
+opposable thumbs these days.
+
+This is considered good practice because if you've got some dude with a 30"
+monitor and his browser maximized he'd need a damned T-square to follow a 
+full-width line of text all across the page without losing his place.
+ */
+
+#container {
+	width: 980px;
+	margin: 0 auto;
+	/* set margin-left and margin-right to auto to center the column 
+	within its parent.
+	That shorthand sets top and bottom to 0 and left-right to auto */
+}
+
+h2 {
+	font-size:150%; 
+	padding:10px; 
+	text-align:center;
+	}
+
+.title {
+	text-align:center; font-weight:bold;
+	}
+
+#header-top {
+	width: 100%;
+	background-color: #ffffff;
+	height: 10px;
+	}
+
+.header {
+	background-color:#66B366; 
+	font-size:200%; 
+	padding:20px 20px 20px 20px; 
+	display:block; 
+	text-align:center;
+	}
+
+.sidebar {
+	/* width:15%;
+	CHANGED to fixed-width */
+	width: 193px;
+	padding:10px; /* total width 213px */
+	float:left; 
+	line-height:140%; 
+	/* the BG does this now
+	border-right-style:solid; 
+	border-width:thin;
+	*/
+	}
+
+.main {
+	float: right;
+	width: 747px;
+	padding: 15px 10px 0 10px; /*total width 767px */
+	/* width:80%; 
+	padding:15px 10px 0px 0px; 
+	float:right; */
+	}
+
+.schedule {
+	/* If you want to set the width of columns, turn this width 
+	setting off. Let the width aggregate from below rather than setting 
+	it top-down 
+	width: 90%; */
+	border: 1px solid #000000; 
+	margin: 10px auto;
+	}
+
+.schedule th {
+	padding: 10px; /* = padding: 10px 10px 10px 10px; */
+	}
+
+.schedule td {
+	background-color: #99CC99; 
+	padding: 10px 10px 10px 10px;
+	margin: 10 auto;
+	vertical-align: top;
+	}
+	
+	.column1 {
+		width: 80px;
+		text-align: left;
+	}
+	
+	.column2 {
+		width: 200px;
+	}
+	
+	.column3 {
+		width: 300px;
+	}
+	.column5 { /* = columns 2+3 */
+		width: 500px;
+	}
+
+.schedule tr.alt td {
+	background-color: #CCE6CC;
+	}
+
+td div {
+	margin: 0 0 0 0; /*enumerated all four because sometimes it won't 
+	cascade down in older browsers */
+	padding: 0 0 0 0
+	}
+
+td div.who {
+	float: left;
+	clear: right;
+	}
+
+td div.where {
+	float: left;
+	clear: left;
+	font-size: 85%;
+	}

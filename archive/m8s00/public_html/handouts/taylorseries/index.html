@@ -1,0 +1,1487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>taylorseries</TITLE>
+<META NAME="description" CONTENT="taylorseries">
+<META NAME="keywords" CONTENT="taylorseries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.math.dartmouth.edu/~m8s00/handouts/taylorseries.css">
+<LINK REL="next" HREF="http://www.math.dartmouth.edu/~m8s00/handouts/node1.html">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE"
+VLINK="#551A8B" ALINK="#FF0000">
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="http://www.math.dartmouth.edu/~m8s00/handouts/node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="http://www.math.dartmouth.edu/~m8s00/handouts/node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+Math 8</DIV>
+
+<P>
+<DIV ALIGN="CENTER">
+April 14, 2000</DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+
+<P>
+<B>Taylor Polynomials As Approximations and the Error Formula:</B>
+
+<P>
+<BR>
+
+<P>
+We have seen that Taylor polynomials give a way of approximating a function <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">
+for values of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">
+near some specific value <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img3.gif"
+ ALT="$ x = a$">, and that in some cases, higher and higher degree Taylor polynomials
+give better and better approximations to the function <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img4.gif"
+ ALT="$ f$">.  For example, here are some Taylor
+polynomials approximating <IMG
+ WIDTH="41" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img5.gif"
+ ALT="$ \sin x$">
+near <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">:
+
+<P>
+
+<P>
+<BR>
+
+<P>
+
+<!-- MATH
+ $\epsfig{figure=taylorpix.ps,width=0.9\textwidth}$
+ -->
+<IMG
+ WIDTH="458" HEIGHT="403" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img7.gif"
+ ALT="\epsfig{figure=taylorpix.ps,width=0.9\textwidth}">
+
+<P>
+
+<P>
+<BR>
+
+<P>
+As the degree of the Taylor polynomial increases, the approximation to sine becomes better
+and better, and the polynomial is a reasonable approximation to the function over a larger and larger
+interval.
+
+<P>
+
+<P>
+In contrast, here are some Taylor polynomials approximating 
+<!-- MATH
+ $\displaystyle\frac{1}{x+1}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img8.gif"
+ ALT="$ \displaystyle\frac{1}{x+1}$">
+near <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">:
+
+<P>
+
+<P>
+<BR>
+
+<P>
+
+<!-- MATH
+ $\epsfig{figure=taylorpix2.ps,width=0.9\textwidth}$
+ -->
+<IMG
+ WIDTH="452" HEIGHT="405" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img9.gif"
+ ALT="\epsfig{figure=taylorpix2.ps,width=0.9\textwidth}">
+
+<P>
+
+<P>
+<BR>
+
+<P>
+As the degree of the Taylor polynomial increases, the approximation to
+
+<!-- MATH
+ $\displaystyle\frac{1}{x+1}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img8.gif"
+ ALT="$ \displaystyle\frac{1}{x+1}$">
+becomes better and better, but only for values of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">
+between <IMG
+ WIDTH="29" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img10.gif"
+ ALT="$ -1$">
+and
+<IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img11.gif"
+ ALT="$ 1$">; outside of this interval, we don't seem to be getting a good approximation to the function.
+
+<P>
+We have seen how to use the error formula for Taylor polynomial approximations to determine whether
+the Taylor polynomials <IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img12.gif"
+ ALT="$ P_n(x)$">
+really do give better and better approximations to <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">
+as <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img13.gif"
+ ALT="$ n$">
+gets
+large.  For the function 
+<!-- MATH
+ $f(x) = \sin x$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img14.gif"
+ ALT="$ f(x) = \sin x$">, we can use the error formula to show that for
+<I>every</I> value of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">, 
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty} P_n(x) = \sin x.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img15.gif"
+ ALT="$\displaystyle \lim_{n \to \infty} P_n(x) = \sin x.$">
+</DIV><P></P>
+For the function 
+<!-- MATH
+ $f(x) = \displaystyle\frac{1}{x+1}$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img16.gif"
+ ALT="$ f(x) = \displaystyle\frac{1}{x+1}$">, the error formula shows that for 
+<!-- MATH
+ $-1 < x
+< 1$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img17.gif"
+ ALT="$ -1 &lt; x
+&lt; 1$">,
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty} P_n(x) = \frac{1}{x+1},
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="167" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img18.gif"
+ ALT="$\displaystyle \lim_{n \to \infty} P_n(x) = \frac{1}{x+1},$">
+</DIV><P></P>
+but for other values of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">, the Taylor polynomials <IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img12.gif"
+ ALT="$ P_n(x)$">
+may not approach a limit as 
+<!-- MATH
+ $n \to
+\infty$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img19.gif"
+ ALT="$ n \to
+\infty$">.  In fact, by looking at the actual form of the Taylor polynomials
+
+<!-- MATH
+ \begin{displaymath}
+P_n(x) = 1 - x + x^2 - x^3 + x^4 - x^5 + \cdots,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="342" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img20.gif"
+ ALT="$\displaystyle P_n(x) = 1 - x + x^2 - x^3 + x^4 - x^5 + \cdots,$">
+</DIV><P></P>
+we can see that if <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img21.gif"
+ ALT="$ \vert x\vert
+&gt; 1$">, then 
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty} |P_n(x)| = + \infty.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="164" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img22.gif"
+ ALT="$\displaystyle \lim_{n \to \infty} \vert P_n(x)\vert = + \infty.$">
+</DIV><P></P>
+
+<P>
+The error formula is rather unwieldy and difficult to apply.  Today we will learn a new method of
+finding the values of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">
+for which 
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty} P_n(x) = f(x).
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img23.gif"
+ ALT="$\displaystyle \lim_{n \to \infty} P_n(x) = f(x).$">
+</DIV><P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Taylor Series:  Infinite Taylor Polynomials:</B>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+First, some terminology.  Recall that we can write 
+
+<!-- MATH
+ \begin{displaymath}
+P_n(x) = \sum_{i=0}^n a_i (x-a)^i,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="191" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img24.gif"
+ ALT="$\displaystyle P_n(x) = \sum_{i=0}^n a_i (x-a)^i,$">
+</DIV><P></P>
+where the coefficients <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img25.gif"
+ ALT="$ a_i$">
+are given by
+
+<!-- MATH
+ \begin{displaymath}
+a_i = \frac {f^{(i)}(a)}{i!}.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="106" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img26.gif"
+ ALT="$\displaystyle a_i = \frac {f^{(i)}(a)}{i!}.$">
+</DIV><P></P>
+In particular, if <IMG
+ WIDTH="57" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img27.gif"
+ ALT="$ n &gt; m$">, then <IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img12.gif"
+ ALT="$ P_n(x)$">
+is just <IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img28.gif"
+ ALT="$ P_m(x)$">
+with some additional terms in higher powers
+of
+<IMG
+ WIDTH="63" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img29.gif"
+ ALT="$ (x-a)$">
+added on.  For 
+<!-- MATH
+ $f(x) = \displaystyle{\frac{1}{x+1}}$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img16.gif"
+ ALT="$ f(x) = \displaystyle\frac{1}{x+1}$">
+around <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">,
+
+<!-- MATH
+ \begin{displaymath}
+P_5(x) = 1 - x + x^2 - x^3 + x^4 - x^5, \qquad\qquad\qquad\qquad\quad
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="457" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img30.gif"
+ ALT="$\displaystyle P_5(x) = 1 - x + x^2 - x^3 + x^4 - x^5, \qquad\qquad\qquad\qquad\quad$">
+</DIV><P></P>
+
+<!-- MATH
+ \begin{displaymath}
+P_9(x) = 1 - x + x^2 - x^3 + x^4 - x^5 + x^6 - x^7 + x^8 - x^9.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="454" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img31.gif"
+ ALT="$\displaystyle P_9(x) = 1 - x + x^2 - x^3 + x^4 - x^5 + x^6 - x^7 + x^8 - x^9.$">
+</DIV><P></P>
+
+<P>
+If, for some particular
+value of
+<IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">, the values of
+<IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img12.gif"
+ ALT="$ P_n(x)$">
+approach a limit as
+
+<!-- MATH
+ $n
+\to
+\infty$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img19.gif"
+ ALT="$ n \to
+\infty$">,
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty}P_n(x) = \lim_{n \to \infty}\left[\sum_{i=0}^n a_i (x-a)^i \right]= L,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="328" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img32.gif"
+ ALT="$\displaystyle \lim_{n \to \infty}P_n(x) = \lim_{n \to \infty}\left[\sum_{i=0}^n a_i (x-a)^i \right]= L,$">
+</DIV><P></P>
+then we say that
+
+<!-- MATH
+ \begin{displaymath}
+\sum_{i=0}^\infty a_i (x-a)^i = L.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="158" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img33.gif"
+ ALT="$\displaystyle \sum_{i=0}^\infty a_i (x-a)^i = L.$">
+</DIV><P></P>
+An infinite sum like this is called an ``infinite series'', and this particular one is the
+<I>Taylor series</I> for the function <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img4.gif"
+ ALT="$ f$">
+around the point <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img3.gif"
+ ALT="$ x = a$">.  You can think of the Taylor
+series as an infinite degree polynomial whose finite pieces are the Taylor polynomials <IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img12.gif"
+ ALT="$ P_n(x)$">. 
+The Taylor series for 
+<!-- MATH
+ $f(x) = \displaystyle{\frac{1}{x+1}}$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img16.gif"
+ ALT="$ f(x) = \displaystyle\frac{1}{x+1}$">
+around <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">
+is
+
+<!-- MATH
+ \begin{displaymath}
+\sum_{i=0}^\infty (-1)^i x^i = 1 - x + x^2 - x^3 + x^4 - x^5 + \cdots
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="375" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img34.gif"
+ ALT="$\displaystyle \sum_{i=0}^\infty (-1)^i x^i = 1 - x + x^2 - x^3 + x^4 - x^5 + \cdots$">
+</DIV><P></P> 
+
+<P>
+We saw from the error formula that for 
+<!-- MATH
+ $-1 < x < 1$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img17.gif"
+ ALT="$ -1 &lt; x
+&lt; 1$">, this Taylor series actually gives the values of
+the function,
+
+<!-- MATH
+ \begin{displaymath}
+1 - x + x^2 - x^3 + x^4 - x^5 + \cdots = \lim_{n \to \infty}\left[1 - x + x^2 - x^3  +
+\cdots \pm x^n\right] = \frac{1}{x+1}.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="627" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img35.gif"
+ ALT="$\displaystyle 1 - x + x^2 - x^3 + x^4 - x^5 + \cdots = \lim_{n \to \infty}\left[1 - x + x^2 - x^3 +
+\cdots \pm x^n\right] = \frac{1}{x+1}.$">
+</DIV><P></P>
+We are always hoping that this is the case, that the Taylor polynomials are better and better
+approximations to <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">
+so that the Taylor series actually equals <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">.  Since the Taylor series
+is an infinite sum, and what it ``gives'' us is a limit, we say in this happy circumstance that the
+Taylor series
+<I>converges</I> to <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">.
+
+<P>
+For most of the functions that we know, the Taylor series either gives us the function <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">, as
+the Taylor series for 
+<!-- MATH
+ $f(x) = \displaystyle{\frac{1}{x+1}}$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img16.gif"
+ ALT="$ f(x) = \displaystyle\frac{1}{x+1}$">
+around <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">
+does when <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img36.gif"
+ ALT="$ \vert x\vert &lt; 1$">, or
+else <I>diverges</I> (doesn't give us a number at all), as
+the Taylor series for 
+<!-- MATH
+ $f(x) = \displaystyle{\frac{1}{x+1}}$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img16.gif"
+ ALT="$ f(x) = \displaystyle\frac{1}{x+1}$">
+around <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">
+does when 
+<!-- MATH
+ $|x| \geq 1$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img37.gif"
+ ALT="$ \vert x\vert \geq 1$">. 
+In the next section we will see a method that can give us an interval of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">'s for which the Taylor
+series is guaranteed to converge (to give us an answer.)  
+
+<P>
+Notice that this method will guarantee that the Taylor series converges, NOT that the thing it
+converges to is the function <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img4.gif"
+ ALT="$ f$">.  Almost always, that is, for virtually all the functions we meet
+in this course, if the Taylor series converges to anything then it converges to <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">.  To be
+absolutely sure of that for any one particlar function, we'd have to go back to the error formula
+(or to use some facts we'll learn later about how you can build new Taylor series from old ones.)
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+
+<P>
+<B>Infinite Sums and the Ratio Test:</B>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+You may have been staring at the equation 
+
+<!-- MATH
+ \begin{displaymath}
+1 - x + x^2 - x^3 + x^4 - x^5 + \cdots = \frac{1}{x+1}
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="331" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img38.gif"
+ ALT="$\displaystyle 1 - x + x^2 - x^3 + x^4 - x^5 + \cdots = \frac{1}{x+1}$">
+</DIV><P></P>
+and wondering how an infinite sum of numbers can equal anything at all.  This is actually a deep
+philosophical problem if you start worrying about it.  Mathematicians finess the issue by saying,
+``Well, all we're <I>really</I> saying is that the finite pieces of the infinite sum approach a
+limit as you go include more and more terms,'' and that's the answer we will give in this course. 
+However, to work comfortably with infinite series, it helps if you can develop an intuitive picture
+that these infinitely many numbers <I>do</I> add up to something.  Try this one:
+
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \cdots = 1.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="221" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img39.gif"
+ ALT="$\displaystyle \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \cdots = 1.$">
+</DIV><P></P>
+If you can make sense out of that, then you can use that sense to think about other infinite series.
+
+<P>
+This last example is a particular case of a <I>geometric series</I>, a series in which each term
+is gotten from the preceding one by multiplying by a fixed number <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img40.gif"
+ ALT="$ r$">, in this case
+
+<!-- MATH
+ $r = \displaystyle\frac{1}{2}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img41.gif"
+ ALT="$ r = \displaystyle\frac{1}{2}$">.  Putting this another way, if we write the series as
+
+<!-- MATH
+ \begin{displaymath}
+A_0 + A_1 + A_2 + \cdots + A_i + A_{i+1} + \cdots,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="320" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img42.gif"
+ ALT="$\displaystyle A_0 + A_1 + A_2 + \cdots + A_i + A_{i+1} + \cdots,$">
+</DIV><P></P>
+then for every <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img43.gif"
+ ALT="$ i$">
+we have
+
+<!-- MATH
+ \begin{displaymath}
+\frac{A_{i+1}}{A_i} = r.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="84" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img44.gif"
+ ALT="$\displaystyle \frac{A_{i+1}}{A_i} = r.$">
+</DIV><P></P> 
+
+<P>
+It turns out
+that for the same reason this series converges (equals a finite number) when 
+<!-- MATH
+ $r =
+\displaystyle\frac{1}{2}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img41.gif"
+ ALT="$ r = \displaystyle\frac{1}{2}$">, it converges whenever <IMG
+ WIDTH="59" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img45.gif"
+ ALT="$ \vert r\vert &lt; 1$">.  And it also turns out, amazingly
+enough, that we don't need to know that 
+
+<!-- MATH
+ \begin{displaymath}
+\frac{A_{i+1}}{A_i} = r,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="84" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img46.gif"
+ ALT="$\displaystyle \frac{A_{i+1}}{A_i} = r,$">
+</DIV><P></P>
+we just need to know that as <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img43.gif"
+ ALT="$ i$">
+gets big,
+
+<!-- MATH
+ \begin{displaymath}
+\frac{A_{i+1}}{A_i} \approx r.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="84" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img47.gif"
+ ALT="$\displaystyle \frac{A_{i+1}}{A_i} \approx r.$">
+</DIV><P></P>
+This is the idea behind the ratio test.
+
+<P>
+<B>The Ratio Test:</B>  To find out whether an infinite series
+
+<!-- MATH
+ \begin{displaymath}
+A_0 + A_1 + A_2 + \cdots + A_i + A_{i+1} + \cdots
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="311" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img48.gif"
+ ALT="$\displaystyle A_0 + A_1 + A_2 + \cdots + A_i + A_{i+1} + \cdots$">
+</DIV><P></P>
+converges, find the limit of the absolute values of the ratios of successive terms,
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{i \to \infty}\left|\frac{A_{i+1}}{A_i}\right| = r.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="131" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img49.gif"
+ ALT="$\displaystyle \lim_{i \to \infty}\left\vert\frac{A_{i+1}}{A_i}\right\vert = r.$">
+</DIV><P></P>
+If <IMG
+ WIDTH="59" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img45.gif"
+ ALT="$ \vert r\vert &lt; 1$">
+then the series converges.  If <IMG
+ WIDTH="59" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img50.gif"
+ ALT="$ \vert r\vert&gt;1$">
+then the series diverges.  If <IMG
+ WIDTH="59" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img51.gif"
+ ALT="$ \vert r\vert = 1$">
+then the
+ratio test does not tell us whether or not the series converges.
+
+<P>
+Let's see how we can apply the ratio test to Taylor series.  First we'll look at the Taylor series
+for 
+<!-- MATH
+ $f(x) = \displaystyle{\frac{1}{x+1}}$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img16.gif"
+ ALT="$ f(x) = \displaystyle\frac{1}{x+1}$">
+around <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">,
+
+<!-- MATH
+ \begin{displaymath}
+1 - x + x^2 - x^3 + x^4 - x^5 + \cdots
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="262" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img52.gif"
+ ALT="$\displaystyle 1 - x + x^2 - x^3 + x^4 - x^5 + \cdots$">
+</DIV><P></P>
+The limit we need to find is
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{i \to \infty} \left|\frac{(-1)^{i+1}x^{i+1}}{(-1)^{i}x^{i}}\right| = |x|.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="202" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img53.gif"
+ ALT="$\displaystyle \lim_{i \to \infty} \left\vert\frac{(-1)^{i+1}x^{i+1}}{(-1)^{i}x^{i}}\right\vert = \vert x\vert.$">
+</DIV><P></P>
+So in this case <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img54.gif"
+ ALT="$ r = \vert x\vert$">, and the ratio test tells us that if <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img36.gif"
+ ALT="$ \vert x\vert &lt; 1$">
+then the Taylor series
+converges, and if <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img21.gif"
+ ALT="$ \vert x\vert
+&gt; 1$">
+then the Taylor series diverges.  For <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img55.gif"
+ ALT="$ \vert x\vert = 1$">, the ratio test does not
+answer the question, and we have to look at the actual series.  For <IMG
+ WIDTH="65" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img56.gif"
+ ALT="$ x = -1$">
+the series is 
+
+<!-- MATH
+ \begin{displaymath}
+1 + 1 + 1 + 1 + 1 + \cdots,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="200" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img57.gif"
+ ALT="$\displaystyle 1 + 1 + 1 + 1 + 1 + \cdots,$">
+</DIV><P></P>
+which clearly diverges to infinity, and for <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img58.gif"
+ ALT="$ x = 1$">, the series is
+
+<!-- MATH
+ \begin{displaymath}
+1 - 1 + 1 - 1 + 1 - 1 + \cdots;
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="234" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img59.gif"
+ ALT="$\displaystyle 1 - 1 + 1 - 1 + 1 - 1 + \cdots;$">
+</DIV><P></P>
+the finite pieces of this bounce back and forth between zero and one, so again this does not
+converge.
+
+<P>
+(In general, if we want to tell whether a Taylor series converges for the values of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">
+for which
+<IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img60.gif"
+ ALT="$ r=1$">, we need to know some other convergence tests for infinite series besides the ratio test.  We
+will not cover that topic in this course.  Chapter 9 of the textbook develops some of the general
+theory of infinite series.)
+
+<P>
+Now let's look at the Taylor series for 
+<!-- MATH
+ $f(x) = \sin x$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img14.gif"
+ ALT="$ f(x) = \sin x$">
+around <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">,
+
+<!-- MATH
+ \begin{displaymath}
+x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots + (-1)^{i}\frac{x^{2i+1}}{(2i+1)!} +
+\cdots.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="347" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img61.gif"
+ ALT="$\displaystyle x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots + (-1)^{i}\frac{x^{2i+1}}{(2i+1)!} +
+\cdots.$">
+</DIV><P></P>
+The limit we need to find is
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{i \to \infty} \left|\frac{(-1)^{i+1}\displaystyle\frac{x^{2(i+1)+1}}{(2(i+1)+1)!}}
+{(-1)^{i}\displaystyle\frac{x^{2i+1}}{(2i+1)!}}\right| = \lim_{i \to \infty}
+\left|\displaystyle\frac{\displaystyle\frac{x^{2i+3}}{(2i+3)!}}{\displaystyle\frac{x^{2i+1}}{(2i+1)!}}\right|
+=\lim_{i \to \infty}
+\left|\frac{x^2(2i+1)!}{(2i+3)!}\right| =
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="563" HEIGHT="121" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img62.gif"
+ ALT="$\displaystyle \lim_{i \to \infty} \left\vert\frac{(-1)^{i+1}\displaystyle\frac{...
+...ht\vert
+=\lim_{i \to \infty}
+\left\vert\frac{x^2(2i+1)!}{(2i+3)!}\right\vert = $">
+</DIV><P></P>
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{i \to \infty} \left|\frac{x^2}{(2i+3)(2i+2)}\right| =x^2\lim_{i \to \infty}
+\frac{1}{(2i+3)(2i+2)} = 0.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="432" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img63.gif"
+ ALT="$\displaystyle \lim_{i \to \infty} \left\vert\frac{x^2}{(2i+3)(2i+2)}\right\vert =x^2\lim_{i \to \infty}
+\frac{1}{(2i+3)(2i+2)} = 0.$">
+</DIV><P></P>
+In this case, we have <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img64.gif"
+ ALT="$ r=0$">
+for every <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">, and so the ratio test tells us that the Taylor series
+converges for every <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">.
+
+<P>
+Of course, in both these cases, the ratio test does not tell us what value the Taylor series
+converges to.  We need to go back to the error formula for Taylor polynomials to see that it does
+converge to the function <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">
+itself.  
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Radius of Convergence:</B>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+For 
+<!-- MATH
+ $f(x) = \sin x$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img14.gif"
+ ALT="$ f(x) = \sin x$">, the Taylor series around <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">
+converged for all <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">; for 
+<!-- MATH
+ $f(x) =
+\displaystyle\frac{1}{x+1}$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img16.gif"
+ ALT="$ f(x) = \displaystyle\frac{1}{x+1}$">, it converged for <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img36.gif"
+ ALT="$ \vert x\vert &lt; 1$">.  In both cases, the Taylor series converged
+for <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">
+in some interval centered at <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">.  In the case of <IMG
+ WIDTH="41" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img5.gif"
+ ALT="$ \sin x$">, it was an infinite interval, 
+<!-- MATH
+ $-
+\infty < x < \infty$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img65.gif"
+ ALT="$ -
+\infty &lt; x &lt; \infty$">. 
+
+<P>
+&gt;From the ratio test, we can see that something like this always happens. 
+Let's look at a Taylor series,
+
+<!-- MATH
+ \begin{displaymath}
+\sum_{i=0}^\infty a_i (x-a)^i,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="120" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img66.gif"
+ ALT="$\displaystyle \sum_{i=0}^\infty a_i (x-a)^i,$">
+</DIV><P></P>
+and try to use the ratio test to see where it converges.  We have to look at the limit
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{i \to \infty} \left| \frac{a_{i+1}(x-a)^{i+1}}{a_i(x-a)^i} \right| = (x-a) \lim_{i \to
+\infty}
+\left|
+\frac{a_{i+1}}{a_i} \right| = (x-a)(L),
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="456" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img67.gif"
+ ALT="$\displaystyle \lim_{i \to \infty} \left\vert \frac{a_{i+1}(x-a)^{i+1}}{a_i(x-a)...
+...x-a) \lim_{i \to
+\infty}
+\left\vert
+\frac{a_{i+1}}{a_i} \right\vert = (x-a)(L),$">
+</DIV><P></P>
+where <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img68.gif"
+ ALT="$ L$">
+is the limit of the absolute values of the ratios of the coefficients <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img25.gif"
+ ALT="$ a_i$">.  
+
+<P>
+So we have 
+<!-- MATH
+ $r = (x-a)L$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img69.gif"
+ ALT="$ r = (x-a)L$">, and the ratio test tells us that if <IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img70.gif"
+ ALT="$ (x-a)L&lt;1$">, or 
+<!-- MATH
+ $(x-a) <
+\displaystyle\frac{1}{L}$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img71.gif"
+ ALT="$ (x-a) &lt;
+\displaystyle\frac{1}{L}$">, then the series converges, and if <IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img72.gif"
+ ALT="$ (x-a)L&gt;1$">, or 
+<!-- MATH
+ $(x-a) >
+\displaystyle\frac{1}{L}$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img73.gif"
+ ALT="$ (x-a) &gt;
+\displaystyle\frac{1}{L}$">, then the series diverges.  (In the case where <IMG
+ WIDTH="52" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img74.gif"
+ ALT="$ L=0$">, we have convergence
+for all <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">, and in the case where 
+<!-- MATH
+ $L = +\infty$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img75.gif"
+ ALT="$ L = +\infty$">, we have convergence only for <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img3.gif"
+ ALT="$ x = a$">.)  In other
+words, there is a <I>radius of convergence</I> <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img76.gif"
+ ALT="$ R$">, which may be zero or infinity or anything in
+between, such that if <IMG
+ WIDTH="99" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img77.gif"
+ ALT="$ \vert x-a\vert&lt;R$">
+then the Taylor series converges and if <IMG
+ WIDTH="99" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img78.gif"
+ ALT="$ \vert x-a\vert&gt;R$">
+then the Taylor
+series diverges.  The point <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img3.gif"
+ ALT="$ x = a$">, being the center of the interval of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">'s for which the series
+converges, is sometimes called the center of convergence.
+
+<P>
+For <IMG
+ WIDTH="41" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img5.gif"
+ ALT="$ \sin x$">
+(about <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">) the radius of convergence was infinity, and for
+
+<!-- MATH
+ $\displaystyle\frac{1}{x+1}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img8.gif"
+ ALT="$ \displaystyle\frac{1}{x+1}$">
+(about <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">) the radius of convergence was 1.
+
+<P>
+Let's do one more example.  Let's find the radius of convergence of the Taylor series for 
+<!-- MATH
+ $f(x) =
+\displaystyle\frac{1}{x^2+1}$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img79.gif"
+ ALT="$ f(x) =
+\displaystyle\frac{1}{x^2+1}$">
+around <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">.  It turns out that there is a slick way to find the
+Taylor series:  Just replace <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">
+by <IMG
+ WIDTH="23" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img80.gif"
+ ALT="$ x^2$">
+in the Taylor series for 
+<!-- MATH
+ $\displaystyle\frac{1}{x+1}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img8.gif"
+ ALT="$ \displaystyle\frac{1}{x+1}$">.  So
+we get
+
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{x^2+1} = 1 - x^2 + x^4 - x^6 + x^8 - x^{10} + \cdots
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="356" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img81.gif"
+ ALT="$\displaystyle \frac{1}{x^2+1} = 1 - x^2 + x^4 - x^6 + x^8 - x^{10} + \cdots $">
+</DIV><P></P>
+Applying the ratio test, we look at the limit
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{i \to \infty} \left| \frac {(-1)^{i+1}x^{2(i+1)}} {(-1)^{i}x^{2i}} \right|  =  x^2
+.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="217" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img82.gif"
+ ALT="$\displaystyle \lim_{i \to \infty} \left\vert \frac {(-1)^{i+1}x^{2(i+1)}} {(-1)^{i}x^{2i}} \right\vert = x^2
+.$">
+</DIV><P></P>
+We have <IMG
+ WIDTH="57" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img83.gif"
+ ALT="$ r = x^2$">, and so the series converges for <IMG
+ WIDTH="57" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img84.gif"
+ ALT="$ x^2 &lt; 1$">
+(i.e., for <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img36.gif"
+ ALT="$ \vert x\vert &lt; 1$">), and diverges for
+<IMG
+ WIDTH="57" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img85.gif"
+ ALT="$ x^2 &gt; 1$">
+(i.e., for <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img21.gif"
+ ALT="$ \vert x\vert
+&gt; 1$">.)  The center of convergence is <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">, and the radius of convergence
+is 1.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>A Secret Trick Using Complex Numbers:</B>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+It isn't surprising that the radius of convergence for the Taylor series for
+
+<!-- MATH
+ $\displaystyle\frac{1}{x+1}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img8.gif"
+ ALT="$ \displaystyle\frac{1}{x+1}$">
+about <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">
+has radius of convergence 1.  The function goes off to
+infinity at <IMG
+ WIDTH="65" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img56.gif"
+ ALT="$ x = -1$">, so we might expect the Taylor series to be stymied at that point.  But what
+about 
+<!-- MATH
+ $\displaystyle\frac{1}{x^2+1}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img86.gif"
+ ALT="$ \displaystyle\frac{1}{x^2+1}$">?  That is a perfectly good function on the whole real number
+line.  Why doesn't its Taylor series work for every <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">?
+
+<P>
+The answer is that Taylor series are good not only for real numbers, but also for complex numbers. 
+And the radius of convergence works the same way, except now we're talking modulus instead of
+absolute value.  The Taylor series for 
+<!-- MATH
+ $\displaystyle\frac{1}{x^2+1}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img86.gif"
+ ALT="$ \displaystyle\frac{1}{x^2+1}$">
+about <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img6.gif"
+ ALT="$ x=0$">
+converges for all
+complex values of <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img2.gif"
+ ALT="$ x$">
+for which <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img36.gif"
+ ALT="$ \vert x\vert &lt; 1$">, and diverges when <IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img21.gif"
+ ALT="$ \vert x\vert
+&gt; 1$">.  In the complex plane, we
+have this picture:
+
+<P>
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ $\epsfig{figure=taylorpix3.ps,width=0.5\textwidth}$
+ -->
+<IMG
+ WIDTH="220" HEIGHT="222" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img87.gif"
+ ALT="\epsfig{figure=taylorpix3.ps,width=0.5\textwidth}">
+</DIV>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+The circle around the point <IMG
+ WIDTH="53" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img88.gif"
+ ALT="$ 0 + 0 i$">
+consists of all complex numbers with modulus equal
+to 1.  The Taylor series converges inside this circle, and diverges outside it.
+
+<P>
+And now we can see why this circle can't be pushed outward any farther:  The function 
+
+<!-- MATH
+ $\displaystyle\frac{1}{x^2+1}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img86.gif"
+ ALT="$ \displaystyle\frac{1}{x^2+1}$">
+goes off to infinity at <IMG
+ WIDTH="47" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img89.gif"
+ ALT="$ x = i$">, and that's what stops the Taylor
+series from converging inside any larger circle.
+
+<P>
+This always happens for functions like this.  Say <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">
+is a quotient of
+polynomials.  To find the radius of convergence for the Taylor series for <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">
+about <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img3.gif"
+ ALT="$ x = a$">, find
+all the points in the complex plane where the denominator is zero, so <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img1.gif"
+ ALT="$ f(x)$">
+goes off to
+infinity.<A NAME="tex2html1"
+ HREF="http://www.math.dartmouth.edu/~m8s00/handouts/footnode.html#foot178"><SUP>1</SUP></A>  The radius of convergence will be the
+radius of the largest circle with center
+<IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/handouts/img3.gif"
+ ALT="$ x = a$">
+that does not surround any of those points at which the function goes off to infinity.
+
+<P>
+This fact is beyond the purview of this course and you're not ``responsible'' for it.  If you take a
+course in complex analysis, you'll learn about this, and other fun things as well.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="http://www.math.dartmouth.edu/~m8s00/handouts/node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="http://www.math.dartmouth.edu/~m8s00/handouts/node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="http://www.math.dartmouth.edu/~m8s00/handouts/node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 8 Spring 2000</I>
+<BR><I>2000-04-17</I>
+</ADDRESS>
+</BODY>
+</HTML>

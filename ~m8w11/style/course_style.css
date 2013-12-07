@@ -1,0 +1,187 @@
+body {
+  color: #000;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+
+.red {
+  color: red;
+}
+h2 {
+  font-weight: bold;
+  font-size: 1.1em;
+ }
+
+
+
+h3 {
+  font-weight: bold;
+  font-size: .9em;
+}
+
+
+b {
+   font-weight: bold;
+  font-size: .9em;
+}
+
+
+th {
+  font-weight: bold;
+  font-size: .8em;
+}
+
+td {
+  font-weight: normal;
+  font-size: .8em;
+}
+
+
+.normal14pt {
+  font-weight: normal;
+  font-size: .9em;
+}
+
+
+.normal18pt {
+  font-weight: normal;
+  font-size: 1.1em;
+}
+
+
+.normal24pt {
+  font-weight: normal;
+  font-size: 1.7em;
+}
+
+.bold14pt {
+   font-weight: bold;
+   font-size: .9em;
+ }
+
+
+li {
+  font-weight: normal;
+  font-size: .9em;
+}
+
+a {
+/*   color: #6C410A; */
+color: #294035; /*#314D40; */
+  font-weight: 700;
+   font-size: .9em;
+   text-decoration: none;
+ }
+
+a:hover {
+  color: #F3EEE7;
+}
+
+a.n24 {
+  color: black;
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+a:hover.n24 {
+  color: black;
+}
+
+
+a.palebg {
+  color: navy;
+  font-weight: 700;
+   font-size: .9em;
+   text-decoration: none;
+ }
+
+a:hover.palebg {
+  color: red;
+  font-weight: 700;
+   font-size: .9em;
+   text-decoration: none;
+ }
+
+a.bold {
+  color: navy;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+a:hover.bold {
+  color: red;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+a.small {
+  color: navy;
+  font-weight: normal;
+  font-size: .7em;
+ }
+
+a:hover.small {
+  color: red;
+}
+
+.secondary-nav {
+        position: relative;
+        right: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+/*      z-index: 1;  */
+}
+
+.secondary-nav th {
+        float: right;
+        display: block;
+//        background-color: #e4ebe7;
+        -moz-border-radius-topleft: 0px;   /* Firefox */
+        -moz-border-radius-topright: 9px;
+        -moz-border-radius-bottomright: 9px;
+        -moz-border-radius-bottomleft: 0px;
+
+        -webkit-border-top-left-radius: 0px;          /* Webkit / Safari */
+        -webkit-border-top-right-radius: 9px;
+        -webkit-border-bottom-right-radius: 9px;
+        -webkit-border-bottom-left-radius: 0px;
+
+        -khtml-border-radius: 0px 9px 9px 0px;                  /* Konquerer */ 
+        -khtml-border-radius-topleft: 20px;       /* not functional */
+
+/* All other CSS3 capable browsers */
+/*
+         border-top-left-radius:     0;   
+         border-top-right-radius:    9px;
+         border-bottom-right-radius: 9px;
+         border-bottom-left-radius:  0;
+*/
+        padding: 7px;
+        border-left: 1px solid #b3b4b4;
+}
+
+.secondary-nav .noline {
+        border: 0px;
+        -moz-border-radius-topleft: 9px;    /* Firefox */
+        -moz-border-radius-topright: 0px;
+        -moz-border-radius-bottomright:0px;
+        -moz-border-radius-bottomleft:9px;
+
+        -webkit-border-top-left-radius: 9px;       /* Webkit / Safari */
+        -webkit-border-top-right-radius: 0px;
+        -webkit-border-bottom-right-radius: 0px;
+        -webkit-border-bottom-left-radius: 9px;
+
+        -khtml-border-radius: 9px 0 0 9px;                 /* Konquerer */   
+
+/* All other CSS3 capable browsers */
+/*      Not currently functional CSS2
+        border-top-left-radius:     9px;   
+        border-top-right-radius:    0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius:  9px;
+
+*/
+
+}

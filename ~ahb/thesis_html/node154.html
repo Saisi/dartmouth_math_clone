@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Appendix J: Helmholtz basis functions for two-dimensional billiards</TITLE>
+<META NAME="description" CONTENT="Appendix J: Helmholtz basis functions for two-dimensional billiards">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node159.html">
+<LINK REL="previous" HREF="node148.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node155.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1925"
+  HREF="node155.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1923"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1917"
+  HREF="node153.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1926"
+  HREF="node155.html">Basis `badness'</A>
+<B> Up:</B> <A NAME="tex2html1924"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1918"
+  HREF="node153.html">Useful geometric boundary integrals</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001900000000000000000"></A>
+<A NAME="ap:basis"></A>
+<BR>
+Appendix J: Helmholtz basis functions for two-dimensional billiards
+</H1>
+
+<P>
+We are interested in a set of basis functions appropriate to represent
+to sufficient accuracy the eigenstates of a billiard close to a given wavenumber
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+The basis functions are solutions to the Helmholtz equation (<A HREF="node57.html#eq:helm">5.5</A>)
+at wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> (so that the diagonalization problem can be
+reduced to the boundary).
+The basis need not obey the boundary conditions (BCs)--if it did, we would
+already have the desired eigenstates--so we can choose to ignore the
+BCs and consider the basis as composed of free-space solutions.
+The exception will be when the billiard shape has symmetries:
+then the basis should obey certain BCs on the lines (or planes) of symmetry
+(see below in Section&nbsp;<A HREF="node158.html#sec:symmetry">J.4</A>).
+Since the stadium is the quantum system that I have investigated most,
+the basis sets presented here are optimized for that shape.
+The issue of Helmholtz basis sets for more general shapes is open, and is sorely
+in need of investigation.
+
+<P>
+Note that because the scaling method of Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A> requires it,
+I consider only the special case of <EM>scaling basis sets</EM>,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\phi_i(k;{\mathbf r}) \; = \; \bar{\phi}_i(k{\mathbf r})
+	\hspace{0.5in} \forall i ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:b_scalbas"></A><IMG
+ WIDTH="386" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1980.gif"
+ ALT="\begin{displaymath}
+\phi_i(k;{\mathbf r}) \; = \; \bar{\phi}_i(k{\mathbf r})
+\hspace{0.5in} \forall i ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(J.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the dimensionless position will be written <!-- MATH
+ $k{\mathbf r} \equiv \bar{{\mathbf r}}
+\equiv (\bar{x},\bar{y})$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1981.gif"
+ ALT="$k{\mathbf r} \equiv \bar{{\mathbf r}}
+\equiv (\bar{x},\bar{y})$">.
+This is no great restriction for the plane-wave type basis we present here,
+however, it disallows basis functions (<I>e.g. </I>singular <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img706.gif"
+ ALT="$Y_0(kr)$">)
+`pinned' to the boundary as is required in the BIM.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html1927"
+  HREF="node155.html">Basis `badness' <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img39.gif"
+ ALT="$\gamma $"></A>
+<LI><A NAME="tex2html1928"
+  HREF="node156.html">Real plane waves (RPWs)</A>
+<LI><A NAME="tex2html1929"
+  HREF="node157.html">Adding evanescent plane waves (EPWs)</A>
+<LI><A NAME="tex2html1930"
+  HREF="node158.html">Symmetrization and reduction of effort</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1925"
+  HREF="node155.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1923"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1917"
+  HREF="node153.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1926"
+  HREF="node155.html">Basis `badness'</A>
+<B> Up:</B> <A NAME="tex2html1924"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1918"
+  HREF="node153.html">Useful geometric boundary integrals</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

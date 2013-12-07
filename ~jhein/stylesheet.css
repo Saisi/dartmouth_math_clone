@@ -1,0 +1,91 @@
+body {
+  background-color: #2b9e98;
+  background-image: url('http://www.math.dartmouth.edu/~jhein/bg.png');
+  background-repeat: repeat-x;
+  font-family: verdana;
+  color: #fbfaf6;
+}
+a:link, a:visited, a:hover {
+  color: #183849;
+}
+td {
+  font-size: 10pt;
+  margin: 0px;
+  padding: 0px;
+}
+span.main {
+  width: 800px;
+  float: left;
+}
+div.menu {
+  font-family: helvetica;
+  font-size: 10pt;
+  width: 816px;
+}
+div.menu ul {
+  float: left;
+  margin: 0px;
+  padding: 1px;
+}
+div.menu ul li {
+  font-weight: bold;
+  list-style: none;
+  float: left;
+  line-height: 50px;
+  width: 160px;
+  text-align: center;
+  margin: 1px;
+  display: inline;
+  background-image:url('http://www.math.dartmouth.edu/~jhein/button-normal.png');
+}
+div.menu ul li a {
+  display: block;
+}
+div.menu ul li a:hover {
+  background-image:url('http://www.math.dartmouth.edu/~jhein/button.png');
+}
+
+
+table.main {
+  width: 500px;
+}
+
+div.main {
+  padding-left: 156px;
+  float: left;
+}
+p {
+  width: 500px;
+  text-align: center;
+  font-size: 10pt;
+}
+p.title {
+  text-align: center;
+  font-family: helvetica;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+td.caption {
+  text-align: right;
+  margin-right: 158px;
+  padding: 0px;
+  font-size:8pt;
+}
+p.caption {
+  text-align: right;
+  font-size: 8pt;
+  margin-top: -12px;
+}
+a.code {
+  font-weight: bold;
+}
+font.sample {
+  font-weight: bold;
+  font-family: arial;
+  font-size: 16pt;
+}
+p.download {
+  text-align: right;
+  margin-top: -10px;
+}

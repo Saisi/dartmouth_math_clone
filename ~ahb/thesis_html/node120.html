@@ -1,0 +1,752 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Appendix A: General transformation of the 1D Fokker-Planck equation</TITLE>
+<META NAME="description" CONTENT="Appendix A: General transformation of the 1D Fokker-Planck equation">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node121.html">
+<LINK REL="previous" HREF="node102.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node121.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1571"
+  HREF="node121.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1569"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1563"
+  HREF="node119.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1572"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<B> Up:</B> <A NAME="tex2html1570"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1564"
+  HREF="node119.html">Conclusion</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001000000000000000000"></A>
+<A NAME="ap:fokker"></A>
+<BR>
+Appendix A: General transformation of the 1D Fokker-Planck equation
+</H1>
+
+<P>
+In this Appendix, I show how the drift and diffusion terms
+in a general Fokker-Planck equation [<A
+ HREF="node161.html#gard">79</A>] for evolution
+of a <EM>probability density function</EM> (PDF)
+transform
+when the variable (<I>i.e. </I>the spatial ordinate of the PDF) is transformed.
+It is an essential step to understanding
+the relation between ergodic energy spreading
+in the energy variable <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> (in which the diffusion constant is
+most easily found) and in
+the enclosed-phase-space-volume variable <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">
+(the natural variable for discussing spreading
+because of its conservation under Liouville's theorem).
+I present known results; in particular, the results derived here
+are assumed by Jarzynski&nbsp;[<A
+ HREF="node161.html#jarz92">106</A>] and Cohen&nbsp;[<A
+ HREF="node161.html#doronfrc">46</A>].
+However it is complicated enough, especially in the case of
+a time-dependent density of states, to merit a clear explanation.
+
+<P>
+We start with a known evolution
+of the PDF <!-- MATH
+ $\eta(\Omega,t)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img125.gif"
+ ALT="$\eta(\Omega,t)$"> in <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">-space, and
+want to find the equivalent evolution of <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img3.gif"
+ ALT="$\rho (E,t)$">,
+the PDF in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">-space which describes the same situation.
+We assume a one-to-one time-dependent mapping <!-- MATH
+ $\Omega = \Omega(E,t)$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1529.gif"
+ ALT="$\Omega = \Omega(E,t)$">,
+which can be represented as a (fixed) surface in
+three-dimensional <IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1530.gif"
+ ALT="$(E,t,\Omega)$"> space (Fig. <A HREF="node120.html#fig:fokker">A.1</A>).
+Therefore <!-- MATH
+ $\eta(\Omega,t)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img125.gif"
+ ALT="$\eta(\Omega,t)$"> and <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img3.gif"
+ ALT="$\rho (E,t)$"> are projections
+of the <EM>same function</EM> on the 3D surface, down the <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> and <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">
+directions respectively.
+The PDFs are related as follows,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\eta \; = \; \frac{\rho}{g} , \hspace{0.5in}
+	\mbox{Jacobean (density of states)}
+	\;\;\; g \; \equiv \; \left. \frac{\partial \Omega}{\partial E}\right|_{t} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:jacob"></A><IMG
+ WIDTH="498" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1531.gif"
+ ALT="\begin{displaymath}
+\eta \; = \; \frac{\rho}{g} , \hspace{0.5in}
+\mbox{Jacobea...
+...\; \left. \frac{\partial \Omega}{\partial E}\right\vert _{t} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+From now on I will use prime to denote spatial derivative and dot time
+derivative, in the natural variables of each PDF. Namely,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\eta' \equiv \left. \frac{\partial \eta}{\partial \Omega}\right|_{t} , \; \;
+	\dot{\eta} \equiv \left. \frac{\partial \eta}{\partial t}\right|_{\Omega} , \; \;
+	\rho' \equiv \left. \frac{\partial \rho}{\partial E}\right|_{t} , \; \;
+	\dot{\rho} \equiv \left. \frac{\partial \rho}{\partial t}\right|_{E} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="464" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1532.gif"
+ ALT="\begin{displaymath}
+\eta' \equiv \left. \frac{\partial \eta}{\partial \Omega}\r...
+...quiv \left. \frac{\partial \rho}{\partial t}\right\vert _{E} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Time-dependence will not be written explicitly. Partial derivatives will be
+taken with <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$"> held constant unless otherwise specified.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fokker"></A><A NAME="16620"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure A.1:</STRONG>
+
+Projecting a probability density on the surface <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img31.gif"
+ ALT="$\Omega (E,t)$">
+down to <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img3.gif"
+ ALT="$\rho (E,t)$"> in the <IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1533.gif"
+ ALT="$E-t$"> plane,
+or across to <!-- MATH
+ $\eta(\Omega,t)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img125.gif"
+ ALT="$\eta(\Omega,t)$"> in the <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1534.gif"
+ ALT="$\Omega-t$"> plane.
+The gradient <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img694.gif"
+ ALT="$g$"> is also shown.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="573" HEIGHT="388" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1535.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_ap/fokker.eps,width=5in}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+The Fokker-Planck equations in the two variables arise as follows.
+The probability fluxes (<I>i.e. </I>probability per unit time
+flowing past a fixed point) are assumed linear in the local density and
+its local gradient:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:etacons"></A><A NAME="eq:rhocons"></A>
+<!-- MATH
+ \begin{eqnarray}
+j_\eta(\Omega,t) \; & = \; & u \eta - C \eta' , \\j_\rho(E,t) & = & v \rho - D \rho' .
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="65" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1536.gif"
+ ALT="$\displaystyle j_\eta(\Omega,t) \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1537.gif"
+ ALT="$\displaystyle u \eta - C \eta' ,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.3)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1538.gif"
+ ALT="$\displaystyle j_\rho(E,t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1539.gif"
+ ALT="$\displaystyle v \rho - D \rho' .$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+For the PDF <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img192.gif"
+ ALT="$\eta$">, the coefficient <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1540.gif"
+ ALT="$u(\Omega,t)$"> is a
+`drift velocity' field and <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1541.gif"
+ ALT="$C(\Omega,t)$">
+is a diffusion rate (both are generally space- and time-dependent).
+For the PDF <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img210.gif"
+ ALT="$\rho$">, similarly,
+<IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1542.gif"
+ ALT="$v(E,t)$"> is the drift velocity and <IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1543.gif"
+ ALT="$D(E,t)$"> the diffusion rate.
+We also have the probability conservation laws,
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:etadot"></A><A NAME="eq:rhodot"></A>
+<!-- MATH
+ \begin{eqnarray}
+\dot{\eta} + \frac{\partial j_\eta}{\partial \Omega} &= &0, \\\dot{\rho} + \frac{\partial j_\rho}{\partial E}& = &0 .
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="64" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1544.gif"
+ ALT="$\displaystyle \dot{\eta} + \frac{\partial j_\eta}{\partial \Omega}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1545.gif"
+ ALT="$\displaystyle 0,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.5)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="64" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1546.gif"
+ ALT="$\displaystyle \dot{\rho} + \frac{\partial j_\rho}{\partial E}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1547.gif"
+ ALT="$\displaystyle 0 .$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.6)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Combining (<A HREF="node120.html#eq:etacons">A.3</A>) and (<A HREF="node120.html#eq:etadot">A.5</A>) gives the Fokker-Planck
+equation obeyed by <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img192.gif"
+ ALT="$\eta$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\dot{\eta} \; = \; -(u \eta)' + (C \eta')' .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fpeta"></A><IMG
+ WIDTH="361" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1548.gif"
+ ALT="\begin{displaymath}
+\dot{\eta} \; = \; -(u \eta)' + (C \eta')' .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Similarly the Fokker-Planck
+equation obeyed by <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img210.gif"
+ ALT="$\rho$"> is,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\dot{\rho} \; = \; -(v \rho)' + (D \rho')' .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fprho"></A><IMG
+ WIDTH="361" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1549.gif"
+ ALT="\begin{displaymath}
+\dot{\rho} \; = \; -(v \rho)' + (D \rho')' .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+Given functions <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1540.gif"
+ ALT="$u(\Omega,t)$">, <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1541.gif"
+ ALT="$C(\Omega,t)$"> and (<A HREF="node120.html#eq:fpeta">A.7</A>),
+our task is to find
+<IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1542.gif"
+ ALT="$v(E,t)$"> and <IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1543.gif"
+ ALT="$D(E,t)$"> such that (<A HREF="node120.html#eq:fprho">A.8</A>) and the
+Jacobean transformation (<A HREF="node120.html#eq:jacob">A.1</A>) are obeyed for all time.
+The Jacobean results in the following rule for transforming derivatives:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{\partial }{\partial \Omega} \; = \; \frac{1}{g} \frac{\partial }{\partial E} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:jacobd"></A><IMG
+ WIDTH="332" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1550.gif"
+ ALT="\begin{displaymath}
+\frac{\partial }{\partial \Omega} \; = \; \frac{1}{g} \frac{\partial }{\partial E} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Use of this and of (<A HREF="node120.html#eq:jacob">A.1</A>) allows (<A HREF="node120.html#eq:fpeta">A.7</A>) to be written as
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\dot{\eta} \; = \;
+	-\frac{1}{g}\frac{\partial }{\partial E}\left(u \frac{\rho}{g}\right) +
+	\frac{1}{g}\frac{\partial }{\partial E}\left( D g \frac{\partial }{\partial E}\left(\frac{\rho}{g}\right)\right) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:halfway"></A><IMG
+ WIDTH="445" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1551.gif"
+ ALT="\begin{displaymath}
+\dot{\eta} \; = \;
+-\frac{1}{g}\frac{\partial }{\partial E}...
+...rac{\partial }{\partial E}\left(\frac{\rho}{g}\right)\right) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where we have identified the transformed diffusion rate <IMG
+ WIDTH="81" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1552.gif"
+ ALT="$D = C/g^2$">.
+Note that the diffusion term has a modified form, which we examine later.
+The LHS now poses a problem.
+It is possible to transform the LHS, written as <!-- MATH
+ $(\partial/\partial t)_\Omega
+(\rho/g)$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1553.gif"
+ ALT="$(\partial/\partial t)_\Omega
+(\rho/g)$">,
+using the Legendre rule for a change of
+variable:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left. \frac{\partial }{\partial t}\right|_{\Omega} \ = \ \left. \frac{\partial }{\partial t}\right|_{E} + \left. \frac{\partial E}{\partial t}\right|_{\Omega} \! \cdot
+	\frac{\partial }{\partial E} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:legendre"></A><IMG
+ WIDTH="390" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1554.gif"
+ ALT="\begin{displaymath}
+\left. \frac{\partial }{\partial t}\right\vert _{\Omega} \ ...
+...\right\vert _{\Omega} \! \cdot
+\frac{\partial }{\partial E} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+However the resulting sequence of algebra
+required to reach the desired form is very complicated<A NAME="tex2html84"
+  HREF="footnode.html#foot16679"><SUP>A.1</SUP></A>and I will not give it here.
+
+<P>
+Instead I give a geometric approach which bypasses the algebra.
+We ask how the probability fluxes are related.
+If <IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1555.gif"
+ ALT="$\Omega(E)$"> were independent of time,
+<IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1556.gif"
+ ALT="$j$"> would transform without a Jacobean,
+that is <!-- MATH
+ $j_\rho = j_\eta$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1557.gif"
+ ALT="$j_\rho = j_\eta$">.
+Now with <IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1555.gif"
+ ALT="$\Omega(E)$"> time-dependent,
+<IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img210.gif"
+ ALT="$\rho$"> acquires an extra drift velocity
+equal to the gradient of the constant-<IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$"> contour in the <IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1533.gif"
+ ALT="$E-t$"> plane:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+j_\rho \; = \; j_\eta + \left. \frac{\partial E}{\partial t}\right|_{\Omega} \rho.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:flux"></A><IMG
+ WIDTH="352" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1558.gif"
+ ALT="\begin{displaymath}
+j_\rho \; = \; j_\eta + \left. \frac{\partial E}{\partial t}\right\vert _{\Omega} \rho.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This can easily be verified by considering Fig.&nbsp;<A HREF="node120.html#fig:fokker">A.1</A>.
+The apparent lack of <IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1559.gif"
+ ALT="$E-\Omega$"> symmetry in this relation is deceptive
+since the second (flux difference) term
+can also be written <!-- MATH
+ $-(\partial \Omega/\partial t)_E \, \eta$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1560.gif"
+ ALT="$-(\partial \Omega/\partial t)_E \, \eta$"> using
+the relation
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left. \frac{\partial E}{\partial t}\right|_{\Omega} \left. \frac{\partial t}{\partial \Omega}\right|_{E} \left. \frac{\partial \Omega}{\partial E}\right|_{t} \; = \; -1,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:triple"></A><IMG
+ WIDTH="377" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1561.gif"
+ ALT="\begin{displaymath}
+\left. \frac{\partial E}{\partial t}\right\vert _{\Omega} \...
+...\frac{\partial \Omega}{\partial E}\right\vert _{t} \; = \; -1,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which is a geometric property of any surface in 3D.
+
+<P>
+Combining (<A HREF="node120.html#eq:flux">A.12</A>) with (<A HREF="node120.html#eq:etadot">A.5</A>), (<A HREF="node120.html#eq:rhodot">A.6</A>)
+and (<A HREF="node120.html#eq:jacobd">A.9</A>) immediately gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\dot{\eta} \; = \; \frac{1}{g} \dot{\rho} + \frac{1}{g} \frac{\partial }{\partial E}
+	\left( \left. \frac{\partial E}{\partial t}\right|_{\Omega} \rho \right) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:dotrel"></A><IMG
+ WIDTH="388" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1562.gif"
+ ALT="\begin{displaymath}
+\dot{\eta} \; = \; \frac{1}{g} \dot{\rho} + \frac{1}{g} \fr...
+...ac{\partial E}{\partial t}\right\vert _{\Omega} \rho \right) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which can now be substituted into the LHS of (<A HREF="node120.html#eq:halfway">A.10</A>) to give
+the desired Fokker-Planck evolution (<A HREF="node120.html#eq:fprho">A.8</A>).
+The resulting transformed coefficients are
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:fokans"></A>
+<!-- MATH
+ \begin{eqnarray}
+D \; & = \; &\frac{C}{g^2}
+	\hspace{1.45in} \mbox{transformed diffusion rate} \\
+	v \; & = \; &\frac{u}{g} + \left. \frac{\partial E}{\partial t}\right|_{\Omega} + \frac{g'}{g^3}C
+	\hspace{0.5in} 	\mbox{transformed drift rate}.
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1563.gif"
+ ALT="$\displaystyle D \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="389" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1564.gif"
+ ALT="$\displaystyle \frac{C}{g^2}
+\hspace{1.45in} \mbox{transformed diffusion rate}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.15)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1565.gif"
+ ALT="$\displaystyle v \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="370" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1566.gif"
+ ALT="$\displaystyle \frac{u}{g} + \left. \frac{\partial E}{\partial t}\right\vert _{\Omega} + \frac{g'}{g^3}C
+\hspace{0.5in} \mbox{transformed drift rate}.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.16)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Looking at the transformed drift,
+the first term is the (scaled) original drift rate,
+the second is `dragging' due to time-dependence of <IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1555.gif"
+ ALT="$\Omega(E)$">,
+and the third, which can also be written as <IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1567.gif"
+ ALT="$(g'/g)D$">,
+is a drift term entirely due to the modification of the diffusion term.
+The second term, being (minus) the parameter velocity <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img62.gif"
+ ALT="$\dot{x}$">
+times the conservative
+force <!-- MATH
+ $F(x) \equiv -(\partial E/\partial x)_\Omega$
+ -->
+<IMG
+ WIDTH="155" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1568.gif"
+ ALT="$F(x) \equiv -(\partial E/\partial x)_\Omega$">,
+will only cause reversible energy changes.
+Note that the third term arises from the the transformation of the diffusion
+term
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+(C \eta')' \;\;\; \longrightarrow \;\;\;
+	\frac{1}{g} \left( D g \left( \frac{\rho}{g} \right)' \right)' ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:difftrans"></A><IMG
+ WIDTH="394" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1569.gif"
+ ALT="\begin{displaymath}
+(C \eta')' \;\;\; \longrightarrow \;\;\;
+\frac{1}{g} \left( D g \left( \frac{\rho}{g} \right)' \right)' ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+In general, we see that a transformed diffusion term takes
+the form of the right-hand side
+of (<A HREF="node120.html#eq:difftrans">A.17</A>),
+which is biased.
+By `biased' I mean that it has nonzero local drift when there is zero
+local density gradient.
+The bias can be visualized if we imagine that diffusion in <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">-space comes from
+a the continuum limit of an unbiased
+random walk on a uniformly-spaced lattice of sites.
+The same sites appear non-uniformly spaced in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">-space, so the same random walk
+gives additional drift for the PDF in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">-space.
+Only when a diffusion term is written in terms
+of its `natural' variable (here <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">) does it take the
+unbiased form of the left-hand side of
+(<A HREF="node120.html#eq:difftrans">A.17</A>).
+This illustrates that great care should be taken in writing down an energy
+diffusion term in the theory of energy spreading.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1571"
+  HREF="node121.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1569"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1563"
+  HREF="node119.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1572"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<B> Up:</B> <A NAME="tex2html1570"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1564"
+  HREF="node119.html">Conclusion</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Conclusion and discussion</TITLE>
+<META NAME="description" CONTENT="Conclusion and discussion">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node65.html">
+<LINK REL="up" HREF="node49.html">
+<LINK REL="next" HREF="node71.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1019"
+  HREF="node71.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1017"
+  HREF="node49.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1013"
+  HREF="node69.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1020"
+  HREF="node71.html">Chapter 6: The scaling</A>
+<B> Up:</B> <A NAME="tex2html1018"
+  HREF="node49.html">Chapter 5: Improved sweep</A>
+<B> Previous:</B> <A NAME="tex2html1014"
+  HREF="node69.html">A more intelligent hunt?</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00660000000000000000">
+Conclusion and discussion</A>
+</H1>
+
+<P>
+In this chapter I have presented the main components of an improved
+`sweep' method (so named because a sweep in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> is required to locate
+eigenstates) for billiard diagonalization.
+It falls squarely in Class b) of Table&nbsp;<A HREF="node51.html#tbl:bases">5.1</A>, although
+the zero-determinant condition has been replaced by a maximum-eigenvalue one.
+The resulting eigenstates once found can be normalized accurately
+using the boundary
+formula for <!-- MATH
+ $\left\langle \psi \left|\psi\right.\right\rangle _{cal D}$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img850.gif"
+ ALT="$\left\langle \psi \left\vert\psi\right.\right\rangle _{cal D}$"> presented in Appendix
+<A HREF="node137.html#ap:perim">H</A>.
+The method is a simplified but more rigorous version of Heller's
+original PWDM, and reduces to
+the key component of Heller's
+method in the case of a particular choice of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$">.
+
+<P>
+Several problems in Heller's method have been solved.
+The choice of basis size <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> in Heller's method requires careful adjustment
+(<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img851.gif"
+ ALT="$\pm 10\%$"> or so), however the generalized eigenproblem
+approach of this chapter truncates <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> automatically.
+The method has been reduced to a simpler algorithm which is entirely
+expressible on the boundary, and therefore scales with the area of the boundary.
+By reducing to an order-<IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> symmetric eigenproblem,
+the choice <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img852.gif"
+ ALT="$M \gg N$"> can be made without
+the disadvantage of slowing down any determinant (SVD) evaluations.
+This enables very accurate boundary sampling without slowing down the <IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img679.gif"
+ ALT="$O(N^3)$">
+matrix operations.
+<IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> and <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> are no longer parameters whose choice has a sensitive effect
+on the success of the method; they simply need to be sufficiently large.
+The accurate norm matrix approaches of Section&nbsp;<A HREF="node62.html#sec:normmatrix">5.4</A>
+gives clean `switching' between
+states corresponding to tension minima--this is an improvement over Heller's
+formulation, and would allow such minima to
+be distiguished up to a higher <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+
+<P>
+The scaling of the numerical effort required per found eigenstate is not
+hard to compute.
+The basis size <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> is of order the semiclassical basis size (<!-- MATH
+ $N_{sc} = kL/\pi$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img722.gif"
+ ALT="$N_{sc} = kL/\pi$">
+in <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$">, <!-- MATH
+ $N_{sc} \sim k^{d-1}{\mathsf{A}}$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img853.gif"
+ ALT="$N_{sc} \sim k^{d-1}{\mathsf{A}}$"> in higher <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">).
+The matrices <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> are dense, requiring <IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img679.gif"
+ ALT="$O(N^3)$"> effort to diagonalize
+(<A HREF="node58.html#eq:geneigprob">5.14</A>) at a single <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+A few of these are required per state found.
+Therefore the effort per state found scales like <IMG
+ WIDTH="56" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img854.gif"
+ ALT="$k^{3(d-1)}$">.
+The accuracy in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> found is determined entirely by the basis set
+limitations: it appears to be an order of magnitude better than the
+`tension rounding error' <!-- MATH
+ $\Delta k(\epsilon_\mu)$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img817.gif"
+ ALT="$\Delta k(\epsilon_\mu)$">.
+
+<P>
+The method of this chapter 
+breaks down when the maxima of tension reached between <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> values
+becomes about equal to the typical tension
+minima <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$">, in which case the fraction of `missing states'
+becomes large.
+Even long before this is reached, close eigenvalues become indistiguishable
+(see Fig.&nbsp;<A HREF="node81.html#fig:compare">6.5</A>).
+Improved basis sets which can reduce <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$"> at a given <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">
+require the use of evanescent waves:
+the reduction can then be by orders of magnitude in certain billiard shapes
+(see Fig.&nbsp;<A HREF="node81.html#fig:comparezm">6.6</A>).
+
+<P>
+Finally, it is clear that there is <EM>much</EM> information that is being
+wasted by the whole `tension minima hunt' approach described here
+and very common elsewhere (including in the vast array of engineering
+applications of the BIM).
+Fig.&nbsp;<A HREF="node69.html#fig:gev">5.6</A> shows the tension eigenvalues
+(inverse generalized <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img712.gif"
+ ALT="$\lambda_n$"> of (<A HREF="node58.html#eq:geneigprob">5.14</A>)).
+The square root is plotted so that parabolas become
+straight lines, for clarity.
+(The finite <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$"> actually round the bottoms to give hyperbolae).
+It is clear that the eigenstates associated with each minimum
+are in fact long-lived as <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> changes over many level-spacings,
+and therefore prediction of a large number of eigenstates from a single
+diagonalization is possible.
+This is the essence of the method of the next chapter.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1019"
+  HREF="node71.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1017"
+  HREF="node49.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1013"
+  HREF="node69.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1020"
+  HREF="node71.html">Chapter 6: The scaling</A>
+<B> Up:</B> <A NAME="tex2html1018"
+  HREF="node49.html">Chapter 5: Improved sweep</A>
+<B> Previous:</B> <A NAME="tex2html1014"
+  HREF="node69.html">A more intelligent hunt?</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

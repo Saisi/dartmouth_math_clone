@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>fourier.html</title>
+<!-- Created by Maple 6, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a href="fourier.html#MapleAutoBookmark1">2</a>
+<hr>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>sq:=proc(x) if (x&gt;=(-2*evalf(Pi)) and x&lt;(-1*evalf(Pi))) then 1 elif (x&gt;=-1*evalf(Pi) and x&lt;0) then -1 elif (x&gt;=0 and x&lt;evalf(Pi)) then 1 elif (x&gt;=evalf(Pi) and x&lt;2*evalf(Pi)) then  -1 end if end proc;</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier1.gif" width=79 height=18 alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier2.gif" width=244 height=18 alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier3.gif" width=205 height=18 alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier4.gif" width=194 height=18 alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier5.gif" width=243 height=18 alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier6.gif" width=70 height=18 alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier7.gif" width=61 height=18 alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>fsq:=(x,n)-&gt;4/(Pi)*sum('sin((2*k-1)*x)/(2*k-1)',k=1..n);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier8.gif" width=199 height=88 alt="fsq := proc (x, n) options operator, arrow; 4*sum('...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>fs2:=x-&gt;fsq(x,2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier9.gif" width=106 height=18 alt="fs2 := proc (x) options operator, arrow; fsq(x,2) e...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>fs5:=x-&gt;fsq(x,5);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier10.gif" width=106 height=18 alt="fs5 := proc (x) options operator, arrow; fsq(x,5) e...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>fs10:=x-&gt;fsq(x,10);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier11.gif" width=118 height=18 alt="fs10 := proc (x) options operator, arrow; fsq(x,10)...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot([sq,fs2,fs5,fs10],-6..6);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier12.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot([sq,fs2,fs5,fs10],-0.3..0.3);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier13.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>fs50:=x-&gt;fsq(x,50);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier14.gif" width=118 height=18 alt="fs50 := proc (x) options operator, arrow; fsq(x,50)...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot([sq,fs50],-0.1..0.1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier15.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>tr:=x-&gt; if (x&gt;=(-4) and x&lt;(-2)) then (x+4) elif (x&gt;=-2 and x&lt;0) then -x elif (x&gt;=0 and x&lt;2) then x elif (x&gt;=2 and x&lt;4) then  -(x-4) fi;</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier16.gif" width=76 height=18 alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier17.gif" width=133 height=18 alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier18.gif" width=174 height=18 alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier19.gif" width=171 height=18 alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier20.gif" width=160 height=18 alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier21.gif" width=182 height=18 alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier22.gif" width=70 height=18 alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier23.gif" width=61 height=18 alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ftr:=(x,n)-&gt;1-8/(Pi^2)*sum('cos((2*k-1)*Pi*x/2)/(2*k-1)^2',k=1..n);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier24.gif" width=246 height=105 alt="ftr := proc (x, n) options operator, arrow; 1-8*sum...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ft2:=x-&gt;ftr(x,2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier25.gif" width=100 height=18 alt="ft2 := proc (x) options operator, arrow; ftr(x,2) e...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ft5:=x-&gt;ftr(x,5);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier26.gif" width=100 height=18 alt="ft5 := proc (x) options operator, arrow; ftr(x,5) e...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ft10:=x-&gt;ftr(x,10);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier27.gif" width=112 height=18 alt="ft10 := proc (x) options operator, arrow; ftr(x,10)...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot([tr,ft2,ft5,ft10],-.1..0.1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m33s01/cal/images/fourier28.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

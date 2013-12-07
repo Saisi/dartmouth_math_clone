@@ -1,0 +1,561 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Conversion of time averages to averages over collision parameters</TITLE>
+<META NAME="description" CONTENT="Conversion of time averages to averages over collision parameters">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node34.html">
+<LINK REL="up" HREF="node33.html">
+<LINK REL="next" HREF="node36.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html642"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html640"
+  HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html636"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html643"
+  HREF="node36.html">The white noise approximation</A>
+<B> Up:</B> <A NAME="tex2html641"
+  HREF="node33.html">The cavity system</A>
+<B> Previous:</B> <A NAME="tex2html637"
+  HREF="node34.html">Form of correlation spectrum</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00412000000000000000"></A>
+<A NAME="sec:convavg"></A>
+<BR>
+Conversion of time averages to averages over collision parameters
+</H2>
+
+<P>
+This section shows how ergodicity can be
+used to go from a time average to a collision
+parameter average, for a quantity which takes values at each of the collisions.
+This will prove useful for approximating <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> in the next section,
+but it can be skipped on first reading.
+(It is presented in a more terse form in [<A
+ HREF="node161.html#doronfrc">46</A>]).
+
+<P>
+I treat time-averages of quantities which are non-zero only during the
+collisions, and whose value during a collision is a function of
+the parameters of the collision (angle from the normal, and surface location)
+only.
+They can be converted to collision-parameter averages, eliminating the
+time variable, as follows.
+For a hard-walled billiard, imagine a function of phase-space
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+B({\mathbf r},{\mathbf p}) \; \equiv \; \left\{
+		\begin{array}{ll}
+		|\cos\theta| \ b({\mathbf s},\theta) & \mbox{if $z>-\epsilon$} \\
+		0 & \mbox{otherwise} ,
+		\end{array}
+	\right.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:adef"></A><IMG
+ WIDTH="424" HEIGHT="54" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img476.gif"
+ ALT="\begin{displaymath}
+B({\mathbf r},{\mathbf p}) \; \equiv \; \left\{
+\begin{arr...
+...z&gt;-\epsilon$} \\
+0 &amp; \mbox{otherwise} ,
+\end{array} \right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which exists only in the thin shell of thickness <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> near the wall.
+The position vector <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$"> is represented by <!-- MATH
+ $({\mathbf s},z)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img478.gif"
+ ALT="$({\mathbf s},z)$">
+where <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$"> is a surface coordinate and <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img479.gif"
+ ALT="$z$"> an outward `radial'
+coordinate normal to the surface.
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img480.gif"
+ ALT="$\theta$"> is the angle of the <IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img481.gif"
+ ALT="${\mathbf p}$"> vector from the local normal.
+This leaves <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img482.gif"
+ ALT="$B$"> independent of the other <IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img483.gif"
+ ALT="$d{-}1$"> momentum degrees of freedom.
+The function <!-- MATH
+ $b({\mathbf s},\theta)$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img484.gif"
+ ALT="$b({\mathbf s},\theta)$"> is assumed constant upon reflection,
+<I>i.e. </I>it is even about <!-- MATH
+ $\theta = -\pi/2$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img485.gif"
+ ALT="$\theta = -\pi/2$">.
+The time-dependence of <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img482.gif"
+ ALT="$B$"> along a given trajectory will be a series of
+impulses due to passing through the shell; the duration of impulse <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img447.gif"
+ ALT="$i$">
+will be <!-- MATH
+ $2\epsilon / (v_{{\mbox{\tiny E}}} \cos\theta_i)$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img486.gif"
+ ALT="$2\epsilon / (v_{{\mbox{\tiny E}}} \cos\theta_i)$">,
+and during this time its value is
+<!-- MATH
+ $|\cos\theta_i|\, b({\mathbf s}_i,\theta_i)$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img487.gif"
+ ALT="$\vert\cos\theta_i\vert\, b({\mathbf s}_i,\theta_i)$">.
+Therefore the cos factors cancel, and the time-average is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\langle B \rangle_t \; = \; \frac{2\epsilon}{v_{{\mbox{\tiny E}}}}
+	\left\langle \sum_i b({\mathbf s}_i,\theta_i) \ \delta(t-t_i) \right\rangle_t.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:atavg"></A><IMG
+ WIDTH="418" HEIGHT="57" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img488.gif"
+ ALT="\begin{displaymath}
+\langle B \rangle_t \; = \; \frac{2\epsilon}{v_{{\mbox{\tin...
+...m_i b({\mathbf s}_i,\theta_i) \ \delta(t-t_i) \right\rangle_t.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+By ergodicity one can equate this to the phase-space average of (<A HREF="node35.html#eq:adef">3.6</A>)
+at the energy <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\langle B \rangle_{{\mbox{\tiny E}}} \; = \; \frac{\epsilon{\mathsf{A}}}{{\mathsf{V}}}
+	\left\langle |\cos\theta| \ b({\mathbf s},\theta)
+	\right\rangle_{{\mathbf s},\Omega} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:apavg"></A><IMG
+ WIDTH="396" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img489.gif"
+ ALT="\begin{displaymath}
+\langle B \rangle_{{\mbox{\tiny E}}} \; = \; \frac{\epsilon...
+... \ b({\mathbf s},\theta)
+\right\rangle_{{\mathbf s},\Omega} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Here I used the fact that in the <!-- MATH
+ $\epsilon\rightarrow0$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img490.gif"
+ ALT="$\epsilon\rightarrow0$"> limit
+the fraction of position space occupied by the
+shell is <!-- MATH
+ $\epsilon{\mathsf{A}}/{\mathsf{V}}$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img491.gif"
+ ALT="$\epsilon{\mathsf{A}}/{\mathsf{V}}$">.
+This collapses the average to be over <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$"> and over the <IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img483.gif"
+ ALT="$d{-}1$">
+dimensional solid angle <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">.
+Choosing the function <IMG
+ WIDTH="44" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img492.gif"
+ ALT="$b = 1$"> gives a useful expression
+for the mean collision rate (the inverse of the ballistic time),
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\tau_{{\mbox{\tiny bl}}}^{-1} \;\equiv \; \left\langle \sum_i \delta(t-t_i) \right\rangle_t
+	\; = \;
+	\frac{v_{{\mbox{\tiny E}}}{\mathsf{A}}}{2 {\mathsf{V}}} \ \langle |\cos\theta| \rangle,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:colrate"></A><IMG
+ WIDTH="437" HEIGHT="57" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img493.gif"
+ ALT="\begin{displaymath}
+\tau_{{\mbox{\tiny bl}}}^{-1} \;\equiv \; \left\langle \sum...
+...f{A}}}{2 {\mathsf{V}}} \ \langle \vert\cos\theta\vert \rangle,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which is a form of Sabine's formula<A NAME="tex2html15"
+  HREF="footnode.html#foot5257"><SUP>3.1</SUP></A>.
+The geometrical factor is the solid angle average
+<!-- MATH
+ $\langle|\cos\theta|\rangle = 2/\pi, 1/2, \cdots$
+ -->
+<IMG
+ WIDTH="179" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img495.gif"
+ ALT="$\langle\vert\cos\theta\vert\rangle = 2/\pi, 1/2, \cdots$">
+for dimension <IMG
+ WIDTH="90" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img496.gif"
+ ALT="$d=2,3, \cdots$"> (see Appendix&nbsp;D of [<A
+ HREF="node161.html#doronfrc">46</A>]).
+Or, choosing <!-- MATH
+ $b = \cos^2\theta \ D{({\mathbf s})}^2$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img497.gif"
+ ALT="$b = \cos^2\theta \ D{({\mathbf s})}^2$"> gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left\langle \sum_i \cos^2\theta_i \ D({\mathbf s}_i) ^2 \
+	\delta(t-t_i) \right\rangle_t
+	\; = \;
+	\frac{v_{{\mbox{\tiny E}}}{\mathsf{A}}}{2 {\mathsf{V}}} \ \langle |\cos\theta|^3 \rangle
+	 \, \langle D{({\mathbf s})}^2 \rangle_{{\mathbf s}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:walluseful"></A><IMG
+ WIDTH="496" HEIGHT="57" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img498.gif"
+ ALT="\begin{displaymath}
+\left\langle \sum_i \cos^2\theta_i \ D({\mathbf s}_i) ^2 \
+...
+...3 \rangle
+\, \langle D{({\mathbf s})}^2 \rangle_{{\mathbf s}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where we used the fact that for this choice
+the averages over surface location and solid angle separate.
+Again, formulae exist for the
+dimension-dependent geometric factor
+<!-- MATH
+ $\langle|\cos\theta|^3\rangle = 4/(3\pi), 1/4, \cdots$
+ -->
+<IMG
+ WIDTH="209" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img499.gif"
+ ALT="$\langle\vert\cos\theta\vert^3\rangle = 4/(3\pi), 1/4, \cdots$">
+for <IMG
+ WIDTH="90" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img496.gif"
+ ALT="$d=2,3, \cdots$"> [<A
+ HREF="node161.html#doronfrc">46</A>].
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:wna_corr"></A><A NAME="5261"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+
+The white-noise approximation estimate (WNA is the horizontal dotted line)
+compared to actual <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img500.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> power spectra
+for some example deformations of the 2D generalized Sinai
+billiard, with <IMG
+ WIDTH="84" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img373.gif"
+ ALT="$m=v=1$">.
+(The RMS estimation
+error of 3% can be seen as
+multiplicative noise with short correlation length in <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">).
+The deformations (sketched on the right),
+from worst to best agreement of the WNA are:
+FR (for which sensitivity to the least-unstable vertical periodic orbit
+causes large correlation effects and large deviations from WNA),
+W8 (oscillatory deformation changes sign enough to be close to WNA),
+P1 (localized `piston' type deformation for which WNA is good),
+and
+DF (random function of zero correlation-length along the
+perimeter, showing complete WNA agreement).
+Deformation functions are defined in Table&nbsp;<A HREF="node35.html#tbl:deftypes">3.1</A>.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="546" HEIGHT="272" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img501.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_dil/wna.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="5020"></A>
+<TABLE>
+<CAPTION><STRONG>Table 3.1:</STRONG>
+
+Key to deformation types used for numerical 2D billiard
+experiments in this and the following chapter.
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img511.gif"
+ ALT="$L$"> is the billiard perimeter.
+The deformation is described by a function <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img502.gif"
+ ALT="$D(s)$">, 
+where <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$"> is measured counter-clockwise along the 
+perimeter with <IMG
+ WIDTH="44" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img513.gif"
+ ALT="$s=0$"> at the upper left corner. In the 
+`fracture' and `shift-x' cases we use the horizontal 
+Cartesian coordinate <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img514.gif"
+ ALT="$x(s)$">.    
+</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT"><EM>key</EM></TD>
+<TD ALIGN="LEFT"><EM>description</EM></TD>
+<TD ALIGN="LEFT"><EM>surface deformation function <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img502.gif"
+ ALT="$D(s)$"></EM></TD>
+</TR>
+<TR><TD ALIGN="LEFT">CO</TD>
+<TD ALIGN="LEFT">constant</TD>
+<TD ALIGN="LEFT">1</TD>
+</TR>
+<TR><TD ALIGN="LEFT">W<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$"> periods</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\cos(2 \pi n s/L)$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img503.gif"
+ ALT="$\cos(2 \pi n s/L)$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">DF</TD>
+<TD ALIGN="LEFT">diffuse</TD>
+<TD ALIGN="LEFT">random[-1,1] (equivalent to W<IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img504.gif"
+ ALT="$\infty$">)</TD>
+</TR>
+<TR><TD ALIGN="LEFT">FR</TD>
+<TD ALIGN="LEFT">fracture</TD>
+<TD ALIGN="LEFT">sgn<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img505.gif"
+ ALT="$(x(s))$"> if on top or bottom, else 0</TD>
+</TR>
+<TR><TD ALIGN="LEFT">SX</TD>
+<TD ALIGN="LEFT">shift-x</TD>
+<TD ALIGN="LEFT">sgn<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img505.gif"
+ ALT="$(x(s))$"> if on left or right, else 0</TD>
+</TR>
+<TR><TD ALIGN="LEFT">P1</TD>
+<TD ALIGN="LEFT">piston 1</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $10 \exp(-\mbox{\small $\frac{1}{2}$}\alpha^2)$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img506.gif"
+ ALT="$10 \exp(-\mbox{\small $\frac{1}{2}$}\alpha^2)$">,
+	<!-- MATH
+ $\ \alpha{=}(s/L - 0.3)/0.01$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img507.gif"
+ ALT="$\ \alpha{=}(s/L - 0.3)/0.01$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">P2</TD>
+<TD ALIGN="LEFT">piston 2</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $10 \exp(-\mbox{\small $\frac{1}{2}$}\alpha^2)$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img506.gif"
+ ALT="$10 \exp(-\mbox{\small $\frac{1}{2}$}\alpha^2)$">,
+	<!-- MATH
+ $\ \alpha{=}(s/L - 0.6)/0.005$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img508.gif"
+ ALT="$\ \alpha{=}(s/L - 0.6)/0.005$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">WG</TD>
+<TD ALIGN="LEFT">wiggle</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $5\alpha \exp(-\mbox{\small $\frac{1}{2}$}\alpha^2)$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img509.gif"
+ ALT="$5\alpha \exp(-\mbox{\small $\frac{1}{2}$}\alpha^2)$">, 
+	<!-- MATH
+ $\ \alpha{=}(s/L - 0.25)/0.02$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img510.gif"
+ ALT="$\ \alpha{=}(s/L - 0.25)/0.02$"></TD>
+</TR>
+</TABLE></DIV>
+
+<A NAME="tbl:deftypes"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html642"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html640"
+  HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html636"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html643"
+  HREF="node36.html">The white noise approximation</A>
+<B> Up:</B> <A NAME="tex2html641"
+  HREF="node33.html">The cavity system</A>
+<B> Previous:</B> <A NAME="tex2html637"
+  HREF="node34.html">Form of correlation spectrum</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

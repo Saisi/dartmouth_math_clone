@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>mwhp - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="mwhp">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../help/index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+
+<H2 CLASS="title"><A HREF="mwhp.html">mwhp</A>
+(Idle,
+Accepting Jobs,
+ Shared)</H2>
+
+<FORM METHOD="POST" ACTION="/printers/mwhp" NAME="maintenance">
+<INPUT TYPE="HIDDEN" NAME="org.cups.sid" VALUE="2682eeed89716a39a1d8af4927d4325e">
+<SELECT NAME="OP" ONCHANGE="document.maintenance.submit();">
+<OPTION VALUE="">Maintenance</OPTION>
+<OPTION VALUE="print-test-page">Print Test Page</OPTION>
+
+
+<OPTION VALUE="stop-printer">Pause Printer</OPTION>
+<OPTION VALUE="reject-jobs">Reject Jobs</OPTION>
+<OPTION VALUE="move-jobs">Move All Jobs</OPTION>
+<OPTION VALUE="purge-jobs">Cancel All Jobs</OPTION>
+</SELECT>
+<INPUT TYPE="SUBMIT" VALUE="Go" STYLE="display: none;">
+</FORM>
+
+<FORM METHOD="POST" ACTION="/admin/" NAME="administration">
+<INPUT TYPE="HIDDEN" NAME="org.cups.sid" VALUE="2682eeed89716a39a1d8af4927d4325e">
+<INPUT TYPE="HIDDEN" NAME="printer_name" VALUE="mwhp">
+<SELECT NAME="OP" ONCHANGE="document.administration.submit();">
+<OPTION VALUE="">Administration</OPTION>
+<OPTION VALUE="modify-printer">Modify Printer</OPTION>
+<OPTION VALUE="delete-printer">Delete Printer</OPTION>
+<OPTION VALUE="set-printer-options">Set Default Options</OPTION>
+<OPTION VALUE="set-as-default">Set As Server Default</OPTION>
+<OPTION VALUE="set-allowed-users">Set Allowed Users</OPTION>
+</SELECT>
+<INPUT TYPE="SUBMIT" VALUE="Go" STYLE="display: none;">
+</FORM>
+
+<TABLE SUMMARY="mwhp">
+<TR><TH ALIGN="RIGHT" VALIGN="TOP">Description:</TH><TD>mwhp: HP LaserJet 600 M601DN 226 Kemeny</TD></TR>
+<TR><TH ALIGN="RIGHT" VALIGN="TOP">Location:</TH><TD>226 Kemeny Hall</TD></TR>
+<TR><TH ALIGN="RIGHT" VALIGN="TOP">Driver:</TH><TD>HP LaserJet 600 M601 M602 M603 Postscript (recommended) (grayscale, 2-sided printing)<BR>
+<TR><TH ALIGN="RIGHT" VALIGN="TOP">Connection:</TH><TD>ipp://129.170.28.31/ipp</TD></TR>
+<TR><TH ALIGN="RIGHT" VALIGN="TOP">Defaults:</TH><TD>job-sheets=none, none
+media=na_letter_8.5x11in
+sides=one-sided</TD></TR>
+</TABLE>
+
+</DIV><DIV CLASS="indent">
+<H3 CLASS="title">Jobs</H3>
+</DIV>
+<FORM ACTION="/printers/mwhp" METHOD="GET">
+
+<INPUT TYPE="HIDDEN" NAME="ORDER" VALUE="asc">
+
+<P ALIGN="CENTER"><B>Search in
+mwhp:</B>
+<INPUT TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40"  PLACEHOLDER="" AUTOSAVE="org.cups.printers" RESULTS="20"> <INPUT
+TYPE="SUBMIT" VALUE="Search"> <INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+<DIV CLASS="indent">
+<FORM ACTION="/printers/mwhp" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="which_jobs" VALUE="completed"><INPUT TYPE="SUBMIT" VALUE="Show Completed Jobs"></FORM>
+<FORM ACTION="/printers/mwhp" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="which_jobs" VALUE="all"><INPUT TYPE="SUBMIT" VALUE="Show All Jobs"></FORM></DIV>
+
+<P ALIGN="CENTER">No jobs.</P>
+
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

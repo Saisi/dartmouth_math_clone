@@ -1,0 +1,520 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Partial-wave channel modes for a 2-terminal system</TITLE>
+<META NAME="description" CONTENT="Partial-wave channel modes for a 2-terminal system">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node97.html">
+<LINK REL="previous" HREF="node95.html">
+<LINK REL="up" HREF="node94.html">
+<LINK REL="next" HREF="node97.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1315"
+  HREF="node97.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1313"
+  HREF="node94.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1307"
+  HREF="node95.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1316"
+  HREF="node97.html">Idealized `slit' aperture point</A>
+<B> Up:</B> <A NAME="tex2html1314"
+  HREF="node94.html">Chapter 7: Conductance of</A>
+<B> Previous:</B> <A NAME="tex2html1308"
+  HREF="node95.html">Conductance in terms of</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00820000000000000000"></A>
+<A NAME="sec:pw"></A>
+<BR>
+Partial-wave channel modes for a 2-terminal system
+</H1>
+
+<P>
+In traditional scattering
+theory, partial waves
+form a basis in which to decompose the asymptotic 
+(<!-- MATH
+ $r \rightarrow \infty$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1189.gif"
+ ALT="$r \rightarrow \infty$">) form
+of the full wavefunction <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> into
+incoming and outgoing states of definite angular momentum <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$">.
+The basis functions are the cylindrical (in 2D) solutions to the free-space
+wave equation;
+the <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img838.gif"
+ ALT="$S$">-matrix which takes incoming to outgoing waves
+can then be written in this basis [<A
+ HREF="node161.html#landauqm">128</A>].
+Because there is only a single set of incoming channels
+and a single set of outgoing channels, this is equivalent to a
+scattering system (a stub) connected
+to a single `lead', with an infinite number of open channel modes.
+This contrasts the
+open two-terminal geometry we study,
+where we need to account for two new facts:
+1) in the <!-- MATH
+ $r \rightarrow \infty$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1189.gif"
+ ALT="$r \rightarrow \infty$"> limit the potential <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$"> no longer becomes
+angular-momentum-preserving, and
+2) there are now distinct ways the particle can enter and exit the system,
+via different leads.
+
+<P>
+We define a `half-plane partial-wave basis' as the subset of the cylindrical
+free-space
+solutions which go to zero on the entire <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img371.gif"
+ ALT="$y$">-axis.
+This gives independent basis functions existing on either the left or right
+side
+of the <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img371.gif"
+ ALT="$y$">-axis. The basis is expressed in terms of
+Hankel functions[<A
+ HREF="node161.html#arfken">7</A>] on either side:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:basis"></A>
+<!-- MATH
+ \begin{eqnarray}
+\phi^{-L}_l (kr) &\; \equiv \;&
+        H^{(2)}_l (kr) \sin [ l(\mbox{\small$\frac{\pi}{2}$}- \theta )]
+        \nonumber  \\
+        \phi^{+L}_l (kr) & \; \equiv \; &
+        H^{(1)}_l (kr) \sin [ l(\mbox{\small$\frac{\pi}{2}$}- \theta )]
+        \nonumber \\
+        \phi^{-R}_l (kr) & \; \equiv \; &
+        H^{(2)}_l (kr) \sin [ l(\mbox{\small$\frac{\pi}{2}$}- \theta' )]
+        \nonumber \\
+        \phi^{+R}_l (kr) & \; \equiv \; &
+        H^{(1)}_l (kr) \sin [ l(\mbox{\small$\frac{\pi}{2}$}- \theta' )]
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="67" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1190.gif"
+ ALT="$\displaystyle \phi^{-L}_l (kr)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1191.gif"
+ ALT="$\textstyle \; \equiv \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="165" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1192.gif"
+ ALT="$\displaystyle H^{(2)}_l (kr) \sin [ l(\mbox{\small$\frac{\pi}{2}$}- \theta )]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="67" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1193.gif"
+ ALT="$\displaystyle \phi^{+L}_l (kr)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1191.gif"
+ ALT="$\textstyle \; \equiv \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="165" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1194.gif"
+ ALT="$\displaystyle H^{(1)}_l (kr) \sin [ l(\mbox{\small$\frac{\pi}{2}$}- \theta )]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="68" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1195.gif"
+ ALT="$\displaystyle \phi^{-R}_l (kr)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1191.gif"
+ ALT="$\textstyle \; \equiv \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="169" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1196.gif"
+ ALT="$\displaystyle H^{(2)}_l (kr) \sin [ l(\mbox{\small$\frac{\pi}{2}$}- \theta' )]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="68" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1197.gif"
+ ALT="$\displaystyle \phi^{+R}_l (kr)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1191.gif"
+ ALT="$\textstyle \; \equiv \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="169" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1198.gif"
+ ALT="$\displaystyle H^{(1)}_l (kr) \sin [ l(\mbox{\small$\frac{\pi}{2}$}- \theta' )]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.13)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where on the left (<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img511.gif"
+ ALT="$L$">) side <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img480.gif"
+ ALT="$\theta$"> is the angle from the negative <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">-axis
+and on the right (<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img726.gif"
+ ALT="$R$">) side
+<IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1151.gif"
+ ALT="$\theta'$"> is the angle from the positive <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">-axis
+(see Fig.&nbsp;<A HREF="node94.html#fig:geom">7.1</A>a).
+The channel index is <!-- MATH
+ $l = 1,2, \cdots \infty$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1199.gif"
+ ALT="$l = 1,2, \cdots \infty$">, and
+<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1200.gif"
+ ALT="$+$">(<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img618.gif"
+ ALT="$-$">) refers to outgoing (incoming) travelling waves.
+We note that the s-wave <IMG
+ WIDTH="42" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1201.gif"
+ ALT="$l=0$"> is excluded because of the <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img371.gif"
+ ALT="$y$">-axis barrier,
+leaving the first channel as the p-wave <!-- MATH
+ $H_1(kr)\cos(\theta)$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1202.gif"
+ ALT="$H_1(kr)\cos(\theta)$">.
+Assuming the width of the barrier is finite
+and constant as <!-- MATH
+ $|y| \rightarrow \infty$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1203.gif"
+ ALT="$\vert y\vert \rightarrow \infty$"> (see Fig. <A HREF="node94.html#fig:geom">7.1</A>a), then
+any wavefunction in the <!-- MATH
+ $r \rightarrow \infty$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1189.gif"
+ ALT="$r \rightarrow \infty$"> limit
+can be written as a sum of the above basis
+functions (this is discussed further in Appendix&nbsp;<A HREF="node160.html#ap:crosssec">L</A>).
+The separability of this basis in <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1204.gif"
+ ALT="$(r,\theta)$"> is directly analogous to
+the separability of conventional (constant-width) lead
+basis states [<A
+ HREF="node161.html#LB1">129</A>,<A
+ HREF="node161.html#LB2">130</A>,<A
+ HREF="node161.html#LB3">41</A>]
+into a product of transverse modes and longitudinal travelling waves.
+
+<P>
+The corresponding outgoing (incoming) amplitude coefficients
+are <IMG
+ WIDTH="25" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1205.gif"
+ ALT="$p^+_l$"> (<IMG
+ WIDTH="25" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1206.gif"
+ ALT="$p^-_l$">) on the left and <IMG
+ WIDTH="24" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1207.gif"
+ ALT="$q^+_l$"> (<IMG
+ WIDTH="24" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1208.gif"
+ ALT="$q^-_l$">) on the right.
+Applying (<A HREF="node95.html#eq:GT1">7.5</A>) to the aymptotic forms of the Hankel functions
+<!-- MATH
+ $H_l^{(1,2)}(x) \approx (2/\pi x)^{1/2} e^{i (x + {\mbox{\tiny phase}})}$
+ -->
+<IMG
+ WIDTH="239" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1209.gif"
+ ALT="$H_l^{(1,2)}(x) \approx (2/\pi x)^{1/2} e^{i (x + {\mbox{\tiny phase}})}$">
+shows that a unit amplitude
+carries a flux of <IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1210.gif"
+ ALT="$\hbar/m$">, independent of channel index <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$">.
+This results from the fact that all channels have the same
+asymptotic particle velocity, equal to that in free space.
+This contrasts the usual constant-width lead case where
+the non-zero transverse energy results in an <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$">-dependent asymptotic
+velocity, and thus care is needed to include
+a velocity factor in the normalisation
+[<A
+ HREF="node161.html#fisherlee">74</A>,<A
+ HREF="node161.html#stone">187</A>,<A
+ HREF="node161.html#datta">55</A>].
+
+<P>
+Now we give a brief reminder of the recipe for the conductance
+of a general completely-open single channel [<A
+ HREF="node161.html#been">20</A>,<A
+ HREF="node161.html#dittrich">65</A>,<A
+ HREF="node161.html#datta">55</A>].
+The channel is a 1D Fermi gas corresponding to the
+longitudinal degree of freedom.
+This can correspond to a conventional (constant-width) transverse
+mode, to a Hankel (cylindrical) mode defined above, or indeed
+to any situation where the Hamiltonian is separable into
+(orthogonal) transverse modes and longitudinal motion in the asymptotic regime
+<A NAME="tex2html65"
+  HREF="footnode.html#foot13284"><SUP>7.6</SUP></A>.
+For a 1D Fermi gas the rightward-moving density of states
+per unit length (including spin) is <!-- MATH
+ $\rho (E) =  (\pi \hbar v)^{-1}$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1211.gif"
+ ALT="$\rho (E) = (\pi \hbar v)^{-1}$">,
+where <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img432.gif"
+ ALT="$v$"> is the (group) velocity in the channel.
+The current carried
+is <!-- MATH
+ $\delta I = e v \, \rho(E)\, \delta E$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1212.gif"
+ ALT="$\delta I = e v \, \rho(E)\, \delta E$"> in the relevant energy range
+<!-- MATH
+ $\delta E = e \, \delta V$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1179.gif"
+ ALT="$\delta E = e \, \delta V$">,
+giving a single `quantum' of conductance <!-- MATH
+ $G \equiv \delta I/\delta V = 2e^2/h$
+ -->
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1213.gif"
+ ALT="$G \equiv \delta I/\delta V = 2e^2/h$">.
+The important point is that the velocity factors cancel,
+giving the
+<EM>equipartition rule</EM> that
+an equal current is carried by all open channels regardless of
+their channel velocities.
+
+<P>
+If the basis is chosen such that unit amplitude
+coefficients carry equal fluxes
+in all incoming and outgoing
+channels, then flux conservation implies
+the unitarity of the <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img838.gif"
+ ALT="$S$">-matrix when written in this basis.
+Then the results of the previous paragraph
+generalise to the familiar Landauer formula
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G \; = \; \frac{2e^2}{h} \mbox{Tr}( t^\dag t) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:lb"></A><IMG
+ WIDTH="344" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img88.gif"
+ ALT="\begin{displaymath}
+G \; = \; \frac{2e^2}{h} \mbox{Tr}( t^\dag t) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+in the case of general transmission matrix <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$"> [<A
+ HREF="node161.html#stone">187</A>,<A
+ HREF="node161.html#datta">55</A>].
+Our
+partial-wave basis (<A HREF="node96.html#eq:basis">7.13</A>) has this required flux normalisation.
+The transmission matrix (from incoming left to outgoing right channels)
+is defined by <!-- MATH
+ $q^+_l = \sum_m t_{lm} p^-_m$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1214.gif"
+ ALT="$q^+_l = \sum_m t_{lm} p^-_m$">.
+Thus we have shown that
+the partial-wave basis,
+appropriate for open 2-terminal systems,
+is equivalent to the conventional transverse
+lead mode basis as far as the Landauer formula is concerned.
+Note that is possible to `mix and match' different basis set types
+(for instance
+define a transmission matrix between transverse lead modes on the left side
+and partial-wave modes on the right),
+as long as equal-flux normalisation and orthogonality are preserved.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:areez"></A><A NAME="13286"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.2:</STRONG>
+
+<B>a)</B> Transmission cross section <!-- MATH
+ $\sigma_{{\mbox{\tiny T}}}(k,\phi)$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1215.gif"
+ ALT="$\sigma_{{\mbox{\tiny T}}}(k,\phi)$"> as a fraction of
+the classical normal-incidence cross section <IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1216.gif"
+ ALT="$2a$">,
+vs dimensionless slit size <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1217.gif"
+ ALT="$2ka$">,
+for our idealised slit QPC.
+Four different incident angles <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1137.gif"
+ ALT="$\phi$"> are shown (each curve is
+labelled with its corresponding <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1137.gif"
+ ALT="$\phi$">).
+<B>b)</B> The incident-angle-averaged transmission cross section
+as a fraction of <IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1216.gif"
+ ALT="$2a$"> (solid line),
+compared to its small <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1218.gif"
+ ALT="$ka$"> (dotted line) and large <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1218.gif"
+ ALT="$ka$"> (dashed line)
+asymptotic forms.
+The conductance is proportional to <!-- MATH
+ $\langle \sigma_{{\mbox{\tiny T}}}(k,\phi)\rangle$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1219.gif"
+ ALT="$\langle \sigma_{{\mbox{\tiny T}}}(k,\phi)\rangle$">,
+and would show very weak quantization steps.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="416" HEIGHT="627" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1220.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_qpc/slit.eps,width=0.75\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1315"
+  HREF="node97.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1313"
+  HREF="node94.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1307"
+  HREF="node95.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1316"
+  HREF="node97.html">Idealized `slit' aperture point</A>
+<B> Up:</B> <A NAME="tex2html1314"
+  HREF="node94.html">Chapter 7: Conductance of</A>
+<B> Previous:</B> <A NAME="tex2html1308"
+  HREF="node95.html">Conductance in terms of</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

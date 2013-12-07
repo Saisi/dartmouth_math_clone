@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Quasi-periodic scattering problems</title>
+</head>
+<body bgcolor=white>
+
+<center>
+<h2>Quasi-periodic scattering problems</h2>
+<h4>Alex H. Barnett and Leslie Greengard, June 2010</h4>
+</center>
+
+<p>
+<table cellpadding=30 bgcolor="#eeeeee">
+<tr><td>
+<img src="http://www.math.dartmouth.edu/images/w50field_jet.jpg" border=4></img>
+<td>
+<font size=-0>
+Real part of full field due to an
+incident plane wave (in direction shown by arrow)
+hitting an infinite array of dielectrics of index n=1.5, in TM polarization,
+with a period of roughly 8 wavelengths. Three periods are shown.
+<p>
+The computation was done to 14 digit accuracy on a laptop
+in a time of 2.6 secs to solve for the coefficients,
+and 47 secs to evaluate the field on a grid of 30000 points.
+The <a href="http://www.math.dartmouth.edu/~ahb/qpsc_demo.m">code</a> to do this using the
+<a href="http://code.google.com/p/mpspack"><code>MPSpack</code></a>
+toolbox for MATLAB is 12 lines long.
+<p>
+Notice the focusing by the obstacle, and the
+strong wave traveling along the grating.
+</font>
+</table>
+
+<p>
+We present a new method for periodic scattering problems using
+2nd kind boundary integral equations and
+the free-space Green's function, adding extra degrees of freedom
+on the unit cell walls, and imposing quasi-periodicity in an
+expanded linear system.
+This avoids the problems with the standard approach, namely:
+the quasi-periodic Green's function is slow to evaluate,
+it diverges at Wood's anomalies, and it does not handle large aspect
+ratios well. Our new approach cures all three issues, and can easily
+be `wrapped' around an existing code (e.g. fast-multipole acceleration)
+for the isolated-obstacle scattering problem.
+
+<p>
+Here is the <a href="http://www.math.dartmouth.edu/papers/qpsc.pdf">preprint</a> for the 2D case,
+submitted Aug 2010, which will
+appear in <i>BIT Numerical Mathematics</i> for their 50th anniversary issue.
+
+<p>
+Here are the latest talk slides:
+
+"A new integral representation for quasi-periodic
+scattering problems in two dimensions",
+(<a href="http://www.math.dartmouth.edu/talks/ima.pdf">PDF 2.5MB</a>).
+Given at
+<ul><li>
+<i>Frontiers in Computational and Applied Mathematics</i>,
+NJIT, Newark, NJ, 21-23 May 2010
+<li><i>BIT 50 - Trends in Numerical Computing</i>, Lund, Sweden,
+17-20 June 2010
+<li><i>Integral Equation Methods, Fast Algorithms and Applications</i>, IMA hot topics workshop, 2-5 August 2010
+</ul>
+
+<p>
+Here are some movies:
+<ul>
+<li>
+<a href="http://www.math.dartmouth.edu/talks/w10_anglemovie_cont.mpg">contour</a> for the
+Sommerfeld integrals, moving as a function of incident angle.
+The contour deforms to stay away from poles
+in the integrand, and corrects for this analytically.
+<li>
+<a href="http://www.math.dartmouth.edu/talks/w10_anglemovie.mpg">scattered field</a>, moving
+as a function of incident angle.
+Note the `kinks' as Wood's anomalies are passed;
+these are real and not numerical artifacts.
+<li>
+<a href="http://www.math.dartmouth.edu/talks/dieltref0.42_n0.3_sheets1-10_color.mpg">band structure</a>
+for a 2D dielectric photonic crystal, spinning in 3D. This goes with our
+related band structure paper in J. Comput. Phys.
+</ul>
+
+<p>
+We thank Stephen Shipman and Simon Chandler-Wilde for invaluable discussions.
+The work of AHB was supported by 
+NSF grant DMS-0811005, and by the Class of 1962 Fellowship at Dartmouth College.
+The work of LG was supported by the Department of Energy under contract
+DEFG0288ER25053 and by AFOSR under MURI grant FA9550-06-1-0337.
+
+<p>
+<hr>
+
+<p>Continue to other <a href="http://www.math.dartmouth.edu/res.html">research</a>...
+
+</body>
+</html>

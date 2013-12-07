@@ -1,0 +1,798 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>99-2-Practice-sol</TITLE>
+<META NAME="description" CONTENT="99-2-Practice-sol">
+<META NAME="keywords" CONTENT="99-2-Practice-sol">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/99-2-Practice-sol.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+  Math 8 Practice Exam Problems - Solutions
+
+</DIV>
+
+<P><P>
+<BR>
+ 
+<B> Disclaimer:</B> This set of problems is meant neither to
+indicate the length nor composition of the actual exam.  These are
+merely problems which were considered for inclusion on your exam, but
+for one reason or another were rejected.  On the other hand, they
+should provide some flavor of the type of problems we considered.
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Find the Taylor series (about <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img1.gif"
+ ALT="$ x=0$">) for
+
+<!-- MATH
+ $f(x) =
+\begin{cases}
+ {\sin x}/{x} &  \textrm{if } x \ne 0\\
+  1  &  \textrm{if } x = 0
+\end{cases}
+$
+ -->
+<IMG
+ WIDTH="213" HEIGHT="64" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img2.gif"
+ ALT="\begin{displaymath}f(x) =
+\begin{cases}
+{\sin x}/{x} &amp; \textrm{if } x \ne 0\\
+1 &amp; \textrm{if } x = 0
+\end{cases}\end{displaymath}">
+<P>
+We really need not be too concerned by the complicated definition.  The
+question is really asking us to produce a series for <IMG
+ WIDTH="62" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img3.gif"
+ ALT="$ \sin x/x$">
+which
+(at first blush) seems not even defined at <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img1.gif"
+ ALT="$ x=0$">.  Well, it's not,
+but is has a removable discontinuity, so we can make it continuous
+(and even infinitely differentiable) by defining <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img4.gif"
+ ALT="$ f$">
+as above.  In any
+case, the point of the problem is simply to observe that the Taylor
+series for <IMG
+ WIDTH="41" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img5.gif"
+ ALT="$ \sin x$">
+about <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img1.gif"
+ ALT="$ x=0$">
+is given by (with infinite radius of
+convergence) 
+<!-- MATH
+ $\displaystyle \sin x = \sum_{k=0}^\infty (-1)^k
+\frac{x^{2k+1}}{(2k+1)!}$
+ -->
+<IMG
+ WIDTH="217" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img6.gif"
+ ALT="$ \displaystyle \sin x = \sum_{k=0}^\infty (-1)^k
+\frac{x^{2k+1}}{(2k+1)!}$">, so that <BR>
+
+<!-- MATH
+ $\displaystyle \sin x/x = \sum_{k=0}^\infty
+(-1)^k \frac{x^{2k}}{(2k+1)!} = 1 - x^2/3! + x^4/5! - x^6/7! +
+\cdots$
+ -->
+<IMG
+ WIDTH="516" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img7.gif"
+ ALT="$ \displaystyle \sin x/x = \sum_{k=0}^\infty
+(-1)^k \frac{x^{2k}}{(2k+1)!} = 1 - x^2/3! + x^4/5! - x^6/7! +
+\cdots$">.
+
+<P>
+<DT>2.
+<DD>Find the radius and endpoints of the interval of convergence of
+  the power series 
+
+<!-- MATH
+ $\displaystyle \sum_{n=0}^\infty \frac{n (x-3)^n}{7^n}$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img8.gif"
+ ALT="$ \displaystyle \sum_{n=0}^\infty \frac{n (x-3)^n}{7^n}$">.
+
+<P>
+To find the radius of convergence, we use the ratio test:
+We compute the ratio of the <IMG
+ WIDTH="63" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img9.gif"
+ ALT="$ (n+1)$">st term to the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img10.gif"
+ ALT="$ n$">th term, and take
+the limit of the absolute value as 
+<!-- MATH
+ $n \to \infty$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img11.gif"
+ ALT="$ n \to \infty$">. Setting this
+limiting value less than 1, and solving allows us to deduce the radius
+as well as the endpoints of the interval of convergence.
+
+<P>
+
+<!-- MATH
+ $\displaystyle \lim_{n\to \infty}\left| \frac{(n+1)(x-3)^{n+1}}{7^{n+1}}\cdot
+\frac{7^n}{n (x-3)^n}\right| = \lim_{n\to
+  \infty}\left|\frac{(n+1)}{n}\cdot \frac{x-3}{7}\right| =
+\frac{|x-3|}{7} < 1$
+ -->
+<IMG
+ WIDTH="611" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img12.gif"
+ ALT="$ \displaystyle \lim_{n\to \infty}\left\vert \frac{(n+1)(x-3)^{n+1}}{7^{n+1}}\cd...
+...ert\frac{(n+1)}{n}\cdot \frac{x-3}{7}\right\vert =
+\frac{\vert x-3\vert}{7} &lt; 1$">
+implies <IMG
+ WIDTH="93" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img13.gif"
+ ALT="$ \vert x-3\vert &lt; 7$">
+so the radius of convergence
+is 7, and the endpoints of the interval of convergence are <IMG
+ WIDTH="29" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img14.gif"
+ ALT="$ -4$">
+and
+<IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img15.gif"
+ ALT="$ 10$">.  We have not verified whether or not these endpoints are
+actually contained in the interval of convergence; simply, that they
+delimit it.
+
+<P>
+
+<P>
+<DT>3.
+<DD>
+<!-- MATH
+ $\displaystyle \sum_{n=10}^\infty \left(\frac{-2}{3}\right)^n =$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img16.gif"
+ ALT="$ \displaystyle \sum_{n=10}^\infty \left(\frac{-2}{3}\right)^n = $">
+?
+  
+  This is a geometric series in which the first term is 
+<!-- MATH
+ $\displaystyle a =
+\left(\frac{2}{3}\right)^{10}$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img17.gif"
+ ALT="$ \displaystyle a =
+\left(\frac{2}{3}\right)^{10}$">
+and constant ratio is <IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img18.gif"
+ ALT="$ r = -2/3$">, so
+  the sum of the series is 
+<!-- MATH
+ $\displaystyle \frac{a}{1-r} = \frac{(2/3)^{10}}{1 -
+(-2/3)}$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img19.gif"
+ ALT="$ \displaystyle \frac{a}{1-r} = \frac{(2/3)^{10}}{1 -
+(-2/3)}$">.
+
+<P>
+<DT>4.
+<DD>Find an equation of the line through the point <IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img20.gif"
+ ALT="$ (1,2,3)$">
+  orthogonal to the plane 
+<!-- MATH
+ $x - 3y + 5z = 1$
+ -->
+<IMG
+ WIDTH="134" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img21.gif"
+ ALT="$ x - 3y + 5z = 1$">.
+
+<P>
+The normal to the plane is 
+<!-- MATH
+ $\langle 1, -3, 5\rangle$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img22.gif"
+ ALT="$ \langle 1, -3, 5\rangle $">
+so the equation of the
+line is <BR>
+
+<!-- MATH
+ ${\mathbf r}= \langle 1, 2, 3\rangle + t\langle 1, -3, 5\rangle$
+ -->
+<IMG
+ WIDTH="203" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img23.gif"
+ ALT="$ {\mathbf r}= \langle 1, 2, 3\rangle + t\langle 1, -3, 5\rangle $">.
+
+<P>
+<DT>5.
+<DD>Are the lines 
+<!-- MATH
+ ${\mathbf x}= \langle 1,2,3 \rangle + t \langle 4, -4, 6\rangle$
+ -->
+<IMG
+ WIDTH="205" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img24.gif"
+ ALT="$ {\mathbf x}= \langle 1,2,3 \rangle + t \langle 4, -4, 6\rangle $">
+and 
+  
+<!-- MATH
+ ${\mathbf r}= \langle 3+s, 2s, 6+3s\rangle$
+ -->
+<IMG
+ WIDTH="180" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img25.gif"
+ ALT="$ {\mathbf r}= \langle 3+s, 2s, 6+3s\rangle $">
+skew, parallel, or intersecting?
+
+<P>
+We solve the parametric equations simultaneously:
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img26.gif"
+ ALT="$\displaystyle x$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="139" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img27.gif"
+ ALT="$\displaystyle = 1 + 4t = 3 + s$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img28.gif"
+ ALT="$\displaystyle y$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="117" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img29.gif"
+ ALT="$\displaystyle = 2 - 4t = 2s$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img30.gif"
+ ALT="$\displaystyle z$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="149" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img31.gif"
+ ALT="$\displaystyle = 3 + 6t = 6 + 3s$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Since the direction vector 
+<!-- MATH
+ $\langle 4, -4, 6\rangle$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img32.gif"
+ ALT="$ \langle 4, -4, 6\rangle $">
+is not parallel to 
+
+<!-- MATH
+ $\langle 1, 2, 3\rangle$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img33.gif"
+ ALT="$ \langle 1, 2, 3\rangle $">, the lines are either skew or intersect.
+Solving the first two equations simultaneously, yields <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img34.gif"
+ ALT="$ s = 0$">
+and <IMG
+ WIDTH="65" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img35.gif"
+ ALT="$ t
+= 1/2$">.  Since these values are consistent with the third equation, we
+conclude that the lines intersect. The point of intersection is
+<IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img36.gif"
+ ALT="$ (3,0,6)$">
+(corresponding to <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img34.gif"
+ ALT="$ s = 0$">
+and <IMG
+ WIDTH="65" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img35.gif"
+ ALT="$ t
+= 1/2$">).
+
+<P>
+<DT>6.
+<DD>Consider the matrix 
+
+<!-- MATH
+ $A = \begin{pmatrix}
+1& 0&1&0\\0&1&0&2
+\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img37.gif"
+ ALT="$ A = \begin{pmatrix}
+1&amp; 0&amp;1&amp;0\\ 0&amp;1&amp;0&amp;2
+\end{pmatrix}$">.
+
+<P>
+Show that 
+<!-- MATH
+ $A {\mathbf x}= {\mathbf b}$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img38.gif"
+ ALT="$ A {\mathbf x}= {\mathbf b}$">
+is solvable for all 
+<!-- MATH
+ ${\mathbf b}\in {
+\mathbbR}^2$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img39.gif"
+ ALT="$ {\mathbf b}\in {
+\mathbbR}^2$">, and find
+all solutions to 
+<!-- MATH
+ $A{\mathbf x}= \begin{pmatrix}1\\2\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img40.gif"
+ ALT="$ A{\mathbf x}= \begin{pmatrix}1\\ 2\end{pmatrix}$">. What is
+the dimension of the solution space of 
+<!-- MATH
+ $A {\mathbf x}= {\mathbf 0}$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img41.gif"
+ ALT="$ A {\mathbf x}= {\mathbf 0}$">?
+
+<P>
+We observe that this matrix is already in row-reduced echelon form,
+and since there are two nonzero rows in the echelon form, we conclude
+that the dimension of the solution space to 
+<!-- MATH
+ $A{\mathbf x}= {\mathbf 0}$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img41.gif"
+ ALT="$ A {\mathbf x}= {\mathbf 0}$">
+is <IMG
+ WIDTH="81" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img42.gif"
+ ALT="$ 4 - 2 =
+2$">, and that the rank of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img43.gif"
+ ALT="$ A$">
+is two that is, that the column space has
+dimension two.  Since the column space is a subspace of 
+<!-- MATH
+ ${
+\mathbbR}^2$
+ -->
+<IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img44.gif"
+ ALT="$ {
+\mathbbR}^2$">
+of
+dimension 2, the column space is all of 
+<!-- MATH
+ ${
+\mathbbR}^2$
+ -->
+<IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img44.gif"
+ ALT="$ {
+\mathbbR}^2$">, that is 
+<!-- MATH
+ $A {\mathbf x}= {\mathbf b}$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img38.gif"
+ ALT="$ A {\mathbf x}= {\mathbf b}$">
+is solvable for all 
+<!-- MATH
+ ${\mathbf b}\in {
+\mathbbR}^2$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img39.gif"
+ ALT="$ {\mathbf b}\in {
+\mathbbR}^2$">.  To find all solutions to 
+<!-- MATH
+ $A{\mathbf x}=
+\begin{pmatrix}1\\2\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img40.gif"
+ ALT="$ A{\mathbf x}= \begin{pmatrix}1\\ 2\end{pmatrix}$">, we could row reduce the augmented
+matrix obtained by adding the column
+
+<!-- MATH
+ $\begin{pmatrix}1\\2\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img45.gif"
+ ALT="$ \begin{pmatrix}1\\ 2\end{pmatrix}$">
+to <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img43.gif"
+ ALT="$ A$">, row-reducing and solving
+the resulting system, or simply observe that 
+<!-- MATH
+ ${\mathbf x}=
+\begin{pmatrix}1\\2\\0\\0\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="110" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img46.gif"
+ ALT="$ {\mathbf x}=
+\begin{pmatrix}1\\ 2\\ 0\\ 0\end{pmatrix}$">
+is a particular solution.
+Since the matrix <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img43.gif"
+ ALT="$ A$">
+is already in row-reduced form, we solve the
+homogeneous systems follows: Writing the matrix equation as a system,
+we see 
+<!-- MATH
+ $x_1 + x_3 = 0$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img47.gif"
+ ALT="$ x_1 + x_3 = 0$">
+and 
+<!-- MATH
+ $x_2 + 2x_4 = 0$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img48.gif"
+ ALT="$ x_2 + 2x_4 = 0$">, so the general solution
+to the homogeneous is 
+
+<!-- MATH
+ $\langle x_1, x_2, x_3, x_4\rangle = x_3\langle -1, 0, 1, 0\rangle + x_4\langle
+0,-2,0,1\rangle $
+ -->
+<IMG
+ WIDTH="386" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img49.gif"
+ ALT="$ \langle x_1, x_2, x_3, x_4\rangle = x_3\langle -1, 0, 1, 0\rangle + x_4\langle
+0,-2,0,1\rangle $">.
+Thus the general solution to the nonhomogeneous system is 
+
+<!-- MATH
+ $\langle x_1, x_2, x_3, x_4\rangle = x_3\langle -1, 0, 1, 0\rangle + x_4\langle
+0,-2,0,1\rangle + \langle 1, 2, 0, 0\rangle $
+ -->
+<IMG
+ WIDTH="487" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img50.gif"
+ ALT="$ \langle x_1, x_2, x_3, x_4\rangle = x_3\langle -1, 0, 1, 0\rangle + x_4\langle
+0,-2,0,1\rangle + \langle 1, 2, 0, 0\rangle $">.
+
+<P>
+<DT>7.
+<DD>Find the volume of the parallelepiped determined by the vectors
+
+<!-- MATH
+ ${\mathbf u}= \langle 1,2,3\rangle$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img51.gif"
+ ALT="$ {\mathbf u}= \langle 1,2,3\rangle $">, 
+<!-- MATH
+ ${\mathbf v}= \langle 2,0,1 \rangle$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img52.gif"
+ ALT="$ {\mathbf v}= \langle 2,0,1 \rangle $">, and 
+<!-- MATH
+ ${\mathbf w}=\langle 3,0,4\rangle$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img53.gif"
+ ALT="$ {\mathbf w}=\langle 3,0,4\rangle $">.
+
+<P>
+This is simply 
+<!-- MATH
+ $|{\mathbf u}\bullet ({\mathbf v}\times {\mathbf w})| =
+|\langle 1,2,3\rangle \bullet \langle 0,-5,0\rangle | = 10$
+ -->
+<IMG
+ WIDTH="343" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img54.gif"
+ ALT="$ \vert{\mathbf u}\bullet ({\mathbf v}\times {\mathbf w})\vert =
+\vert\langle 1,2,3\rangle \bullet \langle 0,-5,0\rangle \vert = 10$">.
+
+<P>
+<DT>8.
+<DD>An aircraft flies 200 kph in still air. There is a wind from the
+  north  at 100kph.  The pilot wants to fly due east.  In what
+  direction should the pilot fly, and what is the ground speed of the
+  aircraft?
+
+<P>
+Let 
+<!-- MATH
+ ${\mathbf u}= \langle a,b\rangle$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img55.gif"
+ ALT="$ {\mathbf u}= \langle a,b\rangle $">
+be the direction in which the plane should
+fly.  Let 
+<!-- MATH
+ ${\mathbf w}= \langle 0, -100\rangle$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img56.gif"
+ ALT="$ {\mathbf w}= \langle 0, -100\rangle $">
+represent the wind.  The desired
+flight direction is 
+<!-- MATH
+ ${\mathbf v}= \langle c, 0\rangle$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img57.gif"
+ ALT="$ {\mathbf v}= \langle c, 0\rangle $">. We have 
+<!-- MATH
+ ${\mathbf u}+ {\mathbf w}= {\mathbf v}$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img58.gif"
+ ALT="$ {\mathbf u}+ {\mathbf w}= {\mathbf v}$">, or 
+
+<!-- MATH
+ $\langle a, b-100\rangle = \langle c,0\rangle$
+ -->
+<IMG
+ WIDTH="163" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img59.gif"
+ ALT="$ \langle a, b-100\rangle = \langle c,0\rangle $">, so <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img60.gif"
+ ALT="$ a = c$">
+and <IMG
+ WIDTH="66" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img61.gif"
+ ALT="$ b = 100$">.
+
+<P>
+One way to proceed is: Since 
+<!-- MATH
+ $|{\mathbf u}| = 200$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img62.gif"
+ ALT="$ \vert{\mathbf u}\vert = 200$">
+we have 
+<!-- MATH
+ $a^2 + b^2 = 200^2$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img63.gif"
+ ALT="$ a^2 + b^2 = 200^2$">
+or 
+<!-- MATH
+ $a = \pm 100\sqrt 3$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img64.gif"
+ ALT="$ a = \pm 100\sqrt 3$">, clearly 
+<!-- MATH
+ ${\mathbf u}= \langle 100\sqrt3, 100\rangle$
+ -->
+<IMG
+ WIDTH="146" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img65.gif"
+ ALT="$ {\mathbf u}= \langle 100\sqrt3, 100\rangle $">
+is in
+the correct direction (some easterly compnent). The ground speed is
+
+<!-- MATH
+ $|{\mathbf v}|$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img66.gif"
+ ALT="$ \vert{\mathbf v}\vert$">
+which is <IMG
+ WIDTH="58" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img67.gif"
+ ALT="$ 100\sqrt3$">
+km/h.  The direction of flight makes an
+angle of 30 degrees with the ``positive <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img68.gif"
+ ALT="$ x$">
+axis''.
+
+<P>
+<DT>9.
+<DD>Find the inverse of the matrix 
+
+<!-- MATH
+ $A = \begin{pmatrix}1&2\\2&5\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img69.gif"
+ ALT="$ A = \begin{pmatrix}1&amp;2\\ 2&amp;5\end{pmatrix}$">
+and use it to solve the system
+
+<!-- MATH
+ $A{\mathbf x}= \begin{pmatrix}3\\4\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img70.gif"
+ ALT="$ A{\mathbf x}= \begin{pmatrix}3\\ 4\end{pmatrix}$">. The matrix
+
+<!-- MATH
+ $\begin{pmatrix}1&2&1&0\\2&5&0&1\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img71.gif"
+ ALT="$ \begin{pmatrix}1&amp;2&amp;1&amp;0\\ 2&amp;5&amp;0&amp;1\end{pmatrix}$">
+row reduces to 
+
+<!-- MATH
+ $\begin{pmatrix}1&0&5&-2\\0&1&-2&1\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="148" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img72.gif"
+ ALT="$ \begin{pmatrix}1&amp;0&amp;5&amp;-2\\ 0&amp;1&amp;-2&amp;1\end{pmatrix}$">, so 
+
+<!-- MATH
+ $A^{-1} = \begin{pmatrix}5&-2\\-2&1\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img73.gif"
+ ALT="$ A^{-1} = \begin{pmatrix}5&amp;-2\\ -2&amp;1\end{pmatrix}$">, and 
+
+<!-- MATH
+ $A{\mathbf x}= \begin{pmatrix}3\\4\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img70.gif"
+ ALT="$ A{\mathbf x}= \begin{pmatrix}3\\ 4\end{pmatrix}$">
+implies that 
+
+<!-- MATH
+ ${\mathbf x}= A^{-1}\begin{pmatrix}3\\4\end{pmatrix} =
+\begin{pmatrix}7\\-2\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="191" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/img74.gif"
+ ALT="$ {\mathbf x}= A^{-1}\begin{pmatrix}3\\ 4\end{pmatrix} =
+\begin{pmatrix}7\\ -2\end{pmatrix}$">. The inverse for the matrix can
+also be found by formula.
+
+<P>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-2-Practice-sol/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 8 Fall 1999</I>
+<BR><I>1999-11-04</I>
+</ADDRESS>
+</BODY>
+</HTML>

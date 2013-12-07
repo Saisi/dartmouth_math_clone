@@ -1,0 +1,11 @@
+body {background-color:#CCEBEB;}
+body {color:black;}
+*{font-family:"trebuchet ms", helvetica, arial, sans-serif;}
+a:link {color:darkslateblue; text-decoration:none;}      /* unvisited link */
+a:visited {color:darkslateblue; text-decoration:none;}  /* visited link */
+a:hover {color:blueviolet; text-decoration:none;}  /* mouse over link */
+a:active {color:darkslateblue; text-decoration:none;}  /* selected link */
+tr#navigation a:link {color:white;}
+tr#navigation a:visited {color:white;}
+tr#navigation a:hover {color:powderblue;}
+tr#navigation a:active {color:white;}

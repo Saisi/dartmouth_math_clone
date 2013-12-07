@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="Microsoft Word 81.2">
+
+<BODY BGCOLOR = ffffcc>
+
+<TITLE>Problem 25</TITLE>
+</HEAD>
+<BODY>
+
+<B>
+
+<FONT FACE="Times">
+
+<P>
+
+Problem 25
+
+</P>
+
+</B>
+
+<P>&nbsp;</P>
+<P>Question:  A cube has six square faces.  In how many ways can we color them (each face getting just one color) with four colors?  With eight colors?</P>
+
+<P>Answer:</P>
+
+</font>
+
+<P>The number of colorings of a cube with four colors can be found using the CFB Theorem.  The group of rotations of the cube has 24 elements.  It is helpful to think of them belonging to four categories.  First is the identity rotation, the next three categories are as follows:</P>
+
+<P>&#9;&#9;&#9;II.  Rotations around an axis through two faces.</P>
+<P>&#9;&#9;&#9;There are three axes to rotate about.  Corresponding to each axis </P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P>are rotations of 90, 180 and 270 degrees.  Thus this category</P>
+<P>includes  nine rotations in the group.  These rotations fix two faces </P><DIR>
+<DIR>
+
+<P>and permute the remaining four.  Thus in cyclic notation they can be written like (1)(6)(2345)</P>
+
+<P>III.  Rotations around an axis through opposite vertices.</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>&#9;&#9;&#9;There are four different axes to rotate about.  Corresponding to </P><DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P>each axis are two rotations, one of 120 degrees and one of 240 degrees.  This category also includes eight rotations.  In cyclic notation these rotations are of the form (123)(456).</P>
+
+<P>IV.  Rotations around an axis through the perpendicular bisector of two opposite sides.  There are six possible axes here, each corresponding to a 180 rotation.  So there are six rotations of the form (12)(35)(46).</P>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>To calculate the number of distinct colorings we need to determine how many colorings are fixed by each rotation.  Since the rotations in each category are just different orientations of the same action this can be done by category.</P>
+
+<P>I.&#9;The identity fixes all 4<SUP>6</SUP> colorings.</P>
+
+<P>II.&#9;Using cyclic notation:</P>
+
+<P>&#9;3 rotations of 90 degrees:</P>
+<P>&#9;(_)(_)(_ _ _ _)&#9;&#9;&#9;fixes: 3*4<SUP>3</SUP> colorings</P>
+<P>&#9; 4   4  4 1 1 1</P>
+
+<P>3 rotations of 180 degrees:</P>
+<P>&#9;(_)(_)(_ _ _ _)&#9;&#9;&#9;fixes: 3*4<SUP>4</SUP> colorings</P>
+<P>&#9; 4   4   4 4 1 1 </P>
+<P>3 rotations of 270 degrees:</P>
+<P>&#9;(_)(_)(_ _ _ _)&#9;&#9;&#9;fixes: 3*4<SUP>3</SUP> colorings</P>
+<P>&#9; 4   4   4 1 1 1 </P>
+
+<P>&nbsp;</P>
+<P>III.&#9;The 4 rotations of 120 degrees and 4 rotations of 240 degrees result similarly:</P>
+<P>&#9;(_ _ _)(_ _ _) &#9;&#9;&#9;fixes: 2*4*4<SUP>2</SUP> colorings</P>
+<P>&#9; 4 1 1   4 1 1</P>
+
+<P>&#9;(the 2 here is to count both the fix of the 120 degree rotation and the 240 degree </P>
+<P>rotation)</P>
+
+<P>&nbsp;</P>
+<P>IV.&#9;Lastly the six rotations of the form:</P>
+<P>&#9;(_ _)(_ _)(_ _)&#9;&#9;&#9;fixes: 6*4<SUP>3</SUP> colorings</P>
+<P>&#9; 4 1   4 1   4 1</P>
+
+<P>Now we sum up the fixes of each rotation and divide by 24, the order of the group:</P>
+
+<P>&#9;5760/24 = 240</P>
+
+<P>So there are 240 distinct colorings of the cube with four colors.  The calculations for eight colors are identical except the switch of the 4 for the 8.  With eight colors the total colorings is 11712.</P></FONT></BODY>
+</HTML>

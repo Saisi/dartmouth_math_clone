@@ -1,0 +1,141 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>fourier.html</title>
+		<!-- Created by Maple 6, APPLE_PPC_MAC -->
+	</head>
+
+	<body bgcolor="white">
+		<a href="fourier.html#MapleAutoBookmark1"><font size="3">Some examples of Fourier series</font></a><font size="3">
+		<hr>
+		<a name="MapleAutoBookmark1"></a></font>
+		<div align="left">
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier1.gif" width="21" height="13" alt="%?"></font></p>
+		</div>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>tr:=x-&gt; if (x&gt;=(-4) and x&lt;(-2)) then (x+4) elif (x&gt;=-2 and x&lt;0) then -x elif (x&gt;=0 and x&lt;2) then x elif (x&gt;=2 and x&lt;4) then -(x-4) fi;</b></font></p>
+		</div>
+		<div align="left">
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier2.gif" width="76" height="13" alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier3.gif" width="133" height="13" alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier4.gif" width="649" height="13" alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier5.gif" width="61" height="13" alt="tr := proc (x) options operator, arrow; if -4 &lt;= x ..."></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier6.gif" width="22" height="13" alt="1"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot(tr,-3..3);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier7.gif" width="388" height="288" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font></p>
+		</div>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>sq:=proc(x) if (x&gt;=(-2*evalf(Pi)) and x&lt;(-1*evalf(Pi))) then 1 elif (x&gt;=-1*evalf(Pi) and x&lt;0) then -1 elif (x&gt;=0 and x&lt;evalf(Pi)) then 1 elif (x&gt;=evalf(Pi) and x&lt;2*evalf(Pi)) then -1 end if end proc;</b></font></p>
+		</div>
+		<div align="left">
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier8.gif" width="79" height="13" alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier9.gif" width="252" height="13" alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier10.gif" width="213" height="13" alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier11.gif" width="202" height="13" alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier12.gif" width="251" height="13" alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier13.gif" width="70" height="13" alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(..."><br>
+			<img src="http://www.math.dartmouth.edu/~m23f00/images/fourier14.gif" width="61" height="13" alt="sq := proc (x) if -2*evalf(Pi) &lt;= x and x &lt; -evalf(..."></font></p>
+		</div>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier15.gif" width="26" height="13" alt="-1"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot(sq,-5..5);</b></font></p>
+		</div>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier16.gif" width="337" height="250" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>f:=(x,n)-&gt;1-8/(Pi^2)*sum('cos((2*k-1)*Pi*x/2)/(2*k-1)^2',k=1..n);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier17.gif" width="254" height="77" alt="f := proc (x, n) options operator, arrow; 1-8*sum('..."></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>f5:=x-&gt;f(x,5);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier18.gif" width="94" height="13" alt="f5 := proc (x) options operator, arrow; f(x,5) end ..."></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot([tr,f5],-3..3);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier19.gif" width="337" height="250" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot(tr-f5,-3..3);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier20.gif" width="337" height="250" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot(tr-f2,-3..3);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier21.gif" width="388" height="288" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>g:=(x,n)-&gt;(4/Pi)*sum('sin((2*k-1)*x)/(2*k-1)',k=1..n);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier22.gif" width="203" height="63" alt="g := proc (x, n) options operator, arrow; 4*sum('si..."></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>g2:=x-&gt;g(x,2);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier23.gif" width="99" height="13" alt="g2 := proc (x) options operator, arrow; g(x,2) end ..."></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>g5:=x-&gt;g(x,5);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier24.gif" width="99" height="13" alt="g5 := proc (x) options operator, arrow; g(x,5) end ..."></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot([sq,g2,g5],-5..5);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier25.gif" width="388" height="288" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot([sq-g2,sq-g5],-5..5);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier26.gif" width="388" height="288" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot(sq-g2,-5..5);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier27.gif" width="388" height="288" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font><font color="red" size="3"><b>plot(sq-g5,-5..5);</b></font></p>
+		</div>
+		<center>
+			<p><font size="3"><img src="http://www.math.dartmouth.edu/~m23f00/images/fourier28.gif" width="388" height="288" alt="[Maple Plot]"></font></p>
+		</center>
+		<div align="left">
+			<p><font size="3"><tt>&gt; </tt></font></div>
+	</body>
+
+</html>

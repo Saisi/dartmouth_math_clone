@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>oct8</TITLE>
+<META NAME="description" CONTENT="oct8">
+<META NAME="keywords" CONTENT="oct8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="oct8.css">
+</HEAD>
+<BODY >
+
+<P>
+<B>Covered today:</B> Homogeneous 2nd order constant coefficient DEs for which the
+characteristic
+equation has complex conjugate solutions.  We now know (but still haven't proven) the
+solution to any homogeneous 2nd order constant coefficient DE.  We'll prove that we
+actually have the general solution next week.
+
+<P>
+<B>For next time:</B> 3.4 - 7,11,17,22 and 3.8 - 5,9 (for these last two, simply set up
+and solve the DE - don't worry about the quasi-frequency and the quasi-period and
+whatnot (yet)).  Also, do the following problem:  assume you have a
+spring-mass system which is critically damped.  Suppose the mass starts at
+equilibrium and you give it an initial velocity (in either direction).
+Prove that the mass will never return to its equilibrium.
+
+<P>
+<B>Transparencies from class:</B> (these were taken almost verbatim from the more
+complete discussion in section 3.8 of your book)
+
+<P>
+Consider a spring (which we'll assume to be weightless) whose
+natural length is <I>l</I>.  Suppose that we hang a mass <I>m</I> at the
+end of the spring, and this elongates the spring by <I>L</I> units.
+There are now two forces acting on the mass:  its weight, which
+is acting downward, and a spring force <I>F</I><SUB><I>s</I></SUB> which is acting
+upward.  Hooke's law states that (for reasonably small values
+of <I>L</I>, which we'll assume we have at all times) the spring force
+is proportional to the elongation of the spring.  The constant of
+proportionality <I>k</I> is called the <I>spring constant</I>.
+
+<P>
+Assuming downward is the positive direction, explain why <I>mg</I>-<I>kL</I>=0.
+
+<P>
+We will now consider what happens to the position of this mass
+at the end of this spring if it is initially displaced, given an
+initial velocity, and/or acted on by an outside force.   Let <I>u</I>(<I>t</I>)
+denote the position of the mass at time <I>t</I>, with <I>u</I>=0 corresponding
+to the equilibrium position of the mass (i.e. when <I>u</I>=0 the spring is
+<I>L</I>+<I>l</I> units long), and with <I>u</I>(<I>t</I>) being measured positive downward.
+
+<P>
+There are four forces acting on the mass at any time <I>t</I>.
+<DL COMPACT>
+<DT>1.
+<DD>the weight of the mass;
+<DT>2.
+<DD>the spring force <I>F</I><SUB><I>s</I></SUB>(<I>t</I>), which is proportional to the total
+elongation <I>L</I>+<I>u</I>(<I>t</I>) of the spring (with constant of proportionality
+equal to
+the spring constant <I>k</I>) and always acts to restore the spring to
+its equilibrium position.  Show that 
+<!-- MATH
+ $F_s(t)=-k(L+u(t))$
+ -->
+<I>F</I><SUB><I>s</I></SUB>(<I>t</I>)=-<I>k</I>(<I>L</I>+<I>u</I>(<I>t</I>)).  Why is the
+sign in front always the same despite the fact that this force is
+acting in different directions at different times?
+<DT>3.
+<DD>the resistive force (or damping force) <I>F</I><SUB><I>d</I></SUB>(<I>t</I>), which is
+proportional to the speed of the mass.  Show that 
+<!-- MATH
+ $F_d(t)=-\gamma u'(t)$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23f99/oct8/img1.gif"
+ ALT="$F_d(t)=-\gamma u'(t)$">,
+where <IMG
+ WIDTH="13" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23f99/oct8/img2.gif"
+ ALT="$\gamma$">
+is a positive constant called the <I>damping constant</I>.
+Again, you should convince yourself that this one formula is valid
+at all times whether the mass is moving upward or downward.
+<DT>4.
+<DD>an applied external force <I>F</I><SUB><I>e</I></SUB>(<I>t</I>).  
+</DL>
+
+<P>
+Prove that, if there is no external force, this system is described by
+a homogeneous 2nd-order linear constant-coefficient DE (with nonnegative
+coefficients).
+
+<P>
+Suppose a mass weighing 5 pounds is hooked to a spring and stretches it 2 inches.
+Assuming no air resistance, if this mass is pushed up 1 foot and then released, find the
+function <I>u</I> describing the position of the mass at time <IMG
+ WIDTH="39" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23f99/oct8/img3.gif"
+ ALT="$t \geq 0$">.
+
+<P>
+Suppose the same mass is suspended from the same spring, but now we assume that there is
+air resistance given by <IMG
+ WIDTH="42" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23f99/oct8/img4.gif"
+ ALT="$\gamma = 3$">.
+Find the function <I>u</I> describing the postion of
+the mass at time <IMG
+ WIDTH="39" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23f99/oct8/img3.gif"
+ ALT="$t \geq 0$">.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 23 Fall 1999</I>
+<BR><I>1999-10-08</I>
+</ADDRESS>
+</BODY>
+</HTML>

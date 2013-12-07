@@ -1,0 +1,13 @@
+
+ol.part {
+  list-style-type: square;
+  counter-reset: part;
+}
+
+ol.part li {
+  counter-increment: part;
+}
+
+ol.part li:before {
+  content: "Part " counter(part,upper-alpha) ": ";
+}

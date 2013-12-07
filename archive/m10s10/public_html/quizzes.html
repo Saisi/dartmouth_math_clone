@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>m10s10: Quiz Notes</title></head>
+
+
+<body bgcolor="#BFFDBF" link="black" vlink="black">
+
+<hr>
+
+<p> </p>
+
+<center>He uses statistics as a drunken man uses lamp-posts - for support rather than for illumination.<br>
+	Andrew Lang (attr)</center>
+
+<p> </p>
+
+<hr>
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="+1"><b>Notes on Quizzes for Math 10: Introductory Statistics</b></font></p>
+
+<p><a name="mt1">On quiz 1</a>, the main difficulty people had was comparing the wrong probabilities in part b of #2.  For independence, you must compare the conditional and non-conditional probabilities for a single event (given the other, in the conditional case), not each individual event's probability.  (<a href="quiz1key.pdf">answers</a>)</p>
+
+<p>Quiz 2 mostly had the problem that people did their combinations for #2 choosing some number out of 6.  In using combinations for probability of getting certain outcomes in a sequence, it is the position of the specified outcomes that you are choosing, out of all positions in the sequence.  The other common error was either failing to subtract the probability of a and b when finding the probability of a or b, or assuming the probability of a and b was the product of their individual probabilities.  Since these events were not independent that is not the case.  (<a href="quiz2key.pdf">answers</a>)</p>
+
+<p>Quiz 3 had several problems.  There were a number of people who numbered the x-axis of the histogram up from 1, which would be inappropriate on any percentage histogram, and a number who assigned only one value to each bar instead of a range and then said there was a problem with having only four bars.  Remember that the five-number summary of a data set is not the data set itself, and in this case with the range 0-10, median 6 and quartiles 5 and 7, 25% of the outcomes are going to be in each range 0-5, 5-6, 6-7, and 7-10.  The flaw in the histogram was only the inconsistent scale on the x-axis.  I was somewhat distressed by the number of people who said a properly designed histogram would be bell shaped; this only the case if the data set itself is normally distributed, and not all of them are.  (<a href="quiz3key.pdf">answers</a>)</p>
+
+<p><a name="mt2">Quiz 4</a>, as I mentioned in class, turned out to be unintentionally subtle.  Both parts of #1 are examples of ecological correlation, which usually can be expected to increase the magnitude of r (so in this case, since r is negative, to decrease r).  In particular, if your data is homoscedastic and you switch over to the graph of averages, instead of having multiple points per x-value (and more when x is near the x-mean than when it is farther away) you have exactly one point per x-value.  The extreme values get more weight, which strengthens the correlation; confusing this is the fact that the standard deviations of x and y also change, which may have a net effect of leaving the regression line essentially unmoved (which tripped some people up).  In class we did the following example: in the table below, the points are those on the graph of averages.</p>
+<table>
+<tr align="center"><td><u>x</u></td><td> </td><td><u>y</u></td></tr>
+<tr align="center"><td>1</td><td> </td><td>2.5</td></tr>
+<tr align="center"><td>2</td><td> </td><td>4</td></tr>
+<tr align="center"><td>3</td><td> </td><td>3</td></tr>
+<tr align="center"><td>4</td><td> </td><td>5</td></tr>
+<tr align="center"><td>5</td><td> </td><td>7</td></tr>
+</table>
+<p>In the data set drawn from the graph of averages, the average x is 3, average y is 4.45, SD for x is 1.41, SD for y is 1.61, and r is .88.  I stated in the original graph, there were 3 points with x=1, 8 with x=2, 15 with x=3, 8 with x=4, and 3 with x=5.  This makes the values for the original data set as follows: the average x is 3, average y is 4.24, SD for x is 1.04, SD for y is 1.43, and r is .64.  If you calculate the regression line you find that it moves actually quite a bit in this example, but it highlights the extreme values getting more proportional weight (x=1 gets 1/5 instead of 3/37 weight in the calculation of r).  See the <a href="schedule.html#may5">links for the May 5 lecture</a> for an example where the regression line moves very little (r increases there too, but not as dramatically).</p>
+
+<p>In problem 2b, we were seeing the regression fallacy at work.  It certainly may be that some biological factor is at work, partially responsible for the fact that the correlation coefficient is only .75, but the data does not tell you that (or tell you it is false).  One of the most common problems here may have been a misinterpretation of the question.  I got a number of people who said, essentially, that since r=0.75, in particular it was positive, it would not be possible for high values of A to go with low values of B.  That was not the assertion; the made-up researchers observed high values of A tended to go with <i>not <b>as</b> high</i> values of B, and suspected that was because something in fish biology made it difficult for a fish to be simultaneously high in both chemicals.  That may be true, but it is impossible to conclude it with certainty from this data.  (<a href="quiz4key.pdf">answers</a>)</p>
+
+<p>Quiz 5 was more straightforward again.  The major error on #1 was either converting the standard deviation incorrectly or not converting it at all in part b.  In #2 there was a wider variety of error: In part 1 a lot of people ended up with a probability distribution with more than the two possible outcomes listed, and sometimes with probabilities that did not sum to 1.  In part 2, to my surprise one of the most common errors was computing the standard error as square root of five times the mean of the box, instead of the standard deviation of the box.  Errors in computing the standard deviation itself were also common.  Nothing made me feel there were common <i>conceptual</i> problems.  (<a href="quiz5key.pdf">answers</a>)</p>
+
+<p>Quiz 6 went quite well overall.  The main error in #1 was to use the sample to calculate the SE instead of the population.  #2 had a wider variety of errors, but the only ones that concerned me were (a) using percentages instead of frequencies to calculate chi-squared, (b) not scaling the expected frequencies to be out of 50, the sample size, and (c) computing the degrees of freedom as though this were a test for independence instead of a test of distribution.  (<a href="quiz6key.pdf">answers</a>)</p>
+
+<hr>
+
+<p><a href="schedule.html">Back</a> to the Math 10 schedule page</p>
+
+<p><a href="index.html">Back</a> to the main Math 10 page</p>
+
+<p><font size="-1">Last modified May 28, 2010</font></p>
+
+</body></html>

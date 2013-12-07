@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>MatrixInverse.html</title>
+<!-- Created by Maple 9.50, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="MatrixInverse.html#MapleAutoBookmark1">MatrixInverse.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font color="#ff0033" size="6" face="Lucida Bright"><u><strong>Math 22 Fall 2004</strong></u></font></p>
+<p align="center"><font color="#ff0033" size="6" face="Lucida Bright"><u><strong>Linear Algebra with Applications</strong></u></font></p>
+<p align="center"><font color="#0000cc" size="5" face="Lucida Bright"><strong>
+<br>The Inverse of a Matrix</strong></font></p>
+<p align="center"><font color="#0000cc" size="5" face="Lucida Bright"><u><strong>October 11, 2004</strong></u></font></p>
+<p align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;</strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong>Load the packages for doing &nbsp;Linear Algebra</strong></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>with(Student[LinearAlgebra]):</strong></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the protected name `.` has been redefined and unprotected</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;Define a matrix we want to invert</strong></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A := &lt;&lt;0, 3, -1&gt;|&lt;2, -2, 0&gt;|&lt;1, -5, 1&gt;&gt;;</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_1.gif" width="142" height="75" alt="A := Matrix([[0, 2, 1], [3, -2, -5], [-1, 0, 1]])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;Augment it with the identical matrix</strong></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A_I := &lt;A | IdentityMatrix(3)&gt;;</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_2.gif" width="248" height="75" alt="A_I := Matrix([[0, 2, 1, 1, 0, 0], [3, -2, -5, 0, 1, 0], [-1, 0, 1, 0, 0, 1]])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;Perform row reductions to transform A into</strong></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;the Reduced Echelon Form (that is, the identity matrix).</strong></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A_I := SwapRows(A_I, 1, 3);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_3.gif" width="248" height="75" alt="A_I := Matrix([[-1, 0, 1, 0, 0, 1], [3, -2, -5, 0, 1, 0], [0, 2, 1, 1, 0, 0]])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A_I := AddRow(A_I, 2, 1, 3);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_4.gif" width="248" height="75" alt="A_I := Matrix([[-1, 0, 1, 0, 0, 1], [0, -2, -2, 0, 1, 3], [0, 2, 1, 1, 0, 0]])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A_I := AddRow(A_I, 3, 2, 1);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_5.gif" width="248" height="75" alt="A_I := Matrix([[-1, 0, 1, 0, 0, 1], [0, -2, -2, 0, 1, 3], [0, 0, -1, 1, 1, 3]])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A_I := MultiplyRow(A_I, 3, -1):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>A_I := MultiplyRow(A_I, 2, -1/2):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>A_I := MultiplyRow(A_I, 1, -1);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_6.gif" width="259" height="96" alt="A_I := Matrix([[1, 0, -1, 0, 0, -1], [0, 1, 1, 0, (-1)/2, (-3)/2], [0, 0, 1, -1, -1, -3]])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A_I := AddRow(A_I, 2, 3, -1):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>A_I := AddRow(A_I, 1, 3, 1);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_7.gif" width="248" height="96" alt="A_I := Matrix([[1, 0, 0, -1, -1, -4], [0, 1, 0, 1, 1/2, 3/2], [0, 0, 1, -1, -1, -3]])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;Now the last 3 columns should form the inverse matrix of A</strong></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A_Inverse := LinearAlgebra[DeleteColumn](A_I, [1 .. 3]);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_8.gif" width="190" height="96" alt="A_Inverse := Matrix([[-1, -1, -4], [1, 1/2, 3/2], [-1, -1, -3]])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="4" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><strong>Let's check our answer</strong></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>A.A_Inverse, A_Inverse.A;</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/MatrixInverse_9.gif" width="189" height="75" alt="Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]]), Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></strong></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

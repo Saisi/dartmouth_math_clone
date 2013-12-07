@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Effects of surface interactions</TITLE>
+<META NAME="description" CONTENT="Effects of surface interactions">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node118.html">
+<LINK REL="previous" HREF="node116.html">
+<LINK REL="up" HREF="node116.html">
+<LINK REL="next" HREF="node118.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1545"
+  HREF="node118.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1543"
+  HREF="node116.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1537"
+  HREF="node116.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1546"
+  HREF="node118.html">Bending the waveguide</A>
+<B> Up:</B> <A NAME="tex2html1544"
+  HREF="node116.html">Further decoherence and loss</A>
+<B> Previous:</B> <A NAME="tex2html1538"
+  HREF="node116.html">Further decoherence and loss</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00951000000000000000"></A>
+<A NAME="sec:surf"></A>
+<BR>
+Effects of surface interactions
+</H2>
+
+<P>
+The EW trap has the benefit of creating high
+field gradients near a surface, but along with this comes the disadvantage
+that interactions with that surface that can alter the trap potential
+and even cause heating
+and loss of trapped atoms.
+
+<P>
+An atom's change in potential near a surface is
+known as the van der Waals interaction (<IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1487.gif"
+ ALT="$l \ll \lambda$">) or the Casimir
+interaction (<IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1488.gif"
+ ALT="$l \gg \lambda$">), depending on the distance <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$"> from the surface
+compared to 
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img83.gif"
+ ALT="$\lambda$">, the dominant wavelength responsible for the
+polarizability of the atom (in our case of Cs this is the D line resonance,
+the same as our trapping resonance).
+There is a smooth
+cross-over from van der Waals (<IMG
+ WIDTH="65" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1489.gif"
+ ALT="$U \sim l^{-3}$">, which can be viewed
+as the atom's electrostatic interaction with the 
+image of its own fluctuating dipole) to Casimir (<IMG
+ WIDTH="65" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1490.gif"
+ ALT="$U \sim l^{-4}$">,
+which can be viewed as a retarded van der Waals attraction
+or equally well as an atomic level
+shift due to a cavity QED effect) at
+<!-- MATH
+ $l \approx \lambda/10$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1491.gif"
+ ALT="$l \approx \lambda/10$">[<A
+ HREF="node161.html#cavqed">96</A>].
+In the case of a perfect mirror surface, the full form is known for any <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$">,
+but for a dielectric surface, the expression becomes much more
+complicated to evaluate[<A
+ HREF="node161.html#spruch">184</A>].
+
+<P>
+Since our trapping distances are larger than this cross-over point, we will use
+the Casimir form, which is correct for asymptotically large <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$">, and
+is always an overestimate of the true potential[<A
+ HREF="node161.html#cavqed">96</A>].
+The dependence of the coefficient with dielectric constant is complicated
+[<A
+ HREF="node161.html#lifshitz">68</A>,<A
+ HREF="node161.html#yan">207</A>], but
+we will use the simpler approximate
+form given by Spruch and Tikochinsky[<A
+ HREF="node161.html#spruch">184</A>], to give
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U_{\rm Cas}(l) = -\frac{3}{8 \pi}
+	\frac{\hbar c \,\alpha(0)}{4 \pi \epsilon_0 \, l^4} \,
+	\frac{\epsilon - 1}{\epsilon+ (30/23)\epsilon^{1/2} + 7/23}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:cas"></A><IMG
+ WIDTH="452" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1492.gif"
+ ALT="\begin{displaymath}
+U_{\rm Cas}(l) = -\frac{3}{8 \pi}
+\frac{\hbar c \,\alpha(0...
+...,
+\frac{\epsilon - 1}{\epsilon+ (30/23)\epsilon^{1/2} + 7/23}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+(in the MKSA system).
+This approximate form is known to be within 6% of the
+exact expression for any dielectric
+constant <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> [<A
+ HREF="node161.html#yan">207</A>].
+Substituting the recently calculated[<A
+ HREF="node161.html#babb">60</A>]
+static polarizability of cesium, <!-- MATH
+ $\alpha(0) = 399.9$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1493.gif"
+ ALT="$\alpha(0) = 399.9$"> a.u., gives a Casimir
+interaction coefficient of 4.9nK<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">m<IMG
+ WIDTH="12" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1494.gif"
+ ALT="$^4$"> for <IMG
+ WIDTH="77" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img28.gif"
+ ALT="$n_g = 1.56$">.
+
+<P>
+Figure <A HREF="node103.html#fig:dielgeom">8.1</A>b shows the effect
+of this potential on a
+typical trap of depth 150<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">K and distance <IMG
+ WIDTH="70" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1495.gif"
+ ALT="$y_0 = 270$">nm.
+It is clear that the change is negligible further than 100nm from the
+surface,
+and a WKB
+tunneling calculation along this straight-line path (at <IMG
+ WIDTH="46" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img244.gif"
+ ALT="$x=0$">) shows that
+even if all atoms that reach the surface stick, the loss rate from the
+first few transverse modes is entirely negligible.
+However, care should be taken with the multi-mode regime, or in the case of
+high-<IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1412.gif"
+ ALT="$p$"> traps, since the tunneling via the
+corners of the ``bean'' shape may dominate for <IMG
+ WIDTH="59" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1496.gif"
+ ALT="$p&gt;0.4$">
+(Figure <A HREF="node107.html#fig:dielpot">8.3</A>).
+
+<P>
+The issue of energy transfer to trapped atoms due to a finite (and possibly
+room) temperature nearby surface is far less well
+understood, and may be a problem
+with many surface-based particle traps, as discussed by Henkel and Wilkens
+[<A
+ HREF="node161.html#henkel">92</A>].
+However, since we are trapping neutral particles and the conductivity of our
+surface is low, we expect a decoherence rate negligible compared
+to that already present from spontaneous absorption and emission cycles.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1545"
+  HREF="node118.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1543"
+  HREF="node116.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1537"
+  HREF="node116.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1546"
+  HREF="node118.html">Bending the waveguide</A>
+<B> Up:</B> <A NAME="tex2html1544"
+  HREF="node116.html">Further decoherence and loss</A>
+<B> Previous:</B> <A NAME="tex2html1538"
+  HREF="node116.html">Further decoherence and loss</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

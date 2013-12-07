@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Logistic.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE2:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Position,Time;<br>
+Digits:=5;<br>
+Position:=I0;<br>
+Time:=T0;<br>
+List:=[[Time,Position]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Position:=evalf(Position+Deltat*<br>
+((1/24)-(1/36))*<br>
+(Position*(1-(Position/250))));<br>
+Time:=evalf(Time+Deltat);<br>
+List:=[op(List),[Time,Position]];<br>
+od;<br>
+List;<br>
+end: <br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,50,2000,30*12):<br>
+<br>
+S2:=DE2(0,250,2000,30*12):<br>
+<br>
+S3:=DE2(0,350,2000,30*12):<br>
+<br>
+S4:=DE2(0,100,2000,30*12):<br>
+<br>
+S5:=DE2(0,300,2000,30*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+P2:=listplot(S2,color=blue):<br>
+<br>
+P3:=listplot(S3,color=green):<br>
+<br>
+P4:=listplot(S4,color=red):<br>
+<br>
+P5:=listplot(S5,color=green):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(P1,P2,P3,P4,P5,title="Logisitc Equation",labels=[months,fish]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Log/Logistic1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Quantum-classical correspondence</TITLE>
+<META NAME="description" CONTENT="Quantum-classical correspondence">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node12.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html551"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html549"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html545"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html552"
+  HREF="node28.html">Semiclassical connection between quantum</A>
+<B> Up:</B> <A NAME="tex2html550"
+  HREF="node12.html">Chapter 2: Quantum and</A>
+<B> Previous:</B> <A NAME="tex2html546"
+  HREF="node26.html">Regime of applicability of</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00330000000000000000"></A>
+<A NAME="sec:qcc"></A>
+<BR>
+Quantum-classical correspondence
+</H1>
+
+<P>
+The classical calculation of Section&nbsp;<A HREF="node13.html#sec:classreview">2.1</A> and
+the quantum LRT calculation of Section&nbsp;<A HREF="node20.html#sec:qmreview">2.2</A> gave
+the same answers for heating rate.
+This is remarkable because the energy evolution
+(spreading profile) was different:
+the classical spreading is gradual (for <!-- MATH
+ $t > \tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img366.gif"
+ ALT="$t &gt; \tau_{{\mbox{\tiny cl}}}$">), whereas the quantum
+spreading
+involves jumps in units of <IMG
+ WIDTH="26" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img367.gif"
+ ALT="$\hbar \omega$"> (for driving frequency <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">).
+It is also remarkable because the quantum result is therefore independent
+of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img368.gif"
+ ALT="$\hbar$">.
+However the heating rates agree
+because the expressions for spreading <EM>rate</EM>
+(second moment of spreading profile) were the same.
+The only difference is the replacement of
+the classical definition of <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> by the corresponding 
+quantum-mechanical definition <!-- MATH
+ $\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img243.gif"
+ ALT="$\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$">.
+If these two agree, then there is <EM>quantum-classical correspondence</EM> (QCC)
+as far as dissipation (friction <IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">) is concerned [<A
+ HREF="node161.html#doroncrs">47</A>,<A
+ HREF="node161.html#doronfrc">46</A>].
+Cohen calls this `restricted correspondence' because of the different
+spreading profiles.
+Here I present numerical
+evidence supporting this claim of QCC in a real system (a 2D cavity).
+Hence in the following chapters I will
+move freely between the quantum and classical pictures.
+In particular, the term `band profile'
+will then refer to both quantum and classical <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> auto-correlation spectra.
+
+<P>
+First I briefly mention QCC outside the LRT regime (whose limits
+were outlined in the previous
+section).
+For extremely small <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$"> in the quantum-adiabatic regime, there is no
+QCC expected because the level spacing distribution <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img369.gif"
+ ALT="$P(s)$"> for small
+<IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img370.gif"
+ ALT="$s\ll \Delta$">
+dominates the heating rate [<A
+ HREF="node161.html#wilk88">200</A>].
+This is a purely quantum effect (determined by certain quantum symmetries
+[<A
+ HREF="node161.html#bohigasleshouches">35</A>,<A
+ HREF="node161.html#mehta">146</A>]), and has no reason to agree
+with any classical quantity.
+At the other extreme,
+as <!-- MATH
+ $\hbar\rightarrow0$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img77.gif"
+ ALT="$\hbar\rightarrow0$"> the maximum <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$"> where LRT is valid also vanishes.
+Therefore if one is to have QCC in the semiclassical limit
+(a fundamental requirement of quantum mechanics being that it reduces to
+classical mechanics in this limit),
+some new mechanism is required.
+As explained by Cohen[<A
+ HREF="node161.html#doroncrs">47</A>,<A
+ HREF="node161.html#doronfrc">46</A>], in this limit QCC is achieved
+through semiclassical agreement of the spreading profiles
+(`detailed correspondence').
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:qcc"></A><A NAME="3279"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.5:</STRONG>
+
+Agreement between quantum and classical band profile in the billiard
+of Fig.&nbsp;<A HREF="node27.html#fig:bil">2.6</A>, for three example deformations:
+DI (dilation), W2 (periodic oscillation around the perimeter),
+P (wide `piston' existing only on the top edge).
+In each case classical is shown as a thick line (RMS estimation error of 3%),
+and quantum a thin line (RMS error of 10%, increasing at higher <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">);
+the agreement is excellent.
+Note that the <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img371.gif"
+ ALT="$y$">-axis has been displaced to clearly show the differing
+<!-- MATH
+ $\omega\rightarrow0$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img61.gif"
+ ALT="$\omega\rightarrow0$"> behavior.
+The singular peak at <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img372.gif"
+ ALT="$\omega = \pi$"> is due to the `bouncing ball' orbit.
+The units are such that <IMG
+ WIDTH="84" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img373.gif"
+ ALT="$m=v=1$">.
+The quantum calculation was performed at wavenumber <IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img11.gif"
+ ALT="$k \approx 400$"> using 451
+adjacent eigenstates.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="432" HEIGHT="285" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img374.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_review/qcc.eps,width=0.8\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:bil"></A><A NAME="3164"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.6:</STRONG>
+
+The example (undeformed) 2D billiard used for comparison of quantum and
+classical band profiles: the Bunimovich quarter-stadium.
+I typically choose <IMG
+ WIDTH="68" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img375.gif"
+ ALT="$a/R = 1$"> since this maximizes the average Lyapunov
+exponent (a measure of chaoticity).
+The overall size is set by <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img376.gif"
+ ALT="$R=1$">.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="276" HEIGHT="178" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img377.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_review/bil_qust.eps,width=0.5\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html553"
+  HREF="node28.html">Semiclassical connection between quantum and classical band profiles</A>
+<LI><A NAME="tex2html554"
+  HREF="node29.html">Numerical comparison of band profiles</A>
+<LI><A NAME="tex2html555"
+  HREF="node30.html">Quantum structure beyond the band profile</A>
+<LI><A NAME="tex2html556"
+  HREF="node31.html">Effects below the quantum level spacing</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html551"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html549"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html545"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html552"
+  HREF="node28.html">Semiclassical connection between quantum</A>
+<B> Up:</B> <A NAME="tex2html550"
+  HREF="node12.html">Chapter 2: Quantum and</A>
+<B> Previous:</B> <A NAME="tex2html546"
+  HREF="node26.html">Regime of applicability of</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,542 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Decomposition of general deformations</TITLE>
+<META NAME="description" CONTENT="Decomposition of general deformations">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node44.html">
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="node42.html">
+<LINK REL="next" HREF="node44.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html725"
+  HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html723"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html717"
+  HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html726"
+  HREF="node44.html">Addition of deformations: numerical</A>
+<B> Up:</B> <A NAME="tex2html724"
+  HREF="node42.html">Chapter 4: Improving upon</A>
+<B> Previous:</B> <A NAME="tex2html718"
+  HREF="node42.html">Chapter 4: Improving upon</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00510000000000000000"></A>
+<A NAME="sec:gen"></A>
+<BR>
+Decomposition of general deformations
+</H1>
+
+<P>
+The failure of the WNA for `special' deformations also
+extends to the much wider class of deformations which are <EM>similar</EM>
+to special. This is demonstrated in Fig.&nbsp;<A HREF="node42.html#fig:wna_gen">4.1</A>.
+It should be emphasized that this failure
+happens even if the cavity is strongly chaotic.
+
+<P>
+We seek an analytical estimate for <!-- MATH
+ $\tilde{C}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img471.gif"
+ ALT="$\tilde{C}(\omega)$">, 
+and in particular for its zero-frequency limit <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img583.gif"
+ ALT="$\nu$">. 
+This estimate should apply to any (general) deformation, 
+including the case of `close-to-special' deformations. 
+It would be useful to regard any general deformation  
+as a combination of `special' component and `normal' component. 
+The formulation of this idea is the 
+theme of the present section.  Supporting numerical 
+evidence is gathered in the next section.  
+
+<P>
+The special deformations (for which we have <IMG
+ WIDTH="46" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img584.gif"
+ ALT="$\nu=0$">) 
+constitute a linear space, meaning that any sum 
+of special deformations is also a special one.
+Now we would like to conjecture that there is also 
+a linear space of `normal' deformations. By definition, 
+for `normal' deformation <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> looks like 
+an uncorrelated random sequence of impulses, and 
+consequently the WNA is a reasonable approximation.
+The notion of randomness can be better formulated  
+as in Appendix&nbsp;<A HREF="node133.html#ap:cross">F</A> leading to Eq.(<A HREF="node133.html#e37">F.4</A>). 
+However in practice (<A HREF="node133.html#e37">F.4</A>) is not useful, because 
+it cannot be applied as an actual classification tool.  
+(Eq.(<A HREF="node133.html#e37">F.4</A>) is never satisfied exactly). 
+Still we are going to demonstrate that there is a 
+<EM>unique</EM> way to identify the subspace of normal deformations, 
+if we insist on a maximal (<I>i.e. </I>the most inclusive)
+definition of this subspace.
+
+<P>
+It is important to clarify the heuristic reasoning for
+having a linear space of normal deformations. 
+The <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> that corresponds to some normal 
+deformation <!-- MATH
+ $D({\mathbf s})$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img57.gif"
+ ALT="$D({\mathbf s})$"> looks like white noise. 
+It means that only self-correlations of its spikes 
+are statistically significant. If we have 
+two such generic quantities, 
+say <!-- MATH
+ ${\mathcal{F}}_1(t)$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img585.gif"
+ ALT="${\mathcal{F}}_1(t)$"> and <!-- MATH
+ ${\mathcal{F}}_2(t)$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img586.gif"
+ ALT="${\mathcal{F}}_2(t)$">, 
+then we expect <!-- MATH
+ ${\mathcal{F}}_1(t) + {\mathcal{F}}_2(t)$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img587.gif"
+ ALT="${\mathcal{F}}_1(t) + {\mathcal{F}}_2(t)$"> 
+to share the same property.  
+
+<P>
+The correlation function 
+of <!-- MATH
+ ${\mathcal{F}}(t) = {\mathcal{F}}_1(t) + {\mathcal{F}}_2(t)$
+ -->
+<IMG
+ WIDTH="163" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img588.gif"
+ ALT="${\mathcal{F}}(t) = {\mathcal{F}}_1(t) + {\mathcal{F}}_2(t)$"> 
+can be written formally as 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e18"></A>
+<!-- MATH
+ \begin{eqnarray}
+C_{1+2}(\tau) = C_1(\tau) + C_2(\tau) + 2C_{1,2}(\tau)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="279" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img589.gif"
+ ALT="$\displaystyle C_{1+2}(\tau) = C_1(\tau) + C_2(\tau) + 2C_{1,2}(\tau)$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img590.gif"
+ ALT="$C_{1,2}(\tau)$"> is the <EM>cross-correlation function</EM>.
+In Appendix&nbsp;<A HREF="node132.html#ap:alex">E</A> we argue the following 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e_19"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nonumber 
+\int_{-\infty}^{\infty} {C}_{1,2}(\tau) d\tau \ \ = \ \ 0 
+\hspace*{3cm} \\\mbox{if 1$=$general, 2$=$special}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="304" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img591.gif"
+ ALT="$\displaystyle \int_{-\infty}^{\infty} {C}_{1,2}(\tau) d\tau \ \ = \ \ 0
+\hspace*{3cm}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="181" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img592.gif"
+ ALT="$\displaystyle \mbox{if 1$=$general, 2$=$special}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.3)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This can also be proved easily using the fact that <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> is an exact
+quadratic form (<A HREF="node34.html#eq:kernel">3.5</A>) in the function space of
+<!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$">.
+(Consider that the special deformations are eigenvectors of this quadratic form
+with zero eigenvalue, <I>i.e. </I>they lie in the null-space [<A
+ HREF="node161.html#strangbook">188</A>]).
+The result is exact, and does not involve any approximation.
+In Appendix&nbsp;<A HREF="node133.html#ap:cross">F</A> we argue the following 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e_20"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nonumber 
+C_{1,2}(\tau) \; \approx \; c \times
+	\left[
+	\oint \! D_1({\mathbf s})D_2({\mathbf s}) d{\mathbf s}
+	\right]
+	\delta(\tau)
+\hspace*{0.5cm} \\\ \ \ \ \ \mbox{if 1$=$normal, 2$=$general}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="314" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img593.gif"
+ ALT="$\displaystyle C_{1,2}(\tau) \; \approx \; c \times
+\left[
+\oint \! D_1({\mathbf s})D_2({\mathbf s}) d{\mathbf s}
+\right]
+\delta(\tau)
+\hspace*{0.5cm}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="212" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img594.gif"
+ ALT="$\displaystyle \ \ \ \ \ \mbox{if 1$=$normal, 2$=$general}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+<!-- MATH
+ $c=2m^2 v_{{\mbox{\tiny E}}}^3 \langle|\cos\theta|^3\rangle/{\mathsf V}$
+ -->
+<IMG
+ WIDTH="173" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img595.gif"
+ ALT="$c=2m^2 v_{{\mbox{\tiny E}}}^3 \langle\vert\cos\theta\vert^3\rangle/{\mathsf V}$">.
+This result is an approximation, which is expected 
+to be as good as our assumption regarding the 
+`normality' of the deformation <!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$">.   
+Consider now the case where <!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$"> is normal 
+and <!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$"> is special. Both Eq.(<A HREF="node43.html#e_19">4.3</A>) 
+and Eq.(<A HREF="node43.html#e_20">4.4</A>) should apply. But these equations 
+are consistent if and only if <!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$"> is 
+orthogonal to <!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$">. 
+We say that <!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$"> and <!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$"> 
+are orthogonal (<IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img598.gif"
+ ALT="$1\perp2$">) using the 
+following definition:    
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e20"></A>
+<!-- MATH
+ \begin{eqnarray}
+\mbox{orthogonality} 
+\ \ \ \ \ \Leftrightarrow \ \ \ \ \ 
+\oint D_1({\mathbf s})D_2({\mathbf s}) d{\mathbf s}  = 0
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="346" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img599.gif"
+ ALT="$\displaystyle \mbox{orthogonality}
+\ \ \ \ \ \Leftrightarrow \ \ \ \ \
+\oint D_1({\mathbf s})D_2({\mathbf s}) d{\mathbf s} = 0$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.5)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Thus we have proved that normal deformations must be 
+orthogonal (in the sense of (<A HREF="node43.html#e20">4.5</A>)) to special 
+deformations. Obviously we have proved here a necessary 
+rather than a sufficient condition for `normality'. 
+However, if we insist on a maximal definition for the 
+subspace of normal deformations, then we get a unique 
+identification. Namely, a deformation is classified 
+as `normal' if it is orthogonal to the subspace of 
+special deformations.  
+
+<P>
+The practical consequences of Eq.(<A HREF="node43.html#e_19">4.3</A>) 
+and Eq.(<A HREF="node43.html#e_20">4.4</A>) are as follows:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e_21"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nu_{1+2} = \nu_{1} 
+\ \ \ \ \ \mbox{if 1$=$general, 2$=$special}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="283" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img600.gif"
+ ALT="$\displaystyle \nu_{1+2} = \nu_{1}
+\ \ \ \ \ \mbox{if 1$=$general, 2$=$special}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.6)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+and 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e_22"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nonumber 
+\nu_{1+2} \approx \nu_{1} + \nu_{2} + 
+2c\oint \! D_1({\mathbf s})D_2({\mathbf s}) d{\mathbf s}
+\\\ \ \ \ \ \mbox{if 1$=$normal, 2$=$general}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="275" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img601.gif"
+ ALT="$\displaystyle \nu_{1+2} \approx \nu_{1} + \nu_{2} +
+2c\oint \! D_1({\mathbf s})D_2({\mathbf s}) d{\mathbf s}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="212" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img594.gif"
+ ALT="$\displaystyle \ \ \ \ \ \mbox{if 1$=$normal, 2$=$general}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.7)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+These results are tested in the next section.  
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:add_goodgood"></A><A NAME="7014"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.2:</STRONG>
+
+Addition of two `good' normal deformations (1=P2, 2=WG).  
+The two are orthogonal in the sense of (<A HREF="node43.html#e20">4.5</A>). 
+That they are `good' can be seen by their good agreement with their WNA
+results (horizontal arrows).
+The power spectrum of the sum agrees well with the sum of the power
+spectra.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="315" HEIGHT="249" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img602.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_wall/add_goodgood.eps,width=0.6\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:add_badbad"></A><A NAME="7016"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.3:</STRONG>
+
+Addition of two `bad' normal deformations (1=FR, 2=SX). 
+The two are orthogonal in the sense of (<A HREF="node43.html#e20">4.5</A>). 
+That they are `bad' is shown by a lack of agreement with their WNAs.
+The power spectrum of the sum is badly approximated 
+by the sum of the power spectra (non-linear addition).
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="319" HEIGHT="249" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img603.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_wall/add_badbad.eps,width=0.6\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:add_goodany"></A><A NAME="7018"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.4:</STRONG>
+
+Addition of a `good' normal deformation (1=WG) 
+to a general deformation (2=SX).  
+The two are orthogonal in the sense of (<A HREF="node43.html#e20">4.5</A>).
+The power spectrum of the sum agrees well with 
+the sum of the power spectra. 
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="316" HEIGHT="246" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img604.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_wall/add_goodany.eps,width=0.6\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:add_anyspec"></A><A NAME="7020"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.5:</STRONG>
+
+Addition of a general deformation (1=FR) 
+to a `special' deformation (2=TX).
+The power spectrum of the sum coincides with the 
+sum of the power spectra in the limit <!-- MATH
+ $\omega\rightarrow0$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img61.gif"
+ ALT="$\omega\rightarrow0$">, 
+as implied by Eq.(<A HREF="node43.html#e_21">4.6</A>). 
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="320" HEIGHT="247" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img605.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_wall/add_anyspec.eps,width=0.6\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html725"
+  HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html723"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html717"
+  HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html726"
+  HREF="node44.html">Addition of deformations: numerical</A>
+<B> Up:</B> <A NAME="tex2html724"
+  HREF="node42.html">Chapter 4: Improving upon</A>
+<B> Previous:</B> <A NAME="tex2html718"
+  HREF="node42.html">Chapter 4: Improving upon</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

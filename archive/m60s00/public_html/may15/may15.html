@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>may15</TITLE>
+<META NAME="description" CONTENT="may15">
+<META NAME="keywords" CONTENT="may15">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="may15.css">
+</HEAD>
+<BODY >
+
+<P>
+<B>Monday </B>
+
+<P>
+<B>Homework</B>
+Read section 9.1 and 9.2.  From section 9.1 do numbers 1,3,4,10,12 and
+resolve the sign error from
+the computation in class.  The hint is that the place we thought the sign
+error was likely was in fact evaluated correctly!  Look at the other terms
+closely.
+
+<P>
+We will meet for x-session tomorrow and hopefully get back and go over the
+exam.
+
+<P>
+<B>Comments</B>
+stats[statevalf,cdf,normald](.56);
+
+<P>
+stats[statevalf,pdf,normald](.56);
+
+<P>
+Here is are the programs explored on Monday.
+<P>
+<TT>Dsum := proc(n,p) local i,new,U,X,Y; U :=
+NFoldConvolution([[0,1-p],[1,p]],n); new := []; for i
+ from 1 to n  do new := [op(new), [evalf(U[i][1]
+),evalf((1)*(U[i][2]))]]; od; new;
+ Spikegraph(new, 0, n ,true );   end: 
+</TT>
+<P>
+<TT>Dsum(40,1/9);
+
+</TT>
+<P>
+<TT>DCentral := proc(n,p) local i,new,U,X,Y; U :=
+NFoldConvolution([[0,1-p],[1,p]],n); new := []; for
+ i from 1 to n  do new := [op(new), [evalf(((U[i][1] -
+n*(p))/sqrt((p*(1-p))*n)) ),  
+evalf(sqrt((p*(1-p))*n)*(U[i][2]))]]; od; new; X := Spikegraph(new,
+-6,6,true ); Y :=  plot((1/(sqrt(2*Pi)))*exp(-x^2/2),x = -6
+.. 6); display(X,Y);end: 
+</TT>
+<P>
+<TT>DCentral(40,1/9);
+</TT>
+<P>
+<TT>Bsum := proc(n,p) local i,new,U,X,Y; U :=
+NFoldConvolution([[1,p],[0,0],[-1,p]],n); new := []; for i
+ from 1 to 3*n - n do new := [op(new), [evalf(U[i][1]
+),evalf((1/2)*(U[i][2]))]]; od;
+   new; Spikegraph(new, -n, n ,true );  end: 
+ 
+ Bsum(20,1/9); 
+</TT>
+<P>
+<TT>BCentral := proc(n,p) local i,new,U,X,Y; U :=
+ NFoldConvolution([[1,p],[0,0],[-1,1-p]],n); new := []; for i
+  from 1 to 3*n - n do new := [op(new),
+ [evalf(((U[i][1] -
+n*(2*p-1))/sqrt((1-(2*p-1)^2)*n)) ),
+evalf((1/2)*sqrt((1-(2*p-1)^2)*n)*(U[i][2]))]]; od; new;
+    X := Spikegraph(new, -6,6,true ); Y :=
+ plot((1/(sqrt(2*Pi)))*exp(-x^2/2),x = -6 .. 6); display(X,Y);end:
+ 
+  BCentral(40,1/9);
+</TT>
+<P>
+
+<P>
+<B>Wednesday</B>
+
+<P>
+<B>Homework</B>
+
+<P>
+Read 9.2 and 9.3.  Do problems 1,2,5,6,10,11 and 15 from 9.2.
+
+<P>
+<B>Comments:</B>
+
+<P>
+Here is the maple code played with in todays lecture.
+<P>
+<TT>f := n-&gt; stats[statevalf,cdf,normald](evalf((-n)/sqrt(n))) +
+stats[statevalf,cdf,normald](evalf((1500-n)/sqrt(n)));
+</TT>
+<P>
+
+<P>
+<B>Friday</B>
+
+<P>
+<B>Homework</B>
+Read 9.3 and 10.3.   From 9.3 do 3,4,7,10 and 14 and from section
+10.3 do 1 and 2.  Notice that the program required for problem 9.3 7
+is mearly  a slight modification away from a program  in our week 7 weekly
+log and is not meant to be difficult  (with that said dealing with parts
+d and e may require a bit of thinking).
+
+<P>
+<B>Comments</B>
+I think the most profitable way to end this class is to explore the random
+walks we played with in the first week of class.  So our schedule will be
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>10.3 - giving us a deeper understand of the central limit theorem.
+<P>
+<DT>2.
+<DD>12.1 (and 10.1)  random walks and wondering around.
+
+<P>
+<DT>3.
+<DD>Then where do we go from here.  A breaif look into the facinating
+world of Brownian motion (where random walk meet the central limit
+theorem). 
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 60 Spring 2000</I>
+<BR><I>2000-05-22</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,910 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>$FILE</TITLE>
+<META NAME="description" CONTENT="$FILE">
+<META NAME="keywords" CONTENT="seq_example">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="seq_example.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+<DIV ALIGN="CENTER">
+Sequence Convergence and Divergence
+<BR>
+Examples
+</DIV>
+<P>
+<DIV ALIGN="CENTER">
+</DIV>
+
+<P>
+Today in class, I proved that the sequence 
+<!-- MATH
+ $\left\{
+  \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x} \: dx \right\} ^{\infty}_{n=k}$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img1.gif"
+ ALT="$ \left\{
+\int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x} \: dx \right\} ^{\infty}_{n=k}$">
+  converges to a limit of <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img2.gif"
+ ALT="$\ln{2}$">.
+
+<P>
+There are two steps in working such a problem:
+<BR>
+1. Find the limit, <I>L</I> (i.e. using calculus techniques).
+<BR>
+2. Prove that the limit exists, and is equal to <I>L</I>.
+
+<P>
+<FONT SIZE="+1">Step 1:  Find the limit. 
+</FONT>
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="397" HEIGHT="344" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img3.gif"
+ ALT="\begin{eqnarray*}
+\lim_{n \to \infty} \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac...
+... \infty}\frac{2n - 1}{n + 1} \Biggr) } \\ [.1 in]
+&amp; = &amp; \ln{2}.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+
+<P>
+Now that we have computed what the limit is (or rather, at this point
+we ought to say ``what the limit would be, if it exists''), we have to
+prove that the limit exists, and that it is in fact, <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img2.gif"
+ ALT="$\ln{2}$">.
+
+<P>
+<FONT SIZE="+1">Step 2: Prove the limit is <IMG
+ WIDTH="38" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img4.gif"
+ ALT="$\ln{2}.$">
+</FONT>
+<P>
+Let us recall the definition of convergence: a sequence
+
+<!-- MATH
+ $\{a_n\}_{n=k}^{\infty}$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img5.gif"
+ ALT="$\{a_n\}_{n=k}^{\infty}$">
+converges to a limit, <I>L</I>, if, for every
+<IMG
+ WIDTH="47" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img6.gif"
+ ALT="$\epsilon &gt; 0$">,
+there exists a real number, <I>M</I> (a function of
+<IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">), such that if <I>n</I> &gt; <I>M</I>, then 
+<!-- MATH
+ $|a_n - L| < \epsilon$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img8.gif"
+ ALT="$\vert a_n - L\vert &lt; \epsilon$">.
+
+<P>
+What this means is that in order to prove our sequence converges, we
+need to demonstrate that when someone hands us an <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">
+(think:
+<I>really small number</I>), we can give them back an <I>M</I> (think: <I>  really large number</I>, usually expressed in terms of <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">,
+and
+NOT involving <I>n</I>), so that as long as we are looking at terms of the
+sequence past the <I>M</I>th (i.e.  as long as <I>n</I> &gt; <I>M</I>), then we can
+guarantee that 
+<!-- MATH
+ $|a_n - L| < \epsilon$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img8.gif"
+ ALT="$\vert a_n - L\vert &lt; \epsilon$">.
+
+<P>
+
+<P>
+So how do we go about finding such an <I>M</I>?  Well, we assume that what
+we want to be true <U>is</U> true, for the time being.  What we
+want is for
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Biggl| \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x} \: dx - \ln{2}
+\Biggr| < \epsilon,
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="188" HEIGHT="61" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img9.gif"
+ ALT="\begin{displaymath}\Biggl\vert \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x} \: dx - \ln{2}
+\Biggr\vert &lt; \epsilon,\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+when <I>n</I> is greater than some <I>M</I> (which we get
+to pick).  How do we find such an <I>M</I>?
+
+<P>
+Well, the inequality above tells us exactly what restriction we
+need to place on <I>n</I> to ensure we are no less than <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">
+away
+from our limit.  We just need to solve the inequality for <I>n</I> so that
+we can see it explicitly.
+
+<P>
+Having already determined that 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty} \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x}
+\: dx = \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) },
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="262" HEIGHT="61" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img10.gif"
+ ALT="\begin{displaymath}\lim_{n \to \infty} \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x}
+\: dx = \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) },\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+we begin working backwards to find <I>n</I>:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Biggl| \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) } - \ln{2} \Biggr| 
+ < \epsilon
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="198" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img11.gif"
+ ALT="\begin{displaymath}\Biggl\vert \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) } - \ln{2} \Biggr\vert
+&lt; \epsilon\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Now, as I said in class, the stuff inside the absolute value bars is
+actually a negative number (since 
+<!-- MATH
+ $\frac{2n-1}{n+1} < 2$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img12.gif"
+ ALT="$\frac{2n-1}{n+1} &lt; 2$">), so we
+switch the order of subtraction to make it positive...
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Biggl| \ln{2} - \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) } \Biggr| 
+ < \epsilon
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="198" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img13.gif"
+ ALT="\begin{displaymath}\Biggl\vert \ln{2} - \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) } \Biggr\vert
+&lt; \epsilon\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Now, use the logarithm subtraction formula (
+<!-- MATH
+ $\ln{a} - \ln{b} =
+\ln{\frac{a}{b}}$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img14.gif"
+ ALT="$\ln{a} - \ln{b} =
+\ln{\frac{a}{b}}$">), noting that absolute value bars are no longer
+needed:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\ln{\Biggl( \frac{2n+2}{2n-1} \Biggr)} < \epsilon
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="136" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img15.gif"
+ ALT="\begin{displaymath}\ln{\Biggl( \frac{2n+2}{2n-1} \Biggr)} &lt; \epsilon\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Next, exponentiate both sides
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{2n+2}{2n-1} < e^{\epsilon}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="94" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img16.gif"
+ ALT="\begin{displaymath}\frac{2n+2}{2n-1} &lt; e^{\epsilon}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+and perform long division on the left-hand side:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+1 + \frac{3}{2n-1} < e^{\epsilon}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="127" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img17.gif"
+ ALT="\begin{displaymath}1 + \frac{3}{2n-1} &lt; e^{\epsilon}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+and finally solve for <I>n</I>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{3}{2n-1} < e^{\epsilon} - 1
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="126" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img18.gif"
+ ALT="\begin{displaymath}\frac{3}{2n-1} &lt; e^{\epsilon} - 1\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{3}{e^{\epsilon} - 1} < 2n - 1
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="126" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img19.gif"
+ ALT="\begin{displaymath}\frac{3}{e^{\epsilon} - 1} &lt; 2n - 1\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+n > \frac{3}{2(e^{\epsilon} - 1)} + \frac{1}{2}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="146" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img20.gif"
+ ALT="\begin{displaymath}n &gt; \frac{3}{2(e^{\epsilon} - 1)} + \frac{1}{2}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P> 
+
+<P>
+What does this last statement say?  It says that if we assume for the
+moment that we have some value of <I>n</I> such that
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Biggl| \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x} \: dx - \ln{2}
+\Biggr| < \epsilon,
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="188" HEIGHT="61" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img9.gif"
+ ALT="\begin{displaymath}\Biggl\vert \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x} \: dx - \ln{2}
+\Biggr\vert &lt; \epsilon,\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+then it logically follows that 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+n > \frac{3}{2(e^{\epsilon} - 1)} + \frac{1}{2}.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="152" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img21.gif"
+ ALT="\begin{displaymath}n &gt; \frac{3}{2(e^{\epsilon} - 1)} + \frac{1}{2}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Hence, if given some <IMG
+ WIDTH="47" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img6.gif"
+ ALT="$\epsilon &gt; 0$">,
+we set
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+M = \frac{3}{2(e^{\epsilon} - 1)} + \frac{1}{2},
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="160" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img22.gif"
+ ALT="\begin{displaymath}M = \frac{3}{2(e^{\epsilon} - 1)} + \frac{1}{2},\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+then whenever <I>n</I> &gt; <I>M</I>, we will have 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Biggl| \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x} \: dx - \ln{2}
+\Biggr| < \epsilon.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="188" HEIGHT="61" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img23.gif"
+ ALT="\begin{displaymath}\Biggl\vert \int_{1+\frac{1}{n}}^{2-\frac{1}{n}} \frac{1}{x} \: dx - \ln{2}
+\Biggr\vert &lt; \epsilon.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+This is exactly what we were trying to prove.
+
+<P>
+Several people have queried me about what would happen if we tried to
+prove that the limit of this sequence was <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img24.gif"
+ ALT="$\ln{3}$">.
+How would you
+know you went wrong?  Well, let's try to repeat the calculations, this
+time using <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img24.gif"
+ ALT="$\ln{3}$">.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Biggl| \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) } - \ln{3} \Biggr| 
+ < \epsilon
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="198" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img25.gif"
+ ALT="\begin{displaymath}\Biggl\vert \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) } - \ln{3} \Biggr\vert
+&lt; \epsilon\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Again, since 
+<!-- MATH
+ $\frac{2n-1}{n+1} < 3$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img26.gif"
+ ALT="$\frac{2n-1}{n+1} &lt; 3$">,
+the stuff inside the absolute
+value bars is negative, so we reverse the order...
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Biggl| \ln{3} - \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) } \Biggr| 
+ < \epsilon
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="198" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img27.gif"
+ ALT="\begin{displaymath}\Biggl\vert \ln{3} - \ln{\Biggl( \frac{2n - 1}{n + 1} \Biggr) } \Biggr\vert
+&lt; \epsilon\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Now, use the logarithm subtraction formula (
+<!-- MATH
+ $\ln{a} - \ln{b} =
+\ln{\frac{a}{b}}$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img14.gif"
+ ALT="$\ln{a} - \ln{b} =
+\ln{\frac{a}{b}}$">), noting that absolute value bars are no longer
+needed:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\ln{\Biggl( \frac{3n+3}{2n-1} \Biggr)} < \epsilon
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="136" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img28.gif"
+ ALT="\begin{displaymath}\ln{\Biggl( \frac{3n+3}{2n-1} \Biggr)} &lt; \epsilon\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Next, exponentiate both sides
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{3n+3}{2n-1} < e^{\epsilon}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="94" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img29.gif"
+ ALT="\begin{displaymath}\frac{3n+3}{2n-1} &lt; e^{\epsilon}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+and perform long division on the left-hand side:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{3}{2} + \frac{9}{2(2n-1)} < e^{\epsilon}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="154" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img30.gif"
+ ALT="\begin{displaymath}\frac{3}{2} + \frac{9}{2(2n-1)} &lt; e^{\epsilon}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+and finally solve for <I>n</I>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{9}{4n-2} < e^{\epsilon} - \frac{3}{2}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="130" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img31.gif"
+ ALT="\begin{displaymath}\frac{9}{4n-2} &lt; e^{\epsilon} - \frac{3}{2}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{9}{e^{\epsilon} - \frac{3}{2}} < 4n - 2
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="129" HEIGHT="52" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img32.gif"
+ ALT="\begin{displaymath}\frac{9}{e^{\epsilon} - \frac{3}{2}} &lt; 4n - 2\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+n > \frac{9}{4e^{\epsilon} - 6} + \frac{1}{2}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="132" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img33.gif"
+ ALT="\begin{displaymath}n &gt; \frac{9}{4e^{\epsilon} - 6} + \frac{1}{2}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Let's call the right-hand side of this inequality <I>M</I>'.
+
+<P>
+At first glance, this may look just as legitimate as the last example,
+but it isn't.  Here's a guideline that should be pretty easy to use.
+As we said before, someone is handing you an <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">,
+and you have
+to find an <I>M</I> that's going to guarantee the sequence terms are closer
+than <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">
+to the limit value.  It should make sense, then, that
+the smaller the value of <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">,
+the higher you need to make <I>M</I>
+in order to get close enough to the limit value.  In fact, as
+
+<!-- MATH
+ $\epsilon \rightarrow 0$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img34.gif"
+ ALT="$\epsilon \rightarrow 0$">,
+you should expect that 
+<!-- MATH
+ $M \rightarrow
+\infty$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img35.gif"
+ ALT="$M \rightarrow
+\infty$">.
+Let's try this for our original <I>M</I>:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{\epsilon \to 0} \frac{3}{2(e^{\epsilon} - 1)} = \infty
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="148" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img36.gif"
+ ALT="\begin{displaymath}\lim_{\epsilon \to 0} \frac{3}{2(e^{\epsilon} - 1)} = \infty\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The denominator goes to zero (from the positive side), hence we get
+<IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img37.gif"
+ ALT="$\infty$">
+for the limit.
+
+<P>
+Now, let's try it for the value <I>M</I>' we computed using <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img24.gif"
+ ALT="$\ln{3}$">
+for
+the limit:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\lim_{\epsilon \to 0} \frac{9}{4e^{\epsilon} - 6} + \frac{1}{2} =
+\frac{9}{4(1) - 6} + \frac{1}{2} = -4.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="310" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img38.gif"
+ ALT="\begin{displaymath}\lim_{\epsilon \to 0} \frac{9}{4e^{\epsilon} - 6} + \frac{1}{2} =
+\frac{9}{4(1) - 6} + \frac{1}{2} = -4.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Hmmm...that doesn't seem to make much sense.  If this were true, then
+if <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">
+is really small, we should be able to pick any n value greater than 
+-4 and find we are within <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">
+of our limit value, <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img24.gif"
+ ALT="$\ln{3}$">.
+Suppose 
+<!-- MATH
+ $\epsilon = .001$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img39.gif"
+ ALT="$\epsilon = .001$">.
+Then
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+M' = \frac{9}{4e^{.001} - 6} \approx -4.509
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="210" HEIGHT="47" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img40.gif"
+ ALT="\begin{displaymath}M' = \frac{9}{4e^{.001} - 6} \approx -4.509\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+So we should be able to pick any <I>n</I> &gt; -4.509, and have our <I>n</I>th term
+(and beyond) be within .001 of <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img24.gif"
+ ALT="$\ln{3}$">.
+So let's try it for <I>n</I> = 2.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Biggl| \ln{\Biggl( \frac{2(2) - 1}{(2) + 1} \Biggr) } - \ln{3} \Biggr| 
+ = |\ln{1} - \ln{3}| = \ln{3} \nless .001
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="407" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img41.gif"
+ ALT="\begin{displaymath}\Biggl\vert \ln{\Biggl( \frac{2(2) - 1}{(2) + 1} \Biggr) } - ...
+... \Biggr\vert
+= \vert\ln{1} - \ln{3}\vert = \ln{3} \nless .001\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+If you've lasted this long, you may be wondering ``but so what?  You
+just chose a bad value for <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">
+and <I>n</I>.''  But if we got back
+and look at the definition of covergence, the <I>M</I> we choose must work
+for <I>any</I> choice of <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img7.gif"
+ ALT="$\epsilon$">,
+and for any <I>n</I> &gt; <I>M</I>.  Since it
+doesn't, we must conclude that our original assumption, that the limit
+of the sequence was <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/seq_example/img24.gif"
+ ALT="$\ln{3}$">,
+must be wrong.
+
+<P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-13</I>
+</ADDRESS>
+</BODY>
+</HTML>

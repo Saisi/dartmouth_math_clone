@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>april3</TITLE>
+<META NAME="description" CONTENT="april3">
+<META NAME="keywords" CONTENT="april3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="april3.css">
+</HEAD>
+<BODY >
+<B>Monday </B>
+
+<P>
+Assignment:
+Read section 2.1 and 2.2 and do 2.1 number 7 and 2.2 numbers
+1,2,5,6,9,10,11.
+ Comments:    
+If you are having trouble with the computer aspects in numbers 9,10, 
+and 11 you may use the following template.  (Please try to first do the
+problem yourself.) 
+
+<P>
+<P>
+<TT>Wait  :=  proc(f,n)
+</TT>
+<P>
+<TT>local  wait, trans, U, waitlist, i , j,sum,average:
+</TT>
+<P>
+<TT>with(stats):
+</TT>
+<P>
+<TT>waitlist:=[];
+</TT>
+<P>
+<TT>for i from 1 to n
+</TT>
+<P>
+<TT>do;
+</TT>
+<P>
+<TT>wait := 0;
+</TT>
+<P>
+<TT>while wait &lt; 100 do
+</TT>
+<P>
+<TT>trans:=unapply(f,x):
+</TT>
+<P>
+<TT>U := random[uniform[0,1]]();
+</TT>
+<P>
+<TT>wait := wait + trans(U):      
+</TT>
+<P>
+<TT>od;
+</TT>
+<P>
+<TT>waitlist := [op(waitlist), wait - 100];  
+</TT>
+<P>
+<TT>od;   
+</TT>
+<P>
+<TT>sum:=0;
+</TT>
+<P>
+<TT>for j from 1 to nops(waitlist)
+</TT>
+<P>
+<TT>do
+</TT>
+<P>
+<TT>sum := sum + waitlist[j];  
+</TT>
+<P>
+<TT>od;
+</TT>
+<P>
+<TT>average := sum/nops(waitlist);
+</TT>
+<P>
+<TT>lprint(average); 
+</TT>
+<P>
+<TT>end:
+ 
+Wait(10*x,10);
+</TT>
+<P>
+
+<P>
+Notice the integer used by  Wait is the number of experiments run
+and the
+function f is the function of the value of the uniform random
+variable on [0,1] that you are using. In my example above I am using the
+uniform random variable on [0,10].  You might want to think about the
+answer!  ( For 9 the needed function is described in the book, in  10 it
+ is another  linear function    and in 11 you must figure out the
+function (or change the progam  to use the general simulation from
+the previous chapter.))
+
+<P>
+The computer demos and experiments we are using in class can be found
+here:
+ <a
+href = "http://www.dartmouth.edu/~chance/teaching_aids/books_articles/">
+Computer Demos.</a>
+
+<P>
+<B>Wednesday </B>
+
+<P>
+Assignment:     Read section 3.1 and do from section 2.2 problems
+4,8,12,13,14,15,Extra Credit 18,19. 
+
+<P>
+<B>Comments:</B>
+Here is the program that estimates the density function of a random
+variable on the unit interval with the uniform distribution that we used
+in class today.  (Included is a the area-bargraph
+program, which it uses.)
+
+<P>
+<TT>Areabargraph:=proc(data,xmin,xmax,k)
+ local sorteddata, dx, lines,graphicslist, f:	
+  sorteddata:=[]:
+ 	dx:=(xmax-xmin)/k:
+ 	lines:=[]:
+ 	graphicslist:=[]:
+ 	sorteddata:=sort(data):
+ 	if ((op(1,sorteddata)&lt;xmin) or
+(op(nops(sorteddata),sorteddata)&gt;xmax)) then
+ 		lprint(`Note:  some data values lie outside the
+user-defined interval.`)
+ 	fi:
+ 	f:=proc(k,sorteddata,xmin,dx,xmax,lines::evaln)
+ 		local i,j,currentupperlim,leng,index,counter,result,
+         finallist,q,numb,linelist:
+   finallist:=[]:
+   linelist:=[]:
+ 		index:=1:
+ 		leng:=nops(sorteddata):
+   currentupperlim:=xmin+dx:
+ 		result:=[]:
+ 		for q from 1 to leng do
+ 			if ((op(q,sorteddata)&gt;=xmin) and
+(op(q,sorteddata)&lt;=xmax)) 
+ 				then
+finallist:=[op(finallist),op(q,sorteddata)]
+ 			fi:
+ 		od:
+ 		numb:=nops(finallist):
+   for i from 1 to k do
+ 			counter:=0:
+ 			while ((index&lt;=numb) and
+(op(index,finallist)&lt;=currentupperlim)) do
+ 				counter:=counter+1:
+ 				index:=index+1:
+ 			od:
+ 			result:=[op(result),counter]:
+ 			currentupperlim:=currentupperlim+dx:
+ 		od:
+ 		for j from 1 to k do
+ 			linelist:=[op(linelist),[xmin + (j-1)*dx,0]]:
+ 			linelist:=[op(linelist),[xmin +
+(j-1)*dx,op(j,result)/(leng*dx)]]:
+ 			linelist:=[op(linelist),[xmin +
+j*dx,op(j,result)/(leng*dx)]]:
+ 			linelist:=[op(linelist),[xmin + j*dx,0]]:
+ 	 od:
+ 	 lines:=linelist:		
+  end:
+  f(k,sorteddata,xmin,dx,xmax,lines):
+  plot(lines,style=LINE);
+end:
+</TT>
+<P>
+<TT>Ranvar  :=  proc(f,n,m)
+</TT>
+<P>
+<TT>local i,j, data,newdata,y,mx,mn,trans:
+</TT>
+<P>
+<TT>with(stats):
+</TT>
+<P>
+<TT>data:=[]:
+</TT>
+<P>
+<TT>newdata:=[]:
+</TT>
+<P>
+<TT>for i from 1 to n 
+</TT>
+<P>
+<TT>do
+</TT>
+<P>
+<TT>y := random[uniform[0,1]]();
+</TT>
+<P>
+<TT>data := [y,op(data)];
+</TT>
+<P>
+<TT>od;
+</TT>
+<P>
+<TT>for j from 1 to n
+</TT>
+<P>
+<TT>do
+</TT>
+<P>
+<TT>trans:=unapply(f,x):
+</TT>
+<P>
+<TT>newdata := [op(newdata), trans(data[j])];
+</TT>
+<P>
+<TT>od;
+</TT>
+<P>
+<TT>mx := max(op(newdata));
+</TT>
+<P>
+<TT>mn := min(op(newdata));
+</TT>
+<P>
+<TT>Areabargraph(newdata,mn,mx,m);
+</TT>
+<P>
+<TT>end:
+</TT>
+<P>
+<TT>Ranvar(x^2,1000,15);
+</TT>
+<P>
+
+<P>
+<B>Friday </B>
+
+<P>
+Assignment:
+Read sections 3.1 and 3.2 and do from section 3.1 numbers 5,6,8,13,14,18
+and from
+section 3.2 numbers 8,12,14.
+
+<P>
+Comments:
+Here are the computer demos for chapter 3.  
+
+<P>
+ <a
+href = "http://www.dartmouth.edu/~chance/teaching_aids/books_articles/">
+Computer Demos.</a>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 60 Spring 2000</I>
+<BR><I>2000-04-07</I>
+</ADDRESS>
+</BODY>
+</HTML>

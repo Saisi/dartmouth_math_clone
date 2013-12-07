@@ -1,0 +1,526 @@
+<DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Welcome to the Math 100 Web Page</title>
+  </head>
+  
+  <style type="text/css"> 
+	BODY { margin: 3% 8%; }
+	TABLE { align: center; }
+	TABLE.index TR { border: thin solid black; vertical-align:
+	baseline; }
+	H3 { color: #990000 }
+  </style>
+  <body bgcolor=#FFFFFF>
+	
+	<p style="text-align:center; color: #990000; font-size: xx-large;
+	  font-weight: bold"> Math 100 </p>
+	<p style="text-align:center; color: #002C8F; font-size: x-large;
+	  font-weight: bold"> Markov Chain Monte Carlo (Topics in Probability)
+	  </p>
+	<p style="text-align:center; font-size: medium"> Instructor: Prof. Peter Winkler
+	  <tt> (peter.winkler at dartmouth.edu) </tt>
+	</p>
+	<p style="text-align: center; color #005F5A"> 
+	  <a href="index.html#abstract">Abstract</a> | 
+	  <a href="index.html#classes">Classes</a> |
+	  <a href="index.html#tutorials">Tutorials</a> |
+	  <a href="index.html#staff">Staff</a> |
+	  <a href="index.html#textbook">Textbook</a> |
+	  <a href="index.html#grading">Grading</a> |
+	  <a href="index.html#news">News and current assignment</a> |
+	  <a href="index.html#pat%20assignments">Past assignments</a> |
+	  <a href="index.html#exams">Exams</a> |
+	  <a href="index.html#honour">Honor Code</a>
+	</p>
+
+    <hr>
+
+	<table class="index" width="100%" cellpadding="10%">
+	  <tbody>
+		
+		<!-- News -->
+		
+
+		<tr>
+		  <td> <h3> <a name="news">News</a></h3>
+		  <td>
+
+<p> <b> Final Projects:</b>
+</p>
+
+<p>
+<dl><dt>
+Amir Barghi: <a href="http://math.dartmouth.edu/~pw/M100W11/amir.pdf">Exponents of Primitive Digraphs</a> (PDF)
+</dt>
+<dt>
+Jonathan Connell: <a href="http://math.dartmouth.edu/~pw/M100W11/jon.pdf">Sampling and Counting Contingency Tables Using Markov Chains</a> (PDF)
+</dt>
+<dt>
+Dan Crytser: <a href="http://math.dartmouth.edu/~pw/M100W11/danny.pdf">Continuous Time Markov Chains</a> (PDF)
+</dt>
+<dt>
+Alyssa Eisenberg: <a href="http://math.dartmouth.edu/~pw/M100W11/alyssa.pdf">The Application of Markov Chain Monte Carlo to
+  Infectious Diseases</a> (PDF)
+</dt>
+<dt>
+Paul Finkelstein: <a href="http://math.dartmouth.edu/~pw/M100W11/paul.pdf">Music Segmentation using Markov Chain Methods</a> (PDF)
+</dt>
+<dt>
+Shahrzad Haddadan: <a href="http://math.dartmouth.edu/~pw/M100W11/shahrzad.pdf">Vigoda's Improvement on Sampling Colorings</a> (PDF)
+</dt>
+<dt>
+Zachary Hamaker: <a href="http://math.dartmouth.edu/~pw/M100W11/zach.pdf">Electric Networks and Commute Time</a> (PDF)
+</dt>
+<dt>
+Seth Harris: <a href="http://math.dartmouth.edu/~pw/M100W11/seth.pdf">Counting Linear Extensions of a Partial Order</a> (PDF)
+</dt>
+<dt>
+Zhiyu Liu: <a href="http://math.dartmouth.edu/~pw/M100W11/zhiyu.pdf">The Upper Bound on Time Complexity of Collisions
+  among Random Walks on a Graph</a> (PDF)
+</dt>
+<dt> 
+Andrew Lyons: <a href="http://math.dartmouth.edu/~pw/M100W11/andrew.pdf">Polynomial-Time Approximation of the Permanent</a> (PDF)
+and <a href="http://math.dartmouth.edu/~pw/M100W11/andrew-talk.pdf">slide presentation</a> (PDF)
+</dt>
+<dt>
+Yu-Han Lyu: <a href="http://math.dartmouth.edu/~pw/M100W11/yu-han.pdf">Random-Turn Hex and Other Selection Games</a> (PDF)
+</dt>
+<dt>
+Nathan McNew: <a href="http://math.dartmouth.edu/~pw/M100W11/nathan.pdf">The Eigenvalue Gap and Mixing Time</a> (PDF)
+</dt>
+<dt>
+Cole Ott: <a href="http://math.dartmouth.edu/~m100w11/student_projects/ott/">Simulated Annealing</a> (program folder)
+</dt>
+<dt>
+Carter Tazio Schonwald: <a href="http://math.dartmouth.edu/~pw/M100W11/carter.pdf">Bounding Mixing Time with Markov Chain Comparison:
+   Theory and Applications</a> (PDF)
+</dt>
+<dt>
+Robert Bradford Svenson: <a href="http://math.dartmouth.edu/~pw/M100W11/brad.pdf">Subgraphs-world Process in the Ising model</a> (PDF)
+</dt>
+<dt>
+Ye Tang: <a href="http://math.dartmouth.edu/~m100w11/student_projects/tang/">The Hard Disc Model</a> (program folder)
+</dt>
+<dt>
+Weifu Wang: <a href="http://math.dartmouth.edu/~pw/M100W11/weifu.pdf">The Road Coloring Problem</a> (PDF)
+</dt>
+<dt>
+Zhenghui Wang: <a href="http://math.dartmouth.edu/~pw/M100W11/zhenghui.pdf">Counting the Number of Eulerian Orientations</a> (PDF)
+</dt>
+<dt>
+Lin Zhao: <a href="http://math.dartmouth.edu/~pw/M100W11/lin.pdf">Recurrence vs Transience in Dimensions 2 and 3</a> (PDF)
+</dt>
+
+</dd></dl></p>
+
+		  </td>
+		</tr>
+
+		<!-- Abstract -->
+
+		<tr>
+		  <td> <h3> <a name="abstract">Abstract</a></h3>
+		  <td>
+			<p style="text-align : justify">  Markov chains are random processes
+			  in which each state depends on the previous one.  In recent years
+                          <b>MCMC</b>, in which Markov chains are run to get random samples,
+                          has become a major tool in applied mathematics and computer science.</p>
+                        <p>Course topics include <b>random walk</b>, <b>shuffling</b>, <b>rapid
+                          mixing</b>, and some <b>approximation algorithms</b>.
+                        <p><em>Prerequisites:</em> Basic probability and linear algebra, with the
+                          mathematical sophistication of a beginning graduate student, a well-progressing
+                          undergraduate mathematics major, or a theory-oriented CS major.
+                          In particular, Math 20 and 22/24, or CS 19/25, or permission of the instructor.
+			  <br>
+<p>
+Here is a tentative syllabus:
+</p>
+
+<p>
+<dl><dt>
+1.  Markov chain definition and examples (random walk, card shuffling)<br>
+</dt><dd>
+Week 1, H&auml;ggstr&ouml;m Chapter 2.
+</dd>
+</p>
+
+<p>
+<dt>
+2.  Ergodicity and Stationarity<br>
+</dt>
+<dd>
+Week 2, H&auml;ggstr&ouml;m Chapters 4-5.
+</dd>
+</p>
+
+<p>
+<dt>
+3.  Reversibility and the Gibbs Sampler<br>
+</dt>
+<dd>
+Week 3, H&auml;ggstr&ouml;m Chapters 6-7.
+</dd>
+</p>
+
+<p>
+<dt>
+4.  Eigenvalues and mixing time<br>
+</dt>
+<dd>
+Week 4, H&auml;ggstr&ouml;m Chapter 8.
+</dd>
+</p>
+
+<p> <dt>
+5.  Stopping times and exact mixing<br>
+</dt>
+<dd>
+Week 5, Mixing Times article (will be supplied).
+</dd>
+</p>
+
+<p>
+<dt>
+6. Counting<br>
+</dt>
+<dd>
+Week 6, H&auml;ggstr&ouml;m Chapter 9.
+</dd>
+</p>
+
+<p>
+<dt>
+7. Coupling from the Past<br>
+</dt>
+<dd>
+Week 7, H&auml;ggstr&ouml;m Chapters 10-12.
+</dd>
+</p>
+
+<p>
+<dt>
+8. Simulated Annealing<br>
+</dt>
+<dd>
+Week 8, H&auml;ggstr&ouml;m Chapter 13.
+</dd>
+</p>
+
+<p>
+<dt>
+7. Markov Random Fields<br>
+</dt>
+<dd>
+Week 9, supplementary materials.
+</dd>
+</p>
+
+<p>
+<dt>
+8. The Metropolis algorithm and other applications<br>
+</dt>
+<dd>
+Week 10, supplementary materials.
+</dd>
+</p>
+			</p>
+			
+		  </td>
+		</tr>
+		
+		<!-- Classes -->
+
+		<tr>
+		  <td> <h3> <a name="classes">Classes</a></h3>
+		  <td>
+			<p style="text-align : left"> <em> Room:</em> Kemeny Hall 004<br>
+			<em> Lectures: </em>  "2A" slot, in particular: Tuesdays 2-3:50 (with a break),
+			   and Thursdays 2-3:30. <br>
+			 <em> X-hour: </em> Wednesdays
+			   4:15 pm--5:20pm  (rare!) </p>
+			
+		  </td>
+		</tr>
+
+		  <!-- X-hours -->
+		  <tr>
+		   <td> <h3> <a name-"tutorials">Tutorials</a></h3>
+		   <td>	<p style="text-align : left"> 
+		    Since the X-hour conflicts with Computer Science Colloquium, it will be used only for occasional, optional meetings.  When it does occur it will be on a Wednesday, 4:15 PM - 5:20 PM, in Kemeny 004.<br>
+		 </p> 
+		  </td>
+		</tr>
+		
+		<!-- Staff -->
+
+		<tr>
+		  <td> <h3> <a name="staff">Staff</a></h3></td>
+		  <td>
+			<dl>
+			  <dt>Instructor:</dt>
+			  <dd><b>Peter Winkler</b> --  Kemeny Hall 231
+			  / Tel. 6-3468<br>
+				<em>Office Hours:</em> Tuesdays, 4-5pm; Wednesdays, 2-3pm;
+				 Fridays, 11-12pm; and by appointment. <br>
+			  </dd>
+			  <dd><b></b><br>
+
+
+		  </dl>			
+		  </td>
+		</tr>
+		
+		<!-- Textbook -->
+
+		<tr>
+		  <td> <h3> <a name="textbook">Textbook</a></h3></td>
+		  <td>
+			<p> Olle H&auml;ggstr&ouml;m, <em>Finite Markov Chains and
+                           Algorithmic Applications</em>, Cambridge U. Press, 2002.<br>
+			  (<strong>required</strong>) </p>
+			
+ 			<p style="text-align : justify"> This book will be available 
+			from Wheelock Books and elsewhere.
+			</p>
+
+
+		  </td>
+		</tr>
+		
+		<!-- Grading -->
+		
+		<tr>
+		  <td> <h3> <a name="grading">Grading</a></h3></td>
+		  <td>
+			<p style="text-align : justify"> Your grade will be
+			based on homework, class participation, and a project (different
+                        for each student) which entails a half-hour presentation and,
+			at the end of the term, a short paper or computer program.
+			If the choice is a paper, it is suggested that you
+                        write the paper in LaTeX and convert to PDF via pdflatex. If you
+			wish you can use the following <a href="http://math.dartmouth.edu/~pw/Math100/sample.tex">
+			sample.tex</a> as a template; the pdf result of this source is
+                        this <a href="http://math.dartmouth.edu/~pw/Math100/sample.pdf">
+                        sample.pdf</a>.  To see examples of papers written last year
+                        for Math 100 projects, go to <a href="http://math.dartmouth.edu/~m100w10">
+                        http://math.dartmouth.edu/~m100w10</a>, last year's course website.
+                        (Note that the topic---Percolation---of last year's Math 100 was different.)
+			Your choice of project will be determined by an individual discussion with the instructor
+			during the second or third week of the term.
+			</p>
+		  </td>
+		</tr>
+
+		<!-- Homework -->
+		
+		<tr>
+		  <td> <h3> <a name="homework">Homework</a></h3></td>
+		  <td>
+			<p style="text-align : justify"> Homework will be assigned at
+			each class period, due at the beginning of the next class.  In
+			some cases nothing written will be due, but any student may be
+ 			called upon to present his or her homework to the class.
+				</p>
+			
+			<p style="text-align : justify"> 
+
+			</p>
+
+		  </td>
+		</tr>
+
+		<!-- Past assignments -->
+		<tr>
+		  <td> <h3> <a name="past assignments">Assignments</a></h3></td>
+                  <td>
+				<p style="text-align : justify">
+                        <b>Due Thursday Jan 6:</b> In a "Binary Symmetric Channel" a bit
+                        is sent from place to place and each time it is accidentally
+                        flipped with some small fixed probability epsilon.  Set this
+                        up as a Markov chain, and compute the probability that after
+                        <i>n</i> steps a "1" sent initially arrives as a "1".
+			</p>
+
+                                <p style="text-align : justify">
+                        <b>Due Tuesday Jan 11:</b> (a) For each chess piece (king, queen,
+                        rook, knight, bishop) determine whether the Markov chain whose
+			states are the 64 possible positions for the piece (alone on the
+			board) with all legal moves possible, is irreducible, aperiodic, both, or neither.
+			(b) Consider the "random chess" Markov chain beginning in the
+			standard opening position, where all legal moves are permitted
+			except those which would force an end to the game.  Which positions
+			are transient?
+                        </p>
+
+				<p style="text-align : justify">
+                        <b>Due Thursday Jan 13:</b> Let <i>G</i> be a finite graph of
+                        maximum degree Delta, and let <i>q</i> = Delta+2.  Let <i>P</i> be the Markov
+			chain on proper <i>q</i>-colorings of <i>G</i> in which a step consists
+			of selecting a vertex uniformly at random, and then giving it
+			a randomly chosen legal color (which might be its old color).
+                        Show that <i>P</i> is ergodic.
+                        </p>
+
+        			<p style="text-align : justify">
+                        <b>Due Tuesday Jan 18:</b> (a) Let <i>G</i> be the (partly directed)
+			graph consisting of a C_3, a C_4 and a C_5, with two additional arcs:
+			one from a vertex of the C_3 to a vertex of the C_4, and the second
+			from another vertex of the C_3 to a vertex of the C_5.  Let <i>P</i>
+			be the simple random walk on <i>G</i>, where an out-neighbor from the
+			current vertex is chosen uniformly at random.  (The edges of the cycles
+			are directed both ways.)  Characterize all the stationary distributions
+			of the Markov chain <i>P</i>.  (b) Prove that in an irreducible Markov
+			chain (with finite state space), all states have the same period.
+                        </p>
+
+			        <p style="text-align : justify">
+                        <b>Due Thursday Jan 20:</b> (a) Determine whether the random "15 game" is
+			irreducible and/or aperiodic. (b) How would you go about solving the
+			version in which the opening configuration is RATE YOUR MIND PLA ?
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Tuesday Jan 25:</b> Problem 6.2 (all parts), p. 43 of your text.
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Thursday Jan 27:</b> (a) Problem 7.4, p. 52.  (b) In this
+			generalized hard-core model, assuming the graph is part of a 2-dimensional
+			square grid, can you get the distance between the chains X and Y to
+			shrink (probabilistically) for small lambda?  How small?
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Tuesday Feb 1:</b> Read Chapter 8 of the text, and try to think
+			of a better way to couple the two coloring chains.
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Thursday Feb 3:</b> (a) Check that the lazy version of our coloring
+			algorithm, in which a color is chosen u.a.r. and the chain loops if it
+			isn't legal, still satisfies detailed balance.  (b) In the Dartmouth
+			coupling, where <i>q</i> exceeds 3Delta so that |D| tends to go down, what is 
+			the resulting value of alpha?
+                        </p>
+
+        			<p style="text-align : justify">
+                        <b>Due Tuesday Feb 8:</b> Find the paper where Jerrum shows how to approximate
+			the number of colorings of a graph when q exceeds 2Delta, and try to read it.
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Thursday Feb 10:</b> Redo Jerrum's argument for fast mixing of the
+			graph-coloring chain, using path coupling.
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Tuesday Feb 15:</b> Compute the transition probabilities for the Markov
+                        chain which is the <i>reverse</i> of the "winning streak" chain.  The latter
+			has states 0 through 10, with transitions from 0 to 1, 1 to 2, 2 to 3, etc.
+			up to 9 to 10, and 10 to itself (corresponding to flipping a head); and
+			from anything to 0 (corresponding to flipping a tail).  All of these transitions
+			have probability 1/2.
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Tuesday Feb 22:</b> Determine the parameters for the "local rule" that
+			starts at vertex 3 of the path on vertices 1,2,3,4,5, and stops at a vertex
+			distributed as (1/8,1/4,1/4,1/4,1/8).  You may let p be the probability of
+			moving from vertex 3, q from 2 or 4; you won't be moving from 1 or 5.
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Thursday Feb 24:</b> (a) Compute the exact mixing time for the cycle C_n
+			(that is, the expected number of steps for an optimal stopping rule that gets
+			you from vertex 0 to the uniform distribution.)  (b) For what Markov chains is
+			it the case that the naive stopping rule is optimal, for getting from state 1
+			to the stationary distribution?
+                        </p>
+
+                                <p style="text-align : justify">
+                        <b>Due Tuesday March 1:</b> Find a stopping rule for the reverse GSR shuffle
+			that achieves the uniform (stationary) distribution.
+                        </p>
+
+                  </td>
+		</tr>
+
+		<!-- Honor code -->
+
+		<tr>
+		  <td>
+			<h3><a name="honour">Honor Code</a></h3>
+		  </td>
+		  <td>
+
+			<p style="text-align : justify"> Students are encouraged
+			to work together to do homework problems. What is
+			important is a student's eventual understanding of
+			homework problems, and not how that is achieved. The honor
+			principle applies to homework in the following way. <span
+			style="color:#CC0000; font-weight:bold">What a student
+			turns in as a written homework solution is to be his or her own
+			understanding of how to do the problem. Students must
+			state what sources they have consulted, with whom they
+			have collaborated, and from whom they have received
+			help.</span> Students are discouraged from using solutions
+			to problems that may be posted on the web,
+			and as just stated, must
+			reference them if they use them. The solutions you submit
+			must be written by you alone.  Any copying (electronic or
+			otherwise) of another person's solutions, in whole
+			or in part, is a violation of the Honor Code.</p>
+			
+			<p style="text-align : justify">If you have any questions as to whether some action
+			would be acceptable under the Academic Honor Code, please
+			speak to me, and I
+			will be glad to help clarify things.  It is always easier
+			to ask beforehand than to have trouble later!</p>
+			
+		  </td>
+		</tr>
+		
+		<!-- Disabilities-->
+
+		<tr>
+		  <td>
+			<h3><a name="dis">Disabilities</a></h3>
+		  </td>
+		  <td>
+
+			<p style="text-align : justify">I encourage any students
+			with disabilities, including "invisible" disabilities such
+			as chronic diseases and learning disabilities, to discuss
+			appropriate accommodations with me, which might help you
+			with this class, either after class or during office
+			hours. Dartmouth College has an active program to help
+			students with disabilities, and I am happy to do whatever
+			I can to help out, as appropriate.</p>
+
+			<p style="text-align : justify">The Student Disabilities
+			Coordinator, Nancy Pompian, can be reached at 6-2014 if
+			you have any questions. Any student with a documented
+			disability requiring academic adjustments or
+			accommodations is requested to speak with me by the end of
+			the second week of the term. All discussions will remain
+			confidential, although the Academic Skills Center may be
+			consulted to verify the documentation of the disability
+			and advise on an appropriate response to the need. It is
+			important, however, that you talk to me soon, so that I
+			can make whatever arrangements might be needed in a timely
+			fashion.</p>
+			
+		  </td>
+		</tr>
+	  </tbody>
+	</table>
+
+	<p>
+	  <small>
+	  </small>
+	</p>
+	
+  </body>
+</html>

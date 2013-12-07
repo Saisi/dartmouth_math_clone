@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>section-3-5.mws.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p><font size="4"><b></font><font size="5" face="Lucida Bright">Math 3</b></font></p>
+<p><font size="4"><b></font><font size="5" face="Lucida Bright">Winter 2004</b></font></p>
+<p><font size="4"><b></font><font size="5" face="Lucida Bright">Section 3.5, Derivatives of trigonometric functions</b></font></p>
+<p></p>
+<p><font face="Lucida Bright">We start by graphing the functions f(x)=sin(x) and g(x)=cos(x).</font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot(sin(x),x=-Pi..3*Pi);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-3-5.mws_1.gif" width="780" height="167" alt="[Plot]" align="center"></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot(cos(x),x=-Pi..3*Pi,color=blue);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-3-5.mws_2.gif" width="776" height="153" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright">Using the interpertation of the derivative as slope of the tangent lines to the graph of the curve, what can you observe</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright">about the two graphs</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>?</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>Answer:</b></font><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( sin(x) )' = cos(x) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( cos(x) )' = - sin(x).</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">A key computation in proving the above identities is the limit </font><font color="#000000" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-3-5.mws_3.gif" width="17" height="22" alt="lim" align="center">
+</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">_</font><font color="#000000" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-3-5.mws_4.gif" width="39" height="24" alt="{proc (x) options operator, arrow; 0 end proc}" align="center">
+</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"> </font><font color="#000000" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-3-5.mws_5.gif" width="32" height="40" alt="sin(x)/x" align="center">
+</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"> =1.</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright">This can be justified by observing that &nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-3-5.mws_6.gif" width="33" height="22" alt="cos(x)" align="center">
+</font><font color="#000000" size="3" face="Lucida Bright"> &lt; </font><font color="#000000" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-3-5.mws_7.gif" width="32" height="40" alt="sin(x)/x" align="center">
+</font><font color="#000000" size="3" face="Lucida Bright"> &lt; 1 &nbsp;&nbsp;&nbsp;and then using Squeeze Theorem.</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot([cos(x),1,sin(x)/x],x=-Pi/2..Pi/2,y=0..1.1,color=[green,green,red]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec1/images/section-3-5.mws_8.gif" width="720" height="257" alt="[Plot]" align="center"></p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta6 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>oct25</TITLE>
+<META NAME="description" CONTENT="oct25">
+<META NAME="keywords" CONTENT="oct25">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta6">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="oct25.css">
+
+</HEAD>
+
+<BODY >
+
+<P>
+
+<UL>
+<LI><B>Covered today:</B> (NOTE: this is not in the book) Matrix algebra.
+
+<P>
+</LI>
+<LI><B>For Next time:</B>
+
+<P>
+<DL COMPACT>
+<DT>1.</DT>
+<DD>In (a)-(c) let 
+<!-- MATH
+ \begin{displaymath}
+A=\left(\begin{array}{ccc}
+-1 & 0 & 1\\
+2 & -1 & 3\\
+0 & 1 & -2
+\end{array}\right)
+,
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="190" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img1.gif"
+ ALT="$\displaystyle A=\left(\begin{array}{ccc}
+-1 &amp; 0 &amp; 1\\
+2 &amp; -1 &amp; 3\\
+0 &amp; 1 &amp; -2
+\end{array}\right)
+,$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+B=\left(\begin{array}{ccc}
+0 & 4 & -2\\
+3 & 1 & 2\\
+-1 & 0 & 1
+\end{array}\right).
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="178" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img2.gif"
+ ALT="$\displaystyle B=\left(\begin{array}{ccc}
+0 &amp; 4 &amp; -2\\
+3 &amp; 1 &amp; 2\\
+-1 &amp; 0 &amp; 1
+\end{array}\right).
+$">
+</DIV><P></P>
+Find each as indicated 
+<DL COMPACT>
+<DT>(a)</DT>
+<DD><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img3.gif"
+ ALT="$ 2A-3B$">
+</DD>
+<DT>(b)</DT>
+<DD><IMG
+ WIDTH="54" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img4.gif"
+ ALT="$ (AB)^T$">
+</DD>
+<DT>(c)</DT>
+<DD><!-- MATH
+ $A+\lambda B$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img5.gif"
+ ALT="$ A+\lambda B$">, (<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img6.gif"
+ ALT="$ \lambda$">, a scalar)
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT>2.</DT>
+<DD>Find <IMG
+ WIDTH="25" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img7.gif"
+ ALT="$ A^2$"> and <IMG
+ WIDTH="25" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img8.gif"
+ ALT="$ A^3$"> for the matrix 
+<!-- MATH
+ \begin{displaymath}
+A=\left(\begin{array}{ccc}
+1 & 0 & 2\\
+-2 & -1 & 0\\
+0 & 0 & 2
+\end{array}
+\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="169" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img9.gif"
+ ALT="$\displaystyle A=\left(\begin{array}{ccc}
+1 &amp; 0 &amp; 2\\
+-2 &amp; -1 &amp; 0\\
+0 &amp; 0 &amp; 2
+\end{array}\right)$">
+</DIV><P></P> 
+
+<P>
+</DD>
+<DT>3.</DT>
+<DD>Find the general formula for <IMG
+ WIDTH="27" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img10.gif"
+ ALT="$ A^n$">
+<DL COMPACT>
+<DT>(a)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+A=\left(\begin{array}{cc}
+1 & 1\\
+0 & 1
+\end{array}\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="114" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img11.gif"
+ ALT="$\displaystyle A=\left(\begin{array}{cc}
+1 &amp; 1\\
+0 &amp; 1
+\end{array}\right)
+$">
+</DIV><P></P>
+</DD>
+<DT>(b)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+A=\left(\begin{array}{cc}
+1 & -1\\
+-1 & 1
+\end{array}\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="140" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img12.gif"
+ ALT="$\displaystyle A=\left(\begin{array}{cc}
+1 &amp; -1\\
+-1 &amp; 1
+\end{array}\right)
+$">
+</DIV><P></P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT>4.</DT>
+<DD>A matrix <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$"> is called an <I>involution</I> if <IMG
+ WIDTH="56" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img14.gif"
+ ALT="$ A^2=I$"> (I is identity
+matrix). Give an example of a <!-- MATH
+ $2 \times 2$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img15.gif"
+ ALT="$ 2 \times 2$"> matrix (not equal to I) that is an
+involution.
+
+<P>
+</DD>
+<DT>5.</DT>
+<DD>A is called an <I>idempotent</I> if <IMG
+ WIDTH="60" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img16.gif"
+ ALT="$ A^2 = A$">. Give an example of a <IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img15.gif"
+ ALT="$ 2 \times 2$"> matrix that is an idempotent (<IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$"> not equal I or 0).
+
+<P>
+</DD>
+<DT>6.</DT>
+<DD>Prove that <!-- MATH
+ $(A + B)^T = A^T + B^T$
+ -->
+<IMG
+ WIDTH="164" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img17.gif"
+ ALT="$ (A + B)^T = A^T + B^T$"> hold for <!-- MATH
+ $3 \times 3$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img18.gif"
+ ALT="$ 3 \times 3$"> matrices.
+
+<P>
+</DD>
+<DT>7.</DT>
+<DD>Find the inverse of the matrix
+<!-- MATH
+ \begin{displaymath}
+\left(\begin{array}{ccc}
+1 & 0  & -2 \\
+2 & -1 & 0 \\
+1 & 0 &  -2\end{array}
+\right).
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="142" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img19.gif"
+ ALT="$\displaystyle \left(\begin{array}{ccc}
+1 &amp; 0 &amp; -2 \\
+2 &amp; -1 &amp; 0 \\
+1 &amp; 0 &amp; -2\end{array}\right).$">
+</DIV><P></P>
+
+<P>
+</DD>
+<DT>8.</DT>
+<DD>Prove that <!-- MATH
+ $(AB)^T=B^T A^T$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img20.gif"
+ ALT="$ (AB)^T=B^T A^T$"> hold for <IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img18.gif"
+ ALT="$ 3 \times 3$"> matrices.
+
+<P>
+</DD>
+<DT>9. </DT>
+<DD>Find the inverse of the <IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img15.gif"
+ ALT="$ 2 \times 2$"> matrix and the condition needed
+for the inverse to exist.
+<!-- MATH
+ \begin{displaymath}
+\left(\begin{array}{cc}
+a & b\\
+c & d \end{array}
+\right).
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="88" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img21.gif"
+ ALT="$\displaystyle \left(\begin{array}{cc}
+a &amp; b\\
+c &amp; d \end{array}\right).$">
+</DIV><P></P>
+</DD>
+<DT>10.</DT>
+<DD>Find the value of <IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img22.gif"
+ ALT="$ c$"> for which 
+<!-- MATH
+ \begin{displaymath}
+\left(\begin{array}{cc}
+1 & -2\\
+3 & c \end{array}
+\right).
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="100" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img23.gif"
+ ALT="$\displaystyle \left(\begin{array}{cc}
+1 &amp; -2\\
+3 &amp; c \end{array}\right).$">
+</DIV><P></P>
+has no inverse.
+
+<P>
+</DD>
+<DT>11.</DT>
+<DD>Use the method of inverses, if possible, to solve each system:
+<DL COMPACT>
+<DT>(a)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccc}
+2x&-&3y&=3\\
+3x&-&5y&=1
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="121" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img24.gif"
+ ALT="\begin{displaymath}\begin{array}{ccccc}
+2x&amp;-&amp;3y&amp;=3\\
+3x&amp;-&amp;5y&amp;=1
+\end{array}\end{displaymath}">
+</DIV><P></P>
+</DD>
+<DT>(b)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccc}
+x  & - & 3y  & + & 4z  & = & 4\\
+2x & + & 2y & + &      & = & 0\\
+&   &  y & - & 2z   & = & 2
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="197" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img25.gif"
+ ALT="\begin{displaymath}\begin{array}{ccccccc}
+x &amp; - &amp; 3y &amp; + &amp; 4z &amp; = &amp; 4\\
+2x &amp; + &amp; 2y &amp; + &amp; &amp; = &amp; 0\\
+&amp; &amp; y &amp; - &amp; 2z &amp; = &amp; 2
+\end{array}\end{displaymath}">
+</DIV><P></P>
+</DD>
+</DL>
+</DD>
+<DT>12.</DT>
+<DD>Consider the linear system <!-- MATH
+ $A\vec{x}=\vec{b}$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img26.gif"
+ ALT="$ A\vec{x}=\vec{b}$">, where
+<!-- MATH
+ \begin{displaymath}
+A=\left( \begin{array}{cc} a & b\\c & d \end{array}\right), \quad \mbox{and}\quad
+\vec{b}=\left( \begin{array}{c} e \\f \end{array}\right)  \quad A\neq 0
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="122" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img27.gif"
+ ALT="$\displaystyle A=\left( \begin{array}{cc} a &amp; b  c &amp; d \end{array}\right),$">&nbsp; &nbsp;and<IMG
+ WIDTH="164" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img28.gif"
+ ALT="$\displaystyle \quad
+\vec{b}=\left( \begin{array}{c} e   f \end{array}\right) \quad A\neq 0$">
+</DIV><P></P>
+Determine conditions on the constants <!-- MATH
+ $a, b, c, d$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img29.gif"
+ ALT="$ a, b, c, d$">, and <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img30.gif"
+ ALT="$ f$"> so that 
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>the rank of <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$"> is 2,
+</DD>
+<DT>(b)</DT>
+<DD>the rank of <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$"> is 1, but the rank of <!-- MATH
+ $[ \ A\ | \ \vec{b}\ ]$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img31.gif"
+ ALT="$ [  A \vert  \vec{b} ]$"> is 2
+</DD>
+<DT>(c)</DT>
+<DD>the rank of <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$"> and the rank of <!-- MATH
+ $[ \ A\ | \ \vec{b}\ ]$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img31.gif"
+ ALT="$ [  A \vert  \vec{b} ]$"> are each 1. 
+</DD>
+</DL>
+</DD>
+<DT>13.</DT>
+<DD>Using the matrix <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$">, vector <IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img32.gif"
+ ALT="$ \vec{b}$"> and the results of exercise (12)
+to give conditions on <!-- MATH
+ $a, b, c, d$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img29.gif"
+ ALT="$ a, b, c, d$">, and <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img30.gif"
+ ALT="$ f$"> so that the linear system has 
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>no solution
+</DD>
+<DT>(b)</DT>
+<DD>one solution
+</DD>
+<DT>(c)</DT>
+<DD>infinitely many solutions.
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT>14.</DT>
+<DD>Use the theorems and definitions learned in class to say as much as
+possible concerning the number of solutions of the given linear system without
+actually solving it.
+<DL COMPACT>
+<DT>(a)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccccc}
+2x & + & 3y & - & z  &   &    & = & 0\\
+&   &  y & + & 2z & - & 3w & = & 0\\
+2x &   &    & - & 4z & + & w  & = & 0
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="263" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img33.gif"
+ ALT="\begin{displaymath}\begin{array}{ccccccccc}
+2x &amp; + &amp; 3y &amp; - &amp; z &amp; &amp; &amp; = &amp; 0\\
+...
+... - &amp; 3w &amp; = &amp; 0\\
+2x &amp; &amp; &amp; - &amp; 4z &amp; + &amp; w &amp; = &amp; 0
+\end{array}\end{displaymath}">
+</DIV><P></P>
+</DD>
+<DT>(b)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccccccc}
+2x & + & 3y & - & z  &   &    & = & 1\\
+&   &  y & + & 2z & - & 3w & = & 2\\
+2x &   &    & - & 4z & + & w  & = & 3
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="263" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img34.gif"
+ ALT="\begin{displaymath}\begin{array}{ccccccccc}
+2x &amp; + &amp; 3y &amp; - &amp; z &amp; &amp; &amp; = &amp; 1\\
+...
+... - &amp; 3w &amp; = &amp; 2\\
+2x &amp; &amp; &amp; - &amp; 4z &amp; + &amp; w &amp; = &amp; 3
+\end{array}\end{displaymath}">
+</DIV><P></P>
+</DD>
+<DT>(c)</DT>
+<DD><!-- MATH
+ \begin{displaymath}
+\begin{array}{ccccc}
+2x&-&3y&=2\\
+-x&+&4y&=3\\
+4x&+&3y&=7
+\end{array}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="127" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img35.gif"
+ ALT="\begin{displaymath}\begin{array}{ccccc}
+2x&amp;-&amp;3y&amp;=2\\
+-x&amp;+&amp;4y&amp;=3\\
+4x&amp;+&amp;3y&amp;=7
+\end{array}\end{displaymath}">
+</DIV><P></P>
+</DD>
+</DL>
+</DD>
+<DT>15.</DT>
+<DD>Suppose that the augmented matrix of a linear system is given by
+<!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{ccccc}
+1 & 0 & 0 & | & 2\\
+0 & 1 & 0 & | & 3\\
+0 & 0 & x & | & y
+\end{array}
+\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="157" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img36.gif"
+ ALT="$\displaystyle \left( \begin{array}{ccccc}
+1 &amp; 0 &amp; 0 &amp; \vert &amp; 2\\
+0 &amp; 1 &amp; 0 &amp; \vert &amp; 3\\
+0 &amp; 0 &amp; x &amp; \vert &amp; y
+\end{array}\right)
+$">
+</DIV><P></P>
+For what values of <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img37.gif"
+ ALT="$ x$"> and <IMG
+ WIDTH="14" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img38.gif"
+ ALT="$ y$"> is there 
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>no solution?
+</DD>
+<DT>(b)</DT>
+<DD>exactly one solution?
+</DD>
+<DT>(c)</DT>
+<DD>infinitely many solutions?
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT>16.</DT>
+<DD>Suppose that the row-reduced echelon form of a linear system
+<!-- MATH
+ $A\vec{x}=\vec{b}$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img26.gif"
+ ALT="$ A\vec{x}=\vec{b}$"> has the following form, where <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img39.gif"
+ ALT="$ a$"> and <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img40.gif"
+ ALT="$ b$"> are arbitrary 
+constants.
+<!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{ccccc}
+1 & 0 & 0 & | & a\\
+0 & 1 & b & | & 0\\
+0 & 0 & 0 & | & 0
+\end{array}
+\right).
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="151" HEIGHT="68" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img41.gif"
+ ALT="\begin{displaymath}\left(
+\begin{array}{ccccc}
+1 &amp; 0 &amp; 0 &amp; \vert &amp; a\\
+0 &amp; 1 &amp; b &amp; \vert &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; \vert &amp; 0
+\end{array}\right).\end{displaymath}">
+</DIV><P></P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>What is the rank of <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$">?
+</DD>
+<DT>(b)</DT>
+<DD>How many solutions does <!-- MATH
+ $A\vec{x}=\vec{b}$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img26.gif"
+ ALT="$ A\vec{x}=\vec{b}$"> have?
+</DD>
+<DT>(c)</DT>
+<DD>Is <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$"> invertible?
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT>17.</DT>
+<DD>Construct the smallest system you can with more unknowns than equations, 
+but no solution.
+
+<P>
+</DD>
+<DT>18.</DT>
+<DD>Give examples of matrices <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$"> for which the number of solutions to
+<!-- MATH
+ $A\vec{x}=\vec{b}$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img26.gif"
+ ALT="$ A\vec{x}=\vec{b}$"> is 
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>0 or 1, depending on b;
+</DD>
+<DT>(b)</DT>
+<DD>infinite, independent of b;
+</DD>
+<DT>(c)</DT>
+<DD>0 or infinite, depending on b;
+</DD>
+<DT>(d)</DT>
+<DD>1 regardless of b.
+</DD>
+<DT>(e)</DT>
+<DD>How is the rank of the matrix <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$"> related to its dimensions in each case?
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT>19.</DT>
+<DD>Let <!-- MATH
+ $A=\left( \begin{array}{cccc}
+1 & 2 & 0 & 1\\
+0 & 1 & 1 & 0\\
+1 & 2 & 0 & 1
+\end{array}
+\right).$
+ -->
+<IMG
+ WIDTH="176" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img42.gif"
+ ALT="$ A=\left( \begin{array}{cccc}
+1 &amp; 2 &amp; 0 &amp; 1\\
+0 &amp; 1 &amp; 1 &amp; 0\\
+1 &amp; 2 &amp; 0 &amp; 1
+\end{array}\right).$">
+Determine a set of constrained variables and a set of free variables. 
+What is the rank of <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img13.gif"
+ ALT="$ A$">? Find the general solution to <!-- MATH
+ $A\vec{x}=\vec{0}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m9f00/oct25/img43.gif"
+ ALT="$ A\vec{x}=\vec{0}$">.
+</DD>
+</DL>
+</LI>
+</UL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Math 9 Fall 2000
+2000-10-25
+</ADDRESS>
+</BODY>
+</HTML>

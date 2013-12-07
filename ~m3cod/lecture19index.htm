@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Lecture 19
+</title>
+<STYLE>
+A	{text-decoration:none; color:#cc9933}
+OL	{color: #cc9933}
+</STYLE>
+
+</head>
+<body>
+
+<table border = 0 width = 100% cellpadding = 5 cellspacing = 0>
+<tr>
+<td bgcolor = maroon><font size = +3 color = white>Calculus on Demand at Dartmouth College</font>
+<td align = right bgcolor = maroon><font color = #6666ff><b>
+<a href = "lecture18index.htm"><font color = #6666ff><b>Lecture 18</b></font></a> | 
+<a href = "index.htm"><font color = #6666ff><b>Index</b></font></a> | 
+<a href = "lecture20index.htm"><font color = #6666ff><b>Lecture 20</b></font></a></b></font>
+<tr>
+<td bgcolor = maroon>
+<td bgcolor = maroon align = right><font size = +2 color = white>Lecture 19</font>
+</table>
+<p>
+
+<table border = 1 cellpadding = 8 cellspacing = 0>
+<!--
+first column is resources
+-->
+
+<tr>
+
+<td bgcolor = #006633 valign = top width = 200><center><a href = "aboutimage.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/m3logo.jpg" height = 120 width = 150 border = 0></a>
+<br><h2><font color = #cc9933>Resources</font></h2>
+</center>
+
+<p>
+<b>
+<a href = "http://math.dartmouth.edu/~m3cod/m3index.htm">Math 3 Course Home Page</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/m3sched.htm">Math 3 Course Syllabus</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/study.htm">Practice Exams</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/textbook.htm">Textbook Home Page</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/comments" target = "new">Post a Comment</a>
+<br>
+</b>
+
+
+
+<!--
+second column is contents
+-->
+
+<td valign = top background = "http://www.math.dartmouth.edu/~m3cod/m3logo.gif">
+<h1>Contents</h1>
+In this lecture we learn to draw the slope field of a differential equation, and consider a simple procedure, called "Euler's Method," for finding numerical (approximate) solutions. We also develop the case study for this segment (lectures 17-20) of our calculus course, Population Modeling.
+<p>
+<hr>
+<p>
+
+<h3>Quick Question</h3>
+
+Could this graph model the number of rabbits in a pen of fixed size and fixed daily allotment of food over a ten-year period? 
+<p>
+<img src = "http://www.math.dartmouth.edu/~m3cod/lec19graph.gif">
+<br>
+<a href = "lec19qqans.htm" target = "qqans"><font color = blue>Answer</font></a>
+<p>
+
+<h3>Outline</h3>
+<a href = "Ionescuoutlines.html#lec19" target = "outline"><font color = blue>Outlines for
+<br>Slope Fields and Euler's Method
+<br>Case Study:  Population Modeling</font></a>
+
+<h3>Textbook</h3>
+
+
+<a href = "textbooksections.htm#lec19" target = "book"><font color = blue>Slope Fields and Euler's Method</font></a>
+<br>
+<a href = "textbooksections.htm#lec19" target = "book"><font color = blue>Case Study:  Population Modeling</font></a>
+
+</font></a>
+
+
+<h3>Today's Homework</h3>
+
+<a href = "webworklogin.htm" target = "webwork"><font color = blue>Log into WebWorK</font></a>
+
+<h3>Quiz</h3>
+
+<a href = "http://math.dartmouth.edu/~m3cod/quiztop/quiz/304quiz_index.htm" target = "quiz"><font color = blue>Slope Fields and Euler's Method Quiz</font></a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/quiztop/quiz/307quiz_index.htm" target = "quiz"><font color = blue>Case Study:  Population Modeling Quiz</font></a>
+
+
+<h3>Examples</h3>
+<ul>
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/3.04/304examples/304invest.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>An investor has a savings account that pays 3.5% interest. The investor opens the account with $500 and makes an additional deposit of $500 at the end of each year. Assume the function S(t), which gives the amount in the savings account after t years, satisfies a given the differential equation.  Use Euler's method to estimate the amount in the account at the end of 5, 10, and 25 years, using a step size of 0.1.  
+
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/3.04/304examples/304cosine.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>Let y be a function of x that satisfies a given differential equation.  Use Euler's method with step sizes .01, .001, .0001 to estimate the value of y when x = .99. Do these estimates seem reliable? 
+
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/3.04/304examples/304circle.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>Assume that the point (&minus;1, .001) is on the graph of a function that satisfies a given differential equation.  
+Estimate the value of y when x = 1 using Euler's method. 
+
+
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/3.04/304examples/304sfmatch.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>Match three differential equations to their slope fields. 
+<li><a href = "http://math.dartmouth.edu/~klbooksite/3.07/307examples/307bacteria1.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 align = "middle"></a>Suppose we want to model the growth of a bacteria colony. We know that the rate of change of the population (P) is directly proportional to the population. Early observations suggest that they are in fact equal. If the initial population is 100, use Euler's method with stepsize = 0.1 to predict the population in 6 hours. 
+<li><a href = "http://math.dartmouth.edu/~klbooksite/3.07/307examples/307bacteria2.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 align = "middle"></a>After three hours, we observe the bacteria colony and find the population is now 1600. Use this information to solve the differential equation in the previous example, and find a more accurate constant of proportionality. How does this model differ from the previous one? Again, predict the population at t = 6 hours and compare with the previous estimate. 
+<li><a href = "http://math.dartmouth.edu/~klbooksite/3.07/307examples/307bacteria3.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 align = "middle"></a>More research indicates that the growth of the bacteria colony is proportionally dependent on the amount of oxygen available. In the controlled environment where our sample resides, all the oxygen will be exhausted in 3 days (72 hours). Thus, our new differential equation modeling the bacteria growth is dP/dt = k P (72 &minus; t)/72.  Determine the population at time t = 6 hours, and describe the long term behavior of the bacteria colony.
+</ul>
+
+
+<h3>Applets</h3>
+<ul>
+<li><a href = "http://math.dartmouth.edu/~klbooksite/appfolder/304unit/EulersMethod.html" target = "applet"><img src = "http://www.math.dartmouth.edu/~m3cod/applet.gif" border = 0 alt = "Click to see the applet"></a>Euler's Method
+
+<br>
+<li><a href = "http://math.dartmouth.edu/~klbooksite/appfolder/306unit/MalthusVerhulst.html" target = "applet"><img src = "http://www.math.dartmouth.edu/~m3cod/applet.gif" border = 0 alt = "Click to see the applet"></a>Euler Population Predictions
+
+</ul>
+
+
+<h3>Videos</h3>
+
+
+<ul>
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus03.08.01.rm?start=07:03&end=11:22">
+<img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Use Euler's Method to solve y&prime; = xy 
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus03.08.02.rm?start=18:22&end=22:39">
+<img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Solve dw/dt = k(1 - w/m) to model population of weeds in a garden<br>
+</ul>
+
+
+
+</table>
+<p>
+<!--
+Navigation footer
+-->
+<p align = right>
+<font color = #6666ff>
+<b>
+<a href = "lecture18index.htm"><font color = #6666ff><b>Lecture 18</b></font></a> | 
+<a href = "index.htm"><font color = #6666ff><b>Index</b></font></a> | 
+<a href = "lecture20index.htm"><font color = #6666ff><b>Lecture 20</b></font></a></b></font>
+
+</p>
+
+
+</body>
+</html>

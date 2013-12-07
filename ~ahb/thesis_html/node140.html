@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Equal wavenumber </TITLE>
+<META NAME="description" CONTENT="Equal wavenumber ">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node139.html">
+<LINK REL="up" HREF="node138.html">
+<LINK REL="next" HREF="node141.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1783"
+  HREF="node141.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1781"
+  HREF="node138.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1777"
+  HREF="node139.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1784"
+  HREF="node141.html">Matrix trick for pushing</A>
+<B> Up:</B> <A NAME="tex2html1782"
+  HREF="node138.html">Overlaps:</A>
+<B> Previous:</B> <A NAME="tex2html1778"
+  HREF="node139.html">Differing wavenumbers</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001712000000000000000">
+Equal wavenumber <IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img34.gif"
+ ALT="$k_a = k_b = k$"></A>
+</H2>
+
+<P>
+The case <IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1807.gif"
+ ALT="$k_a = k_b$"> can be reached most easily by setting
+<IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1808.gif"
+ ALT="$k_a = k$"> and <!-- MATH
+ $k_b = k + \delta$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1809.gif"
+ ALT="$k_b = k + \delta$"> while taking the limit <!-- MATH
+ $\delta \rightarrow 0$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1810.gif"
+ ALT="$\delta \rightarrow 0$">.
+The solution <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1783.gif"
+ ALT="$b$"> now has to be spatially <EM>scaled</EM>
+(dilated about the arbitrary origin) appropriately for its new wavenumber.
+Section&nbsp;<A HREF="node73.html#sec:scaling">6.1.1</A> (also Appendix&nbsp;<A HREF="node148.html#ap:tension">I</A>)
+gives the expansion of the dilation operator
+at wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> in powers of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">, thus
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+b(k + \delta;{\mathbf r}) \; = \; \left[ 1 + \frac{\delta}{k}
+	{\mathbf r} \cdot \nabla  + O(\delta^2) \cdots \right] b(k;{\mathbf r}) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:bscale"></A><IMG
+ WIDTH="452" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1811.gif"
+ ALT="\begin{displaymath}
+b(k + \delta;{\mathbf r}) \; = \; \left[ 1 + \frac{\delta}{...
+...} \cdot \nabla + O(\delta^2) \cdots \right] b(k;{\mathbf r}) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Substitution into (<A HREF="node139.html#eq:genoverlap">H.5</A>), noting
+<!-- MATH
+ $k_a^2 - k_b^2 = -2 \delta k + O(\delta^2)$
+ -->
+<IMG
+ WIDTH="188" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1812.gif"
+ ALT="$k_a^2 - k_b^2 = -2 \delta k + O(\delta^2)$">, 
+and taking the limit (in which only the lowest
+order <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1813.gif"
+ ALT="$O(\delta^0)$"> survives) gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left\langle a \left|b\right.\right\rangle _{\mathcal{D}} \; = \; \oint_\Gamma \!\! d{\mathbf s} \,\left[ ({\mathbf n}\cdot\nabla a^*)
+	({\mathbf r}\cdot\nabla b) - a^* {\mathbf n}\cdot\nabla ({\mathbf r}\cdot\nabla b)
+	\rule{0in}{0.2in}
+	\right] .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:alexoverlap"></A><IMG
+ WIDTH="481" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1814.gif"
+ ALT="\begin{displaymath}
+\left\langle a \left\vert b\right.\right\rangle _{\mathcal{...
+...nabla ({\mathbf r}\cdot\nabla b)
+\rule{0in}{0.2in}
+\right] .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This can be shown to be a generalization of the
+overlap formula given by Boasman [<A
+ HREF="node161.html#boasman">33</A>] to general <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> and differing
+solutions <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img773.gif"
+ ALT="$a$"> and <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1783.gif"
+ ALT="$b$">.
+Despite the derivation using scaling, (<A HREF="node140.html#eq:alexoverlap">H.7</A>) is in fact
+an identity, which can be proved using a messy algebra sequence<A NAME="tex2html86"
+  HREF="footnode.html#foot19330"><SUP>H.1</SUP></A>.
+Unlike the LHS, the RHS is not manifestly <!-- MATH
+ $a^*\!{\leftrightarrow}b$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1798.gif"
+ ALT="$a^*\!{\leftrightarrow}b$"> symmetric.
+However, it can be written in the symmetrized form (<A HREF="node142.html#eq:boasgen">H.14</A>)
+derived in the next section.
+Notice that the choice <IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1807.gif"
+ ALT="$k_a = k_b$"> has increased the order of derivative
+required on the boundary by one.
+
+<P>
+In the case of Dirichlet BCs the second term in (<A HREF="node140.html#eq:alexoverlap">H.7</A>) vanishes,
+and the replacement
+<!-- MATH
+ ${\mathbf r}\cdot\nabla b = ({\mathbf r}\cdot{\mathbf n}) {\mathbf n}\cdot\nabla b$
+ -->
+<IMG
+ WIDTH="162" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1818.gif"
+ ALT="${\mathbf r}\cdot\nabla b = ({\mathbf r}\cdot{\mathbf n}) {\mathbf n}\cdot\nabla b$">
+(which follows from the fact that <IMG
+ WIDTH="26" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1819.gif"
+ ALT="$\nabla b$"> and <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1820.gif"
+ ALT="${\mathbf n}$"> are parallel),
+gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left\langle a \left|b\right.\right\rangle _{\mathcal{D}} \; = \; \frac{1}{2k^2} \oint_\Gamma \!\! d{\mathbf s} \,
+	({\mathbf r}\cdot{\mathbf n}) \, \partial_n a^* \partial_n b , \hspace{0.5in}
+	\mbox{(Dirichlet BCs)}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:berrydegen"></A><IMG
+ WIDTH="503" HEIGHT="44" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1821.gif"
+ ALT="\begin{displaymath}
+\left\langle a \left\vert b\right.\right\rangle _{\mathcal{...
+...l_n a^* \partial_n b , \hspace{0.5in}
+\mbox{(Dirichlet BCs)}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+However the knowledge that the LHS is zero for <IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1822.gif"
+ ALT="$b \ne a$"> (orthogonal eigenstates)
+shows that (<A HREF="node140.html#eq:berrydegen">H.8</A>) is an exact boundary orthogonality
+relation for degenerate Dirichlet eigenstates.
+Note that the RHS is proportional to the matrix element <!-- MATH
+ $(\partial {\mathcal{H}} / \partial x)_{ab}$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1823.gif"
+ ALT="$(\partial {\mathcal{H}} / \partial x)_{ab}$">
+of the billiard dilation deformation between degenerate states
+(Appendix&nbsp;<A HREF="node125.html#ap:band_qm">C</A>).
+On the other hand, choosing <IMG
+ WIDTH="44" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1824.gif"
+ ALT="$b = a$"> we have
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left\langle a \left|a\right.\right\rangle _{\mathcal{D}} \; = \; \frac{1}{2k^2} \oint_\Gamma \!\! d{\mathbf s} \,
+	({\mathbf r}\cdot{\mathbf n})\, | \partial_n a |^2 , \hspace{0.5in}
+	\mbox{(Dirichlet BCs)}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:berrynorm"></A><IMG
+ WIDTH="496" HEIGHT="44" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1825.gif"
+ ALT="\begin{displaymath}
+\left\langle a \left\vert a\right.\right\rangle _{\mathcal{...
+...\partial_n a \vert^2 , \hspace{0.5in}
+\mbox{(Dirichlet BCs)}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This very useful boundary formula
+for the norm of Dirichlet eigenstates
+appears to have been found first for <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$"> by Berry and
+Wilkinson (appendix of [<A
+ HREF="node161.html#berrywilk">28</A>]). It was since derived in a different
+way by Boasman[<A
+ HREF="node161.html#boasman">33</A>], and for general <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> was derived
+in our work[<A
+ HREF="node161.html#dil">14</A>].
+However, I believe the new derivation above to be the simplest yet.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1783"
+  HREF="node141.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1781"
+  HREF="node138.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1777"
+  HREF="node139.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1784"
+  HREF="node141.html">Matrix trick for pushing</A>
+<B> Up:</B> <A NAME="tex2html1782"
+  HREF="node138.html">Overlaps:</A>
+<B> Previous:</B> <A NAME="tex2html1778"
+  HREF="node139.html">Differing wavenumbers</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

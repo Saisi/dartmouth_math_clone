@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>129.170.28.39 UPS Status</title>
+ <meta http-equiv="Cache-Control" content="no-cache" />
+ <meta http-equiv="Pragma" content="no-cache" />
+ <meta name="generator" content="apcupsd 3.14.10, See: http://www.apcupsd.com/" />
+ <meta http-equiv="Refresh" content="30" />
+ <style>
+body {
+
+	color: black;
+
+	background: white;
+
+}
+
+
+
+div.Center {
+
+	text-align: center;
+
+}
+
+
+
+img {
+
+	border-style: none;
+
+}
+
+
+
+pre {
+
+	text-align: left;
+
+}
+
+
+
+strong {
+
+	color: red;
+
+}
+
+
+
+table.Outer {
+
+	color: black;
+
+	background: #60a0a0;
+
+	empty-cells: show; border: solid #60a0a0
+
+}
+
+
+
+th.Outer {
+
+	color: black;
+
+	background: #60b0b0
+
+}
+
+
+
+.Title {
+
+	font-size: 18pt;
+
+}
+
+
+
+.SubTitle {
+
+	font-size: 12pt;
+
+}
+
+
+
+.Empty {
+
+	color: black;
+
+	background: aqua;
+
+}
+
+
+
+.Fault {
+
+	color: black;
+
+	background: red;
+
+}
+
+
+
+.Label {
+
+	color: black;
+
+	background: aqua;
+
+}
+
+
+
+.Normal {
+
+	color: black;
+
+	background: lime;
+
+}
+
+
+
+.Warning {
+
+	color: black;
+
+	background: yellow;
+
+}
+
+ </style>
+</head>
+<body>
+<div class="Center">
+<table border="2" cellspacing="10" cellpadding="5">
+<tr><th>2013-11-25 13:49:12 -0500  </th>
+<th>
+       <form method="get" action="upsstats.cgi"><div>
+       <input type="hidden" name="host" value="129.170.28.39" />
+       <select onchange="this.form.submit()" name="img1">
+               <option value="1" selected="selected">Battery Capacity</option>
+               <option value="2">Battery Voltage</option>
+               <option value="3">Utility Voltage</option>
+               <option value="4">Output Voltage</option>
+               <option value="5">UPS Load</option>
+               <option value="6">Run Time Remaining</option>
+       </select>
+       <input type="hidden" name="img2" value="6" />
+       <input type="hidden" name="img3" value="5" />
+       <input type="hidden" name="temp" value="C" />
+       <input type="hidden" name="refresh" value="30" />
+       </div></form>
+</th>
+<th>
+       <form method="get" action="upsstats.cgi"><div>
+       <input type="hidden" name="host" value="129.170.28.39" />
+       <input type="hidden" name="img1" value="1" />
+       <select onchange="this.form.submit()" name="img2">
+               <option value="1">Battery Capacity</option>
+               <option value="2">Battery Voltage</option>
+               <option value="3">Utility Voltage</option>
+               <option value="4">Output Voltage</option>
+               <option value="5">UPS Load</option>
+               <option value="6" selected="selected">Run Time Remaining</option>
+       </select>
+       <input type="hidden" name="img3" value="5" />
+       <input type="hidden" name="temp" value="C" />
+       <input type="hidden" name="refresh" value="30" />
+       </div></form>
+</th>
+<th>
+       <form method="get" action="upsstats.cgi"><div>
+       <input type="hidden" name="host" value="129.170.28.39" />
+       <input type="hidden" name="img1" value="1" />
+       <input type="hidden" name="img2" value="6" />
+       <select onchange="this.form.submit()" name="img3">
+               <option value="1">Battery Capacity</option>
+               <option value="2">Battery Voltage</option>
+               <option value="3">Utility Voltage</option>
+               <option value="4">Output Voltage</option>
+               <option value="5" selected="selected">UPS Load</option>
+               <option value="6">Run Time Remaining</option>
+       </select>
+       <input type="hidden" name="temp" value="C" />
+       <input type="hidden" name="refresh" value="30" />
+       </div></form>
+</th></tr>
+<tr><td><pre>
+Monitoring: webwork
+ UPS Model: Smart-UPS 1500
+  UPS Name: UPS-webwork
+   APCUPSD: Version 3.14.10
+    Status: ONLINE 
+</pre></td>
+<td rowspan="3">
+<img src="https://www.math.dartmouth.edu/cgi-bin/apcupsd/upsimage.cgi?display=battcap&value=100.0&value2=5" alt="Battery Capacity 100.0%" width="150" height="350" />
+</td>
+<td rowspan="3">
+<img src="https://www.math.dartmouth.edu/cgi-bin/apcupsd/upsimage.cgi?display=runtime&value=23.0&value2=3" alt="Run time remaining 23.0 minutes" width="150" height="350" />
+</td>
+<td rowspan="3">
+<img src="https://www.math.dartmouth.edu/cgi-bin/apcupsd/upsimage.cgi?display=upsload&value=21.4" alt="UPS Load 21.4%" width="150" height="350" />
+</td>
+</tr>
+<tr><td><pre>
+Last UPS Self Test: NO
+Last Test Date: Not found
+</pre></td></tr>
+<tr><td><pre>
+Utility Voltage: 118.0 VAC
+   Line Minimum: 117.3 VAC
+   Line Maximum: 118.0 VAC
+    Output Freq: 60.2 Hz
+</pre>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td colspan="2">
+<pre>
+       UPS Temp: 26.1 
+</pre>
+</td>
+<td>
+       <form method="get" action="upsstats.cgi"><div>
+       <input type="hidden" name="host" value="129.170.28.39" />
+       <input type="hidden" name="img1" value="1" />
+       <input type="hidden" name="img2" value="6" />
+       <input type="hidden" name="img3" value="5" />
+       <input type="hidden" name="refresh" value="30" />
+       <select onchange="this.form.submit()" name="temp">
+         <option selected="selected" value="C">&deg; C</option>
+         <option value="F">&deg; F</option>
+         <option value="K">&deg; K</option>
+       </select>
+       </div></form>
+</td></tr></table>
+</td></tr>
+<tr><td colspan="4"><b>Recent Events</b><br />
+<textarea rows="5" cols="95">
+2013-10-23 08:45:38 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-10-23 04:41:19 -0400  apcupsd shutdown succeeded
+2013-10-23 04:41:19 -0400  apcupsd exiting, signal 15
+2013-09-09 09:03:44 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-09-09 04:11:18 -0400  apcupsd shutdown succeeded
+2013-09-09 04:11:18 -0400  apcupsd exiting, signal 15
+2013-09-06 09:32:18 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-09-06 09:29:22 -0400  apcupsd shutdown succeeded
+2013-09-06 09:29:22 -0400  apcupsd exiting, signal 15
+2013-09-06 09:21:22 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-09-06 04:41:16 -0400  apcupsd shutdown succeeded
+2013-09-06 04:41:16 -0400  apcupsd exiting, signal 15
+2013-08-30 06:17:24 -0400  Power is back. UPS running on mains.
+2013-08-30 06:17:23 -0400  Power failure.
+2013-08-30 06:17:14 -0400  Power is back. UPS running on mains.
+2013-08-30 06:17:12 -0400  Power failure.
+2013-07-20 17:18:55 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-07-20 17:17:15 -0400  apcupsd shutdown succeeded
+2013-07-20 17:17:15 -0400  apcupsd exiting, signal 15
+2013-07-16 08:14:42 -0400  Power is back. UPS running on mains.
+2013-07-16 08:14:40 -0400  Power failure.
+2013-07-16 08:14:31 -0400  Power is back. UPS running on mains.
+2013-07-16 08:14:29 -0400  Power failure.
+2013-06-26 14:40:46 -0400  Power is back. UPS running on mains.
+2013-06-26 14:40:45 -0400  Power failure.
+2013-06-26 14:40:36 -0400  Power is back. UPS running on mains.
+2013-06-26 14:40:34 -0400  Power failure.
+2013-06-18 05:42:08 -0400  Power is back. UPS running on mains.
+2013-06-18 05:42:06 -0400  Power failure.
+2013-06-11 19:28:19 -0400  UPS Self Test completed: Battery OK
+2013-06-11 19:28:16 -0400  UPS Self Test switch to battery.
+2013-06-04 13:57:22 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-06-04 13:55:42 -0400  apcupsd shutdown succeeded
+2013-06-04 13:55:42 -0400  apcupsd exiting, signal 15
+2013-04-12 11:46:15 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-04-12 11:44:35 -0400  apcupsd shutdown succeeded
+2013-04-12 11:44:35 -0400  apcupsd exiting, signal 15
+2013-04-02 19:31:32 -0400  UPS Self Test completed: Battery OK
+2013-04-02 19:31:29 -0400  UPS Self Test switch to battery.
+2013-03-18 11:29:30 -0400  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-03-18 11:27:49 -0400  apcupsd shutdown succeeded
+2013-03-18 11:27:49 -0400  apcupsd exiting, signal 15
+2013-02-12 02:07:17 -0500  Power is back. UPS running on mains.
+2013-02-12 02:07:14 -0500  Power failure.
+2013-02-01 10:30:27 -0500  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-02-01 10:28:47 -0500  apcupsd shutdown succeeded
+2013-02-01 10:28:47 -0500  apcupsd exiting, signal 15
+2013-01-21 10:06:40 -0500  apcupsd 3.14.10 (13 September 2011) debian startup succeeded
+2013-01-21 10:05:02 -0500  apcupsd shutdown succeeded
+2013-01-21 10:05:02 -0500  apcupsd exiting, signal 15
+</textarea>
+</td></tr>
+</table></div>
+</body></html>

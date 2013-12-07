@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Math3-S2-Demo6_implicitDiff.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="Math3-S2-Demo6_implicitDiff.html#MapleAutoBookmark1">Math3-S2-Demo6_implicitDiff.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 3 Winter 2004</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Introduction to Calculus</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Class Demo for the Implicit Differentiation</b></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright"><u>January 23, 2004</b></u></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>with(plots):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p><font size="5" face="Lucida Bright"><b>
+<br> &nbsp;&nbsp;&nbsp;</b></font><font size="5" face="Lucida Bright"><b>Plotting implicity defined functions is not easy</b></font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">f := (x, y) -&gt; x^2 + y^2:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>implicitplot(f = 25, -5 .. 5, -5 .. 5);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_1.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Descartes's Folium</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>f := (x, y) -&gt; x^3 + y^3 - 6*x*y;</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>implicitplot(f = 0, -5 .. 5, -5 .. 5, thickness = 2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_2.gif" width="158" height="22" alt="f := proc (x, y) options operator, arrow; x^3+y^3-6*y*x end proc" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_3.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Tangent line at (3, 3) is </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_4.gif" width="53" height="22" alt="y = 6-x" align="center">
+<font color="#000000" size="5" face="Lucida Bright"><b>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Tangent line at (4/3, 8/3) is </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_5.gif" width="67" height="40" alt="y = 4*x/5+8/5" align="center">
+<font color="#000000" size="5" face="Lucida Bright"><b>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Tangent line at (2^(4/3), 2^(5/3)) is </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_6.gif" width="58" height="94" alt="y = 2^(5/3)" align="center">
+<font color="#000000" size="3" face="Lucida Bright">
+<br></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>display(implicitplot(f = 0, -6..6, -6..6, thickness = 2, grid = [50, 50]), plot({6 - x, 4*x/5 + 8/5, 2^(5/3)}, x = -6..6, y = -6..6, color=blue));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_7.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Tougher example</b></font><font color="#000000" size="3" face="Lucida Bright">
+<br></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>f := (x, y) -&gt; 2*y^3 + y^2 - y^5 - x^4 + 2*x^3 - x^2;</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>implicitplot(f = 0, -1..2, -2..2, thickness = 2, grid = [70, 70]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_8.gif" width="250" height="22" alt="f := proc (x, y) options operator, arrow; 2*y^3+y^2-y^5-x^4+2*x^3-x^2 end proc" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_9.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Look more carefully</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>implicitplot(f = 0, -0.5..1.5, 1.5..1.7, thickness = 2, grid = [50, 50]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo6_implicitDiff_10.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

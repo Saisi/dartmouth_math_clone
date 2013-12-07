@@ -1,0 +1,22 @@
+/*
+Teaching Seminar-specific addition to the global CSS
+*/
+
+label { 
+    display:inline-block;
+    width:9em; 
+}
+
+fieldset {
+    border: thin solid;
+}
+
+.errors {
+    color:#ff0000;
+    font-weight:bolder;
+}
+
+.mandatory_field {
+    color:#ff0000;
+    font-weight:bold;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <TITLE>Math 36 Resources</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000">
+<FONT COLOR="#AB95F1">
+<FONT SIZE=+3><p align="center">Useful Stuff for the Course</p></font>
+<hr>
+<font size=+1>
+Maple
+<ul>
+<li>Maple V can be downloaded from Public at Public/Licensed Software/
+Key Server Controlled/Limited Support/Maple V
+</li>
+<li>A basic introduction to Maple (in PDF format - you'll need
+Adobe Acrobat Reader to view it) can be 
+<a href="http://www.math.dartmouth.edu/projects/software/mapleintro.pdf">downloaded</a>
+</li>
+<li> Once you've installed Maple, start it up and try it out.  Here
+are a few matrix commands to try:
+<dd>>A := array([[0.3,0.7],[0.9,0.1]]);
+<dd>> evalm(A &* A);
+<dd>> evalm(A^2);
+<dd>> evalm(A^10);
+<dd>> with(linalg);
+<dd>> inverse(A);
+<dd>> evalm(A &* inverse(A));
+<dd>> ?matrix;
+<dd>> ?linalg;
+<dd>> P := array([[0.95,0.03,0.02],[0.1,0.5,0.4],[0.03,0.07,0.9]]);
+<dd> (To find the fixed point probability vector for P, do the following:)
+<dd>> solve({0.95*w1+0.1*w2+0.03*w3=w1,0.03*w1+0.5*w2+0.07*w3=w2,
+<dd>  w1+w2+w3=1},{w1,w2,w3});
+<br>
+To investigate the logistic map, try the following commands:
+<dd> plot(3.4*x*(1-x),x=0..1);
+<dd> plot({x,3.4*x*(1-x)},x=0..1);
+<br>
+The fsolve command finds real-valued solutions to equations: 
+<dd> fsolve(x=3.4*x*(1-x),x,0..1);
+<dd> f := x -> 3.4*x*(1-x);
+<dd> fsolve(x=f(f(x)),x,0..1);
+</ul>
+<font size=+2>
+<hr>
+<p align=center>
+<a href="links.html">links</a>
+<a href="index.html">main</a>
+</p>
+</body>
+</html>

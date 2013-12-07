@@ -1,0 +1,97 @@
+body {
+  background-color: #F0F0F0;
+  color: black;
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  padding: 0;
+  margin: auto;
+  width: 600px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.out {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4 { 
+  font-weight: bold;
+  padding: 0.2ex 0.2em;
+  margin: 0;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 140%;
+}
+
+h3 {
+  font-size: 100%;
+}
+
+h4 {
+  font-size: 100%;
+}
+
+div#head {
+    width: 100%;
+}
+
+#head h1, #head h2 {
+  background-color: #00703C;
+  color: #FFFFFF;
+}
+
+#head h1 {
+  margin: 1ex 0;
+}
+
+div#main {
+  width: 90%;
+  margin: auto;
+}
+
+dl.info dt {
+  float: left;
+  width: 9em;
+  padding: 0 .5em;
+  font-weight: bold;
+  text-align: right;
+  background-color: #00703C;
+  color: #FFFFFF;
+}
+
+dl.info dd {
+  margin-left: 10em;
+  margin-bottom: .5ex;
+  padding: 0 .5em;
+  font-weight: bold;
+}
+
+div#foot {
+  width: 100%;
+}
+
+#foot ul {
+  padding: 0;
+  text-align: center;
+}
+
+#foot li {
+  display: inline;
+  padding: .2ex 1em ;
+  margin: 0 .5em;
+  font-size: 120%;
+  font-weight: bold;
+  background-color: #00703C;
+  color: #FFFFFF;
+  width: 9em;
+  text-align: center;
+}

@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ch10_heat-a.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000 size=4>10.5 Heat equation</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><font color=#000000>Exercise 10, page 580. </font></b>
+<font color=#000000>Homogeneaous boundary conditions.</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Series := (x,t,n) -&gt; sum(160/((4*k+1)^2*Pi^2)*sin((4*k+1)*Pi*x/40)*exp(-(4*k+1)^2*Pi^2*t/1600) - 160/((4*k+3)^2*Pi^2)*sin((4*k+3)*Pi*x/40)*exp(-(4*k+3)^2*Pi^2*t/1600), k=0..n);                             u:=plot3d([x,t,Series(x,t,20)],x=0..40,t=0..200,style=wireframe,color=blue,numpoints=1000): display(u,axes=frame,labels=["x","t","u(x,t)"]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s04/section1/maple/images/Ch10_heat-a1.gif" width=798 height=107 alt="Series := proc (x, t, n) options operator, arrow; s...">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s04/section1/maple/images/Ch10_heat-a2.gif" width=699 height=286 alt="[Maple Plot]">
+</p>
+<p align=left>
+<b><font color=#000000>Exercise 12, page 589.</font></b>
+<font color=#000000> Insulated ends. Assume L=10 and alpha=1</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Series := (x,t,n) -&gt; sum(-4/((4*k^2-1)*Pi)*cos(2*k*Pi*x/10)*exp(-4*k^2*Pi^2*t/100), k=1..n);                            u:=plot3d([x,t,2/Pi+Series(x,t,20)],x=0..10,t=0..30,style=wireframe,color=blue,numpoints=1000): display(u,axes=frame,labels=["x","t","u(x,t)"]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s04/section1/maple/images/Ch10_heat-a3.gif" width=369 height=106 alt="Series := proc (x, t, n) options operator, arrow; s...">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s04/section1/maple/images/Ch10_heat-a4.gif" width=442 height=286 alt="[Maple Plot]">
+</p>
+</basefont>
+</body>
+</html>

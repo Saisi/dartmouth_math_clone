@@ -1,0 +1,170 @@
+<HTML>
+
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>Getting Started with Maple</TITLE>
+
+</HEAD>
+
+<STYLE>
+
+A{text-decoration:none; color:blue}
+
+</STYLE>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<B><FONT FACE="Times" SIZE=4><P ALIGN="CENTER">Getting Started with</P>
+</FONT></B>
+<B><I><FONT FACE="Times" SIZE=6><P ALIGN="CENTER">Maple 6</P>
+</I></FONT></B>
+<B><FONT FACE="Times"><P ALIGN="CENTER">Math 3, Fall 2000</P>
+</B>
+
+
+<BR>
+<P>&nbsp;</P></B>
+<P>Maple is an example of what is called a <I>Computer Algebra System</I> (CAS). Other examples are Mathematica and Derive. These systems are changing the way scientists, engineers, and mathematicians do mathematics. As we shall see, they allow us to do algebra and symbolic manipulations by computer. They also do arithmetic, draw graphs, and of special importance to calculus students, they do derivatives and integrals. </P>
+
+<P>Only a few years ago, we had to write programs in BASIC to do the things with the computer in Math 3 that this year we will do with the aid of Maple. A one-line Maple command will often replace ten lines of BASIC code. The objective though is the same: we want to be able to concentrate on the mathematics of the calculus without being overburdened with numerical and symbolic calculations. We now can easily do calculations with a CAS that are virtually impossible with pencil and paper.</P>
+
+<P>Do you remember how to calculate the square root of 73 by hand? Probably not. The reason is that we now can get a good approximation to <IMG SRC="http://www.math.dartmouth.edu/~m3f00/mapleStarterDoc/Image1.gif" WIDTH=24 HEIGHT=15> with an inexpensive calculator. Removing the calculational burden frees us to think about square roots without the extra baggage of the calculational algorithm. This is an elementary example of the kind of advantages that a CAS gives. In Maple, we write </P>
+
+<DIR>
+<DIR>
+
+
+<P>&#9;&#9;&#9;&#9;<b><font color=#FF0000>evalf(sqrt(73)); </font></b></P>
+
+</DIR>
+</DIR>
+
+<P>if we want the decimal result 8.544003745 to ten significant figures, and we write </P>
+
+<DIR>
+<DIR>
+
+<P>&#9;&#9;&#9;&#9;<b><font color=#FF0000>evalf(sqrt(73),100);</font></b></P>
+
+</DIR>
+</DIR>
+
+<P>if we want it to one hundred:</P>
+<DIR>
+<DIR>
+
+<P>8.54400374531753116787164832623970643459445532953328224190865125377
+1648819327298381080972030107009430</P>
+
+<P>&nbsp;</P></DIR>
+</DIR>
+
+<P>  </P>
+<B><P>Getting Started: Putting Maple onto your Computer</P>
+</B>
+<P>To get started you need to get Maple onto your computer. For Mac users, you will do this by dragging a folder from PUBLIC that contains a keyserved version of the necessary software. Look on PUBLIC and open successively the folders:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P>(i)&#9;Licensed Software</P>
+<P>(ii)&#9;KeyServer Controlled Software</P>
+<P>(iii)&#9;Limited Support</P>
+<P>(iii)&#9;Maple</P>
+<P>(iv)&#9;Maple 6</P>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>You will find there three files&#150;one named <I>ReadMe</I>, a second named <I>Maple 6 Installer</I>, and a third file named <I>OpenGL Install</I>. You should drag the <I>ReadMe</I> to your hard disk. Then read the <I>READ ME!</I> file and follow the instructions for your machine.</P> 
+
+<P>If you have a Windows computer, you will need to get Maple from Wilson, the fileserver that contains the keyserver software, and the keyserved applications that run on Windows 95/98/2000 machines. On Wilson open successively the folders:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P>(i)&#9;Public Files</P>
+<P>(ii)&#9;Licensed Software</P>
+<P>(iii)&#9;Key Served Software</P>
+<P>(iv)&#9;Limited Support</P>
+<P>(v)&#9;Maple</P>
+<P>(vi)&#9;Version 6</P>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>Double click the <B>setup.exe</B> file and answer the questions as they appear on the screen.</P>
+
+<P>At the end of the installation process you will have a folder on your disk named <I>Maple 6</I>. We will refer to this folder as "The Maple folder". Inside the Maple folder is the Maple application itself named <I>Maple 6 &#167;</I> on a Macintosh and <I>wmaple.exe</I> on a Windows computer, and a number of folders that contain libraries and examples. One particular folder that we want to call to your attention is named "lib". It is the standard Maple library of routines that Maple uses. In the next section below, we explain how to put in this "lib" folder the "math3.m" file that has been developed here at Dartmouth especially for calculus students. We will say more about using the "math3.m" file and other library files as we need them.</P> 
+
+<P>Now you should be able to start up Maple so long as you are connected to the Dartmouth Network (for keyserving purposes). You do this on a Macintosh by double clicking the <B>Maple 6 &#167;</B> icon inside your Maple folder. On a Windows computer, click <B>Start</B>, <B>Programs</B>, <B>Maple 6</B> then <B>Maple 6</B>. </P>
+
+<P>Once you start up Maple a new, blank document is displayed, waiting for you to type Maple commands. Try typing in one of the commands above for approximating <IMG SRC="http://www.math.dartmouth.edu/~m3f00/mapleStarterDoc/Image1.gif" WIDTH=24 HEIGHT=15>. Can you approximate it to 1000 significant digits? (Note: Be sure to follow all commands with a semicolon (;). Then type the <I>enter</I> key. Without the semicolon, Maple will interpret what you have typed as an incomplete statement.)</P>
+
+<B><P>The Next Step: Customizing Maple for Calculus</P></B>
+
+<P>Go to the Maple section of the Math 3 website </FONT><A HREF="../index.html"><FONT FACE="Times">http://www.math.dartmouth.edu/~m3f00</FONT></A><FONT FACE="Times"> and download the folder called "Math 3 Maple files". (It will download as a ".sit" file that will have to be decompressed with Stuffit Expander on Macs or Aladdin Expander on PCs. This might happen automatically depending on how your browser is configured. In any event, you should make sure that the downloaded file has been decompressed before proceeding.) The folder contains a file named MATH3Help.mws, and a folder named "Put Contents in lib Folder". When you have it on your hard disk, open the "Math 3 Maple files" folder. The "MATH3Help.mws" file should be dragged to your Maple folder. The file "math3.m" in the "Put Contents in..." folder (not the whole folder) should be dragged to the lib folder inside the Maple folder. <B>Note for Windows users</B>: On a PC, the "lib" folder should be on the "C" drive in "Program Files: Maple 6" or it can be located with the Find command.</P>
+
+<P>Now, you can throw the "Math 3 Maple files" folder (and the "Put Contents in..." folder) in the trash.</P>
+
+<P>Maple documents are much like a word processor document. They are called <I>Worksheets</I>, because they allow you to type text, include graphics, and issue Maple commands. A well-written Maple worksheet is just like an interactive textbook. Such worksheets are being exchanged today over the World Wide Web, and we will likely see a revolution in publishing over the next decade.</P>
+
+<P>Well, if you have done the things described above you are off and running with Maple. Over the course of the term we will gradually introduce you to Maple techniques that are useful in calculus. It is a huge system that few people learn quickly. Rather, your knowledge of it will grow as you go through courses at Dartmouth over the next years. </P>
+
+<B><P>The Final Step: Try out your New Software</P>
+</B>
+<P>Open your Maple folder and double click on the appropriate application icon (<I>Maple 6 &#167; </I> in most cases). This starts Maple and displays a new blank worksheet. The Maple prompt  </FONT><B><FONT FACE="Chicago,Arial">&gt;</B></FONT><FONT FACE="Times">  is there with a blinking cursor waiting for you to type Maple commands. Try a few of the following:</P>
+
+<DIR>
+<DIR>
+
+<P>&#9;</FONT><B><FONT FACE="Courier"><font color=#FF0000>2+3;</P>
+</FONT></FONT><FONT FACE="Times"><P>&#9;</FONT><FONT FACE="Courier"><font color=#FF0000>plot(x^3+3*x-1,x=-3..3);</P>
+</FONT></FONT><FONT FACE="Times"><P>&#9;</FONT><FONT FACE="Courier"><font color=#FF0000>plot(sin(x),x=-2*Pi..2*Pi);</P>
+</FONT></FONT><FONT FACE="Times"><P>&#9;</FONT><FONT FACE="Courier"><font color=#FF0000>evalf(Pi,1000);</P>
+</FONT></FONT><FONT FACE="Times"><P>&#9;</FONT><FONT FACE="Courier"><font color=#FF0000>solve(a*x^2+b*x+c=0,x);</font></FONT></P>
+
+</B>
+
+</DIR>
+</DIR>
+
+</B>
+
+<P>&nbsp;</P></B>
+<FONT FACE="Times">
+<P>Type each of the above commands <I>verbatim</I> (don&#146;t forget the semicolon), and then hit the <I>enter</I> key to execute it. You can save this worksheet by selecting </FONT><FONT FACE="Chicago,Arial">Save As...</FONT><FONT FACE="Times"> from the File menu. Or you can print it by selecting </FONT><FONT FACE="Chicago,Arial">Print...</FONT><FONT FACE="Times"> from the File menu. Don't worry about not knowing much about Maple. We will learn by doing, as we go along. <BR>
+</P>
+<B><P>Getting Help: Learning Maple Commands On-line</P>
+</B>
+<P>If you want to get help on a topic that you think may exist, type for example</P>
+
+<DIR>
+<DIR>
+
+<P>&#9;&#9;&#9;&#9;<b><font color=#FF0000>?derivative</font></b></P>
+
+</DIR>
+</DIR>
+
+<P>and hit the <I>enter</I> key. Maple will tell you if it recognizes what you are asking, and if it does, it will give you a lot of information. So, don't hesitate to explore on your own using the question mark (<B>?</B>) to ask Maple about a topic. </P>
+
+<P>Try this: Experiment with the on-line help (<B>?</B>) by seeing if you can figure out how to get Maple to calculate the derivative of <IMG SRC="http://www.math.dartmouth.edu/~m3f00/mapleStarterDoc/Image2.gif" WIDTH=62 HEIGHT=14>. (Note that in Maple, multiplication is indicated by * and exponentiation by ^. Thus, <IMG SRC="http://www.math.dartmouth.edu/~m3f00/mapleStarterDoc/Image3.gif" WIDTH=15 HEIGHT=11> is written in Maple as <IMG SRC="http://www.math.dartmouth.edu/~m3f00/mapleStarterDoc/Image4.gif" WIDTH=25 HEIGHT=12>, and <IMG SRC="http://www.math.dartmouth.edu/~m3f00/mapleStarterDoc/Image5.gif" WIDTH=13 HEIGHT=14> is written as <IMG SRC="http://www.math.dartmouth.edu/~m3f00/mapleStarterDoc/Image6.gif" WIDTH=23 HEIGHT=12>.) Can you find the answer?</P>
+
+<P>We have also developed two CAS units, CAS #1 on the elementary functions and CAS #2 on the beginning ideas of calculus. The units are useful for learning the Maple tools that apply to calculus, and can be found in the Study Guide section of the website. We will be drawing on material from them in class and assigning homework as appropriate. So, with the on-line help and the CAS units, you should have plenty of support in using Maple. Have fun.</P></FONT>
+
+<BR>
+<BR>
+<BR>
+<BR>
+<B>Click here to----></B> <A HREF="../maple.html">Return to Maple Page</A><P>
+
+
+
+</BODY>
+</HTML>

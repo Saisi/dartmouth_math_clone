@@ -1,0 +1,928 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "DTD/xhtml1-transitional.dtd">
+
+<!-- This HTML document was created by converting a Mathematica notebook using Export. -->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="Notebook">
+
+<head >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  116hw1 test2.nb
+</title>
+
+<link href="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/Default.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_1.gif"  border="0"  alt="Func[x_] = x"  width="88" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_2.gif"  border="0"  alt="x"  width="11" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_3.gif"  border="0"  alt="Func2[x_] = 1/x"  width="108" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_4.gif"  border="0"  alt="1/x"  width="19" height="30"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_5.gif"  border="0"  alt="Func[5]"  width="54" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_6.gif"  border="0"  alt="5"  width="11" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_7.gif"  border="0"  alt=""  width="4" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_8.gif"  border="0"  alt="Table[Func[i], {i, 10}, {j, 10}]"  width="221" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_9.gif"  border="0"  alt="{{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, {3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ... 8, 8, 8, 8, 8, 8, 8, 8}, {9, 9, 9, 9, 9, 9, 9, 9, 9, 9}, {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}}"  width="1057" height="36"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_10.gif"  border="0"  alt="&#62371;TomMat1[N_] = Table[(1/N) * Exp[-(5 * (i - j)/N)^2], {i, N}, {j, N}]"  width="461" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_11.gif"  border="0"  alt="Table :: iterb : Iterator  {i, N} does not have appropriate bounds. More&#8230;"  width="424" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_12.gif"  border="0"  alt="Table[&#63309;^(-((5 (i - j))/N)^2)/N, {i, N}, {j, N}]"  width="227" height="41"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_13.gif"  border="0"  alt="&#62371;This is part 1 (a)"  width="115" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_14.gif"  border="0"  alt="General :: spell : Possible spelling error: new symbol name \&quot;part\&quot; is similar to existing symbols  {Apart, Part} .  More&#8230;"  width="700" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_15.gif"  border="0"  alt="a is part This"  width="90" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_16.gif"  border="0"  alt="TomMat1[20]"  width="81" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_17.gif"  border="0"  alt="{{1/20, 1/(20 &#63309;^(1/16)), 1/(20 &#63309;^(1/4)), 1/(20 &#63309;^(9/16)), 1/(20 &#63309;) ... )), 1/(20 &#63309;), 1/(20 &#63309;^(9/16)), 1/(20 &#63309;^(1/4)), 1/(20 &#63309;^(1/16)), 1/20}}"  width="965" height="941"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_18.gif"  border="0"  alt="&#62371;TomMat1[20] &nbsp;&nbsp;//MatrixForm"  width="180" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_19.gif"  border="0"  alt="(&#62370;                            1                  1                    1                 ... #63309;         20 &#63309;         20 &#63309;         20 &#63309;         20 &#63309;         20"  width="1304" height="517"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_20.gif"  border="0"  alt="TomDelta[i_] = KroneckerDelta[10 - i]"  width="252" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_21.gif"  border="0"  alt="KroneckerDelta[10 - i]"  width="150" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_22.gif"  border="0"  alt=""  width="4" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_23.gif"  border="0"  alt=" Array[TomDelta, 20]"  width="141" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_24.gif"  border="0"  alt="{0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}"  width="371" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_25.gif"  border="0"  alt="TomDelta[11]"  width="88" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_26.gif"  border="0"  alt="0"  width="11" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_27.gif"  border="0"  alt="TomMat1[20] . Array[TomDelta, 20] //MatrixForm"  width="321" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_28.gif"  border="0"  alt="(&#62370;        1         &#62370;)           ----------------                      81/16     ... 309;                   1           ---------------                      25/4           20 &#63309;"  width="74" height="515"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_29.gif"  border="0"  alt="So the vector/matrix multiplication returns the desired line of the matrix as expected"  width="566" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_30.gif"  border="0"  alt="General :: spell1 : Possible spelling error: new symbol name \&quot;line\&quot; is similar to existing symbol \&quot;Line\&quot;.  More&#8230;"  width="660" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_31.gif"  border="0"  alt="as desired expected line multiplication of returns So the^3 vector"  width="422" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_32.gif"  border="0"  alt="&#62371;Here is part B"  width="93" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_33.gif"  border="0"  alt="B Here is part"  width="90" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_34.gif"  border="0"  alt="&#62371;Eigenvalues[TomMat1[5]] //MatrixForm"  width="262" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_35.gif"  border="0"  alt="(&#62370;                                                                                      ... 09;   #1 - 25 &#63309;  #1  - 25 &#63309;   #1  - 75 &#63309;   #1  + 125 &#63309;   #1  &amp;, 1]"  width="1210" height="123"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_36.gif"  border="0"  alt=" that is a bit messy . Let us look at numerical form ."  width="328" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_37.gif"  border="0"  alt="Syntax :: tsntxi : \&quot;form . \&quot; is incomplete; more input is needed. More&#8230;"  width="408" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_38.gif"  border="0"  alt="Ughthatisabitmessy . Letuslookatnumerical form ."  width="298" height="15"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_39.gif"  border="0"  alt="N[Eigenvalues[TomMat1[5]]] //MatrixForm"  width="284" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_40.gif"  border="0"  alt="(&#62370; 0.3317377638726387`  &#62370;)            0.27174243201597165`            0.19511687292536906`            0.12459441769924659`            0.07680851348677405`"  width="87" height="77"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_41.gif"  border="0"  alt="N[Eigenvalues[TomMat1[10]]] //MatrixForm"  width="291" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_42.gif"  border="0"  alt="(&#62370; 0.33012759333047936`    &#62370;)            0.26666943355347905`            0.18690 ...        0.0035129207299441985`            0.0009287361064987247`            0.00017757741953451395`"  width="101" height="157"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_43.gif"  border="0"  alt="It apears as if the eigen values are getting smaller . As discussed in class computation of this for very large matrices is ... time consuming and I ' ll avoid it if thats ok ."  width="997" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_44.gif"  border="0"  alt="RowBox[{Here,  , is,  , part,  , 1., C}]"  width="109" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_45.gif"  border="0"  alt="So I am not able to quickly solve a system of size 20x20 but 5x5 should suffice for pratice purposes . &nbsp;&nbsp;here is what a inverse of a 5x5 type A matrix woudl look like :"  width="1008" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_46.gif"  border="0"  alt="Inverse[TomMat1[5]] //MatrixForm"  width="233" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_47.gif"  border="0"  alt="(&#62370;                                                                                      ... 25 &#63309;     3125 &#63309;     3125 &#63309;    3125 &#63309;    3125 &#63309;    3125 &#63309;"  width="4804" height="237"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_48.gif"  border="0"  alt="So now we obtain X as follows :"  width="196" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_49.gif"  border="0"  alt="TomDelta3[i_] = KroneckerDelta[3 - i]"  width="252" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_50.gif"  border="0"  alt="KroneckerDelta[3 - i]"  width="143" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_51.gif"  border="0"  alt="This function gives us a good &quot;b&quot; vector for our 5x5 A matrix"  width="388" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_52.gif"  border="0"  alt="Array[TomDelta3, 5]"  width="138" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_53.gif"  border="0"  alt="{0, 0, 1, 0, 0}"  width="98" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_54.gif"  border="0"  alt="N[TomMat1[5] . Inverse[Evaluate[TomMat1[5]]]] //MatrixForm"  width="403" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_55.gif"  border="0"  alt="(&#62370; 1.0000000000000007`         2.220446049250313`*^-16     0.`                          ... 7787807814457`*^-17    0.`                         2.220446049250313`*^-16     1.0000000000000007`"  width="546" height="91"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_56.gif"  border="0"  alt="&#62371;I ' m using numerical approximation above because teh solution is only an approximation and so the symbolic form of an approximation is hard to understand"  width="985" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_57.gif"  border="0"  alt="N[Inverse[TomMat1[5]] . Array[TomDelta3, 5]] //MatrixForm"  width="396" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_58.gif"  border="0"  alt="(&#62370; 0.9391648292451436` &#62370;)            -2.905598572128823`            7.103417150227679`            -2.905598572128823`            0.9391648292451436`"  width="80" height="77"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_59.gif"  border="0"  alt="The above gives us our approximation of x in Ax = b"  width="319" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_60.gif"  border="0"  alt="N[TomMat1[5] . (Inverse[TomMat1[5]] . Array[TomDelta3, 5]) - Array[TomDelta3, 5]] //MatrixForm"  width="641" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_61.gif"  border="0"  alt="(&#62370; 0.`                      &#62370;)            1.8041124150158794`*^-16            3.885780586188048`*^-16            1.8041124150158794`*^-16            0.`"  width="114" height="85"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_62.gif"  border="0"  alt="&#62371;The error is very slight as 10^-16 is extremely small . "  width="353" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_63.gif"  border="0"  alt="N[TomMat1[10] . (Inverse[TomMat1[10]] . Array[TomDelta3, 10]) - Array[TomDelta3, 10]] //MatrixForm"  width="669" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_64.gif"  border="0"  alt="(&#62370; -8.92787710427001`*^-9   &#62370;)            -9.774467457646097`*^-9            -1. ...   -2.878834948205622`*^-10            -5.054126006598381`*^-10            -6.731397661496885`*^-10"  width="122" height="187"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_65.gif"  border="0"  alt="So with a larger matrix the error has increased ."  width="310" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_66.gif"  border="0"  alt="&#62371;Here is part 1e"  width="102" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_67.gif"  border="0"  alt="N[(TomMat1[5] - IdentityMatrix[5]) . (Inverse[TomMat1[5]] . Array[TomDelta3, 5]) - Array[TomDelta3, 5]] //MatrixForm"  width="787" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_68.gif"  border="0"  alt="(&#62370; -0.9391648292451436` &#62370;)            2.9055985721288224`            -7.103417150227679`            2.9055985721288224`            -0.9391648292451436`"  width="88" height="77"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_69.gif"  border="0"  alt="N[(TomMat1[10] - IdentityMatrix[10]) . (Inverse[TomMat1[10]] . Array[TomDelta3, 10]) - Array[TomDelta3, 10]] //MatrixForm"  width="822" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_70.gif"  border="0"  alt="(&#62370; -172.55532843602148` &#62370;)            477.8036707308623`            -751.3964648 ... 245`            311.76946986436906`            -158.32895130315356`            49.437929330443154`"  width="81" height="157"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_71.gif"  border="0"  alt="I guess it made the increasing error get more extreme"  width="341" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_72.gif"  border="0"  alt="OK so onto problem2 . &#62371;hmm make a dipole function thingy eh ? Ok "  width="278" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_73.gif"  border="0"  alt="Dipole[x1_, x2_, y1_, y2_, n1_, n2_] = 1/(2 * Pi) * {x1 - y1, x2 - y2} . {n1, n2} * 1/(Norm[({x1 - y1, x2 - y2})] * Norm[{x1 - y1, x2 - y2}] * Norm[{n1, n2}])"  width="987" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_74.gif"  border="0"  alt="(n1 (x1 - y1) + n2 (x2 - y2))/(2 &#960; (Abs[n1]^2 + Abs[n2]^2)^(1/2) (Abs[x1 - y1]^2 + Abs[x2 - y2]^2))"  width="361" height="35"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_75.gif"  border="0"  alt="Dipole[6, 2, 1, 8, 1, 0]"  width="159" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_76.gif"  border="0"  alt="5/(122 &#960;)"  width="44" height="31"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_77.gif"  border="0"  alt="Dipole[5, 7, 1, 8, 1, 0]"  width="159" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_78.gif"  border="0"  alt="2/(17 &#960;)"  width="37" height="31"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_79.gif"  border="0"  alt="Ok SO it is set up If I am understanding the function I need to put in right . "  width="480" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_80.gif"  border="0"  alt="Part 2b"  width="53" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_81.gif"  border="0"  alt="&#62371;Dipole[{6, 5}, {2, 7}, 1, 8, 1, 0] &#62371;"  width="228" height="58"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_82.gif"  border="0"  alt="{5/(122 &#960;), 2/(17 &#960;)}"  width="101" height="31"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_83.gif"  border="0"  alt="&#62371;So it will return a list when given a list"  width="264" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_84.gif"  border="0"  alt="&#62371;Part 2c"  width="52" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_85.gif"  border="0"  alt="DipTab[N_] = Table[{i, j}, {i, N}, {j, N}]"  width="287" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_86.gif"  border="0"  alt="Table :: iterb : Iterator  {i, N} does not have appropriate bounds. More&#8230;"  width="424" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_87.gif"  border="0"  alt="Table[{i, j}, {i, N}, {j, N}]"  width="193" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_88.gif"  border="0"  alt="Array[Func, 5]"  width="101" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_89.gif"  border="0"  alt="{1, 2, 3, 4, 5}"  width="98" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_90.gif"  border="0"  alt="Dipole[Array[Func, 50], Array[Func2, 50], 1, 8, 1, 0] //MatrixForm"  width="455" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_91.gif"  border="0"  alt="(&#62370;                &#62370;)            0                2           ----------          ... -----           5684785 &#960;                1250           -------------           125749 &#960;"  width="75" height="1287"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_92.gif"  border="0"  alt="ListPlot[Dipole[Array[Func, 50], Array[Func2, 50], 1, 8, 1, 0]]"  width="430" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Graphics">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_93.gif"  border="0"  alt="[Graphics:HTMLFiles/index_93.gif]"  width="288" height="178"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_94.gif"  border="0"  alt="&#8259;Graphics&#8259;"  width="80" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_95.gif"  border="0"  alt="Part 3a Sum of a lot of parts . I bet it already does that but lets check : "  width="410" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_96.gif"  border="0"  alt="Dipole[5, 7, 1, 8, 1, 0]"  width="159" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_97.gif"  border="0"  alt="61/(2 81770^(1/2) &#960;)"  width="83" height="34"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_98.gif"  border="0"  alt="Dipole[5, 7, 2, 1, 2, 3]"  width="159" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_99.gif"  border="0"  alt="4/(15 13^(1/2) &#960;)"  width="69" height="34"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_100.gif"  border="0"  alt="Dipole[5, 7, {1, 2}, {8, 1}, {1, 2}, {0, 3}]"  width="288" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_101.gif"  border="0"  alt="{2/(17 &#960;), 4/(15 13^(1/2) &#960;)}"  width="126" height="34"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_102.gif"  border="0"  alt="Total[Dipole[5, 7, {1, 2}, {8, 1}, {1, 2}, {0, 3}]]"  width="337" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_103.gif"  border="0"  alt="2/(17 &#960;) + 4/(15 13^(1/2) &#960;)"  width="114" height="34"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_104.gif"  border="0"  alt="Ok . Looks like it ."  width="119" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_105.gif"  border="0"  alt="Part 3b Ok . To do this i ' m going to set up some machinery stuff "  width="353" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_106.gif"  border="0"  alt="&#62371;XCircleMiniPart[i_, N_] = Cos[2 * Pi * i/N]"  width="289" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_107.gif"  border="0"  alt="Cos[(2 i &#960;)/N]"  width="75" height="30"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_108.gif"  border="0"  alt="XCirclePart[N_] = Array[XCircleMiniPart, {N, 1}, {1, N}]"  width="389" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_109.gif"  border="0"  alt="Array :: ilsmp : Single or non-empty list of positive machine-size integers expected at position 2 of Array[XCircleMiniPart, {N, 1}, {1, N}] .  More&#8230;"  width="866" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_110.gif"  border="0"  alt="Array[XCircleMiniPart, {N, 1}, {1, N}]"  width="259" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_111.gif"  border="0"  alt="XCirclePart[2]"  width="103" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_112.gif"  border="0"  alt="{{-1}, {1}}"  width="79" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_113.gif"  border="0"  alt="YCircleMiniPart[i_, N_] = Sin[2 * Pi * i/N]"  width="289" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_114.gif"  border="0"  alt="General :: spell1 : Possible spelling error: new symbol name \&quot;YCircleMiniPart\&quot; is similar to existing symbol \&quot;XCircleMiniPart\&quot;.  More&#8230;"  width="792" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_115.gif"  border="0"  alt="Sin[(2 i &#960;)/N]"  width="75" height="30"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_116.gif"  border="0"  alt="YCirclePart[N_] = Array[YCircleMiniPart, {N, 1}, {1, N}]"  width="389" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_117.gif"  border="0"  alt="General :: spell1 : Possible spelling error: new symbol name \&quot;YCirclePart\&quot; is similar to existing symbol \&quot;XCirclePart\&quot;.  More&#8230;"  width="744" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_118.gif"  border="0"  alt="Array :: ilsmp : Single or non-empty list of positive machine-size integers expected at position 2 of Array[YCircleMiniPart, {N, 1}, {1, N}] .  More&#8230;"  width="866" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_119.gif"  border="0"  alt="Array[YCircleMiniPart, {N, 1}, {1, N}]"  width="259" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_120.gif"  border="0"  alt="YCirclePart[2]"  width="103" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_121.gif"  border="0"  alt="{{0}, {0}}"  width="72" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_122.gif"  border="0"  alt="Ok lets see if I can ' t present what I ' m&nbsp;&nbsp;doign clearly here :"  width="392" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_123.gif"  border="0"  alt="{XCirclePart[2], YCirclePart[2]} //MatrixForm"  width="324" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_124.gif"  border="0"  alt="(&#62370; (&#62370; -1 &#62370;)   (&#62370; 1 &#62370;)  &#62370;)            (&#62370; 0 &#62370;)    (&#62370; 0 &#62370;)"  width="96" height="31"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_125.gif"  border="0"  alt="And on a Larger scale"  width="136" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_126.gif"  border="0"  alt="a And Larger on scale"  width="135" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_127.gif"  border="0"  alt="{XCirclePart[10], YCirclePart[10]} //MatrixForm"  width="338" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_128.gif"  border="0"  alt="(&#62370; (&#62370; 1               &#62370;)            (&#62370; 1                &#62370;)  ...  2                                       2      2                            (&#62370; 0 &#62370;)"  width="1204" height="67"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_129.gif"  border="0"  alt="&#62371;So let ' s test it out on our dipole function :"  width="288" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_130.gif"  border="0"  alt="N[Total[Dipole[5, 3, XCirclePart[10], YCirclePart[10], 1, 0]]]"  width="428" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_131.gif"  border="0"  alt="RowBox[{{, 0.234051, }}]"  width="74" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_132.gif"  border="0"  alt="Below is a graph of the dipole function . I used a norm outside of the total to convert from array to # due to issue of plot only accepting numbers . "  width="925" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_133.gif"  border="0"  alt="Plot3D[Norm[Total[Dipole[x, y, XCirclePart[10], YCirclePart[10], XCirclePart[10], YCirclePart[10]]]], {x, -5, 5}, {y, -5, 5}]"  width="857" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Graphics">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_134.gif"  border="0"  alt="[Graphics:HTMLFiles/index_134.gif]"  width="781" height="634"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_135.gif"  border="0"  alt="&#8259;SurfaceGraphics&#8259;"  width="129" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_136.gif"  border="0"  alt="To examine how it is scales with N I decided to take a look at it for N = 150&nbsp;&nbsp;after looking at it at N = 10"  width="655" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_137.gif"  border="0"  alt="Plot3D[Norm[Total[Dipole[x, y, XCirclePart[150], YCirclePart[150], XCirclePart[150], YCirclePart[150]]]], {x, -5, 5}, {y, -5, 5}]"  width="885" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Graphics">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_138.gif"  border="0"  alt="[Graphics:HTMLFiles/index_138.gif]"  width="853" height="692"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_139.gif"  border="0"  alt="&#8259;SurfaceGraphics&#8259;"  width="129" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_140.gif"  border="0"  alt="Norm[Total[Dipole[.3, .3, XCirclePart[150], YCirclePart[150], XCirclePart[150], YCirclePart[150]]]]"  width="690" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_141.gif"  border="0"  alt="23.8732"  width="53" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_142.gif"  border="0"  alt=" "  width="11" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_143.gif"  border="0"  alt="Norm[Total[Dipole[.3, .3, XCirclePart[10], YCirclePart[10], XCirclePart[10], YCirclePart[10]]]]"  width="662" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_144.gif"  border="0"  alt="1.59155"  width="53" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_145.gif"  border="0"  alt="RowBox[{Norm, [, RowBox[{Total, [, RowBox[{Dipole, [, RowBox[{1.5, ,, .3, ,, XCirclePart[150], ,, YCirclePart[150], ,, XCirclePart[150], ,, YCirclePart[150]}], ]}], ]}], ]}]"  width="697" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_146.gif"  border="0"  alt="1.91513*10^-15"  width="94" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_147.gif"  border="0"  alt="RowBox[{Norm, [, RowBox[{Total, [, RowBox[{Dipole, [, RowBox[{1.5, ,, .3, ,, XCirclePart[10], ,, YCirclePart[10], ,, XCirclePart[10], ,, YCirclePart[10]}], ]}], ]}], ]}]"  width="669" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_148.gif"  border="0"  alt="0.00911946"  width="74" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_149.gif"  border="0"  alt="It seems to me that The value inside increases as N increases . While the value outside decreases as N increases ."  width="713" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_150.gif"  border="0"  alt="Sum[Dipole[Cos[2 * pi/N"  width="164" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_151.gif"  border="0"  alt="Sum["  width="33" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_152.gif"  border="0"  alt=" Dipole[-5, -3, 1, 1, 1, 0]"  width="178" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_153.gif"  border="0"  alt="-3/(52 &#960;)"  width="44" height="31"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_154.gif"  border="0"  alt="."  width="11" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_155.gif"  border="0"  alt="Part 3c Ok first I am gonna set it up with the weighing functionm "  width="363" height="38"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_156.gif"  border="0"  alt="ProbAprox[p1_, p2_, thet_] &nbsp;&nbsp; = Norm[Total[Dipole[p1, p2, XCirclePart[10], YCirclePart[10], Cos[thet], Sin[thet]]]]"  width="780" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_157.gif"  border="0"  alt="Abs[((-1 + p1) Cos[thet] + p2 Sin[thet])/(2 &#960; (Abs[-1 + p1]^2 + Abs[p2]^2) (Abs[Cos[thet] ... + p1]^2 + Abs[1/2 (1/2 (5 + 5^(1/2)))^(1/2) + p2]^2) (Abs[Cos[thet]]^2 + Abs[Sin[thet]]^2)^(1/2))]"  width="1079" height="900"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_158.gif"  border="0"  alt="IntAprox[q1_, q2_] = Sum[ProbAprox[q1, q2, 2 * Pi * i/10] * 2 * Pi/10, {i, 1, 10}]"  width="525" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_159.gif"  border="0"  alt="1/5 &#960; Abs[(1 - q1)/(2 &#960; (Abs[-1 + q1]^2 + Abs[q2]^2)) + (-1 - q1)/(2 &#960; (Abs[1 + ... 1/2)))^(1/2) &#960; (Abs[1/4 (-1 + 5^(1/2)) + q1]^2 + Abs[1/2 (1/2 (5 + 5^(1/2)))^(1/2) + q2]^2))]"  width="1170" height="7249"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_160.gif"  border="0"  alt="N[IntAprox[1, 0]]"  width="122" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_161.gif"  border="0"  alt="                                     1 Power :: infy : Infinite expression  - encountered. More&#8230;                                      0"  width="336" height="27"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_162.gif"  border="0"  alt="                                             0 ComplexInfinity &#8734; :: indet : Indeterminat ... ---------------- encountered. More&#8230;                                                   &#960;"  width="442" height="27"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_163.gif"  border="0"  alt="                                     1 Power :: infy : Infinite expression  - encountered. More&#8230;                                      0"  width="336" height="27"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_164.gif"  border="0"  alt="                                             0 ComplexInfinity &#8734; :: indet : Indeterminat ... ---------------- encountered. More&#8230;                                                   &#960;"  width="442" height="27"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_165.gif"  border="0"  alt="                                     1 Power :: infy : Infinite expression  - encountered. More&#8230;                                      0"  width="336" height="27"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_166.gif"  border="0"  alt="General :: stop : Further output of Power :: infy will be suppressed during this calculation. More&#8230;"  width="576" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_167.gif"  border="0"  alt="                                                            0 ComplexInfinity &#8734; :: indet ... + -- (1 + Sqrt[5]) ] &#960;                                                   8                 16"  width="516" height="47"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_168.gif"  border="0"  alt="General :: stop : Further output of &#8734; :: indet will be suppressed during this calculation. More&#8230;"  width="559" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_169.gif"  border="0"  alt="Indeterminate"  width="95" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_170.gif"  border="0"  alt="N[IntAprox[3, 2]]"  width="122" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_171.gif"  border="0"  alt="1.79359"  width="53" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_172.gif"  border="0"  alt="N[IntAprox[.3, .4]]"  width="136" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_173.gif"  border="0"  alt="0.0124299"  width="67" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_174.gif"  border="0"  alt="SO it apears with my system I get numbers greater than 1 outside and numbers less than 1 insid ... ting about the desired results . &#62371;&#62371;Plot3D[N[IntAprox[x, y]], {x, -5, 5}, {y, -5, 5}]"  width="1017" height="98"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_175.gif"  border="0"  alt="General :: spell1 : Possible spelling error: new symbol name \&quot;with\&quot; is similar to existing symbol \&quot;With\&quot;.  More&#8230;"  width="660" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_176.gif"  border="0"  alt="General :: spell1 : Possible spelling error: new symbol name \&quot;get\&quot; is similar to existing symbol \&quot;Get\&quot;.  More&#8230;"  width="648" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_177.gif"  border="0"  alt="General :: spell1 : Possible spelling error: new symbol name \&quot;greater\&quot; is similar to existing symbol \&quot;Greater\&quot;.  More&#8230;"  width="696" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_178.gif"  border="0"  alt="General :: stop : Further output of General :: spell1 will be suppressed during this calculation. More&#8230;"  width="600" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_179.gif"  border="0"  alt="&#63310; and apears circle get greater inside it less my numbers^2 of outside SO system than^2 the with"  width="592" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Graphics">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_180.gif"  border="0"  alt="[Graphics:HTMLFiles/index_180.gif]"  width="434" height="352"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_181.gif"  border="0"  alt="&#8259;SurfaceGraphics&#8259;"  width="129" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_182.gif"  border="0"  alt="Plot3D[Norm[Total[Dipole[x, y, XCirclePart[150], YCirclePart[150], XCirclePart[150], YCirclePart[150]]]], {x, -5, 5}, {y, -5, 5}]"  width="885" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_183.gif"  border="0"  alt="Ok here is part D"  width="109" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_184.gif"  border="0"  alt="1 + .03 * Cos[2Pi/3 * i/N]"  width="171" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_185.gif"  border="0"  alt=""  width="4" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_186.gif"  border="0"  alt="XCirclePart[N_] = Array[XCircleMiniPart, {N, 1}, {1, N}] XCircleMiniPart[i_, N_] = Cos[2 * Pi * i/N]"  width="677" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_187.gif"  border="0"  alt="RadialXmini[i_, N_] = 2 * Pi/3 * i/N"  width="239" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_188.gif"  border="0"  alt="(2 i &#960;)/(3 N)"  width="40" height="31"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_189.gif"  border="0"  alt="RadialXpart[N_] = Array[RadialXmini, {N, 1}, {1, N}]"  width="361" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_190.gif"  border="0"  alt="Array :: ilsmp : Single or non-empty list of positive machine-size integers expected at position 2 of Array[RadialXmini, {N, 1}, {1, N}] .  More&#8230;"  width="842" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_191.gif"  border="0"  alt="Array[RadialXmini, {N, 1}, {1, N}]"  width="231" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_192.gif"  border="0"  alt="RadialXpart[5]"  width="103" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_193.gif"  border="0"  alt="{{(2 pi)/15}, {(4 pi)/15}, {(2 pi)/5}, {(8 pi)/15}, {(2 pi)/3}}"  width="289" height="30"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_194.gif"  border="0"  alt="RadialYmini[i_, N_] = 1 + .03 * Cos[2 * Pi/3 * i/N]"  width="326" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_195.gif"  border="0"  alt="RowBox[{1, +, RowBox[{0.03,  , Cos[(2 i &#960;)/(3 N)]}]}]"  width="125" height="31"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_196.gif"  border="0"  alt="RadialYpart[N_] = Array[RadialYmini, {N, 1}, {1, N}]"  width="361" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_197.gif"  border="0"  alt="Array :: ilsmp : Single or non-empty list of positive machine-size integers expected at position 2 of Array[RadialYmini, {N, 1}, {1, N}] .  More&#8230;"  width="842" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_198.gif"  border="0"  alt="Array[RadialYmini, {N, 1}, {1, N}]"  width="231" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_199.gif"  border="0"  alt="RadialYpart[5]"  width="103" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_200.gif"  border="0"  alt="RowBox[{{, RowBox[{RowBox[{{, RowBox[{1, +, RowBox[{0.03,  , Cos[(2 pi)/15]}]}], }}], ,, RowBo ... os[(8 pi)/15]}]}], }}], ,, RowBox[{{, RowBox[{1, +, RowBox[{0.03,  , Cos[(2 pi)/3]}]}], }}]}], }}]"  width="718" height="30"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_201.gif"  border="0"  alt="To approximate the ArcLengths I ' ll use NIntegrate with accuracy goal of 1/N^3 with n = 10 :"  width="594" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_202.gif"  border="0"  alt="DsAprox[i_, N_] = NIntegrate[1 + (2 * Pi/(3 * N) * .03 * Sin[2 * Pi/3 * x/N])^2, {x, 2 * Pi/3 * (i - 1)/N, 2 * Pi/3 * (i)/N}, AccuracyGoal&#62754;1/10^3]"  width="950" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_203.gif"  border="0"  alt="                         2.0943951023931953` (-1.` + i) NIntegrate :: nlim : x = ------------- ... -------- is not a valid limit of integration. More&#8230;                                        N"  width="495" height="27"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_204.gif"  border="0"  alt="                         2.0943951023931953` (-1.` + i) NIntegrate :: nlim : x = ------------- ... -------- is not a valid limit of integration. More&#8230;                                        N"  width="495" height="27"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_205.gif"  border="0"  alt="RowBox[{NIntegrate, [, RowBox[{RowBox[{1, +, RowBox[{RowBox[{(, RowBox[{RowBox[{(, RowBox[{2,  ...  2}]}], ,, {x, (2 &#960; (i - 1))/(3 N), (2 &#960; i)/(3 N)}, ,, AccuracyGoal&#62754;1/10^3}], ]}]"  width="546" height="47"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_206.gif"  border="0"  alt="DsAprox[3, 10]"  width="101" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_207.gif"  border="0"  alt="0.20944"  width="53" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_208.gif"  border="0"  alt="DsAprox2[j_] = DsAprox[j, 10]"  width="206" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_209.gif"  border="0"  alt="NIntegrate :: nlim : x = 0.20943951023931953` (-1.` + j) is not a valid limit of integration. More&#8230;"  width="495" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Message">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_210.gif"  border="0"  alt="NIntegrate :: nlim : x = 0.20943951023931953` (-1.` + j) is not a valid limit of integration. More&#8230;"  width="495" height="14"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_211.gif"  border="0"  alt="RowBox[{NIntegrate, [, RowBox[{RowBox[{1, +, RowBox[{RowBox[{(, RowBox[{RowBox[{(, RowBox[{2,  ... }], )}], /, (3 10)}], )}], ^, 2}]}], ,, {x, (2 &#960; (j - 1))/(3 10), (2 &#960; j)/(3 10)}}], ]}]"  width="408" height="47"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_212.gif"  border="0"  alt="DsAprox2[3]"  width="82" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_213.gif"  border="0"  alt="0.20944"  width="53" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_214.gif"  border="0"  alt="So for N = 10 we&nbsp;&nbsp;can approximate with"  width="238" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_215.gif"  border="0"  alt="RadialAprox[p1_, p2_, thet_] &nbsp;&nbsp; = Norm[Total[Dipole[p1, p2, RadialXpart[10], RadialYpart[10], thet, 1 + .03 * Cos[2 * Pi/3 * i/10]]]]"  width="878" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_216.gif"  border="0"  alt="RowBox[{Abs, [, RowBox[{RowBox[{RowBox[{(, RowBox[{(p1 - &#960;/15) thet, +, RowBox[{RowBox[{( ... Box[{1, +, RowBox[{0.03,  , Cos[(i &#960;)/15]}]}], ]}], ^, 2}]}], )}], ^, (1/2)}]}], )}]}]}], ]}]"  width="1081" height="372"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_217.gif"  border="0"  alt="RadialInt[q1_, q2_] = Sum[RadialAprox[q1, q2, 2 * Pi * i/10] * DsAprox2[i], {i, 1, 10}]"  width="569" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_218.gif"  border="0"  alt="RowBox[{RowBox[{0.209441,  , RowBox[{Abs, [, RowBox[{RowBox[{RowBox[{(, RowBox[{0.0250247,  ,  ... 2, +, RowBox[{RowBox[{Abs, [, RowBox[{RowBox[{-, 0.985}], +, q2}], ]}], ^, 2}]}], )}]}]}], ]}]}]}]"  width="1128" height="2232"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_219.gif"  border="0"  alt="N[RadialInt[2, 3]]"  width="130" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_220.gif"  border="0"  alt="0.954389"  width="60" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_221.gif"  border="0"  alt=""  width="4" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_222.gif"  border="0"  alt="Plot3D[N[RadialInt[x, y]], {x, -5, 5}, {y, -5, 5}]"  width="338" height="18"  align="absmiddle"  />
+</p>
+
+<p class="Graphics">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_223.gif"  border="0"  alt="[Graphics:HTMLFiles/index_223.gif]"  width="405" height="328"  align="absmiddle"  />
+</p>
+
+<p class="Output">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_224.gif"  border="0"  alt="&#8259;SurfaceGraphics&#8259;"  width="129" height="17"  align="absmiddle"  />
+</p>
+
+<p class="Input">
+ <img src="http://www.math.dartmouth.edu/~m116w06/HTMLFiles/index_225.gif"  border="0"  alt="So Once again I get kind of the right shape but my values apear to be positive when they need to be negative . "  width="688" height="18"  align="absmiddle"  />
+</p>
+
+
+<hr />
+<p style='font-family: Helvetica; font-size: 8pt'>Created by
+<a href="http://www.wolfram.com"><span style='font-style: italic'>Mathematica</span></a>
+&nbsp;(January 19, 2006) </p>
+
+</body>
+
+</html>

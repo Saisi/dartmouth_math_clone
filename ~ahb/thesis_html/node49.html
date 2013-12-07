@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Chapter 5: Improved sweep methods for billiard quantization</TITLE>
+<META NAME="description" CONTENT="Chapter 5: Improved sweep methods for billiard quantization">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node71.html">
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node50.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html782"
+  HREF="node50.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html780"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html774"
+  HREF="node48.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html783"
+  HREF="node50.html">Introduction and history of</A>
+<B> Up:</B> <A NAME="tex2html781"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html775"
+  HREF="node48.html">Historical remarks and conclusion</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00600000000000000000"></A>
+<A NAME="ch:ipwdm"></A>
+<BR>
+Chapter 5: Improved sweep methods for billiard quantization
+</H1>
+
+<P>
+In this chapter I describe a numerical method for finding billiard eigenstates
+which involves `sweeping' the energy to locate the states.
+It is a generalization of and improvement upon
+Heller's Plane Wave Decomposition Method (PWDM)
+[<A
+ HREF="node161.html#Heller84">90</A>,<A
+ HREF="node161.html#hellerleshouches">91</A>].
+The PWDM was invented over 15 years ago and provided a
+more powerful and rapid way to find eigenstates in certain billiard shapes
+than had been available beforehand.
+In this chapter
+several problems of the PWDM have been solved (missing states,
+sensitivity to choice of basis set size and number of matching points),
+it has been simplified, the accuracy is improved, and the
+speed has been increased considerably.
+This chapter is also a useful introduction to the following one,
+where a much more efficient method (which bypasses the `sweep' altogether)
+is analysed.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html784"
+  HREF="node50.html">Introduction and history of quantum eigenproblems</A>
+<UL>
+<LI><A NAME="tex2html785"
+  HREF="node51.html">General definitions</A>
+<LI><A NAME="tex2html786"
+  HREF="node52.html">Categories of existing numerical solution techniques</A>
+<UL>
+<LI><A NAME="tex2html787"
+  HREF="node53.html">A) `Basis diagonalization'</A>
+<LI><A NAME="tex2html788"
+  HREF="node54.html">B) `Green's function matching' (sweep in energy)</A>
+<LI><A NAME="tex2html789"
+  HREF="node55.html">C) Other methods</A>
+</UL>
+<LI><A NAME="tex2html790"
+  HREF="node56.html">Brief history of the quantum billiard eigenproblem</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html791"
+  HREF="node57.html">Definition of the billiard problem</A>
+<LI><A NAME="tex2html792"
+  HREF="node58.html">Representation by a Helmholtz basis</A>
+<UL>
+<LI><A NAME="tex2html793"
+  HREF="node59.html">Numerical rank of the basis set</A>
+<LI><A NAME="tex2html794"
+  HREF="node60.html">Truncating the singular generalized eigenproblem</A>
+<LI><A NAME="tex2html795"
+  HREF="node61.html">Choice of <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> for truncation</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html796"
+  HREF="node62.html">The choice of norm matrix <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"></A>
+<UL>
+<LI><A NAME="tex2html797"
+  HREF="node63.html">Estimation by interior points--relation to Heller's PWDM</A>
+<LI><A NAME="tex2html798"
+  HREF="node64.html">Exact form on the boundary and Dirichlet approximation</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html799"
+  HREF="node65.html">The hunt for local tension minima as a function of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"></A>
+<UL>
+<LI><A NAME="tex2html800"
+  HREF="node66.html">Form of tension minima and resulting accuracy in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"></A>
+<LI><A NAME="tex2html801"
+  HREF="node67.html">Finding the nearest minimum</A>
+<LI><A NAME="tex2html802"
+  HREF="node68.html">Dynamic range and sweep method breakdown</A>
+<LI><A NAME="tex2html803"
+  HREF="node69.html">A more intelligent hunt?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html804"
+  HREF="node70.html">Conclusion and discussion</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

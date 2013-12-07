@@ -1,0 +1,10 @@
+
+ol.week {
+  list-style-type: square;
+  counter-reset: week;
+}
+
+ol.week li:before {
+  counter-increment: week;
+  content: "Week " counter(week) ": ";
+}

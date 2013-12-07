@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>Using CGI Programs - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="Using CGI Programs">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/cgi.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Getting Started">
+
+<P ALIGN="CENTER"><B>Search in
+Using CGI Programs:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l1"><A HREF="options-TOPIC=Getting+Started&QUERY=.html">Command-Line Printing and Options</A></P>
+<P CLASS="l1"><A HREF="glossary-TOPIC=Getting+Started&QUERY=.html">Glossary</A></P>
+<P CLASS="l1"><A HREF="policies-TOPIC=Getting+Started&QUERY=.html">Managing Operation Policies</A></P>
+<P CLASS="l1"><A HREF="overview-TOPIC=Getting+Started&QUERY=.html">Overview of CUPS</A></P>
+<P CLASS="l1"><A HREF="accounting-TOPIC=Getting+Started&QUERY=.html">Printer Accounting Basics</A></P>
+<P CLASS="l1"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html">Printer Sharing</A></P>
+<P CLASS="l1"><A HREF="security-TOPIC=Getting+Started&QUERY=.html">Server Security</A></P>
+<P CLASS="l1"><A HREF="license-TOPIC=Getting+Started&QUERY=.html">Software License Agreement</A></P>
+<P CLASS="l1"><A HREF="standard-TOPIC=Getting+Started&QUERY=.html">Standard Configuration</A></P>
+<P CLASS="l1"><A HREF="translation-TOPIC=Getting+Started&QUERY=.html">Translating and Customizing CUPS</A></P>
+<P CLASS="l1"><A HREF="cgi-TOPIC=Getting+Started&QUERY=.html">Using CGI Programs</A></P>
+<P CLASS="l2"><A HREF="cgi-TOPIC=Getting+Started&QUERY=.html#CONFIG">Configuring the Server</A></P>
+<P CLASS="l2"><A HREF="cgi-TOPIC=Getting+Started&QUERY=.html#LIMITS">Limitations</A></P>
+<P CLASS="l2"><A HREF="cgi-TOPIC=Getting+Started&QUERY=.html#TABLE1">Table 1</A></P>
+<P CLASS="l1"><A HREF="kerberos-TOPIC=Getting+Started&QUERY=.html">Using Kerberos Authentication</A></P>
+<P CLASS="l1"><A HREF="network-TOPIC=Getting+Started&QUERY=.html">Using Network Printers</A></P>
+<P CLASS="l1"><A HREF="whatsnew-TOPIC=Getting+Started&QUERY=.html">What&#39;s New in CUPS 1.6</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>Using CGI Programs</H1>
+<FORM ACTION="/help/cgi.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">Using CGI Programs</H1>
+
+<P>CUPS provides a dynamic web interface through dedicated CGI programs that
+are executed when users open special directories on the CUPS server. Each CGI
+performs administration, class, help, job, and printer functions as directed by
+the user, but the actual programs that are run and functions that are available
+are limited to those that were originally designed into the scheduler.</P>
+
+<P>CUPS also supports CGI programs and specific scripting languages (Java, Perl,
+PHP, and Python) for pages you want to provide.  The interpreters for these
+languages are currently configured at compile time and are associated with
+MIME media types. <a href="cgi-TOPIC=Getting+Started&QUERY=.html#TABLE1">Table 1</a> shows the MIME media types that
+are reserved for each type of page and are the same as those used by the Apache
+web server.</P>
+
+<DIV CLASS="table"><TABLE SUMMARY="CGI MIME Media Types">
+<CAPTION><A NAME="TABLE1">Table 1</A>: CGI MIME Media Types</CAPTION>
+<TR>
+	<TH>MIME Media Type</TH>
+	<TH>Description</TH>
+</TR>
+<TR>
+	<TD>application/x-httpd-cgi</TD>
+	<TD>CGI script/program</TD>
+</TR>
+<TR>
+	<TD>application/x-httpd-java</TD>
+	<TD>Java program</TD>
+</TR>
+<TR>
+	<TD>application/x-httpd-perl</TD>
+	<TD>Perl script</TD>
+</TR>
+<TR>
+	<TD>application/x-httpd-php</TD>
+	<TD>PHP script</TD>
+</TR>
+<TR>
+	<TD>application/x-httpd-python</TD>
+	<TD>Python script</TD>
+</TR>
+</TABLE></DIV>
+
+<H2><A NAME="CONFIG">Configuring the Server</A></H2>
+
+<P>In order to enable the corresponding type, you must create a
+new <VAR>/etc/cups/cgi.types</VAR> file which maps the filename
+extensions to the appropriate MIME types, for example:</P>
+
+<PRE CLASS="command">
+application/x-httpd-cgi cgi
+application/x-httpd-java class
+application/x-httpd-perl pl
+application/x-httpd-php php
+application/x-httpd-python py
+</PRE>
+
+<P>CGI scripts/programs (application/x-httpd-cgi) also must have execution
+permissions to be treated as a CGI script or program.</P>
+
+<H2><A NAME="LIMITS">Limitations</A></H2>
+
+<P>CUPS implements most of the CGI/1.1 specification, with the
+following exceptions:</P>
+
+<UL>
+
+	<LI>No PATH_INFO or PATH_TRANSLATED support</LI>
+
+	<LI>Limited HTTP field support; only the Content-Length
+	(CONTENT_LENGTH), Cookie (HTTP_COOKIE), and User-Agent
+	(HTTP_USER_AGENT) fields are placed in environment
+	variables at this time</LI>
+
+</UL>
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

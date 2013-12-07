@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Polution.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE2:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Position,Time;<br>
+Digits:=5;<br>
+Position:=I0;<br>
+Time:=T0;<br>
+List:=[[Time,Position]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Position:=evalf(Position+Deltat*(<br>
+(((1/24-1/36)*exp(-.01*Time)+1/36)*(sin(((2*Pi)/12)*Time)+1)-1/36)<br>
+*Position<br>
+)<br>
+);<br>
+Time:=evalf(Time+Deltat);<br>
+List:=[op(List),[Time,Position]];<br>
+od;<br>
+List;<br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,50,3,12);<br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/PolIm/Polution1.gif" width=279 height=13 alt="S1 := [[0, 50], [4., 52.778], [8., 63.113], [12., 5...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,50,300,12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1);<br>
+<br>
+S1:=DE2(0,50,300,5*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1);<br>
+<br>
+S1:=DE2(0,50,300,10*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1); <br>
+<br>
+S1:=DE2(0,50,300,20*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1);<br>
+<br>
+S1:=DE2(0,50,300,40*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1); <br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/PolIm/Polution2.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/PolIm/Polution3.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/PolIm/Polution4.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/PolIm/Polution5.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/PolIm/Polution6.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

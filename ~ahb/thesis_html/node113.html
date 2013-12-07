@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The vector Finite Element Method</TITLE>
+<META NAME="description" CONTENT="The vector Finite Element Method">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node114.html">
+<LINK REL="previous" HREF="node112.html">
+<LINK REL="up" HREF="node112.html">
+<LINK REL="next" HREF="node114.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1505"
+  HREF="node114.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1503"
+  HREF="node112.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1497"
+  HREF="node112.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1506"
+  HREF="node114.html">Tests of accuracy and</A>
+<B> Up:</B> <A NAME="tex2html1504"
+  HREF="node112.html">Numerical solution of the</A>
+<B> Previous:</B> <A NAME="tex2html1498"
+  HREF="node112.html">Numerical solution of the</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00941000000000000000">
+The vector Finite Element Method</A>
+</H2>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:febasis"></A><A NAME="15223"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.5:</STRONG>
+
+A transverse magnetic field component is represented by a patchwork
+of bilinear (<I>i.e. </I>lowest-order) basis functions, each living
+a rectangle, covering the <IMG
+ WIDTH="37" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1472.gif"
+ ALT="$x{-}y$"> plane.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="344" HEIGHT="237" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1473.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_atom/febasis.eps,width=3in}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+The technique represents the electric and magnetic fields as
+simple piecewise functions over many ``elements''
+(regions) subdividing a slice through the guide and surrounding media
+in the xy plane,
+therefore by a finite number of degrees of freedom
+(see Fig.&nbsp;<A HREF="node113.html#fig:febasis">8.4.1</A>).
+Each element has a dielectric constant associated with it, allowing arbitrary
+stepwise refractive index distributions in the xy plane to be modelled.
+Maxwell's equations for propagating solutions of the form
+<!-- MATH
+ $\exp(ik_z z - i\omega t)$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1474.gif"
+ ALT="$\exp(ik_z z - i\omega t)$"> are reduced to a generalized sparse
+eigenvalue equation with <IMG
+ WIDTH="22" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1475.gif"
+ ALT="$k_z^2$">
+as the eigenvalue and the bound mode field distributions as the eigenvectors.
+For introductory reviews of electromagnetic waveguide bound-mode techniques
+see Silvester and Ferari&nbsp;[<A
+ HREF="node161.html#silvester">182</A>]
+and Davies&nbsp;[<A
+ HREF="node161.html#FEreview">56</A>].
+
+<P>
+Specifically, we used the technique of Fernandez and Lu
+[<A
+ HREF="node161.html#FL93">139</A>],
+with <IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1373.gif"
+ ALT="$H_x$">
+and <IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1476.gif"
+ ALT="$H_y$"> as the field degrees of freedom, for simplicity
+using first-order (bilinear) functions to represent these fields over
+each element in a two-dimensional grid.
+To reach a compromise between flexibility and ease of coding,
+the grid of elements was chosen to be
+<EM>non-uniform</EM>
+(in order to allow high densities in the regions where fields
+changed rapidly,
+and low densities in others), but rectangular and separable into a product
+of elements in the x and y directions.
+See Fig.&nbsp;<A HREF="node113.html#fig:fegrid">8.4.1</A> which shows an example grid used for calculation.
+
+<P>
+This required a generalization of the Fernandez and Lu implementation, and
+careful consideration of their line-integral terms (which are non-standard
+for a finite element formulation).
+Of the many available finite element approaches to dielectric waveguide mode
+solution, this frequency-domain method was chosen for its
+absence of `spurious modes' (unphysical numerical solutions), its ability
+to handle index step discontinuities, its small number of required
+degrees of freedom, and its matrix sparsity.
+It does not perform as well as some more complicated
+methods which represent more field degrees of freedom
+(for a comparison of some current methods, see [<A
+ HREF="node161.html#FLtest">178</A>]).
+
+<P>
+Rather than emulating a radiative boundary condition
+(a notoriously hard task usually requiring an additional
+outer iterative
+loop, due to the <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1376.gif"
+ ALT="$k_z$"> dependence of the boundary condition),
+we enclosed the problem in a large, perfectly-conducting box
+of sufficient
+size
+that the bound mode evanescent fields were negligible on its walls,
+rendering the
+exact
+nature of the boundary condition irrelevant.
+However, 
+the average level spacing of the unbound modes (the `continuum')
+decreases with increasing box size,
+and especially near cut-off we found that this increases the number
+of iterations required to solve the eigenvalue problem
+to a given accuracy.
+Thus we have a trade-off, and
+found that a box size of <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1477.gif"
+ ALT="$6\lambda$"> to <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1478.gif"
+ ALT="$7\lambda$"> gave the best compromise
+between accuracy and speed.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fegrid"></A><A NAME="15224"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.6:</STRONG>
+
+Finite elements in the <IMG
+ WIDTH="37" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1472.gif"
+ ALT="$x{-}y$"> plane:
+an example rectangular, non-uniform but separable grid used for
+calculation.
+The grid fills a box, which is chosen to be large enough
+that the fields on its boundary are negligible.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="641" HEIGHT="402" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1479.gif"
+ ALT="\begin{figure}\hspace{-1in}\epsfig{figure=fig_atom/fegrid.eps,width=8in}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+We used the well-known ARPACK
+nonsymmeteric sparse eigenvalue solver&nbsp;[<A
+ HREF="node161.html#arpack">133</A>]
+(essentially a block Lanczos [<A
+ HREF="node161.html#golub+vanloan">81</A>,<A
+ HREF="node161.html#lanczos">125</A>] iterative solver)
+to find the 11 lowest
+eigenmodes of the sparse matrix.
+Of these, only the lowest 4 were needed
+to identify the single-mode region in Fig.&nbsp;<A HREF="node106.html#fig:dielcutoff">8.2</A>,
+and only the lowest 2 eigenvectors were needed for
+their electric field information.
+Our non-uniform elements allowed us to have a high element density across
+the waveguide and in the adjacent trapping region, but
+a low density over the much larger box area,
+keeping the total number of degrees of freedom manageable.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1505"
+  HREF="node114.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1503"
+  HREF="node112.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1497"
+  HREF="node112.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1506"
+  HREF="node114.html">Tests of accuracy and</A>
+<B> Up:</B> <A NAME="tex2html1504"
+  HREF="node112.html">Numerical solution of the</A>
+<B> Previous:</B> <A NAME="tex2html1498"
+  HREF="node112.html">Numerical solution of the</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

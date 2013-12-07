@@ -1,0 +1,170 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Random Plane Waves</title>
+</head>
+<body bgcolor=white>
+
+<center>
+<h2>Random Plane Waves</h2>
+<h4>Alex H. Barnett</h4>
+</center>
+
+<p>
+What does a typical (generalized) eigenfunction
+of the laplacian in the unbounded domain R<sup>2</sup>, 
+<i>ie</i> 2D free space, look like?
+Say we choose the eigenvalue 1, then the complex plane wave
+<i>e<sup>i<b>n.x</b></sup></i>, with <b>n</b> is a unit direction vector,
+is an eigenfunction, but is not typical.
+A typical sample from the eigenspace with eigenvalue 1
+can be constructed by a superposition of such waves
+traveling in all directions, with random complex phases.
+In other words, it is the 2D Fourier transform of Gaussian white noise
+restricted to the unit circle <i>S<sup>1</sup></i>.
+Berry first proposed this as a model for quantum eigenfunctions
+of systems whose classical dynamics is chaotic, in the '70s.
+
+<p>This was one of the topics addressed at the recent
+AIM Workshop on <i><a 
+href="http://www.aimath.org/ARCC/workshops/randomsets.html">Topological 
+complexity of random 
+sets</a></i> (Aug 2009).
+Here is my <a href="http://www.math.dartmouth.edu/~ahb/AIMworkshop_contrib.pdf">contribution</a> to the 
+workshop, and some data generated there is below.
+
+<p>
+Here are some pictures of samples of random plane waves, showing the
+real part, chosen with mean-square value 1, computed with the code
+linked below. Click on each to magnify:
+
+<p>
+<table border=10>
+<tr>
+<td>
+<td>color plot
+<td>squared
+<td>extreme value set (|<i>f</i>|>2.5)
+<tr>
+<td>25 wavelengths box
+<td><a href="http://www.math.dartmouth.edu/~ahb/f_2048.png"><img src="http://www.math.dartmouth.edu/~ahb/f_2048.png" height=150></a>
+<td><a href="http://www.math.dartmouth.edu/~ahb/fsq_2048.png"><img src="http://www.math.dartmouth.edu/~ahb/fsq_2048.png" height=150></a>
+<td><a href="http://www.math.dartmouth.edu/~ahb/flevel2.5_2048.png"><img src="http://www.math.dartmouth.edu/~ahb/flevel2.5_2048.png" height=150></a>
+<tr>
+<td>200 wavelengths box
+<td><a href="http://www.math.dartmouth.edu/~ahb/f_4096.png"><img src="http://www.math.dartmouth.edu/~ahb/f_4096.png" height=150></a>
+<td><a href="http://www.math.dartmouth.edu/~ahb/fsq_4096.png"><img src="http://www.math.dartmouth.edu/~ahb/fsq_4096.png" height=150></a>
+<td><a href="http://www.math.dartmouth.edu/~ahb/flevel2.5_4096.png"><img src="http://www.math.dartmouth.edu/~ahb/flevel2.5_4096.png" height=150></a>
+</table>
+
+<p>One might study the local box-counting (Kolmogorov) <b>fractal 
+dimension</b> of 
+the extreme-value sets via the
+slope of the log-log plot of the number of boxes vs box size. <a 
+href="http://www.math.dartmouth.edu/~ahb/f2048_100_NvsE.eps">Here</a> is
+such a plot (different curves are for the different extreme value 
+cut-offs), compared to the <a href="http://www.math.dartmouth.edu/~ahb/g2048_100_NvsE.eps">same for
+a spatially-uncorrelated model</a>. They are similar but the stringiness
+of the level-set shows up as a slight slope in the region before
+the asymptotic slope of 2 is reached.
+
+<p>Some <b>movies</b> generated at the workshop:
+<ul>
+<li>200 wavelengths box with <a href="http://www.math.dartmouth.edu/~ahb/clevel1024.mpg">varying
+extreme value cut-off</a> (6MB, black is above, white below, the value 
+shown at bottom right).
+<li>2000 wavelength box with <a href="http://www.math.dartmouth.edu/~ahb/clev7000ppw3.7resamp8.mpg">varying
+extreme value cut-off</a> (3MB, black is below, white above, the value 
+shown at top right), downsampled from 7000x7000 data below.
+<li><a href="http://www.math.dartmouth.edu/~ahb/clev7000ppw3.7resamp8c.mpg">color version</a> (3MB) of the 
+above.
+<li><a href="http://www.math.dartmouth.edu/~ahb/worms768_200.mpg">Worms movie</a> (4MB) of slowly changing 
+spectral measure from
+the whole disk, through an annulus, to a very thin annulus. Notice how 
+the correlation length-scale grows.
+<li><a href="http://www.phy.bris.ac.uk/people/dennis_mr">Mark 
+Dennis</a>' <a href="http://www.math.dartmouth.edu/~ahb/MarkDennis_worms.mov">worms movie</a> (4MB)
+of the same thing, instead using radially-sliding point-masses as 
+spectral measure.
+</ul>
+
+
+<p>
+Here is Matlab function to produce the above pictures:
+<a href="http://www.math.dartmouth.edu/~ahb/rpw2dsample.m"><code>rpw2dsample.m</code></a> which needs codes
+<a href="http://www.math.dartmouth.edu/~ahb/circle_blobs.m"><code>circle_blobs.m</code></a> and <a 
+href="http://www.math.dartmouth.edu/~ahb/src.m"><code>src.m</code></a>.
+See the Matlab help for documentation and example usage.
+The code is spectrally accurate (with default parameter <code>e=5</code>
+it has absolute errors of order 3e-4), and uses the nonuniform FFT
+by resampling onto a uniform square grid.
+With <code>n=1024</code> it takes of order 5 sec on my laptop for
+all computations, using about 400MB RAM.
+Time scales like <code>n^2 log n</code> and memory use like
+<code>n^2</code>; both these are optimal.
+
+<p> For larger computations the windowed NUFFT becomes a RAM-hog and
+crude slow-FT summation wins out if you have CPU cycles to burn.
+Here's a code for that: <a href="http://www.math.dartmouth.edu/~ahb/naiverpw.m"><code>naiverpw.m</code></a>.
+The result is super-large plane-wave samples, such as the following
+extreme-value set downsampled from 7000x7000 pixels, 2000 
+wavelengths across (click to magnify):
+
+<p>
+<table border=10 cellpadding=10>
+<tr>
+<td>
+<p><a href="http://www.math.dartmouth.edu/~ahb/f_7000_c3.0.png"><img src="http://www.math.dartmouth.edu/~ahb/f_7000_c3.0.png" height=300></a>
+<p>
+extreme-value set |<i>f</i>|>3.0
+<td>
+<p><a href="http://www.math.dartmouth.edu/~ahb/f_3500_radon.png"><img src="http://www.math.dartmouth.edu/~ahb/f_3500_radon.png" 
+height=300></a>
+<p>mean Radon projection of (bottom-left quarter of) f<sup>2</sup>
+</table>
+
+<p>Notice how the Radon projection seems to have isolated bright
+spots (or bowties), as you'd expect for intense lines in coordinate 
+space.
+It is an open problem how to prove something statistical
+which quantifies the `stringiness' visible to the eye in the above 
+pictures and movies. One question is why the Radon, or Gaussian
+beam, basis, leads to apparent sparsity of coefficients.
+
+<p>
+Some references (also see AIM contribution above):
+<ul>
+<li><a href="http://prola.aps.org/abstract/PRL/v58/i13/p1296_1">
+``Properties of random superpositions of plane waves'',
+P. O'Connor, J. Gehlen, E. J. Heller,
+<i>Phys. Rev. Lett.</i> <b>58</b>, 1296-99 (1987)</a>.
+This paper was how I first learned about this, showing that
+when the wavenumbers are allowed to vary in magnitude, the
+stringiness disappears.
+<li>Terence Tao's notes on
+Tomas-Stein theorems on
+<a href="http://www.math.ucla.edu/~tao/254b.1.99s/">restrictions of
+the Fourier transform to the sphere</a>.
+This seems not to be relevant since the functions do not live
+in <i>L<sup>p</sup></i> spaces.
+</ul>
+
+<p>
+<h3>Random Spherical Harmonics</h3>
+<table><tr><td>
+<a href="http://www.math.dartmouth.edu/images/rpw_sphere_nodal_1000_deg40.jpg"><img src="http://www.math.dartmouth.edu/images/rpw_sphere_nodal_1000_deg40_sm.jpg"></a>
+<p>
+<font size=-1>Degree-40 random spherical harmonic sum
+computed for Misha Sodin, Tel-Aviv (black and white show sign only of function)</font>
+<td>
+How about random plane waves on a sphere? This really means a random
+Laplace-Beltrami eigenfunction from within a degenerate eigenspace of
+large eigenvalue, or a random sum of spherical harmonics of constant degree.
+</table>
+
+<hr>
+
+<p>Continue to other <a href="http://www.math.dartmouth.edu/res.html">research</a>...
+
+</body>
+</html>

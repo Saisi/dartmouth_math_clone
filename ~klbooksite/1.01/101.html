@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<!--<base href = "http://math.dartmouth.edu/~klbooksite/">-->
+<TITLE>1.1 Modeling Discrete Data</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<STYLE>
+A	
+{text-decoration:none; 
+color:blue
+}
+H3
+{
+color:  000000;
+background-color:  #ccccff;
+font-family:  Arial
+}
+div.boxme	
+{
+border-style: double;
+border-width: 3pt;
+border-color: darkblue;
+padding:10pt
+}
+
+div.shademe
+{
+background-color: #aaaaff;
+padding: 10pt
+}
+
+
+
+</STYLE>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" background="http://math.dartmouth.edu/~klbooksite/images/ch1bg.gif">
+
+<table border = 0 width = 100% >
+<tr> 
+<td  width="160"> 
+
+<a href="http://math.dartmouth.edu/~klbooksite/toc.htm"><img src="http://math.dartmouth.edu/~klbooksite/images/bookcover.jpg" width="140" height="193" border="0"></a>
+<td valign = bottom>
+<h2><font color="red" size="+4">1.1</font><font color="orange"> Modeling Discrete Data</font>
+<p>&nbsp;</h2>
+
+</table>
+
+
+<h3>Summary</h3>
+
+<applet code="BestFit.class" align = right name="BestFit" codebase="/~klbooksite/1.01/101applets/" archive="BestFit.jar" height = 501 width = 342>
+</applet>
+
+This introductory section is intended to introduce some of the issues involved in modeling discrete data, and to set the agenda for the rest of the chapter. The two sets of data mentioned concern the change of distance of a moving object with respect to time, and the change of a country's population over a number of years. These are data, we are told, that calculus can be used to model, and we will look at that approach later. But for now, we will use the seemingly more intuitive notion of fitting a curve to the data. The method of Least Squares is used for this purpose, and a discussion of the ensuing process unfolds. We end by making an outline of the ideas we need to develop before we can complete the task of modeling.
+
+<p>
+By the end of your studying, you should know:
+<ul>
+  <li>The loose meaning of a function, especially a linear function and a quadratic function, in the context of a given finite set of data.
+  <li>The definition of a polynomial.
+  <li>Fact: Given a finite number <i>n</i> of points, it is always possible to find a polynomial of at most degree <i>n &#0150; 1</i> that passes through them.
+  <li>How to find such a polynomial for 2 or 3 points; and for more points using an applet.
+  <li>The method of Least Squares: conceptually and using an applet.
+  <li>Given a function and a set of data points, how to calculate the sum-of-squared-errors.
+  <li>The meaning of the statements: In modeling discrete data, there is always the issue of choosing the best curve to model the data. The notion of "best" has a mathematical and a non-mathematical component, both of which have to be taken into account.
+</ul>
+</p>
+
+<!--Applet Instructions tag -->
+<P><FONT Size="-1"><B>On-screen applet instructions:</B> The applet presents four points by default and shows the exact polynomial approximation. The first button allows the best least squares approximation to be shown or hidden.  <A HREF="http://math.dartmouth.edu/~klbooksite/1.01/101applets/101appInstr.html">Click here for further instructions.</a></Font><br clear = all>
+
+
+<table border = 0 cellpadding = 5>
+
+<td width = 65% rowspan = 2>
+
+<h3>Examples</h3>
+
+<a href="http://math.dartmouth.edu/~klbooksite/1.01/101examples/101linefit.htm"><img src="http://math.dartmouth.edu/~klbooksite/images/exlink.gif" align=middle border=0></a>If we have the following set of data points
+<br>
+<img src = "http://math.dartmouth.edu/~klbooksite/1.01/101examples/101linefit1.gif" border = 0><img src = "http://math.dartmouth.edu/~klbooksite/1.01/101examples/101linefit2.gif" border = 0>
+<br>
+use the Method of Least Squares to determine which line best fits these points. 
+<p>
+<a href="http://math.dartmouth.edu/~klbooksite/1.01/101examples/101variousfit.htm"><img src="http://math.dartmouth.edu/~klbooksite/images/exlink.gif" align=middle border=0></a>If we have the following set of data points
+<br>
+<img src = "http://math.dartmouth.edu/~klbooksite/1.01/101examples/101variousfit1.gif" border = 0><img src = "http://math.dartmouth.edu/~klbooksite/1.01/101examples/101variousfit2.gif"border = 0>
+<br>
+use the Method of Least Squares to determine which line best fits these points. 
+<p>
+<a href="http://math.dartmouth.edu/~klbooksite/1.01/101examples/101cubicfit.htm"><img src="http://math.dartmouth.edu/~klbooksite/images/exlink.gif" align=middle border=0></a>If the points
+<br>
+<img src = "http://math.dartmouth.edu/~klbooksite/1.01/101examples/101cubicfit1.gif" border = 0><img src = "http://math.dartmouth.edu/~klbooksite/1.01/101examples/101cubicfit2.gif" border = 0>
+<br>
+all lie of a curve of the form y = ax<sup>2</sup> + c, what are the values of a and c?
+
+
+
+<H3>Applets</H3>
+
+<a href="http://math.dartmouth.edu/~klbooksite/appfolder/101unit/FallingObject.html"><img src = "http://math.dartmouth.edu/~klbooksite/images/applink.gif" border = 0 align = "middle">Falling Object</a>
+<br>
+<a href="http://math.dartmouth.edu/~klbooksite/appfolder/101unit/LeastSquares.html"><img src = "http://math.dartmouth.edu/~klbooksite/images/applink.gif" border = 0 align = "middle">Least Squares Fitting</a>
+<br>
+<a href="http://math.dartmouth.edu/~klbooksite/appfolder/tools/Calculator.html"><img src = "http://math.dartmouth.edu/~klbooksite/images/applink.gif" border = 0 align = "middle">Calculator:  Values of Elementary Functions</a>
+
+
+<p> 
+
+<h3>Videos</h3>
+<a href="../../~calcsite/video1.html#103">See short videos of worked problems for this section.</a>  
+<p> 
+
+
+<h3>Quiz</h3>
+<p>
+<a href="http://math.dartmouth.edu/~klbooksite/1.01/101quiz/101quiz_index.htm">Take a quiz.</a> </p>
+
+
+<h3>Exercises</h3>
+ See <a href="http://math.dartmouth.edu/~klbooksite/1.01/101exercises.pdf">Exercises for 1.1 Modeling Discrete Data</a>  (PDF). 
+<p>
+<a href="http://math.dartmouth.edu/~klbooksite/wwprobs/homework.htm">Work online to solve the exercises for this section</a>, or for any other section of the textbook. 
+<!--
+<p><a href="http://webwork.dartmouth.edu/webwork_1.7/m3f02/">Daily homework for the course Math 3</a>, Introduction to Calculus, at Dartmouth. 
+-->
+
+ 
+
+<!--
+begin second column, contains resources and interesting application links.  second column is a table, with 2 rows, top row aligned top and bottom row aligned bottom, so interesting application aligns bottom
+-->
+
+
+<td width = 30% valign = top> 
+
+<div class = "boxme">
+
+<h3>Resources on the Web</h3> 
+
+<i>Information on Newton</i>
+<br>
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Newton.html">Biographical data from St. Andrew's University's Web site</a>
+<br>
+<a href="http://www.maths.tcd.ie/pub/HistMath/People/Newton/RouseBall/RB_Newton.html">Excerpt from  W.W. Rouse Ball's "A Short Account of the History of Mathematics"</a>
+
+
+<p>
+<i>Information on Leibniz</i>
+<br>
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Leibniz.html">Biographical data from St. Andrew's University's Web site</a>
+<br>
+<a href="http://www.maths.tcd.ie/pub/HistMath/People/Leibniz/RouseBall/RB_Leibnitz.html">Excerpt from  W.W. Rouse Ball's "A Short Account of the History of Mathematics"</a>
+
+
+<p>
+<i>Calculus Applications</i>
+<br>
+<a href="http://www.projectintermath.org/products/">Project Intermath</a>
+
+
+<p>
+<i>Understanding Least Squares</i>
+<br>
+<a href="http://standards.nctm.org/document/eexamples/chap7/7.4/">NCTM</a>
+
+
+<p>
+<i>Least Squares Fitting</i>
+<br>
+<a href="http://mathworld.wolfram.com/LeastSquaresFitting.html">Wolfram Research</a>
+
+</div>
+<tr>
+<td valign = "bottom">
+<div class = "shademe">
+
+<center>
+<h4>Interesting Application</h4>
+
+<a href="http://www.time.com/time/newsfiles/aids/"><img src="http://math.dartmouth.edu/~klbooksite/1.01/1.1aidsHo104by137.jpg" width="104" height="137" border="0"></a></p>
+<p>
+AIDS Researcher David Ho:<BR>
+1996 Time Man of the Year.</p>
+</center>
+
+</div>
+
+
+</table>
+
+
+<hr>
+      
+<!-- 
+footer navigation table
+-->
+
+<table border= 1 cellpadding = 4>
+<tr>
+
+<td>
+<A HREF="http://math.dartmouth.edu/~klbooksite/toc.htm"><img src = "http://math.dartmouth.edu/~klbooksite/images/up.gif" align = middle border = 0> Table of Contents</A>
+<td>
+<A HREF="http://math.dartmouth.edu/~klbooksite/1.02/102.html">1.2 Lines in the Plane<img src = "http://math.dartmouth.edu/~klbooksite/images/forward.gif" align = middle border = 0> </A>
+
+</table>
+<p>
+<br>
+<!--Software requirements tag-->
+<P><FONT Size="-1"><B>Software requirements:</B> For best results viewing and interacting with this page, get the <A HREF="http://math.dartmouth.edu/~klbooksite/misc/softreq.html">free software listed here</A>.</Font></P> 
+
+<p>
+<i><font size = -1>Copyright &copy; 2005 Donald L. Kreider, C. Dwight Lahr, Susan J. Diesel</font></i>
+</body>
+</html>

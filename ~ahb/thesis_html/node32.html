@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Chapter 3: Dissipation rate in chaotic billiards, and `special' deformations</TITLE>
+<META NAME="description" CONTENT="Chapter 3: Dissipation rate in chaotic billiards, and `special' deformations">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node42.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node33.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html603"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html601"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html595"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html604"
+  HREF="node33.html">The cavity system</A>
+<B> Up:</B> <A NAME="tex2html602"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html596"
+  HREF="node31.html">Effects below the quantum</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00400000000000000000">
+Chapter 3: Dissipation rate in chaotic billiards, and `special' deformations</A>
+</H1>
+
+<P>
+<A NAME="ch:dil"></A>
+<P>
+In this chapter I shall be calculating the dissipation rate
+resulting from driving a chaotic billiard (also known as a cavity)
+system containing a single
+particle or gas of non-interacting particles.
+The billiard
+system is in <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">-dimensional space, and
+is entirely defined by the location of its closed, hard wall--
+`driving' will means the parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> moves, or <EM>deforms</EM>, this wall,
+according to a `deformation function' <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$">.
+
+<P>
+What is the rate in which the `gas' inside the cavity is 
+heated up?
+The answer depends on the shape 
+of the cavity, the deformation <!-- MATH
+ $D({\mathbf s})$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img57.gif"
+ ALT="$D({\mathbf s})$"> involved, 
+as well as on the amplitude <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img52.gif"
+ ALT="$A$"> and the driving frequency <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">. 
+Also the number of particles <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> and their energy 
+distribution <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img312.gif"
+ ALT="$\rho(E)$"> should be specified.
+To reach an answer I shall be using the theory outlined in the previous
+chapter, where it was
+explained that the dissipation rate
+due to driving at frequency <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$"> is proportional to
+a correlation power spectrum <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$">,
+in both classical and quantum linear response.
+Hence <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$">,
+also known as the `band profile', will now be the main object of study.
+Of particular interest is its zero-frequency limit <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$">.
+<!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> will take different forms for the case
+of different deformations and for different cavity shapes--
+I will be interested in general deformations which need not 
+preserve the cavity shape nor its volume.
+I also assume shapes such that the motion of the particle inside 
+the cavity is globally chaotic, meaning no mixed phase space 
+[<A
+ HREF="node161.html#ottbook">154</A>].
+The criteria for having such a cavity are discussed in
+[<A
+ HREF="node161.html#bunimovich">40</A>,<A
+ HREF="node161.html#bildesign">204</A>].
+For validity of linear response,
+the slowness condition of (<A HREF="node15.html#eq:trivslow">2.12</A>) is assumed,
+which in the billiard case becomes
+<!-- MATH
+ $V \ll v_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img417.gif"
+ ALT="$V \ll v_{{\mbox{\tiny E}}}$">, that is the speed of wall movement should be much
+less than the particle speed at the energy <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">.
+
+<P>
+I will introduce the white noise approximation (WNA), which uses a
+strong chaos assumption to give an estimate for <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$">.
+In the nuclear application (<IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img65.gif"
+ ALT="$d=3$">) this leads to the so-called `wall formula'.
+I will then compare computed <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> curves to the WNA prediction,
+and find many deformations for which the WNA fails.
+In particular, the main result will be the discovery of a class of deformations
+which have <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> vanishing as various powers of <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">
+in the zero-frequency limit, which I name `special' deformations.
+This class is the set of deformations that are shape-preserving:
+they involve only translations, rotations and dilations of the cavity.
+Note that 
+translations and rotations are also volume-preserving, in
+which case
+the associated time-dependent deformations
+can be described as `shaking' the cavity.
+The special class is important for three reasons:
+
+<OL>
+<LI>It will provide the basis for the improved WNA estimate
+(improved `wall formula')
+for <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$">, which takes into account correlations beyond the
+strong chaos assumption. This is the subject of Chapter&nbsp;<A HREF="node42.html#ch:wall">4</A>.
+</LI>
+<LI>The `special' nature of the deformation involving dilation
+about an arbitrary origin corresponds
+to quasi-orthogonality of the cavity quantum eigenstates on the boundary.
+This in turn has a very direct connection to the success
+of the numerical method of Vergini and Saraceno&nbsp;[<A
+ HREF="node161.html#v+s">195</A>], the subject of
+Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A>.
+</LI>
+<LI>They have other applications:
+the band profile of certain special deformations is simply related to
+the band profile for driving the (charged) particle by uniform external fields.
+For instance, the mesoscopic version of Drude formula for the 
+<EM>conductance</EM> of a quantum dot
+in a uniform
+time-dependent magnetic field
+reduces to the
+the calculation of <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> for the rotation deformation.
+For more details, I refer the reader to our published work [<A
+ HREF="node161.html#wlf">15</A>].
+</LI>
+</OL>
+
+<P>
+The Appendices&nbsp;<A HREF="node121.html#ap:band_cl">B</A> and <A HREF="node125.html#ap:band_qm">C</A> detail the
+numerical methods used for classical and quantum band profile calculations
+in this and the following two chapters.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html605"
+  HREF="node33.html">The cavity system</A>
+<UL>
+<LI><A NAME="tex2html606"
+  HREF="node34.html">Form of correlation spectrum and timescales</A>
+<LI><A NAME="tex2html607"
+  HREF="node35.html">Conversion of time averages to averages over collision parameters</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html608"
+  HREF="node36.html">The white noise approximation (WNA)</A>
+<UL>
+<LI><A NAME="tex2html609"
+  HREF="node37.html">Relation to random wave approximation</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html610"
+  HREF="node38.html">`Special' deformations</A>
+<UL>
+<LI><A NAME="tex2html611"
+  HREF="node39.html">Band profile power laws</A>
+<LI><A NAME="tex2html612"
+  HREF="node40.html">The quantum band profile case</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html613"
+  HREF="node41.html">The WNA revisited--cavity shape effects</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html603"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html601"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html595"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html604"
+  HREF="node33.html">The cavity system</A>
+<B> Up:</B> <A NAME="tex2html602"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html596"
+  HREF="node31.html">Effects below the quantum</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

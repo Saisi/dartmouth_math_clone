@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "math31style.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Homework Collaboration</title>
+<link rel="stylesheet" type="text/css" href="math31style.css">
+<script src="https://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Math 31: Topics in Algebra</h1>
+<h2>Summer 2013</h2>
+<br>
+
+<!-- Javascript for automatically generating the date and time of last update. Prints in
+	the format "Last updated (Month) (Day), (Year) at xx:xx am/pm EDT".
+-->
+<div style="text-align:center;">
+<span style="color:DarkSlateGray;">
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+</span>
+</div>
+<br>
+
+    
+<!-- Generates header with links to other components of the course webpage. -->
+<table class="header">
+<tbody>
+
+<tr>
+<td class="header"><p class="header"><a class="header" href="index.html">Main Page
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="info.html">Course Information
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="syllabus.html">Syllabus
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="homework.html">Homework
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="exams.html">Exams & Quizzes
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="projects.html">Projects
+</a></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+<!-- Title of this page: Collaboration -->
+<h1>Homework Collaboration</h1>
+
+<p class="alg">
+The following are examples designed to help give you a better idea of my feelings on 
+collaboration. The scenarios in the first two examples would both be considered 
+acceptable.
+</p>
+
+<ul class="alg">
+	<li>
+	Bob and Alice decide to work on this week's homework together. Neither student has 
+	looked at the first problem yet. They come up with a sketch of a proof together, and 
+	then they each write up their own version of the complete proof. Alice states in her 
+	solution that she worked with Bob, and vice versa.
+	</li>
+
+	<br>
+	<li>
+	Bob and Alice have both worked on the second problem, but they are somewhat stuck. 
+	Alice knows how to start, but she runs into trouble about halfway through the 
+	solution. She explains what she has done to Bob, and he figures out how to finish the 
+	problem. They then write up complete solutions separately, with Bob giving Alice 
+	credit for the first part of the argument, and Alice citing Bob for the second part.
+	</li>
+</ul>
+
+<p class="alg">
+The next two examples would be deemed unacceptable.
+</p>
+
+<ul class="alg">
+	<li>
+	Bob and Alice come up with a solution to problem 3 together, and they write up a full 
+	proof on the board. They both copy down the proof, giving the appropriate citations to 
+	each other, and hand it in. (This would have been acceptable if each student had 
+	simply gone home and written up their own versions of the proof, giving the 
+	appropriate citations.)
+	</li>
+
+	<br>
+	<li>
+	Neither student has looked at the fourth problem. Upon reading it, Alice immediately 
+	sees how to to it, and she proceeds to write up a full solution on the chalkboard. Bob 
+	copies down the proof and hands it in, and mentions that he obtained his ideas from 
+	Alice. (Again, this would be acceptable if Bob simply went home and wrote up his own 
+	proof instead, using the ideas that he got from Alice.)
+	</li>
+</ul>
+
+<br>
+<hr class="footer">
+<br>
+ 
+</body>
+</html>

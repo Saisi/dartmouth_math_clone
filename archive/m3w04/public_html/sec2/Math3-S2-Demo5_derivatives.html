@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Math3-S2-Demo5_derivatives.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="Math3-S2-Demo5_derivatives.html#MapleAutoBookmark1">Math3-S2-Demo5_derivatives.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 3 Winter 2004</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Introduction to Calculus</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Class Demo for the Derivatives of Functions</b></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright"><u>January 14, 2004</b></u></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Define a Maple procedure for plotting a function</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;together with its derivative</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plotDf := proc(f) plot([f(x), diff(f(x), x)], x = -4.5..4.5, thickness = 3): end:</b></font></td>
+</tr>
+</table></p>
+<p><font size="5" face="Lucida Bright"><b>
+<br> &nbsp;&nbsp;&nbsp;</b></font><font size="5" face="Lucida Bright"><b> Now take any function and look at its defivative</b></font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">plotDf(x -&gt; &nbsp;0.5 * x^4 + 0.3 * x^3 - 8 * x^2 - 3 * x+5);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo5_derivatives_1.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Another one</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plotDf(x -&gt; abs(x));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo5_derivatives_2.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

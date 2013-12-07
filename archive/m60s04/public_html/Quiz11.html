@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Quiz1.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>R:=rand();</font><font color="#ff0000" size="3" face="Monospaced">
+<br>randomize(R);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br>RandomQuiz:=proc(L);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L[stats[random,discreteuniform[1,nops(L)]](1)];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>MakeList:=proc(a,b,Chapter)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from a to b</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do </font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[["Problem",i],["Section",Chapter]]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m60s04/RandQ/Quiz1_1.gif" width="96" height="12" alt="R := 453747019461" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m60s04/RandQ/Quiz1_2.gif" width="72" height="12" alt="453747019461" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Problems:=[op(MakeList(1,10,"1.2")),</font><font color="#ff0000" size="3" face="Monospaced">op(MakeList(14,16,"1.2"))]</font><font color="#ff0000" size="3" face="Monospaced">;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m60s04/RandQ/Quiz1_3.gif" width="900" height="12" alt="Problems := [[["Problem", 1], ["Section", "1.2"]], [["Problem", 2], ["Section", "1.2"]], [["Problem", 3], ["Section", "1.2"]], [["Problem", 4], ["Section", "1.2"]], [["Problem", 5], ["Section", "1.2"]..." align="center"><img src="http://www.math.dartmouth.edu/~m60s04/RandQ/Quiz1_4.gif" width="900" height="12" alt="Problems := [[["Problem", 1], ["Section", "1.2"]], [["Problem", 2], ["Section", "1.2"]], [["Problem", 3], ["Section", "1.2"]], [["Problem", 4], ["Section", "1.2"]], [["Problem", 5], ["Section", "1.2"]..." align="center"><img src="http://www.math.dartmouth.edu/~m60s04/RandQ/Quiz1_5.gif" width="900" height="12" alt="Problems := [[["Problem", 1], ["Section", "1.2"]], [["Problem", 2], ["Section", "1.2"]], [["Problem", 3], ["Section", "1.2"]], [["Problem", 4], ["Section", "1.2"]], [["Problem", 5], ["Section", "1.2"]..." align="center"><img src="http://www.math.dartmouth.edu/~m60s04/RandQ/Quiz1_6.gif" width="900" height="12" alt="Problems := [[["Problem", 1], ["Section", "1.2"]], [["Problem", 2], ["Section", "1.2"]], [["Problem", 3], ["Section", "1.2"]], [["Problem", 4], ["Section", "1.2"]], [["Problem", 5], ["Section", "1.2"]..." align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>RandomQuiz(Problems);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m60s04/RandQ/Quiz1_7.gif" width="174" height="12" alt="[["Problem", 16], ["Section", "1.2"]]" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

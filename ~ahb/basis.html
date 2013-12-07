@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Basis approximation for Helmholtz solutions</title>
+</head>
+<body>
+
+<center>
+<h2>Basis approximation for Helmholtz solutions</h2>
+
+<p>
+<img src="http://www.math.dartmouth.edu/~ahb/movies/inh_mov4.gif">
+</center>
+
+<p>
+I have developed,
+and am interested in improving, basis sets which allow all regular solutions
+to the Helmholtz equation (the PDE),
+<center>
+<i>(&Delta; + E) u</i> = 0
+</center>
+<p>
+to be well approximated in a given domain, for any given energy <i>E</i>.
+Each member of the set
+itself satisfies the PDE, thus so does any linear combination.
+Such bases are needed for the Method of Particular Solutions and its
+accelerated variants such as the <i>scaling method</i>.
+In this animation I test a basis of Neumann functions (irregular Bessels)
+whose centers lie along a curve exterior to the domain. The domain is the
+peanut shape
+shown by the dotted line. The exterior curve is visible as the larger
+peanut-shaped wall of point sources, and here is a distance 4/<i>k</i>
+from the boundary, where <i>k=E</i><sup>1/2</sup>.
+Sources are spaced 8 per wavelength (4 times the Nyquist sampling
+density).
+The basis can be viewed as an approximation to a single-layer potential
+on the exterior curve.
+Such basis sets have proved very successful for the Dirichlet eigenproblem,
+that is, they represent eigenfunctions accurately even for nonconvex
+domains and (non-reentrant) corners.
+
+
+<p>
+I test the basis approximation error in representing a given field <i>f</i>,
+shown upper-left, which is a field given by a single Neumann source
+located a distance <i>D</i> outside the domain. <i>D</i> is swept continually
+through a range of positive to negative values.
+I am interested in how well this singular field can be approximated when
+<i>D</i> is <i>less than</i> the distance to the exterior curve.
+This is relevant since eigenfunctions (when analytically continued outside
+the domain) can have singularities with arbitrarily small <i>D</i>.
+A classical example is any corner with angle a non-integral fraction of &pi;.
+
+<p>
+I minimize the error |<i>f</i> - &phi;|, where &phi; is a linear
+combination of basis functions. This norm is taken using values on the boundary
+only, since if <i>E</i> is not a Dirichlet eigenvalue of the domain,
+then boundary values uniquely define interior values.
+For each <i>f</i> minimization
+is achieved by solving a (possibly ill-conditioned)
+linear system for the coefficient vector, via the SVD.
+The resulting &phi; is shown upper-right, and the error field
+<i>f</i> - &phi; is shown lower-left.
+The size of boundary value and derivative error norms on the boundary
+are plotted as a function of <i>D</i> in the lower-right.
+Notice that as <i>D</i> decreases, errors grow exponentially, until
+when <i>D</i>=0 errors become quite large (but how does this value
+depend on <i>E</i>?).
+Interestingly, when  <i>D</i><0, value errors drop once again, however
+the field is entirely wrong inside the domain (the internal singularity
+cannot be represented).
+
+<hr>
+Continue to <a href="res.html">research summary</a>...
+<hr>
+
+<i>Alex Barnett</i>
+
+</body>
+</html>

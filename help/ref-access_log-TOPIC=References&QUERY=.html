@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>access_log - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="access_log">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/ref-access_log.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="References">
+
+<P ALIGN="CENTER"><B>Search in
+access_log:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l1"><A HREF="ref-access_log-TOPIC=References&QUERY=.html">access_log</A></P>
+<P CLASS="l1"><A HREF="ref-classes-conf-TOPIC=References&QUERY=.html">classes.conf</A></P>
+<P CLASS="l1"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html">client.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cups-files-conf-TOPIC=References&QUERY=.html">cups-files.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cupsd-conf-TOPIC=References&QUERY=.html">cupsd.conf</A></P>
+<P CLASS="l1"><A HREF="ref-error_log-TOPIC=References&QUERY=.html">error_log</A></P>
+<P CLASS="l1"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html">mailto.conf</A></P>
+<P CLASS="l1"><A HREF="ref-page_log-TOPIC=References&QUERY=.html">page_log</A></P>
+<P CLASS="l1"><A HREF="ref-ppdcfile-TOPIC=References&QUERY=.html">PPD Compiler Driver Information File Reference</A></P>
+<P CLASS="l1"><A HREF="ref-printers-conf-TOPIC=References&QUERY=.html">printers.conf</A></P>
+<P CLASS="l1"><A HREF="ref-snmp-conf-TOPIC=References&QUERY=.html">snmp.conf</A></P>
+<P CLASS="l1"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html">subscriptions.conf</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>access_log</H1>
+<FORM ACTION="/help/ref-access_log.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">access_log</H1>
+
+<P>The <VAR>access_log</VAR> file lists each HTTP resource that
+is accessed by a web browser or client. Each line is in an
+extended version of the so-called "Common Log Format" used by
+many web servers and web reporting tools:</P>
+
+<P CLASS="command">
+
+host group user date-time \"method resource version\" status
+bytes ipp-operation ipp-status<BR>
+
+<BR>
+
+10.0.1.2 - - [01/Dec/2005:21:50:28 +0000] "POST / HTTP/1.1" 200
+317 CUPS-Get-Printers
+successful-ok-ignored-or-substituted-attributes<BR>
+
+localhost - - [01/Dec/2005:21:50:32 +0000] "GET /admin HTTP/1.1"
+200 0 - -<BR>
+
+localhost - - [01/Dec/2005:21:50:32 +0000] "POST / HTTP/1.1" 200
+157 CUPS-Get-Printers
+successful-ok-ignored-or-substituted-attributes<BR>
+
+localhost - - [01/Dec/2005:21:50:32 +0000] "POST / HTTP/1.1" 200
+1411 CUPS-Get-Devices -<BR>
+
+localhost - - [01/Dec/2005:21:50:32 +0000] "GET /admin HTTP/1.1"
+200 6667 - -<BR>
+
+</P>
+
+<P>The <I>host</I> field will normally only be an IP address
+unless you have enabled the <A
+HREF="ref-cupsd-conf.html#HostNameLookups"><CODE>HostNameLookups</CODE></A>
+directive in the <VAR>cupsd.conf</VAR> file or if the IP address
+corresponds to your local machine.</P>
+
+<P>The <I>group</I> field always contains "-".</P>
+
+<P>The <I>user</I> field is the authenticated username of the
+requesting user. If no username and password is supplied for the
+request then this field contains "-".</P>
+
+<P>The <I>date-time</I> field is the date and time of the request
+in local time and is in the format:</P>
+
+<P CLASS="command">
+[DD/MON/YYYY:HH:MM:SS +ZZZZ]
+</P>
+
+<P>The <I>method</I> field is the HTTP method used: "GET",
+"OPTIONS", "PUT", or "POST". "GET" requests are used to get files
+from the server, both for the web interface and to get
+configuration and log files. "OPTIONS" requests are used to
+upgrade connections to TLS encryption. "PUT" requests are used to
+upload configuration files. "POST" requests are used for web
+interface forms and IPP requests.</P>
+
+<P>The <I>resource</I> field is the filename of the requested
+resource.</P>
+
+<P>The <I>version</I> field is the HTTP specification version used by the
+client. For CUPS clients this will always be "HTTP/1.1".</P>
+
+<P>The <I>status</I> field contains the HTTP result status of the
+request, as follows:</P>
+
+<UL>
+
+	<LI><CODE>200</CODE> - Successful operation.</LI>
+
+	<LI><CODE>201</CODE> - File created/modified successfully.</LI>
+
+	<LI><CODE>304</CODE> - The requested file has not changed.</LI>
+
+	<LI><CODE>400</CODE> - Bad HTTP request; typically this
+	means that you have a malicious program trying to access
+	your server.</LI>
+
+	<LI><CODE>401</CODE> - Unauthorized, authentication
+	(username + password) is required.</LI>
+
+	<LI><CODE>403</CODE> - Access is forbidden; typically
+	this means that a client tried to access a file or
+	resource they do not have permission to access.</LI>
+
+	<LI><CODE>404</CODE> - The file or resource does not
+	exist.</LI>
+
+	<LI><CODE>405</CODE> - URL access method is not allowed;
+	typically this means you have a web browser using your
+	server as a proxy.</LI>
+
+	<LI><CODE>413</CODE> - Request too large; typically this
+	means that a client tried to print a file larger than the
+	<A
+	HREF="ref-cupsd-conf.html#MaxRequestSize"><CODE>MaxRequestSize</CODE></A>
+	allows.</LI>
+
+	<LI><CODE>426</CODE> - Upgrading to TLS-encrypted
+	connection.</LI>
+
+	<LI><CODE>500</CODE> - Server error; typically this
+	happens when the server is unable to open/create a file -
+	consult the <VAR>error_log</VAR> file for details.</LI>
+
+	<LI><CODE>501</CODE> - The client requested encryption
+	but encryption support is not enabled/compiled in.</LI>
+
+	<LI><CODE>505</CODE> - HTTP version number not supported;
+	typically this means that you have a malicious program
+	trying to access your server.</LI>
+
+</UL>
+
+<P>The <I>bytes</I> field contains the number of bytes in the
+request. For POST requests the <I>bytes</I> field contains the
+number of bytes of non-IPP data that is received from the
+client.</P>
+
+<P>The <I>ipp-operation</I> field contains either "-" for non-IPP
+requests or the IPP operation name for POST requests containing
+an IPP request.</P>
+
+<P>The <I>ipp-status</I> field contains either "-" for non-IPP
+requests or the IPP status code name for POST requests containing
+an IPP response.</P>
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

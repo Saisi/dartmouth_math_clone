@@ -1,0 +1,24 @@
+	body{
+		font-family: Arial, sans-serif;
+		padding-left: 120px;
+		padding-right: 300px;
+		}
+	h2{
+		color: rgb(75, 0, 120);
+		font-size: 128%;
+	}
+
+	table.homework{
+		text-align:left;
+		border-collapse: collapse;
+	}
+			
+	.homework td, th{
+		 border-style: double;
+		 padding-left: 1em;
+		  padding-right: 1em;
+	 }
+	 .homework th{
+	 	   text-align: center;
+	  }
+	

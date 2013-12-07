@@ -1,0 +1,156 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VectorMatrixEquations.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="VectorMatrixEquations.html#MapleAutoBookmark1">VectorMatrixEquations.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 22 Fall 2004</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Linear Algebra with Applications</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Vector and Matrix Equations</b></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright"><u>September 29, 2004</b></u></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;</b></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b>Load the package for doing Linear Algebra</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>with(Student[LinearAlgebra]):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the protected name . has been redefined and unprotected</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="center"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#0000ff" size="5" face="Lucida Bright"><u><b>Example 1:</b></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"> Solve a vector equation</font></p>
+<p align="center"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright">x1*</font><font color="#000000" size="5" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b>a1</b></font><font color="#000000" size="5" face="Lucida Bright"> + x2*</font><font color="#000000" size="5" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b>a2</b></font><font color="#000000" size="5" face="Lucida Bright"> = </font><font color="#000000" size="5" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b>b</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>a1 := &lt;-1, 3, -2&gt;: a2 := &lt;3, 2, -3&gt;: b := &lt;5, -4, 1&gt;:</font><font color="#ff0000" face="Monospaced">
+<br>a1, a2, b;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_1.gif" width="116" height="75" alt="Vector[column]([[-1], [3], [-2]]), Vector[column]([[3], [2], [-3]]), Vector[column]([[5], [-4], [1]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b>Define an (augmented) matrix of the equation</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>A := &lt;a1 | a2 | b&gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_2.gif" width="142" height="75" alt="A := Matrix([[-1, 3, 5], [3, 2, -4], [-2, -3, 1]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Reduce it to an echelon form</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>A := AddRow(A, 2, 1, 3):</font><font color="#ff0000" face="Monospaced">
+<br>A := AddRow(A, 3, 1, -2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_3.gif" width="142" height="75" alt="A := Matrix([[-1, 3, 5], [0, 11, 11], [0, -9, -9]])" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>A := MultiplyRow(A, 2, 1/11):</font><font color="#ff0000" face="Monospaced">
+<br>A := AddRow(A, 3, 2, 9);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_4.gif" width="128" height="75" alt="A := Matrix([[-1, 3, 5], [0, 1, 1], [0, 0, 0]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;... and to the reduced echelon form</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>A := AddRow(A, 1, 2, -3);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_5.gif" width="128" height="75" alt="A := Matrix([[-1, 0, 2], [0, 1, 1], [0, 0, 0]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> Solve the system now</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>x := LinearSolve(A);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_6.gif" width="61" height="45" alt="x := Vector[column]([[-2], [1]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b>Test our solution</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>x[1] * a1 + x[2] * a2 = b;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_7.gif" width="86" height="75" alt="Vector[column]([[5], [-4], [1]]) = Vector[column]([[5], [-4], [1]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="center"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#0000ff" size="5" face="Lucida Bright"><u><b>Example 2:</b></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"> Solve a matrix equation </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="6" face="Lucida Bright">A</font><font color="#000000" size="6" face="Lucida Bright"></font><font color="#000000" size="6" face="Lucida Bright"><b>x</b></font><font color="#000000" size="6" face="Lucida Bright">=</font><font color="#000000" size="6" face="Lucida Bright"></font><font color="#000000" size="6" face="Lucida Bright"><b>b</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>A := &lt;&lt;1, 3, -2&gt; | &lt;2, -1, 3&gt; | &lt;-2, -3, 1&gt;&gt;:</font><font color="#ff0000" face="Monospaced">
+<br>b := Vector(3, symbol = v):</font><font color="#ff0000" face="Monospaced">
+<br>M := &lt;A | b&gt;:</font><font color="#ff0000" face="Monospaced">
+<br>A, b, M; </b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_8.gif" width="309" height="85" alt="Matrix([[1, 2, -2], [3, -1, -3], [-2, 3, 1]]), Vector[column]([[v[1]], [v[2]], [v[3]]]), Matrix([[1, 2, -2, v[1]], [3, -1, -3, v[2]], [-2, 3, 1, v[3]]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Solve this system</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>M := AddRow(M, 2, 1, -3):</font><font color="#ff0000" face="Monospaced">
+<br>M := AddRow(M, 3, 1, 2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_9.gif" width="216" height="85" alt="M := Matrix([[1, 2, -2, v[1]], [0, -7, 3, v[2]-3*v[1]], [0, 7, -3, v[3]+2*v[1]]])" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>M := AddRow(M, 3, 2, 1);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/VectorMatrixEquations_10.gif" width="233" height="85" alt="M := Matrix([[1, 2, -2, v[1]], [0, -7, 3, v[2]-3*v[1]], [0, 0, 0, v[3]-v[1]+v[2]]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#0000ff" size="5" face="Lucida Bright"><b>Conclusion: </b></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b>this system is </b></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#ff0000" size="5" face="Lucida Bright"><u><b>not</b></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> consistent for every </b></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b>b</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="4" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b>It is easy to find v1, v2, v3 such that v3-v1+v2 is nonzero</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

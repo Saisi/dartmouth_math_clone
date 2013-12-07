@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Math56 HW7 -- Sage</title>
+        
+	
+        
+        <link type="text/css" rel="stylesheet" href="https://www.math.dartmouth.edu/css/main.css" />
+        
+        
+        <script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/dynamic/localization.js"></script>
+        <script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/json/json2.min.js"></script>
+        
+<!-- jQuery UI - interacts, widgets, drag-drop, etc. -->
+<link rel="stylesheet" href="https://www.math.dartmouth.edu/javascript/jqueryui/css/sage/jquery-ui-1.8.11.custom.css" />
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jqueryui/js/jquery-ui-1.8.11.custom.min.js"></script>
+
+<!-- jQuery plugins - color pickers, shift-click, AJAX forms, IE fixes, notifications -->
+<link rel="stylesheet" href="https://www.math.dartmouth.edu/javascript/jquery/plugins/farbtastic/farbtastic.css" type="text/css" />
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/plugins/farbtastic/farbtastic.min.js"></script>
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/plugins/extendedclick/jquery.event.extendedclick.min.js"></script>
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/plugins/form/jquery.form.min.js"></script>
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/plugins/jquery.bgiframe.min.js"></script>
+<link rel="stylesheet" href="https://www.math.dartmouth.edu/javascript/jquery/plugins/jpicker/css/jPicker-1.1.6.min.css" type="text/css" />
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/plugins/jpicker/jpicker-1.1.6.min.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="https://www.math.dartmouth.edu/javascript/jquery/plugins/colorpicker/css/colorpicker.css" />
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/plugins/colorpicker/js/colorpicker.min.js"></script>
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/plugins/achtung/ui.achtung-mod.min.js"></script>
+
+
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/sage/js/notebook_lib.js"></script>
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/dynamic/notebook_dynamic.js"></script>
+
+
+
+    <!-- Work around OSX Lion STIX fonts bug: see http://groups.google.com/group/mathjax-users/browse_thread/thread/42ceab8dbf286740,
+         https://github.com/mathjax/MathJax/issues/178, and https://github.com/mathjax/MathJax/issues/152 -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.LoadHook("[MathJax]/jax/output/HTML-CSS/fonts/STIX/fontdata.js", function () {
+      var HTMLCSS = MathJax.OutputJax["HTML-CSS"];
+    
+      MathJax.Hub.Browser.Select({
+        Safari: function (browser) {
+          browser.STIXfontBug = browser.versionAtLeast("5.1") && browser.isMac;
+        },
+        Chrome: function (browser) {
+          var match = navigator.appVersion.match(/AppleWebKit\/(\d+)/);
+          if (match && parseInt(match[1]) > 534) {browser.STIXfontBug = true}
+        }
+      });
+      if (MathJax.Hub.Browser.STIXfontBug) {
+        HTMLCSS.FONTDATA.FONTS["STIXGeneral"].family = "STIXGeneral-Regular";
+        HTMLCSS.FONTDATA.FONTS["STIXGeneral-italic"].family = "STIXGeneral-Italic";
+        delete HTMLCSS.FONTDATA.FONTS["STIXGeneral-italic"].style;
+      }
+    });
+    </script>
+
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/mathjax/MathJax.js?config=TeX-AMS_HTML-full,../../dynamic/mathjax_sage.js"></script>
+
+
+<!-- Sage3d - accelerated 3D graphics -->
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/sage3d/sage3d.js"></script>
+
+<!-- Jmol - embedded 3D graphics -->
+<script type="text/javascript" src="https://www.math.dartmouth.edu/java/jmol/appletweb/Jmol.js"></script>
+<!-- This must stay in head -->
+<script>jmolInitialize("/java/jmol");jmolSetCallback("menuFile","/java/jmol/appletweb/SageMenu.mnu");</script>
+
+
+<!-- TinyMCE and jEditable - in-place editing of text cells -->
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/jquery/plugins/jeditable/jquery.jeditable.mini.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/sage/js/tinymce.js"></script>
+<script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/tiny_mce/plugins/media/js/embed.js"></script>
+
+
+<script type="text/javascript">user_name= "guest";</script>
+
+<script  type="text/javascript">
+    worksheet_filename = "admin/1";
+    worksheet_name = 'Math56 HW7';
+    
+        server_ping_while_alive();
+    
+</script>
+
+
+
+        
+        
+        
+        <script type="text/javascript" src="https://www.math.dartmouth.edu/javascript/sage/js/master.js"></script>
+    </head>
+    <body id="print-page"
+          class="">
+        
+<h1>Math56 HW7</h1>
+
+
+
+
+    
+
+
+<div class="cell_input_active" id="cell_resizer"></div>
+<div class="worksheet_cell_list" id="worksheet_cell_list">
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_1" class="cell_visible">
+    <div id="cell_1" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print"># Problem 1:
+# Implement expmodk
+from math import *
+
+def expmodk(b,n,k):
+    &#34;&#34;&#34;expmodk(b,n,k): implements fast binary exponentiation (mod k)&#34;&#34;&#34;
+    if n&lt;0:
+        print &#39;n cannot be negative&#39;; return
+    if n==0:
+        return 1%k
+    r = 1
+    t = 2**floor(log(n)/log(2))
+    while t &gt;= 1:
+        r = (r*r)%k
+        if n&gt;=t: r = (r*b)%k; n = n-t
+        t = t/2
+    return r%k&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_1" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_1"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_1">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_1">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_1">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_3" class="cell_visible">
+    <div id="cell_3" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print"># Driver
+
+print str(expmodk(5, 4, 1)) + &#39; should be 0&#39;
+print str(expmodk(2, 0, 1)) + &#39; should be 0&#39;
+print str(expmodk(15, 1, 14)) + &#39; should be 1&#39;
+print str(expmodk(15, 22*10000, 23)) + &#39; should be 1&#39;&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_3" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_3"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_3">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_3">
+                                
+                                    <pre class="shrunk">0 should be 0
+0 should be 0
+1 should be 1
+1 should be 1</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_3">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_5" class="cell_visible">
+    <div id="cell_5" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def BBPln2(d):
+    s = 0
+    for k in range(1,d+1): 
+        s = (s + float(expmodk(2,d-k,k))/k)%1
+    for k in range(d+1,d+50): 
+        s = (s + float(1)/((2**(k-d))*k))%1
+    return s&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_5" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_5"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_5">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_5">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_5">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_7" class="cell_visible">
+    <div id="cell_7" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def float_to_binary(num):
+    exponent=0
+    shifted_num=num
+    while shifted_num != int(shifted_num):        
+        shifted_num*=2
+        exponent+=1
+    if exponent==0:
+        return &#39;{0:0b}&#39;.format(int(shifted_num))
+    binary=&#39;{0:0{1}b}&#39;.format(int(shifted_num),exponent+1)
+    integer_part=binary[:-exponent]
+    fractional_part=binary[-exponent:].rstrip(&#39;0&#39;)
+    return &#39;{0}.{1}&#39;.format(integer_part,fractional_part)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_7" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_7"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_7">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_7">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_7">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_8" class="cell_visible">
+    <div id="cell_8" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print"># Check for accuracy : !!Differ by 3 last digits!!
+print float_to_binary(BBPln2(150))[22:51]
+print float_to_binary(BBPln2(170))[2: 31]
+print float_to_binary(BBPln2(1000))[12:51]
+print float_to_binary(BBPln2(1010))[2:41]&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_8" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_8"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_8">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_8">
+                                
+                                    <pre class="shrunk">01100010110110001011011000100
+01100010110110001011011000101
+010101110001100000011111110100110010011
+010101110001100000011111110100110010100</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_8">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_12" class="cell_visible">
+    <div id="cell_12" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print"># 50 digits after 10^7th of ln(2) and runtime
+
+import time
+t = time.time()
+print float_to_binary(BBPln2(10000000))[2:51]
+print time.time() - t&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_12" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_12"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_12">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_12">
+                                
+                                    <pre class="shrunk">1011100101100110010101100011010110001111100011001
+168.175928116</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_12">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_13" class="cell_visible">
+    <div id="cell_13" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print"># Problem 2
+# RSA Key Cracking
+key1=179769313486231590772930519078902473361797697894230657273430081157732675813959208849892482646646053861281898869742657270323229440686204767022930919271900527274583718133819901842696889033053089824214222518172084033941235127192805040873995986313952152670540722837219467732259679323955945799203544242564067805041
+key2=179769313486231590772930519078902473361797697894230657273430081157732675813681747397617220208701538226633634342088990957126311087919206226056546553648096692857325734126303422223946090876411538096950017256926393251659877716424454414574669510488666999687401604264603649888486128037375020209461492622148898094967
+key3=179769313486231590772930519078902473361797697894230657273430081157732675813232835210451626338042078231407123833450697627556701803561471712581415695451767043240238467665935308928763401765183776105486886424121053565413493300935564221054491393355732091184583718575151835074982914803430720900398472458467112424817&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_13" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_13"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_13">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_13">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_13">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_14" class="cell_visible">
+    <div id="cell_14" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def mygcd(a,b):
+    while b!=0: t=b; b=a%t; a = t
+    return a&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_14" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_14"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_14">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_14">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_14">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_17" class="cell_visible">
+    <div id="cell_17" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">if mygcd(key1,key2) != 1:
+    print &#39;key1 and key2 are cracked!&#39;
+if mygcd(key1,key3) != 1:
+    print &#39;key1 and key3 are cracked!&#39;
+if mygcd(key2,key3) != 1:
+    print &#39;key2 and key3 are cracked!&#39;&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_17" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_17"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_17">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_17">
+                                
+                                    <pre class="shrunk">key2 and key3 are cracked!</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_17">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_18" class="cell_visible">
+    <div id="cell_18" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">from mpmath import *
+mp.dps = 310;
+
+def FermatFactor(n):
+    x = ceil(sqrt(n))
+    xsqr = x*x
+    y = sqrt(xsqr - n)
+    while ((frac(y) != 0) and (x &lt; (n+6)/9)):
+        xsqr = xsqr + 2*x + 1
+        x = x + 1
+        y = sqrt(xsqr - n)
+    if (frac(y) == 0):
+        p = int(x-y)
+        q = int(x+y)
+        return str(n) + &#39; is factored into &#39; + str(p) + &#39; and &#39; + str(q)
+    else:
+        return str(n) + &#39; is prime!&#39;&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_18" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_18"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_18">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_18">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_18">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_21" class="cell_visible">
+    <div id="cell_21" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">print FermatFactor(key1)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_21" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_21"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_21">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_21">
+                                
+                                    <pre class="shrunk">17976931348623159077293051907890247336179769789423065727343008115773\
+26758139592088498924826466460538612818988697426572703232294406862047\
+67022930919271900527274583718133819901842696889033053089824214222518\
+17208403394123512719280504087399598631395215267054072283721946773225\
+9679323955945799203544242564067805041 is factored into
+13407807929942597099574024998205846127479365820592393377723561443721\
+76403013922791746586958749790502760518527559600618425447017180223635\
+2957043296521397077 and
+13407807929942597099574024998205846127479365820592393377723561443721\
+76403063871082160761072244071346914860538478701882040917331533626569\
+1156426568843119533</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_21">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_23" class="cell_visible">
+    <div id="cell_23" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">from operator import mul
+from sage.matrix.all import *
+
+def factorbaseexponents(fb,f):
+    fbex = [0]*len(fb) # list of zeros
+    for t in list(f): # loop over tuples in factors
+        i = fb.index(t[0])
+        fbex[i] = t[1]
+    return fbex
+
+def kraitchik(N,y,r):
+    fb = prime_range(y)
+    print &#39;Length of factorbase: &#39; + str(len(fb))
+    
+    x = int(ceil(sqrt(N)))
+    expmat = [] 
+    xlist = []
+    
+    # find the matrix
+    xsqr = x*x
+    for t in range(1,r+1):
+        d = xsqr % N
+        f = factor(d)
+        if  f[-1][0]&lt;= y:
+            fbex = factorbaseexponents(fb,f)
+            expmat.append(fbex)
+            xlist.append(x)
+        xsqr = xsqr + 2*x + 1
+        x = x+1
+    
+    print &#39;Length of list of x: &#39; + str(len(xlist))
+    
+    # get null basis
+    A = matrix(GF(2), len(expmat), len(fb) , expmat)
+    vecs = A.left_kernel().basis()
+    print &#39;Size of null space: &#39; + str(len(vecs))
+    
+    # check for valid u,v
+    for vec in vecs:
+        u = 1
+        vsqr = 1
+        for i in range(len(vec)):
+            if vec[i] == 1:
+                x = xlist[i]
+                u = (u*x)
+                mulv = reduce(mul, [a**b for a,b in zip(fb,expmat[i])],1)
+                vsqr = vsqr*mulv
+        v = int(sqrt(vsqr))
+        if ((((u+v)%N) != 0) and (((u-v)%N) != 0)):
+            print gcd(u-v,N), gcd(u+v,N)
+            return
+    return &#39;Failed.&#39;&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_23" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_23"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_23">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_23">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_23">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_38" class="cell_visible">
+    <div id="cell_38" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">kraitchik(1098413,25,200)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_38" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_38"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_38">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_38">
+                                
+                                    <pre class="shrunk">Length of factorbase: 9
+Length of list of x: 6
+Size of null space: 2
+563 1951</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_38">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_42" class="cell_visible">
+    <div id="cell_42" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">kraitchik(1125907426181141, 1000, 10000)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_42" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_42"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_42">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_42">
+                                
+                                    <pre class="shrunk">Length of factorbase: 168
+Length of list of x: 89
+Size of null space: 4
+1048583 1073741827</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_42">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_35" class="cell_visible">
+    <div id="cell_35" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">kraitchik(1180591624032052314157, 10000, 80000)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_35" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_35"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_35">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_35">
+                                
+                                    <pre class="shrunk">Length of factorbase: 1229
+Length of list of x: 603
+Size of null space: 73
+1073741827 1099511627791</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_35">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_43" class="cell_visible">
+    <div id="cell_43" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">kraitchik(18446744073709551617, 10000, 60000)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_43" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_43"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_43">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_43">
+                                
+                                    <pre class="shrunk">Length of factorbase: 1229
+Length of list of x: 600
+Size of null space: 74
+274177 67280421310721</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_43">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_44" class="cell_visible">
+    <div id="cell_44" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_44" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_44"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_44">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_44">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_44">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+</div>
+<!--    <script>
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </script>-->
+
+    </body>
+</html>

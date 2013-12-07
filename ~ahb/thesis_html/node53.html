@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A) `Basis diagonalization'</TITLE>
+<META NAME="description" CONTENT="A) `Basis diagonalization'">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node54.html">
+<LINK REL="previous" HREF="node52.html">
+<LINK REL="up" HREF="node52.html">
+<LINK REL="next" HREF="node54.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html852"
+  HREF="node54.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html850"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html844"
+  HREF="node52.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html853"
+  HREF="node54.html">B) `Green's function matching'</A>
+<B> Up:</B> <A NAME="tex2html851"
+  HREF="node52.html">Categories of existing numerical</A>
+<B> Previous:</B> <A NAME="tex2html845"
+  HREF="node52.html">Categories of existing numerical</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00612100000000000000">
+A) `Basis diagonalization'</A>
+</H3>
+
+<P>
+Class A has the advantage that the <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">-independent basis preserves
+the linearity of the eigenproblem, giving a matrix eigenequation which
+returns many solutions <!-- MATH
+ $(E_\mu,{\mathbf x}_\mu)$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img665.gif"
+ ALT="$(E_\mu,{\mathbf x}_\mu)$"> at once.
+This is the conventional `basis diagonalization' approach.
+Generally <EM>all</EM> the eigenstates from 1 up to a maximum useable state
+are returned. Clearly <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> cannot be less than this number of states.
+For instance in the case of a <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> dimensional billiard, this means <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> must
+scale like <IMG
+ WIDTH="22" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img669.gif"
+ ALT="$k^d$"> if states at wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> are sought. This is clearly
+a huge limitation.
+
+<P>
+The basis can be chosen as the analytically-known eigenstates
+of a simpler Hamiltonian <IMG
+ WIDTH="26" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img670.gif"
+ ALT="$\hat{H}_0$">; this I call Class A1.
+The resulting basis is therefore
+orthonormal and complete (in the  <!-- MATH
+ $N\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img668.gif"
+ ALT="$N\rightarrow\infty$"> limit)
+and if <IMG
+ WIDTH="26" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img670.gif"
+ ALT="$\hat{H}_0$"> is `close' to <IMG
+ WIDTH="20" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img671.gif"
+ ALT="$\hat H$"> then
+<IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> will not need to be much higher than <!-- MATH
+ $n_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img672.gif"
+ ALT="$n_{{\mbox{\tiny E}}}$">,
+where  <!-- MATH
+ $n_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img672.gif"
+ ALT="$n_{{\mbox{\tiny E}}}$"> is the typical quantum number of the desired
+states at energy <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">.
+
+<P>
+Alternatively the basis is chosen to be convenient in position space (or
+momentum space, or a mixture of both). The basis is
+effectively complete (up to energies of interest) because it entirely covers
+the domain <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">.
+This I call  Class A2.
+The advantage of these localized basis functions is that the resulting
+<IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$"> matrix is <EM>sparse</EM>, allowing much faster extraction of eigensolutions.
+Various smoothnesses of such basis functions are possible, ranging from lattices
+(corresponding to piece-wise linear `pyramidal' functions)
+through other Finite Element [<A
+ HREF="node161.html#fem1">87</A>,<A
+ HREF="node161.html#fem2">19</A>,<A
+ HREF="node161.html#silvester">182</A>,<A
+ HREF="node161.html#FEreview">56</A>] basis functions
+and higher-order spline functions [<A
+ HREF="node161.html#esry">70</A>], to gaussian packets
+(coherent states, or the Distributed Gaussian
+Basis [DGB][<A
+ HREF="node161.html#davisheller79">57</A>]).
+The smoother a basis is, the faster the convergence with <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> can be
+for a given energy of interest.
+However, smooth basis functions are more complicated to
+construct (especially if definite BCs are required), to evaluate,
+and result in less sparse matrices.
+Lattice methods (often known as `finite differencing')[<A
+ HREF="node161.html#numrec">161</A>,<A
+ HREF="node161.html#bayfield">18</A>]
+generate sparse matrices which can be diagonalized much faster than
+dense ones, but errors converge only like a power law
+<IMG
+ WIDTH="71" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img673.gif"
+ ALT="$\sim N^{-1/d}$">.
+One smooth basis with useful sparsity properties is the Discrete-Variable
+Representation (DVR) [<A
+ HREF="node161.html#dvr1">17</A>,<A
+ HREF="node161.html#dvr2">86</A>,<A
+ HREF="node161.html#dvr3">180</A>].
+Most methods involve a compromise.
+The optimal basis set choice for smooth-potential problems
+appears to be a covering of phase space by gaussian packets, in which
+case <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> need only be a couple of times larger than <!-- MATH
+ $n_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img672.gif"
+ ALT="$n_{{\mbox{\tiny E}}}$">
+(for small dimensions <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">) [<A
+ HREF="node161.html#davisheller79">57</A>,<A
+ HREF="node161.html#littlejohn">138</A>].
+Because the Wigner function for such problems dies exponentially
+outside the classically-allowed region of phase space, these
+phase-space covering methods achieve exponential convergence with <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$">,
+once <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> is larger than the semiclassical basis size.
+
+<P>
+Note that if the basis is not orthogonal, as is frequently the case for
+Class A2 basis sets, the eigenequation <!-- MATH
+ $H {\mathbf x} = E {\mathbf x}$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img674.gif"
+ ALT="$H {\mathbf x} = E {\mathbf x}$">
+becomes a generalized eigenequation <!-- MATH
+ $H {\mathbf x} = E B {\mathbf x}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img675.gif"
+ ALT="$H {\mathbf x} = E B {\mathbf x}$"> where the
+matrix <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img482.gif"
+ ALT="$B$"> gives the basis function overlaps.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html852"
+  HREF="node54.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html850"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html844"
+  HREF="node52.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html853"
+  HREF="node54.html">B) `Green's function matching'</A>
+<B> Up:</B> <A NAME="tex2html851"
+  HREF="node52.html">Categories of existing numerical</A>
+<B> Previous:</B> <A NAME="tex2html845"
+  HREF="node52.html">Categories of existing numerical</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

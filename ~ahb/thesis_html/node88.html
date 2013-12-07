@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Breakdown for a state as vanishes</TITLE>
+<META NAME="description" CONTENT="Breakdown for a state as vanishes">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node89.html">
+<LINK REL="previous" HREF="node87.html">
+<LINK REL="up" HREF="node86.html">
+<LINK REL="next" HREF="node89.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1232"
+  HREF="node89.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1230"
+  HREF="node86.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1224"
+  HREF="node87.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1233"
+  HREF="node89.html">Spurious surface-wave solutions</A>
+<B> Up:</B> <A NAME="tex2html1231"
+  HREF="node86.html">Sources of error in</A>
+<B> Previous:</B> <A NAME="tex2html1225"
+  HREF="node87.html">Deterioration of the eigenstates</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00732000000000000000"></A>
+<A NAME="sec:near"></A>
+<BR>
+Breakdown for a state as  <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img25.gif"
+ ALT="$\vert\delta _\mu \vert$"> vanishes
+</H2>
+
+<P>
+As observed by Vergini [<A
+ HREF="node161.html#verginithesis">194</A>], if <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> falls close to
+a true eigenstate <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">, then the scaling method fails to predict this
+state accurately.
+Fig.&nbsp;<A HREF="node87.html#fig:near">6.12</A> shows this happening: the predicted shift heading towards
+zero suddenly diverges in a first-order pole, giving an inaccurate <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">
+prediction.
+The range of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> affected corresponds to the tension rounding
+error <!-- MATH
+ $\Delta k(\epsilon_\mu)$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img817.gif"
+ ALT="$\Delta k(\epsilon_\mu)$"> defined in Section&nbsp;<A HREF="node66.html#sec:rounding">5.5.1</A>.
+Therefore the problem does not occur very often, and can be almost
+(but never quite)
+eliminated by a good choice of basis.
+When it does occur it only affects the
+one state involved.
+It is very easy to detect because the norm of the state produced
+automatically (Section&nbsp;<A HREF="node85.html#sec:autonorm">6.2.2</A>) grows to be much larger than 1.
+
+<P>
+The reason for this type of error is that the tension of the scaling
+eigenfunction <IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$"> has reached the tension minimum allowed by the basis.
+The diagonal of <IMG
+ WIDTH="18" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img876.gif"
+ ALT="$\tilde{F}$"> behaves like <!-- MATH
+ $2 \delta_\mu^2$
+ -->
+<IMG
+ WIDTH="30" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img996.gif"
+ ALT="$2\delta_\mu^2$"> for a true
+scaling eigenfunction. However the closest that can be achieved by the basis
+representation is <!-- MATH
+ $2 \delta_\mu^2 + \epsilon_\mu$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1055.gif"
+ ALT="$2 \delta_\mu^2 + \epsilon_\mu$">
+(see Section&nbsp;<A HREF="node66.html#sec:rounding">5.5.1</A>).
+Substitution of this diagonal term into (<A HREF="node81.html#eq:vergep">6.25</A>) and then
+(<A HREF="node81.html#eq:predk2">6.26</A>) or (<A HREF="node84.html#eq:predk4">6.28</A>) gives the observed pole in the predicted
+shift.
+
+<P>
+It is possible to `cure' the problem completely by replacing <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> by
+the true area norm matrix <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> in (<A HREF="node81.html#eq:vergep">6.25</A>), which has no
+singularity as <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img24.gif"
+ ALT="$\delta _\mu $"> passes through zero.
+Then the predicted wavenumber shift is <!-- MATH
+ $\delta_\mu = -4 \lambda_\mu$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1056.gif"
+ ALT="$\delta_\mu = -4 \lambda_\mu$">.
+This apparent cure is shown in Fig.&nbsp;<A HREF="node87.html#fig:near">6.12</A>.
+However, <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> has no strong quasi-diagonality property when expressed in the
+scaling eigenfunction basis; the result is a severe loss in the quality
+of most of the <IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img85.gif"
+ ALT="$N/10$"> usable states (corresponding to a choice <!-- MATH
+ $\beta \approx
+0.03$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1057.gif"
+ ALT="$\beta \approx
+0.03$"> in Fig.&nbsp;<A HREF="node85.html#fig:mix">6.10</A>).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1232"
+  HREF="node89.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1230"
+  HREF="node86.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1224"
+  HREF="node87.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1233"
+  HREF="node89.html">Spurious surface-wave solutions</A>
+<B> Up:</B> <A NAME="tex2html1231"
+  HREF="node86.html">Sources of error in</A>
+<B> Previous:</B> <A NAME="tex2html1225"
+  HREF="node87.html">Deterioration of the eigenstates</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

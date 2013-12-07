@@ -1,0 +1,24 @@
+body {background-color:#B2B2CC; font-family: helvetica, arial, georgia, sans-serif;}
+
+/* for the light bars that head each section of the main page */
+h2 {display:block; font-size:125%; font-weight:bold; padding:10px 10px 10px 50px; background-color:#F0F0F5;}
+
+
+/* syllabus table styling */
+.syllabus {width:75%; border:1px solid #000000;}
+
+.syllabus th {background-color:#F0F0F5; padding-top:5px; padding-bottom:5px;}
+
+.syllabus td {background-color:#D1D1E0; border:1px solid #000000; padding:10px 10px 10px 10px;}
+
+.syllabus tr.special td {background-color:#FFFFFF; font-weight:bold;}
+
+
+/* main page info tables styling */
+.info {width:50%; background-color:#D1D1E0; border:1px solid #000000;}
+
+.info tr {text-align:center;}
+
+.info td {border:1px solid #000000; padding:10px 10px 10px 10px;}
+
+.info th {padding-top:5px; padding-bottom:5px;}

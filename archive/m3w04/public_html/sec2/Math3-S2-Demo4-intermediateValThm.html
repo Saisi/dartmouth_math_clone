@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Math3-S2-Demo4-intermediateValThm.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="Math3-S2-Demo4-intermediateValThm.html#MapleAutoBookmark1">Math3-S2-Demo4-intermediateValThm.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 3 Winter 2004</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Introduction to Calculus</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Class Demo for the Intermediate Value Theorem</b></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright"><u>January 12, 2004</b></u></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>with(plots):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p><font size="5" face="Lucida Bright"><b>
+<br> &nbsp;&nbsp;&nbsp;</b></font><font size="5" face="Lucida Bright"><b>Consider any continuous function</b></font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">f := x -&gt; x^3 - 5*x^2 + 10:</b></font></td>
+</tr>
+</table></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Have a look at its graph</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot(f, -2 .. 6);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_1.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Choose any </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_2.gif" width="7" height="22" alt="a" align="center">
+<font color="#000000" size="5" face="Lucida Bright"><b> and </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_3.gif" width="7" height="22" alt="b" align="center">
+<font color="#000000" size="5" face="Lucida Bright"><b> so that </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_4.gif" width="58" height="22" alt="f(a) < f(b)" align="center">
+<font color="#000000" size="3" face="Lucida Bright">
+<br></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>a := -1.5:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>b := 5.5:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>fa := f(a);</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>fb := f(b);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_5.gif" width="71" height="13" alt="fa := -4.625" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_6.gif" width="71" height="13" alt="fb := 25.125" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Choose some &nbsp;c between </b></font><font color="#000000" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_7.gif" width="20" height="22" alt="f(a)" align="center">
+</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"> </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b>and </b></font><font color="#000000" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_8.gif" width="20" height="22" alt="f(b)" align="center">
+</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">
+<br></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>c := 15;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_9.gif" width="41" height="13" alt="c := 15" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Look at the graph again</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>display(plot(f(x), x = -2..6, thickness=2), plot({fa, fb, [a, y, y=-10..40], [b, y, y=-10..40]}, -2..6, color = blue), plot(c, -2..6, color=green));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo4-intermediateValThm_10.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

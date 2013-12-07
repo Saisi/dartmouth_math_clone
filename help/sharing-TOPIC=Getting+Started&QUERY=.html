@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>Printer Sharing - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="Printer Sharing">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/sharing.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Getting Started">
+
+<P ALIGN="CENTER"><B>Search in
+Printer Sharing:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l1"><A HREF="options-TOPIC=Getting+Started&QUERY=.html">Command-Line Printing and Options</A></P>
+<P CLASS="l1"><A HREF="glossary-TOPIC=Getting+Started&QUERY=.html">Glossary</A></P>
+<P CLASS="l1"><A HREF="policies-TOPIC=Getting+Started&QUERY=.html">Managing Operation Policies</A></P>
+<P CLASS="l1"><A HREF="overview-TOPIC=Getting+Started&QUERY=.html">Overview of CUPS</A></P>
+<P CLASS="l1"><A HREF="accounting-TOPIC=Getting+Started&QUERY=.html">Printer Accounting Basics</A></P>
+<P CLASS="l1"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html">Printer Sharing</A></P>
+<P CLASS="l2"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html#AUTO_IPP">Automatic Configuration using IPP</A></P>
+<P CLASS="l2"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html#SERVER_CONFIG">Configuring the Server</A></P>
+<P CLASS="l2"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html#MANUAL">Manual Configuration of Print Queues</A></P>
+<P CLASS="l2"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html#BASICS">The Basics</A></P>
+<P CLASS="l1"><A HREF="security-TOPIC=Getting+Started&QUERY=.html">Server Security</A></P>
+<P CLASS="l1"><A HREF="license-TOPIC=Getting+Started&QUERY=.html">Software License Agreement</A></P>
+<P CLASS="l1"><A HREF="standard-TOPIC=Getting+Started&QUERY=.html">Standard Configuration</A></P>
+<P CLASS="l1"><A HREF="translation-TOPIC=Getting+Started&QUERY=.html">Translating and Customizing CUPS</A></P>
+<P CLASS="l1"><A HREF="cgi-TOPIC=Getting+Started&QUERY=.html">Using CGI Programs</A></P>
+<P CLASS="l1"><A HREF="kerberos-TOPIC=Getting+Started&QUERY=.html">Using Kerberos Authentication</A></P>
+<P CLASS="l1"><A HREF="network-TOPIC=Getting+Started&QUERY=.html">Using Network Printers</A></P>
+<P CLASS="l1"><A HREF="whatsnew-TOPIC=Getting+Started&QUERY=.html">What&#39;s New in CUPS 1.6</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>Printer Sharing</H1>
+<FORM ACTION="/help/sharing.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">Printer Sharing</H1>
+
+<p>This document discusses several ways to configure printer sharing.</p>
+
+<h2><a name="BASICS">The Basics</h2>
+
+<p>A "server" is any machine that communicates directly to a printer. A "client" is any machine that sends print jobs to a server for final printing. Clients can also be servers if they communicate directly with any printers of their own.</p>
+
+<p>By default, CUPS uses the Internet Printing Protocol (IPP) to send jobs from a client to a server. When printing to legacy print servers you may also use the Line Printer Daemon (LPD) protocol when printing to older UNIX-based servers or Server Message Block (SMB) when printing to Windows<sup>&reg;</sup> servers.</p>
+
+<p>Clients can automatically discover and access shared printers via DNS Service Discovery (DNS-SD a.k.a. Bonjour<sup>&reg;</sup>). SMB browsing can also be used to manually discover and access shared printers when <a href="http://www.samba.org/">Samba</a> is installed.</p>
+
+
+<h2><a name="SERVER_CONFIG">Configuring the Server</a></h2>
+
+<p>You must enable printer sharing on the server before clients can print through it. The simplest way to do this is to use the <a href="man-cupsctl.html">cupsctl(8)</a> command on the server:</p>
+
+<pre class="command">
+cupsctl --share-printers
+</pre>
+
+<p>By default, the above command will allow printing from other clients on the same subnet as your server. To allow printing from any subnet, use the following command instead:</p>
+
+<pre class="command">
+cupsctl --share-printers --remote-any
+</pre>
+
+<p>Next, tag each printer that you want to share using the <a href="man-lpadmin.html">lpadmin(8)</a> command on the server, for example:</p>
+
+<pre class="command">
+lpadmin -p printer -o printer-is-shared=true
+</pre>
+
+<p>You can require authentication for shared printing by setting the policy on each printer, for example:</p>
+
+<pre class="command">
+lpadmin -p printer -o printer-op-policy=authenticated
+</pre>
+
+
+<h2><a name="AUTO_IPP">Automatic Configuration using IPP</a></h2>
+
+<blockquote><b>Note:</b>
+<p>This method of configuration does not work on OS X 10.7 or later because sandboxed applications do not always have direct network access.</p>
+</blockquote>
+
+<p>CUPS can be configured to run without a local spooler and send all jobs to a
+single server. However, if that server goes down then all printing will be
+disabled. Use this configuration only as absolutely necessary.</p>
+
+<p>The default server is normally the local system ("localhost"). To override
+the default server create a file named <var>/etc/cups/client.conf</var> with a
+line as follows:</p>
+
+<pre class='example'>
+ServerName <em>server</em>
+</pre>
+
+<p>The <var>server</var> name can be the hostname or IP address of the default
+server. If the server is not using the default IPP port (631), you can add the
+port number at the end like this:</p>
+
+<pre class='example'>
+ServerName <em>server:port</em>
+</pre>
+
+<p>The default server can also be customized on a per-user basis. To set a
+user-specific server create a file named <var>~/.cups/client.conf</var> instead.
+The user <var>client.conf</var> file takes precedence over the system one.</p>
+
+<p>Finally, you can set the <code>CUPS_SERVER</code> environment variable to
+override the default server for a single process, for example:</p>
+
+<pre class='command'>
+CUPS_SERVER=server:port firefox http://www.cups.org
+</pre>
+
+<p>will run the Firefox web browser pointed to the specified server and
+port. The environment variable overrides both the user and system
+<var>client.conf</var> files, if any.</p>
+
+
+<h2><a name="MANUAL">Manual Configuration of Print Queues</a></h2>
+
+<blockquote><b>Note:</b>
+<p>This method of configuration does not work on OS X 10.7 or later because sandboxed applications do not always have direct network access.</p>
+</blockquote>
+
+<p>The most tedious method of configuring client machines is to configure
+each remote queue by hand using the <a href="man-lpadmin.html">lpadmin(8)</a>
+command:</p>
+
+<pre class='command'>
+lpadmin -p <em>printer</em> -E -v ipp://<em>server</em>/printers/<em>printer</em>
+</pre>
+
+<p>The <var>printer</var> name is the name of the printer on the server machine.
+The <var>server</var> name is the hostname or IP address of the server machine.
+Repeat the <b>lpadmin</b> command for each remote printer you wish to use.</p>
+
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

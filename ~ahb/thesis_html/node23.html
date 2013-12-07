@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Stochastic energy spreading</TITLE>
+<META NAME="description" CONTENT="Stochastic energy spreading">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node24.html">
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="up" HREF="node20.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html515"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html513"
+  HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html507"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html516"
+  HREF="node24.html">Heating rate example non-interacting</A>
+<B> Up:</B> <A NAME="tex2html514"
+  HREF="node20.html">Review of the linear</A>
+<B> Previous:</B> <A NAME="tex2html508"
+  HREF="node22.html">Generalized force-force correlation and</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00323000000000000000">
+Stochastic energy spreading</A>
+</H2>
+
+<P>
+Returning  now to the FGR expression (<A HREF="node21.html#eq:fgr">2.45</A>),
+one might  wonder how it is possible to get dissipation (irreversible
+growth in the mean energy) at all, given that
+the up and down transition rates  are always equal!
+The answer will be that heating is possible
+because the <EM>density of states</EM> <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img118.gif"
+ ALT="$g(E)$"> may differ slightly at the
+two energies <!-- MATH
+ $E = E_m \pm \hbar\omega$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img311.gif"
+ ALT="$E = E_m \pm \hbar\omega$"> being `pumped' into,
+and therefore more states may
+fall under the upper delta function than the lower, giving an increase
+in mean energy.
+However to understand this in more detail,
+the up and down transitions (<A HREF="node21.html#eq:fgr">2.45</A>) must be interpreted as giving
+<EM>diffusion</EM> in energy-space.
+A diffusion equation for time-evolution of a continuous energy distribution
+function <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img312.gif"
+ ALT="$\rho(E)$"> can then be written--from this follows the rate of increase
+of mean energy.
+
+<P>
+The linear growth of <!-- MATH
+ $p_n(t) \equiv |a_n(t)|^2$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img313.gif"
+ ALT="$p_n(t) \equiv \vert a_n(t)\vert^2$"> resulting from the FGR
+means a linear growth in
+the second moment (variance) of the distribution about the initial
+energy <IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img314.gif"
+ ALT="$E_m$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\delta E^2 \; \equiv \; \langle ({\mathcal{H}}(t) - E_m)^2 \rangle_{{\mbox{\tiny E}}_m}
+	\; = \; \sum_{n} (E_n - E_m)^2 p_n(t) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:variance"></A><IMG
+ WIDTH="472" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img315.gif"
+ ALT="\begin{displaymath}
+\delta E^2 \; \equiv \; \langle ({\mathcal{H}}(t) - E_m)^2 ...
+..._{{\mbox{\tiny E}}_m}
+\; = \; \sum_{n} (E_n - E_m)^2 p_n(t) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.50)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This can be identified with diffusive growth <!-- MATH
+ $\delta E^2 = 2 D_{{\mbox{\tiny E}}}\cdot t$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img316.gif"
+ ALT="$\delta E^2 = 2 D_{{\mbox{\tiny E}}}\cdot t$">
+with diffusion
+constant given by
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:deval"></A>
+<!-- MATH
+ \begin{eqnarray}
+D_{{\mbox{\tiny E}}}(\omega) & \;=\; &
+	\frac{1}{2} \sum_n (E_n - E_m)^2 \, \Gamma_{nm}(\omega)
+	\nonumber \\
+	& = &
+	\frac{1}{2} \cdot \mbox{\small$\frac{1}{2}$}(\omega A)^2 \cdot
+	\mbox{\small$\frac{1}{2}$}[\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega) + \tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(-\omega)]
+	\nonumber \\& = &
+	\frac{1}{2} \cdot \mbox{\small$\frac{1}{2}$}(\omega A)^2 \cdot \tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img317.gif"
+ ALT="$\displaystyle D_{{\mbox{\tiny E}}}(\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img271.gif"
+ ALT="$\textstyle \; = \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="193" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img318.gif"
+ ALT="$\displaystyle \frac{1}{2} \sum_n (E_n - E_m)^2 \, \Gamma_{nm}(\omega)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="263" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img319.gif"
+ ALT="$\displaystyle \frac{1}{2} \cdot \mbox{\small$\frac{1}{2}$}(\omega A)^2 \cdot
+\m...
+...\tiny E}}}(\omega) + \tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(-\omega)]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="153" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img320.gif"
+ ALT="$\displaystyle \frac{1}{2} \cdot \mbox{\small$\frac{1}{2}$}(\omega A)^2 \cdot \tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.51)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Use was made of (<A HREF="node22.html#eq:fgrband">2.49</A>), which is
+appropriate since we are considering a continuum limit.
+Also, as in the previous section, an averaging over a classically-small
+range of adjacent states was performed.
+Thus we see that the band profile at the driving frequency <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">
+determines the resulting diffusion rate.
+The term <!-- MATH
+ $\mbox{\small$\frac{1}{2}$}(\omega A)^2$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img321.gif"
+ ALT="$\mbox{\small$\frac{1}{2}$}(\omega A)^2$"> is simply
+the mean square parametric driving velocity
+<!-- MATH
+ $\langle \dot{x}^2 \rangle$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img322.gif"
+ ALT="$\langle \dot{x}^2 \rangle$">.
+
+<P>
+So far the evolution of the coefficients <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img254.gif"
+ ALT="$a_n(t)$"> has been entirely coherent
+(this is unaffected by the final averaging over initial state <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img264.gif"
+ ALT="$m$">).
+Therefore an
+important issue arises: does the energy diffusion eventually stop
+at <!-- MATH
+ $t \sim t_{{\mbox{\tiny H}}}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img323.gif"
+ ALT="$t \sim t_{{\mbox{\tiny H}}}$">, when quantum recurrences due to the
+discreteness of the spectrum will surely occur?
+(For instance, in the kicked rotator system [<A
+ HREF="node161.html#qkr">75</A>],
+periodic driving results in saturation of
+energy spreading, giving localization).
+The answer (discussed in detail in Section&nbsp;8 and Appendix&nbsp;B of
+[<A
+ HREF="node161.html#doronfrc">46</A>]) is
+that preservation of coherent effects
+is actually very fragile.
+Either <IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img103.gif"
+ ALT="$x(t)$"> can have some slight stochasticity (frequency jitter), or
+there is some slight dephasing process (interaction with
+the environment, universal in
+real systems).
+Correlations due to coherence are then lost on
+timescales longer than that associated with jitter or dephasing.
+So if diffusive spreading and loss of coherence can be
+established before <!-- MATH
+ $t_{{\mbox{\tiny prt}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img324.gif"
+ ALT="$t_{{\mbox{\tiny prt}}}$">, the
+`breaktime' (<I>i.e. </I>time limit of applicability) of the FGR,
+then stochastic spreading will continue for ever.
+In other words the `rate equation' (<A HREF="node22.html#eq:fgrband">2.49</A>) will remain
+valid, and we will not be surprised by recurrence (interference) effects
+at long times.
+The FGR breaktime will be discussed more in Section&nbsp;<A HREF="node26.html#sec:qmregime">2.2.6</A>.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fermi"></A><A NAME="3036"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.4:</STRONG>
+
+Fermi occupation function <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img5.gif"
+ ALT="$f(E)$"> evolving under energy diffusion,
+causing growth of mean energy.
+The initial ensemble occupation function is shown by the dotted line.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="278" HEIGHT="105" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img325.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_review/fermi.eps,width=0.5\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html515"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html513"
+  HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html507"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html516"
+  HREF="node24.html">Heating rate example non-interacting</A>
+<B> Up:</B> <A NAME="tex2html514"
+  HREF="node20.html">Review of the linear</A>
+<B> Previous:</B> <A NAME="tex2html508"
+  HREF="node22.html">Generalized force-force correlation and</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

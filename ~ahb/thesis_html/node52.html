@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Categories of existing numerical solution techniques</TITLE>
+<META NAME="description" CONTENT="Categories of existing numerical solution techniques">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node56.html">
+<LINK REL="previous" HREF="node51.html">
+<LINK REL="up" HREF="node50.html">
+<LINK REL="next" HREF="node53.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html839"
+  HREF="node53.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html837"
+  HREF="node50.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html831"
+  HREF="node51.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html840"
+  HREF="node53.html">A) `Basis diagonalization'</A>
+<B> Up:</B> <A NAME="tex2html838"
+  HREF="node50.html">Introduction and history of</A>
+<B> Previous:</B> <A NAME="tex2html832"
+  HREF="node51.html">General definitions</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00612000000000000000">
+Categories of existing numerical solution techniques</A>
+</H2>
+
+<P>
+Almost all interesting quantum problems involve <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img49.gif"
+ ALT="$d\ge2$"> degrees of freedom.
+Almost invariably in this case
+the wavefunction <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> is represented by a
+linear sum of <EM>basis functions</EM>,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\psi{({\mathbf r})}\; = \; \sum_{n=1}^N x_n \phi_n{({\mathbf r})}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:basisgen"></A><IMG
+ WIDTH="359" HEIGHT="58" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img667.gif"
+ ALT="\begin{displaymath}
+\psi{({\mathbf r})}\; = \; \sum_{n=1}^N x_n \phi_n{({\mathbf r})}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This is computationally necessary since it reduces the function
+space of <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> to a finite number <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$">
+of degrees of freedom, namely the coefficient vector <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$">.
+For a <EM>complete</EM> basis, any <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> can be exactly represented by
+(<A HREF="node52.html#eq:basisgen">5.4</A>) in the limit <!-- MATH
+ $N\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img668.gif"
+ ALT="$N\rightarrow\infty$">.
+Clearly a computer can only handle finite <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$">, so the basis should be
+well chosen so that sufficient convergence is achieved for the <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$">
+of interest with a manageable <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$">.
+The choice of basis falls into two general classes:
+(A) The basis does not depend on <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">, or
+(B) the basis does depend on <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">.
+This results in two general strategies, summarized in Table&nbsp;<A HREF="node51.html#tbl:bases">5.1</A>
+and now discussed in detail below.
+The nomenclature ``Class A'' etc which I introduce here is new to the literature.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html841"
+  HREF="node53.html">A) `Basis diagonalization'</A>
+<LI><A NAME="tex2html842"
+  HREF="node54.html">B) `Green's function matching' (sweep in energy)</A>
+<LI><A NAME="tex2html843"
+  HREF="node55.html">C) Other methods</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html839"
+  HREF="node53.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html837"
+  HREF="node50.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html831"
+  HREF="node51.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html840"
+  HREF="node53.html">A) `Basis diagonalization'</A>
+<B> Up:</B> <A NAME="tex2html838"
+  HREF="node50.html">Introduction and history of</A>
+<B> Previous:</B> <A NAME="tex2html832"
+  HREF="node51.html">General definitions</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

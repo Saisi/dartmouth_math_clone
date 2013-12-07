@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>M13 Maple - Lecture 4</TITLE>
+</HEAD>
+<BODY BGCOLOR="ffffff">
+
+<IMG SRC="http://math.dartmouth.edu/~amcallis/images/rainline.gif" WIDTH=510 HEIGHT=7 ALIGN=baseline>
+<P>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD WIDTH="510" COLSPAN="3">
+<TR><TD WIDTH="10">
+<IMG SRC="http://www.math.dartmouth.edu/~amcallis/images/dot_clear.gif" WIDTH="10" HEIGHT="1"></TD>
+<TD WIDTH="490" VALIGN="top">
+<CENTER><H1><A HREF="../index.html">
+				Math 13</A> <SPACER TYPE="horizontal" SIZE="5">Maple from Lecture 4</H1></CENTER>
+<SPACER TYPE="vertical" SIZE="10"><B>
+<CENTER>
+The most important method of education...has always consisted of<BR> that in which the pupil 
+was urged to actual performance. <BR> 
+<SPACER TYPE="horizontal" SIZE="300"> <I> Albert Einstein </I> 
+</CENTER>
+<SPACER TYPE="vertical" SIZE="10"></B>
+<P>
+<TD WIDTH="10">
+<IMG SRC="http://www.math.dartmouth.edu/~amcallis/images/dot_clear.gif" WIDTH="10" HEIGHT="1"></TD>
+</TABLE>
+
+
+
+<IMG SRC="http://math.dartmouth.edu/~amcallis/images/rainline.gif" WIDTH=510 HEIGHT=4 ALIGN=baseline>
+<P>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD WIDTH="510" COLSPAN="3">
+<TR><TD WIDTH="10">
+<IMG SRC="http://www.math.dartmouth.edu/~amcallis/images/dot_clear.gif" WIDTH="10" HEIGHT="1"></TD>
+<TD WIDTH="490" VALIGN="top">
+You might find it beneficial to look at the Maple pictures we used in class when reviewing your notes.
+Sometimes it's interesting to see what happens when you make
+small changes in commands.
+<P>
+
+If you copy these commands into a Maple file it will draw the appropriate pictures for you.
+Note that you can adjust your persepective of the picture and you may need to do so to get the 
+same view we had in class.
+Also, I broke these into different documents because the computer in class did not have enough 
+memory to draw all the pictures when the commands were included in a single file...
+if your computer has enough memory you may not need to do so.
+<P>
+<SPACER TYPE="vertical" SIZE="10"> 
+
+<H2> Document #1 </H2>
+
+c1:= sqrt(x^2+y^2+1): c2:= -sqrt(x^2+y^2+1): plot3d( {c1,c2}, x=-5..5,y=-5..5, orientation=[20,80], 
+axes=framed, axes=normal, style=patch);<P>
+
+c1:= sqrt(x^2+y^2): c2:= -sqrt(x^2+y^2): plot3d( {c1,c2}, x=-5..5,y=-5..5, orientation=[20,80], 
+axes=framed, axes=normal, style=patch);<P>
+
+c1:= sqrt(x^2+y^2-1): c2:= -sqrt(x^2+y^2-1): plot3d( {c1,c2}, x=-5..5,y=-5..5, orientation=[20,80], 
+axes=framed, axes=normal, style=patch);<P>
+
+c1:= sqrt(x^2+y^2-1): c2:= -sqrt(x^2+y^2-1): plot3d( {c1,c2}, x=-5..5,y=-5..5, orientation=[20,80], 
+axes=framed, axes=normal, style=patch);<P>
+
+plot3d( x^2+y, x=-5..5,y=-10..10, orientation=[20,80], axes=framed, axes=normal, style=patch);<P>
+
+with(plots): contourplot( (x^2 +y), x=-5..5,y=-10..10);<P>
+<SPACER TYPE="vertical" SIZE="10"> 
+
+<H2> Document #2 </H2>
+
+plot3d ( sqrt(1-x^2-y^2), x=-1..1,y=-1..1, axes=framed,style=patch);<P>
+
+plot3d ( (x^2-y^2)/(x^2+y^2), x=-1..1,y=-1..1, axes=framed,axes=normal,style=patch);<P>
+
+plot3d ( (2*x*y)/(x^2+y^2), x=-1..1,y=-1..1, axes=framed,axes=normal,style=patch);<P>
+
+plot3d ( (3*(x^2)*y)/(x^2+y^2), x=-1..1,y=-1..1, axes=framed,style=patch);<P>
+
+plot3d ( ln(x^2+y^2-1), x=-2..2,y=-2..2, axes=framed,style=patch);<P>
+
+plot3d ( ln(x^2+y^2-1), x=-50..50,y=-50..50, axes=framed,style=patch);<P>
+<SPACER TYPE="vertical" SIZE="10"> 
+<TD WIDTH="10">
+<IMG SRC="http://www.math.dartmouth.edu/~amcallis/images/dot_clear.gif" WIDTH="10" HEIGHT="1"></TD>
+</TABLE>
+<SPACER TYPE="vertical" SIZE="10"> 
+
+<IMG SRC="http://math.dartmouth.edu/~amcallis/images/rainline.gif" WIDTH=510 HEIGHT=7 ALIGN=baseline>
+<P>
+</BODY>
+</HTML>

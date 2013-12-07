@@ -1,0 +1,132 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51C-SGI [en] (X11; I; IRIX64 6.5 IP26) [Netscape]">
+   <title>Large format posters by Alex Barnett</title>
+</head>
+<body bgcolor="#FFFFFF" background="http://www.math.dartmouth.edu/images/beach.gif">
+&nbsp;
+<center>
+<h1><b>Making large format posters at the Courant</b></h1>
+<img SRC="http://www.math.dartmouth.edu/images/bar45.gif" height=10 width
+=500></center>
+
+<p>
+
+Here are some hints on outputting beautiful large format posters
+in PostScript using interpolated images generated
+from sets of 2D arrays of
+real numbers.
+This allowed me to print large format posters with very few steps
+from my original data, making use of the HP DesignJet printer
+belonging to the <a href="http://www.math.nyu.edu/aml">Applied Math Lab / VizLab</a>
+on the 11th floor of the Courant Institute at NYU.
+I used free software on a Linux system.
+The first step is useful to anyone wishing to write raw PostScript image(s);
+the other two steps are relevant only to users of the same
+or similar printer models.
+
+<h3><font color="#990000"><font size=+2>Writing EPS from data arrays</font></font></h3>
+
+<p>
+
+The Image Dictionary (PostScript LanguageLevel 2) allows a nice human-readable image header
+format which includes interpolated images, which I wanted.
+See the <a href="http://partners.adobe.com/asn/developer/pdfs/tn/PLRM.pdf">Adobe PostScript
+Language Reference ("Red Book")</a>. A basic PS image file demonstrating interpolation is,
+<p>
+<pre><code>
+%!PS-Adobe-3.0
+% Writes interpolated colour image.
+% 2x2 block:
+% black green
+% red   blue
+
+/DeviceRGB setcolorspace
+/i {72 mul} def                     % user units are 1/72 inch
+1 i 1 i translate 6 i 6 i scale     % 1 in offset, 6 in square image
+<<
+ /ImageType 1
+ /Width 2 /Height 2 
+ /BitsPerComponent 8                % each color component in range 00 to ff hex.
+ %/MultipleDataSources true         % Although given in Red Book, this fails, hence removed
+ /ImageMatrix [2 0 0 2 0 0]         % data order: left to right (inner loop), bottom to top.
+ /Decode [0 1 0 1 0 1]
+ /Interpolate true                  % tells printer to try and interpolate pixels, much nicer
+ /DataSource currentfile /ASCIIHexDecode filter
+>>
+% ASCII hex data RGB RGB ..., spaces and linefeeds ignored, follows image cmd
+image
+ff0000 0000ff 000000 00ff00
+>                                   % terminate the filter. no comments allowed in hex data
+showpage
+</code></pre>
+<p>
+I then wrote <a href="http://www.math.dartmouth.edu/~ahb/dump_ps.c">C code</a> to output essentially a larger version
+of the above using a floating-point 2D data array, but with extra
+options for
+<ul>
+<li> color vs B/W
+<li> EPS vs PS (EPS requires calculating a bounding box, and that is all)
+<li> multiple images arranged in a grid pattern
+<li> text labels giving array values beneath each image
+</ul>
+This routine sits in my <a href="http://www.math.dartmouth.edu/software/viewer"><i>viewer</i></a> package.
+I use it to output an EPS file. You will need to edit the C code to read your own data
+array and suit your own loop ordering. I did not have to time to write and test a library.
+
+<h3><font color="#990000"><font size=+2>Annotating and exporting to PS</font></font></h3>
+
+I opted for xfig
+to read in the EPS as a Picture Object, annotate, and export to <code>poster.ps</code>.
+I exported as <i>Portrait</i>, with <i>ANSI-E</i> page
+size. The displayed page limits are
+modified in xfig only by setting them in the export options.
+One complication is that changing to Landscape can actually remove the interpolation from
+the image. This is a `feature' of GhostScript; you can check with GhostView that the above
+interpolation is <i>not</i> rendered when Landscape is used. Why, I don't know.
+
+<p>
+I avoided LaTeX for now due to large format complexities and lack of
+ability to place labels visually.
+
+
+<h3><font color="#990000"><font size=+2>Driving the printer</font></font></h3>
+
+<p>
+Estarose has collected <a href="http://math.nyu.edu/aml/ViSLab_printers.html#hp755cm">wisdom</a> about the AML/VizLab large format printer, now residing
+on the 11th floor. She has found that driving the printer directly from
+MS Powerpoint on the Dell PC called <code>phylum</code> is most reliable.
+However, I preferred to drive the printer myself,
+<ol>
+<li> in order to
+preserve the interpolation setting for PS images (I found this was lost
+when passed through eg Adobe Illustrator on the <code>continuum</code> G4 box),
+<li> so save moving huge files (and myself) around unnecessarily, and
+<li> to avoid MS products if at all possible.
+</ol> 
+It is an HP DesignJet 755CM, and <a href="http://www.linuxprinting.org">linuxprinting.org</a> suggests the <code>dnj650c</code> driver for others in the
+HP DesignJet 700 Series. We can then use any GhostScript which comes
+with this driver. It works fine, including interpolated images.
+Include the following in your <code>.bashrc</code> or equivalent,
+<p>
+<code>
+alias lpbigps='gs -q -dNOPAUSE -dBATCH -sDEVICE=dnj650c -sPAPERSIZE=archE -sOutputFile=\|"lpr -Pnhpbig01@netsvca-80net.cims.nyu.edu"'
+</code>
+<p>
+and you have a useful command <code>lpbigps poster.ps</code> that
+does what you want.
+The paper size "Arch E" is 36" by 48", the 36" being appropriate for this printer.
+Excess length in the vertical (48") direction does not result in wasted paper.
+I found 100MB posters transfer in a few minutes and print in under 30 mins.
+
+<br>
+
+<hr>
+
+<i>Alex Barnett, Feb 27 2004</i>
+
+<br>
+</body>
+</html>

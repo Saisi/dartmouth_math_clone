@@ -1,0 +1,645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Tension matrix in a scaling eigenfunction basis</TITLE>
+<META NAME="description" CONTENT="Tension matrix in a scaling eigenfunction basis">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node74.html">
+<LINK REL="previous" HREF="node72.html">
+<LINK REL="up" HREF="node72.html">
+<LINK REL="next" HREF="node74.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1081"
+  HREF="node74.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1079"
+  HREF="node72.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1073"
+  HREF="node72.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1082"
+  HREF="node74.html">Quasi-orthogonality on the boundary</A>
+<B> Up:</B> <A NAME="tex2html1080"
+  HREF="node72.html">The basic scaling method</A>
+<B> Previous:</B> <A NAME="tex2html1074"
+  HREF="node72.html">The basic scaling method</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00711000000000000000"></A>
+<A NAME="sec:scaling"></A>
+<BR>
+Tension matrix in a scaling eigenfunction basis
+</H2>
+
+<P>
+It is important to define a spatial rescaling of a wavefunction,
+corresponding to dilation (or contraction) about the (arbitrary) origin.
+If the wavefunction <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> is a Helmholtz solution at wavenumber <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img857.gif"
+ ALT="$k_0$">,
+then the rescaled version <!-- MATH
+ $\psi(k,{\mathbf r})$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img858.gif"
+ ALT="$\psi(k,{\mathbf r})$"> of the same wavefunction
+obeys the Helmholtz equation at a new wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\psi(k,{\mathbf r}) \; \equiv \; \psi(\frac{k}{k_0} {\mathbf r}).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:scalingpsi"></A><IMG
+ WIDTH="350" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img859.gif"
+ ALT="\begin{displaymath}
+\psi(k,{\mathbf r}) \; \equiv \; \psi(\frac{k}{k_0} {\mathbf r}).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The rescaled function value at a given point is found by looking at the
+original function at a point a fractional distance <IMG
+ WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img860.gif"
+ ALT="$k/k_0 - 1$">
+further from the origin.
+The derivative with respect to <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> of the wavefunction value at a point
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$"> is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left. \frac{\partial }{\partial k} \psi(k,{\mathbf r}) \right|_{k=k_0} \; = \;
+	\left. \frac{1}{k_0} \frac{\partial }{\partial \alpha} \psi(\alpha {\mathbf r})
+	\right|_{\alpha=1}
+	\; = \; \frac{1}{k_0} {\mathbf r}\cdot\nabla \psi .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:scalingderiv"></A><IMG
+ WIDTH="468" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img861.gif"
+ ALT="\begin{displaymath}
+\left. \frac{\partial }{\partial k} \psi(k,{\mathbf r}) \ri...
+...\alpha=1}
+\; = \; \frac{1}{k_0} {\mathbf r}\cdot\nabla \psi .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This means that for <IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img862.gif"
+ ALT="$k=k_0+\delta$"> with <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$"> small (<!-- MATH
+ $\ll 1/{\mathsf{L}}$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img863.gif"
+ ALT="$\ll 1/{\mathsf{L}}$">), this
+can be expanded in powers of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$"> as
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\psi(k_0 + \delta,{\mathbf r}) \; = \; \left[ 1 + \frac{\delta}{k_0}
+	{\mathbf r}\cdot\nabla + O(\delta^2) \cdots \right] \, \psi{({\mathbf r})}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:scalinglin"></A><IMG
+ WIDTH="456" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img864.gif"
+ ALT="\begin{displaymath}
+\psi(k_0 + \delta,{\mathbf r}) \; = \; \left[ 1 + \frac{\de...
+...dot\nabla + O(\delta^2) \cdots \right] \, \psi{({\mathbf r})}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+We will not need any higher terms for the basic method (they are given in
+Appendix&nbsp;<A HREF="node148.html#ap:tension">I</A>).
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:scaling"></A><A NAME="10841"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+
+Scaling eigenfunction <!-- MATH
+ $\psi_\mu(k,{\mathbf r})$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img865.gif"
+ ALT="$\psi_\mu(k,{\mathbf r})$"> vanishes on a rescaled boundary
+<IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img866.gif"
+ ALT="$\Gamma_\mu$">.
+It is clear that when <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img866.gif"
+ ALT="$\Gamma_\mu$"> is much closer than a wavelength from <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">,
+the wavefunction can be linearized,
+giving a value on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> proportional to the eigenfunction normal derivative. 
+Also the boundary coordinate <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$"> and local surface normal <!-- MATH
+ ${\mathbf n}{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img660.gif"
+ ALT="${\mathbf n}{({\mathbf s})}$">
+are shown.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="545" HEIGHT="232" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img867.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/scaling.efunc.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+We now choose a basis <!-- MATH
+ $\psi_\mu(k,{\mathbf r})$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img865.gif"
+ ALT="$\psi_\mu(k,{\mathbf r})$">
+of the exact billiard eigenfunctions scaled as above to have
+a single wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">; these are called <EM>scaling eigenfunctions</EM> [<A
+ HREF="node161.html#v+s">195</A>].
+The unscaled eigenfunctions are taken to have unit normalization
+in the billiard.
+The index <!-- MATH
+ $\mu = 1\cdots\infty$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img868.gif"
+ ALT="$\mu = 1\cdots\infty$"> labels the eigenfunctions in ascending order of
+their unscaled wavenumber <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">.
+The scaling eigenfunctions no longer go to zero on the original billiard
+boundary <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">, however they do go to zero on rescaled (dilated
+or contracted) versions
+of the boundary <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img866.gif"
+ ALT="$\Gamma_\mu$"> (see Fig.&nbsp;<A HREF="node73.html#fig:scaling">6.1</A>).
+Imagine that a state <IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$"> has a wavenumber shift <!-- MATH
+ $\delta_\mu \equiv k-k_\mu$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img869.gif"
+ ALT="$\delta_\mu \equiv k-k_\mu$">
+which is very small (<!-- MATH
+ $\ll 1/{\mathsf{L}}$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img863.gif"
+ ALT="$\ll 1/{\mathsf{L}}$">, the inverse system size).
+Then <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> will be very close to <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img866.gif"
+ ALT="$\Gamma_\mu$">, and the value of
+<!-- MATH
+ $\psi_\mu(k,{\mathbf r})$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img865.gif"
+ ALT="$\psi_\mu(k,{\mathbf r})$"> for <!-- MATH
+ ${\mathbf r} = {\mathbf r}{({\mathbf s})}\in\Gamma$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img870.gif"
+ ALT="${\mathbf r} = {\mathbf r}{({\mathbf s})}\in\Gamma$"> will
+be close to zero.
+The boundary coordinate <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$"> measures location on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">.
+Applying (<A HREF="node73.html#eq:scalinglin">6.3</A>), the difference from zero is given by
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\psi_\mu(k,{\mathbf s}) \; = \; \frac{\delta_\mu}{k_\mu}r_n
+	\partial_n \psi_\mu
+	+ O(\delta_\mu^2) \cdots
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:psilin"></A><IMG
+ WIDTH="407" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img871.gif"
+ ALT="\begin{displaymath}
+\psi_\mu(k,{\mathbf s}) \; = \; \frac{\delta_\mu}{k_\mu}r_n
+\partial_n \psi_\mu
++ O(\delta_\mu^2) \cdots
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $\partial_n \psi_\mu$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img872.gif"
+ ALT="$\partial_n \psi_\mu$"> is the (unscaled) eigenstate normal derivative
+at location <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$">.
+Notice that the zeroth-order term vanished because of the BCs.
+(This expansion is continued in Appendix&nbsp;<A HREF="node148.html#ap:tension">I</A>).
+A general sum of scaling eigenfunctions
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\psi(k,{\mathbf r}) \ = \ \sum_\mu \tilde{x}_\mu \psi_\mu(k,{\mathbf r})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:sumscalefuncs"></A><IMG
+ WIDTH="373" HEIGHT="49" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img873.gif"
+ ALT="\begin{displaymath}
+\psi(k,{\mathbf r}) \ = \ \sum_\mu \tilde{x}_\mu \psi_\mu(k,{\mathbf r})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+is also a scaling wavefunction.
+
+<P>
+The tension (as defined in the previous chapter for Dirichlet BCs) of
+a general scaling wavefunction is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+f(k) \; = \; \oint_\Gamma \!\! d{\mathbf s} \,w{({\mathbf s})}\, |\psi(k,{\mathbf s})|^2 ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fk"></A><IMG
+ WIDTH="385" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img874.gif"
+ ALT="\begin{displaymath}
+f(k) \; = \; \oint_\Gamma \!\! d{\mathbf s} \,w{({\mathbf s})}\, \vert\psi(k,{\mathbf s})\vert^2 ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $w{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img810.gif"
+ ALT="$w{({\mathbf s})}$"> is a boundary weighting function.
+If <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> is now written in the form (<A HREF="node73.html#eq:sumscalefuncs">6.5</A>) then
+the tension is <!-- MATH
+ $\tilde{{\mathbf x}}^{{\mbox{\tiny T}}} \tilde{F} \tilde{{\mathbf x}}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img875.gif"
+ ALT="$\tilde{{\mathbf x}}^{{\mbox{\tiny T}}} \tilde{F} \tilde{{\mathbf x}}$">.
+The matrix <IMG
+ WIDTH="18" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img876.gif"
+ ALT="$\tilde{F}$"> is the scaling eigenfunction
+representation of the tension quadratic form, and we will see that it has
+wonderful properties.
+For <!-- MATH
+ $\delta_\mu, \delta_\nu \ll 1$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img877.gif"
+ ALT="$\delta_\mu, \delta_\nu \ll 1$"> we can substitute (<A HREF="node73.html#eq:psilin">6.4</A>)
+as follows,
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:fscaling"></A>
+<!-- MATH
+ \begin{eqnarray}
+\tilde{F}_{\mu \nu}(k) \;& = \;& \oint_\Gamma \!\! d{\mathbf s} \,w{({\mathbf s})}\, \psi_\mu(k,{\mathbf s})
+	\psi_\nu(k,{\mathbf s}) \nonumber \\
+	& = & \frac{\delta_\mu \delta_\nu}{k_\mu k_\nu} \oint_\Gamma \!\! d{\mathbf s} \,w{({\mathbf s})}
+	r_n^2 (\partial_n \psi_\mu) \partial_n \psi_\nu \ + \ O(\delta^3) \cdots
+	\nonumber \\
+	& = & 2 \delta_\mu \delta_\nu M_{\mu \nu} \ + \ O(\delta^3) \cdots ,
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img878.gif"
+ ALT="$\displaystyle \tilde{F}_{\mu \nu}(k) \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="194" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img879.gif"
+ ALT="$\displaystyle \oint_\Gamma \!\! d{\mathbf s} \,w{({\mathbf s})}\, \psi_\mu(k,{\mathbf s})
+\psi_\nu(k,{\mathbf s})$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="322" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img880.gif"
+ ALT="$\displaystyle \frac{\delta_\mu \delta_\nu}{k_\mu k_\nu} \oint_\Gamma \!\! d{\ma...
+...f s})}
+r_n^2 (\partial_n \psi_\mu) \partial_n \psi_\nu \ + \ O(\delta^3) \cdots$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="186" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img881.gif"
+ ALT="$\displaystyle 2 \delta_\mu \delta_\nu M_{\mu \nu} \ + \ O(\delta^3) \cdots ,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.7)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img882.gif"
+ ALT="$r_n$"> is an abbreviation for <!-- MATH
+ ${\mathbf r}\cdot{\mathbf n}$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img883.gif"
+ ALT="${\mathbf r}\cdot{\mathbf n}$">
+at the location <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$">.
+The final form has been written in terms of the boundary
+inner-product matrix of the
+eigenstate normal derivatives,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+M_{\mu \nu} \; = \; \frac{1}{2k^2} \oint_\Gamma \!\! d{\mathbf s} \,D{({\mathbf s})}\,
+	(\partial_n \psi_\mu) \partial_n \psi_\nu ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:mdef"></A><IMG
+ WIDTH="413" HEIGHT="44" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img884.gif"
+ ALT="\begin{displaymath}
+M_{\mu \nu} \; = \; \frac{1}{2k^2} \oint_\Gamma \!\! d{\mat...
+...{({\mathbf s})}\,
+(\partial_n \psi_\mu) \partial_n \psi_\nu ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $D{({\mathbf s})}= r_n^2 w{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img885.gif"
+ ALT="$D{({\mathbf s})}= r_n^2 w{({\mathbf s})}$"> is the weight defining the inner-product.
+The approximation <!-- MATH
+ $k \approx k_\mu \approx k_\nu$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img886.gif"
+ ALT="$k \approx k_\mu \approx k_\nu$"> has been used, because
+<IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> has only very slow dependence on <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+Note that all the fast dependence of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> on <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> appears in the
+wavenumber shifts <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img24.gif"
+ ALT="$\delta _\mu $"> and <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img887.gif"
+ ALT="$\delta_\nu$">.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:dilmatimage"></A><A NAME="10845"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+
+Image of the matrix <!-- MATH
+ $M \propto \partial {\mathcal{H}} / \partial x$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img888.gif"
+ ALT="$M \propto \partial {\mathcal{H}} / \partial x$"> shown as a density plot
+of <!-- MATH
+ $|\partial {\mathcal{H}} / \partial x_{\mu\nu}|^2$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img889.gif"
+ ALT="$\vert\partial {\mathcal{H}} / \partial x_{\mu\nu}\vert^2$">,
+for the case of dilation (a special deformation) of the 2D quarter
+stadium billiard.
+Darker pixels correspond to larger values.
+The wide central white region (of width <!-- MATH
+ $\sim 1/{\mathsf{L}}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img890.gif"
+ ALT="$\sim 1/{\mathsf{L}}$">)
+corresponds to quasi-orthogonality: the quantum
+band profile vanishes like <IMG
+ WIDTH="22" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img891.gif"
+ ALT="$\kappa^4$"> as <!-- MATH
+ $\kappa\rightarrow0$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img892.gif"
+ ALT="$\kappa\rightarrow0$">,
+where <!-- MATH
+ $\kappa \equiv k_\mu - k_\nu$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img893.gif"
+ ALT="$\kappa \equiv k_\mu - k_\nu$">.
+The diagonal is unity, and is not included in the band profile.
+The matrix involves all 451 eigenstates falling in the
+wavenumber range <IMG
+ WIDTH="113" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img894.gif"
+ ALT="$398 &lt; k &lt; 402$">.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="555" HEIGHT="551" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img895.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/dil400.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1081"
+  HREF="node74.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1079"
+  HREF="node72.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1073"
+  HREF="node72.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1082"
+  HREF="node74.html">Quasi-orthogonality on the boundary</A>
+<B> Up:</B> <A NAME="tex2html1080"
+  HREF="node72.html">The basic scaling method</A>
+<B> Previous:</B> <A NAME="tex2html1074"
+  HREF="node72.html">The basic scaling method</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

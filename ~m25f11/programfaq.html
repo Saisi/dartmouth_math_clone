@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content = "text/html; charset=ISO-8859-1">
+  <title>Math 25 Fall 2011: Programming FAQ</title>
+  <link type="text/css" rel="stylesheet" href="m25.css">
+
+</head>
+
+<body>
+<center> <h1>Math 25 (Fall 2011): Number Theory</h1> </center>
+
+<center> <h2>Programming FAQ</h2></center>
+<p><a href = "programfaq.html#reason">Q: Why are we programming in a math class?</a>  </br>
+<a href="programfaq.html#langchoice">Q: Why are we using Python?  Why aren't we using C++/Java/(insert favorite language here)?</a> </br>
+<a href="programfaq.html#version">Q: Why are we using Python 2.7, and not 3.2? </a> </br>
+<a href = "programfaq.html#never">Q: I've never programmed before!  Should I be worried? </a> </br>
+<a href= "programfaq.html#CS">Q: How much computer science do I need to know?  How much will we learn? </a> </br>
+<a href = "programfaq.html#getPython">Q: How do I use Python?</a> </br>
+<a href = "programfaq.html#docPython">Q: Wow, Python is really cool!  Where can I learn more about it?</a> </br>
+<a href = "programfaq.html#IDE">Q: What editor do you recommend for preparing Python code? </a> </br>
+<a href = "programfaq.html#honorcode">Q: What is the honor code policy on programming assignments?</a> </br>
+<a href = "programfaq.html#grading">Q: How exactly are the programming assignments graded?</a> </br>
+<a href = "programfaq.html#pedagogical">Q: A lot of the programming assignments we are given ask us to
+implement functions which are already implemented in freely available packages.  Why are we
+repeating work someone else has done? </a> </br>
+</p>
+
+<p>
+<a id = "reason"><b>Q: Why are we programming in a math class?</b></a> </br> </br>
+A: Programming in a math class is fairly rare, but nowadays it is not *too* rare in number
+theory classes.  Of all the major mathematical subjects, perhaps number theory is closest to 
+computer science and programming.  (Graph theory is also awfully close.)    
+Number theory is concerned with integers, which machines can represent (usually) with 100% accuracy.  
+Number theory also has a substantial algorithmic aspect, and while computers did not exist prior to
+the 20th century, there is little doubt that the great mathematicians of the past would have used 
+computers had they been available.  
+</p>
+<hr>
+
+<a id="langchoice"> <b>Q: Why are we using Python?  Why aren't we using C++/Java/(insert favorite language here)? </b></a>
+<p>A: I feel that Python is a good choice for programming in a class like this, where students are not expected to have any
+prior knowledge of computer science or programming, because Python is easy to learn, easy to read, and easy to write.
+With other languages, like C++, there is considerable overhead in explaining why certain syntax is the way it is, and
+(at least I feel) the code can be difficult to write.  
+</p>
+
+<p>
+One remark frequently made about Python is that it is often substantially slower than code in languages like
+C++.  While this is almost always true, we are not interested in computational speed in this class.  If we 
+were interested in writing code that ran as quickly as possible, we would probably need to use something
+besides basic Python.  
+</p>
+
+<p>
+Python is also one of the most widely used programming languages in the world now, so hopefully at the end of this class you will have picked up at least one practical skill!
+</p>
+<hr>
+
+<a id = "version"> <b> Q: Why are we using Python 2.7, and not 3.2? </b></a>
+<p>  Usually, it's a good idea to use the latest and greatest version of whatever programs are out there.  
+However, the transition from Python 2.x to Python 3.x changed a lot of things, and in the process broke
+backwards compatibility with lots of prewritten Python code.  While we won't be using a lot of other people's prewritten 
+code in this class, you might want to explore some of that after the class is over 
+(in particular, you might want to check out <a href = "http://www.sagemath.org">Sage</a>).  
+</p>
+
+<p>
+For a taste of just how much backwards compatibility was broken, check out how the <a href = "http://docs.python.org/py3k/whatsnew/3.0.html#print-is-a-function">print function</a> changed.  Fortunately, there exist automated 
+converters which change Python 2 code to Python 3 code.  
+</p>
+<hr>
+
+<a id = "never"> <b>Q: I've never programmed before!  Should I be worried? </b></a>
+<p> A: In this class, we assume no prior knowledge of programming, so if you've never programmed before
+you do not need to worry about starting behind anyone else.  One of the advantages of Python is that it is easy to
+pick up, and while it has a rich feature set, we will only use the more basic parts of the language.  
+</p>
+<hr>
+
+<a id = "CS"> <b>Q: How much computer science do I need to know?  How much will we learn? </b> </a>
+<p> A: The answer to both questions is "not much".  We are only interested in using programming as a tool to
+implement number theoretic algorithms, so this class certainly is not a substitute for any computer science class.
+That being said, we will spend a little bit of time discussing the algorithmic complexity of some of our algorithms,
+so you might learn some material that could come in handy in an algorithms class.  (And mathematicians were
+the first to use big-O notation!) 
+</p>
+<hr>
+
+<a id = "getPython"> <b>Q: How do I get and use Python? </b></a>
+<p> If Python didn't come with your operating system (it is frequently installed as part of Mac OS X and Linux), you can download it for free from the official <a href = "http://www.python.org">Python website</a>.  
+</p>
+
+<p>
+When you install Python from the above website, you can run it either from the command line (in a terminal) or by
+opening up "IDLE", which is the packaged editor and shell that comes with Python.  Python is an <em>interpreted</em>
+language, which means that you do not need to compile what you write, unlike languages like C++ or Java.  </br> </br>
+</p>
+
+<p>
+When you open up IDLE or start Python in a terminal, you end up at an interactive prompt, where you can write in snippets of 
+code, hit enter, and then see the result.  However, if you're not doing small experiments, you will want to put your code
+in a text file, and when you're done, run that code.  See <a href = "https://www.math.dartmouth.edu/~m25f11/null">Programming Assignment 0</a> for more information
+about this.
+</p>
+<hr>
+
+<a id = "docPython"> <b>Q: Wow, Python is really cool!  Where can I learn more about it? </b></a>
+<p> A: The <a href = "http://docs.python.org/">official Python documentation</a> comes with a handy tutorial and reference manual. Python is an incredibly versatile language, in large part due to the extensive set of modules that come with it, so if you're interested in learning more about the language, first take a look at the official documentation.  
+</p>
+
+<p>
+There are also books on Python available, some of which you can get for free online (legally!) if you're connecting from a Dartmouth location.  See <a href = "http://proquest.safaribooksonline.com/book/programming/python/9781449398712">this book</a>, for instance.  
+</p>
+<hr>
+
+<a id = "IDE"> <b>Q: What editor do you recommend for preparing Python code? </b></a>
+<p> A: There are a lot of editors for Python (or any other programming language) out there.  For our
+purposes, IDLE is sufficient.  If you know how to use vim or emacs, either of those will work as well.  In theory, you could
+use a barebones text editor like Notepad or TextEdit, but it would be a really painful experience - you don't get
+syntax highlighting or correct indentation.  Do not try writing code in a program like Microsoft Word, because
+Microsoft Word uses its own format which adds lots of additional information when you save a file.  
+</p>
+<hr>
+
+<a id = "honorcode"> <b>Q: What is the honor code policy on programming assignments? </b></a>
+<p>A: This deserves special mention.  While it is okay to discuss ideas behind solving regular math problems
+or programming assignments with other students in this class, you should NEVER look at someone else's code, 
+whether that person be another student in this class or a source on the Internet.  Needless to say, copying code
+is prohibited, unless you are given a code sample to use in an assignment. 
+</p>
+<hr>
+
+<a id = "grading"> <b>Q: How exactly are the programming assignments graded? </b></a>
+<p>A:  The programming assignments will consist both of actual programs as well as mathematical analysis
+of algorithmic topics which you will do much like the non-programming assignments.  For the non-programming
+parts, the grading will be similar to that for homework assignments - you will be marked based on the correctness
+of your analysis and also partially on the clarity of your reasoning.  
+</p>
+
+<p>
+For the actual programs, you will be asked to submit your programs via the Internet (see the <a href = "homework.html">homework</a> page for more details on this process).  Your code will then be run against a set of test cases, and the correctness of the results your program produces will be evaluated.  Because this process will be automated, it is important that you name your functions and format your results in the way EXACTLY specified in each assignment.  
+</p>
+
+<p>
+Furthermore, your code will actually be read by a person.  If your tests cases were 100% correct, then most likely
+your code is fine.  On the other hand, if som e (or all!) of the test cases fail, then the person reading your
+code will determine just how erroneous your code actually was.  For example, perhaps all your cases fail but 
+this happened because you accidentally forgot to add one to the final answer.  This would not be as severe an error
+as writing nonsense code.  
+</p>
+
+<p>
+We do not care too much about comments or code readability (Python's block indentation enforces
+readability to a large extent), but if your code is excessively difficult to understand you may
+lose some points.     
+</p>
+<hr>
+
+<p>
+<a id = "pedagogical"><b>Q: A lot of the programming assignments we are given ask us to
+implement functions which are already implemented in freely available packages.  Why are we
+repeating work someone else has done? </b></a> 
+</p>
+
+<p>
+The purpose of the programming assignments is not to produce programs which will be used
+by other people.  The purpose of the assignments is to highlight the algorithmic nature
+of number theory, to carry out basic numerical experiments quickly, and to provide a different
+type of homework assignment.  Actual top-notch implementations of the algorithms we discuss
+are usually heavily optimized to run as fast as possible because of their fundamental importance
+in a wide range of computational problems, and competing with those implementations in an
+introductory class is not particularly feasible.    
+</p>
+</body>
+</html>

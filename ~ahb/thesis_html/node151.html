@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Applying boundary conditions and simplifying</TITLE>
+<META NAME="description" CONTENT="Applying boundary conditions and simplifying">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node152.html">
+<LINK REL="previous" HREF="node150.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node152.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1897"
+  HREF="node152.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1895"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1889"
+  HREF="node150.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1898"
+  HREF="node152.html">Tension matrix expansion</A>
+<B> Up:</B> <A NAME="tex2html1896"
+  HREF="node148.html">Appendix I: Scaling expansion</A>
+<B> Previous:</B> <A NAME="tex2html1890"
+  HREF="node150.html">Curvilinear boundary coordinates</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001830000000000000000">
+Applying boundary conditions and simplifying</A>
+</H1>
+
+<P>
+We now proceed term-by-term in (<A HREF="node149.html#eq:transexp">I.2</A>). The zeroth-order
+is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\psi \ \stackrel{{\mbox{\tiny BCs}}}{\longrightarrow}\ 0,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="316" HEIGHT="30" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1920.gif"
+ ALT="\begin{displaymath}
+\psi \ \stackrel{{\mbox{\tiny BCs}}}{\longrightarrow}\ 0,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the arrow implies application of the Dirichlet boundary conditions (BCs),
+namely
+<!-- MATH
+ $\psi(z{=}0,s) = 0$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1921.gif"
+ ALT="$\psi(z{=}0,s) = 0$"> for all <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$"> (remember that we already chose <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1625.gif"
+ ALT="$z=0$">
+in order to be able to write the metric).
+The first order is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathbf a}\cdot\nabla \psi \ = \ a_n\psi^n + a_t\psi^t \ \stackrel{{\mbox{\tiny BCs}}}{\longrightarrow}\
+	a_n\psi^n ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="414" HEIGHT="30" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1922.gif"
+ ALT="\begin{displaymath}
+{\mathbf a}\cdot\nabla \psi \ = \ a_n\psi^n + a_t\psi^t \ \stackrel{{\mbox{\tiny BCs}}}{\longrightarrow}\
+a_n\psi^n ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the result <IMG
+ WIDTH="54" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1923.gif"
+ ALT="$\psi^t = 0$"> was used. In will use in future the fact that all
+higher <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">-derivatives <!-- MATH
+ $\psi^{tt\cdots t}$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1924.gif"
+ ALT="$\psi^{tt\cdots t}$"> vanish upon application of the BCs.
+The second order requires application of the rules (<A HREF="node150.html#eq:arules">I.10</A>):
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\frac{1}{2!}({\mathbf a}\cdot\nabla)({\mathbf a}\cdot\nabla) \psi & = &
+	\frac{1}{2} (a_n\partial_n + a_t\partial_t)(a_n\psi^n + a_t\psi^t)
+	\nonumber \\& = &
+	\frac{1}{2} \left[ a_n^2 \psi^{nn} + 2 a_n a_t \psi^{nt} + a_t^2 \psi^{tt}
+	+ \alpha a_t(a_t\psi^n - a_n\psi^t)\right]
+	\nonumber \\
+	& \stackrel{{\mbox{\tiny BCs}}}{\longrightarrow}&
+	a_n a_t \psi^{nt} + \frac{\alpha}{2}(a_t^2 - a_n^2) \psi^n .
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="135" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1925.gif"
+ ALT="$\displaystyle \frac{1}{2!}({\mathbf a}\cdot\nabla)({\mathbf a}\cdot\nabla) \psi$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="225" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1926.gif"
+ ALT="$\displaystyle \frac{1}{2} (a_n\partial_n + a_t\partial_t)(a_n\psi^n + a_t\psi^t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="386" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1927.gif"
+ ALT="$\displaystyle \frac{1}{2} \left[ a_n^2 \psi^{nn} + 2 a_n a_t \psi^{nt} + a_t^2 \psi^{tt}
++ \alpha a_t(a_t\psi^n - a_n\psi^t)\right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="33" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1928.gif"
+ ALT="$\textstyle \stackrel{{\mbox{\tiny BCs}}}{\longrightarrow}$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="195" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1929.gif"
+ ALT="$\displaystyle a_n a_t \psi^{nt} + \frac{\alpha}{2}(a_t^2 - a_n^2) \psi^n .$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.17)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The Helmholtz equation and the BCs together imply
+<!-- MATH
+ $\psi^{nn} = -\alpha \psi^n$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1930.gif"
+ ALT="$\psi^{nn} = -\alpha \psi^n$">, a relation used both above and below.
+In general our task is to reduce the number of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$">-derivatives; it is always
+possible using such manipulations to leave only terms containing a single
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$">-derivative.
+This will be desirable for manipulation of boundary integrals by parts later.
+
+<P>
+The third-order result (included below) requires use of the following.
+<!-- MATH
+ $\psi^{nnn} = \partial_n(-\psi^{tt}-\alpha \psi^n - k_\mu^2 \psi)$
+ -->
+<IMG
+ WIDTH="238" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1931.gif"
+ ALT="$\psi^{nnn} = \partial_n(-\psi^{tt}-\alpha \psi^n - k_\mu^2 \psi)$"> simplifies to
+<!-- MATH
+ $-\psi^{ntt} + (2\alpha^2 - k_\mu^2) \psi^n$
+ -->
+<IMG
+ WIDTH="171" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1932.gif"
+ ALT="$-\psi^{ntt} + (2\alpha^2 - k_\mu^2) \psi^n$"> when the BCs are applied.
+This required the normal derivative of curvature <!-- MATH
+ $\partial_n \alpha = -\alpha^2$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1933.gif"
+ ALT="$\partial_n \alpha = -\alpha^2$">
+since <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1025.gif"
+ ALT="$\alpha$">
+now needs to be regarded as a scalar field with <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img479.gif"
+ ALT="$z$">-dependence.
+The tangential derivative is given the name <!-- MATH
+ $\partial_t \alpha = \alpha'$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1934.gif"
+ ALT="$\partial_t \alpha = \alpha'$">.
+Also <!-- MATH
+ $\psi^{nnt} = \partial_t(-\psi^{tt}-\alpha \psi^n - k_\mu^2 \psi)$
+ -->
+<IMG
+ WIDTH="231" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1935.gif"
+ ALT="$\psi^{nnt} = \partial_t(-\psi^{tt}-\alpha \psi^n - k_\mu^2 \psi)$">
+simplifies to <!-- MATH
+ $-\alpha' \psi^n - \alpha \psi^{nt}$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1936.gif"
+ ALT="$-\alpha' \psi^n - \alpha \psi^{nt}$"> when BCs are applied.
+
+<P>
+Combining everything and finally substituting for <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1683.gif"
+ ALT="${\mathbf a}$"> gives
+the expansion of a Dirichlet scaling eigenfunction at location <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$"> on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:psiexp"></A>
+<!-- MATH
+ \begin{eqnarray}
+\psi(k_\mu + \delta,s) & = & \frac{\delta}{k_\mu} r_n \psi^n
+	\nonumber \\
+	& & + \ \frac{\delta^2}{k_\mu^2} \left[ \alpha \frac{r_t^2 - r_n^2}{2} 
+	\psi^n \; + \; r_n r_t \psi^{nt} \right]
+	\nonumber \\
+	& & - \ \frac{\delta^3}{6k_\mu} r_n^3 \psi^n \; + \;
+	\frac{\delta^3}{6k_\mu^3} \left\{ \left[ 2\alpha^2 r_n(r_n^2 - 3r_t^2)
+	 + \alpha' r_t(r_t^2 - 3r_n^2) \right] \psi^n \rule{0in}{0.25in} \right.
+	\nonumber \\
+	& & \hspace{1in} \left. \rule{0in}{0.25in}
+	+ \; 3\alpha r_t(r_t^2 - 2r_n^2) \psi^{nt}
+	+ r_n(3r_t^2 - r_n^2) \psi^{ntt} \right\}
+	\nonumber \\
+	& & + \ O(\delta^4) \cdots
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1937.gif"
+ ALT="$\displaystyle \psi(k_\mu + \delta,s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="64" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1938.gif"
+ ALT="$\displaystyle \frac{\delta}{k_\mu} r_n \psi^n$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="244" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1939.gif"
+ ALT="$\displaystyle + \ \frac{\delta^2}{k_\mu^2} \left[ \alpha \frac{r_t^2 - r_n^2}{2}
+\psi^n \; + \; r_n r_t \psi^{nt} \right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="458" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1940.gif"
+ ALT="$\displaystyle - \ \frac{\delta^3}{6k_\mu} r_n^3 \psi^n \; + \;
+\frac{\delta^3}{...
+...3r_t^2)
++ \alpha' r_t(r_t^2 - 3r_n^2) \right] \psi^n \rule{0in}{0.25in} \right.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="441" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1941.gif"
+ ALT="$\displaystyle \hspace{1in} \left. \rule{0in}{0.25in}
++ \; 3\alpha r_t(r_t^2 - 2r_n^2) \psi^{nt}
++ r_n(3r_t^2 - r_n^2) \psi^{ntt} \right\}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1942.gif"
+ ALT="$\displaystyle + \ O(\delta^4) \cdots$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(I.18)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The expression is believed to be correct to order <IMG
+ WIDTH="20" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1943.gif"
+ ALT="$\delta^3$">. The
+complexity increases greatly with each power of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">, and higher derivatives
+of the curvature <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1025.gif"
+ ALT="$\alpha$"> enter.
+However, in the case of the circle billiard
+(where <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1025.gif"
+ ALT="$\alpha$"> is constant) it is easy to verify the expansion.
+One general pattern is that the <!-- MATH
+ $m^{{\mbox{\tiny th}}}$
+ -->
+<IMG
+ WIDTH="32" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1944.gif"
+ ALT="$m^{{\mbox{\tiny th}}}$">-order terms all contain <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img264.gif"
+ ALT="$m$"> powers
+of <IMG
+ WIDTH="21" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1945.gif"
+ ALT="$r \delta$">, and for each term the number of spatial derivatives of <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$">
+must equal the power of <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1946.gif"
+ ALT="$1/k_\mu$"> minus the power of <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1025.gif"
+ ALT="$\alpha$">.
+It is important to notice
+that the <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1947.gif"
+ ALT="$O(\delta^2)$"> term differs by the presence of a factor of
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1025.gif"
+ ALT="$\alpha$"> from the <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1947.gif"
+ ALT="$O(\delta^2)$"> term given by VS.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1897"
+  HREF="node152.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1895"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1889"
+  HREF="node150.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1898"
+  HREF="node152.html">Tension matrix expansion</A>
+<B> Up:</B> <A NAME="tex2html1896"
+  HREF="node148.html">Appendix I: Scaling expansion</A>
+<B> Previous:</B> <A NAME="tex2html1890"
+  HREF="node150.html">Curvilinear boundary coordinates</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

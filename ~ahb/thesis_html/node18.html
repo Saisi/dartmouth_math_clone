@@ -1,0 +1,422 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Irreversible growth of average energy</TITLE>
+<META NAME="description" CONTENT="Irreversible growth of average energy">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html461"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html459"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html453"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html462"
+  HREF="node19.html">Microcanonical averages and trajectory</A>
+<B> Up:</B> <A NAME="tex2html460"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html454"
+  HREF="node17.html">Fokker-Planck equation for energy</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00315000000000000000"></A>
+<A NAME="sec:irrev"></A>
+<BR>
+Irreversible growth of average energy
+</H2>
+
+<P>
+How does the energy spreading cause growth of the average energy?
+It is a result of both the
+diffusion term <!-- MATH
+ $D_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img154.gif"
+ ALT="$D_{{\mbox{\tiny E}}}$"> being <EM>energy-dependent</EM>,
+and of the extra drift (bias) due to transformation from <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$"> to <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">
+(see Fig.&nbsp;<A HREF="node15.html#fig:spread">2.2</A>b).
+In the billiard context, the former effect is easy to visualize:
+we can imagine that particles which happen to
+have a slightly increased kinetic energy will hit the walls more often,
+thus diffusing faster in energy.
+We will see in Chapter&nbsp;<A HREF="node42.html#ch:wall">4</A> that the
+dependence is <!-- MATH
+ $D_{{\mbox{\tiny E}}} \propto E^{3/2}$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img201.gif"
+ ALT="$D_{{\mbox{\tiny E}}} \propto E^{3/2}$">, independent of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">.
+The latter effect is less intuitive.
+Considering that <!-- MATH
+ $g(E) \propto E^{d/2 - 1}$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img202.gif"
+ ALT="$g(E) \propto E^{d/2 - 1}$">
+for billiards it is not hard to show that the ratio of the latter to the
+former effect is <IMG
+ WIDTH="75" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img203.gif"
+ ALT="$(d-2)/3$">, independent of energy.
+Therefore which effect dominates depends on <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> the system dimensionality.
+
+<P>
+We compute the rate of change of average energy, substituting
+(<A HREF="node17.html#eq:rhoev">2.21</A>) and integrating by parts,
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:heating"></A>
+<!-- MATH
+ \begin{eqnarray}
+\langle \dot{E}(t) \rangle \; & \equiv \; &
+	\int dE \, E \, \dot{\rho}(E,t) \nonumber \\
+	& = & \dot{x} \int dE \left. \frac{\partial E}{\partial x}\right|_{\Omega} \rho
+	- \int dE \, D_{{\mbox{\tiny E}}} \, g \frac{\partial }{\partial E} \left( \frac{\rho}{g} \right) .
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="57" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img204.gif"
+ ALT="$\displaystyle \langle \dot{E}(t) \rangle \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img157.gif"
+ ALT="$\textstyle \equiv \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="116" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img205.gif"
+ ALT="$\displaystyle \int dE \, E \, \dot{\rho}(E,t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="295" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img206.gif"
+ ALT="$\displaystyle \dot{x} \int dE \left. \frac{\partial E}{\partial x}\right\vert _...
+...ox{\tiny E}}} \, g \frac{\partial }{\partial E} \left( \frac{\rho}{g} \right) .$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.22)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The first term is the reversible heating (easily verified
+using the microcanonical case <!-- MATH
+ $\rho(E) = \delta(E-E_0)$
+ -->
+<IMG
+ WIDTH="142" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img207.gif"
+ ALT="$\rho(E) = \delta(E-E_0)$">). The second
+is irreversible since it relies on diffusion; it can be written
+(by substituting for <!-- MATH
+ $D_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img154.gif"
+ ALT="$D_{{\mbox{\tiny E}}}$">) as
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\dot{Q}_{{\mbox{\tiny irrev}}}(t)
+	\; = \;
+	\mu V^2 .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:irrev"></A><IMG
+ WIDTH="343" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img208.gif"
+ ALT="\begin{displaymath}
+\dot{Q}_{{\mbox{\tiny irrev}}}(t)
+\; = \;
+\mu V^2 .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.23)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img40.gif"
+ ALT="$\mu(\omega)$"> is a <EM>friction coefficient</EM>, named so because
+he agency moving <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> has to do work against a nonzero
+average force.
+We have <EM>ohmic</EM> dissipation,
+corresponding to an average force <!-- MATH
+ $\langle{\mathcal{F}}\rangle = - \mu \dot{x}$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img209.gif"
+ ALT="$\langle{\mathcal{F}}\rangle = - \mu \dot{x}$">
+which is proportional to velocity.
+The value of <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img40.gif"
+ ALT="$\mu(\omega)$"> depends on the
+energy distribution <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img210.gif"
+ ALT="$\rho$"> at time <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">, and has the general expression
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mu(\omega) \; = \;  -\frac{1}{2} \int_0^\infty
+	dE \,\tilde{C}_{{\mbox{\tiny E}}}(\omega)\, g \frac{\partial }{\partial E} \left(
+	\frac{\rho}{g} \right)
+	\; = \; \frac{1}{2} \int_0^\infty
+	dE \, \frac{\rho}{g} \frac{\partial }{\partial E} (g \tilde{C}_{{\mbox{\tiny E}}}(\omega))
+	\hspace{0.4in} \mbox{general $\rho$} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:mugen"></A><IMG
+ WIDTH="619" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img211.gif"
+ ALT="\begin{displaymath}
+\mu(\omega) \; = \; -\frac{1}{2} \int_0^\infty
+dE \,\tilde...
+...ox{\tiny E}}}(\omega))
+\hspace{0.4in} \mbox{general $\rho$} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.24)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+It is interesting that Koonin and Randrup
+derived an equivalent expression (Eq. (2.23) of [<A
+ HREF="node161.html#koonincl">120</A>]), without
+explicitly considering energy spreading.
+If we start in a particular choice of ensemble (initial <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img212.gif"
+ ALT="$\rho_0$">),
+and diffusion has not yet caused <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img210.gif"
+ ALT="$\rho$"> to differ much from <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img212.gif"
+ ALT="$\rho_0$">,
+then <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img40.gif"
+ ALT="$\mu(\omega)$"> therefore takes special forms:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:mucan"></A><A NAME="eq:mufer"></A>
+<!-- MATH
+ \begin{eqnarray}
+\mu_{{\mbox{\tiny E}}}(\omega) & = &
+	\frac{1}{2} \frac{1}{g(E)} \frac{\partial }{\partial E} (g(E) \tilde{C}_{{\mbox{\tiny E}}}(\omega))
+	\hspace{1.5in} \mbox{microcanonical}, \\\mu(\omega) & = & \frac{g(E_{{\mbox{\tiny F}}})}{2\Omega_{{\mbox{\tiny F}}}}
+	\tilde{C}_{{\mbox{\tiny F}}}(\omega)
+	\hspace{2.0in} \mbox{Fermi distribution},
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img213.gif"
+ ALT="$\displaystyle \mu_{{\mbox{\tiny E}}}(\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="472" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img214.gif"
+ ALT="$\displaystyle \frac{1}{2} \frac{1}{g(E)} \frac{\partial }{\partial E} (g(E) \tilde{C}_{{\mbox{\tiny E}}}(\omega))
+\hspace{1.5in} \mbox{microcanonical},$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.25)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img215.gif"
+ ALT="$\displaystyle \mu(\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="471" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img216.gif"
+ ALT="$\displaystyle \frac{g(E_{{\mbox{\tiny F}}})}{2\Omega_{{\mbox{\tiny F}}}}
+\tilde{C}_{{\mbox{\tiny F}}}(\omega)
+\hspace{2.0in} \mbox{Fermi distribution},$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.26)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the subscript <!-- MATH
+ ${\mbox{\tiny F}}$
+ -->
+<IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img217.gif"
+ ALT="${\mbox{\tiny F}}$"> means evaluation at the Fermi energy <!-- MATH
+ $E_{{\mbox{\tiny F}}}$
+ -->
+<IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img218.gif"
+ ALT="$E_{{\mbox{\tiny F}}}$">.
+The Fermi distribution has a
+constant phase-space density of <!-- MATH
+ $\Omega_{{\mbox{\tiny F}}}^{-1}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img219.gif"
+ ALT="$\Omega_{{\mbox{\tiny F}}}^{-1}$">,
+normalised to represent a single particle.
+For an application to many non-interacting fermions, see
+Section&nbsp;<A HREF="node24.html#sec:fermiheat">2.2.4</A>.
+The case of the canonical distribution,
+relevant to a thermal gas of non-interacting classical particles,
+is covered by Cohen (Section&nbsp;4 of [<A
+ HREF="node161.html#doronfrc">46</A>]) and I do not discuss it here.
+After long times, if the system remains isolated,
+it can be that <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img210.gif"
+ ALT="$\rho$"> is very different from <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img212.gif"
+ ALT="$\rho_0$">,
+and the special forms (<A HREF="node18.html#eq:mucan">2.25</A>)
+or (<A HREF="node18.html#eq:mufer">2.26</A>) will have to be replaced by (<A HREF="node18.html#eq:mugen">2.24</A>).
+
+<P>
+What I have presented is only the dissipation
+appearing to lowest order in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$">
+(Jarzynski [<A
+ HREF="node161.html#jarz93">107</A>] discusses this by way
+of an expansion in powers of a `slowness parameter' <IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img186.gif"
+ ALT="$\propto V$">).
+There will be higher-order terms in the friction which
+become more relevant as <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$"> approaches
+for example the limit (<A HREF="node15.html#eq:trivslow">2.12</A>).
+There are other ways that the classical spreading picture can break down.
+For instance for <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$"> less than the correlation time <!-- MATH
+ $\tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img139.gif"
+ ALT="$\tau_{{\mbox{\tiny cl}}}$"> the energy spreading 
+should be much less than <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> itself.
+Also for this same <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$"> the
+average energy increase should remain small compared to the spreading.
+These set additional upper limits on <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$"> [<A
+ HREF="node161.html#doronfrc">46</A>].
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html461"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html459"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html453"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html462"
+  HREF="node19.html">Microcanonical averages and trajectory</A>
+<B> Up:</B> <A NAME="tex2html460"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html454"
+  HREF="node17.html">Fokker-Planck equation for energy</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

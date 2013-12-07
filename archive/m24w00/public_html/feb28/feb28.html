@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>feb28</TITLE>
+<META NAME="description" CONTENT="feb28">
+<META NAME="keywords" CONTENT="feb28">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="feb28.css">
+</HEAD>
+<BODY >
+
+<P>
+<B>Homework:</B>
+Read 5.1 and 5.2 carefully.  Do and turn in 
+5.1: 3 ,4,8,9,11,17 and 5.2:  2(a,b,e,f), 3(a,b,d),7,9,13.
+
+<P>
+<B>Proposed topics</B>
+Diagonizability.  Last Friday we introduced to the notions of an 
+eigen-value and eigen-vector.  This week we will apply these notions to
+choosing a good basis in which to veiw a linear transformation 
+<I>T</I>.  We should think of a  very nice basis <IMG
+ WIDTH="14" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/feb28/img1.gif"
+ ALT="$\beta$">
+as  being one where
+<IMG
+ WIDTH="33" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/feb28/img2.gif"
+ ALT="$[T]_{\beta}$">
+is diagonal.
+Sometimes we can find such a basis sometimes we
+can't.  This depends on several factors:  which feild we are working in,
+how  many eigenvalues there are in this feild, and how many eigen-vectors
+we can find for each eigenvalue.  We will explore these possibilities. 
+(Warning: many of the corollaries stated in 5.2 and 5.3  we will simply
+deduce every
+time we use them (since they are very easily deduced form the threorem),
+however you should read them all very carefully to get a feel for what
+these
+wonderous theorem are giving us.)
+
+<P>
+<B>Some Maple Code:</B>  Here the maple code form last Friday and this
+Monday:
+
+<P>
+<TT>with(linalg);
+</TT>
+<P>
+<TT>T2 := matrix([[3/5, 1/2, 1/10], [1/5, 2/5, 1/5], [1/5, 1/10, 7/10]]);
+Change  := matrix([[8, 1, 4], [5, 0, -3], [7, -1, -1]]);
+</TT>
+<P>
+<TT>Identity3 := diag(1, 1,1);
+Augmented  := augment(Change,Identity3);
+</TT>
+<P>
+<TT>S1 := gaussjord(Augmented);
+</TT>
+<P>
+<TT>Changeback := transpose(matrix([col(S1,4..6)]));
+</TT>
+<P>
+<TT>NewT2 := multiply(Changeback,T2,Change);
+</TT>
+<P>
+<TT>Lim := diag(1,0,0);
+</TT>
+<P>
+<TT>Prob1 := matrix([[1],[0],[0]]);
+</TT>
+<P>
+<TT>Stationary := multiply(Change,Lim,Changeback,Prob1);
+</TT>
+<P>
+<TT>Observe := multiply(T2,Stationary);
+</TT>
+<P>
+<TT>Another1 := multiply(Change,Prob1);
+</TT>
+<P>
+<TT>Standard2 := matrix([[0],[1],[0]]);
+</TT>
+<P>
+<TT>Another2 := multiply(Change,Standard2);
+</TT>
+<P>
+<TT>Standard3 := matrix([[0],[0],[1]]);
+Another3 := multiply(Change,Standard3);
+</TT>
+<P>
+<TT>multiply(T2,Another1);
+</TT>
+<P>
+<TT>multiply(T2,Another2);
+</TT>
+<P>
+<TT>multiply(T2,Another3);
+</TT>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 24 Winter 2000</I>
+<BR><I>2000-02-25</I>
+</ADDRESS>
+</BODY>
+</HTML>

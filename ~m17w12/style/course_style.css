@@ -1,0 +1,127 @@
+body {
+  color: #000;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+
+.red {
+  color: red;
+}
+h2 {
+  font-weight: bold;
+  font-size: 1.1em;
+ }
+
+
+
+h3 {
+  font-weight: bold;
+  font-size: .9em;
+}
+
+
+b {
+   font-weight: bold;
+  font-size: .9em;
+}
+
+
+th {
+  font-weight: bold;
+  font-size: .8em;
+}
+
+td {
+  font-weight: normal;
+  font-size: .8em;
+}
+
+
+.normal14pt {
+  font-weight: normal;
+  font-size: .9em;
+}
+
+
+.normal18pt {
+  font-weight: normal;
+  font-size: 1.1em;
+}
+
+
+.normal24pt {
+  font-weight: normal;
+  font-size: 1.7em;
+}
+
+.bold14pt {
+   font-weight: bold;
+   font-size: .9em;
+ }
+
+
+li {
+  font-weight: normal;
+  font-size: .9em;
+}
+
+a {
+  color: #6C410A;
+  font-weight: 700;
+   font-size: .9em;
+   text-decoration: none;
+ }
+
+a:hover {
+  color: #F3EEE7;
+}
+
+a.n24 {
+  color: black;
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+a:hover.n24 {
+  color: black;
+}
+
+
+a.palebg {
+  color: navy;
+  font-weight: 700;
+   font-size: .9em;
+   text-decoration: none;
+ }
+
+a:hover.palebg {
+  color: red;
+  font-weight: 700;
+   font-size: .9em;
+   text-decoration: none;
+ }
+
+a.bold {
+  color: navy;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+a:hover.bold {
+  color: red;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+a.small {
+  color: navy;
+  font-weight: normal;
+  font-size: .7em;
+ }
+
+a:hover.small {
+  color: red;
+}
+

@@ -1,0 +1,187 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Lecture_1.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000>LECTURE 1</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>10.1 Introduction to differential equations</font>
+</p>
+<p align=left>
+<font color=#000000>10.2 Direction fields</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>The following is a Maple command, and you should ignore it for the moment. It loads</font>
+</p>
+<p align=left>
+<font color=#000000>the package that deals with D(ifferential)E(quations).</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(DEtools):</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000> </font>
+<b><u><font color=#000000>Example 1.</font></u></b>
+</p>
+<p align=left>
+<font color=#000000>Next we enter a differential equation. The function diff(x(t),t) should simply be thought of as dx/dt.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(x(t),t)=1:</font></b>
+</p>
+<p align=left>
+<font color=#000000>And here comes its direction field:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE ,x(t), t=-3..3, x=-3..3, color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_11.gif" width=529 height=490 alt="[Maple Plot]">
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>We can also draw the graphs of the solutions for some initial value problems.</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( diff(x(t),t)=1 , x(t), t=-3..3, x=-3..3,<br>
+[[x(0)=0], [x(0)=1], [x(0)=2]], arrows=SMALL, <br>
+dirgrid=[30, 30], stepsize=.1,<br>
+linecolor=[red,black,green], color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_12.gif" width=525 height=520 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000> </font>
+</p>
+<p align=left>
+<b><u><font color=#000000>Example 2.</font></u></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(x(t),t)=x(t):</font></b>
+</p>
+<p align=left>
+<font color=#000000>has direction field as follows:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE ,x(t), t=-3..3, x=-3..3, color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_13.gif" width=587 height=521 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000>Again we can plot some solutions.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( diff(x(t),t)=x(t), x(t), t=-3..3, x=-3..3,<br>
+[[x(0)=0], [x(0)=1], [x(0)=-2]], arrows=SMALL, <br>
+dirgrid=[30, 30], stepsize=.1,<br>
+linecolor=[RED,black,green], color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_14.gif" width=521 height=511 alt="[Maple Plot]">
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><u><font color=#000000>Example 3.</font></u></b>
+</p>
+<p align=left>
+<font color=#000000>The equation   x''+x = 0.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(x(t),t$2)=-x(t):</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>WARNING!  One cannot always draw the direction fields... :O(</font>
+</p>
+<p align=left>
+<font color=#000000>But once some initial conditions have been specified, the corresponding solution can be graphed. </font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot(DE,x(t),t=-1.5*Pi..1.5*Pi,x=-1.5..1.5, [[x(0)=0,D(x)(0)=1],[x(0)=1,D(x)(0)=0]], linecolour=[red,green], stepsize=.05);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_15.gif" width=484 height=283 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000>(Big Q:   HOW did Maple do the graphs above?)</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><u><font color=#000000>Exercise 10, p.620.</font></u></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(y(t),t)=(y(t))^4-6*(y(t))^3+5*(y(t))^2:</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE ,y(t), t=-3..3, y=-.5..5.5, color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_16.gif" width=515 height=484 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE , y(t), t=-3..3, y=-.5..5.5, [[y(0)=0],[y(0)=.5],[y(0)=2],[y(0)=1],[y(0)=5]], arrows=SMALL, <br>
+dirgrid=[30, 30], stepsize=.01,<br>
+linecolor=[black,black,red,red,black], color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_17.gif" width=506 height=505 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000>In the graph above the black curves represent the critical points of the DE, in other words </font>
+</p>
+<p align=left>
+<font color=#000000>the constant solutions. The other two curves are the solutions for the initial values y(0)=.05,</font>
+</p>
+<p align=left>
+<font color=#000000>and y(0)=2, respectively.</font>
+</p>
+<p align=center>
+<font color=#AAAAAA size="-1">
+Maple
+<sup>TM</sup> is a registered trademark of <a href="http://www.maplesoft.com" target=new><font color=#AAAAAA size="-1">Waterloo Maple Inc.</font></a><br>
+<font color=#AAAAAA size="-2">Math rendered by 
+<a href="http://www.dessci.com" target=new>
+<font color=#AAAAAA size="-2">
+WebEQ
+</font>
+</a>
+</font>
+</font>
+</p>
+</basefont>
+</body>
+</html>

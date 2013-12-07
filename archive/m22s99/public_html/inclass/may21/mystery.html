@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Cosines and Images: Mystery Image</title>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#0000">
+
+
+Here's an example with an image of size 240x240, showing
+how the image gets more detailed as more terms are added.
+How many terms does it take before you recognize it?
+
+<br>
+<br>
+
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR>
+<TD>1 term</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum1.jpg" width=400></td>
+</tr>
+<TR>
+<TD>10 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum10.jpg" width=400></td>
+</tr>
+<TR>
+<TD>20 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum20.jpg" width=400></td>
+</tr>
+<TR>
+<TD>30 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum30.jpg" width=400></td>
+</tr>
+<TR>
+<TD>40 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum40.jpg" width=400></td>
+</tr>
+<TR>
+<TD>50 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum50.jpg" width=400></td>
+</tr>
+<TR>
+<TD>60 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum60.jpg" width=400></td>
+</tr>
+<TR>
+<TD>70 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum70.jpg" width=400></td>
+</tr>
+<TR>
+<TD>80 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum80.jpg" width=400></td>
+</tr>
+<TR>
+<TD>90 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum90.jpg" width=400></td>
+</tr>
+<TR>
+<TD>100 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum100.jpg" width=400></td>
+</tr>
+<TR>
+<TD>200 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum200.jpg" width=400></td>
+</tr>
+<TR>
+<TD>250 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum250.jpg" width=400></td>
+</tr>
+<TR>
+<TD>300 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum300.jpg" width=400></td>
+</tr>
+<TR>
+<TD>400 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum400.jpg" width=400></td>
+</tr>
+<TR>
+<TD>500 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum500.jpg" width=400></td>
+</tr>
+<TR>
+<TD>750 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum750.jpg" width=400></td>
+</tr>
+<TR>
+<TD>1000 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum1000.jpg" width=400></td>
+</tr>
+<TR>
+<TD>2000 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum2000.jpg" width=400></td>
+</tr>
+<TR>
+<TD>3000 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum3000.jpg" width=400></td>
+</tr>
+<TR>
+<TD>4000 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_psum4000.jpg" width=400></td>
+</tr>
+<TR>
+<TD>All (65536) terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_orig.jpg" width=400></td>
+</tr>
+</table>
+</H1>
+
+<br>
+<br>
+
+Using the above (original) image, here's the "lossiness" that JPEG
+introduces. JPEG was able to set nearly 67% of the DCT coefficients
+to 0 (not quite as good as the first example).
+<br>
+<br>
+
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR>
+<TD Align=center>Original Image</td>
+</tr>
+<tr>
+<td align=center><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_orig.jpg" width=550></td>
+</tr>
+<tr>
+<TD Align=center>JPEG'd Image</td>
+</tr>
+<tr>
+<td align=center><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_jpeg.jpg" width=550></td>
+</tr>
+<tr>
+<TD Align=center>Difference between the original and jpeg'd image</td>
+</tr>
+<tr>
+<td align=center><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/be_diff.jpg" width=550></td>
+</tr>
+</table>
+</H1>
+<br>
+<br>
+
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<HTML> <HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>Drawing Conclusions About a Proportion</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1 ALIGN=CENTER>Drawing Conclusions About a Proportion</H1>
+
+<CENTER>
+<applet name=PropSim4 code=PropSim4
+ width=100 height=1>
+<param name = "H0" value = 0.1>
+<param name = "H1" value = 0.3>
+<param name = "PH0" value = 0.2>
+<param name = "n" value = 20>
+<param name = "H0true" value = true>
+
+<STRONG>
+Hmmm.  It looks like your browser can't handle Java
+applets.   You can get one from 
+<A HREF="http://www.netscape.com/"> Netscape</A>.
+</STRONG> 
+</applet>
+</CENTER>
+
+This interactive program is designed to illustrate some of the key
+ideas behind hypothesis testing, a procedure for incorporating
+uncertainty about data into a formal decision making process.
+
+<P>
+Consider the following example. Medical investigators in a developing
+country are considering using a live vaccine for HIV infection. The
+risks of this procedure are considerable, but a high prevalence of the
+disease in their population would justify the intervention.  For
+instance, if only 10% of the population were infected, the number of
+complications from the vaccine would exceed the number of infections
+prevented.  However, if the prevalence were as high as 30%, the
+distribution of the vaccine would be justified.
+
+<P>
+The investigators know something about the prevalence of HIV in this
+country, and they think that there is only a one-in-five chance that
+10% of the population is infected.
+
+<P>
+To test their "null" hypothesis of a low, 10% prevalence versus their
+"alternative" hypothesis of a 30% prevalence, they conduct a random
+survey of 20 individuals, and measure their HIV status. They then
+compute the proportion of the infected persons in the sample.
+
+<P>
+To test their hypothesis, they compute something called a "p-value"
+based on the known distribution of the proportion under the "null"
+hypothesis. When this number is small, the "null" hypothesis is
+unlikely to be true. Typically, investigators require that the p-value
+be less than .05 to choose the alternative hypothesis over the null
+hypothesis.
+
+<P>
+By pressing the "Generate Data" button, you can see how the p-value is
+calculated from the tail area of the null distribution of the
+proportion.  You can choose to generate data under the null or
+alternative hypothesis, to see how well the p-value discriminates
+between the two scenarios.
+
+<P>
+In the above scenario, the investigators suspected that 10% prevalence
+is less likely before conducting their survey.  They could formally
+incorporate this belief into their decision making process.  The data
+from the survey is used to revise their "prior" probabilities for the
+two scenarios.  The revised ("posterior") probabilities are used to
+decide whether 10% or 30% of the population is infected.  The program
+illustrates how this procedure of probability revision is done.
+
+</BODY> </HTML>

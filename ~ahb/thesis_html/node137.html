@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Appendix H:
+Boundary evaluation of matrix elements of Helmholtz solutions</TITLE>
+<META NAME="description" CONTENT="Appendix H:
+Boundary evaluation of matrix elements of Helmholtz solutions">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node148.html">
+<LINK REL="previous" HREF="node134.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node138.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1743"
+  HREF="node138.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1741"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1735"
+  HREF="node136.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1744"
+  HREF="node138.html">Overlaps:</A>
+<B> Up:</B> <A NAME="tex2html1742"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1736"
+  HREF="node136.html">Convergence in practice</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001700000000000000000"></A>
+<A NAME="ap:perim"></A>
+<BR>
+Appendix H:
+Boundary evaluation of matrix elements of Helmholtz solutions
+</H1>
+
+<P>
+Here I collect some useful tools for expressing wavefunction
+domain integrals purely on the boundary.
+The time-independent (constant-energy)
+wave equation in uniform space is the Helmholtz
+equation,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+(\nabla^2 + k_a^2) a{({\mathbf r})}\; = \; 0 ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ahelm"></A><IMG
+ WIDTH="354" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1787.gif"
+ ALT="\begin{displaymath}
+(\nabla^2 + k_a^2) a{({\mathbf r})}\; = \; 0 ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the Helmholtz solution <!-- MATH
+ $a{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1788.gif"
+ ALT="$a{({\mathbf r})}$"> is in
+general a complex-valued function of space.
+At a given <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">, Green's theorem tell us that
+a Helmholtz solution in a region <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">
+is determined uniquely by its value or
+normal derivative on the enclosing surface <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">. Therefore
+domain integrals
+of the type
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left\langle a\right|\hat{O}\left|b\right\rangle _{\mathcal{D}} \; \equiv \; \int_{\mathcal{D}} \!\!
+d{\mathbf r} \, a^*{({\mathbf r})}(\hat{O} b){({\mathbf r})}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:genmatel"></A><IMG
+ WIDTH="396" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1789.gif"
+ ALT="\begin{displaymath}
+\left\langle a\right\vert\hat{O}\left\vert b\right\rangle _{...
+...!
+d{\mathbf r} \, a^*{({\mathbf r})}(\hat{O} b){({\mathbf r})}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+can be reduced to integrals of local quantities
+over <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> alone, when <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img773.gif"
+ ALT="$a$"> and <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1783.gif"
+ ALT="$b$"> are Helmholtz solutions.
+This is true whether the corresponding wavenumbers <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1790.gif"
+ ALT="$k_a$"> and <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1791.gif"
+ ALT="$k_b$">
+are equal or unequal.
+This has a vast numerical advantage in the semiclassical limit:
+a reduction of the number of function
+evaluations by a factor of a few times <IMG
+ WIDTH="24" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1792.gif"
+ ALT="$k{\mathsf{L}}$"> is expected
+for simple geometries, for a typical system size <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img429.gif"
+ ALT="${\mathsf{L}}$">.
+Once an expression in terms of surface integrals is known,
+the technique of Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A> can be used for the numerical
+evaluation.
+Note that since <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img773.gif"
+ ALT="$a$"> and <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1783.gif"
+ ALT="$b$"> are constant-energy solutions, 
+(<A HREF="node137.html#eq:genmatel">H.2</A>) can be called a `matrix element' of the operator
+<IMG
+ WIDTH="18" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1793.gif"
+ ALT="$\hat O$"> in the energy basis.
+
+<P>
+I collect together useful results for such evaluations,
+in the cases <IMG
+ WIDTH="50" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1794.gif"
+ ALT="$\hat{O} = 1$"> (corresponding to a simple overlap integral),
+<!-- MATH
+ $\hat{O} = {\mathbf r}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1795.gif"
+ ALT="$\hat{O} = {\mathbf r}$"> (dipole operator),
+<!-- MATH
+ $\hat{O} = \nabla$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1796.gif"
+ ALT="$\hat{O} = \nabla$"> (momentum operator), and
+<!-- MATH
+ $\hat{O} = {\mathbf r} \cdot \nabla$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1797.gif"
+ ALT="$\hat{O} = {\mathbf r} \cdot \nabla$"> (differential dilation operator).
+The results apply to all spatial dimensions <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img49.gif"
+ ALT="$d\ge2$">.
+For each operator the cases of equal and unequal
+wavenumbers need to be handled separately.
+I have maintained complete generality
+of the boundary conditions (BCs) on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">, unless I state otherwise.
+This allows <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> to be chosen arbitrarily,
+in particular, independently
+of the location of wavefunction nodes, billiard walls, or other features.
+From these the special cases corresponding to Dirichlet, etc.,
+BCs can be derived--I will present some of these simpler forms below.
+Throughout this appendix the symbol <!-- MATH
+ $a^*\!{\leftrightarrow}b$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1798.gif"
+ ALT="$a^*\!{\leftrightarrow}b$"> will imply
+a duplication of the previous term except with <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1799.gif"
+ ALT="$a^*$"> and <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1783.gif"
+ ALT="$b$"> swapped.
+
+<P>
+Some of the results have already been known to other authors
+[<A
+ HREF="node161.html#berrywilk">28</A>,<A
+ HREF="node161.html#boasman">33</A>], and some
+are new, especially the case of general <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">.
+For those that are known,
+my derivations are much simpler than the complicated
+vector manipulations used by those authors.
+The most powerful new techniques I have found to be the use of scaled
+solutions (see Section&nbsp;<A HREF="node73.html#sec:scaling">6.1.1</A>),
+and a matrix inversion
+trick of M. Haggerty. Both are presented below.
+Remember that the goal in what follows is to `push'
+all volume terms onto the boundary.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html1745"
+  HREF="node138.html">Overlaps: <IMG
+ WIDTH="50" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1794.gif"
+ ALT="$\hat{O} = 1$"></A>
+<UL>
+<LI><A NAME="tex2html1746"
+  HREF="node139.html">Differing wavenumbers <IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1800.gif"
+ ALT="$k_a \neq k_b$"></A>
+<LI><A NAME="tex2html1747"
+  HREF="node140.html">Equal wavenumber <IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img34.gif"
+ ALT="$k_a = k_b = k$"></A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1748"
+  HREF="node141.html">Matrix trick for pushing integrals onto the boundary</A>
+<UL>
+<LI><A NAME="tex2html1749"
+  HREF="node142.html">Volume integrals of scalar quantities</A>
+<LI><A NAME="tex2html1750"
+  HREF="node143.html">Volume integrals of vector quantities</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1751"
+  HREF="node144.html">Other matrix elements</A>
+<UL>
+<LI><A NAME="tex2html1752"
+  HREF="node145.html">Momentum matrix elements: <!-- MATH
+ $\hat{O} = \nabla$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1796.gif"
+ ALT="$\hat{O} = \nabla$"></A>
+<LI><A NAME="tex2html1753"
+  HREF="node146.html">Dipole matrix elements: <!-- MATH
+ $\hat{O} = {\mathbf r}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1795.gif"
+ ALT="$\hat{O} = {\mathbf r}$"></A>
+<LI><A NAME="tex2html1754"
+  HREF="node147.html">Differential dilation matrix elements:
+<!-- MATH
+ $\hat{O} = {\mathbf r}\cdot\nabla$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1797.gif"
+ ALT="$\hat{O} = {\mathbf r} \cdot \nabla$"></A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1743"
+  HREF="node138.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1741"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1735"
+  HREF="node136.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1744"
+  HREF="node138.html">Overlaps:</A>
+<B> Up:</B> <A NAME="tex2html1742"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1736"
+  HREF="node136.html">Convergence in practice</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

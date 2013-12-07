@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Computation of overlap matrix and its profile</TITLE>
+<META NAME="description" CONTENT="Computation of overlap matrix and its profile">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node91.html">
+<LINK REL="up" HREF="node90.html">
+<LINK REL="next" HREF="node93.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1270"
+  HREF="node93.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1268"
+  HREF="node90.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1264"
+  HREF="node91.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1271"
+  HREF="node93.html">Discussion</A>
+<B> Up:</B> <A NAME="tex2html1269"
+  HREF="node90.html">Application: local density of</A>
+<B> Previous:</B> <A NAME="tex2html1265"
+  HREF="node91.html">Deformations and eigenstate computation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00742000000000000000">
+Computation of overlap matrix <IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img27.gif"
+ ALT="$P(n\vert m)$"> and its profile</A>
+</H2>
+
+<P>
+The quantity of interest is the matrix of overlaps
+<!-- MATH
+ $P(n|m) \equiv |\langle \psi_n(x) | \psi_m(0) \rangle_{{\mathcal{D}}'} | ^2$
+ -->
+<IMG
+ WIDTH="227" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1098.gif"
+ ALT="$P(n\vert m) \equiv \vert\langle \psi_n(x) \vert \psi_m(0) \rangle_{{\mathcal{D}}'} \vert ^2$">.
+The eigenstates <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1099.gif"
+ ALT="$\psi_n(x)$"> are dependent on the deformation parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">.
+The overlap is taken in position-space <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$">
+over the domain <!-- MATH
+ ${\mathcal{D}}'$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1100.gif"
+ ALT="${\mathcal{D}}'$">, defined as the intersection
+of the undeformed domain <!-- MATH
+ ${\mathcal{D}}(0)$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1101.gif"
+ ALT="${\mathcal{D}}(0)$"> and the deformed domain <!-- MATH
+ ${\mathcal{D}}(x)$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1102.gif"
+ ALT="${\mathcal{D}}(x)$">.
+We seek a way to perform these <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">-dimensional domain integrals rapidly
+(in our case <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$">).
+Appendix&nbsp;<A HREF="node137.html#ap:perim">H</A> shows that because the eigenvalues <IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1103.gif"
+ ALT="$k_n(x)$"> and
+<IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1104.gif"
+ ALT="$k_m(0)$"> are (in general) different, there exists a very simple formula
+(<A HREF="node139.html#eq:genoverlap">H.5</A>)
+for computing this integral using only the boundary.
+This will be a huge saving in effort.
+
+<P>
+Because our eigenstates have Dirichlet boundary conditions, a simplification
+can be made. Define <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1105.gif"
+ ALT="$\Gamma_1$"> (<IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1106.gif"
+ ALT="$\Gamma_2$">) as the part of <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1107.gif"
+ ALT="$\Gamma(0)$">
+(<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1108.gif"
+ ALT="$\Gamma(x)$">) inside <!-- MATH
+ $\mathcal{D}(x)$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1109.gif"
+ ALT="$\mathcal{D}(x)$"> (<!-- MATH
+ $\mathcal{D}(0)$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1110.gif"
+ ALT="$\mathcal{D}(0)$">).
+Then <!-- MATH
+ $\Gamma_1 + \Gamma_2 = \Gamma'$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1111.gif"
+ ALT="$\Gamma_1 + \Gamma_2 = \Gamma'$">, where <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1112.gif"
+ ALT="$\Gamma'$"> is the boundary of the
+intersection region <IMG
+ WIDTH="23" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1113.gif"
+ ALT="$\mathcal{D}'$">.
+Then the overlap integral over <IMG
+ WIDTH="23" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1113.gif"
+ ALT="$\mathcal{D}'$"> can be written
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\!\!\! \left\langle \psi_n(x) \left|\psi_m(0)\right.\right\rangle _{\mathcal{D}'}  = 
+	\frac{1}{k_n(x)^2 - k_m(0)^2} \left[
+	\oint_{\Gamma_1} \!\!\!\! d{\mathbf s} \,\psi_n^*(x) \partial_n \psi_m(0) -
+	\oint_{\Gamma_2} \!\!\!\! d{\mathbf s} \,\psi_m^*(0) \partial_n \psi_n(x) \right].
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:deformoverlap"></A><IMG
+ WIDTH="615" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1114.gif"
+ ALT="\begin{displaymath}
+\!\!\! \left\langle \psi_n(x) \left\vert\psi_m(0)\right.\ri...
+...!\!\! d{\mathbf s} \,\psi_m^*(0) \partial_n \psi_n(x) \right].
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.30)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+In practice this formula is evaluated using the method of
+Appendix&nbsp;<A HREF="node137.html#ap:perim">H</A>, using the wavefunctions evaluated at the
+set of discretization points from
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1108.gif"
+ ALT="$\Gamma(x)$"> and <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1107.gif"
+ ALT="$\Gamma(0)$"> which lie in <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1112.gif"
+ ALT="$\Gamma'$">.
+The formula becomes inaccurate (depending on the accuracy of the eigenstates)
+when <!-- MATH
+ $|k_n(x) - k_m(0)| \rightarrow 0$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1115.gif"
+ ALT="$\vert k_n(x) - k_m(0)\vert \rightarrow 0$">. In practice this was only a problem
+at wavenumber differences well below the mean level spacing.
+The above overlap calculation technique is so efficient that it only took
+a few seconds to fill each <IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img27.gif"
+ ALT="$P(n\vert m)$"> matrix of size about <IMG
+ WIDTH="31" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1116.gif"
+ ALT="$450$"> by <IMG
+ WIDTH="31" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1116.gif"
+ ALT="$450$">,
+at <IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img11.gif"
+ ALT="$k \approx 400$">.
+
+<P>
+Given the overlap matrix <IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img27.gif"
+ ALT="$P(n\vert m)$"> at each <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">, its average profile was found by
+the smoothing method of Section&nbsp;<A HREF="node127.html#sec:binning">C.2</A>.
+The smoothing width <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1117.gif"
+ ALT="$\omega_s$"> was chosen to be 0.02 in wavenumber units,
+which was a couple of times the mean level spacing <!-- MATH
+ $\Delta_k \approx 0.0088$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1118.gif"
+ ALT="$\Delta_k \approx 0.0088$">.
+
+<P>
+The resulting sequences of profiles are shown in Fig.&nbsp;<A HREF="node91.html#fig:pnm_rs">6.14</A>
+and <A HREF="node91.html#fig:pnm_bows">6.15</A>.
+Comparison with the first-order perturbation theory (FOPT) result,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+P(n|m) \; = \; \frac{x^2}{(E_n - E_m)^2} \cdot \left| \left( \frac{\partial \mathcal{H}}{\partial x} \right)_{\!nm} \right| ^2
+	\hspace{1in} \mbox{FOPT},
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="508" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1119.gif"
+ ALT="\begin{displaymath}
+P(n\vert m) \; = \; \frac{x^2}{(E_n - E_m)^2} \cdot \left\v...
+...al x} \right)_{\!nm} \right\vert ^2
+\hspace{1in} \mbox{FOPT},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.31)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+is also made in these plots. <!-- MATH
+ $(\partial {\mathcal{H}} / \partial x)_{nm}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img295.gif"
+ ALT="$(\partial {\mathcal{H}} / \partial x)_{nm}$"> is explicitly
+given by (<A HREF="node126.html#eq:defmatel">C.2</A>), and its band profile is
+described in Chapters&nbsp;<A HREF="node12.html#ch:review">2</A> and <A HREF="node32.html#ch:dil">3</A>.
+The FOPT result simply corresponds to a linearization of the wavefunction
+<!-- MATH
+ $\psi = z\cdot\partial_n \psi + O(z^2) \cdots$
+ -->
+<IMG
+ WIDTH="180" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1120.gif"
+ ALT="$\psi = z\cdot\partial_n \psi + O(z^2) \cdots$">
+using the notation of Appendix&nbsp;<A HREF="node148.html#ap:tension">I</A>.
+The profile shows complete breakdown of FOPT when <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> reaches <!-- MATH
+ $\sim \lambda_{{\mbox{\tiny B}}}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1121.gif"
+ ALT="$\sim \lambda_{{\mbox{\tiny B}}}$">,
+and in the case of a generic deformation the formation of a `core' region
+before this.
+For more analysis see our work [<A
+ HREF="node161.html#pnm">48</A>].
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1270"
+  HREF="node93.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1268"
+  HREF="node90.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1264"
+  HREF="node91.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1271"
+  HREF="node93.html">Discussion</A>
+<B> Up:</B> <A NAME="tex2html1269"
+  HREF="node90.html">Application: local density of</A>
+<B> Previous:</B> <A NAME="tex2html1265"
+  HREF="node91.html">Deformations and eigenstate computation</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

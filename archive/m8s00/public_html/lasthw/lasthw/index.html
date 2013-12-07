@@ -1,0 +1,2107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>lasthw</TITLE>
+<META NAME="description" CONTENT="lasthw">
+<META NAME="keywords" CONTENT="lasthw">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.css">
+<LINK REL="next" HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/node1.html">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Lagrange Multipliers</B>
+<BR>
+Page 793: Solutions to Problems 1, 3, 5, 9 and 11
+
+</DIV>
+
+<P>
+<B>1.</B> Use the method of Lagrange multipliers to maximize <IMG
+ WIDTH="36" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img1.gif"
+ ALT="$ x^3 y^5$">
+subject to the constraint <IMG
+ WIDTH="70" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img2.gif"
+ ALT="$ x + y = 8$">.
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>Answer:</B> Let 
+<!-- MATH
+ $f(x,y) = x^3 y^5$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img3.gif"
+ ALT="$ f(x,y) = x^3 y^5$">
+and 
+<!-- MATH
+ $g(x,y) = x + y - 8$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img4.gif"
+ ALT="$ g(x,y) = x + y - 8$">. The points
+<IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img5.gif"
+ ALT="$ (x,y)$">
+which will maximize <IMG
+ WIDTH="51" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img6.gif"
+ ALT="$ f(x,y)$">
+subject to the constraint 
+<!-- MATH
+ $g(x,y) = 0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img7.gif"
+ ALT="$ g(x,y) = 0$">
+will
+be the set of points <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img5.gif"
+ ALT="$ (x,y)$">
+that satisfy the equations
+
+<!-- MATH
+ $\nabla f(x,y) = \lambda \nabla g(x,y)$
+ -->
+<IMG
+ WIDTH="153" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img8.gif"
+ ALT="$ \nabla f(x,y) = \lambda \nabla g(x,y)$">
+and 
+<!-- MATH
+ $g(x,y) = 0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img7.gif"
+ ALT="$ g(x,y) = 0$">. Writing out the system of three equations and three unknowns
+explicitly:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn11"></A><A NAME="eqn12"></A><A NAME="eqn13"></A>
+<!-- MATH
+ \begin{eqnarray}
+3 x^2 y^5 & = & \lambda\\
+5 x^3 y^4 & = & \lambda\\
+x + y & = & 8.
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="44" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img9.gif"
+ ALT="$\displaystyle 3 x^2 y^5$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="13" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img11.gif"
+ ALT="$\displaystyle \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="44" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img12.gif"
+ ALT="$\displaystyle 5 x^3 y^4$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="13" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img11.gif"
+ ALT="$\displaystyle \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="41" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img13.gif"
+ ALT="$\displaystyle x + y$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img14.gif"
+ ALT="$\displaystyle 8.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Suppose 
+<!-- MATH
+ $\lambda = 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img15.gif"
+ ALT="$ \lambda = 0$">. Then eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn11">1</A>) would be 
+<!-- MATH
+ $3 x^2 y^5 = 0$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img16.gif"
+ ALT="$ 3 x^2 y^5 = 0$">
+which would
+imply that either <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img17.gif"
+ ALT="$ x = 0$">
+or <IMG
+ WIDTH="42" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img18.gif"
+ ALT="$ y = 0$">. (They cannot both be equal to 0, because that
+would contradict eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn13">3</A>).) If <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img17.gif"
+ ALT="$ x = 0$">, then eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn13">3</A>) says <IMG
+ WIDTH="42" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img19.gif"
+ ALT="$ y = 8$">.
+And if <IMG
+ WIDTH="42" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img18.gif"
+ ALT="$ y = 0$">, we would instead have from eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn13">3</A>) that <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img20.gif"
+ ALT="$ x = 8$">. Either way,
+we get 
+<!-- MATH
+ $f(8, 0) = f(0, 8) = 0$
+ -->
+<IMG
+ WIDTH="144" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img21.gif"
+ ALT="$ f(8, 0) = f(0, 8) = 0$">.
+
+<P>
+Now suppose that 
+<!-- MATH
+ $\lambda \neq 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img22.gif"
+ ALT="$ \lambda \neq 0$">. We can set equations (<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn11">1</A>) and (<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn12">2</A>)
+equal to each other and simplify:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn14"></A>
+<!-- MATH
+ \begin{eqnarray}
+3 x^2 y^5 & = & 5 x^3 y^4 \nonumber \\
+3 x^2 y^5 - 5 x^3 y^4 & = & 0 \nonumber \\
+x^2 y^4 (3 y - 5 x) & = & 0
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="44" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img9.gif"
+ ALT="$\displaystyle 3 x^2 y^5$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="44" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img12.gif"
+ ALT="$\displaystyle 5 x^3 y^4$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="103" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img23.gif"
+ ALT="$\displaystyle 3 x^2 y^5 - 5 x^3 y^4$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP>0</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="101" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img24.gif"
+ ALT="$\displaystyle x^2 y^4 (3 y - 5 x)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP>0</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Since 
+<!-- MATH
+ $\lambda \neq 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img22.gif"
+ ALT="$ \lambda \neq 0$">, eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn11">1</A>) implies that <IMG
+ WIDTH="42" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img25.gif"
+ ALT="$ x \neq 0$">, <IMG
+ WIDTH="42" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img26.gif"
+ ALT="$ y \neq 0$">. Therefore,
+for eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn14">4</A>) to be true, it must be that 
+<!-- MATH
+ $3 y - 5 x = 0$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img27.gif"
+ ALT="$ 3 y - 5 x = 0$">, and solving this
+equation for <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img28.gif"
+ ALT="$ y$">: 
+<!-- MATH
+ $y = \displaystyle{\frac{5}{3}} x$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img29.gif"
+ ALT="$ y = \displaystyle{\frac{5}{3}} x$">. Plugging this into eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn13">3</A>)
+and solving for <IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img30.gif"
+ ALT="$ x$">
+yields:
+
+<!-- MATH
+ \begin{displaymath}
+x + \frac{5}{3} x = 8 \Longrightarrow \frac{8}{3} x = 8 \Longrightarrow x = 3
+\mbox{ and therefore } y = 5.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="240" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img31.gif"
+ ALT="$\displaystyle x + \frac{5}{3} x = 8 \Longrightarrow \frac{8}{3} x = 8 \Longrightarrow x = 3$">&nbsp; &nbsp; and therefore <IMG
+ WIDTH="46" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img32.gif"
+ ALT="$\displaystyle y = 5.
+$">
+</DIV><P></P>
+And so we have 
+<!-- MATH
+ $f(3, 5) = 3^3 \cdot 5^5 = (27)\cdot (3,125) = 84,375.$
+ -->
+<IMG
+ WIDTH="297" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img33.gif"
+ ALT="$ f(3, 5) = 3^3 \cdot 5^5 = (27)\cdot (3,125) = 84,375.$">
+Since
+clearly 
+<!-- MATH
+ $f(3, 5) > f(8, 0) \mbox{ and } f(0, 8)$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img34.gif"
+ ALT="$ f(3, 5) &gt; f(8, 0)$">&nbsp; &nbsp; and <IMG
+ WIDTH="49" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img35.gif"
+ ALT="$ f(0, 8)$">, <IMG
+ WIDTH="51" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img6.gif"
+ ALT="$ f(x,y)$">
+is maximized
+at the point <IMG
+ WIDTH="39" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img36.gif"
+ ALT="$ (3, 5)$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>3.</B> Find the distance from the origin to the plane
+
+<!-- MATH
+ $x + 2 y + 2 z = 3,$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img37.gif"
+ ALT="$ x + 2 y + 2 z = 3,$">
+<DL COMPACT>
+<DT>1.
+<DD>using a geometric argument (no calculus)
+<DT>2.
+<DD>by reducing the problem to an unconstrained problem in
+two variables, and
+<DT>3.
+<DD>using the method of Lagrange multipliers.
+</DL>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>Answer:</B>
+
+<P>
+<B>(i)</B>: From Example 7 on page 628, we know that the distance <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img38.gif"
+ ALT="$ s$">
+from
+the point 
+<!-- MATH
+ $(x_0, y_0, z_0)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img39.gif"
+ ALT="$ (x_0, y_0, z_0)$">
+to the plane whose equation is
+
+<!-- MATH
+ $A x + B y + C z = D$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img40.gif"
+ ALT="$ A x + B y + C z = D$">
+is given by the formula:
+
+<!-- MATH
+ \begin{displaymath}
+s = \frac{|A x_0 + B y_0 + C z_0 - D|}{\sqrt{ A^2 + B^2 + C^2 }}.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="205" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img41.gif"
+ ALT="$\displaystyle s = \frac{\vert A x_0 + B y_0 + C z_0 - D\vert}{\sqrt{ A^2 + B^2 + C^2 }}.
+$">
+</DIV><P></P>
+And so, plugging in the appropriate numbers:
+
+<!-- MATH
+ \begin{displaymath}
+s = \frac{|(1\cdot 0) + (2\cdot 0) + (2\cdot 0) - 3|}{\sqrt{1^2 + 2^2 + 2^2}}
+ = \frac{3}{\sqrt{9}} = \frac{3}{3} = 1.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="344" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img42.gif"
+ ALT="$\displaystyle s = \frac{\vert(1\cdot 0) + (2\cdot 0) + (2\cdot 0) - 3\vert}{\sqrt{1^2 + 2^2 + 2^2}}
+= \frac{3}{\sqrt{9}} = \frac{3}{3} = 1.
+$">
+</DIV><P></P>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>(ii)</B>: The distance from any point on the plane to the origin is
+
+<!-- MATH
+ $f(x, y, z) = \sqrt{x^2 + y^2 + z^2}$
+ -->
+<IMG
+ WIDTH="189" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img43.gif"
+ ALT="$ f(x, y, z) = \sqrt{x^2 + y^2 + z^2}$">. This is the
+function I wish to minimize. To make Life (and taking derivatives) easier,
+I will instead minimize its square: 
+<!-- MATH
+ $F(x,y,z) = x^2 + y^2 + z^2$
+ -->
+<IMG
+ WIDTH="176" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img44.gif"
+ ALT="$ F(x,y,z) = x^2 + y^2 + z^2$">. The point
+<IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img45.gif"
+ ALT="$ (x, y, z)$">
+that minimizes 
+<!-- MATH
+ $F(x, y, z)$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img46.gif"
+ ALT="$ F(x, y, z)$">
+will also certainly minimize <IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img47.gif"
+ ALT="$ f(x,y,z)$">.
+
+<P>
+Let's solve the equation of the plane for <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img48.gif"
+ ALT="$ z$">:
+
+<!-- MATH
+ $z = \displaystyle{\frac{1}{2}} ( 3 - x - 2 y )$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img49.gif"
+ ALT="$ z = \displaystyle{\frac{1}{2}} ( 3 - x - 2 y )$">, and then
+plug this <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img48.gif"
+ ALT="$ z$">
+into <IMG
+ WIDTH="69" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img46.gif"
+ ALT="$ F(x, y, z)$">:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+F(x, y, z) & = & F\left(x, y, \frac{1}{2} ( 3 - x - 2 y ) \right)\\
+ & = & x^2 + y^2 + {\left( \frac{1}{2} ( 3 - x - 2 y ) \right)}^2\\
+ & = & x^2 + y^2 + \frac{1}{4} { ( 3 - x - 2 y ) }^2
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="69" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img50.gif"
+ ALT="$\displaystyle F(x, y, z)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="171" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img51.gif"
+ ALT="$\displaystyle F\left(x, y, \frac{1}{2} ( 3 - x - 2 y ) \right)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="202" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img52.gif"
+ ALT="$\displaystyle x^2 + y^2 + {\left( \frac{1}{2} ( 3 - x - 2 y ) \right)}^2$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="178" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img53.gif"
+ ALT="$\displaystyle x^2 + y^2 + \frac{1}{4} { ( 3 - x - 2 y ) }^2$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Let that last equation equal <IMG
+ WIDTH="49" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img54.gif"
+ ALT="$ g(x,y)$">. I now need to find the critical
+points of <IMG
+ WIDTH="49" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img54.gif"
+ ALT="$ g(x,y)$">. Once I find the critical points, I plug them into
+<IMG
+ WIDTH="49" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img54.gif"
+ ALT="$ g(x,y)$">
+and the smallest number I get will be the square of the minimum
+distance. (Remember, I'm minimizing the distance-squared function.)
+
+<P>
+To find the critical points, I have to find the <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img5.gif"
+ ALT="$ (x,y)$">
+such that
+
+<!-- MATH
+ $\nabla g(x, y) = 0 {\bf i} + 0 {\bf j}$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img55.gif"
+ ALT="$ \nabla g(x, y) = 0 {\bf i} + 0 {\bf j}$">.
+So the equations I need to solve
+are
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+g_x (x, y) & = & -\frac{3}{2} + \frac{5}{2} x + y = 0\\
+g_y( x, y) & = & -3 + x + 4 y = 0.
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="57" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img56.gif"
+ ALT="$\displaystyle g_x (x, y)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="126" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img57.gif"
+ ALT="$\displaystyle -\frac{3}{2} + \frac{5}{2} x + y = 0$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img58.gif"
+ ALT="$\displaystyle g_y( x, y)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="122" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img59.gif"
+ ALT="$\displaystyle -3 + x + 4 y = 0.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Solving the above for <IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img30.gif"
+ ALT="$ x$">
+and <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img28.gif"
+ ALT="$ y$">: 
+<!-- MATH
+ $x = \displaystyle{\frac{1}{3}}$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img60.gif"
+ ALT="$ x = \displaystyle{\frac{1}{3}}$">
+and
+
+<!-- MATH
+ $y = \displaystyle{\frac{2}{3}}$
+ -->
+<IMG
+ WIDTH="45" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img61.gif"
+ ALT="$ y = \displaystyle{\frac{2}{3}}$">, and then we get
+
+<!-- MATH
+ $\displaystyle{ g\left(\frac{1}{3}, \frac{2}{3}\right) = 1}$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img62.gif"
+ ALT="$ \displaystyle{ g\left(\frac{1}{3}, \frac{2}{3}\right) = 1} $">, and so the
+distance is 1.
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>(iii)</B>: As in part (ii), I'll instead minimize the distance-squared:
+
+<!-- MATH
+ $F(x, y, z) = x^2 + y^2 + z^2$
+ -->
+<IMG
+ WIDTH="176" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img44.gif"
+ ALT="$ F(x,y,z) = x^2 + y^2 + z^2$">. The constraint I have is
+
+<!-- MATH
+ $g(x, y, z) = x + 2 y + 2 z - 3 = 0$
+ -->
+<IMG
+ WIDTH="223" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img63.gif"
+ ALT="$ g(x, y, z) = x + 2 y + 2 z - 3 = 0$">, and this means the system of equations I
+need to solve is
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn31"></A><A NAME="eqn32"></A><A NAME="eqn33"></A><A NAME="eqn34"></A>
+<!-- MATH
+ \begin{eqnarray}
+2 x & = & \lambda\\
+2 y & = & 2 \lambda\\
+2 z & = & 2 \lambda\\
+x + 2 y + 2 z & = & 3
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img64.gif"
+ ALT="$\displaystyle 2 x$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="13" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img11.gif"
+ ALT="$\displaystyle \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img65.gif"
+ ALT="$\displaystyle 2 y$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img66.gif"
+ ALT="$\displaystyle 2 \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img67.gif"
+ ALT="$\displaystyle 2 z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img66.gif"
+ ALT="$\displaystyle 2 \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="85" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img68.gif"
+ ALT="$\displaystyle x + 2 y + 2 z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img69.gif"
+ ALT="$\displaystyle 3$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Suppose 
+<!-- MATH
+ $\lambda = 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img15.gif"
+ ALT="$ \lambda = 0$">. Then eqns.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn31">5</A>-<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn33">7</A>) would imply 
+<!-- MATH
+ $x = y = z = 0$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img70.gif"
+ ALT="$ x = y = z = 0$">.
+But then that would contradict eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn34">8</A>): 
+<!-- MATH
+ $0 + 0 + 0 = 3$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img71.gif"
+ ALT="$ 0 + 0 + 0 = 3$">. Therefore, we must
+have 
+<!-- MATH
+ $\lambda \neq 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img22.gif"
+ ALT="$ \lambda \neq 0$">.
+
+<P>
+Since 
+<!-- MATH
+ $\lambda \neq 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img22.gif"
+ ALT="$ \lambda \neq 0$">, setting eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn32">6</A>) equal to eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn33">7</A>) yields:
+
+<!-- MATH
+ $2 y = 2 z \Longrightarrow y = z$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img72.gif"
+ ALT="$ 2 y = 2 z \Longrightarrow y = z$">. (Note that to get this, I have to divide by
+<IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img73.gif"
+ ALT="$ \lambda$">. Since I know 
+<!-- MATH
+ $\lambda \neq 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img22.gif"
+ ALT="$ \lambda \neq 0$">, I can legally do so.) And using
+eqns.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn32">6</A>) and (<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn31">5</A>),
+I see that <IMG
+ WIDTH="51" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img74.gif"
+ ALT="$ y = 2 x$">. Substituting all this into eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn34">8</A>) and solving:
+
+<!-- MATH
+ \begin{displaymath}
+x + 2 (2 x) + 2 ( 2 x ) = 3 \Longrightarrow 9 x = 3 \Longrightarrow x = \frac{1}{3},
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="318" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img75.gif"
+ ALT="$\displaystyle x + 2 (2 x) + 2 ( 2 x ) = 3 \Longrightarrow 9 x = 3 \Longrightarrow x = \frac{1}{3},
+$">
+</DIV><P></P>
+and so 
+<!-- MATH
+ $\displaystyle{ y = \frac{2}{3} \mbox{ and } z = \frac{2}{3} }$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img76.gif"
+ ALT="$ \displaystyle{ y = \frac{2}{3} \mbox{ and } z = \frac{2}{3} }$">.
+And so (a big surprise here):
+
+<!-- MATH
+ $\displaystyle{F\left(\frac{1}{3}, \frac{2}{3}, \frac{2}{3}\right) = 1}$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img77.gif"
+ ALT="$ \displaystyle{F\left(\frac{1}{3}, \frac{2}{3}, \frac{2}{3}\right) = 1}$">
+and that means
+the minimum distance is 1.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>5.</B> Use the Lagrange multiplier method to find the greatest and least
+distances from the point 
+<!-- MATH
+ $(2, 1, -2)$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img78.gif"
+ ALT="$ (2, 1, -2)$">
+to the sphere with the equation
+
+<!-- MATH
+ $x^2 + y^2 + z^2 = 1.$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img79.gif"
+ ALT="$ x^2 + y^2 + z^2 = 1.$">
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>Answer:</B> The distance from <IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img45.gif"
+ ALT="$ (x, y, z)$">
+to the point
+
+<!-- MATH
+ $(2, 1, -2)$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img78.gif"
+ ALT="$ (2, 1, -2)$">
+is 
+<!-- MATH
+ $f(x, y, z) = \sqrt{ {(x-2)}^2 + {(y-1)}^2 + {(z+2)}^2 }$
+ -->
+<IMG
+ WIDTH="308" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img80.gif"
+ ALT="$ f(x, y, z) = \sqrt{ {(x-2)}^2 + {(y-1)}^2 + {(z+2)}^2 }$">.
+This is the function I need to minimize and maximize subject to the constraint that
+
+<!-- MATH
+ $g(x, y, z) = x^2 + y^2 + z^2 - 1 = 0$
+ -->
+<IMG
+ WIDTH="228" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img81.gif"
+ ALT="$ g(x, y, z) = x^2 + y^2 + z^2 - 1 = 0$">. Using the same reasoning given in the previous
+problem, I will instead minimize and maximize
+
+<!-- MATH
+ $F(x, y, z) = {(x-2)}^2 + {(y-1)}^2 + {(z+2)}^2$
+ -->
+<IMG
+ WIDTH="295" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img82.gif"
+ ALT="$ F(x, y, z) = {(x-2)}^2 + {(y-1)}^2 + {(z+2)}^2$">.
+
+<P>
+Taking the appropriate derivatives, the system of equations I need to solve is
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn51"></A><A NAME="eqn52"></A><A NAME="eqn53"></A><A NAME="eqn54"></A>
+<!-- MATH
+ \begin{eqnarray}
+2 ( x - 2 )  =  2 x \lambda & \mbox{which simplifies to:} & x (1 - \lambda) = 2\\
+2 ( y - 1 )  =  2 y \lambda & \mbox{which simplifies to:} & y (1 - \lambda) = 1\\
+2 ( z + 2 )  =  2 z \lambda & \mbox{which simplifies to:} & z (1 - \lambda) = -2\\
+x^2 + y^2 + z^2  = 1 & \mbox{which stays the same:} & x^2 + y^2 + z^2  = 1.
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="108" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img83.gif"
+ ALT="$\displaystyle 2 ( x - 2 ) = 2 x \lambda$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP>which simplifies to:</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="91" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img84.gif"
+ ALT="$\displaystyle x (1 - \lambda) = 2$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(9)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="107" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img85.gif"
+ ALT="$\displaystyle 2 ( y - 1 ) = 2 y \lambda$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP>which simplifies to:</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="91" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img86.gif"
+ ALT="$\displaystyle y (1 - \lambda) = 1$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="107" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img87.gif"
+ ALT="$\displaystyle 2 ( z + 2 ) = 2 z \lambda$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP>which simplifies to:</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="103" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img88.gif"
+ ALT="$\displaystyle z (1 - \lambda) = -2$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="119" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img89.gif"
+ ALT="$\displaystyle x^2 + y^2 + z^2 = 1$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP>which stays the same:</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="124" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img90.gif"
+ ALT="$\displaystyle x^2 + y^2 + z^2 = 1.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Now, eqns.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn51">9</A>-<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn53">11</A>) all imply that 
+<!-- MATH
+ $x, y, z \neq 0$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img91.gif"
+ ALT="$ x, y, z \neq 0$">. (Otherwise,
+we would have <IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img92.gif"
+ ALT="$ 0 = 2$">.)
+
+<P>
+Since I know that 
+<!-- MATH
+ $x, y, z \neq 0$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img91.gif"
+ ALT="$ x, y, z \neq 0$">, I can legally divide both sides of eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn51">9</A>) by <IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img30.gif"
+ ALT="$ x$">,
+both sides of eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn52">10</A>) by <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img28.gif"
+ ALT="$ y$">
+and both sides of eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn53">11</A>) by <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img48.gif"
+ ALT="$ z$">. (Before
+dividing, I need to first make sure that I'm not dividing by 0.) And so
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn51x"></A><A NAME="eqn52x"></A><A NAME="eqn53x"></A>
+<!-- MATH
+ \begin{eqnarray}
+1 - \lambda & = & \frac{2}{x}\\
+1 - \lambda & = & \frac{1}{y}\\
+1 - \lambda & = & -\frac{2}{z}
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="41" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img93.gif"
+ ALT="$\displaystyle 1 - \lambda$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="17" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img94.gif"
+ ALT="$\displaystyle \frac{2}{x}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="41" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img93.gif"
+ ALT="$\displaystyle 1 - \lambda$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="16" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img95.gif"
+ ALT="$\displaystyle \frac{1}{y}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(14)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="41" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img93.gif"
+ ALT="$\displaystyle 1 - \lambda$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="28" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img96.gif"
+ ALT="$\displaystyle -\frac{2}{z}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(15)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Setting eqns.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn51x">13</A>) and (<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn53x">15</A>) equal to each other gets:
+
+<!-- MATH
+ \begin{displaymath}
+\frac{2}{x} = -\frac{2}{z} \Longrightarrow z = -x
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="148" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img97.gif"
+ ALT="$\displaystyle \frac{2}{x} = -\frac{2}{z} \Longrightarrow z = -x
+$">
+</DIV><P></P>
+and from eqns.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn51x">13</A>) and (<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn52x">14</A>):
+
+<!-- MATH
+ \begin{displaymath}
+\frac{2}{x} = \frac{1}{y} \Longrightarrow y = \frac{x}{2}.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="132" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img98.gif"
+ ALT="$\displaystyle \frac{2}{x} = \frac{1}{y} \Longrightarrow y = \frac{x}{2}.
+$">
+</DIV><P></P>
+Let's plug all this into eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn54">12</A>):
+
+<!-- MATH
+ \begin{displaymath}
+x^2 + {\left(\frac{x}{2}\right)}^2 + {(-x)}^2 = 1
+\Longrightarrow \frac{9}{4} x^2 = 1 \Longrightarrow x^2 = \frac{4}{9}
+\Longrightarrow x = \pm\frac{2}{3}.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="437" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img99.gif"
+ ALT="$\displaystyle x^2 + {\left(\frac{x}{2}\right)}^2 + {(-x)}^2 = 1
+\Longrightarrow...
+... x^2 = 1 \Longrightarrow x^2 = \frac{4}{9}
+\Longrightarrow x = \pm\frac{2}{3}.
+$">
+</DIV><P></P>
+The two points we need to check are
+
+<!-- MATH
+ $\displaystyle{ \left( \frac{2}{3}, \frac{1}{3}, -\frac{2}{3} \right) }$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img100.gif"
+ ALT="$ \displaystyle{ \left( \frac{2}{3}, \frac{1}{3}, -\frac{2}{3} \right) }$">
+and 
+<!-- MATH
+ $\displaystyle{ \left( -\frac{2}{3}, -\frac{1}{3}, \frac{2}{3} \right) }$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img101.gif"
+ ALT="$ \displaystyle{ \left( -\frac{2}{3}, -\frac{1}{3}, \frac{2}{3} \right) }$">:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+F\left( \frac{2}{3}, \frac{1}{3}, -\frac{2}{3} \right) & = & 4 \\
+F\left( -\frac{2}{3}, -\frac{1}{3}, \frac{2}{3} \right) & = & 16.
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="104" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img102.gif"
+ ALT="$\displaystyle F\left( \frac{2}{3}, \frac{1}{3}, -\frac{2}{3} \right)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img103.gif"
+ ALT="$\displaystyle 4$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="117" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img104.gif"
+ ALT="$\displaystyle F\left( -\frac{2}{3}, -\frac{1}{3}, \frac{2}{3} \right)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img105.gif"
+ ALT="$\displaystyle 16.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Therefore, the least distance from the point 
+<!-- MATH
+ $(2, 1, -2)$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img78.gif"
+ ALT="$ (2, 1, -2)$">
+to the unit
+sphere centered at the origin is 
+<!-- MATH
+ $\sqrt{4} = 2$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img106.gif"
+ ALT="$ \sqrt{4} = 2$">, and the greatest distance
+is 
+<!-- MATH
+ $\sqrt{16} = 4$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img107.gif"
+ ALT="$ \sqrt{16} = 4$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>9.</B> Find the maximum and minimum values of
+
+<!-- MATH
+ $f(x, y, z) = x y z$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img108.gif"
+ ALT="$ f(x, y, z) = x y z$">
+on the sphere 
+<!-- MATH
+ $x^2 + y^2 + z^2 = 12.$
+ -->
+<IMG
+ WIDTH="131" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img109.gif"
+ ALT="$ x^2 + y^2 + z^2 = 12.$">
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>Answer:</B> The function we want to maximize and minimize
+is 
+<!-- MATH
+ $f(x, y, z) = x y z$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img108.gif"
+ ALT="$ f(x, y, z) = x y z$">, and the constraint we have is
+
+<!-- MATH
+ $g(x, y, z) = x^2 + y^2 + z^2 - 12 = 0$
+ -->
+<IMG
+ WIDTH="236" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img110.gif"
+ ALT="$ g(x, y, z) = x^2 + y^2 + z^2 - 12 = 0$">. The system of equations we need
+to solve are
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn91"></A><A NAME="eqn92"></A><A NAME="eqn93"></A><A NAME="eqn94"></A>
+<!-- MATH
+ \begin{eqnarray}
+y z & = & 2 x \lambda\\
+x z & = & 2 y \lambda\\
+x y & = & 2 z \lambda\\
+x^2 + y^2 + z^2 & = & 12.
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img111.gif"
+ ALT="$\displaystyle y z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="30" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img112.gif"
+ ALT="$\displaystyle 2 x \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(16)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img113.gif"
+ ALT="$\displaystyle x z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="30" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img114.gif"
+ ALT="$\displaystyle 2 y \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(17)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img115.gif"
+ ALT="$\displaystyle x y$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="30" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img116.gif"
+ ALT="$\displaystyle 2 z \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(18)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="90" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img117.gif"
+ ALT="$\displaystyle x^2 + y^2 + z^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img118.gif"
+ ALT="$\displaystyle 12.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(19)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Suppose that  
+<!-- MATH
+ $\lambda = 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img15.gif"
+ ALT="$ \lambda = 0$">. Then exactly <I>two</I> variables must be
+equal to 0. (E.g. Suppose <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img17.gif"
+ ALT="$ x = 0$">
+and 
+<!-- MATH
+ $y, z \neq 0$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img119.gif"
+ ALT="$ y, z \neq 0$">. Then we'd get a contradiction
+from eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn91">16</A>): <IMG
+ WIDTH="50" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img120.gif"
+ ALT="$ y z = 0 $">.) And they can't all be 0, because that
+would contradict eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn94">19</A>). So no matter which variable is not equal
+to 0, we would have
+
+<!-- MATH
+ \begin{displaymath}
+f(\pm\sqrt{12}, 0, 0) = f(0, \pm\sqrt{12}, 0) = f(0, 0, \pm\sqrt{12}) = 0.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="361" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img121.gif"
+ ALT="$\displaystyle f(\pm\sqrt{12}, 0, 0) = f(0, \pm\sqrt{12}, 0) = f(0, 0, \pm\sqrt{12}) = 0.
+$">
+</DIV><P></P>
+The 
+<!-- MATH
+ $\pm\sqrt{12}$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img122.gif"
+ ALT="$ \pm\sqrt{12}$">
+comes from solving eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn94">19</A>).
+
+<P>
+Now suppose that 
+<!-- MATH
+ $\lambda\neq 0.$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img123.gif"
+ ALT="$ \lambda\neq 0.$">
+Let me multiply both sides of eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn91">16</A>) by <IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img30.gif"
+ ALT="$ x$">,
+both sides of eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn92">17</A>) by <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img28.gif"
+ ALT="$ y$">, and
+both sides of eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn93">18</A>) by <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img48.gif"
+ ALT="$ z$">, and add those three equations together:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn95"></A>
+<!-- MATH
+ \begin{eqnarray}
+3 x y z & = & 2 \lambda (x^2 + y^2 + z^2 ) \nonumber \\
+3 x y z & = & 2 \lambda ( 12 ) \nonumber \\
+x y z & = & 8 \lambda.
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="38" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img124.gif"
+ ALT="$\displaystyle 3 x y z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="120" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img125.gif"
+ ALT="$\displaystyle 2 \lambda (x^2 + y^2 + z^2 )$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="38" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img124.gif"
+ ALT="$\displaystyle 3 x y z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="50" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img126.gif"
+ ALT="$\displaystyle 2 \lambda ( 12 )$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="30" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img127.gif"
+ ALT="$\displaystyle x y z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="26" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img128.gif"
+ ALT="$\displaystyle 8 \lambda.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(20)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+That last equation implies that 
+<!-- MATH
+ $x, y, z \neq 0$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img91.gif"
+ ALT="$ x, y, z \neq 0$">
+(since 
+<!-- MATH
+ $\lambda\neq 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img22.gif"
+ ALT="$ \lambda \neq 0$">) .
+Let me use eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn93">18</A>) in
+eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn95">20</A>) and solve for <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img48.gif"
+ ALT="$ z$">:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+x y z & = & 8 \lambda \\
+( x y ) z & = & 8 \lambda \\
+( 2 z \lambda ) z & = & 8 \lambda \\
+2 z^2 & = & 8\\
+z^2 & = & 4 \\
+z & = & \pm 2.
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="30" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img127.gif"
+ ALT="$\displaystyle x y z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img129.gif"
+ ALT="$\displaystyle 8 \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img130.gif"
+ ALT="$\displaystyle ( x y ) z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img129.gif"
+ ALT="$\displaystyle 8 \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="50" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img131.gif"
+ ALT="$\displaystyle ( 2 z \lambda ) z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img129.gif"
+ ALT="$\displaystyle 8 \lambda$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img132.gif"
+ ALT="$\displaystyle 2 z^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img133.gif"
+ ALT="$\displaystyle 8$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img134.gif"
+ ALT="$\displaystyle z^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img103.gif"
+ ALT="$\displaystyle 4$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img135.gif"
+ ALT="$\displaystyle z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="29" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img136.gif"
+ ALT="$\displaystyle \pm 2.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+I can divide by <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img73.gif"
+ ALT="$ \lambda$">
+in that fourth line because 
+<!-- MATH
+ $\lambda\neq 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img22.gif"
+ ALT="$ \lambda \neq 0$">.
+
+<P>
+Similarly, I can use eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn92">17</A>) in eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn95">20</A>) and solve for <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img28.gif"
+ ALT="$ y$">:
+<IMG
+ WIDTH="54" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img137.gif"
+ ALT="$ y = \pm 2$">. And with eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn91">16</A>) in eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn95">20</A>), I can get <IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img30.gif"
+ ALT="$ x$">:
+<IMG
+ WIDTH="55" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img138.gif"
+ ALT="$ x = \pm 2$">. And so there are a few possibilities. Let's make a table of the
+different combinations:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="RIGHT"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img30.gif"
+ ALT="$ x$"></TD>
+<TD ALIGN="RIGHT"><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img28.gif"
+ ALT="$ y$"></TD>
+<TD ALIGN="RIGHT"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img48.gif"
+ ALT="$ z$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH
+ $f(x, y, z)$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img47.gif"
+ ALT="$ f(x,y,z)$"></TD>
+</TR>
+<TR><TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="CENTER">8</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="CENTER">-8</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="CENTER">-8</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="CENTER">8</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="CENTER">-8</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="CENTER">8</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="RIGHT">2</TD>
+<TD ALIGN="CENTER">8</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="RIGHT">-2</TD>
+<TD ALIGN="CENTER">-8</TD>
+</TR>
+</TABLE>
+</DIV>
+Comparing all the numbers (e.g. <IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img139.gif"
+ ALT="$ -8$">, 0 and <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img140.gif"
+ ALT="$ 8$">), we see that the
+minimum value of <IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img47.gif"
+ ALT="$ f(x,y,z)$">
+is <IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img139.gif"
+ ALT="$ -8$">, and the maximum value is <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img140.gif"
+ ALT="$ 8$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>11.</B> Find the maximum and minimum values of the function
+
+<!-- MATH
+ $f(x, y, z) = x$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img141.gif"
+ ALT="$ f(x, y, z) = x$">
+over the curve of intersection of the plane <IMG
+ WIDTH="70" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img142.gif"
+ ALT="$ z = x + y$">
+and the ellipsoid 
+<!-- MATH
+ $x^2 + 2 y^2 + 2 z^2 = 8$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img143.gif"
+ ALT="$ x^2 + 2 y^2 + 2 z^2 = 8$">.
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>Answer:</B> So we have to minimize and maximize the function
+
+<!-- MATH
+ $f(x, y, z) = x$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img141.gif"
+ ALT="$ f(x, y, z) = x$">
+subject to the two constraints
+
+<!-- MATH
+ $g(x, y, z) = x + y - z = 0$
+ -->
+<IMG
+ WIDTH="179" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img144.gif"
+ ALT="$ g(x, y, z) = x + y - z = 0$">
+and
+
+<!-- MATH
+ $h(x, y, z) = x^2 + 2 y^2 + 2 z^2 - 8 = 0$
+ -->
+<IMG
+ WIDTH="245" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img145.gif"
+ ALT="$ h(x, y, z) = x^2 + 2 y^2 + 2 z^2 - 8 = 0$">.
+Therefore, the equations we have to solve are
+
+<!-- MATH
+ $\nabla f(x, y, z) = \lambda \nabla g(x, y, z) + \mu\nabla h(x,y,z)$
+ -->
+<IMG
+ WIDTH="287" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img146.gif"
+ ALT="$ \nabla f(x, y, z) = \lambda \nabla g(x, y, z) + \mu\nabla h(x,y,z)$">,
+
+<!-- MATH
+ $g(x, y, z) = 0$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img147.gif"
+ ALT="$ g(x, y, z) = 0$">, and 
+<!-- MATH
+ $h(x, y, z) = 0$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img148.gif"
+ ALT="$ h(x, y, z) = 0$">. That means, we solve
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn111"></A><A NAME="eqn112"></A><A NAME="eqn113"></A><A NAME="eqn114"></A><A NAME="eqn115"></A>
+<!-- MATH
+ \begin{eqnarray}
+1 & = & \lambda + 2 x\mu\\
+0 & = & \lambda + 4 y\mu\\
+0 & = & -\lambda + 4 z\mu\\
+x + y & = & z\\
+x^2 + 2 y^2 + 2 z^2 & = & 8.
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img149.gif"
+ ALT="$\displaystyle 1$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="59" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img150.gif"
+ ALT="$\displaystyle \lambda + 2 x\mu$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(21)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">0</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="59" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img151.gif"
+ ALT="$\displaystyle \lambda + 4 y\mu$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(22)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">0</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="71" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img152.gif"
+ ALT="$\displaystyle -\lambda + 4 z\mu$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(23)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="41" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img13.gif"
+ ALT="$\displaystyle x + y$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img135.gif"
+ ALT="$\displaystyle z$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(24)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="106" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img153.gif"
+ ALT="$\displaystyle x^2 + 2 y^2 + 2 z^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img14.gif"
+ ALT="$\displaystyle 8.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(25)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Note that it must be the case that 
+<!-- MATH
+ $\mu \neq 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img154.gif"
+ ALT="$ \mu \neq 0$">. (If <IMG
+ WIDTH="43" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img155.gif"
+ ALT="$ \mu = 0$">,
+then eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn111">21</A>) would say 
+<!-- MATH
+ $\lambda = 1$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img156.gif"
+ ALT="$ \lambda = 1$">
+and eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn112">22</A>)
+would say 
+<!-- MATH
+ $\lambda = 0$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img15.gif"
+ ALT="$ \lambda = 0$">, and we would get a contradiction.)
+
+<P>
+Since I know I can legally divide by <IMG
+ WIDTH="14" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img157.gif"
+ ALT="$ \mu$">, from eqns.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn112">22</A>) and
+(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn113">23</A>) we have
+
+<!-- MATH
+ \begin{displaymath}
+4 y\mu = -4 z\mu \Longrightarrow y = -z
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="174" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img158.gif"
+ ALT="$\displaystyle 4 y\mu = -4 z\mu \Longrightarrow y = -z
+$">
+</DIV><P></P>
+and using that in eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn114">24</A>):
+
+<!-- MATH
+ \begin{displaymath}
+x + (-z) = z \Longrightarrow x = 2 z.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="180" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img159.gif"
+ ALT="$\displaystyle x + (-z) = z \Longrightarrow x = 2 z.
+$">
+</DIV><P></P>
+Let's plug all this into eqn.(<A HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/lasthw.html#eqn115">25</A>):
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+{(2 z)}^2 + 2 {(-z)}^2 + 2 z^2 & = & 8\\
+4 z^2 + 2 z^2 + 2 z^2 & = & 8 \\
+8 z^2 & = & 8 \\
+z^2 & = & 1\\
+z & = & \pm 1.
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="150" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img160.gif"
+ ALT="$\displaystyle {(2 z)}^2 + 2 {(-z)}^2 + 2 z^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img133.gif"
+ ALT="$\displaystyle 8$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="113" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img161.gif"
+ ALT="$\displaystyle 4 z^2 + 2 z^2 + 2 z^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img133.gif"
+ ALT="$\displaystyle 8$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img162.gif"
+ ALT="$\displaystyle 8 z^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img133.gif"
+ ALT="$\displaystyle 8$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img134.gif"
+ ALT="$\displaystyle z^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img149.gif"
+ ALT="$\displaystyle 1$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img135.gif"
+ ALT="$\displaystyle z$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img10.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="29" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img163.gif"
+ ALT="$\displaystyle \pm 1.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+For <IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img164.gif"
+ ALT="$ z = 1$">, we have <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img165.gif"
+ ALT="$ x = 2$">
+and <IMG
+ WIDTH="54" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img166.gif"
+ ALT="$ y = -1$">, and 
+<!-- MATH
+ $f(2,-1,1) = 2$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img167.gif"
+ ALT="$ f(2,-1,1) = 2$">.
+For <IMG
+ WIDTH="54" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img168.gif"
+ ALT="$ z = -1$">, we have <IMG
+ WIDTH="55" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img169.gif"
+ ALT="$ x = -2$">
+and <IMG
+ WIDTH="42" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img170.gif"
+ ALT="$ y = 1$">, and 
+<!-- MATH
+ $f(-2, 1, -1) = -2$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img171.gif"
+ ALT="$ f(-2, 1, -1) = -2$">.
+Therefore, the minimum value is -2, and the maximum value 2.
+
+<P>
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="266"></A>
+<TABLE>
+<CAPTION><STRONG>Figure 1:</STRONG>
+Joseph-Louis Lagrange (1736-1813)</CAPTION>
+<TR><TD><IMG
+ WIDTH="230" HEIGHT="281" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/lasthw/img172.gif"
+ ALT="\begin{figure}
+\begin{center}
+\epsfig{figure=Lagrange_7.ps,width=2in}\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="http://www.math.dartmouth.edu/~m8s00/lasthw/node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Peter Kostelec</I>
+<BR><I>2000-05-30</I>
+</ADDRESS>
+</BODY>
+</HTML>

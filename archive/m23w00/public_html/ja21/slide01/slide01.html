@@ -1,0 +1,756 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>$FILE</TITLE>
+<META NAME="description" CONTENT="$FILE">
+<META NAME="keywords" CONTENT="slide01">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="slide01.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER"><FONT SIZE="+3">
+Linear Independence
+</FONT></DIV>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">A set of functions 
+<!-- MATH
+ $f_1(t), f_2(t), ..., f_n(t)$
+ -->
+<I>f</I><SUB>1</SUB>(<I>t</I>), <I>f</I><SUB>2</SUB>(<I>t</I>), ..., <I>f</I><SUB><I>n</I></SUB>(<I>t</I>) is said to be 
+<BR>
+<U>linearly dependent</U> if there exist (real) constants 
+<!-- MATH
+ $c_1, ..., c_n,$
+ -->
+<I>c</I><SUB>1</SUB>, ..., <I>c</I><SUB><I>n</I></SUB>,
+not all zero, such that
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+c_1 f_1(t) + c_2 f_2(t) + ... + c_n f_n(t) = 0
+\end{displaymath}
+ -->
+
+
+<I>c</I><SUB>1</SUB> <I>f</I><SUB>1</SUB>(<I>t</I>) + <I>c</I><SUB>2</SUB> <I>f</I><SUB>2</SUB>(<I>t</I>) + ... + <I>c</I><SUB><I>n</I></SUB> <I>f</I><SUB><I>n</I></SUB>(<I>t</I>) = 0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">for all <I>t</I> in some interval <I>I</I>.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">A set of functions is <U>linearly independent</U> if they are not linearly
+dependent; i.e. if 
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+c_1 f_1(t) + c_2 f_2(t) + ... + c_n f_n(t) = 0
+\end{displaymath}
+ -->
+
+
+<I>c</I><SUB>1</SUB> <I>f</I><SUB>1</SUB>(<I>t</I>) + <I>c</I><SUB>2</SUB> <I>f</I><SUB>2</SUB>(<I>t</I>) + ... + <I>c</I><SUB><I>n</I></SUB> <I>f</I><SUB><I>n</I></SUB>(<I>t</I>) = 0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\Longrightarrow c_1 = 0;\quad  c_2 = 0; \quad ... \quad c_n=0
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="274" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img1.gif"
+ ALT="\begin{displaymath}\Longrightarrow c_1 = 0;\quad c_2 = 0; \quad ... \quad c_n=0\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">We will frequently be considering sets of just two functions.  In this case,
+if <I>f</I><SUB>1</SUB>(<I>t</I>) and <I>f</I><SUB>2</SUB>(<I>t</I>) are linearly dependent, then there must be some
+constant <I>c</I> such that
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+f_1(t) = c f_2(t)
+\end{displaymath}
+ -->
+
+
+<I>f</I><SUB>1</SUB>(<I>t</I>) = <I>c f</I><SUB>2</SUB>(<I>t</I>)
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Otherwise, <I>f</I><SUB>1</SUB>(<I>t</I>) and <I>f</I><SUB>2</SUB>(<I>t</I>) will be linearly independent.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"></FONT></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3">
+Solving Second Order Linear D.E.'s With Constant Coefficients
+</FONT></FONT></FONT></DIV><FONT SIZE="+3"><FONT SIZE="+2"></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Consider the homogeneous D.E.
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+ay'' + by' + cy = 0
+\end{displaymath}
+ -->
+
+
+<I>ay</I>'' + <I>by</I>' + <I>cy</I> = 0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Let us suppose that we have a solution of the form 
+<BR> 
+<I>y</I>(<I>t</I>) = <I>e</I><SUP><I>rt</I></SUP>.  What would <I>r</I> have to be?
+</FONT></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="342" HEIGHT="86" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img2.gif"
+ ALT="\begin{eqnarray*}
+ay'' + by' + cy &amp; = &amp; ar^2e^{rt} + bre^{rt} + ce^{rt}\\
+&amp; = &amp; (ar^2 + br + c)e^{rt} = 0\\
+&amp;\Longrightarrow &amp; ar^2 + br + c = 0
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">The equation 
+<!-- MATH
+ $ar^2 + br + c = 0$
+ -->
+<I>ar</I><SUP>2</SUP> + <I>br</I> + <I>c</I> = 0 is called the
+<BR>
+<U>characteristic equation</U> of the D.E.
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+There are several cases to consider when solving the
+<BR>
+characteristic equation:
+</FONT></FONT></FONT></FONT><DL COMPACT>
+<DT>1.
+<DD>The equation has two real, distinct roots
+<DT>2.
+<DD>The equation has one real, repeated root
+<DT>3.
+<DD>The equation has two complex, distinct roots
+</DL><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><B>Euler's formula</B>
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">We know that the Taylor series for <I>e</I><SUP><I>x</I></SUP> is
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="99" HEIGHT="62" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img3.gif"
+ ALT="\begin{displaymath}e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">We derived this series from what we knew about the natural exponential
+function.  Now, however, suppose we take this Taylor series to be the
+<U>definition</U> of <I>e</I><SUP><I>x</I></SUP>.  This will allow us to do interesting
+things, like compute <I>e</I><SUP><I>ix</I></SUP>, for example (where <IMG
+ WIDTH="76" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img4.gif"
+ ALT="$i = \sqrt{-1}$">).
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="513" HEIGHT="220" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img5.gif"
+ ALT="\begin{eqnarray*}
+e^{ix} &amp; = &amp; \sum_{n=0}^{\infty} \frac{(ix)^n}{n!}\\
+&amp; = &amp; 1 ...
+...ix^1 - \frac{i}{3!}x^3 + \frac{i}{5!}x^5 +
+\frac{i}{7!}x^7 + ...
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">which is perhaps starting to look familiar...
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="321" HEIGHT="94" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img6.gif"
+ ALT="\begin{eqnarray*}
+&amp; = &amp; \sum_{n=0}^{\infty} \frac{(-1)^n}{2n!}x^{2n} +
+i\sum_{n...
+...rac{(-1)^n}{(2n+1)!}x^{2n+1} \\ [.1in]
+&amp; = &amp; \cos{x} + i \sin{x}
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">So we have just derived Euler's formula:
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+e^{ix} = \cos{x} + i \sin{x}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="154" HEIGHT="30" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img7.gif"
+ ALT="\begin{displaymath}e^{ix} = \cos{x} + i \sin{x}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><B>Case 3: complex roots</B>
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Given the D.E.
+</FONT></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+ay'' + by' + cy = 0,
+\end{displaymath}
+ -->
+
+
+<I>ay</I>'' + <I>by</I>' + <I>cy</I> = 0,
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">suppose 
+<!-- MATH
+ $z_1 = \lambda + i\mu$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img8.gif"
+ ALT="$z_1 = \lambda + i\mu$">
+and 
+<!-- MATH
+ $z_2 = \lambda - i\mu$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img9.gif"
+ ALT="$z_2 = \lambda - i\mu$">
+are roots of the
+characteristic equation 
+<!-- MATH
+ $ar^2 + br + c = 0$
+ -->
+<I>ar</I><SUP>2</SUP> + <I>br</I> + <I>c</I> = 0.
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Let's pretend for a moment that it doesn't matter that <I>z</I><SUB>1</SUB> and <I>z</I><SUB>2</SUB>
+are complex numbers.  [Note: You can take derivatives and integrals of
+complex-valued functions in exactly the same way as real-valued functions.]
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+We will show that 
+<!-- MATH
+ $y_1(t) = e^{z_1t}$
+ -->
+<I>y</I><SUB>1</SUB>(<I>t</I>) = <I>e</I><SUP><I>z</I><SUB>1</SUB><I>t</I></SUP> and 
+<!-- MATH
+ $y_2(t) = e^{z_2t}$
+ -->
+<I>y</I><SUB>2</SUB>(<I>t</I>) = <I>e</I><SUP><I>z</I><SUB>2</SUB><I>t</I></SUP> are both solutions.
+Let's try <I>y</I><SUB>1</SUB>(<I>t</I>):
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+a(e^{z_1t})'' + b(e^{z_1t})' + c(e^{z_1t})  =  (ar_1^2 + br_1 + c) e^{z_1t} =
+0
+\end{displaymath}
+ -->
+
+
+<I>a</I>(<I>e</I><SUP><I>z</I><SUB>1</SUB><I>t</I></SUP>)'' + <I>b</I>(<I>e</I><SUP><I>z</I><SUB>1</SUB><I>t</I></SUP>)' + <I>c</I>(<I>e</I><SUP><I>z</I><SUB>1</SUB><I>t</I></SUP>)  =  (<I>ar</I><SUB>1</SUB><SUP>2</SUP> + <I>br</I><SUB>1</SUB> + <I>c</I>) <I>e</I><SUP><I>z</I><SUB>1</SUB><I>t</I></SUP> =
+0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">since <I>z</I><SUB>1</SUB> is a root of <I>ar</I><SUP>2</SUP> + <I>br</I> + <I>c</I>.  
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Hence, 
+<!-- MATH
+ $y_1(t) = e^{z_1t}$
+ -->
+<I>y</I><SUB>1</SUB>(<I>t</I>) = <I>e</I><SUP><I>z</I><SUB>1</SUB><I>t</I></SUP> is a solution (and similarly, <BR>
+<BR>
+
+<!-- MATH
+ $y_2(t) = e^{z_2t}$
+ -->
+<I>y</I><SUB>2</SUB>(<I>t</I>) = <I>e</I><SUP><I>z</I><SUB>2</SUB><I>t</I></SUP> is also a solution). 
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">But what do these solutions really look like?
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+To find out, we apply Euler's formula:
+</FONT></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="308" HEIGHT="116" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img10.gif"
+ ALT="\begin{eqnarray*}
+y_1(t) = e^{z_1t} &amp; = &amp; e^{(\lambda + i\mu)t}\\
+&amp; = &amp; e^{\lam...
+...})\\
+&amp; = &amp; e^{\lambda t}\cos{\mu t} + ie^{\lambda t}\sin{\mu t}
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Similarly, we could derive that 
+<!-- MATH
+ $y_2(t) = e^{\lambda t}\cos{\mu t} -
+ie^{\lambda t}\sin{\mu t}$
+ -->
+<IMG
+ WIDTH="239" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img11.gif"
+ ALT="$y_2(t) = e^{\lambda t}\cos{\mu t} -
+ie^{\lambda t}\sin{\mu t}$">.
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Unfortunately, the solutions we have derived are complex-valued.  For
+many modelling problems, this just doesn't make sense.
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+But there is hope.  We apply the principle of superposition:
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="510" HEIGHT="116" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img12.gif"
+ ALT="\begin{eqnarray*}
+y_1(t) + y_2(t) &amp; = &amp; e^{\lambda t}\cos{\mu t} + ie^{\lambda t...
+... + ie^{\lambda t}\sin{\mu t}\\
+&amp; = &amp; 2ie^{\lambda t}\sin{\mu t}
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Since the principle of superpostion also tells us that any constant
+multiple of a solution is a solution, we can discard the coefficients
+of the sum and difference we just computed (even though one of the
+coefficients is imaginary) to obtain
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y_3(t) = e^{\lambda t}\cos{\mu t} \quad \textrm{and} \quad 
+y_4(t) = e^{\lambda t}\sin{\mu t}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="336" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img13.gif"
+ ALT="\begin{displaymath}y_3(t) = e^{\lambda t}\cos{\mu t} \quad \textrm{and} \quad
+y_4(t) = e^{\lambda t}\sin{\mu t}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">and so we have, in fact, found two linearly independent, real-valued
+solutions.
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><B>Example:</B>
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Find the solution to initial value problem:
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y'' -6y' + 13y = 0. \hspace{.5in} y(0) = 1 ; \hspace{.5in} y'(0) = 7
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="420" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img14.gif"
+ ALT="\begin{displaymath}y'' -6y' + 13y = 0. \hspace{.5in} y(0) = 1 ; \hspace{.5in} y'(0) = 7 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+We observe that the characteristic equation is
+</FONT></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+r^2 - 6r + 13 = (r - (3 + 2i))(r - (3 - 2i)),
+\end{displaymath}
+ -->
+
+
+<I>r</I><SUP>2</SUP> - 6<I>r</I> + 13 = (<I>r</I> - (3 + 2<I>i</I>))(<I>r</I> - (3 - 2<I>i</I>)),
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+hence 
+</FONT></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y_1(x) = e^{3x}\cos{2 x} \quad \textrm{and} \quad y_2(x) = e^{3x}\sin{2 x}.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="354" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img15.gif"
+ ALT="\begin{displaymath}y_1(x) = e^{3x}\cos{2 x} \quad \textrm{and} \quad y_2(x) = e^{3x}\sin{2 x}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">So to construct the general solution, we invoke the 
+<BR>
+Principle of Superposition and take a linear combination of <I>y</I><SUB>1</SUB> and <I>y</I><SUB>2</SUB> to
+obtain
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y(x) = c_1 e^{3x}\cos{2 x} + c_2 e^{3x}\sin{2 x}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="262" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img16.gif"
+ ALT="\begin{displaymath}y(x) = c_1 e^{3x}\cos{2 x} + c_2 e^{3x}\sin{2 x}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y = c_1 e^{3t}\cos{2 t} + c_2 e^{3t}\sin{2 t}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="224" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img17.gif"
+ ALT="\begin{displaymath}y = c_1 e^{3t}\cos{2 t} + c_2 e^{3t}\sin{2 t}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Now, we apply the initial condition, noting first that 
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="421" HEIGHT="89" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img18.gif"
+ ALT="\begin{eqnarray*}
+y' &amp; = &amp; 3c_1e^{3x}\cos{2 t} - 2c_1 e^{3x}\sin{2 x} \\
+&amp;+&amp; 3c...
+... &amp; (3c_1 + 2c_2)e^{3x}\cos{2 x} + (-2c_1 + 3c_2) e^{3x}\sin{2 x}
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">The first initial condition, <I>y</I>(0) = 1 yields
+</FONT></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y(0) = c_1 e^0 \cos{0} + c_2 e^0 \sin{0} = c_1 = 1
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="299" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img19.gif"
+ ALT="\begin{displaymath}y(0) = c_1 e^0 \cos{0} + c_2 e^0 \sin{0} = c_1 = 1\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">The second, <I>y</I>'(0) = 7 yields 
+</FONT></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+(3c_1 + 2c_2) e^0 \cos{0} + (-2c_1 + 3c_2) e^0 \sin{0} = 3 c_1 + 2 c_2 = 7
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="455" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img20.gif"
+ ALT="\begin{displaymath}(3c_1 + 2c_2) e^0 \cos{0} + (-2c_1 + 3c_2) e^0 \sin{0} = 3 c_1 + 2 c_2 = 7\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\therefore \quad c_2 = 2
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="86" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img21.gif"
+ ALT="\begin{displaymath}
+% latex2html id marker 289
+\therefore \quad c_2 = 2\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Therefore, our solution is
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y(x) = e^{3x}\cos{2x} + 2e^{3x}\sin{2x}.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="245" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja21/slide01/img22.gif"
+ ALT="\begin{displaymath}y(x) = e^{3x}\cos{2x} + 2e^{3x}\sin{2x}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-22</I>
+</ADDRESS>
+</BODY>
+</HTML>

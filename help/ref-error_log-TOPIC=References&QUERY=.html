@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>error_log - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="error_log">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/ref-error_log.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="References">
+
+<P ALIGN="CENTER"><B>Search in
+error_log:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l1"><A HREF="ref-access_log-TOPIC=References&QUERY=.html">access_log</A></P>
+<P CLASS="l1"><A HREF="ref-classes-conf-TOPIC=References&QUERY=.html">classes.conf</A></P>
+<P CLASS="l1"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html">client.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cups-files-conf-TOPIC=References&QUERY=.html">cups-files.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cupsd-conf-TOPIC=References&QUERY=.html">cupsd.conf</A></P>
+<P CLASS="l1"><A HREF="ref-error_log-TOPIC=References&QUERY=.html">error_log</A></P>
+<P CLASS="l1"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html">mailto.conf</A></P>
+<P CLASS="l1"><A HREF="ref-page_log-TOPIC=References&QUERY=.html">page_log</A></P>
+<P CLASS="l1"><A HREF="ref-ppdcfile-TOPIC=References&QUERY=.html">PPD Compiler Driver Information File Reference</A></P>
+<P CLASS="l1"><A HREF="ref-printers-conf-TOPIC=References&QUERY=.html">printers.conf</A></P>
+<P CLASS="l1"><A HREF="ref-snmp-conf-TOPIC=References&QUERY=.html">snmp.conf</A></P>
+<P CLASS="l1"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html">subscriptions.conf</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>error_log</H1>
+<FORM ACTION="/help/ref-error_log.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">error_log</H1>
+
+<P>The <VAR>error_log</VAR> file lists messages from the
+scheduler - errors, warnings, etc. The <A
+HREF="ref-cupsd-conf.html#LogLevel"><CODE>LogLevel</CODE></A>
+directive controls which messages are logged:</P>
+
+<P CLASS="command">
+
+level date-time message<BR>
+
+<BR>
+
+I [20/May/1999:19:18:28 +0000] Job 1 queued on 'DeskJet' by 'mike'.<BR>
+
+I [20/May/1999:19:21:02 +0000] Job 2 queued on 'DeskJet' by 'mike'.<BR>
+
+I [20/May/1999:19:22:24 +0000] Job 2 was cancelled by 'mike'.<BR>
+
+</P>
+
+<P>The <I>level</I> field contains the type of message:</P>
+
+<UL>
+
+	<LI><CODE>A</CODE> - Alert message (LogLevel alert)
+	<LI><CODE>C</CODE> - Critical error message (LogLevel crit)
+	<LI><CODE>D</CODE> - Debugging message (LogLevel debug)
+	<LI><CODE>d</CODE> - Detailed debugging message (LogLevel debug2)
+	<LI><CODE>E</CODE> - Normal error message (LogLevel error)
+	<LI><CODE>I</CODE> - Informational message (LogLevel info)
+	<LI><CODE>N</CODE> - Notice message (LogLevel notice)
+	<LI><CODE>W</CODE> - Warning message (LogLevel warn)
+	<LI><CODE>X</CODE> - Emergency error message (LogLevel emerg)
+
+</UL>
+
+<P>The <I>date-time</I> field contains the date and time of when
+the page started printing. The format of this field is identical
+to the <I>data-time</I> field in the <VAR>access_log</VAR> file.</P>
+
+<P>The <I>message</I> fields contains a free-form textual
+message. Messages from job filters are prefixed with "<CODE>[Job
+NNN]</CODE>".</P>
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>nov24</TITLE>
+<META NAME="description" CONTENT="nov24">
+<META NAME="keywords" CONTENT="nov24">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="nov24.css">
+</HEAD>
+<BODY >
+
+<P>
+<B>Covered today:</B>  The wave equation - Section 10.6.  For those not in
+class, read the entire section, except for the part labelled
+"Justification of the Solution."  
+
+<P>
+<B>For next time:</B> 10.6 - 1,2,3,6,7
+
+<P>
+<B>Transparencies from class:</B>
+
+<P>
+
+<UL><LI>Suppose you have a string which is 10 cm long and has <I>a</I>=1.
+Suppose you initially configure it into the shape of 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+f(x)=\left\{\begin{array}{cl}
+x & 0 < x < 1\\
+2-x & 1 < x< 2\\
+0 & x>2
+\end{array}\right.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="193" HEIGHT="64" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23f99/nov24/img1.gif"
+ ALT="\begin{displaymath}
+f(x)=\left\{\begin{array}{cl}
+x &amp; 0 &lt; x &lt; 1\\
+2-x &amp; 1 &lt; x&lt; 2\\
+0 &amp; x&gt;2
+\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and then you release it.  Find <I>u</I>(<I>x</I>,<I>t</I>).
+
+<P>
+
+<LI>Suppose you have a string which is 10 cm long and has <I>a</I>=1.
+Suppose you initially configure it into the shape of 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+f(x)=\left\{\begin{array}{cl}
+0 & 0 < x < 4\\
+x-4 & 4 < x< 5\\
+-x+6 & 5<x<6\\
+0 & 6<x<10
+\end{array}\right.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="213" HEIGHT="83" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23f99/nov24/img2.gif"
+ ALT="\begin{displaymath}
+f(x)=\left\{\begin{array}{cl}
+0 &amp; 0 &lt; x &lt; 4\\
+x-4 &amp; 4 &lt; x&lt; 5\\
+-x+6 &amp; 5&lt;x&lt;6\\
+0 &amp; 6&lt;x&lt;10
+\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and then you release it.  Find <I>u</I>(<I>x</I>,<I>t</I>).
+
+<P>
+
+</UL>
+
+<P>
+<B>Maple commands:</B>
+
+<P>
+The Maple commands from today were all very similar to those from last
+time.  See the Nov 22 daily log.  The only new one introduced this time
+was 
+<TT>animate</TT>.  
+
+<P>
+After you've got your <I>u</I>(<I>x</I>,<I>t</I>), type
+
+<P>
+<TT>with(plots);</TT>
+
+<P>
+and then
+
+<P>
+<TT>animate(u(x,t), x=0..10, t=0..20);</TT>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 23 Fall 1999</I>
+<BR><I>1999-11-23</I>
+</ADDRESS>
+</BODY>
+</HTML>

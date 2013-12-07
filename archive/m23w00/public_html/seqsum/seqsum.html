@@ -1,0 +1,561 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>seqsum</TITLE>
+<META NAME="description" CONTENT="seqsum">
+<META NAME="keywords" CONTENT="seqsum">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="seqsum.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+A <I>sequence</I> is any function whose domain is 
+<!-- MATH
+ $\{k,k+1,k+2,\dots\}$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img1.gif"
+ ALT="$\{k,k+1,k+2,\dots\}$">
+for some
+integer <I>k</I>.
+
+<P>
+<B>Definition of convergence of a sequence</B>: A sequence {a<SUB><I>n</I></SUB>} is said to
+<I>converge</I> to <I>L</I> if, for every <IMG
+ WIDTH="40" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img2.gif"
+ ALT="$\epsilon &gt;
+0$">,
+there
+exists an integer <I>k</I> such that 
+<!-- MATH
+ $|a_n - L| < \epsilon$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img3.gif"
+ ALT="$\vert a_n - L\vert &lt; \epsilon$">
+for every <IMG
+ WIDTH="44" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img4.gif"
+ ALT="$n \geq k$">.
+In this case, we write 
+<!-- MATH
+ $\lim_{n \rightarrow \infty} = L$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img5.gif"
+ ALT="$\lim_{n \rightarrow \infty} = L$">.
+
+<P>
+Any sequence which does not converge is said to <I>diverge</I>.
+
+<P>
+<B>Definition of divergence of a sequence to <IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img6.gif"
+ ALT="$\infty$"></B>:  A sequence {a<SUB><I>n</I></SUB>} is
+said to
+<I>diverge to <IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img6.gif"
+ ALT="$\infty$"></I> if for every <I>M</I>, there exists an
+integer <I>k</I> such that <I>a</I><SUB><I>n</I></SUB> &gt; <I>M</I> for all <IMG
+ WIDTH="44" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img4.gif"
+ ALT="$n \geq k$">.
+
+<P>
+A <I>series</I> is a formal sum of infinitely many terms.  If the terms are 
+<!-- MATH
+ $a_0,
+a_1, a_2, \dots$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img7.gif"
+ ALT="$a_0,
+a_1, a_2, \dots$">,
+then the series is typically denoted 
+<!-- MATH
+ $\sum_{n=0}^{\infty} a_n$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img8.gif"
+ ALT="$\sum_{n=0}^{\infty} a_n$">.
+
+<P>
+Given a series 
+<!-- MATH
+ $\sum_{n=0}^{\infty} a_n$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img8.gif"
+ ALT="$\sum_{n=0}^{\infty} a_n$">,
+the <I>n-th partial sum <I>S</I><SUB><I>n</I></SUB></I> is
+defined by
+
+<!-- MATH
+ $S_n = a_0 + a_1 + \cdots + a_n$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img9.gif"
+ ALT="$S_n = a_0 + a_1 + \cdots + a_n$">.
+
+<P>
+<B>Definition of convergence of a series</B>: A series is said to converge if the
+sequence {S<SUB><I>n</I></SUB>} converges.
+
+<P>
+A series <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+is said to converge <I>absolutely</I> if <IMG
+ WIDTH="49" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img11.gif"
+ ALT="$\sum \vert a_n\vert$">
+converges.
+
+<P>
+If <I>a</I> and <I>r</I> are real numbers, the series 
+<!-- MATH
+ $\sum_{n=0}^{\infty} ar^n$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img12.gif"
+ ALT="$\sum_{n=0}^{\infty} ar^n$">
+is called a
+<I>geometric series</I>.  
+<!-- MATH
+ $\sum_{n=0}^{\infty} ar^n$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img12.gif"
+ ALT="$\sum_{n=0}^{\infty} ar^n$">
+converges if and only if -1 &lt;
+<I>r</I> &lt; 1.  If -1 &lt; <I>r</I> &lt; 1, then 
+<!-- MATH
+ $\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img13.gif"
+ ALT="$\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}$">
+(you
+should be able to prove this).
+
+<P>
+If <I>p</I> is any real number, 
+<!-- MATH
+ $\sum_{n=1}^{\infty} \frac{1}{n^p}$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img14.gif"
+ ALT="$\sum_{n=1}^{\infty} \frac{1}{n^p}$">
+is called a <I>p-series</I> with exponent <I>p</I>.  A <I>p</I>-series converges if and only if <I>p</I> &gt; 1.  You
+should know how to prove this (using the integral test).
+
+<P>
+<B><I>n</I>th term test for divergence</B>:  If 
+<!-- MATH
+ $\lim_{n \rightarrow \infty} a_n$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img15.gif"
+ ALT="$\lim_{n \rightarrow \infty} a_n$">
+is not
+equal to zero, then <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+does not converge.
+
+<P>
+<B>Comparison test</B>: Let <I>c</I><SUB><I>n</I></SUB> be a sequence of nonnegative numbers.
+
+<UL><LI>If <IMG
+ WIDTH="39" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img16.gif"
+ ALT="$\sum
+c_n$">
+converges, and 
+<!-- MATH
+ $0 \leq a_n \leq c_n$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img17.gif"
+ ALT="$0 \leq a_n \leq c_n$">
+for all (large enough) <I>n</I>, then <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+converges.
+
+<LI>If <IMG
+ WIDTH="39" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img16.gif"
+ ALT="$\sum
+c_n$">
+diverges, and <IMG
+ WIDTH="58" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img18.gif"
+ ALT="$a_n \geq c_n$">
+for all (large enough) <I>n</I>, then <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+diverges.
+
+</UL>
+
+<P>
+<B>Limit Comparison test</B>: Suppose you have two series <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+and
+<IMG
+ WIDTH="39" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img19.gif"
+ ALT="$\sum b_n$">,
+and 
+<!-- MATH
+ $\lim_{n \to \infty} \frac{a_n}{b_n} = L$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img20.gif"
+ ALT="$\lim_{n \to \infty} \frac{a_n}{b_n} = L$">.
+If
+<IMG
+ WIDTH="81" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img21.gif"
+ ALT="$0&lt; L &lt; \infty$">,
+then
+
+<P>
+
+<UL><LI>if <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+converges, <IMG
+ WIDTH="39" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img19.gif"
+ ALT="$\sum b_n$">
+converges, and
+
+<LI>if <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+diverges then <IMG
+ WIDTH="39" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img19.gif"
+ ALT="$\sum b_n$">
+diverges.
+
+</UL>
+
+<P>
+Note: If you are using the limit comparison test on a series whose terms are the
+quotient of two polynomials, then use the limit comparison test with the series
+whose terms are the highest power of <I>n</I> in the numerator, divided by the
+highest power of <I>n</I> in the denominator.
+
+<P>
+<B>Ratio test</B>: Let <I>a</I><SUB><I>n</I></SUB> be a sequence of nonnegative numbers.
+
+<UL><LI>if 
+<!-- MATH
+ $\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img22.gif"
+ ALT="$\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}$">
+exists and is less than
+1, then <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+converges
+
+<LI>if 
+<!-- MATH
+ $\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img22.gif"
+ ALT="$\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}$">
+does not exist or 
+if it exists and is greater than
+1, then <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+diverges.
+
+</UL>
+
+<P>
+Note that the ratio test does not give any information if 
+<!-- MATH
+ $\lim
+\frac{a_{n+1}}{a_n} = 1$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img23.gif"
+ ALT="$\lim
+\frac{a_{n+1}}{a_n} = 1$">.
+Also note that the ratio test does not give any
+information about what the series converges to, only whether or not it converges.  
+
+<P>
+<B>Alternating series</B>:
+
+<P>
+A series <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img10.gif"
+ ALT="$\sum a_n$">
+is said to be an <I>alternating series</I> if its terms
+alternate in sign.  
+
+<P>
+Important fact about alternating series:  If <I>a</I><SUB><I>n</I></SUB> is an (eventually)
+nonincreasing sequence of positive numbers, and if 
+<!-- MATH
+ $\lim_{n} a_n = 0$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img24.gif"
+ ALT="$\lim_{n} a_n = 0$">,
+then 
+the alternating series 
+<!-- MATH
+ $\sum_{n=0}^{\infty} (-1)^n a_n$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img25.gif"
+ ALT="$\sum_{n=0}^{\infty} (-1)^n a_n$">
+converges.  
+
+<P>
+Even more interesting than the result itself is the following byproduct of the
+proof:  if <I>E</I><SUB><I>n</I></SUB> denotes the error associated with estimating the sum of the
+series
+from the <I>n</I>th partial sum, then 
+<!-- MATH
+ $E_n < |a_{n+1}|$
+ -->
+<I>E</I><SUB><I>n</I></SUB> &lt; |a<SUB><I>n</I>+1</SUB>|.  In other words, the error
+incurred by using a partial sum is less than the first ommitted term.
+
+<P>
+<B>Taylor polynomials:</B>  Let <I>f</I> be a function which is smooth (i.e. infinitely
+differentiable) at <I>x</I>=<I>a</I>.  Define <I>P</I><SUB><I>n</I></SUB>, the Taylor polynomial degree <I>n</I> for <I>f</I> 
+about <I>x</I>=<I>a</I> by 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+P_n(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3
++ \cdots
++ \frac{f{(n)}(a)}{n!}(x-a)^n.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="554" HEIGHT="40" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img26.gif"
+ ALT="\begin{displaymath}
+P_n(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3
++ \cdots
++ \frac{f{(n)}(a)}{n!}(x-a)^n.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Note that <I>P</I><SUB><I>n</I></SUB> has the following property:  
+<!-- MATH
+ $P_n^{(k)}(a) = f^{(k)}(a)$
+ -->
+<I>P</I><SUB><I>n</I></SUB><SUP>(<I>k</I>)</SUP>(<I>a</I>) = <I>f</I><SUP>(<I>k</I>)</SUP>(<I>a</I>) for all
+<IMG
+ WIDTH="44" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img27.gif"
+ ALT="$k \leq n$">.
+
+<P>
+<B>Taylor series:</B>  Let <I>f</I> be a function which is smooth (i.e. infinitely
+differentiable) at <I>x</I>=<I>a</I>.  Define the Taylor series for <I>f</I> 
+about <I>x</I>=<I>a</I> to be the series
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="409" HEIGHT="40" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img28.gif"
+ ALT="\begin{displaymath}
+f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The <I>interval of convergence</I> of the Taylor series is the set of all values 
+of <I>x</I> for which the Taylor series converges.  Note that the interval of
+convergence always includes <I>a</I>.  It turns out that the interval of convergence is
+an interval centerd at <I>a</I>.  Thus it must take one of the following forms:  
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>(<I>a</I>-<I>R</I>,<I>a</I>+<I>R</I>] for some <I>R</I>;
+<DT><I>a</I>-<I>R</I>,<I>a</I>+<I>R</I>
+<DD> for some <I>R</I>;
+<DT>2.
+<DD>[<I>a</I>-<I>R</I>,<I>a</I>+<I>R</I>) for some <I>R</I>;
+<DT>3.
+<DD>(<I>a</I>-<I>R</I>,<I>a</I>+<I>R</I>) for some <I>R</I>;
+<DT>4.
+<DD>
+<!-- MATH
+ $(-\infty,\infty)$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img29.gif"
+ ALT="$(-\infty,\infty)$">
+(i.e. all real numbers)
+</DL>
+
+<P>
+The number <I>R</I> is called the <I>radius of convergence</I>.  Further, the
+convergence is absolute in the interval (<I>a</I>-<I>R</I>,<I>a</I>+<I>R</I>).  In other words, if you
+have a Taylor series (about <I>x</I>=<I>a</I>) with radius of convergence <I>R</I>, the series
+converges absolutely for all 
+<!-- MATH
+ $x \in (a-R,a+R)$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img30.gif"
+ ALT="$x \in (a-R,a+R)$">,
+and it diverges for all <I>x</I>
+outside
+the interval [<I>a</I>-<I>R</I>,<I>a</I>+<I>R</I>].  At the endpoints, <I>a</I>+<I>R</I> and <I>a</I>-<I>R</I>, it may converge
+absolutely, it may converge (but not absolutely), or it may diverge. 
+
+<P>
+The ratio test is a useful tool for computing the radius of convergence of a
+Taylor series.
+
+<P>
+Note that Taylor series can be added, subtracted, and differentiated termwise
+within their
+intervals of convergence (see section 5.1 of your book).   
+
+<P>
+<B>Applications of Taylor series</B>:
+
+<UL><LI>Estimating function values.  For example, we could estimate <IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img31.gif"
+ ALT="$\sqrt{e}$">
+by
+noting that 
+<!-- MATH
+ $\sqrt{e}=e^{1/2}=1 + (1/2) + \frac{(1/2)^2}{2!} + \frac{(1/2)^3}{3!}
++ \cdots$
+ -->
+<IMG
+ WIDTH="314" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/seqsum/img32.gif"
+ ALT="$\sqrt{e}=e^{1/2}=1 + (1/2) + \frac{(1/2)^2}{2!} + \frac{(1/2)^3}{3!}
++ \cdots$">.
+
+<LI>Finding Taylor series for more complicated functions.  
+
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-20</I>
+</ADDRESS>
+</BODY>
+</HTML>

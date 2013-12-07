@@ -1,0 +1,60 @@
+<STYLE TYPE="text/css">
+<!--
+
+* {color: black;
+  letter-spacing: normal;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-size: 10pt;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+H2 {   font-size: 20pt; }
+
+H3 {   font-size: 16pt; }
+
+
+
+
+normal18pt {
+  color: black;
+  letter-spacing: normal;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 18pt;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+normal24pt {
+  color: #000000;  /* can use hex codes for colors */
+  letter-spacing: normal;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 24pt;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+A {
+  color: navy;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #c00000;
+  text-decoration: none;
+}
+
+
+-->
+</STYLE>

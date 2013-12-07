@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Math3-S2-Demo7_Newton.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="Math3-S2-Demo7_Newton.html#MapleAutoBookmark1">Math3-S2-Demo7_Newton.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 3 Winter 2004</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Introduction to Calculus</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Class Demo for the Newton's Method</b></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright"><u>February 9, 2004</b></u></font></p>
+<p><font size="5" face="Lucida Bright"><b>
+<br> &nbsp;&nbsp;&nbsp;</b></font><font size="5" face="Lucida Bright"><b>Define a procedure for plotting a function</b></font></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;and approximating its root using Newton's Method</b></font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">newton_plot := proc (f, xstart, n)</b></font><font color="#ff0000" face="Monospaced"><b>
+<br>	local fp, i, x:</font><font color="#ff0000" face="Monospaced">
+<br></font><font color="#ff0000" face="Monospaced">
+<br>	print(plot(f(x), x = -1..2)):</font><font color="#ff0000" face="Monospaced">
+<br>	fp := diff(f(x), x):</font><font color="#ff0000" face="Monospaced">
+<br>	</font><font color="#ff0000" face="Monospaced">
+<br>	x := xstart:</font><font color="#ff0000" face="Monospaced">
+<br>	print (x):</font><font color="#ff0000" face="Monospaced">
+<br>	for i from 1 to n do</font><font color="#ff0000" face="Monospaced">
+<br>		x := evalf(x - f(x) / fp(x)):</font><font color="#ff0000" face="Monospaced">
+<br>		print(x):</font><font color="#ff0000" face="Monospaced">
+<br>	od:</font><font color="#ff0000" face="Monospaced">
+<br>end:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>newton_plot (x -&gt; x^6 - 2, 1, 7):</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_1.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_2.gif" width="7" height="13" alt="1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_3.gif" width="73" height="13" alt="1.166666667" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_4.gif" width="73" height="13" alt="1.126443678" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_5.gif" width="73" height="13" alt="1.122497067" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_6.gif" width="73" height="13" alt="1.122462051" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_7.gif" width="73" height="13" alt="1.122462048" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_8.gif" width="73" height="13" alt="1.122462048" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_9.gif" width="73" height="13" alt="1.122462048" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>newton_plot(x -&gt; cos(x) - x, 0.5, 5):</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_10.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_11.gif" width="17" height="13" alt=".5" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_12.gif" width="80" height="13" alt=".7552224170" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_13.gif" width="80" height="13" alt=".7391416661" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_14.gif" width="80" height="13" alt=".7390851339" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_15.gif" width="80" height="13" alt=".7390851332" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo7_Newton_16.gif" width="80" height="13" alt=".7390851332" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

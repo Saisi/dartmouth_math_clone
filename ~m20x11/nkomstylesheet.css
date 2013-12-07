@@ -1,0 +1,83 @@
+	body{ font: 100% "Verdana", sans-serif; margin: 50px; color:black; background-color:#AAAAAA;min-width:850px;}
+
+	A:link {color:#6F7070}
+	A:visited {color:#6F7070}
+	A {text-decoration:none}
+		
+	div.title {text-align:left; font-weight:bold; float:left; width:50%}
+	div.coursetitle {text-align:left; float:left; width:70%;font-size:small}
+	div.venue {text-align:left; font-style:italic; float:left; font-size:small; width:35%}
+	div.date {text-align:right; font-style:italic; float:left; font-size:small; width:15%}
+	div.coursedate{text-align:right; font-style:italic; float:left; font-size:small; width:28%}
+	div.toggler{text-align:center;}
+	div.togglee {width:100%; text-align:justify}
+	div.abstract {text-align:justify; margin-right:0px;font-size:small;}
+	div.togglingcontainer {width:90%;float:left;border:0px coral solid;text-align:left;margin:auto;}
+	/* div.toggler {width:90%;-moz-border-radius: 15px; border-radius: 15px;border:1px black solid;}  */
+	div.container {width:100%}
+	div.tabscontainer{width:100%;margin:auto; background-color:transparent;position:relative;border:0px green solid;}
+	div.tab{width:20%;text-align:center;font-weight:normal;-moz-border-radius: 15px; border-radius: 15px;border:0px black solid;
+		background-color:transparent;float:left;padding-top: 5%; margin-left:2%; margin-right:2%;}
+	/*div.activetab{width:20%;text-align:center;font-weight:normal;-moz-border-radius: 15px; border-radius: 15px;border:0px black solid;
+		background-color:transparent;float:left;padding-top: 60px; margin-left:15px; margin-right:15px;height:+10px}*/
+	div.bouncer{width:65%;text-align:center;-moz-border-radius: 15px; border-radius: 15px;border:1px black solid;
+		background-color:transparent;float:left;padding-top:40%;padding-bottom:10%; padding-left:20%;padding-right:20%;position:relative;color:#6F7070;}
+	/*div.activebouncer{width:100%;text-align:center;-moz-border-radius: 15px; border-radius: 15px;border:1px black solid;
+		background-color:transparent;float:left;padding-top:60px;padding-bottom:10px; margin-left:15px; margin-right:15px;	position:relative;color:#6F7070;top:-15px}*/center;position:relative
+	div.master{width:100%;height:900px;margin:auto;text-align:center;font-size:small;border:1px red solid;float:left;}
+	iframe.mainpage{width:100%;height:750px; border-radius:25px; -moz-border-radius:25px;border:1px black solid;background-color:transparent;}
+
+
+	div.gradesrowtall{border:1px black solid;margin-left:5%;height:55px}
+	div.gradesrow{border:1px black solid;margin-left:5%;height:45px}
+	div.grades1{float:left;position:relative;width:25%;border-right:1px black solid;text-align:left;height:100%;margin-right:5px;}
+	div.grades2{float:left;position:relative;width:12%;border-right:1px black solid;text-align:left;height:100%;margin-right:5px}
+	div.grades3{float:left;position:relative;width:58%;border:0px black solid;text-align:left;height:100%}
+	div.grades1tall{float:left;position:relative;width:25%;border-right:1px black solid;text-align:left;height:55px;margin-right:5px;}
+	div.grades2tall{float:left;position:relative;width:12%;border-right:1px black solid;text-align:left;height:55px;margin-right:5px}
+	div.grades3tall{float:left;position:relative;width:58%;border:0px black solid;text-align:left;height:55px}
+
+	div.syllabus{}
+	div.syllabusrow{border:1px black solid;margin-left:5%;height:40px}
+	div.syl1{float:left;position:relative;width:10%;border-right:1px black solid;text-align:center;height:100%;margin-right:5px;}
+	div.syl2{float:left;position:relative;width:15%;border-right:1px black solid;text-align:left;height:100%;margin-right:5px;}
+	div.syl3{float:left;position:relative;width:20%;border-right:1px black solid;text-align:left;height:100%;margin-right:5px;}
+	div.syl4{float:left;position:relative;width:50%;border-right:0px black solid;text-align:left;height:100%;}
+	div.syllabusrowtall{border:1px black solid;margin-left:5%;height:50px}
+
+	div.hwheader{border:1px black solid;margin-left:5%;height:45px;}
+	div.hwhead1{float:left;position:relative;width:15%;border-right:1px black solid;text-align:center;height:100%;margin-right:5px;font-weight:bold;}
+	div.hwhead2{float:left;position:relative;width:60%;border-right:1px black solid;text-align:center;height:100%;margin-right:5px;font-weight:bold;}	div.hwhead3{float:left;position:relative;width:20%;text-align:center;height:100%;font-weight:bold;}
+
+
+	div.hwrow{border:1px black solid;margin-left:5%;height:20%}
+	div.hw1{float:left;position:relative;width:15%;border-right:1px black solid;text-align:center;height:65%;margin-right:5px;padding-top:5%;}
+	div.hw2{float:left;position:relative;width:60%;border-right:1px black solid;text-align:left;height:100%;margin-right:5px;}	
+	div.hw3{float:left;position:relative;width:20%;text-align:center;height:100%;padding-top:5%;padding-bottom:5%;}
+
+
+	div.block1{position:relative;width:100%;border:0px black solid;float:left;margin-top:10%;height:60%;overflow:hidden;}
+	div.block2{position:relative;width:100%;border:0px black solid;float:left;margin-top:10%;height:60%;overflow:hidden;}
+	div.whitesquare{width:10px;height:10px;background-color:transparent;float:left;border:1px black solid;margin:0px}
+	div.blacksquare{width:10px;height:10px;background-color:transparent;float:left;border:1px white solid;margin:0px}
+
+	table.stonegrid{position:relative;width:600px;height:600px;border:0px black solid;margin-top:0px;margin:auto}
+		tr.row{}
+		td.whitestone{width:20px;height:20px;background-color:white;float:left;border:1px black solid;margin:0px;border-radius:10px; -moz-border-radius:5px;;}
+		td.chosenwhitestone{width:20px;height:20px;background-color:#D4CDCD;float:left;border:1px black solid;margin:0px;border-radius:10px; -moz-border-radius:5px;}
+		td.blackstone{width:20px;height:20px;background-color:black;float:left;border:1px black solid;margin:0px;border-radius:10px; -moz-border-radius:5px;text-align:center;}
+		td.chosenblackstone{width:20px;height:20px;background-color:#474545;float:left;border:1px black solid;margin:0px;border-radius:10px; -moz-border-radius:5px;text-align:center;}
+
+
+	table.exams{border: 1px; border-style: solid; border-color: gray; border-collapse:collapse;background-color: transparent;text-align:center;width:65%;}
+	table.exams td{border:1px;border-style:solid;border-color:black; padding:4px;}
+	table.exams th{border:1px;border-style:solid;border-color:black; padding:4px;font-weight:bold;
+}
+	table.syllabus{border: 1px; border-style: solid; border-color: gray; border-collapse:collapse;background-color: transparent;text-align:center;width:80%;}
+	table.syllabus td{border:1px;border-style:solid;border-color:black; padding:4px;}
+	table.syllabus th{border:1px;border-style:solid;border-color:black; padding:4px;font-weight:bold;}
+
+	table.hw{border: 1px; border-style: solid; border-color: gray; border-collapse:collapse;background-color: transparent;text-align:left;width:65%;}
+	table.hw td{border:1px;border-style:solid;border-color:black; padding:5px 4px;}
+	table.hw th{border:1px;border-style:solid;border-color:black; padding:4px;text-align:center;}
+}

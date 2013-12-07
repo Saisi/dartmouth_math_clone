@@ -1,0 +1,567 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Point contact coupled to a resonator</TITLE>
+<META NAME="description" CONTENT="Point contact coupled to a resonator">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node99.html">
+<LINK REL="previous" HREF="node97.html">
+<LINK REL="up" HREF="node94.html">
+<LINK REL="next" HREF="node99.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1335"
+  HREF="node99.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1333"
+  HREF="node94.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1327"
+  HREF="node97.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1336"
+  HREF="node99.html">What is the maximum</A>
+<B> Up:</B> <A NAME="tex2html1334"
+  HREF="node94.html">Chapter 7: Conductance of</A>
+<B> Previous:</B> <A NAME="tex2html1328"
+  HREF="node97.html">Idealized `slit' aperture point</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00840000000000000000"></A>
+<A NAME="sec:coupled"></A>
+<BR>
+Point contact coupled to a resonator
+</H1>
+
+<P>
+Fig.&nbsp;<A HREF="node98.html#fig:cavity">7.3</A> illustrates
+a
+QPC-plus-reflector system
+whose conductance has been experimentally measured [<A
+ HREF="node161.html#kati97">112</A>].
+The circular arc reflector and the vertical wall
+together form a cavity which can support
+long-lived resonances;
+the energy of these resonances can be swept by sweeping the reflector
+gate voltage.
+The classical condition for stability of the cavity modes is that
+the arc center must lie at, or to the left of, the wall (<IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1243.gif"
+ ALT="$x{=}0$">)
+[<A
+ HREF="node161.html#kati97">112</A>].
+The cavity modes are coupled to the left terminal via the QPC, and
+to the right terminal via leakage of the modes out through the
+cavity top and bottom.
+The system is interesting because it is `open' in the sense that
+it has no Coulomb blockade [<A
+ HREF="node161.html#been">20</A>], but `closed' in the sense that
+the dwell time is much greater than the ballistic time (the resonances are
+long-lived).
+It has also been studied recently in our laboratory using microwave
+measurements [<A
+ HREF="node161.html#jesseprl">94</A>,<A
+ HREF="node161.html#jesse">93</A>,<A
+ HREF="node161.html#jessepre">95</A>].
+
+<P>
+The actual potential in a mesoscopic experiment differs from
+the illustration:
+it has soft walls (on the scale <!-- MATH
+ $1/k_{{\mbox{\tiny F}}}$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1244.gif"
+ ALT="$1/k_{{\mbox{\tiny F}}}$">),
+it may have deviations from the circle due to
+lithographic error, and it has modulations of the background potential
+due to elastic disorder [<A
+ HREF="node161.html#kati97">112</A>].
+However, we will not be interested in details of the
+resonator on the right-hand side.
+Rather, we will adopt the view of a 2D scattering-theorist
+`looking' from the left-hand side.
+In this section we discuss the maximum
+conductance of this system, when the `bare' QPC (<I>i.e. </I>without the reflector)
+is in the tunneling regime (conductance <IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1245.gif"
+ ALT="$ \ll 2e^2/h$">).
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:cavity"></A><A NAME="13118"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.3:</STRONG>
+
+A tunneling-regime QPC combined with a nearby circular reflector, forming a
+stable resonant cavity
+open at the sides.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="222" HEIGHT="148" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1246.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_qpc/cavity.eps,width=0.4\hsize}}\vspace{0.1in}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+We use the slit model from the previous section to model the QPC.
+This simplifies the treatment of the left-hand side scattering problem,
+and we do not believe it alters the
+basic conclusion.
+As before, we consider the incident plus reflected wave Eq.(<A HREF="node95.html#eq:unscatt">7.1</A>)
+when the QPC is closed to be the `unscattered'
+wave.
+This we expand in Bessel functions,
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:expand"></A>
+<!-- MATH
+ \begin{eqnarray}
+\psi_{{\mbox{\tiny0}}}{({\mathbf r})}& =  & e^{i(k_{x} x + k_{y} y)} - e^{i(-k_{x} x + k_{y} y)} 
+\nonumber \\
+& = & -4 i J_{1}(kr)\cos(\theta)\cos(\phi) + 
+\mbox{\rm higher order terms}.
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1247.gif"
+ ALT="$\displaystyle \psi_{{\mbox{\tiny0}}}{({\mathbf r})}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="192" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1248.gif"
+ ALT="$\displaystyle e^{i(k_{x} x + k_{y} y)} - e^{i(-k_{x} x + k_{y} y)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="348" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1249.gif"
+ ALT="$\displaystyle -4 i J_{1}(kr)\cos(\theta)\cos(\phi) +
+\mbox{\rm higher order terms}.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.20)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The first term in the expansion is the incoming plus outgoing p-wave,
+which in the tunneling limit, will dominate
+in our consideration of the absorption (as shown in Appendix&nbsp;<A HREF="node159.html#ap:laplace">K</A>).
+
+<P>
+Now we open the slit, and replace
+<IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1250.gif"
+ ALT="$2 J_{1} (kr)$"> in the above by
+<!-- MATH
+ $H_1^{(2)}(kr) + e^{2i\delta}\, H_{1}^{(1)}(kr)$
+ -->
+<IMG
+ WIDTH="186" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1251.gif"
+ ALT="$H_1^{(2)}(kr) + e^{2i\delta}\, H_{1}^{(1)}(kr)$">,
+where <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">
+follows the usual definition of partial-wave phase shift [<A
+ HREF="node161.html#landauqm">128</A>].
+The closed slit corresponds to <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1073.gif"
+ ALT="$\delta = 0$">.
+An open slit leading into a closed resonator
+(imagine extending the arc in Fig.&nbsp;<A HREF="node98.html#fig:cavity">7.3</A> to seal off the
+entire right side), in the case of infinite dephasing length,
+corresponds to <IMG
+ WIDTH="31" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1252.gif"
+ ALT="$\delta = $"> real, and would appear from the left side
+as an elastic dipole scatterer.
+An open slit with an open resonator
+corresponds to complex <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$"> with positive imaginary part,
+and would appear as a general inelastic dipole scatterer.
+Therefore transmission though the QPC appears,
+to an observer on the left side, to be <EM>absorption</EM> of incident waves.
+<!-- MATH
+ $\sigma_{{\mbox{\tiny T}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1176.gif"
+ ALT="$\sigma_{{\mbox{\tiny T}}}$"> is interpreted as an `inelastic' cross section (since exiting
+the right-hand terminal is equivalent to leaving in a new channel),
+and <!-- MATH
+ $\sigma_{{\mbox{\tiny R}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1253.gif"
+ ALT="$\sigma_{{\mbox{\tiny R}}}$"> as an `elastic' one.
+<!-- MATH
+ $\sigma_{{\mbox{\tiny T}}}(k,\phi)$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1152.gif"
+ ALT="$\sigma_{{\mbox{\tiny T}}}(k,\phi)$"> can be
+found from integrating the net incoming flux [as in Eq.(<A HREF="node95.html#eq:GT1">7.5</A>)]
+of the total wavefunction on the <EM>left</EM> side.
+Substitution into (<A HREF="node95.html#eq:sigmadef">7.4</A>) then gives
+<!-- MATH
+ $\sigma_{{\mbox{\tiny T}}}(k,\phi) = \frac{4}{k} (1 - |e^{2i\delta}|^2) \cos^2(\phi)$
+ -->
+<IMG
+ WIDTH="245" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1254.gif"
+ ALT="$\sigma_{{\mbox{\tiny T}}}(k,\phi) = \frac{4}{k} (1 - \vert e^{2i\delta}\vert^2) \cos^2(\phi)$"> .
+For <!-- MATH
+ $\delta \rightarrow i \infty$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1255.gif"
+ ALT="$\delta \rightarrow i \infty$"> the maximal cross section is reached,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{{\mbox{\tiny T,max}}}(k,\phi) \; = \;
+        \frac{4}{k} \cos^2(\phi) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:maxxsec"></A><IMG
+ WIDTH="376" HEIGHT="42" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1256.gif"
+ ALT="\begin{displaymath}
+\sigma_{{\mbox{\tiny T,max}}}(k,\phi) \; = \;
+\frac{4}{k} \cos^2(\phi) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which gives effective classical area <!-- MATH
+ $a_{{\mbox{\tiny eff}}}= \lambda_{{\mbox{\tiny F}}}/2$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1257.gif"
+ ALT="$a_{{\mbox{\tiny eff}}}= \lambda_{{\mbox{\tiny F}}}/2$">.
+This is analogous to the fact that in 3D
+the effective area of an arbitrarily-small
+electromagnetic dipole aerial can be of
+order <IMG
+ WIDTH="22" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1258.gif"
+ ALT="$\lambda^2$"> [<A
+ HREF="node161.html#jackson">105</A>].
+To an observer on the left side who was able to `see' the
+electron waves living in the energy range <IMG
+ WIDTH="38" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1259.gif"
+ ALT="$e \, \delta V$">
+responsible for conductance,
+the QPC would stand out as a `black dot' of size <!-- MATH
+ $\sim \lambda_{{\mbox{\tiny F}}}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1260.gif"
+ ALT="$\sim \lambda_{{\mbox{\tiny F}}}$">
+against the surrounding uniform `grey' thermal luminosity reflected
+in the vertical wall mirror.
+
+<P>
+The associated maximum conductance is found easily
+using (<A HREF="node98.html#eq:maxxsec">7.21</A>) and (<A HREF="node95.html#eq:condgen">7.1</A>) to be
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G_{{\mbox{\tiny max}}} \; = \;   \frac{2e^2}{\hbar},
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:maxg"></A><IMG
+ WIDTH="330" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1261.gif"
+ ALT="\begin{displaymath}
+G_{{\mbox{\tiny max}}} \; = \; \frac{2e^2}{\hbar},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+the universal quantum of conductance (for 2 spin channels),
+independent of the size of the QPC hole, even for an
+<EM>arbitrarily small</EM> hole.
+This universal resonant-tunelling maximum conductance
+was first found numerically
+[<A
+ HREF="node161.html#xue">205</A>,<A
+ HREF="node161.html#kalm">110</A>] (also see [<A
+ HREF="node161.html#been">20</A>]); however our system
+differs from those of Refs.&nbsp;[<A
+ HREF="node161.html#xue">205</A>,<A
+ HREF="node161.html#kalm">110</A>] because the resonance does not
+involve transmission though an <EM>isolated</EM>
+(zero-dimensional) quantum dot.
+The dramatic increase over the bare QPC conductance Eq.(<A HREF="node97.html#eq:slitcond">7.16</A>)
+runs counter to the naive classical expectation, namely
+that the reflector would <EM>decrease</EM> the left-to-right flow of electrons
+because it sends back into the QPC particles which would otherwise
+exit to the right.
+
+<P>
+How do we know that it is possible to build a resonant geometry
+which corresponds to <!-- MATH
+ $\delta \rightarrow i \infty$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1255.gif"
+ ALT="$\delta \rightarrow i \infty$">?
+The reflector can be described by <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1262.gif"
+ ALT="$r$">, the amplitude with which it returns
+an outgoing p-wave back to the QPC as an incoming p-wave.
+If <!-- MATH
+ $|r|^2 = 1 - |t_{11}|^2$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1263.gif"
+ ALT="$\vert r\vert^2 = 1 - \vert t_{11}\vert^2$">, where the p-wave transmission of the QPC
+is <IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1226.gif"
+ ALT="$t_{11}$"> [<I>e.g. </I>see Eq.(<A HREF="node97.html#eq:slittrans">7.17</A>)], then the p-wave channel
+becomes a 1D Fabry-Perot resonator with mirrors of matched
+reflectivity.
+Sweeping the round-trip phase then produces peaks of complete transmission
+(corresponding to complete p-wave absorption on the left side).
+The ratio of peak separation to peak width is the quality factor
+<!-- MATH
+ $Q \sim 1/|t_{11}|^2$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1264.gif"
+ ALT="$Q \sim 1/\vert t_{11}\vert^2$">.
+Such peaks, with heights much greater than the bare tunneling QPC conductance,
+were observed in the experiments
+of Katine <I>et al.</I>[<A
+ HREF="node161.html#kati97">112</A>].
+However, Eq.(<A HREF="node98.html#eq:maxg">7.22</A>) has not yet been tested quantitatively because
+of the difficulty of matching the Fabry-Perot reflectivities in a real
+2DEG experiment.
+Note that the maximum conductance (<A HREF="node98.html#eq:maxg">7.22</A>) also
+follows immediately from
+the Landauer formula, when we realize that there can be complete transmission
+of the incoming <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1265.gif"
+ ALT="$l{=}1$"> channel state (in Section&nbsp;<A HREF="node96.html#sec:pw">7.2</A>).
+
+<P>
+An interesting possibility arises when we realize (Appendix&nbsp;<A HREF="node159.html#ap:laplace">K</A>)
+that higher <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$"> channels are still <EM>slightly</EM> transmitted by the bare QPC,
+when <IMG
+ WIDTH="59" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img774.gif"
+ ALT="$ka \ll 1$">, even though they are increasingly evanescent.
+If the resonator has a high enough reflectivity for these modes, then
+additional Fabry-Perot conductance peaks will be produced [<A
+ HREF="node161.html#xue">205</A>,<A
+ HREF="node161.html#bryant">38</A>].
+The peaks may be extremely narrow, but can carry a full quantum of conductance
+because they can transmit another incoming <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$"> channel.
+By careful arrangement of the cavity, one or more of these
+peaks could be brought into conjunction with an already-existing
+<IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1265.gif"
+ ALT="$l{=}1$"> peak at the Fermi energy.
+(For instance, the <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1265.gif"
+ ALT="$l{=}1$"> and <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1266.gif"
+ ALT="$l{=}2$"> resonances are in different
+symmetry classes in Fig.&nbsp;<A HREF="node98.html#fig:cavity">7.3</A>
+so there can be an exact level crossing).
+Therefore, we have the surprising result that, in theory, a
+conductance of <IMG
+ WIDTH="72" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1267.gif"
+ ALT="$(2e^2/h) n$"> can pass through
+an arbitrarily small QPC hole if <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$"> resonances (from <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$"> different channels)
+coincide at the Fermi energy.
+However, due to their extremely small width, such large conductance
+peaks are unlikely to be observable in a real mesoscopic tunneling QPC
+due to finite dephasing length and finite-temperature smearing [<A
+ HREF="node161.html#been">20</A>].
+
+<P>
+Finally, we should not overlook the fact that our expressions for
+partial cross sections are a factor of 4 greater
+than those conventionally arising in 2D scattering theory
+from a radial potential [<A
+ HREF="node161.html#landauqm">128</A>,<A
+ HREF="node161.html#lapidus">132</A>,<A
+ HREF="node161.html#adhikari">3</A>,<A
+ HREF="node161.html#chanthesis">43</A>],
+because we are measuring cross section on the reflective boundary of a
+semi-infinite half plane.
+For instance, the maximum inelastic partial cross section for a single
+channel in free space is <!-- MATH
+ $\sigma_r = 1/k$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1268.gif"
+ ALT="$\sigma_r = 1/k$">
+[<A
+ HREF="node161.html#landauqm">128</A>,<A
+ HREF="node161.html#lapidus">132</A>,<A
+ HREF="node161.html#adhikari">3</A>,<A
+ HREF="node161.html#chanthesis">43</A>], compared to our
+maximum `inelastic'
+cross section per channel Eq.(<A HREF="node98.html#eq:maxxsec">7.21</A>).
+Similarly, the maximum elastic result in free space is <!-- MATH
+ $\sigma_e = 4/k$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1269.gif"
+ ALT="$\sigma_e = 4/k$">,
+compared to our maximum (normal-incidence) `elastic' cross section
+per channel <!-- MATH
+ $\sigma_{{\mbox{\tiny R,max}}} = 16/k$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1270.gif"
+ ALT="$\sigma_{{\mbox{\tiny R,max}}} = 16/k$">.
+This latter case occurs when <!-- MATH
+ $\delta = (\mbox{integer} + \mbox{\small$\frac{1}{2}$}) \pi$
+ -->
+<IMG
+ WIDTH="144" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1271.gif"
+ ALT="$\delta = (\mbox{integer} + \mbox{\small$\frac{1}{2}$}) \pi$">.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:multi"></A><A NAME="13294"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.4:</STRONG>
+
+<B>a)</B>
+An attempt to increase conductance through a single channel by multiple
+connections feeding from the reservoirs.
+All channels are single-mode and sufficiently long that the evanescent
+tunneling of higher modes is negligible.
+<B>b)</B>
+An illustrative hard-walled exponential horn system which has differing
+acceptance angles on each side:
+very narrow on the left, and very wide on the right.
+Such a mesoscopic 2DEG system would exhibit symmetric
+conductance, however, in an atom beam context the conductance
+can become unsymmetric.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="388" HEIGHT="467" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1272.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_qpc/multi.eps,width=0.7\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1335"
+  HREF="node99.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1333"
+  HREF="node94.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1327"
+  HREF="node97.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1336"
+  HREF="node99.html">What is the maximum</A>
+<B> Up:</B> <A NAME="tex2html1334"
+  HREF="node94.html">Chapter 7: Conductance of</A>
+<B> Previous:</B> <A NAME="tex2html1328"
+  HREF="node97.html">Idealized `slit' aperture point</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,353 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>Math 126 @ Dartmouth College</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" 
+      LINK="#0055AA"
+      VLINK="#0055AA"
+      ALINK="#FF0000">
+
+
+<CENTER>
+<H1>Math 126: Numerical analysis for PDEs and wave scattering</H1>
+
+<h2><a href="http://math.dartmouth.edu/~ahb">Alex Barnett</a>, Winter
+2012, Tu and Th 10:00-11:50am 
+(10A), 
+Kemeny 
+201<h2>
+</CENTER>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=10 WIDTH="100%" BGCOLOR="#BFDAC4"
+NOSAVE>
+<tr>
+<td align=left><a href="https://www.math.dartmouth.edu/scatt.jpg"><img src="https://www.math.dartmouth.edu/scatt.jpg" height=270></a>
+<p>scattering from sound-soft obstacle in 2D
+</td>
+<td width=20%>
+<font size=+2>
+<ul>
+<!--<li><a href="index.html#sched">Schedule &amp; worksheets</a>-->
+<li><a href="index.html#sched">Schedule</a>
+<li><a href="https://www.math.dartmouth.edu/hw.html">Homework</a>
+<li><a href="https://www.math.dartmouth.edu/res.html">Resources</a>
+<li><a href="index.html#web">Student websites</a>
+<li><a href="index.html#proj">Final projects</a>
+</font>
+<td>
+<font size=+2>R</font>apid progress in computer power and numerical algorithms in
+recent decades has revolutionized science and technology.
+The Laplace equation (describing steady-state diffusion, heat flow,
+electrostatics) and Helmholtz equation (linear waves, acoustics,
+electromagnetics, optics, quantum) are linear PDE boundary value 
+problems,
+ubiquitous in modeling the real world. They may be solved numerically by
+recasting the problem onto the boundary; this is more efficient at short
+wavelengths (and easier to code) than standard discretization methods. 
+We will lay a foundation in numerical analysis, as well as some in PDEs,
+and build codes, study their errors, and later
+explore phenomena in wave scattering and so-called <i>fast algorithms</i>.
+You will learn some of the deep mathematics required to understand
+the success and efficiency of modern algorithms.
+<a href="https://www.math.dartmouth.edu/2008flyer.pdf">Flyer</a> from previous incarnation.
+</table>
+
+<p>
+<font size=+1><b>Admin</b>:</font> Office hours (Kemeny 206): Tu 2-3 pm, Th 2:30-3:30pm, F 2-3pm, or by arrangement.
+X-hour is 3pm Wed; some will be used for coding workshops with your laptops
+(but you won't need laptops in regular lectures).
+The grading scheme will be 65% HW and 35% project.
+
+<p><font size=+1><b>Homework</b>:</font>
+You will do around 7 weekly homeworks, due on Sunday night (I start grading Monday 9am), handed out or emailed the Thursday/Friday over a week before. HW will be a mixture of
+theory, and coding numerical experiments and understanding the results.
+Writing intelligible and documented code is a useful skill that we will
+be emphasizing.
+I encourage you to discuss with each other (but see <a href="index.html#honor"Honor code</a> below).
+In the interests of you learning some tools for scientific collaboration, I want you to post your HW online on your website (see <a href="https://www.math.dartmouth.edu/res.html">Resources</a>). I am giving you time in the first few days to do this.
+You can write by hand your HW, and scan it; however a much better way, which
+you will rapidly get used to, is to typeset it in LaTeX (see <a href="https://www.math.dartmouth.edu/res.html">Resources</a>). This is an invaluable skill, so please dive in.
+
+<p><font size=+1><b>Project</b>:</font>
+In the last part of the course you will also do a project building upon the
+course material; see <i>topic ideas <a
+href="https://www.math.dartmouth.edu/projects.txt">list</a></i>, and also
+<a href="http://math.dartmouth.edu/~m116f08#proj">previous student projects</a>.
+Projects may be analysis-based (presenting theorems), or developing and demonstrating numerical code, or a mixture of both.
+Come and talk if you have your own ideas.
+Since it is a graduate level course, projects will be individual.
+You will present your projects with a short in-class talk
+on Tuesday March 6 and Wed March 7.
+Final project writeups (in LaTeX, with which you will be very familiar by then) due 5pm Fri March 9.
+
+<a name="honor"></a>
+<p><font size=+1><b>Honor Principle</b>:</font> For homework and projects, 
+you are encouraged to discuss with others, but must acknowledge your
+collaborators (or other sources such as textbooks, papers, or the web), and
+must write up your work in your own words, and with your own
+understanding.  If you collaborate on pieces of your code, this must
+be stated.  Any copying (electronic or otherwise) of another person's
+solutions, in whole or in part, is a violation of the Honor Code.
+
+<p><font size=+1><b>Books</b>:</font>
+The content I wish to teach is distributed across several books.
+Thus there is no single required book, but I will suggest readings from the following which will be on 4-hr reserve at Baker Library.
+We may scan some small portions.
+Any serious student of numerical computing should consider buying the first two.
+<ul>
+<li>L. N. Trefethen and D. Bau, Numerical Linear Algebra (SIAM, 1997)
+$57.50 [NLA].
+<br>
+This popular book explains in beautiful style the algorithms for linear systems, eigenvalues, etc, used every day by thousands of scientists worldwide.
+<li> R. Kress, Numerical Analysis, Graduate Texts in Mathematics 181 (Springer, 1998) $75. [NA]
+<br>
+Clear, concise, analysis-leaning overview of the whole subject. Excellent
+for integral equations, poorer for linear systems.
+<li> R. Kress, Linear Integral Equations, 2nd Edition (Applied Mathematical Sciences vol. 82, Springer-Verlag, 1999). [LIE]
+<br>A standard graduate-level text including background on functional analysis.
+<li>D. Colton. Partial Differential Equations: An Introduction (Dover 2004 edition). [C]
+<br>Advanced undergrad or first-year grad level PDE book with some analysis done with elementary tools. Unusually good for Helmholtz equation and potential theory.
+<li>L. N. Trefethen, Spectral Methods in MATLAB (SIAM, 2000). [SM]
+</ul>
+Other key books are:
+<ul>
+<li>D. Colton and R. Kress, Inverse Acoustic and Electromagnetic Scattering Theory, 2nd Ed. (Springer, 1998).
+<li>L. N. Trefethen, <a href="http://www2.maths.ox.ac.uk/chebfun/ATAP/ATAPJune11.pdf">Approximation Theory and Approximation Practice</a> (draft, 2011) [ATAP]
+<br>
+Beautiful key ideas of differentiation, interpolation, quadrature on grids, with exponential convergence. Elegant 1-page Matlab codes.
+</ul>
+Also see <a href="https://www.math.dartmouth.edu/res.html">papers and other resources</a>
+
+<p><font size=+1><b>Background</b>:</font> While formally you could
+do well with only Math 22/24 and 23 and an introductory programming course (such as CS 1 or the old CS5), you will benefit from having taken at
+least one of the following: Math 46, Math 35/63, Math 26/Engs 91.
+You may have to do some background reading - please let me know what areas you
+are stuck on.
+
+<p><font size=+1><b>Computing languages</b>:</font>
+I prefer, and suggest, that you use MATLAB (see
+<a href="https://www.math.dartmouth.edu/res.html">Resources</a> for tutorials) or its free variant
+<a href="http://www.gnu.org/software/octave/"><code>octave</code></a>.
+It is a wonderful and efficient environment, created by numerical
+analysts (founded: Cleve Moler) for exactly our kind of work.
+However, if you are really committed to another language, I won't
+penalize you for it, as long as your code is clear, well commented, and works!
+
+<p>
+<font size=+1><b>Disabilities</b>:</font> 
+I encourage any students with disabilities, including "invisible" disabilities such as chronic diseases and learning disabilities, to discuss appropriate accommodations with me, which might help you with this class, either after class or during office hours. Please do this by the first 2 weeks of class. Dartmouth College has an active program to help students with disabilities, and I am happy to do whatever I can to help out, as appropriate.
+See <a href="http://www.dartmouth.edu/home/about/accessibility.html">Accessibility</a> for Dartmouth's information on this.
+
+
+
+<a name="sched"></a>
+<h3 style="background:rgb(150,255,200)"><font 
+size=+2>S</font>chedule, topics, readings, worksheets, codes</h3>
+
+<p>
+<i>Lecture notes are my own rough scribbles which should not however replace your own note-taking. Brackets [NLA] etc refer to 
+books as listed above.</i>
+
+<br>
+Here is a <a href="https://www.math.dartmouth.edu/m126_lecs.pdf">complete set of scanned lecture
+notes for Math 126, Winter 2012</a> (4MB; does not include worksheets, example
+codes or homeworks).
+
+<p>
+<table border=0 cellspacing=4 cellpadding=0 width="100%" bgcolor="#e0e0ff" nosave valign=top>
+<tr><th>week<th>date<th>readings &amp; notes<th>
+topics<th>demos &amp; codes<th>worksheets
+
+<tr> <td> 1<td>Jan 5 Th<td>website,
+<a href="https://www.math.dartmouth.edu/lec1.pdf">lec 1</a>,
+<a href="https://www.math.dartmouth.edu/m126.pdf">intro</a><td>
+Overview linear PDEs, linear systems, Vandermonde instability.<td>
+<a href="https://www.math.dartmouth.edu/vandermonde.m">vandermonde</a>: shows numerical 
+rank of said matrix which we proved was full rank
+<td>
+
+<tr><td> <td>10 Tu<td><a href="https://www.math.dartmouth.edu/lec2.pdf">lec 2</a>, [NLA] Ch. 1-5;
+if you need it:
+<a href="https://www.math.dartmouth.edu/Kalman2002notes_SVD.pdf">Kalman notes on the SVD</a>,
+<a href="http://people.maths.ox.ac.uk/wendland/teaching/mt201011/">Wendland
+num lin alg</a> parts 1,2 only
+<td>
+Orthogonality, the SVD, the four fundamental spaces, numerical rank.
+<td>
+<a href="https://www.math.dartmouth.edu/ellipse.m">ellipse</a>: shows action of 2x2 
+matrix on unit ball
+<td><a href="https://www.math.dartmouth.edu/singvals.pdf">singvals</a>
+
+<tr><td> <td>11 W <i>X-hr</i><td>
+<a href="https://www.math.dartmouth.edu/res.html">Resources</a><td>
+LaTeX, HTML, and Matlab review
+<td><td><a href="https://www.math.dartmouth.edu/matlabtaylor.pdf">matlabtaylor</a> (<a href="https://www.math.dartmouth.edu/matlabtaylor_sol.m">solution</a>)
+
+<tr><td> 2<td>12 Th<td>
+<a href="https://www.math.dartmouth.edu/lec3.pdf">lec 3</a>, [NLA] Ch. 12-14; <a href="http://en.wikipedia.org/wiki/Floating_point">this</a>
+<td>
+Condition number, floating point representation
+<td><td><a href="https://www.math.dartmouth.edu/relcondnum.pdf">relcondnum</a>
+
+<tr><td><td>17 Tu<td> <a href="https://www.math.dartmouth.edu/lec4.pdf">lec 4</a>, [NLA] Ch. 14-15; [NA] Ch. 8.1
+<td>Stability and backwards stability of algorithms.
+Polynomial interpolation on intervals.
+
+<tr><td>3<td>19 Th<td> <a href="https://www.math.dartmouth.edu/lec5.pdf">lec 5</a>, [SM Ch. 5], [NA] Ch. 9.1;
+ATAP Ch. 2, 12, 13, 14<td>
+L-infinity interpolation error, analyticity,
+Chebyshev nodes and electrostatics in the plane.
+Interpolatory quadrature.
+<td>
+<a href="https://www.math.dartmouth.edu/charges_polynomial.m">charges_polynomial</a>: contours
+of size of log of monic polynomial q<sub>n+1</sub> in C for
+two node spacings; 
+<a href="https://www.math.dartmouth.edu/charges_equilibrate.m">charges_equilibrate</a>: relaxation
+animation towards equilibrium for charges on an interval
+<td><a href="https://www.math.dartmouth.edu/interp.pdf">interp</a>
+
+<tr><td><td>24 Tu<td><a href="https://www.math.dartmouth.edu/lec6.pdf">lec 6</a>, [NA] Ch 9.2-3<td>
+Composite trapezoid, error bounds. Convergent quadratures
+and the Banach-Steinhaus theorem (See Ex 10.1 in [LIE]).
+Gaussian quadrature.
+<td>
+<td><a href="https://www.math.dartmouth.edu/gauss_n=2.pdf">gauss_n=2</a>
+
+<tr><td>4<td>26 Th<td>lec <a href="https://www.math.dartmouth.edu/lec7_gaussian.pdf">7.1</a>,
+<a href="https://www.math.dartmouth.edu/lec7_periodic.pdf">7.2</a>; [NA] Ch. 9.4;
+review <a href="https://www.math.dartmouth.edu/Hemion_notes_complex_analysis.pdf">complex analysis</a>
+<td>
+Gaussian quadrature. Periodic trapezoid rule, exponential
+convergence rate proof for real analytic functions.
+<td><td>
+
+<tr><td><td>31 Tu<td><a href="https://www.math.dartmouth.edu/lec8.pdf">lec8</a>, <a href="https://www.math.dartmouth.edu/Kress1998book_Ch12start.pdf">[NA] 12.3</a>, [Atkinson] Ch 1.1-3.
+<td> Integral Equations, Nystrom method.
+
+<tr><td><td>Feb 1 W <i>X-hr</i><td>-<td>
+Testing and debugging codes: <code><a href="https://www.math.dartmouth.edu/buggycodes.m">buggycodes.m</a>
+</code>,
+and then <code><a href="https://www.math.dartmouth.edu/buggycodes_debugged.m">buggycodes_debugged.m</a></code>.
+Spot the differences (best done by <code>xxdiff</code> or other tool).
+</code>
+
+<tr><td>5<td>2 Th<td>
+<a href="https://www.math.dartmouth.edu/lec9.pdf">lec9</a>, [NA] 12.1-2; [LIE] Ch. 6.1
+<td>Compact operators, the Fredholm Alternative.
+Laplace's equation, fundamental solution.
+<td>
+<td><a href="https://www.math.dartmouth.edu/greenident.pdf">greenident</a>
+
+<tr><td><td>7 Tu<td><a href="https://www.math.dartmouth.edu/lec10.pdf">lec10</a>,
+[LIE] Ch. 6.1
+<td>Green's representation formula,
+properties of harmonic functions. Boundary parametrization.
+
+<tr><td>6<td>9 Th<td><a href="https://www.math.dartmouth.edu/lec11.pdf">lec11</a>, <a href="https://www.math.dartmouth.edu/Kress1999book_Linear_Integral_Eqns_Ch6.pdf">[LIE] Ch.6</a>; [C] Ch. 5
+<td>
+Layer potentials, jump relations, boundary integral equation for
+interior Dirichlet Laplace BVP.
+<td>
+Example code for HW5 #4: <a href="https://www.math.dartmouth.edu/dlp_bvp_simple.m">dlp_bvp_simple</a>.
+Note the use of vectorization to fill Nystrom matrix with no loops.
+
+<tr><td><td>14 Tu<td><a href="https://www.math.dartmouth.edu/lec12.pdf">lec12</a>;
+[LIE] 6.3, 6.4<td>
+Rigorous proof of double-layer value jump relation. Interior Neumann BVP and
+non-uniqueness.
+
+<tr><td>7<td>16 Th<td><a href="https://www.math.dartmouth.edu/lec13.pdf">lec13</a>;
+[C] 6.3, 6.5<td>
+Exterior Dirichlet BVP: ghost of the complementary BVP haunting the BIE.
+Helmholtz equation, scattering of time-harmonic scalar waves.
+
+<tr><td><td>21 Tu<td><a href="https://www.math.dartmouth.edu/lec14.pdf">lec14</a>;
+[CK] 3.2.<td>
+Hankel and Bessel functions. Eigenvalues of the operator 2D, and the interior
+Neumann and Dirichlet eigenvalue problems for the Laplacian.
+Avoiding interior resonances in time-harmonic scattering:
+CFIE (Brakhage-Werner, Leis, Panich).
+Low-rank property of off-diagonal blocks of interaction matrix.
+<td>
+<code><a href="https://www.math.dartmouth.edu/dlp_eigvalsweep.m">dlp_eigvalsweep.m</a></code>
+for k-dependence of eigenvalues of 2D operator.
+
+<tr><td>8<td>23 Th<td><a href="https://www.math.dartmouth.edu/lec15.pdf">lec15</a>;
+<a href="https://www.math.dartmouth.edu/Greengard1987JCP_Rokhlin_FMM_Coulomb_algorithm.pdf">Greengard-Rokhlin 1987</a><td>
+Fast algorithms (fast application of 2D Laplace kernel matrix):
+multipole expansions, errors, simple O(N<sup>3/2</sup>) 1-level scheme.
+
+<tr><td><td>28 Tu<td><a href="https://www.math.dartmouth.edu/lec16.pdf">lec16</a>; Greengard-Rokhlin 1987<td>
+Fast algorithms II: multipole-to-local operators,
+O(N<sup>4/3</sup>) code using M2L. Hierarchical schemes: treecodes and FMM,
+adaptivity.
+
+<tr><td><td>29 W <i>X-hr</i><td><a href="https://www.math.dartmouth.edu/res.html#latex">this</a><td>Using Beamer and LaTeX for making slides for your talks.
+
+<tr><td>9<td>Mar 1 Th<td><a href="https://www.math.dartmouth.edu/lec17.pdf">lec17</a>;
+<a href="https://www.math.dartmouth.edu/Kress1991MCM_BIE_acoustic_scatt_numerics_review.pdf">Kress '91</a>,
+[LIE] Ch.8; [CK] Ch.2.
+<td>
+Advanced topics: Product quadratures, deriving the weights, in particular for
+log-singular kernels.
+Introduction to Sobolev spaces.
+Calderon identities and projectors for Helmholtz BIE operators.
+
+<tr><td><td>6 Tu<td>-<td>
+<i>In-class project presentations</i>
+
+<tr><td><td>7 W <i>X-hr</i><td>-<td>
+<i>In-class project presentations continued</i>
+
+</table>
+
+
+<a name="web"></a>
+<h3 style="background: rgb(150,255,200)"><font size=+2>S</font>tudent 
+homework websites</h3>
+<ul>
+<li><a href="http://www.cs.dartmouth.edu/~rias/m126w12">Taylor C.</a>
+<li><a href="http://math.dartmouth.edu/~jhein/">Jeff Hein</a>
+<li>Vipul Kakkad
+<li>Katie Kinnaird
+<li><a href="http://www.dartmouth.edu/~bradnelson/assignments.html">Brad Nelson</a>
+<li><a href="http://www.dartmouth.edu/~linzhao">Lin Zhao</a>
+</a>
+</ul>
+
+
+<a name="proj"></a>
+<h3 style="background: rgb(150,255,200)"><font size=+2>F</font>inal
+student projects</h3>
+<i>Project topic ideas <a 
+href="https://www.math.dartmouth.edu/projects.txt">list</a></i>, and please see
+<a href="http://math.dartmouth.edu/~m116f08#proj">previous student projects</a> and <a href="http://math.dartmouth.edu/~m116w06#proj">previouser ones</a>.
+Final writeups due end of Fri March 9.
+Course grades based on 65% HW, 35% project.
+
+<ul>
+<li>Taylor C.: <a href=""><i>2-level tree-code</i></a>
+<li>Jeff Hein: <a href="https://www.math.dartmouth.edu/Hein_writeup.pdf"><i>Linear algorithm for Gaussian quadrature</i></a>
+<li>Vipul Kakkad: <a href="https://www.math.dartmouth.edu/Kakkad_writeup.pdf"><i>Adaptive collocation for boundary integrals in two dimensions using smooth reparameterization</i></a>
+<li>Katie Kinnaird: <a href=""><i>Clenshaw-Curtis vs Gauss quadrature</i></a>
+<li>Brad Nelson:  <a href="https://www.math.dartmouth.edu/Nelson_writeup.pdf"><i>Inverse scattering</i></a>,
+and optimization movies:
+<a href="https://www.math.dartmouth.edu/Nelson_movies/movie3.avi">trefoil</a>,
+<a href="https://www.math.dartmouth.edu/Nelson_movies/movie5.avi">5-foil</a>,
+<a href="https://www.math.dartmouth.edu/Nelson_movies/movie6_bad.avi">6-foil failing</a>, 
+<a href="https://www.math.dartmouth.edu/Nelson_movies/movie6_ok.avi">6-foil ok</a>,
+<a href="https://www.math.dartmouth.edu/Nelson_movies/noise.mp4">increasing noise</a>.
+<li>Lin Zhao:  <a href="https://www.math.dartmouth.edu/Zhao_project_final.pdf"><i>A fast multipole method to evaluate the self-interaction of points</i></a>
+</a>
+</ul>
+
+<ul>
+
+</ul>
+
+<p><img src="https://www.math.dartmouth.edu/line.gif" width=100%>
+
+</BODY>
+</HTML>

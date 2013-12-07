@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>m8f99hw19</TITLE>
+<META NAME="description" CONTENT="m8f99hw19">
+<META NAME="keywords" CONTENT="m8f99hw19">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="m8f99hw19.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+
+<P>
+<B>Assignment 19: More matrix equations and inverses</B>
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Show that
+
+<!-- MATH
+ $\begin{pmatrix}1&2&3&4&5\\6&7&8&9&1\\2&3&4&5&6\\7&8&9&1&2\end{pmatrix}
+\begin{pmatrix}
+    x_1\\x_2\\x_3\\x_4\\x_5
+  \end{pmatrix} =
+  \begin{pmatrix}
+    b_1\\b_2\\b_3\\b_4
+  \end{pmatrix}$
+ -->
+<IMG
+ WIDTH="277" HEIGHT="133" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img1.gif"
+ ALT="$ \begin{pmatrix}1&amp;2&amp;3&amp;4&amp;5\\ 6&amp;7&amp;8&amp;9&amp;1\\ 2&amp;3&amp;4&amp;5&amp;6\\ 7&amp;8&amp;9&amp;1&amp;2\end{pmatrix}\begi...
+...\ x_4\\ x_5
+\end{pmatrix} =
+\begin{pmatrix}
+b_1\\ b_2\\ b_3\\ b_4
+\end{pmatrix}$">
+is solvable for all choice of <IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img2.gif"
+ ALT="$ b_i$">.  Hint: the
+  row-reduced echelon form of the <IMG
+ WIDTH="47" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img3.gif"
+ ALT="$ 4\times 5 $">
+matrix is 
+<!-- MATH
+ $R =
+\begin{pmatrix}1&0&-1&0&0\\0&1&2&0&0\\0&0&0&1&0\\0&0&0&0&1\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="203" HEIGHT="110" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img4.gif"
+ ALT="$ R =
+\begin{pmatrix}1&amp;0&amp;-1&amp;0&amp;0\\ 0&amp;1&amp;2&amp;0&amp;0\\ 0&amp;0&amp;0&amp;1&amp;0\\ 0&amp;0&amp;0&amp;0&amp;1\end{pmatrix}$">.
+
+<P>
+Moreover, show that for each choice of 
+<!-- MATH
+ $\begin{pmatrix}
+b_1\\b_2\\b_3\\b_4
+  \end{pmatrix}$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="110" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img5.gif"
+ ALT="$ \begin{pmatrix}
+b_1\\ b_2\\ b_3\\ b_4
+\end{pmatrix}$">, there are infinitely many solutions.
+<DT>2.
+<DD>Find all 
+<!-- MATH
+ $\begin{pmatrix} b_1\\b_2\\b_3\\b_4\\b_5
+\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="133" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img6.gif"
+ ALT="$ \begin{pmatrix}b_1\\ b_2\\ b_3\\ b_4\\ b_5
+\end{pmatrix}$">
+for which 
+
+<P>
+
+<!-- MATH
+ $\begin{pmatrix}1&0&0&0\\2&0&0&0\\0&3&0&0\\0&4&0&0\\0&0&5&0\end{pmatrix}
+\begin{pmatrix}
+x_1\\x_2\\x_3\\x_4
+  \end{pmatrix} =
+  \begin{pmatrix}
+    b_1\\b_2\\b_3\\b_4\\b_5
+  \end{pmatrix}$
+ -->
+<IMG
+ WIDTH="252" HEIGHT="133" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img7.gif"
+ ALT="$ \begin{pmatrix}1&amp;0&amp;0&amp;0\\ 2&amp;0&amp;0&amp;0\\ 0&amp;3&amp;0&amp;0\\ 0&amp;4&amp;0&amp;0\\ 0&amp;0&amp;5&amp;0\end{pmatrix}\be...
+...\ x_4
+\end{pmatrix} =
+\begin{pmatrix}
+b_1\\ b_2\\ b_3\\ b_4\\ b_5
+\end{pmatrix}$">
+is solvable.
+  
+  Find all solutions to 
+<!-- MATH
+ $\begin{pmatrix}1&0&0&0\\2&0&0&0\\0&3&0&0\\0&4&0&0\\0&0&5&0\end{pmatrix}
+\begin{pmatrix}
+  x_1\\x_2\\x_3\\x_4
+  \end{pmatrix} =\begin{pmatrix}
+    1\\2\\3\\4\\5
+  \end{pmatrix}$
+ -->
+<IMG
+ WIDTH="246" HEIGHT="133" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img8.gif"
+ ALT="$ \begin{pmatrix}1&amp;0&amp;0&amp;0\\ 2&amp;0&amp;0&amp;0\\ 0&amp;3&amp;0&amp;0\\ 0&amp;4&amp;0&amp;0\\ 0&amp;0&amp;5&amp;0\end{pmatrix}\be...
+... x_2\\ x_3\\ x_4
+\end{pmatrix} =\begin{pmatrix}
+1\\ 2\\ 3\\ 4\\ 5
+\end{pmatrix}$">
+  
+<DT>3.
+<DD>Let 
+<!-- MATH
+ $A = \begin{pmatrix}1&0&1\\0&1&2\\1&2&4\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="87" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img9.gif"
+ ALT="$ A = \begin{pmatrix}1&amp;0&amp;1\\ 0&amp;1&amp;2\\ 1&amp;2&amp;4\end{pmatrix}$">.
+  
+  Use row reduction to find the inverse of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img10.gif"
+ ALT="$ A$">, and solve the matrix
+  equation 
+<!-- MATH
+ $A {\mathbf x}= \begin{pmatrix} 1\\2\\3
+\end{pmatrix}$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="87" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img11.gif"
+ ALT="$ A {\mathbf x}= \begin{pmatrix}1\\ 2\\ 3
+\end{pmatrix}$">
+  
+  both by using the inverse of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/extrahw/m8f99hw19/img10.gif"
+ ALT="$ A$">, and by row reducing the augmented
+  matrix.
+
+<P>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 8 Fall 1999</I>
+<BR><I>1999-10-29</I>
+</ADDRESS>
+</BODY>
+</HTML>

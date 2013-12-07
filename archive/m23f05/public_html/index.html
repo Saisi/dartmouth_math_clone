@@ -1,0 +1,342 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Math 23: Differential Equations, Dartmouth College, Fall 2005
+</title>
+</head>
+
+<body bgcolor = #ffffff>
+
+<center>
+<h1><font face="Helvetica">Math 23: Differential Equations
+- <font size=+2>FALL 2005</font></font></h1>
+<h2><a href="../../../~ahb/index.html">Alex Barnett</a>.<font size=+1>
+Bradley room 308, tel 6-3178, email: <code>m23f05 at math.dartmouth.edu</code>
+</font><font size=-2>(email to <code>ahb</code> will be ignored)</font></h2>
+</center>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=10 WIDTH="100%" BGCOLOR="#BFDAC4"
+NOSAVE>
+<tr>
+<td align=left><a href="http://www.math.dartmouth.edu/~m23f05/ripple.jpg"><img src="http://www.math.dartmouth.edu/~m23f05/ripple.jpg" height=300></a>
+<p>Water waves are described by PDEs
+</td>
+<td>
+<font size=+2>D</font>
+ifferential equation relate variables and their (possibly higher or partial)
+derivatives.
+These are universal in the sciences, with applications ranging from mechanics
+through quantum physics, ecology, biology, engineering, finance and
+statistics, to name a few fields. We will learn solution techniques,
+building on calculus from Math 3, 8, and 13, such as separation
+of variables, constant-coefficient methods, application of linear
+algebra to systems of equations, and Fourier series and transforms. 
+One goal of the course will be to apply these methods to differential
+equations arising in modeling the natural world.
+We will culminate with partial differential equations such as Laplace's
+equation, the wave and heat equations, and eigenvalue problems.
+
+<p>
+These days, computers enable accurate solution
+and visualization
+of differential equations, and this course has a key computer component
+(using Matlab, or any other equivalent package that you may prefer). 
+As well as improving your understanding, this will teach you valuable
+tools that have become the bread-and-butter of science and engineering.
+
+<p>
+Jump to... <a href="index.html#lec">Schedule</a> or <a href="index.html#res">Resources</a>
+</td>
+
+</tr>
+</table>
+
+<p>
+
+<p><b>Lectures</b>: MWF 10am, X-hour is Thurs 12 noon, location Bradley 105.
+I will announce X-hour usage each week; it will vary from
+displaced lectures to
+problem-solving to review, or empty. 4-5 quizzes will
+be given in lecture throughout the term.
+<i>Office hours 4-5pm Mon, 3-5pm Tues.</i>
+
+<a name="lec"></a>
+<h3><font size=+2>S</font>CHEDULE, READINGS and HOMEWORKS</h3>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" bgcolor="#e0e0ff"
+nosave>
+<tr><th>week<th>date<th>reading<th>homework (due following Wed) /
+daily or weekly topics / info
+<tr>
+<td> 1<td>Sep 21 W<td> website, 1.1-1.3 <td><a href="1.pdf">HW1</a>
+assigned. Direction fields, introduction to initial-value problems,
+starting with computing.
+<tr>
+<td><td>22 Th <i>X-hour</i><td><a href="http://www.math.dartmouth.edu/~m23f05/intro.m"><code>intro.m</code></a>
+<td>Overview of Matlab,
+important to get it set up and check simple commands work
+<tr>
+<td><td>23 F<td>2.1, 2.2<td> First-order linear ODEs, separation of variables
+<tr>
+<td><td>26 M<td>2.4, 2.6<td> Existence and uniqueness, exact equations.
+<tr>
+<td>2<td>28 W<td>2.7<td><a href="2.pdf">HW2</a> assigned (get <a href="http://www.math.dartmouth.edu/~m23f05/euler.m"><code>euler.m</code></a>).
+Introduction to numerical methods, Euler's method. (<i>displaced OHs 12-1</i>)
+<tr>
+<td><td>29 Th <i>X-hour</i><td><td>(free)
+<tr>
+<td><td>30 F<td>2.3, 2.5<td>Modeling and population models.
+<tr>
+<td><td>Oct 3 M<td>3.1<td>Second-order linear homogeneous ODEs: characteristic
+equation
+<tr>
+<td>3<td>5 W<td>3.2<td><a href="3r.pdf">revised HW3</a> assigned.
+<b><a href="http://www.math.dartmouth.edu/~m23f05/q1.pdf">Quiz 1</a></b> (on Ch.2, no Matlab;
+<a href="http://www.math.dartmouth.edu/~m23f05/1sol.pdf">solutions</a>).
+Fundamental solutions, Wronskian.
+<tr>
+<td><td>6 Th <i>X-hour</i><td><a href="2by2.pdf">
+this</a><td>(read crash course on 2-by-2 matrices in your own time)
+<tr>
+<td><td>7 F<td>3.3<td>Wronskian, linear independence
+<tr>
+<td><td>10 M<td>3.4<td>Complex roots
+<tr>
+<td>4<td>12 W<td>3.5, 3.6<td><a href="4.pdf">HW4</a> assigned
+(get <a href="http://www.math.dartmouth.edu/~m23f05/resonance.m">resonance.m</a>).
+Repeated roots, method of
+undetermined coefficients.
+<tr>
+<td><td>13 Th <i>X-hour</i><td>3.7<td>catch-up lecture on 2nd-order ODEs:
+variation of parameters
+<tr>
+<td><td>14 F<td>3.8<td>Mechanical, electrical vibrations. Links:
+<a href="http://www.math.ualberta.ca/~ewoolgar/java/Hooke/Hooke.html">
+unforced</a>, <a href="http://www.math.dartmouth.edu/~m23f05/~ahb/scia49/q.pdf">Q-factor</a>,
+forcing
+<a href="http://www.walter-fendt.de/ph14e/resonance.htm">1</a>,
+<a href="http://www.kettering.edu/~drussell/Demos/SHO/mass-force.html">2</a>,
+Tacoma videos
+<a href="http://www.physics2000.com/Pages/AbtTac.html">1</a>,
+<a href="http://hcgl.eng.ohio-state.edu/~ce406/Chapt6/Tacoma1.mpg">2</a>,
+<a href="http://hcgl.eng.ohio-state.edu/~ce406/Chapt6/Tacoma2.mpg">3</a>.
+<tr>
+<td><td>17 M<td>3.9<td>Driven oscillators and resonance. 
+<tr>
+<td>5<td>19 W<td>5.1, 5.2<td><a href="5.pdf">HW5</a> assigned.
+Power series, series solutions
+<tr>
+<td><td>20 Th <i>X-hour</i><td><td><b><a href="http://www.math.dartmouth.edu/~m23f05/q2.pdf">Quiz 2</a></b> (on Ch.3, no Matlab; <a href="http://www.math.dartmouth.edu/~m23f05/2sol.pdf">solutions</a>), and
+power series problems. Matlab <a href="http://www.math.dartmouth.edu/~m23f05/taylor.m">Taylor convergence</a>
+demo (calls <a href="http://www.math.dartmouth.edu/~m23f05/show_zser.m">show_zser</a>).
+
+<tr>
+<td><td>21 F<td>5.3, 5.4<td>
+series solutions about an ordinary point, Euler equations.
+<a href="http://mumie.iram.rwth-aachen.de/appletfactory/doc/mathlets/ExamplesOfPowerSeries.html">power series applet</a>.
+<tr>
+<td><td>24 M<td>7.1, 7.2<td>Systems of first-order equations,
+<a href="exist_unique.pdf">existence and uniqueness review</a>,
+review row reduction.
+<tr>
+<td>6<td colspan=3><b>Midterm</b>: Wednesday October 26th
+<a href="mid.pdf">in class</a>
+(on everything so far).<br>
+Also an open-book <a href="takeh.pdf">take-home part</a>
+(<a href="http://www.math.dartmouth.edu/~m23f05/takeh_sol.pdf">solutions</a>, codes:
+<a href="http://www.math.dartmouth.edu/~m23f05/takeh_1.m"><code>qu1.m</code></a>,
+<a href="http://www.math.dartmouth.edu/~m23f05/solve_fluid.m"><code>solve_fluid.m</code></a>,
+<a href="http://www.math.dartmouth.edu/~m23f05/damping.m"><code>damping.m</code></a>,
+<a href="http://www.math.dartmouth.edu/~m23f05/roots.m"><code>roots.m</code></a>).
+<tr>
+<td><td>28 F<td>7.3<td>Take-home exam due. Linear algebra review.
+<a href="http://merganser.math.gvsu.edu/m227/labs/lab9.html">Applet</a>
+to visualize <i>A</i><b>x</b>.
+<tr>
+<td><td>30 M<td>7.3<td>Eigenvalues, eigenvectors.
+<tr>
+<td>7<td>Nov 2 W<td>7.4, 7.5<td><a href="6.pdf">HW6</a> assigned.
+Homogeneous systems. Applets:
+<a href="http://math.rice.edu/~dfield/dfpp.html">click pplane</a>, and
+<a href="http://www.dartmouth.edu/~rewn/twoDimSys.html">local</a>
+<tr>
+<td><td>3 Th <i>X-hour</i><td>7.6<td>Handling unusual eigenvalues.
+<tr>
+<td><td>4 Fr<td><td><i>(no lecture: Alex out of town)</i>
+<tr>
+<td><td>7 M<td>7.8, 9.1<td>Phase portraits of linear systems.
+<tr>
+<td>8<td>9 W<td>9.2, 9.3<td><a href="7.pdf">HW7</a> assigned.
+Almost-linear systems,
+<a href="http://www.math.ubc.ca/~feldman/demos/pendulum.html">pendulum</a>.
+<tr>
+<td><td>10 Th <i>X-hour</i><td><td><b><a href="http://www.math.dartmouth.edu/~m23f05/q3.pdf">Quiz 3</a></b> (on Ch. 7, excluding 7.7
+and 7.9; <a href="http://www.math.dartmouth.edu/~m23f05/3sol.pdf">solutions</a>).
+<tr>
+<td><td>11 Fr<td>10.1<td>Boundary-value problems
+<tr>
+<td><td>14 M<td>10.2, 10.3<td><a href="http://www.falstad.com/fourier">Fourier
+series</a>,
+<a href="http://www.jhu.edu/~signals/fourier2/index.html">convergence</a>.
+<tr>
+<td>9<td>16 W<td>10.4<td><a href="8.pdf">HW8</a> assigned.
+<tr>
+<td><td>17 Th <i>X-hour</i><td><td>(Fourier review?)
+<tr>
+<td><td>18 Fr<td>10.5<td>Separation of variables. PDEs: heat equation,
+<a href="http://www.math.duke.edu/education/ccp/materials/engin/pdeintro/pde1.html">applet</a>, <a href="http://www.math.cornell.edu/~bterrell/h1/heat1.html">and</a>.
+<tr>
+<td><td>21 M<td>10.6, 10.7<td><a href="9.pdf">HW9</a> assigned.
+Heat w/ mixed boundary conditions.
+Wave equation,
+<a href="http://www.falstad.com/loadedstring">applet</a> (maximize # masses),
+<a href="http://www.calpoly.edu/~gepstein/NormalModes">odd modes</a> and <a href="http://www.math.ubc.ca/~feldman/demos/demo6.html">pulse</a>.
+<tr>
+<td colspan=4 align=center>........... 22 Tu - 27 Su <i>Thanksgiving recess</i>
+............. <tr>
+<td>10<td>28 M<td>10.8<td>Laplace's equation.
+<tr>
+<td><td>30 W<td><td><a href="http://www.math.dartmouth.edu/~m23f05/q4.pdf"><b>Quiz 4</b></a> (on Ch. 9.1-3
+and 10.1-6; <a href="http://www.math.dartmouth.edu/~m23f05/4sol.pdf">solutions</a>). HW9 due. In-class worksheet.
+<i>(no lecture: Alex out of town W and Th)</i> 
+<tr>
+<td><td>Dec 2 Fr<td><td>Review session (during usual lecture time).
+<a href="themes.pdf">Recurring themes</a> and <a href="choosing_method.pdf">Review choosing methods</a>.
+<tr>
+<td><td colspan=3><a href="fin.pdf"><b>Final Exam</b></a>:
+Monday December 5th at 8:00 am - 11:00 am, Bradley 102.
+Single sheet of notes allowed, no algebraic/graphing calculators.
+Note this exam will <i>not</i> be given early to accommodate travel plans.
+(<a href="http://www.math.dartmouth.edu/~m23f05/fin_sol.pdf">solutions</a>).
+</table>
+
+<p><b> Grade weighting</b>: Your overall grade will be computed
+according to HW 20%, Quizzes 15%, Midterm 25%, Final 40%. Note that although
+HW has a low weighting, it is the main chance you get to practise the material
+and get feedback.
+
+<p><b> Honor principle</b>. Exams: no help given or received. Homework:
+<i>no copying</i>, however collaboration on approaches to problems is
+encouraged. Write-ups must be done individually.
+
+<p><b> Homework</b>: I strongly encourage you to attempt the relevant homework
+problems <i>before the next lecture</i>.
+Leaving it all for Tuesday night is bad time management and
+risks you getting left behind in this fast-paced course.
+Please make your working/reasoning as clear as you can, write clearly,
+don't be scared of using lots of space on the page, and staple your work.
+<font color="red">Late homework will not be accepted</font>
+(unless by prior arrangement for a valid reason). Your lowest HW score will
+be dropped.
+
+<p><b>Special needs</b>: Let me know asap, certainly in first 2 weeks.
+Also stop by the Academic Skills Center in 301 Collis to register for support
+services.
+
+<p><b>Private tutoring</b>: Tutor Clearinghouse may have private
+one-on-one tutors available for Math 23. The tutors are recruited on
+the basis that they have done well in the subject, and are trained by
+the Academic Skills Center. If a student receives financial aid, the
+College will pay for three hours of tutoring per week. If you would
+like to have a tutor, please go to 301 Collis and fill out an
+application as early in the term as possible.
+
+<p><img src="http://www.math.dartmouth.edu/~m23f05/line.gif" width=100%>
+
+<a name="res"></a>
+<h3><font size=+2>R</font>ESOURCES</h3>
+
+<p>
+<h4>Theory</h4>
+<ul>
+<li>BOOKS:
+The only required one is <a href=""><i>Elementary Differential Equations and Boundary Value Problems</i> (8th edition)</a> by Boyce and DiPrima (Wiley, 2004),
+available at <a href="wheelock.html">Wheelock Books</a> in town.
+There is a <a href="http://jws-edcv.wiley.com/college/bcs/redesign/student/0,,_0471433381_BKS_2021____,00.html">
+Student companion site</a> with reviews, quizzes, Matlab and other files,
+by chapter.</br>
+Some other optional interesting-looking (but untried by myself) books include
+<a href="http://www.math.armstrong.edu/faculty/hollis/dewbvp/">Selwyn
+Hollis</a> and
+<a href="http://vig.prenhall.com/catalog/academic/product/0,1144,0131862367,00.html">John Polking <i>et al</i></a>.
+<li> Previous versions of <a href="http://www.math.dartmouth.edu/courses/by-course/index.phtml?s=CIN">this course</a> (scroll down to Math 23).
+<li> MIT's excellent OpenCourseWare
+<a href="http://ocw.mit.edu/OcwWeb/Mathematics/18-03Spring2004/CourseHome/index.htm">Diff Eq 18.03 course</a> including complete
+lectures, videos, worksheets.
+<li> Steve Zelditch's <a href="http://mathnt.mat.jhu.edu/zelditch/Teaching/F2005110.302/PDF%20Lectures/F2005.110.302.htm">ODE course</a> uses our book,
+and has his own lecture notes, practise exams, and HW solutions.
+<li>My <a href="2by2.pdf">1-page intro to 2-by-2 matrices</a>.
+<li> Rob Hladky's crash courses on
+<a href="../../m23f04/public_html/Terminology.pdf">basic ODE terminology</a> and
+<a href="../../m23f04/public_html/PartialDifferentiation.pdf">partial derivatives</a>.
+<li>Craig Tracy's elegant
+<a href="http://www.math.ucdavis.edu/~tracy/courses/math22B/math22B.html">
+course notes on ODEs</a>.
+<li> Russian solution techniques compendium <a href="http://eqworld.ipmnet.ru/">EqWorld</a> (go to ODEs, PDEs, etc).
+<li> Some <a href="http://www.math.armstrong.edu/faculty/hollis/DEmovies/">
+Quicktime movies</a> of ODE systems and applications.
+<li> John White's <a href="http://gershwin.ens.fr/vdaniel/Doc-Locale/Cours-Mirrored/Methodes-Maths/white/math/s0/outl539/outl539.html">Diff Eq course
+notes</a>.
+</ul>
+
+<p>
+<h4><a href="http://www.mathworks.com">MATLAB</a></h4>
+<ul>
+<li> Download from <a href="http://hydra.dartmouth.edu/matlab/downloads">Dartmouth</a>.
+<li> <a href="http://www.dartmouth.edu/~sas/">Susan A. Schwarz</a>
+(<a href="mailto:Susan.A.Schwarz@Dartmouth.EDU">email</a> her if you have
+Mac OS 10.2 or earlier for install CDs) can help with
+installation issues.
+<li> My 1-page introduction (from X-hr 9/22/05) geared towards this course,
+<a href="http://www.math.dartmouth.edu/~m23f05/intro.m"><code>intro.m</code></a>.
+<li> Self-guided courses from Dartmouth academic computing:
+<a href="http://www.dartmouth.edu/~rc/classes/intro_matlab">
+Introduction to Matlab</a>,
+<a href="http://www.dartmouth.edu/~rc/classes/matlab_prog">
+Programming in Matlab</a>, and 
+<a href="http://www.dartmouth.edu/~rc/classes/matlab_graphics">
+Introduction to Matlab Graphics</a>
+<li> Guide from
+<a href="http://www-h.eng.cam.ac.uk/help/tpl/programs/matlab.html">
+Cambridge University Engineering Department</a>.
+<li><a href="http://www.math.utah.edu/lab/ms/matlab/matlab.html">Simple intro</a> from Utah, Hany Farid's <a href="http://www.cs.dartmouth.edu/farid/tutorials/matlab.intro.html">intro reference</a>,
+and Bent Petersen's <a href="http://oregonstate.edu/~peterseb/mth355/docs/355f2001_matlab_intro_1.html">Matlab starter page</a>, Gilbert Strang's
+<a href="http://ocw.mit.edu/OcwWeb/Mathematics/18-311Principles-of-Applied-MathematicsSpring2003/StudyMaterials/index.htm">intro</a> at MIT.
+<li> You will need <code>dfield</code> to plot direction fields overlayed with
+ODE solutions:
+Download <a href="http://math.rice.edu/~dfield/matlab7/dfield7.m">
+Matlab version</a> (save to desktop). Similarly here
+is <a href="http://math.rice.edu/~dfield/matlab7/pplane7.m">
+pplane7.m</a> (save to desktop).
+Or you can use
+<a href="http://math.rice.edu/~dfield/dfpp.html">java applet</a> versions
+from your browser.
+</ul>
+
+
+<p>
+<h4>Other / Fun</h4>
+<ul>
+<li> <a href="http://www.sodaplay.com">Soda Constructor</a> allows you to
+explore normal modes in arbitrary 2D mass-spring systems (turn off gravity
+and friction for that). This is a coupled system of second-order linear
+ODEs, which could be reduced to a coupled system of first-order ODEs as in
+7.6 (example 3) in the book.
+It's also a lot of fun to play with and has its
+own online community!
+<li> <a href="http://www.seafriends.org.nz/oceano/waves.htm">Ocean waves</a>
+are described by PDEs too.
+<li> Much of my research actually involves solving a PDE eigenvalue problem
+arising from Laplace's equation, known as the
+<a href="../../../~ahb/nonres.html">Dirichlet eigenproblem</a>.
+</ul>
+
+
+
+<p><img src="http://www.math.dartmouth.edu/~m23f05/line.gif" width=100%>
+<br>
+
+
+</body>
+</html>
+
+
+

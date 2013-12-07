@@ -1,0 +1,414 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Math 50:  Probability and Statistical Inference, Dartmouth College, Winter 2006
+</title>
+</head>
+
+<body bgcolor = #efffef>
+
+<center>
+<h1><font face="Helvetica">Math 50:  Probability and Statistical Inference
+- <font size=+2>WINTER 2006</font></font></h1>
+<h2><a href="../../../~ahb/index.html">Alex Barnett</a>.<font size=+1>
+Bradley room 308, tel 6-3178, email: <code>m50w06 at math.dartmouth.edu</code>
+
+</font></h2>
+</center>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=10 WIDTH="100%" BGCOLOR="#BFDAC4"
+NOSAVE>
+<tr>
+<td align=left><a href="http://www.math.dartmouth.edu/~m50w06/infer.jpg"><img src="http://www.math.dartmouth.edu/~m50w06/infer_sm.jpg" height=250></a>
+<p>Bayesian solution of an inverse problem
+(<b>x</b> is parameters, <b>y</b> data)
+</td>
+<td>
+<font size=+2>U</font>ncertainty governs both the data analysis done by
+scientists, and judgments made by us all in our everyday lives.
+In this course we apply the mathematical techniques of (mainly continuous)
+probability to <i>estimation</i> and <i>hypothesis testing</i>,
+the formal methods by which we learn from noisy data,
+random samples, and other such uncertain real-world measurements.
+We culminate with linear regression, and introduce the powerful
+framework of Bayesian <i>inference</i>.
+<p>
+These days, computers enable accurate analysis and visualization
+of probability models, and this course has a small but key computer component
+(using Matlab, R, or your favorite package). 
+As well as improving understanding, you will learn valuable
+tools that have recently become the
+bread-and-butter of science (including social),
+economics, and medicine.
+<p>
+Jump to... <a href="index.html#lec">Schedule</a>, <a href="index.html#res">Resources</a>,
+or <a href="index.html#proj">Projects</a>
+</td>
+
+</tr>
+</table>
+
+<p><b>Lectures / OH</b>: Bradley 104, MWF 12:30-1:45pm (period 12). X-hr
+is 1-2pm Tues, and I imagine will be used about half the time 
+(I will give a few days notice) for:
+quizzes, computer help, catch-up, or review material. Do not schedule
+anything regular in this X-hr.
+Office hours are <b>2-3 M, 4-5 Tu, and 2-3 F</b>
+
+<p><b>Homework</b>: 8-9 weekly HW's due Wednesday at start of lecture.
+I strongly encourage you to attempt the relevant homework
+problems <i>before the next lecture</i>.
+Leaving it all for Tuesday night is bad time management and
+risks you getting left behind in this fast-paced course.
+Please make your working/reasoning as clear as you can, write clearly,
+don't be scared of using lots of space on the page, and staple your work.
+<font color="red">Late homework will not be accepted</font>
+(unless by prior arrangement for a valid, and exceptional, reason).
+Your lowest HW score will be dropped.
+
+<p><b>Exams</b>: Two non-cumulative closed-book
+midterms (these will avoid the usual midterm season), and one final exam
+(single sheet of notes allowed). No algebraic/graphing calculators.
+
+<p><b>Real-world Statistics</b>: Each week you should dig up a
+statistical example from the media, web, or other real-world source,
+post a paragraph to our <a href="comments/index.html">comments page</a>
+and be ready to explain it in class (I will pick on you, randomly of course!).
+If it relates to the week's content, all the better.
+As the course progresses we will be able to connect these to the material. 
+<i>Why do it?</i>
+<ol>
+<li>statistics is all around us, affects policies, our lives, etc.
+The discipline was <i>invented</i> to deal with these questions.
+<li>communication skills
+<li>project ideas for you and all of us
+<li>choose what interests you
+</ol>
+
+<b>Project</b>: I am keen to have you do a project in the last 1-2 weeks,
+worth at least 10%, in which you apply what you've learned to analyse
+real-world statistical data. Stay tuned.
+
+<p><b> Honor principle</b>. Exams: no help given or received. Homework/Project:
+<i>no copying</i>, however collaboration on problem techniques is
+encouraged. Write-ups must be done individually.
+
+<p><b> Grades</b>: Your overall grade will be computed
+according to HW 15%, Midterms 2*20%, Final+Project 40%,
+Real-world-statistics contributions 5%.
+Note that although
+HW has a low weighting, it is the main chance you get to practise the material
+and get feedback.
+Grades in Math 50 are not curved; other students' good performance
+will not hurt your grade. (So please work together and help each other out.) 
+
+
+<a name="lec"></a>
+<h3><font size=+2>S</font>CHEDULE, READINGS, LECTURE LINKS, and HOMEWORKS</h3>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" bgcolor="#e0e0ff"
+nosave>
+<tr><th>week<th>date<th>reading (LM4)<th>homework (due following Wed) /
+daily or weekly topics / info
+<tr>
+<td> 1<td>Jan 4 W<td> website, Ch.1, 2.1-3<td><a href="1.pdf">HW1</a>.
+Overview, learning from data (frequentist vs Bayesian) 
+<a href="http://www.math.uah.edu/stat/objects/experiments/BetaCoinExperiment.xhtml">Bayesian coin applet</a>
+<tr>
+<td><td>6 F<td>2.4-5<td>review conditional, independence.
+<tr>
+<td> <td> 7 Sa<td><td><i>special preemptive catch-up day!</i> (free)
+<tr>
+<td><td> 9  M <td>2.6-7, 3.2<td>Combinatorics, hypergeometric
+<tr>
+<td><td> 10 Tu <i>X-hr</i><td>3.3-4<td>(lecture to replace Sat)
+Binomial, random variables, PDF, cumulative distn func.
+<tr>
+<td> 2<td>11 W<td>3.5<td><a href="2.pdf">HW2</a>. Expectation values,
+including <a href="binomial.pdf">binomial and hypergeometric</a>.
+[2-4pm Susan A. Schwarz's <a
+href="http://diglib.dartmouth.edu/classes/calendar.php?MAIN_CALENDAR_ID=41">
+MATLAB intro tutorial</a>]
+<tr>
+<td><td>13 F<td>3.6<td>variance
+<tr>
+<td><td>16 M<td><td><i>(MLK holiday: no class)</i>
+<tr>
+<td><td>17 Tu <i>X-hr</i><td>3.7<td>(lecture to replace MLK class)
+joint densities, marginals
+<tr>
+<td> 3<td>18 W<td>3.8-9<td><a href="3.pdf">HW3</a>.
+Combining variables (convolution <a href="http://www.jhu.edu/~signals/convolve/">1</a>, <a href="http://www.ece.gatech.edu/research/ccss/education/Java/ASEE/convolve/convolve.html">2</a>), <a href="convolution.pdf">worksheet solutions</a>, mean and variance of such.
+<tr>
+<td> <td>20 F<td>3.10-11<td> order statistics, conditional pdfs.
+<tr>
+<td> <td>23 M<td>4.2<td> Poisson distribution (<a
+href="http://www.math.dartmouth.edu/~m50w06/poisson.m">poisson.m</a> code,
+<a href="http://www.iop.org/EJ/article/0031-9120/38/5/303/pe3503.pdf">
+process</a>, bus paradox
+<a href="http://www.teamquest.com/resources/gunther/bunching.shtml">1</a>,
+<a href="http://www.netlab.hut.fi/opetus/s38143/luennot/E_poisson.pdf">2</a>)
+<tr>
+<td><td>24 Tu <i>X-hr</i><td><td>(free)
+<tr>
+<td> 4<td>25 W<td>4.3<td><a href="4.pdf">HW4</a>.
+Normal (gaussian) distribution (<a href="http://davidmlane.com/hyperstat/z_table.html">standard normal cdf applet</a>).
+<tr>
+<td><td>27 F<td colspan=2><b><a href="mid1.pdf">Midterm 1</a></b>:
+on material from HW 1-3
+(<a href="http://www.math.dartmouth.edu/~m50w06/mid1sol.pdf">solutions</a>, <a href="prac1.pdf">practise qu's</a>).
+<tr>
+<td><td>29 M<td> 4.4-5<td> geometric and negative binomial pdfs
+<tr>
+<td> 5<td>Feb 1 W<td> 4.6, 5.1-2<td> <a href="5.pdf">HW5</a>.
+Gamma pdf and function. Estimation: max likelihood
+(<a href="http://www.math.dartmouth.edu/~m50w06/lik.m"><code>lik.m</code></a> 1-param max likelihood demo).
+<tr>
+<td> <td>3 F<td> 5.3-4<td> (<a href="http://www.math.dartmouth.edu/~m50w06/lik_gamma2.m"><code>lik_gamma2.m</code></a>
+2-param gamma likelihood plot) confidence intervals
+<tr>
+<td> <td>6 M<td> 5.5<td> properties of estimators: bias
+(<a href="http://www.ruf.rice.edu/~lane/stat_sim/sampling_dist/index.html">applet</a> demo: ML variance estimator is biased).
+<tr>
+<td> <td>7 Tu <i>X-hr</i><td>5.6<td> efficiency, minimum-variance estimators
+(lecture to replace Carnival class).
+<tr>
+<td> 6<td>8 W<td> 5.7-8 <td> <a href="6.pdf">HW6</a>
+(selected <a href="6ans.pdf">answers</a>,
+<a href="http://www.math.dartmouth.edu/~m50w06/cauchy.m">code for qu C</a>).
+Cramer-Rao lower bound, consistency
+(<a href="consistent.pdf">worksheet solutions</a>).
+<tr>
+<td> <td>10 F<td><td><i>(Carnival holiday: no class)</i>
+<tr>
+<td> <td>13 M<td>5.8, 6.2<td> Bayesian estimation. Hypothesis testing.
+<tr>
+<td> <td>14 Tu <i>X-hr</i><td><td> Problem-solving session (optional).
+<tr>
+<td> 7<td>15 W<td> 6.3<td> <a href="7.pdf">HW7</a> (<a href="7ans.pdf">solutions</a>). Binomial hyp testing.
+<tr>
+<td><td>17 F<td> 6.4<td> Type I, II errors.
+<tr>
+<td><td>20 M<td colspan=2><b><a href="mid2.pdf">Midterm 2</a></b>:
+on material from HW 4-6. (<a href="http://www.math.dartmouth.edu/~m50w06/mid2sol.pdf">solutions</a>,
+<a href="prac2.pdf">practise qu's</a> with answers).
+<tr>
+<td> <td>21 Tu <i>X-hr</i><td>7.2<td>Normal distribution, t test
+(<a href="http://www.math.dartmouth.edu/~m50w06/student.m">student.m</a> t-distn demo).
+<i>Choose projects, start work on them</i>.
+<tr>
+<td> 8<td>22 W<td>7.4<td> inference on mean of normal data, t tests
+<tr>
+<td> <td>24 F<td><td>Bayesian inference for (mu, sigma) of normal data,
+nonlinear transformation of pdfs.
+<tr>
+<td> <td>27 M<td>7.5<td>Random sampling from any pdf,
+inference on variance of normal data.
+<a href="http://www.mathworks.com/support/tech-notes/1400/1403.html">
+reading data into matlab</a>. <a href="http://www.math.dartmouth.edu/~m50w06/chi.m">chi.m</a>, chi-squared demo</a>
+<tr>
+<td> <td>28 Tu <i>X-hr</i><td> <td>(free)
+<tr>
+<td> 9<td>Mar 1 W<td>9.2, 4<td>Two-sample tests: means (t-test w/
+equal-variance), and proportions (normal approximation).
+<tr>
+<td><td>3 F<td>11.4<td>Covariance and correlation coefficient
+(<a href="http://www.math.dartmouth.edu/~m50w06/corr_regr.m">corr_regr.m</a> demo).
+<tr>
+<td><td>6 M<td>11.2, 5 <td>Linear regression, robust noise models,
+Bayesian model
+fitting with Markov-chain Monte Carlo (MCMC).
+(<a href="http://www.math.dartmouth.edu/~m50w06/regr_mcmc_sampling.m">regr_mcmc_sampling.m</a> demo, needs
+<a href="http://www.math.dartmouth.edu/~m50w06/nlp_linear_gauss.m">nlp_linear_gauss.m</a>,
+<a href="http://www.math.dartmouth.edu/~m50w06/nlp_linear_exp.m">nlp_linear_exp.m</a>,
+<a href="http://www.math.dartmouth.edu/~m50w06/mcmc_run.m">mcmc_run.m</a>).
+<tr>
+<td> <td>7 Tu <i>X-hr</i><td> <td>(free)
+<tr>
+<td> 10<td>8 W<td> <td> <i>(last day of class)</i> Class project presentations
+(continues w/ pizza, 6:30-8pm, Bradley 105). 
+<tr>
+<td><td>10 F<td> <td>Review session (usual time 12:30-1:35).
+<a href="postmid2prac.pdf">Post-Mid2 practise problems w/ solutions</a>.
+<i>Project reports due (midnight)</i>
+<tr>
+<td><td>13 M<td colspan=2><a href="fin.pdf"><b>Final Exam</b></a>
+(<a href="http://www.math.dartmouth.edu/~m50w06/finsol.pdf">solutions</a>):
+March 13th at 8:00 am - 11:00 am, Bradley 104 (usual room).
+Note this exam will <i>not</i> be given early to accommodate travel plans.
+</table>
+
+
+<p><b>Special needs</b>: I encourage students with disabilities,
+including "invisible" disabilities like chronic diseases and learning
+disabilities, to discuss with us any appropriate accommodations that
+might be helpful.  Let me know asap, certainly in first 2 weeks.  Also
+stop by the Academic Skills Center in 301 Collis to register for
+support services.
+
+<p><b>Private tutoring</b>: Tutor Clearinghouse may have private
+one-on-one tutors available for Math 50. The tutors are recruited on
+the basis that they have done well in the subject, and are trained by
+the Academic Skills Center. If a student receives financial aid, the
+College will pay for three hours of tutoring per week. If you would
+like to have a tutor, please go to 301 Collis and fill out an
+application as early in the term as possible.
+
+<p><img src="http://www.math.dartmouth.edu/~m50w06/line.gif" width=100%>
+
+
+
+<a name="res"></a>
+<h3>OTHER RESOURCES</h3>
+<p>
+<h4>Theory</h4>
+<ul>
+<li>BOOKS:
+<ul>
+<li>The only required one is <a href="http://www.bizrate.com/marketplace/search/search__cat_id--8031,prod_id--4387483.html"><i>An Introduction to Mathematical
+Statistics and its Applications</i></a> (3rd edition, since 4th is not quite yet out as of November, although it won't hurt I imagine)
+by R. J. Larsen and M. L. Marx (Prentice-Hall, 2000)
+available at <a href="../../m23f05/public_html/wheelock.html">Wheelock Books</a> in town.
+<b>Note:</b> we have now switched to 4th edition.
+Wheelock Books is located across the street from Collis at 2 West Wheelock
+St. in the building on stilts.  Bookrush hours are 8 am - 8 pm Monday
+through Friday, 12 noon - 5 pm Saturday, and 12 noon - 5 pm Sunday.
+<li>Probability background (content of Math 20) provided by
+<a href="http://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/amsbook.mac.pdf"><i>Introduction to Probability</i></a> by
+Charles M. Grinstead and J. Laurie Snell, freely available online.
+<li>A very complete reference, quite
+mathematical and dense, but you may love its rigor and clarity,
+is <i>Probability and Statistics, 3rd Edition</i> by
+M. H. DeGroot and M. J. Schervish (Addison-Wesley, 2001).
+DeGroot was one of the pioneers of Bayesian analysis
+so this is covered very well.
+</ul>
+
+<li>Useful links
+relating to Grinstead/Snell book <a href="http://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/book.html">here</a>
+(scroll down).
+<li>Previous incarnations of this course:
+<a href="../../m50w05/public_html/index.html">W05</a>,
+<a href="../../m50w03/public_html/index.html">W03</a>,
+<a href="../../m50w00/public_html/index.html">W00</a>,
+and <a href="../../m50w00/public_html/index.html">W99</a>.
+
+<li><a href="http://www.math.uah.edu/stat/">Virtual Laboratories in
+Probability and Statistics</a>, including lots of lecture notes
+(need MathML for your browser), and, best of all,
+<a href="http://www.math.uah.edu/stat/objects/experiments/index.xhtml">
+applets</a>. From U. Alabama, Huntsville.
+<li><a href="http://www.ruf.rice.edu/~lane/rvls.html">Rice Virtual Lab in
+Statistics</a>, again, excellent applets.
+<li><a href="http://www.dartmouth.edu/~matc/X10/resources.html">
+Links</a> from Dartmouth's X10 course, and some X10
+<a href="http://www.dartmouth.edu/~matc/X10/modules.html">instructional
+applets</a>.
+<li> 1-page summary <a href="distributions.pdf">table</a> of pdfs
+and their properties.
+<li> D'Agostini's introduction to 
+<a href="http://zeual1.roma1.infn.it/~agostini/rpp/rpp.html">Bayesian
+inference</a>.
+<li> William Jefferys <a href="http://quasar.as.utexas.edu/stat295.html">Bayesian inference
+course</a>
+
+</ul>
+
+
+
+
+
+
+<h4>Applications</h4>
+<ul>
+<li>The locally (ie, Math Department, chiefly Laurie Snell) produced
+<a href="http://www.dartmouth.edu/~chance/chance_news/news.html">
+Chance News</a>, full of fascinating
+statistical examples from the current media, updated monthly,
+is now a Wiki, meaning you can edit it yourself. Part of the
+larger local <a href="http://www.dartmouth.edu/~chance/index.html">Chance</a>
+site and resources.
+</ul>
+
+
+
+
+
+
+
+<h4><a href="http://www.mathworks.com">MATLAB</a></h4>
+<ul>
+<li> Download the software from
+
+<a href="http://hydra.dartmouth.edu/matlab/downloads">Dartmouth</a>;
+we have 100 or so on-campus licenses.
+<li> <a href="http://www.dartmouth.edu/~sas/">Susan A. Schwarz</a>
+(<a href="mailto:Susan.A.Schwarz@Dartmouth.EDU">email</a> her if you have
+Mac OS 10.2 or earlier for install CDs) can help with
+installation issues.
+
+<li>Dartmouth's Academic Computing Center's own
+<a href="http://diglib.dartmouth.edu/classes/calendar.php?MAIN_CALENDAR_ID=41">Matlab tutorial sessions</a> (sign up for them).
+
+<li> Bent Petersen's <a href="http://oregonstate.edu/~peterseb/mth355/docs/355f2001_matlab_intro_1.html">Matlab starter page</a>
+<li> Robert Higdon's nice
+<a href="http://www.math.dartmouth.edu/~m50w06/Higdon1996notes_matlab_intro.pdf">introductory notes</a>
+
+<li> My 1-page introduction from Math23,
+<a href="http://www.math.dartmouth.edu/~m50w06/intro.m"><code>intro.m</code></a>.
+<li> Guide from
+<a href="http://www-h.eng.cam.ac.uk/help/tpl/programs/matlab.html">
+Cambridge University Engineering Department</a>.
+<li><a href="http://www.math.utah.edu/lab/ms/matlab/matlab.html">Simple intro</a> from Utah, Hany Farid's <a href="http://www.cs.dartmouth.edu/farid/tutorials/matlab.intro.html">intro reference</a>, and Gilbert Strang's
+<a href="http://ocw.mit.edu/OcwWeb/Mathematics/18-311Principles-of-Applied-MathematicsSpring2003/StudyMaterials/index.htm">intro</a> at MIT.
+
+<li> Self-guided courses from Dartmouth academic computing:
+<a href="http://www.dartmouth.edu/~rc/classes/intro_matlab">
+Introduction to Matlab</a>,
+<a href="http://www.dartmouth.edu/~rc/classes/matlab_prog">
+Programming in Matlab</a>, and 
+<a href="http://www.dartmouth.edu/~rc/classes/matlab_graphics">
+Introduction to Matlab Graphics</a>
+
+<li> Statistics toolbox.
+</ul>
+
+
+<br>
+<img src="http://www.math.dartmouth.edu/~m50w06/line.gif" width=100%>
+
+<a name="proj"></a>
+<h3>STUDENT PROJECTS</h3>
+<p>
+
+<ul>
+<li>Neha Begwani and Pauline Yu:
+<a href="http://www.math.dartmouth.edu/~m50w06/m50_Neha_Pauline.doc"><i>History of Intelligence Testing</i></a>
+(<a href="http://www.math.dartmouth.edu/~m50w06/m50_Neha_Pauline_slides.ppt">slideshow</a>)
+<li>Matthew Brumberg, Mark Christman and Kasia Kalka: <a href="http://www.math.dartmouth.edu/~m50w06/m50_Matt_Mark_Kasia.doc"><i>Weather</i></a> (<a href="http://www.math.dartmouth.edu/~m50w06/m50_Matt_Mark_Kasia_App.ppt">Appendix</a>)
+<li>Ralph Callaway: <a href="http://www.math.dartmouth.edu/~m50w06/m50_Ralph.doc"><i>Figure Skating Scoring:
+To Trim or Not to Trim and the Phantom Judge</i></a>,
+(<a href="http://www.math.dartmouth.edu/~m50w06/m50_Ralph_code.m">code</a>, data:
+<a href="http://www.math.dartmouth.edu/~m50w06/m50_Ralph_EC2006top8.csv">1</a>,
+<a href="http://www.math.dartmouth.edu/~m50w06/m50_Ralph_EC2006top8withSOV.csv">2</a>,
+<a href="http://www.math.dartmouth.edu/~m50w06/m50_Ralph_data.csv">3</a>)
+<li>Shiao-Ke Chin-Lee: <a href="http://www.math.dartmouth.edu/~m50w06/m50_Shiao-Ke.doc"><i>Study of Track-related
+Main Line Derailment Trends 1985-2004</i></a>
+<li>Alison Crocker: <a href="http://www.math.dartmouth.edu/~m50w06/m50_Alison.doc"><i>The Lighthouse Problem Revisited</i></a>
+(<a href="http://www.math.dartmouth.edu/~m50w06/m50_Alison_glh.m">code</a>)
+<li>Tom Healy and Brian Lloyd: <a href="http://www.math.dartmouth.edu/~m50w06/m50_Tom_Brian.doc"><i>Drinking at
+Dartmouth</i></a>
+<li>Chetan Mehta and Seth Zimmerman:
+<a href="m50_Chetan_Seth.pdf"><i>Hot or Not: An Investigation of Attractiveness Distributions in Men and Women</i></a>
+<li>Dave Raines: <a href="m50_Dave.pdf"><i>Probability Distributions of
+Students in a College Dining Hall</i></a>
+(<a href="m50_Dave_slideshow.pdf">slideshow</a>)
+</ul>
+
+
+<br>
+<img src="http://www.math.dartmouth.edu/~m50w06/line.gif" width=100%>
+
+
+</body>
+</html>
+
+

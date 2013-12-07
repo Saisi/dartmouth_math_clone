@@ -1,0 +1,123 @@
+
+ 
+ 
+ 
+ 
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+	
+ 	<link type="text/css" rel="stylesheet" href="nkomstylesheet.css"> 
+	<script type="text/javascript" src="https://www.math.dartmouth.edu/~m20x11/js/jquery.js"></script> 
+	<script type="text/javascript" src="https://www.math.dartmouth.edu/~m20x11/nkomjs.js"></script> 
+	<script type="text/javascript" src="https://www.math.dartmouth.edu/~m20x11/jquery.iframe-auto-height.plugin.js"></script> 
+ 
+	<script type="text/javascript"> 
+		var floatstatus = "random";		
+ 
+		$(document).ready(function(){
+ 
+			
+			var backgrounddivs = "";
+			for(var i=0;i<990;i++){
+	
+				var randomnumber=Math.floor(Math.random()*2);
+				if (randomnumber == 0){
+					backgrounddivs += '<div class="blacksquare"></div>';
+				}
+				else {
+					backgrounddivs += '<div class="whitesquare"></div>';
+				
+				}
+			}
+	
+			$('div.block1').append(backgrounddivs);
+			$('div.block2').append(backgrounddivs);	
+		
+ 
+			$('div.block1').click(function(){
+				if (floatstatus == "random") {
+					$('div.block1').children('div.whitesquare').css('float','right');	
+					$('div.block2').children('div.blacksquare').css('float','right');
+					floatstatus = "symmetric1";
+				}
+ 
+				else if (floatstatus == "symmetric1") {
+					$('div.block1').children('div.blacksquare').css('float','right');	
+					$('div.block2').children('div.whitesquare').css('float','right');
+					$('div.block1').children('div.whitesquare').css('float','left');	
+					$('div.block2').children('div.blacksquare').css('float','left');
+ 
+					floatstatus = "symmetric2";
+				}	
+ 
+				else if (floatstatus == "symmetric2") {
+					$('div.block1').children('div.blacksquare').css('float','left');	
+					$('div.block2').children('div.whitesquare').css('float','left');
+					floatstatus = "random";
+				}	
+ 
+ 
+			});
+			$('div.block2').click(function(){
+				if (floatstatus == "random") {
+					$('div.block1').children('div.whitesquare').css('float','right');	
+					$('div.block2').children('div.blacksquare').css('float','right');
+					floatstatus = "symmetric1";
+				}
+ 
+				else if (floatstatus == "symmetric1") {
+					$('div.block1').children('div.blacksquare').css('float','right');	
+					$('div.block2').children('div.whitesquare').css('float','right');
+					$('div.block1').children('div.whitesquare').css('float','left');	
+					$('div.block2').children('div.blacksquare').css('float','left');
+ 
+					floatstatus = "symmetric2";
+				}	
+ 
+				else if (floatstatus == "symmetric2") {
+					$('div.block1').children('div.blacksquare').css('float','left');	
+					$('div.block2').children('div.whitesquare').css('float','left');
+					floatstatus = "random";
+				}	
+			});
+ 
+ 
+		});		
+ 
+		
+ 
+	</script> 
+	<title>Math 20: Discrete Probability</title> 
+ </head> 
+<body> 
+ 
+ 
+	<div style="text-align:center;font-size:x-large;position:relative;font-weight:bold;border:0px coral solid;width:100%;">Math 20: Discrete Probability</div> 
+ 
+<table width="100%" height="100%" style="border: 0px red solid;top:0%"> 
+	<TR align="center" border="0""> 
+		<TD width="15%"  height="100%" style="border: 0px green solid" class="maintable"> <div class="block1"></div></TD> 
+		<TD width="70" height="100%" style="border: 0px blue solid"> 
+			<div class="master"> 
+				<div class="tabscontainer" > 
+						<div class="tab" href="general.html"><div class="bouncer" isRaised="false" sticky="false">Course</div></div> 
+						<div class="tab" href="syllabus.html"><div class="bouncer" isRaised="false" sticky="false">Syllabus</div></div> 
+						<div class="tab" href="assignments.html"><div class="bouncer" isRaised="false" sticky="false">HW</div></div> 
+						<div class="tab" href="announcements.html"><div class="bouncer" isRaised="true" sticky="true" style="top:-15px">News</div></div> 
+				</div> 
+				<iframe class="mainpage" class="autoHeight" scrolling="auto" src="announcements.html"></iframe> 	
+			</div> 
+		</TD> 
+ 
+		<TD width="15%" height="100%"> <div class="block2"></div></TD> 
+	</TR> 
+</table> 
+ 
+	<div style="font-size:x-small;font-weight:normal;text-align:center;">Last updated 8.23.11. <br> 
+	    Optimized for viewing in Google Chrome and Firefox.</div> 
+ 
+ 
+ 
+</body> 
+</html> 

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sep24</TITLE>
+<META NAME="description" CONTENT="sep24">
+<META NAME="keywords" CONTENT="sep24">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sep24.css">
+</HEAD>
+<BODY >
+<B>Covered today:</B> 2.1 through 2.4.  Review of first order linear and separable
+equations.  Also, we briefly touch on the existence and uniqueness theorems (2.2.1
+and 2.4.1).
+
+<P>
+<B>For next time:</B> 2.1 - 13,15,22 and 2.2 - 4,9,16 and 2.3 12,17 and 2.5 - 16.
+If you haven't already, you should get used to drawing slope fields and solution
+curves on Maple (although I won't formally assign anything).  Here are the Maple
+commands from class today:
+
+<P>
+
+<UL><LI>Remember to enter <TT>with(DEtools);</TT> to invoke the
+  differential equations package.
+
+<P>
+
+<LI>Don't forget to put a semicolon at the end of each command!
+
+<P>
+
+<LI>To get the slope field for 
+<!-- MATH
+ $y'=\frac{1}{2}y + 2\cos(x)$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23f99/sep24/img1.gif"
+ ALT="$y'=\frac{1}{2}y + 2\cos(x)$">,
+enter <TT>    DEplot(diff(y(x),x) = y/2 + 2*cos(x), y(x), x=-10..10, y = -10..10);</TT>
+
+<P>
+
+<LI>To get sketches of particular solutions, enter the initial
+  conidtions between <TT>x=-10..10</TT> and <TT>y=-10..10</TT>.  For example:
+  try <TT>    DEplot(diff(y(x),x) = y/2 + 2*cos(x), y(x), x=-10..10, [[y(0)=-2], [y(0)=-1], y = -2..2);</TT>
+
+<P>
+
+<LI>For help with any command, type <TT>?command</TT>.  For example
+  <TT>?DEplot</TT> would call the help page for the <TT>DEplot</TT> command.
+
+<P>
+
+</UL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 23 Fall 1999</I>
+<BR><I>1999-09-24</I>
+</ADDRESS>
+</BODY>
+</HTML>

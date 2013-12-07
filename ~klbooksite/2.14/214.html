@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<!--<base href = "http://math.dartmouth.edu/~klbooksite/">-->
+<TITLE>2.14  Linear Approximations </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<STYLE>
+A	
+{text-decoration:none; 
+color:blue
+}
+H3
+{
+color:  000000;
+background-color:  #ccccff;
+font-family:  Arial
+}
+div.boxme	
+{
+border-style: double;
+border-width: 3pt;
+border-color: darkblue;
+padding:10pt
+}
+
+div.shademe
+{
+background-color: #aaaaff;
+padding: 10pt
+}
+
+
+
+</STYLE>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" background="http://math.dartmouth.edu/~klbooksite/images/ch2bg.gif">
+
+<table border = 0 width = 100% >
+<tr> 
+<td  width="160"> 
+
+<a href="http://math.dartmouth.edu/~klbooksite/toc.htm"><img src="http://math.dartmouth.edu/~klbooksite/images/bookcover.jpg" width="140" height="193"border="0"></a>
+<td valign = bottom>
+<h2><font color="red" size="+4">2.14</font><font color="orange"> Linear Approximations</font>
+<p>&nbsp;</h2>
+
+</table>
+
+
+<h3>Summary</h3>
+
+<applet code="LinearApprox.class" align = right name="LinearApprox" codebase="/~klbooksite/2.14/214applets/" archive="LinearApprox.jar" height = 433 width = 342>
+</applet>
+
+The tangent line to the graph of a function at a point (a,f(a)) is used to give approximate values of the function at nearby points. The function whose graph is the tangent line is called the <i>linearization</i> L(x) of f about the point x = a. After defining the notion of <i>best</i>, it is shown that L is the best linear approximation of f about x = a.
+<p>
+By the end of your studying, you should know:
+<ul>
+  <li>How to define the linearization of f about x = a.
+  <li>The geometric meaning of the linearization of a function about a point.
+  <li>How to define and use an appropriate linearization to approximate values of the function.
+  <li>What it means for the (tangent line) linearization L to be the <i>best</i> linear approximation.
+  <li>What a differential is and how to compute it.
+</ul>
+</p>
+
+<!--Applet Instructions tag -->
+<P><FONT Size="-1"><B>On-screen applet instructions:</B>  
+
+The initial configuration is an implementation of the figure at the beginning of Section 2.14 of the text, except that the slope of the line is not fixed. The applet is to be used to investigate the nature of the error function error(x) = f(x) &#8722; L(x) as x &rarr; a. First, for a fixed x from the pull-down menu use the slider to change the slope m of the line: in fact, let the slope of the line approach f&prime;(a). For each m, the <i>normalized</i> error function error(t) is shown in the inset: watch its shape. Can you explain the change in the error function as the slope of the line approaches f&prime;(a)?  What can you conclude about the error as x &rarr; a? Click <A HREF="http://math.dartmouth.edu/~klbooksite/2.14/214applets/214appInstr.html">here</A> for more details and an explanation.
+
+</Font><br clear = all>
+
+
+<table border = 0 cellpadding = 5>
+
+<td width = 65% rowspan = 2>
+
+<h3>Examples</h3>
+
+<a href = "http://math.dartmouth.edu/~klbooksite/2.14/214examples/214sin.htm"><img src = "http://math.dartmouth.edu/~klbooksite/images/exlink.gif" border = 0 align = "middle"></a>When solving problems in geometric optics, engineers and physicists often use the simplifying assumption that, for small angles &theta;, sin(&theta;) is approximately equal to &theta;. Find a linear approximation for sin(x) that shows why this is a reasonable assumption.
+<p>
+<a href = "http://math.dartmouth.edu/~klbooksite/2.14/214examples/214pizza.htm"><img src = "http://math.dartmouth.edu/~klbooksite/images/exlink.gif" border = 0 align = "middle"></a>A pizza restaurant sells an average of 80 pizzas per day at its usual price of $12.95. It experiments with sales and coupons for dollars off the usual price, and finds that the number of pizzas sold when the price decreases by 2 dollars is 135. It estimates that the number of pizzas sold when the price does down by x dollars is modeled by the function 50 ln(x + 1) + 80. Use linear approximation to find the change in the number of pizzas sold when the price drops from $10.95 to $9.95. 
+<p>
+<a href = "http://math.dartmouth.edu/~klbooksite/2.14/214examples/214sqrt.htm"><img src = "http://math.dartmouth.edu/~klbooksite/images/exlink.gif" border = 0 align = "middle"></a>Find the linear approximation of the function
+<br>
+<img src = "http://math.dartmouth.edu/~klbooksite/2.14/214examples/214sqrt.gif">
+<br>
+about a = 0. Use it to approximate the square root of 0.9.
+
+<H3>Applets</H3>
+
+<a href="http://math.dartmouth.edu/~klbooksite/appfolder/214unit/ErrorFunction.html"><img src = "http://math.dartmouth.edu/~klbooksite/images/applink.gif" border = 0 align = "middle"></a>Best Linear Approximation
+
+
+<p> 
+
+<h3>Videos</h3>
+<a href="../../~calcsite/video1.html#214">See short videos of worked problems for this section.</a>  
+<p> 
+
+
+<h3>Quiz</h3>
+<p>
+<a href="http://math.dartmouth.edu/~klbooksite/2.14/214quiz/214quiz_index.htm">Take a quiz.</a> </p>
+
+
+<h3>Exercises</h3>
+ See <a href="http://math.dartmouth.edu/~klbooksite/2.14/214exercises.pdf">Exercises for 2.14 Linear Approximations</a>  (PDF). 
+<p>
+<a href="http://math.dartmouth.edu/~klbooksite/wwprobs/homework.htm">Work online to solve the exercises for this section</a>, or for any other section of the textbook. 
+
+
+ 
+
+<!--
+begin second column, contains resources and interesting application links.  second column is a table, with 2 rows, top row aligned top and bottom row aligned bottom, so interesting application aligns bottom
+-->
+
+
+<td width = 30% valign = top> 
+
+<div class = "boxme">
+
+<h3>Resources on the Web</h3> 
+
+<i>Information on Newton</i>
+<br>
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Newton.html">Biographical data from St. Andrew's University's Web site</a>
+<br>
+<a href="http://www.maths.tcd.ie/pub/HistMath/People/Newton/RouseBall/RB_Newton.html">Excerpt from  W.W. Rouse Ball's "A Short Account of the History of Mathematics"</a>
+
+
+<p>
+<i>Information on Leibniz</i>
+<br>
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Leibniz.html">Biographical data from St. Andrew's University's Web site</a>
+<br>
+<a href="http://www.maths.tcd.ie/pub/HistMath/People/Leibniz/RouseBall/RB_Leibnitz.html">Excerpt from  W.W. Rouse Ball's "A Short Account of the History of Mathematics"</a>
+
+
+<p>
+<i>Calculus Applications</i>
+<br>
+<a href="http://www.projectintermath.org/products/">Project Intermath</a>
+
+
+<p>
+<i>Linear Approximations</i>
+<br>
+<a href="http://www.ugrad.math.ubc.ca/coursedoc/math100/demos/approx/linear.html">UBC, Canada</a></li>
+<br><a href="http://www.ima.umn.edu/~arnold/graphics-g.html#differential">Arnold</a>
+
+
+</div>
+<tr>
+<td valign = "bottom">
+<div class = "shademe">
+
+<center>
+<h4>Interesting Application</h4>
+
+<img src="http://math.dartmouth.edu/~klbooksite/images/balloon216by198.jpg" width="216" height="198" border="0"></p>
+<p>
+Nothing yet has been found. Any ideas?
+
+</center>
+
+</div>
+
+
+</table>
+
+
+<hr>
+      
+<!-- 
+footer navigation table
+-->
+
+<table border= 1 cellpadding = 4>
+<tr>
+<td><A HREF="http://math.dartmouth.edu/~klbooksite/2.13/213.html"><img src = "http://math.dartmouth.edu/~klbooksite/images/back.gif" align = middle border = 0> 2.13 Newton?s Method</A>
+
+<td>
+<A HREF="http://math.dartmouth.edu/~klbooksite/toc.htm"><img src = "http://math.dartmouth.edu/~klbooksite/images/up.gif" align = middle border = 0> Table of Contents</A>
+<td>
+<A HREF="http://math.dartmouth.edu/~klbooksite/2.15/215.html">2.15 Antiderivatives and Initial Value Problems<img src = "http://math.dartmouth.edu/~klbooksite/images/forward.gif" align = middle border = 0> </A>
+</table>
+
+
+<p>
+<br>
+<!--Software requirements tag-->
+<P><FONT Size="-1"><B>Software requirements:</B> For best results viewing and interacting with this page, get the <A HREF="http://math.dartmouth.edu/~klbooksite/misc/softreq.html">free software listed here</A>.</Font></P> 
+
+<p>
+<i><font size = -1>Copyright &copy; 2005 Donald L. Kreider, C. Dwight Lahr, Susan J. Diesel</font></i>
+</body>
+</html>

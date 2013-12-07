@@ -1,0 +1,257 @@
+/* Style file 'math31style.css' for Math 31x13 website. */
+
+body{
+	background-color: #ccffff;
+	font-family: "Tahoma", Verdana, sans-serif;
+/*	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", 
+	Georgia, serif; */
+/*	font-family: Georgia, "Georgia", serif; */
+}
+
+a:link{
+	color: Teal;
+} 
+
+a:visited{
+	color: SlateGray;
+}
+
+a:active{
+	color: PowderBlue;
+}
+
+a.header:link{
+	color: rgb(176,224,230);
+}
+
+a.header:visited{
+	color: rgb(176,224,230);
+}
+
+a.header:active{
+	color: rgb(176,224,230);
+}
+
+a.table:link{
+	color: rgb(74, 67, 68);
+}
+
+div.alg{
+	text-align: center;
+	height: 400px;
+	padding: 5px 0px 5px 0px;
+}
+
+div.instructor{
+	width: 30%;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2pt;
+}
+
+div.syllabus{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.textbook{
+	width: 85%;
+	height: 250px;
+	padding-left: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1{
+	color: DarkSlateGray;
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+h2{
+	color: DarkSlateGray;
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	margin: -10px 0px 0px 0px;
+	text-align: center;
+}
+
+h3{
+	color: DarkSlateGray;
+	text-align: left;
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+hr.footer{
+	color: DartkSlateGray;
+	width: 50%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.alg{
+	height: 400px;
+	vertical-align: middle;
+}
+
+img.textbook{
+	width: 150px;
+	vertical-align: middle;
+	padding: 10px 20px 10px 10px;
+}
+
+span.textbook{
+	vertical-align: middle;
+	display: inline-block;
+}
+
+table.grades{
+	background-color: rgb(204, 255, 255);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.header{
+	width: 100%;
+	text-align: center;
+	border: 0;
+	border-spacing: 0px 0px;
+	background-color: #339999;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.info{
+	width: 90%; 
+	border: 0;
+	border-spacing: 0px 0px;
+	background-color: #339999;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.sched{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.section{
+	width: 90%;
+	padding: 2pt 2pt 2pt 2pt;
+	background-color: rgb(51,153,153);
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+td.assign{
+	padding: 5pt;
+	text-align: right;
+}
+
+td.grades{
+	padding: 5pt;
+	text-align: center;
+}
+
+td.header{
+	width: 15%;
+	text-align: center;
+}
+
+td.info{
+	width: 30%;
+	text-align: center;
+}
+
+tr.head{
+	background-color: #339999;
+}
+
+tr.one{
+	background-color: #70a8b0;
+}
+
+tr.two{
+	background-color: #9db1c0;
+}
+
+tr.three{
+	background-color: #b0bfcb;
+}
+
+tr.four{
+	background-color: #8fa9bc;
+}
+
+tr.special{
+	background-color: #ddaaaa;
+}
+
+td.syllabus{
+	padding: 8px;
+}
+
+th.left{
+	width: 15%;
+	text-align: center;
+	padding: 5pt;
+}
+
+th.middle{
+	width: 50%;
+	text-align: center;
+	padding: 5pt;
+}
+
+th.right{
+	text-align: center;
+	padding: 5pt;
+}
+
+p.alg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}
+
+p.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%
+}
+
+p.header{
+	font-size: 125%;
+	color: PowderBlue;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+p.info{
+	font-size: 115%;
+	color: PowderBlue;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+ul.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}
+
+ul.alg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%
+}
+
+ul.subalg{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Finding the nearest minimum</TITLE>
+<META NAME="description" CONTENT="Finding the nearest minimum">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node68.html">
+<LINK REL="previous" HREF="node66.html">
+<LINK REL="up" HREF="node65.html">
+<LINK REL="next" HREF="node68.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html993"
+  HREF="node68.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html991"
+  HREF="node65.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html985"
+  HREF="node66.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html994"
+  HREF="node68.html">Dynamic range and sweep</A>
+<B> Up:</B> <A NAME="tex2html992"
+  HREF="node65.html">The hunt for local</A>
+<B> Previous:</B> <A NAME="tex2html986"
+  HREF="node66.html">Form of tension minima</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00652000000000000000">
+Finding the nearest minimum</A>
+</H2>
+
+<P>
+The abrupt transition from one parabola to the next therefore
+happens very close to the midpoints between the <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">.
+Therefore it is possible to use the quadratic form to make an efficient
+search routine for the nearest state to a given <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">:
+<IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img818.gif"
+ ALT="$f(k_1)$"> and <IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img819.gif"
+ ALT="$f(k_2)$"> can be used to solve for the current <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> and
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$">, given that <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img820.gif"
+ ALT="$k_1$"> and <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img821.gif"
+ ALT="$k_2$"> are nearest to the same <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">.
+This can be iterated until <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> settles to some accuracy.
+I will not present detailed results, however the search seems to require
+a few (less than 10) tension evaluations per state found.
+Essentially, this is the Newton-Rapheson [<A
+ HREF="node161.html#numrec">161</A>] scheme applied to
+the derivative <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img822.gif"
+ ALT="$f'(k)$">.
+This method is similar to the `improved PWDM' of
+Li [<A
+ HREF="node161.html#limethod">135</A>], who claims 2-3
+evaluations per state found (if high accuracy is needed).
+In the Boundary Integral Method (BIM or BEM) literature, a recent
+innovation named the `Multiple Reciprocity BEM'
+has arisen [<A
+ HREF="node161.html#itagakiMRBEM">101</A>,<A
+ HREF="node161.html#kamiyaMRBEM">100</A>], which
+seems very similar (it seems to be application of `power iterations'
+[<A
+ HREF="node161.html#golub+vanloan">81</A>]).
+
+<P>
+The accuracy of the norm matrix <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> need not be very high for location
+of tension minima (a fractional error of <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img731.gif"
+ ALT="$O(1)$"> is even acceptable).
+Therefore estimation by a few interior points is fine (see
+Section&nbsp;<A HREF="node62.html#sec:normmatrix">5.4</A>).
+But the following question arises: Would an inaccurate norm create false
+fluctuations in the tension which would be mistaken for minima?
+The answer turns out to be no.
+This is because the wavefunction associated with the maximum
+(generalized) eigenvalue <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img80.gif"
+ ALT="$\lambda_1$">, being a scaling eigenfunction,
+is actually very stable (this was noted in [<A
+ HREF="node161.html#hellerleshouches">91</A>])
+as <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> is changed through <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">,
+until the abrupt transition to the next state happens.
+Therefore the inaccuracy makes a jump only at these transitions, not around
+<IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">, so no spurious minima are created.
+
+<P>
+In the next chapter we will see that special properties of a certain weighting
+function <!-- MATH
+ $w{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img810.gif"
+ ALT="$w{({\mathbf s})}$"> allow a vastly superior method, which bypasses the need
+to `hunt' for states at all.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html993"
+  HREF="node68.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html991"
+  HREF="node65.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html985"
+  HREF="node66.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html994"
+  HREF="node68.html">Dynamic range and sweep</A>
+<B> Up:</B> <A NAME="tex2html992"
+  HREF="node65.html">The hunt for local</A>
+<B> Previous:</B> <A NAME="tex2html986"
+  HREF="node66.html">Form of tension minima</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

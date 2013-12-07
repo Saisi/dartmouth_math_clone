@@ -1,0 +1,167 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Explore.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE2:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Position,Time;<br>
+Digits:=5;<br>
+Position:=I0;<br>
+Time:=T0;<br>
+List:=[[Time,Position]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Position:=evalf(<br>
+Position+Deltat*<br>
+(<br>
+(<br>
+(exp(-0.01*Time)*(1/24-1/36)+1/36)<br>
+*(sin((2*Pi/12)*Time)+1)+1/36<br>
+)*<br>
+(Position*(1-(Position/250)))<br>
+-2.5<br>
+)<br>
+);<br>
+Time:=evalf(Time+Deltat);<br>
+List:=[op(List),[Time,Position]];<br>
+od;<br>
+List;<br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,50,300,12):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>P1:=listplot(S1,color=red):<br>
+<br>
+display(P1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/ExIm/Explore1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,50,300,5*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/ExIm/Explore2.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,50,300,10*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/ExIm/Explore3.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,50,300,20*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/ExIm/Explore4.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE2(0,50,300,40*12):<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+display(P1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/ExIm/Explore5.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE3:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Position,Time;<br>
+Digits:=5;<br>
+Position:=I0;<br>
+Time:=T0;<br>
+List:=[[Time,Position]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Position:=evalf(<br>
+Position+Deltat*<br>
+(<br>
+(<br>
+(exp(-0.01*Time)*(1/24-1/36)+1/36)<br>
+*(sin((2*Pi/12)*Time)+1)+1/36<br>
+)*<br>
+(Position*(1-(Position/250)))<br>
+-2.8<br>
+)<br>
+);<br>
+Time:=evalf(Time+Deltat);<br>
+List:=[op(List),[Time,Position]];<br>
+od;<br>
+List;<br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S2:=DE3(0,50,300,12):<br>
+<br>
+P2:=listplot(S2,color=red):<br>
+<br>
+display(P2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/ExIm/Explore6.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S2:=DE3(0,50,300,5*12):<br>
+<br>
+P2:=listplot(S2,color=red):<br>
+<br>
+display(P2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/ExIm/Explore7.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S2:=DE3(0,50,300,10*12):<br>
+<br>
+P2:=listplot(S2,color=red):<br>
+<br>
+display(P2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/ExIm/Explore8.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

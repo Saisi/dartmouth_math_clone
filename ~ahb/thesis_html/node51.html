@@ -1,0 +1,690 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>General definitions</TITLE>
+<META NAME="description" CONTENT="General definitions">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node52.html">
+<LINK REL="previous" HREF="node50.html">
+<LINK REL="up" HREF="node50.html">
+<LINK REL="next" HREF="node52.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html829"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html827"
+  HREF="node50.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html821"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html830"
+  HREF="node52.html">Categories of existing numerical</A>
+<B> Up:</B> <A NAME="tex2html828"
+  HREF="node50.html">Introduction and history of</A>
+<B> Previous:</B> <A NAME="tex2html822"
+  HREF="node50.html">Introduction and history of</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00611000000000000000">
+General definitions</A>
+</H2>
+
+<P>
+When the Hamiltonian of a quantum mechanical problem 
+is independent of time,
+the time evolution of the quantum state (wavefunction)
+can always be written as the
+sum of components with harmonic time-dependence.
+Each component, or <EM>stationary state</EM>, <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img640.gif"
+ ALT="$\psi_\mu$">,
+is a solution of the time-independent Schrodinger equation
+(TISE)
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\hat{H} \psi \; = \; E \psi .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:tise"></A><IMG
+ WIDTH="324" HEIGHT="30" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img641.gif"
+ ALT="\begin{displaymath}
+\hat{H} \psi \; = \; E \psi .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The (hermitian) operator <IMG
+ WIDTH="20" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img642.gif"
+ ALT="$\hat{H}$"> is linear, so we have a linear eigenproblem,
+which only has solutions for (real) energies <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img643.gif"
+ ALT="$E_\mu$">.
+If we ignore all discrete quantum numbers (spin)
+then <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> is a function of continuous variables only
+which can be written generally as a vector <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$">.
+The dynamical variable <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$"> may represent the location of a particle, or
+many particles, or more general coordinates such as relative distances,
+angles, etc.
+One can define position states <!-- MATH
+ $\left|{\mathbf r}\right\rangle$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img645.gif"
+ ALT="$\left\vert{\mathbf r}\right\rangle $"> which are the eigenstates of
+the position operator <!-- MATH
+ $\hat{{\mathbf r}}$
+ -->
+<IMG
+ WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img646.gif"
+ ALT="$\hat{{\mathbf r}}$">, and which form a complete basis
+for the quantum problem.
+<!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> is the position representation of the wavefunction,
+and <!-- MATH
+ $H({\mathbf r},{\mathbf r}')$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img648.gif"
+ ALT="$H({\mathbf r},{\mathbf r}')$"> is the position representation of <IMG
+ WIDTH="20" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img642.gif"
+ ALT="$\hat{H}$">.
+If <IMG
+ WIDTH="20" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img642.gif"
+ ALT="$\hat{H}$"> is <EM>local</EM>, as is the case in a huge variety of physical
+situations,
+then <!-- MATH
+ $H({\mathbf r},{\mathbf r}') = \delta({\mathbf r}-{\mathbf r}') [h_0({\mathbf r}') +
+h_1({\mathbf \nabla}_{{\mathbf r}'}) + \cdots]$
+ -->
+<IMG
+ WIDTH="324" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img649.gif"
+ ALT="$H({\mathbf r},{\mathbf r}') = \delta({\mathbf r}-{\mathbf r}') [h_0({\mathbf r}') +
+h_1({\mathbf \nabla}_{{\mathbf r}'}) + \cdots]$"> is a function
+only of the local value and spatial derivatives of the wavefunction.
+The function <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img650.gif"
+ ALT="$h_0$"> is commonly known as the <EM>potential</EM>.
+For instance a very common form of Hamiltonian arising in the case of
+isotropic mass <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img264.gif"
+ ALT="$m$"> and quadratic dispersion relation is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+H \; = \; -\frac{\hbar^2}{2m} \nabla^2 + U{({\mathbf r})},
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:hisotrop"></A><IMG
+ WIDTH="366" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img651.gif"
+ ALT="\begin{displaymath}
+H \; = \; -\frac{\hbar^2}{2m} \nabla^2 + U{({\mathbf r})},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+written as an operator in the position representation.
+The potential is <!-- MATH
+ $U{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img544.gif"
+ ALT="$U{({\mathbf r})}$">.
+However, when <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$"> does not simply indicate location of a single particle
+in a conservative potential,
+then (<A HREF="node51.html#eq:hisotrop">5.2</A>) is not sufficiently general.
+
+<P>
+If the Hamiltonian is infinite (or much larger than the energies of interest)
+outside a finite region, then
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$"> is effectively confined to this region and
+the eigenenergies <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img643.gif"
+ ALT="$E_\mu$"> are <EM>discrete</EM>.
+This is also true if <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$"> is not strictly confined, but if the energy
+is below the continuum transition[<A
+ HREF="node161.html#landauqm">128</A>], giving bound states.
+In this latter case <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> can take non-zero values over an infinite
+region of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$">; however outside
+a certain
+(classically-allowed) region
+the decay is exponential so the effective region of confinement is finite.
+I will be interested in solving for these resulting discrete states.
+The problem is to find the eigenvalues <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img643.gif"
+ ALT="$E_\mu$">,
+or equivalently the eigenfunctions <!-- MATH
+ $\psi_{\mu}{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img652.gif"
+ ALT="$\psi_{\mu}{({\mathbf r})}$">, for which (<A HREF="node51.html#eq:tise">5.1</A>)
+is obeyed.
+If an <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img643.gif"
+ ALT="$E_\mu$"> is known then it is easy to get the corresponding <!-- MATH
+ $\psi_{\mu}{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img652.gif"
+ ALT="$\psi_{\mu}{({\mathbf r})}$">,
+and vice versa.
+If there is no analytical solution, then a numerical approach
+is required--the subject of this and following chapters.
+
+<P>
+The issue of <EM>boundary conditions</EM> (BCs) now enters; notice that
+it is not actually present in the eigenproblem (<A HREF="node51.html#eq:tise">5.1</A>).
+BCs arise because of the computational need to consider only
+a finite region.
+The finite region is chosen such that <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> is negligible outside the
+region.
+I call the region <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> and its boundary <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> (see Fig.&nbsp;<A HREF="node51.html#fig:bilgen">5.1</A>).
+If <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> dies smoothly to zero (as is true for a smooth-potential
+or soft-walled problem), then the choice of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> is determined
+by the required accuracy.
+The smallest region <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> is found
+such that <!-- MATH
+ $\psi({\mathbf r} \in \Gamma) \approx 0$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img654.gif"
+ ALT="$\psi({\mathbf r} \in \Gamma) \approx 0$">
+to a sufficient approximation.
+In this case, the exact nature of BCs imposed at <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> is irrelevant
+for the problem--the only important BC is then the
+asymptotic restriction <!-- MATH
+ $\psi{({\mathbf r})}\rightarrow0$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img655.gif"
+ ALT="$\psi{({\mathbf r})}\rightarrow0$">
+with increasing distance outside the finite region.
+Another class of problems results if the potential suddenly changes (for instance
+if it jumps to infinity corresponding to a hard wall) at the edge of the
+problem region.
+It is then natural to locate <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> at this edge (often this
+is essential since it avoids the difficulty of representing
+singularities which occur at the edge).
+Therefore <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">, and the BCs at <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">, are exactly specified.
+To summarize,
+the BCs result from truncation of the region of space to <!-- MATH
+ ${\mathbf r} \in \mathcal{D}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img656.gif"
+ ALT="${\mathbf r} \in \mathcal{D}$">.
+
+<P>
+BCs can generally be written
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+(\mathcal{L} \psi){({\mathbf s})}\; = \; 0 , \hspace{1in}
+	\mbox{for all ${\mathbf s}  \in \Gamma$} ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:genbcs"></A><IMG
+ WIDTH="438" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img657.gif"
+ ALT="\begin{displaymath}
+(\mathcal{L} \psi){({\mathbf s})}\; = \; 0 , \hspace{1in}
+\mbox{for all ${\mathbf s} \in \Gamma$} ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img658.gif"
+ ALT="$\mathcal{L}$"> is a linear operator which acts on the function space of
+<IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$">, and is sensitive only to its values, gradients,
+and higher derivatives, at the boundary <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">.
+The result of the operator is the smaller function space
+of functions of the boundary position coordinate <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$">.
+Generally <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img658.gif"
+ ALT="$\mathcal{L}$"> is local on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">, meaning it measures only
+properties of <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> local to a point <!-- MATH
+ ${\mathbf s}{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img659.gif"
+ ALT="${\mathbf s}{({\mathbf r})}$">.
+For instance, most BCs are described by special cases of the operator
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img658.gif"
+ ALT="$\mathcal{L}$"> which returns a
+(position-dependent) linear combination of the local value and normal gradient
+(this is known as `mixed BCs').
+
+<P>
+BCs may be specified for other reasons.
+They may enter in the context of solving for resonance states in the continuum,
+where they can model the effect of an infinite region of space
+whose propagator is known analytically.
+These ``radiative BCs'' may be non-local on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">, and the resulting
+<IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img643.gif"
+ ALT="$E_\mu$"> will be complex.
+The calculation of eigenstates in the continuum (which are usually
+highly degenerate) is a <EM>scattering</EM> problem, and
+I shall not consider it further.
+Also the eigenstates in a region with certain BCs can be needed for use in
+other methods, for instance R-matrix theory[<A
+ HREF="node161.html#rmatrixtheory">131</A>] for
+scattering problems.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:bilgen"></A><A NAME="8184"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> dimensional domain <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> and
+<IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img483.gif"
+ ALT="$d{-}1$"> dimensional boundary <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> of a quantum solution region.
+The local normal <!-- MATH
+ ${\mathbf n}{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img660.gif"
+ ALT="${\mathbf n}{({\mathbf s})}$"> is also shown.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="275" HEIGHT="181" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img661.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_ipwdm/bil_gen.eps,width=0.5\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="8185"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.1:</STRONG>
+
+Two general classes of quantum eigenproblem solution strategies using
+basis sets.
+The desired solutions are the eigenenergies <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img643.gif"
+ ALT="$E_\mu$"> and the states
+(written in terms of basis coefficients) <!-- MATH
+ ${\mathbf x}_\mu$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img666.gif"
+ ALT="${\mathbf x}_\mu$">.
+For other physical wave eigenproblems, the TISE (<A HREF="node51.html#eq:tise">5.1</A>)
+should be replaced by
+the appropriate time-independent
+wave equation obeyed in the domain (<I>e.g. </I>Helmholtz equation).
+In the methods of this chapter a diagonalization will replace the SVD
+(singular value decomposition).
+The scaling method of Vergini and Saraceno (not listed) combines
+the best elements of both
+classes.
+</CAPTION>
+<TR><TD><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><EM>(A) `basis diagonalization'</EM></TD>
+<TD ALIGN="LEFT"><EM>(B) `Green's function matching'</EM></TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><EM>basis</EM></TD>
+<TD ALIGN="LEFT">Independent of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">.</TD>
+<TD ALIGN="LEFT">Depend on <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><EM>funcs.</EM></TD>
+<TD ALIGN="LEFT">Obey BCs.</TD>
+<TD ALIGN="LEFT">Don't obey BCs.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">Don't obey TISE.</TD>
+<TD ALIGN="LEFT">Are solutions of TISE.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><EM>basis size</EM></TD>
+<TD ALIGN="LEFT">Scales like volume of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"></TD>
+<TD ALIGN="LEFT">Scales like surface area
+of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><EM>technique</EM></TD>
+<TD ALIGN="LEFT">Write TISE in terms of basis</TD>
+<TD ALIGN="LEFT">Write BC matching equations</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">coefficients.</TD>
+<TD ALIGN="LEFT">in terms of basis coefficients</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">and boundary locations.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><EM>resulting</EM></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><EM>equation</EM></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $H{\mathbf x}\; = \;E{\mathbf x}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img662.gif"
+ ALT="$H{\mathbf x}\; = \;E{\mathbf x}$"></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $A(E) {\mathbf x}\; = \;0$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img663.gif"
+ ALT="$A(E) {\mathbf x}\; = \;0$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">Diagonalization of <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$"> matrix</TD>
+<TD ALIGN="LEFT">Hunt in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> for <!-- MATH
+ $\det [A(E)] = 0$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img664.gif"
+ ALT="$\det [A(E)] = 0$">, needs</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">finds many <!-- MATH
+ $(E_\mu,{\mathbf x}_\mu)$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img665.gif"
+ ALT="$(E_\mu,{\mathbf x}_\mu)$"> at once.</TD>
+<TD ALIGN="LEFT">many SVDs per <!-- MATH
+ $(E_\mu,{\mathbf x}_\mu)$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img665.gif"
+ ALT="$(E_\mu,{\mathbf x}_\mu)$"> found.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><EM>examples</EM></TD>
+<TD ALIGN="LEFT">Finite Element Method</TD>
+<TD ALIGN="LEFT">Boundary Integral (or Element)</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">(FEM)[<A
+ HREF="node161.html#fem2">19</A>].</TD>
+<TD ALIGN="LEFT">Method (BIM or BEM)[<A
+ HREF="node161.html#bim2">121</A>].</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">Discrete-Variable</TD>
+<TD ALIGN="LEFT">Plane Wave Decomposition</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">Representation (DVR)[<A
+ HREF="node161.html#dvr1">17</A>].</TD>
+<TD ALIGN="LEFT">Method (PWDM) of Heller
+[<A
+ HREF="node161.html#hellerleshouches">91</A>].</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">Discretization on a lattice[<A
+ HREF="node161.html#numrec">161</A>].</TD>
+<TD ALIGN="LEFT">Bogomolny's method[<A
+ HREF="node161.html#bogomolny">34</A>].</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">Robnik conformal mapping[<A
+ HREF="node161.html#robnikconformal">171</A>].</TD>
+<TD ALIGN="LEFT">Lupu-Sax t-matrix inversion[<A
+ HREF="node161.html#adamthesis">140</A>].</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">Methods of this chapter.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+
+<A NAME="tbl:bases"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html829"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html827"
+  HREF="node50.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html821"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html830"
+  HREF="node52.html">Categories of existing numerical</A>
+<B> Up:</B> <A NAME="tex2html828"
+  HREF="node50.html">Introduction and history of</A>
+<B> Previous:</B> <A NAME="tex2html822"
+  HREF="node50.html">Introduction and history of</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

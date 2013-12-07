@@ -1,0 +1,880 @@
+/* This is the base style sheet that is used anytime in Gallery.
+
+   If you would like to customize the styles please create
+   copy of this file called
+
+     "base.css" (same name without ".default")
+
+   If that file is found in this directory it will be
+   used instead of this one.
+
+   Some of the styles below are overridden by specific
+   album properties.
+
+   $Id: base.css.default 17902 2008-08-23 14:02:56Z JensT $
+*/
+
+/*
+   default text styles - background and colors overridden by
+   album 'bgcolor', 'background', and 'textcolor' properties.
+*/
+
+body, html {
+}
+
+img {
+    border: none;
+}
+
+td,p {
+}
+
+a {
+	cursor: pointer;
+    text-decoration: none;
+    color: #4E2192;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+textarea:focus, input:focus {
+    background-color: #FFFFDA;
+}
+
+form {
+	margin:0px;
+}
+
+label {
+	cursor:pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.nowrap {
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+/*
+   text styles
+*/
+
+/* album titles on main page */
+.title {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.mod_title			/* album title -- Text is controlled by .title */
+	{
+	  border:1px solid #000000;
+	  border-right-width:0px;
+	  border-bottom-width:0px;
+	  border-left-width:0px;
+	}
+.mod_title_bg   /* album title hightlight Text is controlled by .title */
+	{
+	}
+.mod_title_right  /* album title hightlight  Text is controlled by .title*/
+	{
+	}
+.mod_title_left  /* album title hightlight  Text is controlled by .title */
+	{
+	}
+.albumdesc  /*album description includes all text and background*/
+	{
+	}
+.desc       /* album descriptions on main page */
+	{
+	  font-size: 12px;
+	}
+.caption    /* photo captions on all pages */
+	{
+	  font-size: 10px;
+	}
+.modcaption  /* modifies background for caption text to reside - view_album */
+	{
+	  font-size: 10px;
+	}
+.pcaption  /* modifies background for caption text to reside - view_photo*/
+{
+     font-size: 10px;
+}
+
+.customFieldsTable {
+     border: none;
+     font-size: 10px;
+     margin-bottom: 0px;
+     padding: 0px;
+}
+
+.customFieldsTableCaption {
+    padding-top:15px;
+}
+
+.vafloat /* float for view album - text */
+ 	{
+ 	   float: none;
+ 	}
+
+.vafloat2 /* float for view album - images */
+ 	{
+ 	 float: none;
+	}
+
+/* controls the view of Album summary */
+.vasummary {
+    font-weight:bold;
+    padding:2px;
+    margin-top:10px;
+    width:80%;
+}
+
+.commentIndication {
+    color: red;
+    font-size: 12px;
+}
+
+.commentboxhead {
+	font-weight: bold;
+}
+
+.g-error, .error {
+    color: #000;
+    background-color: #ffd5d4;
+    padding: 1px;
+    padding-left: 5px;
+    margin-bottom: 1px;
+    border: 1px solid #aaa;
+}
+
+.g-error td a {
+    color: #000;
+}
+
+.g-error td a:hover {
+    text-decoration:underline;
+}
+
+a.error, a.error:link, a.error:visited, a.error:active {
+    color: red;
+    font-size: 12px; font-weight: bold;
+}
+
+a.error:hover {
+    text-decoration:underline;
+}
+
+.attention	/* so far, just for voting instructions*/
+        {
+          font-weight: normal;
+          color: #FBFF7F;
+          font-size: 12px;
+        }
+/* Indicates an important setting. */
+/* FIXME with .attention */
+.g-attention {
+    color: red;
+    font-weight: bold;
+}
+
+.headbox	/* box around the page headers */
+	{
+	}
+
+/* Page headers */
+.head {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.mod_headliner  /* Gallery & Album titles. Text is controlled by .head */
+	{
+	}
+.mod_toplight_bg  /* Gallery & Album titles. Text is controlled by .head */
+	{
+	}
+.mod_toplight_right  /* Gallery & Album titles. Text is controlled by .head*/
+	{
+	}
+.mod_toplight_left  /* Gallery & Album titles. Text is controlled by .head */
+	{
+	}
+
+/* used in breadcrumb bars */
+.bread {
+    font-size: 10px;
+}
+
+.topNavbar {
+    margin-bottom: 10px;
+}
+
+.modnavboxthumbs td, .modnavbox td{
+  text-align: center;
+}
+
+.nav /* used in navigation bars */
+	{
+	  font-size: 12px;
+	}
+.navtableborderbegin
+	{
+	  border:1px solid #000000;
+	}
+.navtableborderend
+	{
+	  border:1px solid #000000;
+	  border-top-width:0px;
+	}
+.nav_micro_first_img {
+	border: 1px solid black;
+/*
+	border-left: 2px solid blue;
+	border-top: 2px solid blue;
+	border-bottom: 2px solid blue;
+*/
+}
+
+.nav_micro_last_img {
+	border: 1px solid black;
+/*
+	border-right: 2px solid blue;
+	border-top: 2px solid blue;
+	border-bottom: 2px solid blue;
+*/
+}
+
+.nav_micro_current_img {
+	border: 2px solid red;
+}
+
+.nav_micro_img {
+	border: 1px solid black;
+}
+
+.bordertop
+	{
+	  border:1px solid #000000;
+	  border-right-width:0px;
+	  border-bottom-width:0px;
+	  border-left-width:0px;
+	}
+
+.borderright
+	{
+	  border:1px solid #000000;
+	  border-top-width:0px;
+	  border-bottom-width:0px;
+	  border-left-width:0px;
+	  text-align:center;
+	}
+
+.borderleft
+	{
+	  border:1px solid #000000;
+	  border-top-width:0px;
+	  border-bottom-width:0px;
+	  border-right-width:0px;
+	  text-align:center;
+	}
+.fineprint                      /* used for fine print */
+	{
+	  font-size: 10px;
+	}
+
+.viewcounter
+	{
+	  font-size: 10px;
+	}
+
+.editlink                       /* Used for the [edit] tags */
+	{
+	  font-size: 10px;
+	}
+.modnavbox  /* main navigation bar next and previous */
+	{
+	}
+.admin                          /* used in admin bars */
+	{
+	  font-size: 10px;
+	  font-weight: bold;
+	}
+
+.adminform /* defines form for drop down menu */
+	{
+	  font-size: 10px;
+	  font-weight: bold;
+	}
+
+.search                          /* used in search text */
+	{
+	  font-size: 10px;
+	  font-weight: bold;
+	}
+
+.searchform /* defines form for search */
+	{
+	  font-size: 10px;
+	  font-weight: bold;
+	}
+
+.leftspacer  /* amount of space to the left of the header and titles */
+	{
+	  width: 0px;
+	}
+.modnavboxtop  /*navagation bar top of screen where admin buttons show*/
+	{
+	background-color: #5E72CC;
+
+     }
+.modnavboxmid  /*navagation bar middle where the link for the albums show*/
+	{
+
+	}
+.modfooter /*footer where the Gallery version is located*/
+	{
+	}
+
+
+.popupbody  /* controls the background of popup. */
+{
+}
+
+.popuphead  /* controls the title and background */
+{
+    text-align:center;
+    font-size: 14px; font-weight: bold;
+    line-height: 150%;
+}
+
+.popup /* controls the main text and message body */
+{
+    font-size: 12px; font-weight: normal;
+    padding: 5px;
+    padding-top:0px;
+    margin-bottom: 10px;
+}
+
+.popupform /* controls form textarea */
+{
+    font-size: 12px; font-weight: normal;
+    line-height: 120%;
+    padding: 2px;
+}
+
+.popup a:hover {
+}
+
+.popup td {
+}
+
+/* CSS ID for the add photos popup */
+
+#container {
+	padding: 2px;
+}
+
+#tabnav {
+	height: 20px;
+	margin: 0px;
+	padding-left: 5px;
+	border-bottom: 1px solid black;
+}
+
+#tabnav li {
+	margin: 0px;
+	padding: 0px;
+  	display: inline;
+  	list-style-type: none;
+}
+
+#tabnav a:link, #tabnav a:visited {
+    float: left;
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: bold;
+    padding: 2px 5px 2px 5px;
+    margin-right: 4px;
+    text-decoration: none;
+    color: #666;
+    border: 1px solid #000000;
+    border-bottom: none;
+    -Moz-Border-Radius-TopLeft: 20px;
+    -Moz-Border-Radius-TopRight: 20px;
+}
+
+#tabnav a:link.active, #tabnav a:visited.active {
+    background-color: #FCFCF3;
+    color: #000000;
+    padding:2px 5px 2px 5px; font-size:12px;
+    margin-right: 4px;
+    border: 1px solid #000000;
+    border-bottom: none;
+    -Moz-Border-Radius-TopLeft: 20px;
+    -Moz-Border-Radius-TopRight: 20px;
+}
+
+#tabnav a:hover {
+    color: #444;
+}
+
+.g-tabset {
+    width: 100%;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    margin: 2px 0;
+}
+
+.g-tabset a {
+    color: #000;
+    background-color: #FCFCF3;
+    margin: -2px 0 -1px 2px;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 2px 0.5em;
+    display: block;
+    border: 1px solid #000;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    float: left;
+}
+
+.g-tabset a:hover {
+    color: #000;
+    background-color: #DCDCC0;
+    text-decoration: none;
+}
+
+.g-tabset a.g-activeTab {
+	color: #fff;
+	background-color: #009;
+	border-bottom: 1px solid #000;
+}
+
+.g-tabset a.tab-hi {
+    border-bottom: 1px solid #000;
+}
+
+.g-tabset a {
+    float: left;
+}
+
+#adminbox {
+    width: 100%;
+}
+
+#adminbox td {
+    font-size: 10px; font-weight: bold;
+    vertical-align: bottom;
+    padding: 2px;
+}
+
+#adminbox a {
+    font-size: 10px;
+}
+
+#adminbox a:hover {
+}
+
+#menu {
+    border-collapse:collapse;
+}
+
+#menu td {
+    vertical-align:bottom;
+}
+
+#menu a {
+   display: block;
+   font-size: 10px;
+   white-space: nowrap;
+   text-align:center;
+}
+
+.iconLink {
+    display: block;
+    font-size: 10px;
+    text-align:center;
+    margin-top: 1px; margin-left: 3px;
+}
+
+#menu a:hover {
+}
+
+.noLink {
+    font-size: 10px;
+    text-align:center;
+}
+
+/* Used on Adminpage */
+td.adm_options {
+    vertical-align: top;
+    height: 30px;
+    padding: 5px;
+}
+
+/* Following two classes are used in stats-wizard */
+ .blockcell {
+    vertical-align: top;
+    border-bottom: 1px solid #000000;
+}
+
+caption {
+    font-weight:bold;
+    margin-bottom: 5px;
+}
+
+.littlered, .g-littlered {
+    font-size: 10px;
+    color:red;
+    vertical-align:top;
+}
+
+.MLForm {
+    margin: 0px;
+    margin-bottom: 2px;
+    padding: 0px;
+    text-align: right;
+}
+
+.languageSelector {
+    vertical-align: top;
+    padding: 0px; margin: 0px;
+}
+
+.subalbumTreeLine {
+    padding: 0px; margin: 0px;
+}
+
+.subalbumTreeElement {
+    vertical-align:middle;
+    white-space:nowrap;
+}
+
+.shortdesc {
+    text-align: left;
+    font-weight: bold;
+}
+
+.g-iconmenu {
+    font-size: 7.2pt;
+}
+
+.g-iconmenu a {
+    -moz-border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    padding: 2px;
+}
+
+.g-iconmenu a:hover {
+   white-space: nowrap;
+   border-bottom: 1px solid #66A;
+   border-right: 1px solid #66A;
+   border-top: 1px solid #224;
+   border-left: 1px solid #224;
+   padding: 1px;
+   text-decoration: none;
+   font-weight: bold;
+   display: block;
+}
+
+.g-iconmenu td {
+    text-align: center;
+}
+
+.g-va-poll-box1 {
+    font-size: 8pt;
+    margin: 2px;
+}
+
+.g-va-poll-resultbox {
+    font-size: 8pt;
+    margin: 2px;
+}
+
+.g-va-poll-box3 {
+    font-size: 9pt;
+    margin: 2px;
+}
+
+.g-voting-results {
+	margin: 0 auto;
+        border-top: 1px solid #fff;
+}
+
+/* ---- */
+
+.infoline_success {
+    color: #00BF00;
+    text-align:center;
+    font-size: 12px;
+    border: 1px solid ;
+    padding: 2px;
+    margin: 2px;
+}
+
+.infoline_error {
+    text-align:center;
+    font-size: 12px;
+    border: 1px solid red;
+    padding: 2px;
+    margin: 2px;
+}
+
+.infoline_notice {
+    color: #BF0000;
+    text-align: left;
+    font-size: 12px;
+    border: 1px solid #BF0000;
+    padding: 2px;
+    margin: 2px;
+}
+
+.g-emphasis {
+    font-weight: bold;
+}
+
+#WzTiTl, #WzTiTl table {
+	background-color: #66a;
+	color: #FFF;
+	font-size: 9pt;
+	height: 20px;
+}
+
+#WzClOsE {
+	background-color: #66a;
+}
+
+#WzBoDy {
+	background-color: #f0f0f0;
+	color: #000;
+	font-size: 8pt;
+}
+
+.g-disabled {
+    color: gray;
+    text-align: center;
+}
+
+.g-selected {
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.g-tooltip, .g-balloon-tooltip {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11px;
+}
+
+.g-tooltip {
+	padding: 2px;
+	background: #eee;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+}
+
+.g-balloon-tooltip {
+}
+
+.g-loginpage {
+    border-top: 1px solid #000;
+    padding: 5px 10px;
+    -moz-border-radius-bottomleft: 10px ; -moz-border-radius-bottomright:10px;
+    margin: 0 auto;
+    border: 1px solid silver;
+    width: 600px;
+    height: 400px;
+    font-size: 9pt;
+}
+
+.g-loginpage fieldset {
+    margin-bottom: 20px;
+}
+
+/******************** Progessbar ********************/
+.progressBar {
+    width: 100%;
+    background: red;
+    height: 10px;
+}
+
+.progressBarDone {
+    width: 0%;
+    background: green;
+    height: 10px;
+}
+
+.g-pwcheck {
+	display: none;
+	border: 1px solid black;
+	color:black;
+}
+
+/******************* Begin Navigation Styles ********/
+
+.g-navbar-top, g-navbar-bottom, .g-microthumbnavbar-top, .g-microthumbnavbar-bottom {
+    width: 100%;
+}
+
+/* Style for top navigation bar */
+.g-navbar-top {
+    border: 1px dashed gray;
+    margin-bottom: 1px;
+}
+
+/* Style for bottom navigation bar */
+.g-navbar-bottom {
+    border: 1px dashed gray;
+    margin-bottom: 2px;
+}
+
+#g-navtable, #g-navtable-bottom {
+	width: 100%;
+}
+
+.g-microthumbnavbar-top {
+    border-bottom: 1px dashed gray;
+}
+
+.g-microthumbnavbar-bottom {
+    border-bottom: 1px dashed gray;
+}
+
+#g-navtable td, #g-navtable-bottom td, div.g-navbar-top td, div.g-navbar-bottom td, div.g-microthumbnavbar-top td, div.g-microthumbnavbar-bottom td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+table.g-nav-pages {
+    margin: 0 auto;
+}
+
+table.g-nav-pages td {
+     padding: 0;
+}
+
+#g-navtable td.arrows, #g-navtable-bottom td.arrows {
+	padding: 0 10px;
+}
+
+/******************** End Navigation Styles ********************/
+
+/* LTR , ya ya, i know. -> Go 1.6 */
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.g-config-content {
+    width: 630px;
+    border-left: 1px solid #cccccc;
+    padding-left: 10px;
+    float: right;
+}
+
+.right5 {
+    margin-right: 5px;
+}
+
+.g-borderright {
+     border-right: 1px dashed;
+}
+
+.g-borderleft {
+    border-left: 1px dashed;
+}
+
+/* Warning message */
+.g-warning {
+    color: #000;
+    background: #ffc;
+    border: 1px solid #aaa;
+    padding: 1px;
+    padding-left: 5px;
+    margin-bottom: 1px;
+    -moz-border-radius: 8px;
+}
+
+/* Information message */
+.g-information {
+    color: #000;
+    background: #ffc;
+    border: 1px solid #aaa;
+    padding: 1px;
+    padding-left: 5px;
+    margin-bottom: 1px;
+    -moz-border-radius: 8px;
+}
+
+.g-success {
+    background-color: #cbffaf;
+    border: 1px solid #aaa;
+    padding: 1px;
+    padding-left: 5px;
+    margin-bottom: 1px;
+    -moz-border-radius: 8px;
+    color: #000;
+}
+
+/***** Some Form styles  ******/
+
+input, textarea, select, .g-usernameInput, .g-passwordInput{
+}
+
+input:hover.g-button, input:focus.g-button {
+}
+
+.g-usernameInput, .g-usernameInput:focus {
+	background: url('https://www.math.dartmouth.edu/gallery/images/icons/user_gray.gif') no-repeat left top;
+	padding-left: 20px;
+	color: #000;
+	background-color: #f3f3f9;
+	border: 1px solid #669;
+}
+
+.g-passwordInput, .g-passwordInput:focus {
+	background: url('https://www.math.dartmouth.edu/gallery/images/icons/key.gif') no-repeat left top;
+	padding-left: 20px;
+	background-color: #FFFFDA;
+	border: 1px solid #99f;
+}
+
+.g-locked {
+	text-decoration: line-through;
+	background: url('https://www.math.dartmouth.edu/gallery/images/icons/locked.gif') no-repeat right center;
+}
+
+.clear {
+    clear:both;
+}
+
+.albumUpgradeStatus {
+    margin-top: 3px;
+    padding: 2px;
+    overflow: scroll;
+    height: 200px;
+    border: 1px dashed red;
+}

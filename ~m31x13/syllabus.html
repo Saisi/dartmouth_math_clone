@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "math31style.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Syllabus</title>
+<link rel="stylesheet" type="text/css" href="math31style.css">
+<script src="https://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Math 31: Topics in Algebra</h1>
+<h2>Summer 2013</h2>
+<br>
+
+<!-- Javascript for automatically generating the date and time of last update. Prints in
+	the format "Last updated (Month) (Day), (Year) at xx:xx am/pm EDT".
+-->
+<div style="text-align:center;">
+<span style="color:DarkSlateGray;">
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+</span>
+</div>
+<br>
+
+    
+<!-- Generates header with links to other components of the course webpage. -->
+<table class="header">
+<tbody>
+
+<tr>
+<td class="header"><p class="header"><a class="header" href="index.html">Main Page
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="info.html">Course Information
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="syllabus.html">Syllabus
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="homework.html">Homework
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="exams.html">Exams & Quizzes
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="projects.html">Projects
+</a></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+<!-- Title of this page: Syllabus -->
+<h1>Syllabus</h1>
+
+<p class="alg">This page tentative day-by-day schedule for the course, along with some 
+announcements and course documents. It will be updated throughout the term to reflect our 
+actual progress through the material. The reading assignment listed for each day is meant 
+to be read after that day's class. It will generally be comprised of the sections in the 
+book that we intend to cover in the <i>next</i> lecture, and it should be read before 
+coming to the next class. There is no need to understand every detail of the assigned 
+reading, but seeing it beforehand will help. All reading assignments are from Saracino 
+unless otherwise noted.
+</p>
+
+<p class="alg">
+Since I sometimes deviate from the textbook, or cover topics that are not fully addressed 
+in the book, I will be posting a PDF version of my lecture notes here. I will generally
+update them on a weekly basis.
+</p>
+<br>
+
+<div class="syllabus">
+<h3>Course Documents</h3>
+Notes and handouts:
+<ul class="subalg">
+	<li>
+	<a href="Notes%20on%20Abstract%20Algebra%202013.pdf">Lecture Notes</a> (Final Version -- 
+	Updated 8/21/13.)
+	</li>
+	
+	<li>
+	<a href="Set%20Theory.pdf">Set theory handout</a> from the first day of class.
+	</li>
+	
+	<li>
+	<a href="Proof%20Writing.pdf">Tips on Proof Writing</a> from the first proof workshop.
+	</li>
+	
+	<li>
+	<a href="Proof%20Examples.pdf">More examples</a> from the proof workshop.
+	</li>
+	
+	<li>
+	<a href="https://www.math.dartmouth.edu/~m31x13/Proof%20Techniques.pdf">Proof Techniques</a> from the second proof workshop.
+	</li>
+	
+	<li>
+	<a href="Latex%20Primer.pdf">Latex Primer</a> from the x-hour on 7/9/13. 
+	(<a href="https://www.math.dartmouth.edu/~m31x13/Latex%20Primer.tex">Latex code</a>)
+	More information on LaTeX can be found 
+	<a href="../news-resources/computing/resources_common_latex.phtml.html">
+	here</a>.
+	</li>
+	
+	<li>
+	Some <a href="Midterm%20Review.pdf">notes</a> about the midterm exam
+	</li>
+	
+	<li>
+	Solutions to the <a href="M31x13%20Midterm%20Solutions.pdf">in-class</a> and 
+	<a href="M31x13%20Take%20Home%20Solutions.pdf">take-home</a> midterm exams.
+	</li>
+	
+	<li>
+	<a href="Lecture%2028%20Slides.pdf">Slides</a> on Galois theory from the last day of 
+	class.
+	</li>
+	
+	<li>
+	Solutions to the <a href="M31x13%20Final%20Solutions.pdf">final exam</a>.
+	</li>
+</ul>
+
+Homework assignments:
+<ul class="subalg">	
+	<li>
+	<a href="M31%20HW%201.pdf">Homework 1</a> (LaTeX code <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%201.tex">here</a>)
+	</li>
+	<li>
+	<a href="M31%20HW%201%20Solutions.pdf">Solutions to HW 1</a>
+	</li>
+	<li>
+	<a href="M31%20HW%202.pdf">Homework 2</a> (LaTeX code <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%202.tex">here</a>)
+	</li>
+	<li>
+	<a href="M31%20HW%202%20Solutions.pdf">Solutions to HW 2</a>
+	</li>
+	<li>
+	<a href="M31%20HW%203.pdf">Homework 3</a> (LaTeX code <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%203.tex">here</a>)
+	</li>
+	<li>
+	<a href="M31%20HW%203%20Solutions.pdf">Solutions to HW 3</a>
+	</li>
+	<li>
+	<a href="M31%20HW%204.pdf">Homework 4</a> (LaTeX code <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%204.tex">here</a>)
+	</li>
+	<li>
+	<a href="M31%20HW%204%20Solutions.pdf">Solutions to HW 4</a>
+	</li>
+	<li>
+	<a href="M31%20HW%205.pdf">Homework 5</a> (LaTeX code <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%205.tex">here</a>)
+	</li>
+	<li>
+	<a href="M31%20HW%205%20Solutions.pdf">Solutions to HW 5</a>
+	</li>
+	<li>
+	<a href="M31%20HW%206.pdf">Homework 6</a> (LaTeX code <a href="https://www.math.dartmouth.edu/~m31x13/M31%20HW%206.tex">here</a>)
+	</li>
+	<li>
+	<a href="M31%20HW%206%20Solutions.pdf">Solutions to HW 6</a>
+	</li>
+	<li>
+	<a href="M31%20HW%207.pdf">Homework 7</a> (Note: This homework is an optional assignment
+	on rings.)
+	</li>
+	<li>
+	<a href="M31%20HW%207%20Solutions.pdf">Solutions to the optional HW 7</a>
+	</li>
+</ul>
+
+<br>
+
+<h3>Announcements</h3>
+
+<ul class="subalg">
+	<li>
+	We will be meeting in the special Saturday class period on June 22 at 10:30 am.
+	</li>
+	
+	<li>
+	We will meet in the first x-hour on June 25 for a proof-writing workshop.
+	</li>
+	
+	<li>
+	We will meet in the second x-hour on July 2 for another optional workshop on proof
+	techniques.
+	</li>
+	
+	<li>
+	The x-hour on July 9 will be a research workshop. Shirley Zhao (from Kresge Library)
+	will tell you about resources that you can use while researching your group projects.
+	I will also provide some information on the LaTeX typesetting environment.
+	</li>
+	
+	<li>
+	The in-class midterm exam will take place in x-hour on Tuesday, July 23. The take-home
+	part will be due at the beginning of class on Friday, July 26.
+	</li>
+	
+	<li>
+	The x-hour on Tuesday, August 6 will be another research workshop with Shirley Zhao.
+	</li>
+	
+	<li>
+	The due date for HW 6 has been moved to <b>Monday, August 12</b>.
+	</li>
+</ul>
+</div>
+<br>
+<br>
+
+<div class="syllabus">
+<table class="sched">
+<tbody>
+
+<tr class="head">
+<th class="left">
+Lectures
+</th>
+
+<th class="middle">
+Brief Description
+</th>
+
+<th class="right">
+Reading Assignment
+</th>
+</tr>
+
+<tr class="one">
+<td class="syllabus">6/21</td>
+<td class="syllabus">Overview: What is Abstract Algebra? </td>
+<td class="syllabus"><a class="table" href="Set%20Theory.pdf">Set Theory handout</a> and/or 
+Section 0, Example 8 of Section 2 (Ignore the word "group" for now.) </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus">6/22</td>
+<td class="syllabus">Motivating examples of groups: the Integers mod $n$ </td>
+<td class="syllabus"> Sections 1 and 2 (first two pages) </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus">6/24</td>
+<td class="syllabus">The Euclidean Algorithm and inverses mod $n$; Binary operations </td>
+<td class="syllabus">Section 2 </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 6/25 (x-hour) </td>
+<td class="syllabus"> Proof Workshop </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus">6/26 </td>
+<td class="syllabus"> First definitions for groups </td>
+<td class="syllabus"> Sections 7 and 8 (first two pages), Section 3 </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 6/28 </td>
+<td class="syllabus">Abelian groups and group tables</td>
+<td class="syllabus">Sections 7 and 8 (first two pages), Section 3  </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/1 </td>
+<td class="syllabus">The symmetric and dihedral groups
+</td>
+<td class="syllabus"> Section 3 </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 7/2 (x-hour) </td>
+<td class="syllabus"> Proof Workshop </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/3 </td>
+<td class="syllabus">The dihedral group; Basic properties of groups </td>
+<td class="syllabus">Section 4 </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 7/5 </td>
+<td class="syllabus">Powers of an element and order</td>
+<td class="syllabus">Section 5 </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/8 </td>
+<td class="syllabus">Cyclic groups </td>
+<td class="syllabus">Section 5 </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 7/9 (x-hour) </td>
+<td class="syllabus">Research Workshop (with Shirley Zhao) and LaTeX tips </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/10 </td>
+<td class="syllabus">Subgroups  </td>
+<td class="syllabus">Section 5 </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 7/12 </td>
+<td class="syllabus">Subgroups (continued) </td>
+<td class="syllabus">Section 9 and 10 </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/15 </td>
+<td class="syllabus">Subgroups of Cyclic Groups; Preview of Lagrange's Theorem </td>
+<td class="syllabus">Sections 9 and 10 </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 7/16 (x-hour) </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/17 </td>
+<td class="syllabus">Equivalence relations </td>
+<td class="syllabus">Section 10 </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 7/19 </td>
+<td class="syllabus">Cosets and Lagrange's theorem </td>
+<td class="syllabus">Section 10 </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/22 </td>
+<td class="syllabus"> Consequences of Lagrange's theorem </td>
+<td class="syllabus">Section 12 </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 7/23 (x-hour) </td>
+<td class="syllabus">MIDTERM EXAM </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/24 </td>
+<td class="syllabus"> Homomorphisms and Isomorphisms </td>
+<td class="syllabus"> Section 8 </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 7/26 </td>
+<td class="syllabus"> The symmetric group revisited </td>
+<td class="syllabus"> Section 8 and the last page of Section 12 </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 7/29 </td>
+<td class="syllabus"> Cayley's theorem </td>
+<td class="syllabus"> Sections 11 and 13 </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 7/30 (x-hour) </td>
+<td class="syllabus"> Even and odd permutations </td>
+<td class="syllabus"> Sections 11 and 13 </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 7/31 </td>
+<td class="syllabus"> Kernels of homomorphisms </td>
+<td class="syllabus"> Sections 11, 12, and 13 </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 8/2 </td>
+<td class="syllabus"> Quotient groups and normal subgroups 
+groups </td>
+<td class="syllabus">Sections 6 and 14 </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 8/5 </td>
+<td class="syllabus"> Normal subgroups and the Fundamental Homomorphism Theorem </td>
+<td class="syllabus">Section 14 </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 8/6 (x-hour) </td>
+<td class="syllabus">Research Workshop (with Shirley Zhao) </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 8/7 </td>
+<td class="syllabus"> Direct Products and the Fundamental theorem of finite abelian groups
+</td>
+<td class="syllabus"> Section 16 </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 8/9</td>
+<td class="syllabus"> The classification of finite abelian groups </td>
+<td class="syllabus"> Section 16 </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 8/12 </td>
+<td class="syllabus"> Rings </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 8/13 (x-hour) </td>
+<td class="syllabus"> Homomorphisms, Ideals, and Quotient Rings </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 8/14 </td>
+<td class="syllabus"> Presentations </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="two">
+<td class="syllabus"> 8/16 </td>
+<td class="syllabus"> Presentations </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="three">
+<td class="syllabus"> 8/19 </td>
+<td class="syllabus"> Ideals and Quotient Rings </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="four">
+<td class="syllabus"> 8/20 (x-hour) </td>
+<td class="syllabus"> </td>
+<td class="syllabus"> </td>
+</tr>
+
+<tr class="one">
+<td class="syllabus"> 8/21 </td>
+<td class="syllabus"> Roots of polynomials and a brief overview of Galois theory </td>
+<td class="syllabus"> </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<br>
+<br>
+
+</body>
+</html>

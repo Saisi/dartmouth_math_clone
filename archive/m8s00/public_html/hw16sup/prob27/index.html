@@ -1,0 +1,701 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>prob27</TITLE>
+<META NAME="description" CONTENT="prob27">
+<META NAME="keywords" CONTENT="prob27">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.math.dartmouth.edu/~m8s00/hw16sup/prob27.css">
+<LINK REL="next" HREF="http://www.math.dartmouth.edu/~m8s00/hw16sup/node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="http://www.math.dartmouth.edu/~m8s00/hw16sup/node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="http://www.math.dartmouth.edu/~m8s00/hw16sup/node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+Math 8</DIV>
+
+<P>
+<DIV ALIGN="CENTER">
+May 5, 2000</DIV>
+
+<P>
+
+<P><P>
+<BR>
+<B>Problem:</B>  Find the distance between the lines 
+
+<!-- MATH
+ \begin{displaymath}
+x+2y=3 \qquad\qquad\qquad\quad\qquad\qquad\qquad x+y+z=6
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="446" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img1.gif"
+ ALT="$\displaystyle x+2y=3 \qquad\qquad\qquad\quad\qquad\qquad\qquad x+y+z=6$">
+</DIV><P></P>
+
+<!-- MATH
+ \begin{displaymath}
+y+2z=3 \qquad\qquad\qquad\qquad\qquad\qquad\qquad x-2z=5
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="440" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img2.gif"
+ ALT="$\displaystyle y+2z=3 \qquad\qquad\qquad\qquad\qquad\qquad\qquad x-2z=5$">
+</DIV><P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Solution:</B>  First let's find vector parametric equations for
+each line.  
+
+<P>
+For the first line, we'll start by finding two points on the
+line.  The second equation tells us that
+
+<!-- MATH
+ \begin{displaymath}
+y=3-2z
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="91" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img3.gif"
+ ALT="$\displaystyle y=3-2z$">
+</DIV><P></P>
+and then from the first equation we can get
+
+<!-- MATH
+ \begin{displaymath}
+x = 3-2y = 3-2(3-2z) = 4z-3.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="308" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img4.gif"
+ ALT="$\displaystyle x = 3-2y = 3-2(3-2z) = 4z-3.$">
+</DIV><P></P>
+So the line is given by 
+<!-- MATH
+ $(x,y,z) = (4z-3, 3-2z, z)$
+ -->
+<IMG
+ WIDTH="235" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img5.gif"
+ ALT="$ (x,y,z) = (4z-3, 3-2z, z)$">; setting <IMG
+ WIDTH="49" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img6.gif"
+ ALT="$ z=0$">
+and <IMG
+ WIDTH="49" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img7.gif"
+ ALT="$ z=1$">
+gives us two points,
+
+<!-- MATH
+ \begin{displaymath}
+(-3,3,0) \qquad\qquad\qquad (1,1,1).
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="256" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img8.gif"
+ ALT="$\displaystyle (-3,3,0) \qquad\qquad\qquad (1,1,1).$">
+</DIV><P></P>
+The vector between these points,
+
+<!-- MATH
+ $4\hat i -2 \hat j + \hat k$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img9.gif"
+ ALT="$ 4\hat i -2 \hat j + \hat k$">, is a vector in the direction of the line. 
+Using this vector and the point <IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img10.gif"
+ ALT="$ (1,1,1)$">
+we can write the equation of the
+line as
+
+<!-- MATH
+ \begin{displaymath}
+\vec r = \hat i + \hat j + \hat k + t(4\hat i -2 \hat j + \hat k).
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="251" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img11.gif"
+ ALT="$\displaystyle \vec r = \hat i + \hat j + \hat k + t(4\hat i -2 \hat j + \hat k).$">
+</DIV><P></P>
+
+<P>
+For the second line, we'll start by finding a vector in the direction of the
+line.  Because the line lies in both planes
+
+<!-- MATH
+ \begin{displaymath}
+x+y+z=6
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="115" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img12.gif"
+ ALT="$\displaystyle x+y+z=6$">
+</DIV><P></P>
+
+<!-- MATH
+ \begin{displaymath}
+x-2z=5,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="97" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img13.gif"
+ ALT="$\displaystyle x-2z=5,$">
+</DIV><P></P>
+the direction of the line is normal to both normal vectors 
+<!-- MATH
+ $\hat i + \hat j +
+\hat k$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img14.gif"
+ ALT="$ \hat i + \hat j +
+\hat k$">
+and 
+<!-- MATH
+ $\hat i - 2\hat k$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img15.gif"
+ ALT="$ \hat i - 2\hat k$">.  That is, the line is in the same direction
+as their cross product,
+
+<!-- MATH
+ \begin{displaymath}
+\left|\begin{matrix}
+\hat i & \hat j & \hat k \cr
+1 & 1 & 1 \cr
+1 & 0 & -2 \cr
+\end{matrix}\right| = (-2)\hat  i - (-3)\hat j +(-1)\hat k = -2\hat i +3\hat
+j -\hat k.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="441" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img16.gif"
+ ALT="$\displaystyle \left\vert\begin{matrix}
+\hat i &amp; \hat j &amp; \hat k \cr
+1 &amp; 1 &amp; 1 \...
+...}\right\vert = (-2)\hat i - (-3)\hat j +(-1)\hat k = -2\hat i +3\hat
+j -\hat k.$">
+</DIV><P></P>
+To find a point on the line, we can use the trick of setting <IMG
+ WIDTH="49" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img6.gif"
+ ALT="$ z=0$">; then the
+second equation gives us <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img17.gif"
+ ALT="$ x=5$">
+and the first gives us <IMG
+ WIDTH="49" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img18.gif"
+ ALT="$ y=1$">, so <IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img19.gif"
+ ALT="$ (5,1,0)$">
+is
+on the line.  This line has vector parametric equation
+
+<!-- MATH
+ \begin{displaymath}
+\vec r = 5\hat i + \hat j + t(-2\hat i +3\hat
+j -\hat k).
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="241" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img20.gif"
+ ALT="$\displaystyle \vec r = 5\hat i + \hat j + t(-2\hat i +3\hat
+j -\hat k).$">
+</DIV><P></P>
+
+<P>
+Now, as the textbook states in Example 9, to find the perpendicular distance
+between two lines, we just take any vector that goes from a point on one line
+to a point on the other, and find the length of its vector projection on a
+vector normal to both lines.  (That's the absolute value of its scalar
+projection on a vector normal to both lines.)
+
+<P>
+Before we do this, let's try to imagine why this is true.  Picture two lines
+in space.  Imagine ``skew'' lines; they are not parallel, but they do not
+intersect.  Now imagine a plane <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img21.gif"
+ ALT="$ \pi_1$">
+parallel to both lines and containing
+the first line.  For simplicity of imagination, pretend that plane is the
+floor, and the second line is at some distance above the
+floor; it is also horizontal, but not parallel to the first line.  (Maybe the
+first line runs north-south and the second line heads off in an
+east-north-easterly direction.  But they're both horizontal.)  Imagine a
+second horizontal plane <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img22.gif"
+ ALT="$ \pi_2$">
+containing the second line.
+
+<P>
+Now imagine yourself perched up above both of these planes staring down at
+them.  You'll see a point where the two lines cross; they don't actually
+meet, but the second line lies directly above the first line at that point. 
+That is the place where you can draw a vertical line between the two lines;
+becuase it is vertical, it is perpendicular to both of them, so its length is
+the perpendicular distance between the two lines, and its direction can be
+given by any vector perpendicular to both lines.  Let's say that <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img23.gif"
+ ALT="$ \vec n$">
+is
+a vector perpendicular to both lines.
+
+<P>
+Now that perpendicular distance between the two lines is just the
+perpendicular distance between the two horizontal planes.  Let's let <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img24.gif"
+ ALT="$ P$">
+be a
+point on the first line (in the bottom plane), <IMG
+ WIDTH="20" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img25.gif"
+ ALT="$ Q$">
+be a point on the second
+line (in the top plane), and <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+be the vector going from <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img24.gif"
+ ALT="$ P$">
+to <IMG
+ WIDTH="20" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img25.gif"
+ ALT="$ Q$">. 
+Since <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+goes from the first plane to the second plane, the absolute
+value of the vertical component of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+is the distance between the two
+planes.  And the vertical component of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+is its scalar projection on
+the vertical vector <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img23.gif"
+ ALT="$ \vec n$">.  So the distance between the two lines is the
+absolute value of the scalar projection of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+on <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img23.gif"
+ ALT="$ \vec n$">.
+
+<P>
+Now let's forget about all the horizontal and vertical stuff.  Here's what
+we saw:  We take a vector <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img23.gif"
+ ALT="$ \vec n$">
+normal to both lines.  We take a point <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img24.gif"
+ ALT="$ P$">
+on one line, a point <IMG
+ WIDTH="20" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img25.gif"
+ ALT="$ Q$">
+on the other line, and the vector <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+between
+<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img24.gif"
+ ALT="$ P$">
+and
+<IMG
+ WIDTH="20" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img25.gif"
+ ALT="$ Q$">.  The absolute value of the scalar projection of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+on <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img23.gif"
+ ALT="$ \vec n$">
+is
+the distance between the two lines.
+
+<P>
+We know vectors in the direction of our two lines, so we can find a vector
+<IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img23.gif"
+ ALT="$ \vec n$">
+by taking their cross product:
+
+<!-- MATH
+ \begin{displaymath}
+\vec n = \left|\begin{matrix}
+\hat i & \hat j & \hat k \cr
+4 & -2 & 1 \cr
+-2 & 3 & -1 \cr
+\end{matrix}\right| = (-1)\hat  i - (-2)\hat j +(8)\hat k = -\hat i +2\hat
+j +8\hat k.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="492" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img27.gif"
+ ALT="$\displaystyle \vec n = \left\vert\begin{matrix}
+\hat i &amp; \hat j &amp; \hat k \cr
+4 ...
+...x}\right\vert = (-1)\hat i - (-2)\hat j +(8)\hat k = -\hat i +2\hat
+j +8\hat k.$">
+</DIV><P></P>
+We know a point on each line, so we can find <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+by subtracting their
+coordinates:
+
+<!-- MATH
+ \begin{displaymath}
+\vec w = 4\hat i -\hat k.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="98" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img28.gif"
+ ALT="$\displaystyle \vec w = 4\hat i -\hat k.$">
+</DIV><P></P>
+Finally the absolute value of the scalar projection of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img26.gif"
+ ALT="$ \vec w$">
+on <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img23.gif"
+ ALT="$ \vec n$">
+is
+
+<!-- MATH
+ \begin{displaymath}
+\left| \frac{\vec w \cdot \vec n}{|\vec n|}\right| = \left|
+\frac{-12}{\sqrt{69}}\right| =\frac{12}{\sqrt{69}} ,
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="205" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img29.gif"
+ ALT="$\displaystyle \left\vert \frac{\vec w \cdot \vec n}{\vert\vec n\vert}\right\vert = \left\vert
+\frac{-12}{\sqrt{69}}\right\vert =\frac{12}{\sqrt{69}} ,$">
+</DIV><P></P>
+and this is the distance between the two lines.
+
+<P>
+Just for fun, now that we know how to solve systems of linear equations,
+let's use the fact that these lines are given by systems of linear equations
+to find the first line.  We start with our system of linear equations,
+
+<!-- MATH
+ \begin{displaymath}
+x+2y=3
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="92" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img30.gif"
+ ALT="$\displaystyle x+2y=3 $">
+</DIV><P></P>
+
+<!-- MATH
+ \begin{displaymath}
+y+2z=3
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="91" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img31.gif"
+ ALT="$\displaystyle y+2z=3 $">
+</DIV><P></P>
+write down the augmented matrix of the system
+
+<!-- MATH
+ \begin{displaymath}
+\left(\begin{matrix}
+1 & 2 & 0 & \vdots & 3 \cr
+0 & 1 & 2 & \vdots & 3 \cr
+\end{matrix}\right),
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="150" HEIGHT="80" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img32.gif"
+ ALT="$\displaystyle \left(\begin{matrix}
+1 &amp; 2 &amp; 0 &amp; \vdots &amp; 3 \cr
+0 &amp; 1 &amp; 2 &amp; \vdots &amp; 3 \cr
+\end{matrix}\right),$">
+</DIV><P></P>
+row-reduce it to get
+
+<!-- MATH
+ \begin{displaymath}
+\left(\begin{matrix}
+1 & 0 & -4 & \vdots & -3 \cr
+0 & 1 & 2 & \vdots & 3 \cr
+\end{matrix}\right),
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="179" HEIGHT="80" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img33.gif"
+ ALT="$\displaystyle \left(\begin{matrix}
+1 &amp; 0 &amp; -4 &amp; \vdots &amp; -3 \cr
+0 &amp; 1 &amp; 2 &amp; \vdots &amp; 3 \cr
+\end{matrix}\right),$">
+</DIV><P></P>
+rewrite this as
+
+<!-- MATH
+ \begin{displaymath}
+x-4z=-3
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="107" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img34.gif"
+ ALT="$\displaystyle x-4z=-3$">
+</DIV><P></P>
+
+<!-- MATH
+ \begin{displaymath}
+y+2z=3
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="91" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img31.gif"
+ ALT="$\displaystyle y+2z=3 $">
+</DIV><P></P>
+and assign a paramter to <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img35.gif"
+ ALT="$ z$">
+to get
+
+<!-- MATH
+ \begin{displaymath}
+x = -3+4t
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="104" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img36.gif"
+ ALT="$\displaystyle x = -3+4t$">
+</DIV><P></P>
+
+<!-- MATH
+ \begin{displaymath}
+y = 3-2t
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="89" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img37.gif"
+ ALT="$\displaystyle y = 3-2t$">
+</DIV><P></P>
+
+<!-- MATH
+ \begin{displaymath}
+z=t.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="51" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img38.gif"
+ ALT="$\displaystyle z=t.$">
+</DIV><P></P>
+From this we can get a vector parametric equation,
+
+<!-- MATH
+ \begin{displaymath}
+\vec r = -3\hat i +3\hat j +t(4\hat i - 2\hat j + \hat k).
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="251" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img39.gif"
+ ALT="$\displaystyle \vec r = -3\hat i +3\hat j +t(4\hat i - 2\hat j + \hat k).$">
+</DIV><P></P>
+This tells us that the vector 
+<!-- MATH
+ $4\hat i - 2\hat j + \hat k$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img9.gif"
+ ALT="$ 4\hat i -2 \hat j + \hat k$">
+is in the
+direction of the line and the point <IMG
+ WIDTH="79" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw16sup/img40.gif"
+ ALT="$ (-3,3,0)$">
+is on the line.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="http://www.math.dartmouth.edu/~m8s00/hw16sup/node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="http://www.math.dartmouth.edu/~m8s00/hw16sup/node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="http://www.math.dartmouth.edu/~m8s00/hw16sup/node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Peter Kostelec</I>
+<BR><I>2000-05-05</I>
+</ADDRESS>
+</BODY>
+</HTML>

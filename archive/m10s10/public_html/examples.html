@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>m10s10: Examples</title></head>
+
+
+<body bgcolor="#BFFDBF" link="black" vlink="black">
+
+<!--<hr>
+
+<p> </p>
+
+<center>After all, facts are facts, and although we may quote one to another with a chuckle the words of the Wise Statesman, "Lies - damned lies - and statistics," <br>still there are some easy figures the simplest must understand, and the astutest cannot wriggle out of.<br>
+	Leonard Courtney</center>
+
+<p> </p>-->
+
+<hr>
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="+1"><b>Extra Examples for Math 10 Final Exam</b></font></p>
+
+<p>A simple random sample of 400 people from a population of 100,000 is surveyed in the fall, and another sample the following spring.  The fall sample showed 41% of people in favor of repaving downtown; the average time per week spent downtown was 4 hours with a standard deviation of 2 hours.  In the spring, 45% were in favor of repaving and the average weekly time spent downtown was 3.5 hours with a standard deviation of 1.75 hours.  For each of the two things measured, find (a) a 95% confidence interval for the population parameter for the fall survey, and (b) whether it appears there was a real change from the fall to the spring.</p>
+
+<p>Repaving: (a) The box model approximating the population has 41% 1's and 59% 0's, so the SD estimate is the square root of (0.41)(0.59), or 0.49.  The SE for a sample of 400 is (20)(0.49) = 9.8 in raw numbers, or 9.8/400 = 0.49/20 = 0.0245 = 2.45%.  A 95% confidence interval is two SEs up and down from the sample statistic of 41%, and so is 36.1-45.9%.<br>
+(b) We need a box model for the spring population.  It has 45% 1's and 55% 0's, with a standard deviation of square root of (0.45)(0.55), or 0.5.  The percentage SE is 0.5/20 = 2.5%.  The observed difference between the fall and spring populations is 45-41% = 4%.  As always, the expected difference is 0%.  The SE for the difference is the square root of (2.45)<sup>2</sup> + (2.5)<sup>2</sup>, or 3.5%.  Thus the z-value is (4-0)/3.5 = 1.14, or about 1.15, and the P-value is (100-74.99)/2 = 12.5%.  This is above the agreed significance cut-off of 5%, so we conclude there has not been a change in the population as a whole.</p>
+
+<p>Time spent downtown: (a) We estimate the average of the box as 4 and the SD as 2 (we need the sample's SD here though we didn't in the previous part because here we don't know what numbers might be on the tickets in the box).  We need the SE for the <i>average</i> of 400 draws to get our confidence interval.  The SE for the average is (SE for sum)/(# draws) = (SD of box)(square root of # draws)/(# draws) = (SD of box)/(square root of # draws) = 2/20 = 0.1 hour.  A 95% confidence interval is still two SEs up and down, or 3.8-4.2 hours per week.<br>
+(b) The spring population box model has estimated average 3.5 and SD 1.75.  The SE for the box 2 average is 1.75/20 = 0.0875, so the SE for the difference is the square root of (0.1)<sup>2</sup> + (0.0875)<sup>2</sup>, which is 0.133.  The observed difference is -0.5 hours (0.5 will do; I am just trying to be consistent with the difference being (later value) - (earlier value)) and the expected difference is as always 0 hours.  Therefore z = (-0.5 - 0)/0.133 = -3.76, or approximately -3.75, so P = (100-99.982)/2 = 0.009, which is highly significant.  We conclude there actually has been a drop in time spent downtown by the population.</p>
+
+<hr>
+
+<p>1. Roll a die five times.  What is the probability of getting a 1 first, and then half even numbers and half odd numbers?<br>
+2. Deal four cards from a well-shuffled deck.  What is the probability of getting exactly one heart and exactly one face card?<br>
+3. Roll six dice.  What is the probability of getting at least one 3 or 4?</p>
+
+<p>1. I think this one is easier to do as (size of event)/(total number of outcomes) than as a product of (conditional) probabilities, but there's not a huge difference.  There is one way to get a 1 on the first roll, so how many ways are there to get half even and half odd on the remaining four rolls?  There are 3 even numbers and 3 odd numbers, so we may select the values in 3^4 ways, but we also need to arrange them.  If we choose where the even numbers go, the odd numbers have to go in the remaining slots, so there are (4 choose 2) ways to arrange them.  The total probability is 1*3^4*(4 choose 2)/6^5 = 1/2^4 = 6.25%.<br>
+If you want to do this by probabilities multiplied together, it goes as follows: There is a 1/6 probability of getting a 1 on the first roll.  Individual dice rolls are independent, so we may treat the remaining 4 as though the first one doesn't exist.  There is a 1/2 probability of getting an odd number and a 1/2 probability of getting an even number on any given roll, and so a (1/2)^4 probability of getting two evens and two odds in some fixed order.  The order as above may be chosen in any of (4 choose 2) = 6 ways, so the total probability is (1/6)(1/2)^4(6) = (1/2)^4 = 6.25%.<br>
+2. This event needs to be split up into two mutually exclusive subevents, because the heart and face could be the same card or they could be different.  Let event A be "exactly one heart face card, no other hearts or faces" and event B be "exactly one non-face heart, exactly one non-heart face, no other hearts or faces".  To find the probability of A, pretend the heart face must be first.  There is a 3/52 chance of drawing such a card first, followed by the probability of getting non-heart non-faces for the remaining 3 cards.  The number of such cards is 52 - 13 hearts - 9 additional faces = 30 cards (regardless of which heart face we drew), so the chance of getting that type of cards only for the remaining 3 draws is (30/51)(29/50)(28/49).  The total probability if we fix the heart face as the first card is (3/52)(30/51)(29/50)(28/49), but there are 4 (or 4 choose 1) slots the heart face could occupy, so we must multiply by 4.  This shuffles the numerators of the fractions but does not change their values.  The probability of event A is 348/7735 = 4.5%.<br>
+For event B, suppose first that the heart comes first and the face comes second.  There are 10 non-face hearts and 9 non-heart faces, and then the same 30 non-heart non-faces, for a probability of (10/52)(9/51)(30/50)(29/49) with the positions fixed.  There are 4 (or 4 choose 1) ways to select where the heart shows up, and for each of those there are 3 (or 3 choose 1) ways to select where the face shows up; the positions of the non-heart non-faces are then fixed.  Therefore we multiply the probability with locations fixed by 12, for a total of 1566/10829 = 14.5%.  The probability of the original event is the sum of these mutually exclusive events, 10266/54145 = 19%.<br>
+3. This event is the negation of the event "no 3s or 4s", which has probability (4/6)^6.  Therefore this event's probability is 1 - (4/6)^6 = 665/729 = 91.2%.</p>
+
+<hr>
+
+<p>A person claiming to have invented a new source of energy releases data from successive trial runs of the machine.  The data, converted into standard units via the average power produced and the standard deviation of the values, is presented in terms of unit intervals below.  One would expect the amounts to be normally distributed; at this level of detail do they appear to be?</p>
+<p><table border=1>
+<tr>
+<th>z</th><th>freq</th><th>exp %</th><th>exp freq</th>
+</tr><tr>
+<td>&lt; -2</td><td>2</td><td>2.5</td><td>1.95</td>
+</tr><tr>
+<td>-2 to -1</td><td>9</td><td>13.5</td><td>10.53</td>
+</tr><tr>
+<td>-1 to 0</td><td>25</td><td>34</td><td>26.52</td>
+</tr><tr>
+<td>0 to 1</td><td>28</td><td>34</td><td>26.52</td>
+</tr><tr>
+<td>1 to 2</td><td>12</td><td>13.5</td><td>10.53</td>
+</tr><tr>
+<td>&gt; 2</td><td>2</td><td>2.5</td><td>1.95</td>
+</tr>
+</table></p>
+<p>The expected percentages come from the standard normal curve, and the frequencies are out of the total of 78 observations.  &chi;<sup>2</sup> = 0.0013 + 0.2223 + 0.0871 + 0.0826 + 0.2052 + 0.0013 = 0.6 approximately.  With 5 degrees of freedom, this gives a P-value of between 99 and 95% but very close to 99% - definitely normal-appearing, but a significant and close to highly significant "too good to be true" result.  If you are wondering about the veracity of this person's claims, this is certainly a hint to look more closely at the data.</p>
+
+<hr>
+
+<p><a href="hw.html">Back</a> to the Math 10 homework page</p>
+
+<p><a href="index.html">Back</a> to the main Math 10 page</p>
+
+<p><font size="-1">Last modified June 3, 2010</font></p>
+
+</body></html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "math31style.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Projects</title>
+<link rel="stylesheet" type="text/css" href="math31style.css">
+<script src="https://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Math 31: Topics in Algebra</h1>
+<h2>Summer 2013</h2>
+<br>
+
+<!-- Javascript for automatically generating the date and time of last update. Prints in
+	the format "Last updated (Month) (Day), (Year) at xx:xx am/pm EDT".
+-->
+<div style="text-align:center;">
+<span style="color:DarkSlateGray;">
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+</span>
+</div>
+<br>
+
+    
+<!-- Generates header with links to other components of the course webpage. -->
+<table class="header">
+<tbody>
+
+<tr>
+<td class="header"><p class="header"><a class="header" href="index.html">Main Page
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="info.html">Course Information
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="syllabus.html">Syllabus
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="homework.html">Homework
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="exams.html">Exams & Quizzes
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="projects.html">Projects
+</a></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+<!-- Title of this page: Projects -->
+<h1>Projects</h1>
+
+<p class="alg">As part of this course, I would like you to have the chance to explore some 
+mathematics on your own. With this in mind, you will be required to complete a group 
+project. You should work in groups of 3 or 4 to put together a 15&ndash;20 minute 
+presentation, which will be given at the end of the term. In addition, each member of the 
+group will need to turn in a paper addressing their contributions and what they learned 
+during the completion of the project. You are welcome to choose your own groups, and I can 
+try to help in matching people up if necessary.
+</p>
+
+<p class="alg">In your presentation, you should tell the class about an interesting 
+mathematical topic related to abstract algebra. Some vague suggestions are:
+</p>
+
+<ul class="alg">
+	<li>
+	Learn about a more advanced topic in algebra which we have not covered in class, 
+	and give the class a synopsis of it.
+	</li>
+
+	<br>
+	<li>
+	Tell us about an application of algebra that you find interesting.
+	</li>
+
+	<br>
+	<li>
+	Research some of the history behind abstract algebra and the mathematicians who 
+	developed it.
+	</li>
+</ul>
+
+<p class="alg">
+I will have a list of specific topics that I can suggest to you, or you can come up with a 
+topic on your own and ask me if it is appropriate. I can also direct you toward sources 
+that you can use to research your topic. In addition, 
+<a href="http://sites.dartmouth.edu/shirlz">Shirley Zhao</a> (from the Kresge Physical 
+Sciences Library) has offered to give you some research tips during a couple of the 
+x-hours.
+</p>
+
+<p class="alg">
+To make sure that everyone is on top of things 
+and that the topics are acceptable and relevant to the course, I will set some deadlines 
+for the project:
+</p>
+
+<ul class="alg">
+	<li>
+	<b>July 9:</b> Give me your choice of partners, or tell me that you would like to be 
+	matched with someone.
+	</li>
+
+	<br>
+	<li>
+	<b>August 2:</b> Choose the topic for your presentation. Give me a written proposal 
+	(as a group) containing a tentative outline of what you plan to talk about.
+	</li>
+
+	<br>
+	<li>
+	<b>August 9:</b> Turn in a written outline (as a group) with a summary of your 
+	presentation and a description of the main points that you intend to cover. Also 
+	include a list of references.
+	</li>
+
+	<br>
+	<li>
+	<b>August 13&ndash;16:</b> Give your presentation in front of the class.
+	</li>
+	
+	<br>
+	<li>
+	<b>August 19:</b> Turn in your individual papers.
+	</li>
+</ul>
+
+<p class="alg">
+Below are details regarding the different components of the project.
+</p>
+
+<ul class="alg">
+	<li>
+	<b>First (rough) outline:</b> This should, first and foremost, tell me what you topic 
+	is and how you plan to approach it. You should give a brief description of what you 
+	plan to address in your presentation. It's fine if the details are somewhat tentative 
+	at this point. This need not be long&mdash;the purpose is to tell me what you plan to
+	research so that I can make sure it is appropriate.
+	</li>
+
+	<br>
+	<li>
+	<b>Second (detailed) outline:</b> At this point you should have a pretty good idea of 
+	what you plan to accomplish in your presentation. This outline should give a detailed 
+	summary of your topic, including the major points that you intend to address. For 
+	example:
+	
+	<ul class="subalg">
+	<br>
+	<li>If you are investigating an advanced topic in abstract algebra, state some of 
+	the definitions and theorems that you plan to discuss.
+	</li>
+	
+	<br>
+	<li>If you are studying an application of algebra, describe the aspects of algebra 
+	that are used and how the topic relates to the class.
+	</li>
+	</ul>
+	<br>
+	
+	You should also include a list of references that you have been using in your 
+	research. This outline should be more detailed than your first one, but it does not 
+	need to be overly formal (a bulleted list is fine). Its main purpose is to give me a 
+	good idea of what you plan to address in your talk, and to inform me of the references
+	that you've been consulting.
+	</li>
+
+	<br>
+	<li>
+	<b>Presentation:</b> This is your chance to tell the class (and me) about your topic. 
+	Your talk should be roughly 15&ndash;20 minutes long, and all the group members should 
+	contribute in some way. You are free to give the presentation via whatever medium you 
+	find most comfortable (chalkboard or slides). There may also be time for you to field 
+	questions from me and your classmates at the end.
+	
+	<br>
+	<br>
+	Below is the tentative schedule for the presentations:
+	<ul class="subalg">
+		<li>
+		<b>Wednesday, August 14:</b> <br>
+		Cryptography (Mimi Rogers and Jennifer Jin)<br>
+		Group Theory and Music (Laura Bergsten, Robbie Bhattacharjee, and Patty Neckowicz)
+		<br>
+		Rubik's Cube (John Cofer, John Conley, and Asher Mayerson)
+		</li>
+		<li>
+		<b>Friday, August 16:</b> <br>
+		Boolean Algebra (Emmanuel Blankson, Lola Ojabowale, and Jinjae Park) <br>
+		The Riemann Hypothesis (David Bessel, Carly Christian, Jane Karpis, and Shelby 
+		Schier)</br>
+		Carl Friedrich Gauss: The Prince of Mathematics/Titan of Science (Chester Brown,
+		Luke Rossi, Sahil Seekond, and Hannah Wang)
+		</li>
+	</ul>
+	</li>
+
+	<br>
+	<li>
+	<b>Individual report:</b> Each group member needs to turn in a written report to 
+	accompany their project. In it, you should discuss some of the mathematics that 
+	<i>you</i> specifically contributed to the project. (For example, if your group 
+	chooses to divide the responsibilities, you could discuss the specific topic(s) that 
+	you were tasked with researching.) It is possible that there may be some overlap 
+	between the topics addressed by the different group members, but your paper should 
+	ultimately be written by <i>you</i> on <i>your</i> contributions. You may also want 
+	to address some (but not necessarily all) of the following questions:
+	<br>
+
+	<ul class="subalg">
+	<br>
+	<li>How did you become interested in your group's topic?</li><br>
+
+	<li>What did you feel that you learned or gained from the project?</li><br>
+
+	<li>What aspects of the topic did you find particularly interesting?</li><br>
+	
+	<li>What are some specific connections between your research topic and the ideas that
+	we have discussed in class?</li><br>
+	</ul>
+
+	The paper should be approximately two (2) pages, and it must be typed. It is due 
+	by the second-to-last day of class (August 19).
+	</li>
+</ul>
+
+<p class="alg">
+The following is a breakdown of how the overall project grade will be computed. We will 
+discuss specific rubrics for the presentation and paper as the term progresses.
+</p>
+
+<table class="grades" border="1">
+<tbody>
+
+<tr>
+<td class="grades">
+<u>Component</u>
+</td>
+
+<td class="grades">
+<u>Percent of Project Grade</u>
+</td>
+</tr>
+
+<tr>
+<td class="grades">
+First outline
+</td>
+
+<td class="grades">
+10
+</td>
+</tr>
+
+<tr>
+<td class="grades">
+Second outline
+</td>
+
+<td class="grades">
+10
+</td>
+</tr>
+
+<tr>
+<td class="grades">
+Presentation
+</td>
+
+<td class="grades">
+50
+</td>
+</tr>
+
+<tr>
+<td class="grades">
+Individual report
+</td>
+
+<td class="grades">
+30
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<p class="alg">
+When assigning a grade to the presentation, I'll be looking for the following things:
+</p>
+<ul class="alg">
+	<li>
+	Did you draw clear connections between your topic and the material that we've covered
+	in the course?
+	</li>
+	
+	<li>
+	Was everything explained clearly and thoroughly?
+	</li>
+	
+	<li>
+	Did all the group members contribute equally (more or less)?
+	</li>
+	
+	<li>
+	Did you demonstrate a good understanding of the material that you've chosen to cover
+	and the algebra that was involved? (This may include the presentation itself and
+	any questions that I might ask you afterward.)
+	</li>
+</ul>
+
+<p class="alg">
+I will base the grade for the paper on the following things:
+</p>
+<ul class="alg">
+	<li>
+	Was the paper written clearly, using proper English (including grammar, punctuation,
+	spelling, etc.)?
+	</li>
+	
+	<li>
+	Did you demonstrate an understanding of your group's research topic, and specifically
+	the parts that you researched?
+	</li>
+	
+	<li>
+	Did you clearly convey your contributions to me?
+	</li>
+</ul>
+
+<br>
+<hr class="footer">
+<br>
+
+</body>
+</html>

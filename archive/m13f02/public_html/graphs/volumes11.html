@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>volumes1.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000 size=4>    </font></b>
+<b><font color=#000000 size=4>                                             Some comments on Problem 6, page 316</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<i><font color=#000000>"Describe as an elementary region the solid cut out of the ball x^2+y^2+z^2&lt;=4 by the elliptic cylinder 2x^2+z^2=1."</font></i>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>The graph below (generated with Maple) should give you a perfect idea on the shape of the solid under consideration.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):                                   F:=plot3d([cos(t)/sqrt(2),u,sin(t)],t=0..2*Pi,u=-2..2,color=yellow): G:=plot3d([2*cos(t)*sin(u),2*sin(t)*sin(u),2*cos(u)],t=0..2*Pi,u=0..Pi,style=wireframe,color=black, numpoints=10000): display(F,G,axes=frame,labels=[x,y,z]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m13f02/graphs/images/volumes11.gif" width=622 height=594 alt="[Maple Plot]">
+</p>
+<p align=left>
+<i><font color=#000000>Note.</font></i>
+<font color=#000000> If the base D for the integration is chosen in the xy plane the next pictures justify why the computation of the volume will be much complicated. (The second picture gives the projection onto the yz plane.)</font>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m13f02/graphs/images/volumes12.gif" width=442 height=433 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m13f02/graphs/images/volumes13.gif" width=489 height=479 alt="[Maple Plot]">
+</p>
+<p align=center>
+<font color=#AAAAAA size="-1">
+Maple
+<sup>TM</sup> is a registered trademark of <a href="http://www.maplesoft.com" target=new><font color=#AAAAAA size="-1">Waterloo Maple Inc.</font></a><br>
+<font color=#AAAAAA size="-2">Math rendered by 
+<a href="http://www.dessci.com" target=new>
+<font color=#AAAAAA size="-2">
+WebEQ
+</font>
+</a>
+</font>
+</font>
+</p>
+</basefont>
+</body>
+</html>

@@ -1,0 +1,289 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title> Set-up of Fedora 8 on Dell Latitude D820
+</title>
+</head>
+<body text="#000000" bgcolor="#fFcfdf" link="#000099" vlink="#551A8B" alink="#FF0000" nosave textcolor="000000">
+
+<h1 align=center>Set-up of Fedora 8 on Dell Latitude D820</h1>
+
+<center>Alex Barnett, 1/17/08</center>
+
+<hr>
+
+<i>If you want to understand the dual-boot config and partitioning first see my notes on the <a href="http://www.math.dartmouth.edu/~ahb/D820_FC5_setup.html">setup under Fedora Core 5</a></i>
+
+<h4>Hardware &amp; status summary</h4>
+<ul>
+<li>CPU: Intel Core Duo T2500 @ 2GHz, 2MB L2 cache, 667 MHz FSB
+<li>BIOS A01 (whose menu appears only to be accessible at power-on)
+<li>hard drive: SATA 80GB 7200RPM
+<li>RAM: 2 x 1GB DDR2
+<li>8x DVD+-R/RW. <font color="green">Reading and burning (CDs 16x, DVD 4x) works out of box</font>
+<li>15in WSXGA+ 1680x1050
+<li>GPU: nVidia Quadro NVS 120M. <font color="green">Accelerated graphics works
+after simple nvidia driver installation: I used version 169.07</font>
+<ul><li>3dMark05 score (in XP): 1933 <li>glxgears @ default size (linux): 2180 fps
+</ul>
+<li>9-cell 85 Whr battery (<i>my experience</i>: Li-ion will die in 1 yr if kept full and trickle-charged.
+You must do frequent discharge cycles. Even then after 15 months it has died to 1/3 initial capacity... kinda pathetic)
+<li>suspend/hibernate: <font color="green">Suspend works! (for first time
+ever in linux laptop setup, even with <tt>nvidia</tt> driver)</font>.
+Suspends on lid-close (most of the time). Haven't tested hibernate.
+<li>wireless: Intel 3945 integrated.
+<font color="green">Works out of the box (didn't associate upon 2nd boot up, but now is fine)</font>. NetworkManager seems a lot more reliable than in FC5.
+<li>4 USB 2.0 ports. <font color="green">Work out of box, including mounting ext drives and iPod</font>
+<li>sound: Intel 82801G (ICH7 Family). <font color="green">snd_hda_intel driver works out of box with new pulseaudio platform</font> Speakers, audio out fine.Recording from either integrated mic (near power LEDs), or from ext mic input
+(switchable via <tt>kaslamix</tt> mixer and no others so far).
+<li>touchpad: Synaptic. <font color="green">Works out of box</font>.
+Can disable the annoying tap-to-click via synaptic settings in <tt>xorg.conf</tt>
+<li>weight: 6.5 lbs + 1 lb power adaptor
+<li>cost: $2100, incl $85 Microsoft `campus agreement', whatever that is.
+</ul>
+
+<hr>
+
+<h4>Installation</h4>
+
+I did a "Custom install" from DVD-ROM, which allowed me to preserve all
+my previous partitions (described in <a href="http://www.math.dartmouth.edu/~ahb/D820_FC5_setup.html">setup under FC5</a>), apart from <code>/</code> and <code>/boot</code> which I wanted it
+to wipe clean and do a fresh install.
+In anaconda partition table editor, it was weird that I had to copy the LABEL
+information over to the mount points, since anaconda didn't know where any of the mount points were supposed to be.
+
+<p> I chose to customize the installed software choices based on prior experience.
+
+<p>For the dual-boot setup: Once F8 installed, boot from DVD/CD into read-only rescue mode, grab the boot partition start via,
+<pre>dd if=/dev/sda3 of=linux_bootsec.bin bs=512 count=1
+</pre>
+and scp linux_bootsec.bin somewhere. Boot up windows and scp it back to C:\, then edit
+the XP bootloader (after taking a backup of the file), <code>boot.ini</code>
+(which need to make visible via <code>attrib -R -S -H C:\boot.ini</code>
+from a command window) according to
+<a href="http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html">this guide</a>.
+I changed the timeout to 3 sec, and made linux the default.
+There seems to be no problem with the BIOS 1024 cylinder limit (8.5GB) since my linux boot is
+over 10GB into the drive.
+
+
+<h4>nVidia drivers</h4>
+Download the latest driver (1679.07) from nVidia, put in <code>/root/</code>
+and install as usual after any kernel changes.
+Here's my <a href="http://www.math.dartmouth.edu/~ahb/D820_F8/xorg.conf">xorg.conf</a>
+
+<h4>Devices</h4>
+
+<ul>
+<li> User permissions on external drives. 
+add <pre>/dev/sdb2               /media/stanley          ext3    rw,users        0 0</pre>
+to <code>/etc/fstab</code>
+and create <code>/media/stanley</code>
+
+<li> Audio recording, from external mic input. By default the pulseaudio
+system only shows 2 adjustable levels, master and capture in (eg type
+<tt>amixer</tt> to see what capabilities ALSA thinks the device has).
+However, the D820 High Def Audio (HDA) Intel controller is capable of more, such as choosing
+the input source (int/ext mic) as well as some discrete gain settings.
+The ONLY way I've found to control this is via <tt>kalsamix</tt> (previously known as <tt>kamix</tt>). I cannot find an RPM, so compiled this from source
+from <a href="http://kalsamix.sourceforge.net">sourceforge</a>. Steps I needed for this were: install <tt>kdelibs-devel</tt>, do this link <tt>ln -s /usr/lib/qt-3.3 /usr/lib/qt3</tt>.
+I also tried adding options to the relevant driver module
+<tt>snd_hda_intel</tt>, by putting in <tt>/etc/modprobe.conf</tt> the
+following:
+<pre>
+alias snd-card-0 snd-hda-intel
+options snd-card-0 index=0 position_fix=1 model=ref
+options snd-hda-intel index=0 position_fix=1 model=ref
+</pre>
+This was inspired by <a href="http://www.valibuk.net/?p=47#more-47">this advice</a>, but seems to have no effect:
+the following mixers still only see a single capture level control, and no course switch: gnome mixer, pulseaudio mixer, aumix, alsamixer.
+
+<li> iPod usage. Amarok seems to be best at managing a music collection and
+copying over to iPod (better than gnupod which I used to use painfully by hand, or gtkpod, which although has the feature of showing files in directory order, cannot copy multiple albums to iPod at once, ie it has no sync command). Here's how to sync all new songs in library over
+to the iPod:
+<pre>
+1) Go to Playlists -> Smart Playlists -> Collection -> All Collection,
+drag it over to right side (playlist). It will start playing - stop it!
+2) Ctrl-A to Select all.
+3) Click Devices, and iPod contents will show on left side.
+4) Drag the highlighted block from right to left iPod window.
+Lots of queued tracks to copy will show.
+5) Finally hit Transfer (which now should be clickable).
+</pre>
+I'm pretty sure this doesn't erase existing files on iPod.
+
+<p>
+A couple of times the hfsplus has mounted as read only; you will
+then need to use <tt>hpmount</tt>, failing that, is journaling has somehow been
+enabled,
+plug it in a Mac and do a <tt>diskutil disableJournal volumeName</tt>.
+
+<p>To organize MP3 collections and set Album, Artist, etc tags, install
+<a href="http://easytag.sourceforge.net/"><code>EasyTAG</code></a>.
+
+
+
+</ul>
+
+<h4>Other software</h4>
+
+<ul>
+<li>LaTeX: install gv
+<li>Install RPM of fabulous graphical text diff tool <tt>xxdiff</tt> from
+<a href="http://timeoff.wsisiz.edu.pl/rpms.html#xxdiff">here</a> (FC7 version
+works fine)
+<li>Install fonts <code>freetype-freeworld</code> from livna, <code>msttcorefonts</code>, and
+MS webcore fonts as described <a href="http://avi.alkalay.net/linux/docs/font-howto/Font.html#msfonts">here</a>
+<li>Compile emacs version 23 with Xft anti-aliased font support: first install <tt>giflib-devel</tt>,
+then follow <a href="http://understandinglimited.com/2007/12/20/gnu-emacs-with-xft-goodness-fedora/">these</a> and <a href="http://rakingleaves.blogspot.com/2005/12/anti-aliased-emacs-on-fedora-core-4.html">these</a> and <a href="http://www.emacswiki.org/cgi-bin/wiki/XftGnuEmacs">these</a> instructions.
+Namely,
+<pre>
+cd ~; mkdir CVS; cd !$
+cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/sources/emacs co -r emacs-unicode-2 emacs
+cd emacs
+./configure --with-gtk --enable-font-backend --with-xft
+setarch i386 -R make bootstrap
+echo "Emacs.font: DejaVu Sans Mono-8" >> ~/.Xdefaults
+</pre>
+I don't really know which fonts can be inserted in <tt>~/.Xdefaults</tt> here.
+Note that emacs ignores fonts in <tt>~/.emacs</tt>
+<p>
+Also note that emacs does not use the fonts perfectly: if you look very
+carefully you'll see that if a w, %, or @ are in the character before the cursor, they become bolder with each cursor flash (antialiasing doesn't work).
+This is pretty minor.
+
+<li>AucTeX
+
+
+<li>Numerical software development.
+Install <tt>atlas atlas-devel gsl gsl-devel</tt>
+
+<li>
+Multimedia software installation is well covered by
+<a href="http://www.mjmwired.net/resources/mjm-fedora-f8.html">Mauriat Miranda</a>
+To get correct mplayer aspect ratio you'll need to add
+<tt>monitoraspect=16:10</tt> to the file <tt>/etc/mplayer/mplayer.conf</tt>.
+<p>
+Install <tt>googleearth, xcdroast, xfig, tetex-prosper</tt>.
+<tt>audacity</tt> in fedora-extras doesn't have mp3 support, and won't work
+even if you tell it where liblame.so is, so got
+<tt>audacity-nonfree</tt> from the Livna yum repo.
+
+<p>
+The <a href="http://www.baudline.com"><tt>baudline</tt></a>
+binary file nearly works
+(version 1.07), the problem being missing fonts in menus (this was
+not a problem for version 1.04 under FC5). This is fixed by installing
+<code>xorg-x11-fonts-ISO8859-1-75dpi-7.2-3.fc8</code> package.
+Brilliant software, though (thank-you SigBlips!)
+
+<li>
+OpenGL software development. Install <code>freeglut-devel</code>,
+which also gives you the Mesa GLU libraries needed for Matlab below.
+
+<li>Install <tt><a href="http://www.djvuzone.org/">djvulibre</a></tt>
+for excellent compressed document viewer. Also <tt>xpdf</tt>.
+</ul>
+
+
+<h4>Other configuration</h4>
+
+<ul>
+
+
+<li><a href="http://www.math.dartmouth.edu/~ahb/Xresources"><code>.Xresources</code></a>
+
+<li>I have a lot of problems choosing a font for xterm, since gnome seems to
+mess it up. Also the locations of xterm's can't be saved by save session. Bad.
+
+<li><code>.bashrc</code>
+
+<li>Gnome: move panel to side since screen wide-aspect, install
+<code>gconf-editor</code> and remove Desktop icons in the Nautilus config.
+Change default terminal to <code>xterm</code>.
+
+<li>How edit
+the panel menu (what you get when right-click on empty desktop background) to include terminal?
+Install <code>nautilus-open-terminal</code> and restart session, as
+<a href="http://gnomesupport.org/forums/viewtopic.php?t=11315">instructed</a>
+
+<li>Is there a way to have sideways (vertical) text on the gnome
+Window List toolbar applet? That would be nice.
+
+<li><code>/etc/sudoers</code> to include myself
+
+<li><code>/etc/ssh/ssh_config</code>, add <code>ForwardX11 yes</code>
+
+<li>Append the following to <tt>/etc/rsyslog.conf</tt> (note no longer /etc/syslog.conf!) so you can easily flick
+over to syslog output to debug stuff:
+<pre>
+# writes everything to Ctrl-Alt-F9 console.
+*.*                                                     /dev/tty9
+</pre>
+
+<li>I also put the following
+in <tt>/etc/dhclient.conf</tt> so I have a guaranteed fixed
+alias on the network:
+
+<pre>
+send host-name "whisky";
+</pre>
+
+
+
+<li>I set <tt>/etc/sysconfig/network-scripts/ifcfg-eth0</tt> to have
+<tt>ONBOOT=no</tt> and <tt>USERCTL=yes</tt>
+
+</ul>
+
+<h4>Remaining issues</h4>
+<ul>
+<li>When booting up at cold temperatures (eg freezing), fans go on on permanently and CPU speed is very slow (BIOS problem?)
+</ul>
+
+<h4>Power comsumption</h4>
+
+By checking <code>/proc/acpi/battery/BAT0/state</code> (takes 5 sec to update)
+you can compute power consumption in various states:
+<pre>
+CPU0,1 idle (both 1Ghz)    wireless on      LCD max brightness            22W
+CPU0,1 idle (both 1Ghz)    wireless on      LCD min brightness            17W
+CPU0 100%, CPU1 idle       wireless on      LCD max brightness            26.5W
+CPU0,1 both 100%           wireless on      LCD max brightness            33W
+CPU0,1 idle (both 1Ghz)    wireless off     LCD max brightness            21W
+</pre>
+So wireless consumes about 1+-0.2W (regardless of transmitting or receiving).
+LCD brightness range accounts for 3W, and both CPUs maxing out increases
+consumption by about 50%. Power consumptions are similar to the
+i8100 which only has one CPU.
+
+
+<hr>
+<h3>Links and resources</h3>
+
+<ul>
+<li>You may want to compare my earlier <a href="http://www.math.dartmouth.edu/~ahb/i8100_FC4_setup.html">FC4</a> and <a href="http://www.math.dartmouth.edu/~ahb/i8100_FC3_setup.html">FC3</a> setup pages for the Dell
+Inspiron 8100.
+<li>At <a href="http://www.linux-laptop.net">Linux on Laptops</a> I found
+these other useful F8 on D820 pages:
+<a href="http://mysite.verizon.net/vze2j8bn/D820-F8.html">here</a>.
+</ul>
+
+
+<hr>
+<p>
+Contact me at <code> ahb at math dot dartmouth dot edu</code>
+
+<a href="http://www.linux-on-laptops.com/">
+<img src="http://www.linux-on-laptops.com/images/banner1.gif" 
+     alt="Linux On Laptops" width="234" height="30"
+     longdesc="http://www.linux-on-laptops.com/" /></a>
+
+<a href="http://tuxmobil.org"><img src="http://tuxmobil.org/pics/tuxmobil_sticker.png" width="88" height="31" 
+alt="TuxMobil - Linux on Laptops, Notebooks, PDAs and Mobile Phones" 
+longdesc="http://tuxmobil.org/mylaptops.html" /></a>
+
+
+</body>
+</html>

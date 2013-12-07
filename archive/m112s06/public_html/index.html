@@ -1,0 +1,568 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.78 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+  <title>Math 112 Spring 2006</title>
+</head>
+<body style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"
+ alink="#ff0000" link="#0000ee" vlink="#551a8b">
+<center><br>
+<p><b><font color="#000000"><font size="+2">Math 112: Introduction to
+Riemannian Geometry<br>
+Spring 2006</font></font></b></p>
+<p><img alt="Picture" src="http://www.math.dartmouth.edu/~m112s06/TopImage.jpg"
+ style="width: 345px; height: 287px;"><br>
+</p>
+<big><b><font color="#000000"><font size="+1"><big>Tu. &amp; Th. 10:00
+-
+11:50 AM</big></font></font></b> <br>
+<big><span style="font-weight: bold; color: rgb(255, 0, 0);">(X-Hour:
+Mon.
+2-3PM)</span></big><br>
+<b><font color="#000000"><font size="+1"><big>Location: 104 Bradley Hall<br>
+<br>
+</big></font></font></b></big></center>
+<big><b><font color="#000066"><br>
+Instructor: </font><font color="#000000"><a
+ href="../../../~cjsutton/index.html">Craig Sutton</a></font></b>
+<br>
+<small><b><font size="+1"><font color="#000066">Office: </font><font
+ color="#000000">307 Bradley Hall</font></font></b><br>
+<b><font size="+1"><font color="#000066">E-mail: </font><span
+ style="text-decoration: underline;"><span
+ style="text-decoration: underline;"><span
+ style="text-decoration: underline;"><span
+ style="text-decoration: underline;"></span></span></span></span>craig.j.sutton
+AT dartmouth DOT edu</font></b><br>
+<b><font size="+1"><font color="#000066">Phone: </font><font
+ color="#000000">646-1059</font></font></b><span
+ style="font-weight: bold;"></span><br>
+</small><font size="+1"><big><small><b><font color="#000066">Office
+Hours:</font></b></small><font color="#000000"><small>&nbsp;<br>
+Mon. 10AM - Noon <br>
+Wed. 4-5PM<br>
+</small><font color="#ff0000"><small>(Also by Appointment)</small><br>
+<span style="font-weight: bold; color: rgb(0, 0, 102);"></span><span
+ style="color: rgb(0, 0, 0);"><br>
+</span></font></font></big></font></big>
+<b><big><br>
+</big><a href="index.html#Syllabus"><big>Syllabus/Homework</big><br>
+</a></b><br>
+<hr size="2" width="100%">
+<div align="center"><big><b><font color="#000000"><font size="+1"><big><br>
+General Information</big></font></font></b><b><font color="#000000"><font
+ size="+1"><big><br>
+</big></font></font></b></big>
+<div align="left"><b><font color="#000000"><font size="+1"><big><br>
+</big>Textbooks: </font></font></b><big><i><br>
+</i></big>
+<ul>
+  <li><big><i>Riemannian Geometry</i>, Manfredo do Carmo.
+&nbsp;(required)</big></li>
+  <li><small><big><big><span style="font-style: italic;">An
+Introduction to Lie Groups and the Geometry of Homogeneous Spaces, </span>A.
+Arvanitoyeorgos (required)</big><br>
+    </big></small></li>
+</ul>
+</div>
+</div>
+<p><big><b>Course Description:</b> Riemannian geometry is the study of
+smooth manifolds equipped with a Riemannian metric. With this
+additional structure one is able to define geometric concepts such as
+geodesics, connections and curvature.&nbsp;
+The Riemannian geometer frequently explores the relationship between
+these concepts and the topological and differentiable structures of the
+underlying manifold. For example, the celebrated sphere theorem tells
+us that if M is a&nbsp; compact, simply-connected, smooth manifold of
+dimension n that admits a Riemannian metric g with sectional curvature
+satisfying 1/4 &lt; Sec<sub>(M, g)</sub> &lt;= 1, then M is
+homeomorphic to S<sup>n</sup>.
+</big><big>As a corollary we can conclude that the
+universal cover of any compact manifold which admits a Riemannian
+metric g with 1/4 &lt; Sec<sub>(M, g)</sub> &lt;= 1 must be a sphere.</big><big><br>
+</big><br>
+<big>This course will serve as an introduction to this classical and
+vibrant area of research with an aim towards developing both
+theoretical and computational proficiency. It should be of relevance to
+students with interests in geometry, topology and (mathematical)
+physics. The topics covered will include some of the following. <br>
+</big></p>
+<ul>
+  <big> </big><li><big><span style="font-weight: bold;">Riemannian
+Basics:</span> Riemannian metrics; Affine &amp; Levi-Civita Connections
+(Christoffel Symbols); geodesics, the exponential map, and the geodesic
+flow; curvature tensor, sectional curvature, Ricci &amp; Scalar
+curvature; Curvature on compact Lie groups; Killing Fields.<br>
+    </big></li>
+  <big> </big><li><big><span style="font-weight: bold;">Computations:</span>
+Computation of Riemannian basics on surfaces of revolution, S<sup>n</sup>,
+Lie groups, <span style="font-weight: bold;">R</span>P<sup>n</sup>, CP<sup>n</sup>
+and other homogeneous spaces, and warped products.</big></li>
+  <li><big><span style="font-weight: bold;">Geometry of Isometric
+Immersions:</span> Immersions; The second fundamental form; Principal
+directions &amp; curvatures; totally geodesic submanifolds; Sectional
+Curvature &amp; the Gaussian curvature of surfaces; Minimal surfaces;
+The equations of Gauss, Ricci and Codazzi (i.e., the fundamental eqs.).</big></li>
+  <li><big><span style="font-weight: bold;">Jacobi Fields \&amp;
+Interpretations of Curvature:</span> Jacobi equation and Jacobi Fields;
+Curvature and the spreading of geodesics; Conjugate points and
+singularities of the exponential map.</big></li>
+  <li><big><span style="font-weight: bold;">Variations of Energy &amp;
+Geodesics:</span> 1<sup>st</sup> and 2<sup>nd</sup> Variation Formulas;
+Geodesics are locally minimizing; Theorems of Bonnet-Meyers and Synge.</big></li>
+  <li style="font-weight: bold;"><big>Complete Manifolds &amp; the
+theorems of Hadamard and Hopf-Rinow</big></li>
+  <li><big><span style="font-weight: bold;">Spaces of Constant
+Curvature:</span> Theorem of Cartan on Curvature and Metrics; Space
+forms \&amp; totally discontinuous group actions.</big></li>
+  <li><big><span style="font-weight: bold;">Manifolds of Negative
+Curvature:</span> Existence of closed geodesics; Preissman's theorem;
+Non-existence of Killing fields; Ergodicity of the geodesic flow
+(optional).</big></li>
+  <li style="font-weight: bold;"><big>Sphere Theorem</big></li>
+  <li><big><span style="font-weight: bold;">Isometry Groups &amp;
+Isometric Actions: </span>Isometry groups as Lie groups; Killing
+fields; group actions; action/fundamental vector fields.</big></li>
+  <li><big><span style="font-weight: bold;">The Geometry of Riemannian
+Submersions:</span> submersions; the <span style="font-weight: bold;">A</span>-
+and <span style="font-weight: bold;">T</span>-tensors; O'Neill's
+formula; Principal Bundles \&amp; Connections.</big></li>
+  <li><big><span style="font-weight: bold;">The Geometry of Lie Groups
+and other Homogeneous Spaces</span><br>
+    </big></li>
+</ul>
+<big style="font-weight: bold;"><big><small>Prerequisites</small></big></big><span
+ style="font-weight: bold;">:</span> <big>Familiarity with smooth
+manifolds (i.e., Math 124 or the equivalent).<span
+ style="font-weight: bold;"></span><br>
+<br>
+<small><b><font size="+1">Disabilities</font></b>:</small> If you have
+a
+disability and require disability related accommodations please
+speak to me <font color="#ff0000"><i>and</i></font> Cathy Trueba,
+Director of Student Disability Services, in the <a
+ href="http://www.dartmouth.edu/~acskills/">Academic
+Skills Center</a> as soon as possible, so we can find a remedy. <br>
+<br>
+<span style="font-weight: bold;">Office Hours:</span> Office Hours are
+a good time to flesh out material you're having trouble with or to go
+beyond the syllabus. Please don't hesitate to
+stop by in either case.<br>
+<br>
+<span style="font-weight: bold;">Homework:</span> Homework will be
+assigned and collected every fortnight. You are encouraged to work
+together, but the solutions should be your own. <span
+ style="font-weight: bold;">No late homework
+will be accepted</span><span style="font-weight: bold;">.</span><span
+ style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span
+ style="font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+<span style="font-weight: bold;"><span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;">Honor Principle:<br>
+</span></span><br>
+</big>
+<div style="margin-left: 40px;"><big>A. <span
+ style="font-weight: bold;">Homework:</span> I encourage you to form
+study groups to discuss course material and homework problems. However,
+the assignments you turn in should be in your own words and
+handwriting. Also, the names of others you consulted with should appear
+at the top of your assignment.<br>
+</big></div>
+<big><br>
+</big>
+<div style="margin-left: 40px;"><big>B. <span
+ style="font-weight: bold;">Exams:</span>
+You should not give or receive help during exams. All exams are closed
+book unless otherwise stated.<br>
+</big></div>
+<big><span style="font-weight: bold;"><span style="font-weight: bold;"></span><br>
+</span><b><font size="+1"><big>(Tentative) Grading Policy</big></font></b>:
+Your course grade will probably be determined by the following
+scheme.<b><font color="#ff0000"><br>
+<br>
+Homework:</font></b>
+&nbsp;&nbsp;&nbsp;
+&nbsp; <span style="color: rgb(255, 0, 0); font-weight: bold;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 100%</span>
+<span style="font-weight: bold; color: rgb(255, 0, 0);"></span><b
+ style="color: rgb(255, 0, 0);"></b><br>
+<span style="font-weight: bold; color: rgb(255, 0, 0);"></span><br>
+</big>
+<p>I will announce the definitive grading guide in the coming weeks.<br>
+</p>
+<hr width="100%">
+<div align="center"><big><big><b><a name="Syllabus"></a>Syllabus/Homework</b></big></big><br>
+<br>
+<div align="left"><b><br>
+</b><br>
+<div style="text-align: center;"><b>WEEK 1</b><br>
+</div>
+<b><br>
+March 28 </b><br>
+<ul>
+  <li>Topics:&nbsp; Overview of Riemannian Geometry<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Class)</span>:
+Chp. 0 (do Carmo)<br>
+  </li>
+</ul>
+<br>
+<br>
+<b>March 30<br>
+</b>
+<ul>
+  <li>Topics: Review of Manifolds<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Class)</span>:
+Chp. 0 &amp; 1 (do Carmo), <a href="m112.Quotients.pdf">Quotients</a><br>
+  </li>
+  <li><a href="m112.hw1.pdf">HW1</a> <span
+ style="color: rgb(255, 0, 0);">(Due April 6) New Due date = April 10</span><br>
+  </li>
+</ul>
+<div style="text-align: center;">
+<div style="text-align: left;">
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 2<br>
+<br>
+</span></div>
+<b> Apr. 4</b><br>
+<ul>
+  <li>Topics: Review of Manifolds (cont'd), Riemannian Metrics </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 1 &amp; 2<br>
+  </li>
+</ul>
+</div>
+</div>
+<br>
+<b>Apr. 6</b><br>
+<ul>
+  <li>Topics: Riemannian Metrics, Isometries , Lie groups &amp;
+homogeneous spaces (definitions)<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:&nbsp;
+Chp. 1 &amp; 2<span style="color: rgb(255, 0, 0);"></span></li>
+</ul>
+<span style="font-weight: bold;">
+</span>
+<div style="text-align: center;">
+<div style="text-align: left;"><span style="font-weight: bold;"></span>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 3<br>
+<br>
+</span><span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">Apr. 10 <span
+ style="color: rgb(255, 0, 0);">(X-hour)</span><br>
+</span>
+<ul>
+  <li>Topics: Review of Smooth manifolds. We'll use this hour to help
+people
+new to manifolds catch up.</li>
+  <li><span style="color: rgb(255, 0, 0);">HW 1 Due Today</span><br>
+  </li>
+</ul>
+<span style="font-weight: bold;">Apr. 11</span><br>
+<ul>
+  <li>Topics: Flat tori; Lie Groups, Lie Algebras &amp; One-parameter
+subgroups<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 2<br>
+  </li>
+</ul>
+<span style="font-weight: bold; color: rgb(255, 0, 0);"></span><span
+ style="font-weight: bold;"></span><span style="font-weight: bold;">Apr.
+13</span><br>
+<ul>
+  <li>Topics: Lie Algebras &amp; One-parameter subgroups; Killing
+Fields;&nbsp; Connections<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 2 &amp; 3<br>
+  </li>
+  <li><a href="m112.hw2.pdf">HW2</a> <span
+ style="color: rgb(255, 0, 0);">(Due April 20)</span><br>
+  </li>
+</ul>
+<ul>
+</ul>
+<div style="text-align: center;">
+<div style="text-align: left;">
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 4<br>
+<br>
+</span></div>
+<b>Apr. 17 <span style="color: rgb(255, 0, 0);">(X-hour)<br>
+</span></b>
+<ul>
+  <li>Topics: Connections &amp; Parallel Transport <br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due next Time)</span>:
+Chp. 2 &amp; 3 </li>
+</ul>
+<b>
+Apr. 18</b><br>
+<ul>
+  <li>Topics: Parallelism; Torsion and Curvature Tensor of a
+Connection, Flat Connections; Levi-Civita Connection<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 2 &amp; 3 </li>
+</ul>
+<span style="font-weight: bold;">Apr. 20</span><br>
+<ul>
+  <li>Topic: Levi-Civita Connection &amp; Geodesics<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 3 &amp; 4<br>
+  </li>
+  <li><a href="m112.hw3.pdf">HW3</a> <span
+ style="color: rgb(255, 0, 0);">(Due April 27)</span></li>
+</ul>
+<ul>
+</ul>
+<b><span style="color: rgb(255, 0, 0);"></span>
+</b>
+<div style="text-align: center;">
+<div style="text-align: left;"><span style="font-weight: bold;"></span>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 5<br>
+<br>
+</span></div>
+<b><span style="color: rgb(255, 0, 0);"></span></b><b><br>
+Apr. 25</b><br>
+<ul>
+  <li>Topic: More on Geodesics: normal neighborhoods &amp; minimizing
+properties<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 4 </li>
+</ul>
+<b><br>
+Apr. 27</b><br>
+<ul>
+  <li>Topic: Minimizing properties of geodesics; Riemannian submersions
+&amp; group actions<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 4</li>
+  <li><a href="m112.hw4.pdf">HW4</a> <span
+ style="color: rgb(255, 0, 0);">(Due May 9)</span><br>
+  </li>
+</ul>
+<div style="text-align: center;">
+<div style="text-align: left;"><span style="font-weight: bold;"></span>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 6<br>
+<br>
+</span></div>
+<div style="text-align: left;"><b>May 2 </b><span
+ style="color: rgb(255, 0, 0);"></span><br>
+<ul>
+  <li>Topic: Riemannian submersions
+&amp; group actions; Riemannian submersions, horizontal lifts and
+geodesics.<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:</li>
+</ul>
+</div>
+<br>
+<b>May 4</b><br>
+<ul>
+  <li>Topic: Riemannian submersions, horizontal lifts and
+geodesics; Curvature: covariant derivative of tensors, curvature
+tensor, sectional curvature </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+  </li>
+</ul>
+<b>
+</b>
+<div style="text-align: center;">
+<div style="text-align: left;"><span style="font-weight: bold;"></span>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 7<br>
+</span><span style="color: rgb(255, 0, 0);"></span><br>
+<span style="font-weight: bold;"><br>
+</span></div>
+<b>May 9<br>
+</b>
+<ul>
+  <li>Topic: Riemannian Submersions &amp; Sectional Curvature: the
+A-tensor and O'Neills' formula<span style="font-weight: bold;"></span><br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 5<br>
+  </li>
+</ul>
+<b>May 11<br>
+</b>
+<ul>
+  <li><span style="font-weight: bold;"></span> Topic: Sectional
+Curvature of CP^n; Ricci and Scalar Curvature, the curvature operator;
+Jacobi Fields<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 5 &amp; 9 (<span style="font-weight: bold; color: rgb(255, 0, 0);">Note:</span>
+You
+should start reading Chps. 7 &amp; 8. We will most likely not cover
+them in class, but you should be able to understand them on your own.) <span
+ style="color: rgb(255, 0, 0);"></span></li>
+</ul>
+<div style="text-align: center;">
+<div style="text-align: left;">
+<hr style="width: 100%; height: 2px;"><br>
+</div>
+<span style="font-weight: bold;">WEEK 8<br>
+<br>
+</span></div>
+<b>May 15 </b><b><span style="color: rgb(255, 0, 0);">(X-hour)</span></b>
+<ul>
+  <li>Topic: Jacobi Fields</li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 9 (<span style="font-weight: bold; color: rgb(255, 0, 0);">Note:</span>
+You should start reading Chps. 7 &amp; 8. We will most likely not cover
+them in class, but you should be able to understand them on your own.)</li>
+</ul>
+<b><br>
+May 16<br>
+</b>
+<ul>
+  <li>Topic: Jacobi Fields and Conjugate Points,&nbsp; Geodesics w/o
+conjugate points<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 9 (<span style="font-weight: bold; color: rgb(255, 0, 0);">Note:</span>
+Read Chps. 7 &amp; 8. We will most likely not cover them in class, but
+you should be able to understand them on your own.)<span
+ style="color: rgb(255, 0, 0);"></span><br>
+  </li>
+</ul>
+<b><span style="color: rgb(255, 0, 0);"></span></b><b><br>
+May 18<br>
+</b>
+<ul>
+  <li>Class: Variations of Energy &amp; the Index Form </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 6 (<span style="font-weight: bold; color: rgb(255, 0, 0);">Note:</span>
+Read Chps. 7 &amp; 8. We will most likely not cover them in class, but
+you should be able to understand them on your own.)</li>
+  <li><a href="m112.hw5.pdf">HW5</a> <span
+ style="color: rgb(255, 0, 0);">(due May 30)</span><br>
+  </li>
+</ul>
+<b><span style="color: rgb(255, 0, 0);"></span></b><b><span
+ style="font-weight: bold; color: rgb(255, 0, 0);"></span>
+</b>
+<div style="text-align: center;">
+<div style="text-align: left;"><span style="font-weight: bold;"></span>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 9<br>
+<br>
+</span></div>
+<b>May 22 </b><b><span style="color: rgb(255, 0, 0);">(X-hour)</span></b>
+<ul>
+  <li>Topic: The Theorems of Bonnet-Meyers,
+Weinstein and Synge</li>
+  <li><span style="color: rgb(255, 0, 0);">(Due Next Time)</span>: Chp.
+6 (<span style="font-weight: bold; color: rgb(255, 0, 0);">Note:</span>
+Read Chps. 7 &amp; 8. We will most likely not cover them in class, but
+you should be able to understand them on your own.)</li>
+</ul>
+<b><br>
+May 23</b><br>
+<ul>
+  <li>Topic: Isometric Immersions and the Second Fundamental Form<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+Chp. 6 (<span style="font-weight: bold; color: rgb(255, 0, 0);">Note:</span>
+Read Chps. 7 &amp; 8. We will most likely not cover them in class, but
+you should be able to understand them on your own.) </li>
+</ul>
+<b><span style="color: rgb(255, 0, 0);"></span></b><span
+ style="font-weight: bold;">May 25</span><br>
+<ul>
+  <li>Topic:<span style="font-weight: bold;"> <span
+ style="color: rgb(255, 0, 0);">No Class</span></span> </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:</li>
+</ul>
+<span style="font-weight: bold;"></span><span style="font-weight: bold;"><br>
+</span>
+<div style="text-align: center;">
+<div style="text-align: left;"><span style="font-weight: bold;"></span>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 10<br>
+</span><span style="color: rgb(255, 0, 0);"></span><span
+ style="font-weight: bold;"><br>
+</span><span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">May 29 </span><b><span
+ style="color: rgb(255, 0, 0);">(X-hour)</span></b>
+<ul>
+  <li>Topic: Isometric Immersions and the Second Fundamental Form </li>
+</ul>
+<span style="font-weight: bold;"><br>
+May 30</span><br>
+<ul>
+  <li>Topic: Geometry of Lie Groups&nbsp;<br>
+  </li>
+  <li>Reading <span style="color: rgb(255, 0, 0);">(Due Next Time)</span>:
+  </li>
+</ul>
+<span style="font-weight: bold;"></span><span style="font-weight: bold;"><br>
+</span>
+<div style="text-align: center;">
+<div style="text-align: left;"><span style="font-weight: bold;"></span>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;">WEEK 11<br>
+<br>
+</span><span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;"></span><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

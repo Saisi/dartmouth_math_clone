@@ -1,0 +1,205 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ARNM.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+ARNM:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Val,Time;<br>
+Digits:=5;<br>
+Val:=I0;<br>
+Time:=T0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(<br>
+<br>
+(1/24-1/36)*Val[1]*(1-Val[1]/250)<br>
+-<br>
+((10/12)*(1/(250*10)))*<br>
+Val[2]*Val[1]<br>
+-<br>
+((20/12)*(1/(250*30)))*<br>
+Val[3]*Val[1]<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+(2*(2/12)*(1/250))<br>
+*Val[1]*Val[2]-(2/12)*Val[2]<br>
+)<br>
+)<br>
+,<br>
+evalf(<br>
+Val[3]+Deltat*(<br>
+<br>
+(1/36-1/180)*Val[3]*(1-Val[3]/50)<br>
+-<br>
+((2/12)*(1/(30*10)))*<br>
+Val[3]*Val[2]<br>
++<br>
+((5/12)*(1/(30*250)))*<br>
+Val[3]*Val[1]<br>
+<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][3]]];<br>
+od;<br>
+NewList <br>
+end:</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>Warning, the name changecoords has been redefined<br>
+</font></pre></tt>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=ARNM(0,[250,10,30],3,12);</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Lokta/ARNM1.gif" width=48 height=13 alt="S0 := [[0, [250, 10, 30]], [4, [240., 16.667, 32.06...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Lokta/ARNM2.gif" width=528 height=13 alt="S0 := [[0, [250, 10, 30]], [4, [240., 16.667, 32.06...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Lokta/ARNM3.gif" width=20 height=13 alt="S0 := [[0, [250, 10, 30]], [4, [240., 16.667, 32.06...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=ARNM(0,[250,10,30],2000,40*12):<br>
+"S0:=ARNM(0,[250,0,30],2000,100*12)":<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+<br>
+<br>
+P0:=listplot(V0,color=red):<br>
+<br>
+<br>
+P1:=listplot(V1,color=blue):<br>
+<br>
+P2:=listplot(V2,color=green):<br>
+<br>
+<br>
+display(P0,P1,P2); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Lokta/ARNM4.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0[2000];</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Lokta/ARNM5.gif" width=214 height=29 alt="[11994/25, [46.189, .36100e-12, 56.150]]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=ARNM(0,[33.5,0,54],2000,100*12):<br>
+<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+<br>
+<br>
+P0:=listplot(V0,color=red):<br>
+<br>
+<br>
+P1:=listplot(V1,color=blue):<br>
+<br>
+P2:=listplot(V2,color=green):<br>
+<br>
+<br>
+display(P0,P1,P2); <br>
+<br>
+S0[2000];</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Lokta/ARNM6.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Lokta/ARNM7.gif" width=152 height=29 alt="[5997/5, [33.505, 0., 54.153]]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"S0:=ARNM(0,[250,10,30],2000,100*12)":<br>
+S0:=ARNM(0,[33.5,10,54],2000,100*12):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+<br>
+<br>
+P0:=listplot(V0,color=red):<br>
+<br>
+<br>
+P1:=listplot(V1,color=blue):<br>
+<br>
+P2:=listplot(V2,color=green):<br>
+<br>
+<br>
+display(P0,P1,P2); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Lokta/ARNM8.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

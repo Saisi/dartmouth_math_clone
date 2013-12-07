@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Math3-S2-Demo2_limits.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="Math3-S2-Demo2_limits.html#MapleAutoBookmark1">Math3-S2-Demo2_limits.mw</a>
+<ul>
+<li><a href="Math3-S2-Demo2_limits.html#MapleAutoBookmark2">     Another Limit</a>
+<li><a href="Math3-S2-Demo2_limits.html#MapleAutoBookmark3"> null</a>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 3 Winter 2004</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Introduction to Calculus</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Class Demo for the Limits of Functions</b></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright"><u>January 7, 2004</b></u></font></p>
+<p><font size="5" face="Lucida Bright"><b>
+<br> &nbsp;&nbsp;&nbsp;</b></font><font size="5" face="Lucida Bright"><b>We first consider</b></font><font size="5" face="Lucida Bright"><b> </b></font><font face="Lucida Bright"> </font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_1.gif" width="17" height="22" alt="lim" align="center">
+<font size="5" face="Lucida Bright"> </font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_2.gif" width="32" height="40" alt="sin(x)/x" align="center">
+<font face="Lucida Bright"> &nbsp;</font><font face="Lucida Bright"></font><font size="5" face="Lucida Bright"> </font><font size="5" face="Lucida Bright"></font><font size="5" face="Lucida Bright"><b>as </b></font><font face="Lucida Bright"> </font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_3.gif" width="31" height="24" alt="proc (x) options operator, arrow; 0 end proc" align="center">
+<font size="5" face="Lucida Bright">.</font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">f := x -&gt; sin(x)/x:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">f(0.01);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_4.gif" width="80" height="13" alt=".9999833334" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">printf(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f(x)\n"):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for n from 0 to 5 do</font><font color="#ff0000" size="3" face="Monospaced">
+<br>	x := 1 / 2^n:</font><font color="#ff0000" size="3" face="Monospaced">
+<br>	printf(" &nbsp;%15.10f &nbsp;&nbsp;%15.10f\n", x, f(x));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od:</b></font></td>
+</tr>
+</table></p>
+<p><font color="#0000ff" size="3" face="Monospaced"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f(x)</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;1.0000000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.8414709848</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.5000000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.9588510772</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.2500000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.9896158372</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.1250000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.9973978672</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.0625000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.9993490854</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.0312500000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.9998372477</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Observe this on the graph</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot(f, -Pi..Pi);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_5.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p></p>
+<dl><a name="MapleAutoBookmark2" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;Another Limit</b></font></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Consider </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_6.gif" width="17" height="22" alt="lim" align="center">
+<font size="5" face="Lucida Bright"><b> </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_7.gif" width="68" height="60" alt="(sqrt(t^2+9)-3)/t^2" align="center">
+<font size="5" face="Lucida Bright"><b> </b></font><font size="5" face="Lucida Bright">as</font><font size="5" face="Lucida Bright"><b> </b></font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_8.gif" width="29" height="24" alt="proc (t) options operator, arrow; 0 end proc" align="center">
+<font size="5" face="Lucida Bright"><b>.</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>g := t -&gt; (sqrt(t^2 + 9) - 3) / t^2:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>g(0.5);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_9.gif" width="80" height="13" alt=".1655250600" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>printf(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g(t)\n"):</font><font color="#ff0000" face="Monospaced">
+<br>for n from 0 to 5 do</font><font color="#ff0000" face="Monospaced">
+<br>	t := 1 / 2^n:</font><font color="#ff0000" face="Monospaced">
+<br>	printf(" &nbsp;%15.10f &nbsp;&nbsp;%15.10f\n", t, g(t));</font><font color="#ff0000" face="Monospaced">
+<br>od:</b></font></td>
+</tr>
+</table></p>
+<p><font color="#0000ff" size="3" face="Monospaced"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g(t)</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;1.0000000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.1622776600</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.5000000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.1655250600</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.2500000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.1663783200</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.1250000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.1665944000</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.0625000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.1666486000</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.0312500000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.1666620000</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p><font size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As always, lets look at a picture.</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot(g, -1..1);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_10.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot(g, -1e-5..1e-5, 0.16..0.17);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_11.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>Digits := 50:</b></font></td>
+</tr>
+</table></p>
+</dl>
+<dl><a name="MapleAutoBookmark3" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright"> </font><font size="5" face="Lucida Bright"></font><font size="5" face="Lucida Bright"> &nbsp;&nbsp;... and another one</b></font></p>
+<p><font size="5" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font size="5" face="Lucida Bright"></font><font size="5" face="Lucida Bright"><b>Consider</b></font><font size="5" face="Lucida Bright"> </font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_12.gif" width="17" height="22" alt="lim" align="center">
+<font size="5" face="Lucida Bright"> </font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_13.gif" width="18" height="22" alt="sin" align="center">
+<font size="5" face="Lucida Bright"> </font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_14.gif" width="7" height="44" alt="Pi/x" align="center">
+<font size="5" face="Lucida Bright"> &nbsp;</font><font size="5" face="Lucida Bright"></font><font size="5" face="Lucida Bright"><b> as </b></font><font size="5" face="Lucida Bright"> </font><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_15.gif" width="31" height="24" alt="proc (x) options operator, arrow; 0 end proc" align="center">
+<font size="5" face="Lucida Bright">.</font></p>
+</dl>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>h := x -&gt; sin(Pi / x):</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>printf(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h(x)\n"):</font><font color="#ff0000" face="Monospaced">
+<br>for n from 0 to 5 do</font><font color="#ff0000" face="Monospaced">
+<br>	x := 1 / 2^n:</font><font color="#ff0000" face="Monospaced">
+<br>	printf(" &nbsp;%15.10f &nbsp;&nbsp;%15.10f\n", x, h(x));</font><font color="#ff0000" face="Monospaced">
+<br>od:</b></font></td>
+</tr>
+</table></p>
+<p><font color="#0000ff" size="3" face="Monospaced"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h(x)</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;1.0000000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.5000000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.2500000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.1250000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.0625000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br> &nbsp;&nbsp;&nbsp;&nbsp;0.0312500000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>plot(h, -1..1);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m3w04/sec2/Math3-S2-images/Math3-S2-Demo2_limits_16.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p></p>
+</body>
+</html>

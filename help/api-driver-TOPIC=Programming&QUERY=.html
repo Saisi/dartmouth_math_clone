@@ -1,0 +1,947 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>Printer Driver API  - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="Printer Driver API ">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/api-driver.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Programming">
+
+<P ALIGN="CENTER"><B>Search in
+Printer Driver API :</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l1"><A HREF="api-array-TOPIC=Programming&QUERY=.html">Array API </A></P>
+<P CLASS="l1"><A HREF="api-cgi-TOPIC=Programming&QUERY=.html">CGI API </A></P>
+<P CLASS="l1"><A HREF="api-cups-TOPIC=Programming&QUERY=.html">CUPS API </A></P>
+<P CLASS="l1"><A HREF="postscript-driver-TOPIC=Programming&QUERY=.html">Developing PostScript Printer Drivers </A></P>
+<P CLASS="l1"><A HREF="raster-driver-TOPIC=Programming&QUERY=.html">Developing Raster Printer Drivers </A></P>
+<P CLASS="l1"><A HREF="api-filedir-TOPIC=Programming&QUERY=.html">File and Directory APIs </A></P>
+<P CLASS="l1"><A HREF="api-filter-TOPIC=Programming&QUERY=.html">Filter and Backend Programming </A></P>
+<P CLASS="l1"><A HREF="api-httpipp-TOPIC=Programming&QUERY=.html">HTTP and IPP APIs </A></P>
+<P CLASS="l1"><A HREF="api-overview-TOPIC=Programming&QUERY=.html">Introduction to CUPS Programming </A></P>
+<P CLASS="l1"><A HREF="ppd-compiler-TOPIC=Programming&QUERY=.html">Introduction to the PPD Compiler </A></P>
+<P CLASS="l1"><A HREF="api-mime-TOPIC=Programming&QUERY=.html">MIME API </A></P>
+<P CLASS="l1"><A HREF="api-ppd-TOPIC=Programming&QUERY=.html">PPD API (DEPRECATED) </A></P>
+<P CLASS="l1"><A HREF="api-ppdc-TOPIC=Programming&QUERY=.html">PPD Compiler API </A></P>
+<P CLASS="l1"><A HREF="api-driver-TOPIC=Programming&QUERY=.html">Printer Driver API </A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_s">cups_cmyk_s</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_dither_s">cups_dither_s</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_dither_t">cups_dither_t</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_s">cups_lut_s</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_t">cups_lut_t</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_s">cups_rgb_s</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_t">cups_rgb_t</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_sample_s">cups_sample_s</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_sample_t">cups_sample_t</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_scmy_lut%5B256%5D">cups_scmy_lut[256]</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cups_srgb_lut%5B256%5D">cups_srgb_lut[256]</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCheckBytes">cupsCheckBytes</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCheckValue">cupsCheckValue</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDelete">cupsCMYKDelete</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDoBlack">cupsCMYKDoBlack</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDoCMYK">cupsCMYKDoCMYK</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDoGray">cupsCMYKDoGray</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDoRGB">cupsCMYKDoRGB</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKLoad">cupsCMYKLoad</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKNew">cupsCMYKNew</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetBlack">cupsCMYKSetBlack</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetCurve">cupsCMYKSetCurve</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetGamma">cupsCMYKSetGamma</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetInkLimit">cupsCMYKSetInkLimit</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetLtDk">cupsCMYKSetLtDk</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsDitherDelete">cupsDitherDelete</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsDitherLine">cupsDitherLine</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsDitherNew">cupsDitherNew</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsFindAttr">cupsFindAttr</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsLutDelete">cupsLutDelete</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsLutLoad">cupsLutLoad</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsLutNew">cupsLutNew</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsPackHorizontal">cupsPackHorizontal</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsPackHorizontal2">cupsPackHorizontal2</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsPackHorizontalBit">cupsPackHorizontalBit</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsPackVertical">cupsPackVertical</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBDelete">cupsRGBDelete</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBDoGray">cupsRGBDoGray</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBDoRGB">cupsRGBDoRGB</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBLoad">cupsRGBLoad</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBNew">cupsRGBNew</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#TYPES">Data Types</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#FUNCTIONS">Functions</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#OVERVIEW">Overview</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#STRUCTURES">Structures</A></P>
+<P CLASS="l2"><A HREF="api-driver-TOPIC=Programming&QUERY=.html#VARIABLES">Variables</A></P>
+<P CLASS="l1"><A HREF="api-raster-TOPIC=Programming&QUERY=.html">Raster API </A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>Printer Driver API </H1>
+<FORM ACTION="/help/api-driver.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+<div class='body'>
+<!--
+  "$Id: api-driver.html 9740 2011-05-04 06:26:22Z mike $"
+
+  Driver API header for CUPS.
+
+  Copyright 2009 by Apple Inc.
+
+  These coded instructions, statements, and computer programs are the
+  property of Apple Inc. and are protected by Federal copyright
+  law.  Distribution and use rights are outlined in the file "LICENSE.txt"
+  which should have been included with this file.  If this file is
+  file is missing or damaged, see the license at "http://www.cups.org/".
+-->
+
+<h1 class='title'>Driver API</h1>
+
+<div class='summary'><table summary='General Information'>
+<thead>
+<tr>
+	<th>Header</th>
+	<th>cups/driver.h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th>Library</th>
+	<td>-lcupsdriver</td>
+</tr>
+<tr>
+	<th>See Also</th>
+	<td>Programming: <a href='api-overview.html' target='_top'>Introduction to CUPS Programming</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="title">Contents</h2>
+<ul class="contents">
+<li><a href="api-driver-TOPIC=Programming&QUERY=.html#OVERVIEW">Overview</a></li>
+<li><a href="api-driver-TOPIC=Programming&QUERY=.html#FUNCTIONS">Functions</a><ul class="code">
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDelete" title="Delete a color separation.">cupsCMYKDelete</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDoBlack" title="Do a black separation...">cupsCMYKDoBlack</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDoCMYK" title="Do a CMYK separation...">cupsCMYKDoCMYK</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDoGray" title="Do a grayscale separation...">cupsCMYKDoGray</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKDoRGB" title="Do an sRGB separation...">cupsCMYKDoRGB</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKLoad" title="Load a CMYK color profile from PPD attributes.">cupsCMYKLoad</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKNew" title="Create a new CMYK color separation.">cupsCMYKNew</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetBlack" title="Set the transition range for CMY to black.">cupsCMYKSetBlack</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetCurve" title="Set a color transform curve using points.">cupsCMYKSetCurve</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetGamma" title="Set a color transform curve using gamma and density.">cupsCMYKSetGamma</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetInkLimit" title="Set the limit on the amount of ink.">cupsCMYKSetInkLimit</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCMYKSetLtDk" title="Set light/dark ink transforms.">cupsCMYKSetLtDk</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCheckBytes" title="Check to see if all bytes are zero.">cupsCheckBytes</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsCheckValue" title="Check to see if all bytes match the given value.">cupsCheckValue</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsDitherDelete" title="Free a dithering buffer.">cupsDitherDelete</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsDitherLine" title="Dither a line of pixels...">cupsDitherLine</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsDitherNew" title="Create an error-diffusion dithering buffer.">cupsDitherNew</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsFindAttr" title="Find a PPD attribute based on the colormodel,
+media, and resolution.">cupsFindAttr</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsLutDelete" title="Free the memory used by a lookup table.">cupsLutDelete</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsLutLoad" title="Load a LUT from a PPD file.">cupsLutLoad</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsLutNew" title="Make a lookup table from a list of pixel values.">cupsLutNew</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsPackHorizontal" title="Pack pixels horizontally...">cupsPackHorizontal</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsPackHorizontal2" title="Pack 2-bit pixels horizontally...">cupsPackHorizontal2</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsPackHorizontalBit" title="Pack pixels horizontally by bit...">cupsPackHorizontalBit</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsPackVertical" title="Pack pixels vertically...">cupsPackVertical</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBDelete" title="Delete a color separation.">cupsRGBDelete</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBDoGray" title="Do a grayscale separation...">cupsRGBDoGray</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBDoRGB" title="Do a RGB separation...">cupsRGBDoRGB</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBLoad" title="Load a RGB color profile from a PPD file.">cupsRGBLoad</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cupsRGBNew" title="Create a new RGB color separation.">cupsRGBNew</a></li>
+</ul></li>
+<li><a href="api-driver-TOPIC=Programming&QUERY=.html#TYPES">Data Types</a><ul class="code">
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t" title="Simple CMYK lookup table">cups_cmyk_t</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_dither_t" title="Dithering State">cups_dither_t</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_t" title="Lookup Table for Dithering">cups_lut_t</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_t" title="Color separation lookup table">cups_rgb_t</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_sample_t" title="Color sample point">cups_sample_t</a></li>
+</ul></li>
+<li><a href="api-driver-TOPIC=Programming&QUERY=.html#STRUCTURES">Structures</a><ul class="code">
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_s" title="Simple CMYK lookup table">cups_cmyk_s</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_dither_s" title="Dithering State">cups_dither_s</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_s" title="Lookup Table for Dithering">cups_lut_s</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_s" title="Color separation lookup table">cups_rgb_s</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_sample_s" title="Color sample point">cups_sample_s</a></li>
+</ul></li>
+<li><a href="api-driver-TOPIC=Programming&QUERY=.html#VARIABLES">Variables</a><ul class="code">
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_scmy_lut%5B256%5D" title="sRGB gamma lookup table (inverted)">cups_scmy_lut[256]</a></li>
+	<li><a href="api-driver-TOPIC=Programming&QUERY=.html#cups_srgb_lut%5B256%5D" title="sRGB gamma lookup table">cups_srgb_lut[256]</a></li>
+</ul></li>
+</ul>
+<!--
+  "$Id: api-driver.html 9740 2011-05-04 06:26:22Z mike $"
+
+  Driver API introduction for CUPS.
+
+  Copyright 2009 by Apple Inc.
+
+  These coded instructions, statements, and computer programs are the
+  property of Apple Inc. and are protected by Federal copyright
+  law.  Distribution and use rights are outlined in the file "LICENSE.txt"
+  which should have been included with this file.  If this file is
+  file is missing or damaged, see the license at "http://www.cups.org/".
+-->
+
+<h2 class='title'><a name='OVERVIEW'>Overview</a></h2>
+
+<p>The driver API provides common dithering, color conversion, and utility
+functions for CUPS drivers.</p>
+<h2 class="title"><a name="FUNCTIONS">Functions</a></h2>
+<h3 class="function"><a name="cupsCMYKDelete">cupsCMYKDelete</a></h3>
+<p class="description">Delete a color separation.</p>
+<p class="code">
+void cupsCMYKDelete (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">Color separation</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKDoBlack">cupsCMYKDoBlack</a></h3>
+<p class="description">Do a black separation...</p>
+<p class="code">
+void cupsCMYKDoBlack (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *input,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;short *output,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_pixels<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">Color separation</dd>
+<dt>input</dt>
+<dd class="description">Input grayscale pixels</dd>
+<dt>output</dt>
+<dd class="description">Output Device-N pixels</dd>
+<dt>num_pixels</dt>
+<dd class="description">Number of pixels</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKDoCMYK">cupsCMYKDoCMYK</a></h3>
+<p class="description">Do a CMYK separation...</p>
+<p class="code">
+void cupsCMYKDoCMYK (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *input,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;short *output,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_pixels<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">Color separation</dd>
+<dt>input</dt>
+<dd class="description">Input grayscale pixels</dd>
+<dt>output</dt>
+<dd class="description">Output Device-N pixels</dd>
+<dt>num_pixels</dt>
+<dd class="description">Number of pixels</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKDoGray">cupsCMYKDoGray</a></h3>
+<p class="description">Do a grayscale separation...</p>
+<p class="code">
+void cupsCMYKDoGray (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *input,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;short *output,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_pixels<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">Color separation</dd>
+<dt>input</dt>
+<dd class="description">Input grayscale pixels</dd>
+<dt>output</dt>
+<dd class="description">Output Device-N pixels</dd>
+<dt>num_pixels</dt>
+<dd class="description">Number of pixels</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKDoRGB">cupsCMYKDoRGB</a></h3>
+<p class="description">Do an sRGB separation...</p>
+<p class="code">
+void cupsCMYKDoRGB (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *input,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;short *output,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_pixels<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">Color separation</dd>
+<dt>input</dt>
+<dd class="description">Input grayscale pixels</dd>
+<dt>output</dt>
+<dd class="description">Output Device-N pixels</dd>
+<dt>num_pixels</dt>
+<dd class="description">Number of pixels</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKLoad">cupsCMYKLoad</a></h3>
+<p class="description">Load a CMYK color profile from PPD attributes.</p>
+<p class="code">
+<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cupsCMYKLoad (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ppd_file_t *ppd,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *colormodel,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *media,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *resolution<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>ppd</dt>
+<dd class="description">PPD file</dd>
+<dt>colormodel</dt>
+<dd class="description">ColorModel value</dd>
+<dt>media</dt>
+<dd class="description">MediaType value</dd>
+<dt>resolution</dt>
+<dd class="description">Resolution value</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">CMYK color separation</p>
+<h3 class="function"><a name="cupsCMYKNew">cupsCMYKNew</a></h3>
+<p class="description">Create a new CMYK color separation.</p>
+<p class="code">
+<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cupsCMYKNew (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_channels<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>num_channels</dt>
+<dd class="description">Number of color components</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New CMYK separation or NULL</p>
+<h3 class="function"><a name="cupsCMYKSetBlack">cupsCMYKSetBlack</a></h3>
+<p class="description">Set the transition range for CMY to black.</p>
+<p class="code">
+void cupsCMYKSetBlack (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float lower,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float upper<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">CMYK color separation</dd>
+<dt>lower</dt>
+<dd class="description">No black ink</dd>
+<dt>upper</dt>
+<dd class="description">Only black ink</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKSetCurve">cupsCMYKSetCurve</a></h3>
+<p class="description">Set a color transform curve using points.</p>
+<p class="code">
+void cupsCMYKSetCurve (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int channel,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_xypoints,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const float *xypoints<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">CMYK color separation</dd>
+<dt>channel</dt>
+<dd class="description">Color channel</dd>
+<dt>num_xypoints</dt>
+<dd class="description">Number of X,Y points</dd>
+<dt>xypoints</dt>
+<dd class="description">X,Y points</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKSetGamma">cupsCMYKSetGamma</a></h3>
+<p class="description">Set a color transform curve using gamma and density.</p>
+<p class="code">
+void cupsCMYKSetGamma (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int channel,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float gamval,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float density<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">CMYK color separation</dd>
+<dt>channel</dt>
+<dd class="description">Ink channel</dd>
+<dt>gamval</dt>
+<dd class="description">Gamma correction</dd>
+<dt>density</dt>
+<dd class="description">Maximum density</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKSetInkLimit">cupsCMYKSetInkLimit</a></h3>
+<p class="description">Set the limit on the amount of ink.</p>
+<p class="code">
+void cupsCMYKSetInkLimit (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float limit<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">CMYK color separation</dd>
+<dt>limit</dt>
+<dd class="description">Limit of ink</dd>
+</dl>
+<h3 class="function"><a name="cupsCMYKSetLtDk">cupsCMYKSetLtDk</a></h3>
+<p class="description">Set light/dark ink transforms.</p>
+<p class="code">
+void cupsCMYKSetLtDk (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_t">cups_cmyk_t</a> *cmyk,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int channel,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float light,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float dark<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>cmyk</dt>
+<dd class="description">CMYK color separation</dd>
+<dt>channel</dt>
+<dd class="description">Dark ink channel (+1 for light)</dd>
+<dt>light</dt>
+<dd class="description">Light ink only level</dd>
+<dt>dark</dt>
+<dd class="description">Dark ink only level</dd>
+</dl>
+<h3 class="function"><a name="cupsCheckBytes">cupsCheckBytes</a></h3>
+<p class="description">Check to see if all bytes are zero.</p>
+<p class="code">
+int cupsCheckBytes (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *bytes,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int length<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>bytes</dt>
+<dd class="description">Bytes to check</dd>
+<dt>length</dt>
+<dd class="description">Number of bytes to check</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">1 if they match</p>
+<h3 class="function"><a name="cupsCheckValue">cupsCheckValue</a></h3>
+<p class="description">Check to see if all bytes match the given value.</p>
+<p class="code">
+int cupsCheckValue (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *bytes,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int length,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char value<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>bytes</dt>
+<dd class="description">Bytes to check</dd>
+<dt>length</dt>
+<dd class="description">Number of bytes to check</dd>
+<dt>value</dt>
+<dd class="description">Value to check</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">1 if they match</p>
+<h3 class="function"><a name="cupsDitherDelete">cupsDitherDelete</a></h3>
+<p class="description">Free a dithering buffer.</p>
+<p class="code">
+void cupsDitherDelete (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_dither_t">cups_dither_t</a> *d<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>d</dt>
+<dd class="description">Dithering buffer</dd>
+</dl>
+<h4 class="discussion">Discussion</h4>
+<p class="discussion">Returns 0 on success, -1 on failure.</p>
+<h3 class="function"><a name="cupsDitherLine">cupsDitherLine</a></h3>
+<p class="description">Dither a line of pixels...</p>
+<p class="code">
+void cupsDitherLine (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_dither_t">cups_dither_t</a> *d,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_t">cups_lut_t</a> *lut,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const short *data,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_channels,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char *p<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>d</dt>
+<dd class="description">Dither data</dd>
+<dt>lut</dt>
+<dd class="description">Lookup table</dd>
+<dt>data</dt>
+<dd class="description">Separation data</dd>
+<dt>num_channels</dt>
+<dd class="description">Number of components</dd>
+<dt>p</dt>
+<dd class="description">Pixels</dd>
+</dl>
+<h3 class="function"><a name="cupsDitherNew">cupsDitherNew</a></h3>
+<p class="description">Create an error-diffusion dithering buffer.</p>
+<p class="code">
+<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_dither_t">cups_dither_t</a> *cupsDitherNew (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int width<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>width</dt>
+<dd class="description">Width of output in pixels</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New state array</p>
+<h3 class="function"><a name="cupsFindAttr">cupsFindAttr</a></h3>
+<p class="description">Find a PPD attribute based on the colormodel,
+media, and resolution.</p>
+<p class="code">
+ppd_attr_t *cupsFindAttr (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ppd_file_t *ppd,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *colormodel,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *media,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *resolution,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;char *spec,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int specsize<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>ppd</dt>
+<dd class="description">PPD file</dd>
+<dt>name</dt>
+<dd class="description">Attribute name</dd>
+<dt>colormodel</dt>
+<dd class="description">Color model</dd>
+<dt>media</dt>
+<dd class="description">Media type</dd>
+<dt>resolution</dt>
+<dd class="description">Resolution</dd>
+<dt>spec</dt>
+<dd class="description">Final selection string</dd>
+<dt>specsize</dt>
+<dd class="description">Size of string buffer</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Matching attribute or NULL</p>
+<h3 class="function"><a name="cupsLutDelete">cupsLutDelete</a></h3>
+<p class="description">Free the memory used by a lookup table.</p>
+<p class="code">
+void cupsLutDelete (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_t">cups_lut_t</a> *lut<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>lut</dt>
+<dd class="description">Lookup table to free</dd>
+</dl>
+<h3 class="function"><a name="cupsLutLoad">cupsLutLoad</a></h3>
+<p class="description">Load a LUT from a PPD file.</p>
+<p class="code">
+<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_t">cups_lut_t</a> *cupsLutLoad (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ppd_file_t *ppd,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *colormodel,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *media,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *resolution,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *ink<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>ppd</dt>
+<dd class="description">PPD file</dd>
+<dt>colormodel</dt>
+<dd class="description">Color model</dd>
+<dt>media</dt>
+<dd class="description">Media type</dd>
+<dt>resolution</dt>
+<dd class="description">Resolution</dd>
+<dt>ink</dt>
+<dd class="description">Ink name</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New lookup table</p>
+<h3 class="function"><a name="cupsLutNew">cupsLutNew</a></h3>
+<p class="description">Make a lookup table from a list of pixel values.</p>
+<p class="code">
+<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_t">cups_lut_t</a> *cupsLutNew (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_values,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const float *values<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>num_values</dt>
+<dd class="description">Number of values</dd>
+<dt>values</dt>
+<dd class="description">Lookup table values</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New lookup table</p>
+<h4 class="discussion">Discussion</h4>
+<p class="discussion">Returns a pointer to the lookup table on success, NULL on failure.</p>
+<h3 class="function"><a name="cupsPackHorizontal">cupsPackHorizontal</a></h3>
+<p class="description">Pack pixels horizontally...</p>
+<p class="code">
+void cupsPackHorizontal (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *ipixels,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char *obytes,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int width,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char clearto,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const int step<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>ipixels</dt>
+<dd class="description">Input pixels</dd>
+<dt>obytes</dt>
+<dd class="description">Output bytes</dd>
+<dt>width</dt>
+<dd class="description">Number of pixels</dd>
+<dt>clearto</dt>
+<dd class="description">Initial value of bytes</dd>
+<dt>step</dt>
+<dd class="description">Step value between pixels</dd>
+</dl>
+<h3 class="function"><a name="cupsPackHorizontal2">cupsPackHorizontal2</a></h3>
+<p class="description">Pack 2-bit pixels horizontally...</p>
+<p class="code">
+void cupsPackHorizontal2 (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *ipixels,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char *obytes,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int width,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const int step<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>ipixels</dt>
+<dd class="description">Input pixels</dd>
+<dt>obytes</dt>
+<dd class="description">Output bytes</dd>
+<dt>width</dt>
+<dd class="description">Number of pixels</dd>
+<dt>step</dt>
+<dd class="description">Stepping value</dd>
+</dl>
+<h3 class="function"><a name="cupsPackHorizontalBit">cupsPackHorizontalBit</a></h3>
+<p class="description">Pack pixels horizontally by bit...</p>
+<p class="code">
+void cupsPackHorizontalBit (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *ipixels,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char *obytes,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int width,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char clearto,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char bit<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>ipixels</dt>
+<dd class="description">Input pixels</dd>
+<dt>obytes</dt>
+<dd class="description">Output bytes</dd>
+<dt>width</dt>
+<dd class="description">Number of pixels</dd>
+<dt>clearto</dt>
+<dd class="description">Initial value of bytes</dd>
+<dt>bit</dt>
+<dd class="description">Bit to check</dd>
+</dl>
+<h3 class="function"><a name="cupsPackVertical">cupsPackVertical</a></h3>
+<p class="description">Pack pixels vertically...</p>
+<p class="code">
+void cupsPackVertical (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *ipixels,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char *obytes,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int width,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char bit,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const int step<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>ipixels</dt>
+<dd class="description">Input pixels</dd>
+<dt>obytes</dt>
+<dd class="description">Output bytes</dd>
+<dt>width</dt>
+<dd class="description">Number of input pixels</dd>
+<dt>bit</dt>
+<dd class="description">Output bit</dd>
+<dt>step</dt>
+<dd class="description">Number of bytes between columns</dd>
+</dl>
+<h3 class="function"><a name="cupsRGBDelete">cupsRGBDelete</a></h3>
+<p class="description">Delete a color separation.</p>
+<p class="code">
+void cupsRGBDelete (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_t">cups_rgb_t</a> *rgbptr<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>rgbptr</dt>
+<dd class="description">Color separation</dd>
+</dl>
+<h3 class="function"><a name="cupsRGBDoGray">cupsRGBDoGray</a></h3>
+<p class="description">Do a grayscale separation...</p>
+<p class="code">
+void cupsRGBDoGray (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_t">cups_rgb_t</a> *rgbptr,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *input,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char *output,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_pixels<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>rgbptr</dt>
+<dd class="description">Color separation</dd>
+<dt>input</dt>
+<dd class="description">Input grayscale pixels</dd>
+<dt>output</dt>
+<dd class="description">Output Device-N pixels</dd>
+<dt>num_pixels</dt>
+<dd class="description">Number of pixels</dd>
+</dl>
+<h3 class="function"><a name="cupsRGBDoRGB">cupsRGBDoRGB</a></h3>
+<p class="description">Do a RGB separation...</p>
+<p class="code">
+void cupsRGBDoRGB (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_t">cups_rgb_t</a> *rgbptr,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char *input,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char *output,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_pixels<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>rgbptr</dt>
+<dd class="description">Color separation</dd>
+<dt>input</dt>
+<dd class="description">Input RGB pixels</dd>
+<dt>output</dt>
+<dd class="description">Output Device-N pixels</dd>
+<dt>num_pixels</dt>
+<dd class="description">Number of pixels</dd>
+</dl>
+<h3 class="function"><a name="cupsRGBLoad">cupsRGBLoad</a></h3>
+<p class="description">Load a RGB color profile from a PPD file.</p>
+<p class="code">
+<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_t">cups_rgb_t</a> *cupsRGBLoad (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ppd_file_t *ppd,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *colormodel,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *media,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const char *resolution<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>ppd</dt>
+<dd class="description">PPD file</dd>
+<dt>colormodel</dt>
+<dd class="description">Color model</dd>
+<dt>media</dt>
+<dd class="description">Media type</dd>
+<dt>resolution</dt>
+<dd class="description">Resolution</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New color profile</p>
+<h3 class="function"><a name="cupsRGBNew">cupsRGBNew</a></h3>
+<p class="description">Create a new RGB color separation.</p>
+<p class="code">
+<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_t">cups_rgb_t</a> *cupsRGBNew (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_samples,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-driver-TOPIC=Programming&QUERY=.html#cups_sample_t">cups_sample_t</a> *samples,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int cube_size,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_channels<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>num_samples</dt>
+<dd class="description">Number of samples</dd>
+<dt>samples</dt>
+<dd class="description">Samples</dd>
+<dt>cube_size</dt>
+<dd class="description">Size of LUT cube</dd>
+<dt>num_channels</dt>
+<dd class="description">Number of color components</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New color separation or NULL</p>
+<h2 class="title"><a name="TYPES">Data Types</a></h2>
+<h3 class="typedef"><a name="cups_cmyk_t">cups_cmyk_t</a></h3>
+<p class="description">Simple CMYK lookup table</p>
+<p class="code">
+typedef struct <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_cmyk_s">cups_cmyk_s</a> cups_cmyk_t;
+</p>
+<h3 class="typedef"><a name="cups_dither_t">cups_dither_t</a></h3>
+<p class="description">Dithering State</p>
+<p class="code">
+typedef struct <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_dither_s">cups_dither_s</a> cups_dither_t;
+</p>
+<h3 class="typedef"><a name="cups_lut_t">cups_lut_t</a></h3>
+<p class="description">Lookup Table for Dithering</p>
+<p class="code">
+typedef struct <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_lut_s">cups_lut_s</a> cups_lut_t;
+</p>
+<h3 class="typedef"><a name="cups_rgb_t">cups_rgb_t</a></h3>
+<p class="description">Color separation lookup table</p>
+<p class="code">
+typedef struct <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_rgb_s">cups_rgb_s</a> cups_rgb_t;
+</p>
+<h3 class="typedef"><a name="cups_sample_t">cups_sample_t</a></h3>
+<p class="description">Color sample point</p>
+<p class="code">
+typedef struct <a href="api-driver-TOPIC=Programming&QUERY=.html#cups_sample_s">cups_sample_s</a> cups_sample_t;
+</p>
+<h2 class="title"><a name="STRUCTURES">Structures</a></h2>
+<h3 class="struct"><a name="cups_cmyk_s">cups_cmyk_s</a></h3>
+<p class="description">Simple CMYK lookup table</p>
+<p class="code">struct cups_cmyk_s {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char black_lut[256];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;short *channels[CUPS_MAX_CHAN];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char color_lut[256];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int ink_limit;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_channels;<br>
+};</p>
+<h4 class="members">Members</h4>
+<dl>
+<dt>black_lut[256] </dt>
+<dd class="description">Black generation LUT</dd>
+<dt>channels[CUPS_MAX_CHAN] </dt>
+<dd class="description">Lookup tables</dd>
+<dt>color_lut[256] </dt>
+<dd class="description">Color removal LUT</dd>
+<dt>ink_limit </dt>
+<dd class="description">Ink limit</dd>
+<dt>num_channels </dt>
+<dd class="description">Number of components</dd>
+</dl>
+<h3 class="struct"><a name="cups_dither_s">cups_dither_s</a></h3>
+<p class="description">Dithering State</p>
+<p class="code">struct cups_dither_s {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int errors[96];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int row;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int width;<br>
+};</p>
+<h4 class="members">Members</h4>
+<dl>
+<dt>errors[96] </dt>
+<dd class="description">Error values</dd>
+<dt>row </dt>
+<dd class="description">Current row</dd>
+<dt>width </dt>
+<dd class="description">Width of buffer</dd>
+</dl>
+<h3 class="struct"><a name="cups_lut_s">cups_lut_s</a></h3>
+<p class="description">Lookup Table for Dithering</p>
+<p class="code">struct cups_lut_s {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int error;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;short intensity;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;short pixel;<br>
+};</p>
+<h4 class="members">Members</h4>
+<dl>
+<dt>error </dt>
+<dd class="description">Error from desired value</dd>
+<dt>intensity </dt>
+<dd class="description">Adjusted intensity</dd>
+<dt>pixel </dt>
+<dd class="description">Output pixel value</dd>
+</dl>
+<h3 class="struct"><a name="cups_rgb_s">cups_rgb_s</a></h3>
+<p class="description">Color separation lookup table</p>
+<p class="code">struct cups_rgb_s {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char black[CUPS_MAX_RGB];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int cache_init;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char ****colors;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int cube_index[256];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int cube_mult[256];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int cube_size;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num_channels;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char white[CUPS_MAX_RGB];<br>
+};</p>
+<h4 class="members">Members</h4>
+<dl>
+<dt>black[CUPS_MAX_RGB] </dt>
+<dd class="description">Cached black (sRGB = 0,0,0)</dd>
+<dt>cache_init </dt>
+<dd class="description">Are cached values initialized?</dd>
+<dt>colors </dt>
+<dd class="description">4-D array of sample values</dd>
+<dt>cube_index[256] </dt>
+<dd class="description">Index into cube for a given sRGB value</dd>
+<dt>cube_mult[256] </dt>
+<dd class="description">Multiplier value for a given sRGB value</dd>
+<dt>cube_size </dt>
+<dd class="description">Size of color cube (2-N) on a side</dd>
+<dt>num_channels </dt>
+<dd class="description">Number of colors per sample</dd>
+<dt>white[CUPS_MAX_RGB] </dt>
+<dd class="description">Cached white (sRGB = 255,255,255)</dd>
+</dl>
+<h3 class="struct"><a name="cups_sample_s">cups_sample_s</a></h3>
+<p class="description">Color sample point</p>
+<p class="code">struct cups_sample_s {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char colors[CUPS_MAX_RGB];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned char rgb[3];<br>
+};</p>
+<h4 class="members">Members</h4>
+<dl>
+<dt>colors[CUPS_MAX_RGB] </dt>
+<dd class="description">Color values</dd>
+<dt>rgb[3] </dt>
+<dd class="description">sRGB values</dd>
+</dl>
+<h2 class="title"><a name="VARIABLES">Variables</a></h2>
+<h3 class="variable"><a name="cups_scmy_lut[256]">cups_scmy_lut[256]</a></h3>
+<p class="description">sRGB gamma lookup table (inverted)</p>
+<p class="code">extern const unsigned char cups_scmy_lut[256];</p>
+<h3 class="variable"><a name="cups_srgb_lut[256]">cups_srgb_lut[256]</a></h3>
+<p class="description">sRGB gamma lookup table</p>
+<p class="code">extern const unsigned char cups_srgb_lut[256];</p>
+</div>
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

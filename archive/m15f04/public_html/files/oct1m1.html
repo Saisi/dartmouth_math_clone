@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>oct1m.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>e:=3/4;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>d:=1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>r:=(e* d)/(1+e*cos(t));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>polarplot([r,t,t=0..2*Pi],color=gold);</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_1.gif" width="27" height="30" alt="e := 3/4" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_2.gif" width="28" height="12" alt="d := 1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_3.gif" width="105" height="53" alt="r := 3/4/(1+3/4*cos(t))" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_4.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>restart;</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:=(e* d)/(1+e*cos(t));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>x:=r*cos(t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>y:=r*sin(t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>V:=[simplify(diff(x,t)),simplify(diff(y,t))];</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>rh:=simplify(V[1]*cos(t)+V[2]*sin(t));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>th:=simplify(-V[1]*sin(t)+V[2]*cos(t));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_5.gif" width="75" height="30" alt="r := e*d/(1+e*cos(t))" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_6.gif" width="76" height="30" alt="x := e*d*cos(t)/(1+e*cos(t))" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_7.gif" width="78" height="30" alt="y := e*d*sin(t)/(1+e*cos(t))" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_8.gif" width="303" height="45" alt="V := [-e*d*sin(t)/(1+2*e*cos(t)+e^2*cos(t)^2), (cos(t)+e)*e*d/(1+2*e*cos(t)+e^2*cos(t)^2)]" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_9.gif" width="149" height="44" alt="rh := e^2*d*sin(t)/(1+2*e*cos(t)+e^2*cos(t)^2)" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_10.gif" width="81" height="30" alt="th := e*d/(1+e*cos(t))" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r;</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>dr:=diff(r,t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>ddr:=factor(simplify(diff(dr,t)));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>drmddr:=factor(simplify(dr-ddr));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_11.gif" width="55" height="30" alt="e*d/(1+e*cos(t))" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_12.gif" width="94" height="44" alt="dr := e^2*d*sin(t)/(1+e*cos(t))^2" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_13.gif" width="172" height="44" alt="ddr := -(e*cos(t)^2-cos(t)-2*e)*e^2*d/(1+e*cos(t))^3" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_14.gif" width="301" height="44" alt="drmddr := e^2*d*(sin(t)+sin(t)*e*cos(t)+e*cos(t)^2-cos(t)-2*e)/(1+e*cos(t))^3" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>N:=simplify(sqrt(V[1]^2+V[2]^2));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>T:=[simplify(V[1]/N),simplify(V[2]/N)];</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>dT:=[simplify(diff(T[1],t)),simplify(diff(T[2],t))];</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>k:=factor(simplify(sqrt((1/N^2)*(dT[1]^2+dT[2]^2))));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_15.gif" width="158" height="47" alt="N := ((e^2+2*e*cos(t)+1)*e^2*d^2/(1+e*cos(t))^4)^(1/2)" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_16.gif" width="591" height="69" alt="T := [-e*d*sin(t)/((1+2*e*cos(t)+e^2*cos(t)^2)*((e^2+2*e*cos(t)+1)*e^2*d^2/(1+e*cos(t))^4)^(1/2)), (cos(t)+e)*e*d/((1+2*e*cos(t)+e^2*cos(t)^2)*((e^2+2*e*cos(t)+1)*e^2*d^2/(1+e*cos(t))^4)^(1/2))]" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_17.gif" width="664" height="69" alt="dT := [-(cos(t)+e)*e*d/(((e^2+2*e*cos(t)+1)*e^2*d^2/(1+e*cos(t))^4)^(1/2)*(e^2+2*e*cos(t)+1)*(1+e*cos(t))), -e*d*sin(t)/(((e^2+2*e*cos(t)+1)*e^2*d^2/(1+e*cos(t))^4)^(1/2)*(e^2+2*e*cos(t)+1)*(1+e*cos(t..." align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_18.gif" width="160" height="53" alt="k := ((1+e*cos(t))^6/(d^2*e^2*(e^2+2*e*cos(t)+1)^3))^(1/2)" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>e:=3/4;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>d:=1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>k := ((1+e*cos(t))^6/((e^2+2*e*cos(t)+1)^3*e^2*d^2))^(1/2);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>polarplot([k,t,t=0..2*Pi],color=gold);</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_19.gif" width="27" height="30" alt="e := 3/4" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_20.gif" width="28" height="12" alt="d := 1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_21.gif" width="175" height="92" alt="k := 1/9*16^(1/2)*9^(1/2)*((1+3/4*cos(t))^6/(25/16+3/2*cos(t))^3)^(1/2)" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_22.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>x:=t-tanh(t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>y:=sech(t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>plot([x,y,t=0..3],color=gold);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_23.gif" width="68" height="12" alt="x := t-tanh(t)" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_24.gif" width="56" height="12" alt="y := sech(t)" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct1images/oct1m_25.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

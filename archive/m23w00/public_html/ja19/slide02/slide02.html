@@ -1,0 +1,664 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>$FILE</TITLE>
+<META NAME="description" CONTENT="$FILE">
+<META NAME="keywords" CONTENT="slide02">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="slide02.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER"><FONT SIZE="+3">
+Solving Second Order Linear D.E.'s With Constant Coefficients
+</FONT></DIV>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Consider the homogeneous D.E.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+ay'' + by' + cy = 0
+\end{displaymath}
+ -->
+
+
+<I>ay</I>'' + <I>by</I>' + <I>cy</I> = 0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Let us suppose that we have a solution of the form 
+<BR> 
+<I>y</I>(<I>t</I>) = <I>e</I><SUP><I>rt</I></SUP>.  What would <I>r</I> have to be?
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="342" HEIGHT="86" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja19/slide02/img1.gif"
+ ALT="\begin{eqnarray*}
+ay'' + by' + cy &amp; = &amp; ar^2e^{rt} + bre^{rt} + ce^{rt}\\
+&amp; = &amp; (ar^2 + br + c)e^{rt} = 0\\
+&amp;\Longrightarrow &amp; ar^2 + br + c = 0
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">The equation 
+<!-- MATH
+ $ar^2 + br + c = 0$
+ -->
+<I>ar</I><SUP>2</SUP> + <I>br</I> + <I>c</I> = 0 is called the
+<BR>
+<U>characteristic equation</U> of the D.E.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+There are several cases to consider when solving the
+<BR>
+characteristic equation:
+</FONT></FONT><DL COMPACT>
+<DT>1.
+<DD>The equation has two real, distinct roots
+<DT>2.
+<DD>The equation has one real, repeated root
+<DT>3.
+<DD>The equation has two complex, distinct roots
+</DL><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><B>Case 1: Real, distinct roots</B>
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Suppose <I>r</I><SUB>1</SUB> and <I>r</I><SUB>2</SUB> are roots of the characteristic equation 
+<!-- MATH
+ $ar^2 + br + c
+= 0$
+ -->
+<I>ar</I><SUP>2</SUP> + <I>br</I> + <I>c</I>
+= 0.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+We will show that 
+<!-- MATH
+ $y_1(t) = e^{r_1t}$
+ -->
+<I>y</I><SUB>1</SUB>(<I>t</I>) = <I>e</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP> and 
+<!-- MATH
+ $y_2(t) = e^{r_2t}$
+ -->
+<I>y</I><SUB>2</SUB>(<I>t</I>) = <I>e</I><SUP><I>r</I><SUB>2</SUB><I>t</I></SUP> are both solutions
+to the D.E.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+ay'' + by' + cy = 0.
+\end{displaymath}
+ -->
+
+
+<I>ay</I>'' + <I>by</I>' + <I>cy</I> = 0.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Let's try <I>y</I><SUB>1</SUB>(<I>t</I>):
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+a(e^{r_1t})'' + b(e^{r_1t})' + c(e^{r_1t})  =  (ar_1^2 + br_1 + c) e^{r_1t} =
+0
+\end{displaymath}
+ -->
+
+
+<I>a</I>(<I>e</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP>)'' + <I>b</I>(<I>e</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP>)' + <I>c</I>(<I>e</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP>)  =  (<I>ar</I><SUB>1</SUB><SUP>2</SUP> + <I>br</I><SUB>1</SUB> + <I>c</I>) <I>e</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP> =
+0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">since <I>r</I><SUB>1</SUB> is a root of <I>ar</I><SUP>2</SUP> + <I>br</I> + <I>c</I>.  
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Hence, 
+<!-- MATH
+ $y_1(t) = e^{r_1t}$
+ -->
+<I>y</I><SUB>1</SUB>(<I>t</I>) = <I>e</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP> is a solution (and similarly, <BR>
+<BR>
+
+<!-- MATH
+ $y_2(t) = e^{r_2t}$
+ -->
+<I>y</I><SUB>2</SUB>(<I>t</I>) = <I>e</I><SUP><I>r</I><SUB>2</SUB><I>t</I></SUP> is also a solution). 
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><B>Example:</B>
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Find the general solution to the equation
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y'' + 5y' + 6y = 0.
+\end{displaymath}
+ -->
+
+
+<I>y</I>'' + 5<I>y</I>' + 6<I>y</I> = 0.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+We observe that the characteristic equation is
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+r^2 + 5r + 6 = (r + 2)(r + 3),
+\end{displaymath}
+ -->
+
+
+<I>r</I><SUP>2</SUP> + 5<I>r</I> + 6 = (<I>r</I> + 2)(<I>r</I> + 3),
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"><FONT SIZE="+2">
+hence 
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y_1(t) = e^{-2t} \quad \textrm{and} \quad y_2(t) = e^{-3t}.
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="261" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja19/slide02/img2.gif"
+ ALT="\begin{displaymath}y_1(t) = e^{-2t} \quad \textrm{and} \quad y_2(t) = e^{-3t}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">So to construct the general solution, we invoke the 
+<BR>
+Principle of Superposition and take a linear combination of <I>y</I><SUB>1</SUB> and <I>y</I><SUB>2</SUB> to
+obtain
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y = c_1 e^{-2t} + c_2 e^{-3t}
+\end{displaymath}
+ -->
+
+
+<I>y</I> = <I>c</I><SUB>1</SUB> <I>e</I><SUP>-2<I>t</I></SUP> + <I>c</I><SUB>2</SUB> <I>e</I><SUP>-3<I>t</I></SUP>
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<U>Note:</U> the solutions <I>y</I><SUB>1</SUB>(<I>t</I>) and <I>y</I><SUB>2</SUB>(<I>t</I>) possess a certain relationship called
+<U>linear independence</U> that allows us to state that all solutions are
+of the form 
+<!-- MATH
+ $c_1y_1(t) + c_2y_2(t)$
+ -->
+<I>c</I><SUB>1</SUB><I>y</I><SUB>1</SUB>(<I>t</I>) + <I>c</I><SUB>2</SUB><I>y</I><SUB>2</SUB>(<I>t</I>) - more on this later...
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><B>Case 2: repeated root</B>
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Again, we have the second order homogeneous equation
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+ay'' + by' + cy = 0.
+\end{displaymath}
+ -->
+
+
+<I>ay</I>'' + <I>by</I>' + <I>cy</I> = 0.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Suppose that when we examine the characteristic equation 
+<!-- MATH
+ $ar^2 + br + c = 0$
+ -->
+<I>ar</I><SUP>2</SUP> + <I>br</I> + <I>c</I> = 0,
+we find that it has one real root, <I>r</I><SUB>1</SUB> of multiplicity 2.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+<U>Note:</U> in order to obtain repeated roots, the discriminant <I>b</I><SUP>2</SUP> - 4<I>ac</I> must be
+zero; hence when we use the quadratic formula we obtain
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+r_1 = \frac{-b \pm \sqrt{b^2-4ac}}{2a} = \frac{-b}{2a}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="224" HEIGHT="50" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja19/slide02/img3.gif"
+ ALT="\begin{displaymath}r_1 = \frac{-b \pm \sqrt{b^2-4ac}}{2a} = \frac{-b}{2a}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Using the same derivation as for the previous case, we can show that 
+<!-- MATH
+ $y_1(t) =
+e^{r_1t}$
+ -->
+<I>y</I><SUB>1</SUB>(<I>t</I>) =
+<I>e</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP> is a solution.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+However, second order D.E.'s generally have two ``different'' solutions: what
+can we do to obtain a second solution?
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">We guess.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+It turns out that 
+<!-- MATH
+ $y_2(t) = te^{r_1t}$
+ -->
+<I>y</I><SUB>2</SUB>(<I>t</I>) = <I>te</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP> is also a solution.  Let's verify that
+this is the case:
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="454" HEIGHT="284" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja19/slide02/img4.gif"
+ ALT="\begin{eqnarray*}
+a(te^{r_1t})'' &amp; + &amp; b(te^{r_1t})' + c(te^{r_1t})\\ [.1in]
+&amp; =...
+... + [2a\left(\frac{-b}{2a}\right) + b]
+e^{r_1t}\\ [.1in]
+&amp; = &amp; 0.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Clever guess, eh?
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+So now we can write the general solution in the case where the characteristic
+equation has repeated roots:
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y(t) = c_1e^{r_1t} + c_2te^{r_1t}
+\end{displaymath}
+ -->
+
+
+<I>y</I>(<I>t</I>) = <I>c</I><SUB>1</SUB><I>e</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP> + <I>c</I><SUB>2</SUB><I>te</I><SUP><I>r</I><SUB>1</SUB><I>t</I></SUP>
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><B>Example:</B>
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Find the solution to the initial value problem
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+4y'' + 36y' + 36y = 0, \hspace{.5in} y(0) = 5 \hspace{.5in} y'(0) = -22
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="457" HEIGHT="33" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja19/slide02/img5.gif"
+ ALT="\begin{displaymath}4y'' + 36y' + 36y = 0, \hspace{.5in} y(0) = 5 \hspace{.5in} y'(0) = -22 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">First, we identify the solutions to the characteristic equation:
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="179" HEIGHT="145" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja19/slide02/img6.gif"
+ ALT="\begin{eqnarray*}
+% latex2html id marker 864r^2 + 64r + 64 &amp; = &amp; 0\\
+\Longrightarrow r^2 + 16r + 16 &amp; = &amp; 0\\
+\therefore \quad r &amp; = &amp; - 4.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">So our general solution is 
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y(t) = c_1e^{-4t} + c_2te^{-4t}
+\end{displaymath}
+ -->
+
+
+<I>y</I>(<I>t</I>) = <I>c</I><SUB>1</SUB><I>e</I><SUP>-4<I>t</I></SUP> + <I>c</I><SUB>2</SUB><I>te</I><SUP>-4<I>t</I></SUP>
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Now, using the first initial condition <I>y</I>(0) = 5, we obtain
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y(0) = c_1e^0 + c_2(0)e^0 = c_1 = 5
+\end{displaymath}
+ -->
+
+
+<I>y</I>(0) = <I>c</I><SUB>1</SUB><I>e</I><SUP>0</SUP> + <I>c</I><SUB>2</SUB>(0)<I>e</I><SUP>0</SUP> = <I>c</I><SUB>1</SUB> = 5
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+So our solution now looks like
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y(t) = 5e^{-4t} + c_2te^{-4t}.
+\end{displaymath}
+ -->
+
+
+<I>y</I>(<I>t</I>) = 5<I>e</I><SUP>-4<I>t</I></SUP> + <I>c</I><SUB>2</SUB><I>te</I><SUP>-4<I>t</I></SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Now, in order to use the second initial condition, we must first compute the
+derivative of our solution, <I>y</I>(<I>t</I>) (plugging in the value of <I>c</I><SUB>1</SUB> we just
+computed).
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="303" HEIGHT="61" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja19/slide02/img7.gif"
+ ALT="\begin{eqnarray*}
+y(t) &amp; = &amp; 5e^{-4t} + c_2te^{-4t}\\
+y'(t) &amp; = &amp; -20e^{-4t} + c_2e^{-4t} - 4c_2te^{-4t}
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Now, apply the second initial condition, <I>y</I>'(0) = 1 to obtain
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y'(0) = -20e^0 + c_2e^0 -4c_2(0)e^0 = -20 + c_2 = -22
+\end{displaymath}
+ -->
+
+
+<I>y</I>'(0) = -20<I>e</I><SUP>0</SUP> + <I>c</I><SUB>2</SUB><I>e</I><SUP>0</SUP> -4<I>c</I><SUB>2</SUB>(0)<I>e</I><SUP>0</SUP> = -20 + <I>c</I><SUB>2</SUB> = -22
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\therefore \quad c_2 = -2
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="100" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja19/slide02/img8.gif"
+ ALT="\begin{displaymath}
+% latex2html id marker 191
+\therefore \quad c_2 = -2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+So, the solution to the initial value problem is
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+y(t) = 5e^{-4t} - 2te^{-4t}.
+\end{displaymath}
+ -->
+
+
+<I>y</I>(<I>t</I>) = 5<I>e</I><SUP>-4<I>t</I></SUP> - 2<I>te</I><SUP>-4<I>t</I></SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-20</I>
+</ADDRESS>
+</BODY>
+</HTML>

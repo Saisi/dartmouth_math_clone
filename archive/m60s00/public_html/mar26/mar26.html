@@ -1,0 +1,406 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>mar26</TITLE>
+<META NAME="description" CONTENT="mar26">
+<META NAME="keywords" CONTENT="mar26">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="mar26.css">
+</HEAD>
+<BODY >
+<B>Monday </B>
+
+<P>
+Assignment:
+Read section 1.1 and 1.2.  Do section 1.1 problems 1,2,11,12,17.  (If you
+can't get your computer to do the
+simulations write down carefully what you are trying to tell the computer 
+to do, and we'll work out the bugs later as we become more comfortable
+with
+programing in maple.) 
+
+<P>
+Comments:
+The computer demos and experiments we are using in class can be found
+here:
+ <a
+href="http://www.dartmouth.edu/~chance">
+Computer Demos.</a>
+
+<P>
+<B>Wednesday </B>
+
+<P>
+Assignment:
+Please read  section 1.2 and 2.1.  Do problems in
+section 1.2 do problems 4,5,11,14,17,18,19,31.
+
+<P>
+Comments:
+Today and Friday we will cover section 1.2.  It is worth noting that the
+definitions and ideas presented in class will be a balance between the
+intuitive friendly definitions in the book and the harsh definitions found
+in
+more
+advanced treatments of probability.  We will discuss in next week's
+x-session why there are different approaches and the history of these
+approaches.  
+
+<P>
+<B>Friday </B>
+
+<P>
+Assignment:
+In section 1.2 do problems 20,21,23,28 in section 2.1 do problem 3.  Read
+sections 2.1 and 2.2.
+
+<P>
+Comments:
+Here is my maple code for problem 17 from the first assignment.  I
+apologize that it is a bit ugly to look at,  but it should be a nice
+template for adding some graphics to your own code.
+
+<P>
+<TT>Walk1d := proc(n)
+</TT>
+<P>
+<TT>local i, ran, position, positionlist,walk;
+</TT>
+<P>
+<TT>with(plottools):
+</TT>
+<P>
+<TT>position := 0;
+</TT>
+<P>
+<TT>positionlist :=[[0,0]];
+</TT>
+<P>
+<TT>for i from 0 to n 
+</TT>
+<P>
+<TT>do
+</TT>
+<P>
+<TT>if position = 0  then
+</TT>
+<P>
+<TT>lprint(`Im home at  step ` , i ,  ``);
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>ran := rand(1..2)();
+</TT>
+<P>
+<TT>if ran = 1 then
+</TT>
+<P>
+<TT>position := position + 1; 
+</TT>
+<P>
+<TT>else
+</TT>
+<P>
+<TT>position := position  - 1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>positionlist := [op(positionlist),[i,position]];
+</TT>
+<P>
+<TT>od;
+</TT>
+<P>
+<TT>lprint(`my final position is `, position,``); 
+</TT>
+<P>
+<TT>lprint(`Here is a graph of my random adventure in one dimension, viewed
+</TT>
+<P>
+<TT>with "time" as the x-axis.`);
+</TT>
+<P>
+<TT>walk := curve(positionlist,color=red,thickness =1 );
+</TT>
+<P>
+<TT>plots[display](walk); 
+</TT>
+<P>
+<TT>end:
+</TT>
+<P>
+<TT>Walk1d(1000);
+</TT>
+<P>
+<TT>with(plottools):
+</TT>
+<P>
+<TT>Walk2d := proc(n,show)
+</TT>
+<P>
+<TT>local i, ran, positionx, positiony, positionlist,walk,list3,walk3;
+</TT>
+<P>
+<TT>with(plottools):
+</TT>
+<P>
+<TT>positionlist := [[0,0]];
+</TT>
+<P>
+<TT>list3 := [[0,0,0]];
+</TT>
+<P>
+<TT>positionx := 0;
+</TT>
+<P>
+<TT>positiony := 0;
+</TT>
+<P>
+<TT>for i from 0 to n 
+</TT>
+<P>
+<TT>do
+</TT>
+<P>
+<TT>if positionx = 0  and positiony = 0  then
+</TT>
+<P>
+<TT>lprint(`Im home at  step ` , i ,   ``);
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>ran := rand(1..4)();
+</TT>
+<P>
+<TT>if ran = 1 then
+</TT>
+<P>
+<TT>positionx := positionx + 1; 
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>if ran = 2 then
+</TT>
+<P>
+<TT>positionx := positionx  - 1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>if ran = 3 then
+</TT>
+<P>
+<TT>positiony := positiony  + 1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>if ran = 4 then
+</TT>
+<P>
+<TT>positiony := positiony  - 1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>positionlist := [op(positionlist),[positionx,positiony]];
+</TT>
+<P>
+<TT>list3 := [op(list3),[positionx,positiony,i]];
+</TT>
+<P>
+<TT>od; 
+</TT>
+<P>
+<TT>lprint(`my final position is `, [positionx , positiony],``); 
+</TT>
+<P>
+<TT>if show then
+</TT>
+<P>
+<TT>lprint(`Here is a graph of my random adventure in two dimensinos.`);
+</TT>
+<P>
+<TT>walk := curve(positionlist,color=green,thickness =2 );
+</TT>
+<P>
+<TT>plots[display](walk); 
+</TT>
+<P>
+<TT>else
+</TT>
+<P>
+<TT>lprint(`Here is the walk vied over time, with time as the z axis.`);
+</TT>
+<P>
+<TT>walk3 := curve(list3);
+</TT>
+<P>
+<TT>plots[display](walk3,orientation=[0,0],axes=box,thickness=2);
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>end:
+</TT>
+<P>
+<TT>Walk2d(1000,true);
+</TT>
+<P>
+<TT>Walk2d(1000,false);
+</TT>
+<P>
+<TT>Walk3d := proc(n)
+</TT>
+<P>
+<TT>local i, ran, positionx, positiony , positionz, positionlist,walk;
+</TT>
+<P>
+<TT>with(plottools):
+</TT>
+<P>
+<TT>positionx := 0;
+</TT>
+<P>
+<TT>positiony := 0;
+</TT>
+<P>
+<TT>positionz := 0;
+</TT>
+<P>
+<TT>positionlist :=[[0,0,0]];
+</TT>
+<P>
+<TT>for i from 0 to n 
+</TT>
+<P>
+<TT>do
+</TT>
+<P>
+<TT>if positionx = 0  and positiony = 0  and positionz = 0 then
+</TT>
+<P>
+<TT>lprint(`Im home at  step` , i ,  ``);
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>ran := rand(1..6)();
+</TT>
+<P>
+<TT>if ran = 1 then
+</TT>
+<P>
+<TT>positionx := positionx + 1; 
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>if ran = 2  then
+</TT>
+<P>
+<TT>positionx := positionx  - 1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>if ran = 3   then
+</TT>
+<P>
+<TT>positiony := positiony  + 1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>if ran = 4  then
+</TT>
+<P>
+<TT>positiony := positiony  - 1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>if ran = 5  then
+</TT>
+<P>
+<TT>positionz := positionz  +  1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>if ran = 6  then
+</TT>
+<P>
+<TT>positionz := positionz  - 1 ;
+</TT>
+<P>
+<TT>fi;
+</TT>
+<P>
+<TT>positionlist := [op(positionlist),[positionx,positiony,positionz]];
+</TT>
+<P>
+<TT>od; 
+</TT>
+<P>
+<TT>lprint(`my final position is `, [positionx , positiony,positionz], ``);  
+</TT>
+<P>
+<TT>lprint(`Here is a graph of my random adventure in three dimensions.`);
+</TT>
+<P>
+<TT>walk := curve(positionlist,thickness=2);
+</TT>
+<P>
+<TT>plots[display](walk); 
+</TT>
+<P>
+<TT>end:
+</TT>
+<P>
+<TT>Walk3d(1000);
+</TT>
+<P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 60 Spring 2000</I>
+<BR><I>2000-04-03</I>
+</ADDRESS>
+</BODY>
+</HTML>

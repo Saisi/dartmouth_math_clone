@@ -1,0 +1,421 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Math 60  Log</title></head>
+
+<BODY BGCOLOR="#FFFFFF"
+      LINK="#white"
+      VLINK="#0055AA"
+      ALINK="#FF0000">
+
+<center>
+<IMG
+SRC="http://www.math.dartmouth.edu/~m60s02/Cards.jpg"
+VSPACE="0" HSPACE="0" ALT="pirate">
+</center>
+<p>
+
+<h2>Math 60  Log</h2>
+<hr>
+<b> Week 1 (March 27-29) :</b>
+<p>
+<b> Wednesday :</b>For the first couple weeks we will be introducing some
+probabilistic
+concepts via experiment.  You will need to simulate probabilistic
+phenomena to do this.  I recommend using maple.  Here is some help
+regarding down loading maple 7 to a 
+<a href="http://www.math.dartmouth.edu/software/maple7-mac.html"> Mac </a>
+and here is some help for loading it onto a 
+<a href="http://www.math.dartmouth.edu/software/maple-pc.html"> PC </a>. 
+Here are the templates from the first lecture.  First we looked at the
+<a
+href="temps/ProbD11.html"> flipping  </a> of a fair coin, then we
+analyzed
+the  <a href="temps/ExpEx1.html"> Expected Value  </a>, and hopefully  by 
+Friday we will explore the <a
+href="temps/VarEx1.html"> Variance   </a>.  Your first assignment is
+essentially to
+redo these experiments for an unfair "coin", one whose  probability 
+of turning up  heads is not 1/2 (you should pick your own probability of
+the coin turning up heads and perhaps experiment with a few different 
+values). 
+The assignment is to analyze the random
+variable which is one if the coin turns up heads and -1 if it turns up
+tails.  Assignment: first make claim about what the expected value of the 
+random variable should be  in this setting  
+and then experimentally justify your claim via a computer
+simulation. This assignment also must
+include a paragraph or so describing the sense in which your experiments
+help justify your claim!  
+<p>
+For an example of an unfair "coin" I recommend
+going to the Math 40 class (at 1:45 in Bradley 105)  where pennies will
+be spun rather than flipped. 
+
+
+<p><b>Friday:</b>
+Today we explored the notion of expected value a little more carefully and
+in particular the expect length of a <a
+href="temps/Streaks.html"> streak  </a>  when flipping a coin.  We also
+explored the <a href="facts/1FMP.html"> First Fundamental Mystery of
+Probability  
+</a>.
+
+<p> 
+Homework.  Problem  1.  (To be turned in) Work out
+approximately how
+many shots a basketball player attempts in a season and a approximate  
+the average percentage of these attempted shots that are made.  Modify the
+streak program to
+simulate the streaks that a "random basketball" players will experience.  
+Write a paragraph arguing how you might determine  whether  basketball
+players behave randomly or not.
+<p>
+ Problem  2.  (To be turned in)  Perform the survey  described in class on
+5 people.  
+
+ 
+
+<hr>
+<b> Week 2 (April 1-5) :</b>
+<p>
+<FONT COLOR="RED" FACE="Arial, Monoco">
+X-Session in Berry Starr 274
+</font> form 12:00-12:50 on Tuesday April 2nd.  
+We will talk about Monday's homework which is the first example of
+modifying a template in a meaning full way.  Attendance is optional, but if
+you have limited or no programming experience you will  probably  want
+to attend this X session.
+
+<p>
+<b> Monday.</b>  
+Today we explored the notion of variance and
+in particular 
+explored the <a href="facts/2FMP.html"> Second  Fundamental Mystery of
+Probability
+</a> and the <a href="facts/3FMP.html"> Third   Fundamental Mystery of
+Probability
+</a>.
+
+<p>
+
+Homework: 1.(to be turned in) Examine the standardized sum of an unfair
+coin toss (as we did for the standardized fair coin toss  - see the <a
+href="temps/Standarize1.html"> standardized   </a> sum program).  How does
+the empirical distribution appear to  compare to the normal curve as the
+number of tosses in each  experiment gets larger? Recall: this will
+require observing that the variance of the underlying random variable is
+4*p*(1-p) which can be
+ <a href="temps/ExperimentalVar1.html">
+experimentally  </a> verified. 
+
+<p>
+2. (to be turned in)  Simulate the expected value of the longest
+streak of successes  as opposed to  the expected value of the longest
+streak. Compare the expected length of a success streak with that of a
+streak and formulate a conjecture about the
+relationship between these two expected values.  Discuss the   empirical
+evidence that lead you to your for your conjecture.   
+
+<p>
+<b> Wednesday </b>:  Today we saw the the <a href="facts/CLT.pdf">
+  Fundamental Theorem of
+Probability
+</a> and explored a bit about what it means to   statisticians.  
+We did this via the  <a href="temps/CLTStreak1.html">
+ maximal streak  </a> random variable.
+
+<p>
+  Your homework  will
+be to perform the same analysis we performed for the streak random
+variable for 
+the following random variable: imagine that  each of the plus and minus
+ones that  we
+see after our fair coin
+toss  corresponds to a dollar amount that we
+receive or owe. We play this game N times.  After each time we play 
+we either owe some amount, are breaking even or we are ahead.  For
+example N=4 and  we "flipped" the payoffs 
+{-1,-1,-1,1} in that order then after the second toss we owe 2 and
+after the third toss
+we owe 3.   Simulate the random variable which corresponds to counting
+the number of times during the experiment  when
+you are ahead.  For example for with our {-1,-1,-1,1} flips we are never
+ahead
+and the result would be 0.  Pick an M and look at the
+standardized sum representing  the performing this experiment  M
+times.  Experimentally verify that this
+random variable is becoming normal as M is getting larger.  
+<p>
+The homework should be turned in on <FONT COLOR="RED" FACE="Arial,
+Monoco">  <b> MONDAY!!!!! </b> </font>.  If it is turned
+in via email please call it LastnameHW4, or example <b> I </b> would call
+my maple assignment LeibonHW4 and if I had a PC 
+I would send my professor the file  LeibonHW41.html and a
+bunch of gif images that were located in the image folder after
+saving my program as html.
+<p>
+
+A <b> Question:</b> The assignment says:
+Simulate the random variable which corresponds to counting the number of
+times during the experiment when you are ahead.
+Does this mean the total number of times you are ahead, or the number of
+streaks when you are ahead?
+<p> 
+The <b> Answer:</b> the total number of times you are ahead.
+<p>
+<b> Friday </b>:  Today we explored how a good understanding of the
+big square root can lead to a dramatically improved version of the <a
+href="temps/RW.html">
+ calculus. 
+</a> 
+
+ 
+<hr>
+<b> Week 3 (April 8-12) :</b>
+<p>
+<FONT COLOR="RED" FACE="Arial, Monoco">
+X-Session in Berry Starr 274
+</font> form 12:00-12:50 on Tuesday April 9th
+
+
+<p>
+<b> Monday.</b>
+Please read chapters 1 and 2 of the book and due and turn in problem 17
+from chapter  1.1 (it should be
+turned in on <b> Friday </b> - please call it LastnameHW5 if you
+email it to me).  Also by Friday please do (but turn in
+only if you'd like) problems  4,5,11,14,18, and
+21 from section 1.2.  Today in class we learned how make a finite sample
+space and place a notion of probability on it.   
+
+<p>
+<b> Wednesday.</b> 
+Here are the  <a
+href="http://www.dartmouth.edu/~chance/teaching_aids/books_articles/">
+simulations  </a> that the book uses.  They can be run in maple which in
+particular  gives you a plethora of new templates to work with.
+Today in class we explored an infinite sample
+space and attempted to place a notion of probability on it.
+
+<p>
+<b> Friday.</b>
+Please read chapter 2 of the book and <b> turn by X-session on
+Tuesday </b> numbers 12 and 13 from section 2.2.  Also do  problems
+2 and 8 of section 2.2 (turn them in if you'd like).
+
+
+<hr>
+<b> Week 4 (April 15-19) :</b>
+<p>
+<p>
+ Come and ask questions about the homework (or anything
+else as time permits) at the 
+<FONT COLOR="RED" FACE="Arial, Monoco">
+Optional X-Session </font>  in Bradley 104
+from 12:00-12:50 on Tuesday April 16.  First exam date: the in class exam
+will be administered on 
+Wednesday May 1st at which point the take exam will be handed out and
+due Friday May 3rd at class time. 
+<p>
+
+<b> Monday .</b>
+
+Here are some  <a href="temps/PDFetc1.html">
+examples </a>  showing how to use maple in order to estimate the  values
+of various probability distribution functions (pdf), cumulative distribution
+functions (cdf), and inverse  cumulative distribution functions
+(icdf). Please read chapter 3
+as soon  as possible.  For <bf> Friday </bf> please do the following
+problems: from section 2.2  problems 5,6,9 10, and 14 (and turn in numbers
+9 and 10) and from section 3.1 problems 4, 8 and 12.
+<p>
+<b> Wednesday.</b>
+We learned about the binomial distribution and performed a to
+<a
+href="temps/Competion1.html">
+ hypothesis  </a> test.
+
+<p>
+<b> Friday. </b>
+Please read chapter 3  of the book and <b> turn by X-session on
+Tuesday </b> number 22 from 3.1 and number 27 from 3.2.  Also do problems
+13 and 18 from 3.1 and problems  6 and 10 from 3.2.
+
+<hr>
+<b> Week 5 (April 22-26) :</b>
+<p>
+<p>
+Come and ask questions about the homework (or anything
+else as time permits) at the
+<FONT COLOR="RED" FACE="Arial, Monoco">
+Optional
+X-Session </font> in Bradley 104
+from 12:00-12:50 on Tuesday April 23.
+
+
+<p>
+
+<b>Monday: </b>
+Please read chapter 3  of the book and <b> turn in </b> by Friday 
+numbers 22 and 34  from 3.2.  Also do
+problems 3,4,5, 10 and 18 from  from 4.1.
+<p>
+
+<b> Wednesday.</b>
+Today we learned about conditional probability and its relationship to 
+<a
+href="http://math.ucsd.edu/~crypto/Monty/Montytitle.html">
+ goats </a>.
+
+<p>
+
+<b> Friday.</b>
+Please read chapter 4  of the book and <b> turn by X-session on
+Tuesday </b> numbers 27 and 63  from 4.1 and do and turn if you'd 
+like numbers 22,28,34, and 51 from 4.1.
+</body>
+<hr>
+<b> Week 6 (April 29 - May 3) :</b>
+<p>
+<p>
+ Come and ask questions about the homework (or anything
+else as time permits) at the
+<FONT COLOR="RED" FACE="Arial, Monoco">
+Optional
+X-Session </font> in Bradley 104
+from 12:00-12:50 on Tuesday April 30.
+<p>
+
+<b> Monday.</b>
+Today we finished up chapter 4.
+<p>
+<b> Wednesday.</b>
+
+<FONT COLOR="RED" FACE="Arial, Monoco">
+Exam: </font>  comprehensive in-class exam
+administered and comprehensive <a
+href="exams/TakeHome.pdf">
+ take-home </a> 
+exam handed out. <b> After receiving some emails form confused students I
+have augmented the exam with some <it> potentially helpful
+clarifications </it>.</b>  If you find
+something confusing you may want to look at the revised exam  and see
+if the issue has now been clarified.   
+
+<b> Friday.</b>
+Please read chapter 5  of the book and <b> turn by X-session on
+Tuesday </b> numbers 9 and 18 from 5.1 and do and turn if you'd
+like numbers 2 and 7  from 5.2.
+
+<hr>
+<b> Week 7 (April 6 - May 10) :</b>
+<p>
+We will go over the exam 
+ at the
+<FONT COLOR="RED" FACE="Arial, Monoco">
+Optional
+X-Session </font> in Bradley 104
+from 12:00-12:50 on Tuesday May 7.
+<p>
+
+<b> Monday.</b>
+Today we saw that the the exponential and geometric distributions <b>
+are </b> the memoryless distributions. Do Friday's homework for tomorrow
+and look over chapters 6 and 8.
+<p>
+<b> Wednesday</b>
+Extra credit announcement.  Up to ten extra credit points will be added to
+your exam scores provided you turn in a "mini-project". A
+"mini-project" might  consist of the following three parts.  1. questions
+2.  simulations  designed to
+explore your questions and a  3.  conjectured answer based on your
+simulations
+and any other form of reasoning. You may work with other people on this
+"mini-project" if you'd like. (A VERY terse example of a
+"mini-project": 1. It is
+clear to me that if I take the bus waiting problem and make the 100
+minute wait longer then I should  get closer to the "integral value".  But
+what if if make the  time smaller?  When it is 0 I know the answer is
+ten, but how does it decrease to its eventual integral value as time gets
+larger?...  2. Now I simulate
+this experiment with the uniform on [5,15] distribution for various times
+from 0 to 100 and I plot the expected
+waiting times....  3. From my simulation, and especially my plot,  it
+appears that one approaches the integral value very quickly.   In fact it
+looks like an exponential curve with a negative exponent....) 
+<p>
+Please read chapter 6 carefully  and look over chapter 8, turn on Friday
+numbers 14 and 20 from 6.1 and do and turn in if you'd like numbers 6 and
+19 form 6.1.
+
+<p>
+<b> Friday.</b>
+Please read chapters 6 and 8   of the book and  turn by next
+Wednesday numbers 15 of 6.2  and 9 from 8.1 and do and turn if you'd
+like number 10 from 6.3 and numbers 5, 6 and 7  from 8.1.
+
+<hr>
+<b> Week 8 (May 13 - May 17) :</b>
+<p>
+<FONT COLOR="RED" FACE="Arial, Monoco">
+No
+X-Session this week </font>.  In fact my Tuesday office hours have been
+moved to 4:00 on Monday.
+<p>
+Monday: Please read chapter 7. Note Friday's homework is due Wednesday.
+Here is  a neat mini-project where you can witness Benford's distribution in
+<a
+href="http://www.dartmouth.edu/~dlr/miniproject.html">
+ action</a>!
+
+<p>
+<b> Friday.</b>
+Please read chapter 9. Turn by next
+X-session number 3 in 7.1  and 5 in 7.2.  Also go through and rederive on 
+all the properties of the <a href="facts/For.pdf">
+Fourier transform </a>
+discussed on Friday, you
+need not turn this in (but it is a really good idea and a question or two
+about this might show up on
+the "in class" part of the final).
+
+
+<hr>
+<b> Week 9 (April 20 - May 24) :</b>
+<p>
+I will hand back and go over a whole lot of homework at the 
+<FONT COLOR="RED" FACE="Arial, Monoco">
+Optional
+X-Session </font> in Bradley 104
+from 12:00-12:50 on Tuesday May 21.
+<p>
+
+<b> Monday.</b>
+Today we saw the Fourier transform in action and began <a
+href="temps/For.html"> exploring </a> how to use
+it to prove the central limit theorem.
+<p>
+<b> Tuesday/Wednesday.</b>
+Please turn in on Friday 6.2 #18, 9.2  #5 and 9.3 #14.
+Also due but turn in only if you'd like chapter 9.1  1,3,4  and chapter
+6.2 17.
+<p>
+<b> Friday </b>
+Please turn by next Wednesday  6.3 #17,18,  7.2 #15, 9.3
+#10.  
+Also due but turn in only if you'd like chapter 6.3  23,24,25 (not easy
+but worth it!)
+
+<hr>
+<b> Week 10  (May 28 - May 29) :</b>
+<p>
+I will go over a whole lot of homework at the
+<FONT COLOR="RED" FACE="Arial, Monoco">
+Optional
+X-Session </font> in Bradley 104
+from 12:00-12:50 on Tuesday May 28.
+<p>
+The exam will be handed out in class on Wednesday and must be returned to
+me by Tuesday June 4 at 5:00 P.M.
+
+<html>
+</body>

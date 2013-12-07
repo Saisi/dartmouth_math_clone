@@ -1,0 +1,268 @@
+
+<html>
+
+	
+	<meta http-equiv="content-type" content="text/html;charset=windows-1252">
+	<title>linear algebra</title>
+	<p></p>
+	<p></p>
+	<p>If you have problem viewing the page you can download a <a href="lin.pdf">pdf version</a></p>
+	<p></p>
+	<p></p>
+	<p><b>Definition 1</b> <em>Vector space is a non empty set <b>V</b> if the following are met:</em></p>
+	<ol type="1">
+		<li><em>An operation, which will be called vector addition and denoted as +, is defined between any two vectors in <b>V</b> in such a way that if <b>u</b> and <b>v</b> are in <b>V</b>, then <b>u</b>+ <b>v</b> is too (i.e., <b>V</b> is closed under addition). Furthermore,</em>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center"><b>u</b>+<b>v</b> = <b>v</b>+<b>u</b> (commutative)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center">(<b>u</b>+ <b>u</b>) + <b>w</b> = <b>u</b>+ (<b>v</b>+ <b>w</b>). (associative)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<li><b><em>V</em></b><em> contains a unique zero vector 0 such that</em>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center"><b>u</b>+ 0 = <b>u</b></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<p><em>for each <b>u</b> in <b>V</b>.</em></p>
+		<li><em>For each <b>u</b> in <b>V</b> there is a unique vector &quot;-<b>u</b>&quot; in <b>V</b>, called the negative inverse of u, such that</em>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center"><b>u</b>+ (-<b>u</b>) = 0</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<p><em>.</em>
+		<li><em>Another operation, called scalar multiplication, is defined such that if <b>u</b> is any vector in <b>V</b> and <font face="symbol">a</font> is any scalar, then the scalar multiple <font face="symbol">a</font><b>u</b> is in <b>V</b>, too (i.e., <b>V</b> is closed under scalar multiplication). Further, we require that</em>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center"><font face="symbol">a</font>(<font face="symbol">b</font><b>u</b>) = (<font face="symbol">a</font><font face="symbol">b</font>) <b>u</b> (associative)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center">(<font face="symbol">a</font>+<font face="symbol">b</font>) <b>u</b> = <font face="symbol">a</font><b>u</b>+<font face="symbol">b</font><b>u</b> (distributive)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center"><font face="symbol">a</font>( <b>u</b>+<b>v</b>) = <font face="symbol">a</font><b>u</b>+<font face="symbol">a</font><b>v</b> (distributive)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center">l<b>u</b> = <b>u</b></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<p><em>,</em>
+		<p><em>if the vectors <b>u</b>, <b>v</b> are in <b>V</b>, and <font face="symbol">a</font>,<font face="symbol">b</font> are scalars.</em></p>
+	</ol>
+	<p><b>Definition 2</b> <em>vector space <b>H</b> is called an inner product space if to each pair of vectors <b>u</b> and <b>v</b> in <b>H</b> is associated a number (<b>u</b>,<b>v</b>) such that the following rules hold:</em></p>
+	<ol type="1">
+		<li>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center">(<b>u</b>,<b>v</b>) = (<b>v</b>,u)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<li>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center">(<b>u</b>+<b>w</b>,<b>v</b>) = (<b>u</b>,<b>v</b>)+(<b>w</b>,<b>v</b>)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<li>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center">(<font face="symbol">a</font><b>u</b>,<b>v</b>) = <font face="symbol">a</font>(<b>u</b>,<b>v</b>)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<li>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center">(<b>u</b>,<b>u</b>) <font face="symbol">’â€</font> 0</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<li>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center">(<b>u</b>,<b>u</b>) = 0 <font face="symbol"> </font>iff<font face="symbol"> </font><b>u</b> = 0</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em>
+		</ol>
+	</center>
+	<p><b>Definition 3</b> <em>vector space <b>V</b> is called an norm space if to each vector <b>u</b> in <b>V</b> is associated a number <font face="symbol">||</font><b>u</b><font face="symbol">||</font> such that the following rules hold:</em></p>
+	<ol type="1">
+		<li>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center"><font face="symbol">||</font><b>u</b>+<b>v</b><font face="symbol">||</font> <font face="symbol">&pound;</font> <font face="symbol">||</font><b>u</b><font face="symbol">||</font>+<font face="symbol">||</font>v<font face="symbol">||</font> (triagleinequality)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<li>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center"><font face="symbol">||</font><font face="symbol">a</font><b>u</b><font face="symbol">||</font> = <font face="symbol">|</font><font face="symbol">a</font><font face="symbol">|</font><font face="symbol">||</font><b>u</b><font face="symbol">||</font></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em></center>
+		<li>
+		<center>
+			<p><em>
+			<table border="0" align="center">
+				<tr>
+					<td>
+						<table align="left">
+							<tr>
+								<td nowrap align="center"><font face="symbol">||</font> <b>u</b><font face="symbol">||</font> = 0 iff <b>u</b> = 0</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</em>
+		</ol>
+	</center>
+	<p>
+	<hr>
+	<font size="2">File translated from T</font><font size="2"><sub>E</sub></font><font size="2">X by <a href="http://hutchinson.belmont.ma.us/tth/">T</a></font><a href="http://hutchinson.belmont.ma.us/tth/"><font size="2"><sub>T</sub></font><font size="2">H</font></a><font size="2">, version 2.25.<br>
+	On 29 Mar 2001, 13:50.</font>
+
+</html>

@@ -1,0 +1,297 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Math 38. Graph Theory</title></head>
+<body alink="#FF0000" bgcolor="#ffffff" link="#0055AA" vlink="#0055AA">
+
+
+<center>
+<h1><span style="font-weight: 400">Math 38.</span> Graph Theory</h1>
+<p><font size="5"><b>Spring 2007</b></font></p>
+</center>
+
+<ul>
+  <li>
+<p align="left"><b><font size="4">Instructor:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="../../../~sergi/index.html">
+Sergi Elizalde</a></font></b></p>
+  </li>
+  <li>
+<p align="left"><b><font size="4">Lectures:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></b>
+<font size="4">MWF 12:30-1:35 in </font><font size="4">Kemeny 105</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>X-period:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Tu 1:00-1:50</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Office Hours:&nbsp;&nbsp;&nbsp; </b>M 
+1:35-3:30, F 11:30-12:30</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Office:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kemeny 332</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Email:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<script>
+secondpart = "elizalde";
+thirdpart = "dartmouth.";
+fourthpart = "edu";
+middlepart = "@";
+firstpart = "sergi.";
+document.write("<a href=mailto:"+firstpart + secondpart+ middlepart + thirdpart +fourthpart+">");
+document.write(firstpart + secondpart + middlepart + thirdpart +fourthpart+"</a>");
+</script>
+
+</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Phone:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 646-8191</font></p>
+  </li>
+</ul>
+
+<hr>
+
+<p align="left"><font size="4"><b>Announcements</b></font></p>
+
+<p align="left">Here is this week's
+<a href="homework.html"> <b>
+<font size="4">homework </font></b><font size="4">assignment</font></a>.</p>
+
+<p align="left">The <b>final</b> will be a take-home exam, handed out on <b>
+Friday, May 25</b> and due on <b>Wednesday, May 30</b>.<br>
+You are responsible for everything covered in the course (including Friday's 
+class).</p>
+
+<hr>
+
+<p align="left"><b><font size="4">Course description</font></b></p>
+<p align="left">This course will cover the fundamental concepts of Graph Theory: 
+simple graphs, digraphs, Eulerian and Hamiltonian graphs, trees, matchings, 
+networks, paths and cycles, graph colorings, and planar graphs. Famous problems 
+in Graph Theory include: Minimum Connector Problem (building roads at minimum 
+cost), the Marriage Problem (matching men and women into compatible pairs), the 
+Assignment Problem (filling n jobs in the best way), the Network Flow Problem 
+(maximizing flow in a network), the Committee Scheduling Problem (using the 
+fewest time slots), the Four Color Problem (coloring maps with four colors so 
+that adjacent regions have different colors), and the Traveling Salesman Problem 
+(visiting n cities with minimum cost).</p>
+<hr>
+
+<p>
+
+
+<font size="4"><b>Textbook</b></font></p>
+
+<p>
+
+
+<span style="font-style: italic;">Introduction to Graph Theory </span>by Douglas 
+B. West,&nbsp;<span style="font-style: italic">Second edition </span>(available at 
+Wheelock Books).</p>
+
+<p align="center">
+
+
+<img border="0" src="http://www.math.dartmouth.edu/~m38s07/thebook.jpg" width="60" height="85"></p>
+
+<hr>
+
+<p>
+
+
+<font size="4"><b>Tentative syllabus</b></font></p>
+
+<p>
+
+
+This syllabus is subject to change, but it should give you an idea of the topics 
+I am planning to cover.</p>
+<div class="Section1">
+  <div class="MsoNormal" style="text-align: center;" align="center">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+    <table style="width: 621" border="1" cellspacing="0">
+      <tr>
+        <td valign="top" width="98"><br>
+&nbsp;</td>
+        <td style="color: rgb(0, 33, 0);" valign="top" width="114">
+        <p align="center"><b><font face="Arial"><small>Chapters</small></font></b></td>
+        <td colspan="2" style="color: rgb(0, 33, 0);" valign="top" width="395">
+        <p align="center"><small><b><font face="Arial">Brief Description</font></b></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 1</font></b></small></small></td>
+        <td valign="top" width="114"><small><small><small><b>
+        <font face="Arial" size="2">1.1, 1.2</font></b></small></small></small></td>
+        <td colspan="2" valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Basic definitions, isomorphisms, walks, 
+        cycles and bipartite graphs<br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 2</font></b></small></small></td>
+        <td valign="top" width="114"><font face="Arial"><b><small>1.3, 1.4
+        </small></b></font>
+        </td>
+        <td colspan="2" valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Components, cut-edges, Eulerian graphs, 
+        vertex degrees and degree sequences, directed graphs</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 3</font></b></small></small></td>
+        <td valign="top" width="114"><small><small><small><b>
+        <font face="Arial" size="2">2.1, 2.2</font></b></small></small></small></td>
+        <td colspan="2" valign="top" width="395"><small><small><small>
+        <font face="Garamond"><font size="2">Eulerian digraphs, trees and 
+        distance<br>
+&nbsp;</font></font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 4</font></b></small></small></td>
+        <td valign="top" width="114"><small><small><small><b>
+        <font face="Arial" size="2">2.2, 2.3</font></b></small></small></small></td>
+        <td colspan="2" valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Counting spanning trees and the matrix 
+        tree theorem, minimal spanning trees and shortest paths</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 5</font></b></small></small></td>
+        <td valign="top" width="114"><small><small><small><b>
+        <font face="Arial" size="2">3.1, 3.3</font></b></small></small></small></td>
+        <td colspan="2" valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Matchings, Hall's theorem and coverings, maximum 
+        matchings, factors<br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 6</font></b></small></small></td>
+        <td valign="top" width="114"><small><small><small><b>
+        <font face="Arial" size="2">4.1, 4.2</font></b></small></small></small></td>
+        <td colspan="2" valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Cuts and connectivity<br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 7</font></b></small></small></td>
+        <td valign="top" width="114">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <small><small><small><b>
+        <font face="Arial" size="2">4.2, 4.3 <br>
+&nbsp;</font></b></small></small></small></span></td>
+        <td colspan="2" valign="top" width="395">
+        <font face="Garamond" size="2" color="#003300">N</font><span style="font-size: 14pt; color: rgb(0, 51, 0);"><small><small><small><font size="2" face="Garamond">etwork 
+        flow problems, max-flow min-cut theorem <br>
+&nbsp;</font></small></small></small></span></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 8</font></b></small></small></td>
+        <td valign="top" width="114">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <small><small><small><b>
+        <font face="Arial" size="2">5.1, 5.2</font></b></small></small></small></span></td>
+        <td colspan="2" valign="top" width="395">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <small><small><small>
+        <font size="2" face="Garamond">Vertex colorings, bounds on chromatic 
+        numbers and Mycielski's construction</font></small></small></small></span><small><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 9</font></b></small></small></td>
+        <td valign="top" width="114">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <small><small><small><b>
+        <font face="Arial" size="2">5.3, 6.1</font></b></small></small></small></span></td>
+        <td colspan="2" valign="top" width="395"><small>
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <small><small>
+        <font size="2" face="Garamond">Chromatic polynomials, chordal graphs, 
+        planar graphs</font></small></small></span><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 10</font></b></small></small></td>
+        <td valign="top" width="114">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <small><small><small><b>
+        <font face="Arial" size="2">6.2, 6.3 </font></b></small></small></small>
+    </span>
+        </td>
+        <td colspan="2" valign="top" width="395"><small>
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <small><small>
+        <font size="2" face="Garamond">Euler's formula and Kuratowski's theorem, 
+        five and four color theorems</font></small></small></span><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+    </table>
+    </span>
+  </div>
+</div>
+<p>&nbsp;</p>
+<hr>
+
+<p>
+
+
+<font size="4"><b>Grading</b></font></p>
+
+<p>
+
+
+The course grade will be based on the homework (20%), two midterms (25% each), a 
+final exam (25%), and class participation (5%).</p>
+
+<p>
+
+
+<font size="4"><b>Homework</b></font></p>
+
+<p>
+
+
+There will be <a href="homework.html">homework</a> due 
+roughly every week. It will consist typically of a reading assignment 
+(of the part of the book covered in class) and some problems. Collaboration in 
+the homework is permitted, 
+but you are not allowed to copy someone else's work. The solutions must be 
+written individually. You have to mention on your problem set the names of the 
+students that you worked with.</p>
+
+<p>
+
+
+<font size="4"><b>Exams</b></font><br>
+<br>
+On the midterms and the final exam you must work on the problems on 
+your own. <b>No collaboration permitted</b> in the exams<b>.<br>
+&nbsp;</b></p>
+
+<hr>
+<p class="MsoNormal"><span style="font-family:Times"><b>Students with 
+disabilities: </b>Students with learning, 
+physical, or psychiatric disabilities enrolled in this course that may need 
+disability-related classroom accommodations are encouraged to make an office 
+appointment to see me before the end of the second week of the term. All 
+discussions will remain </span>confidential, although the Student Disability 
+Services office may be consulted to discuss <span style="font-family:Times">
+appropriate implementation of any accommodation requested.</span><br>
+<small>
+<img src="http://www.math.dartmouth.edu/website_dartmouth/Sample%20Web%20Page_files/surfbar-75x1.gif" width="75" height="1">
+</small></p>
+
+<p>
+<small><i>Last modified on May 13, 2007.
+</i></small>
+
+
+</p></body></html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>exp.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE1:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Position,Time;<br>
+Position:=I0;<br>
+Time:=T0;<br>
+List:=[[Time,Position]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Position:=Position+Deltat*(Position);<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Position]];<br>
+od;<br>
+List;<br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+<br>
+Q:= plot(exp(x),x=0..1,color=black,thickness=2):<br>
+S1:=DE1(0,1,2,1):<br>
+P1:=listplot(S1,color=red):<br>
+S2:=DE1(0,1,5,1):<br>
+P2:=listplot(S2,color=blue):<br>
+S3:=DE1(0,1,10,1):<br>
+P3:=listplot(S3,color=red):<br>
+S4:=DE1(0,1,100,1):<br>
+P4:=listplot(S4,color=blue):<br>
+S5:=DE1(0,1,1000,1):<br>
+P5:=listplot(S5,color=red):<br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(P1,P2,P3,P4,P5,Q);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/expIm/exp1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

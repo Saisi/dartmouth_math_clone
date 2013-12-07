@@ -1,0 +1,442 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>subscriptions.conf - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="subscriptions.conf">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/ref-subscriptions-conf.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="References">
+
+<P ALIGN="CENTER"><B>Search in
+subscriptions.conf:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l1"><A HREF="ref-access_log-TOPIC=References&QUERY=.html">access_log</A></P>
+<P CLASS="l1"><A HREF="ref-classes-conf-TOPIC=References&QUERY=.html">classes.conf</A></P>
+<P CLASS="l1"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html">client.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cups-files-conf-TOPIC=References&QUERY=.html">cups-files.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cupsd-conf-TOPIC=References&QUERY=.html">cupsd.conf</A></P>
+<P CLASS="l1"><A HREF="ref-error_log-TOPIC=References&QUERY=.html">error_log</A></P>
+<P CLASS="l1"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html">mailto.conf</A></P>
+<P CLASS="l1"><A HREF="ref-page_log-TOPIC=References&QUERY=.html">page_log</A></P>
+<P CLASS="l1"><A HREF="ref-ppdcfile-TOPIC=References&QUERY=.html">PPD Compiler Driver Information File Reference</A></P>
+<P CLASS="l1"><A HREF="ref-printers-conf-TOPIC=References&QUERY=.html">printers.conf</A></P>
+<P CLASS="l1"><A HREF="ref-snmp-conf-TOPIC=References&QUERY=.html">snmp.conf</A></P>
+<P CLASS="l1"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html">subscriptions.conf</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#TABLE1">Event Names</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Events">Events</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#ExpirationTime">ExpirationTime</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Interval">Interval</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#JobId">JobId</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#LeaseDuration">LeaseDuration</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#NextEventId">NextEventId</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#NextSubscriptionId">NextSubscriptionId</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Owner">Owner</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#PrinterName">PrinterName</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Recipient">Recipient</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription">Subscription</A></P>
+<P CLASS="l2"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#UserData">UserData</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>subscriptions.conf</H1>
+<FORM ACTION="/help/ref-subscriptions-conf.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">subscriptions.conf</H1>
+
+<P>The CUPS scheduler (cupsd) uses the
+<VAR>/etc/cups/subscriptions.conf</VAR> file  to store the list
+of active subscriptions. Each directive is listed on a line by
+itself followed by its value.  Comments are introduced using the
+number sign ("#") character at the beginning of a line.
+
+<P>While the subscriptions configuration file consists of plain
+text and can be modified using your favorite text editor, you
+should normally use the command-line programs (<A
+HREF="man-lp.html">lp(1)</A> and <A
+HREF="man-lpr.html">lpr(1)</A>) or specific applications via IPP
+requests to manage your subscriptions.</P>
+
+<H2 CLASS="title"><A NAME="Events">Events</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  Events job-completed
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Events</CODE> directive lists the events, separated
+by spaces, that the subscriber is interested in. Table 1 lists
+the supported event names.</P>
+
+<P>The <CODE>Events</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+<DIV CLASS="table"><TABLE SUMMARY="Event Names">
+<CAPTION>Table 1: <A NAME="TABLE1">Event Names</A></CAPTION>
+<THEAD>
+<TR>
+	<TH>Name</TH>
+	<TH>Description</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+	<TD>all</TD>
+	<TD>All events</TD>
+</TR>
+<TR>
+	<TD>job-completed</TD>
+	<TD>Send notification when the job is completed</TD>
+</TR>
+<TR>
+	<TD>job-config-changed</TD>
+	<TD>Send notification when the job is changed</TD>
+</TR>
+<TR>
+	<TD>job-created</TD>
+	<TD>Send notification when a job is created</TD>
+</TR>
+<TR>
+	<TD>job-progress</TD>
+	<TD>Send notification for job progress</TD>
+</TR>
+<TR>
+	<TD>job-state-changed</TD>
+	<TD>Send notification when the job-state changes</TD>
+</TR>
+<TR>
+	<TD>job-stopped</TD>
+	<TD>Send notification when the job is stopped</TD>
+</TR>
+<TR>
+	<TD>printer-added</TD>
+	<TD>Send notification when a printer is added</TD>
+</TR>
+<TR>
+	<TD>printer-changed</TD>
+	<TD>Send notification when a printer is changed</TD>
+</TR>
+<TR>
+	<TD>printer-config-changed</TD>
+	<TD>Send notification when a printer's configuration is changed</TD>
+</TR>
+<TR>
+	<TD>printer-deleted</TD>
+	<TD>Send notification when a printer is deleted</TD>
+</TR>
+<TR>
+	<TD>printer-modified</TD>
+	<TD>Send notification when a printer is modified</TD>
+</TR>
+<TR>
+	<TD>printer-state-changed</TD>
+	<TD>Send notification when the printer-state changes</TD>
+</TR>
+<TR>
+	<TD>printer-stopped</TD>
+	<TD>Send notification when a printer is stopped</TD>
+</TR>
+<TR>
+	<TD>server-audit</TD>
+	<TD>Send notification when a bad request, security error, or
+	authentication error occurs</TD>
+</TR>
+<TR>
+	<TD>server-restarted</TD>
+	<TD>Send notification when the server is restarted</TD>
+</TR>
+<TR>
+	<TD>server-started</TD>
+	<TD>Send notification when the server is initially started</TD>
+</TR>
+<TR>
+	<TD>server-stopped</TD>
+	<TD>Send notification when the server is shutdown</TD>
+</TR>
+</TBODY>
+</TABLE></DIV>
+
+
+<H2 CLASS="title"><A NAME="ExpirationTime">ExpirationTime</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  ExpirationTime 1012563145
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>ExpirationTime</CODE> directive specifies the
+expiration time of the subscription as a UNIX time value. It is 0
+for subscriptions with no predefined expiration time.</P>
+
+<P>The <CODE>ExpirationTime</CODE> directive must appear inside a
+<A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A>
+section.</P>
+
+
+<H2 CLASS="title"><A NAME="Interval">Interval</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  Interval 30
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Interval</CODE> directive specifies the preferred
+time interval for event notifications in seconds.</P>
+
+<P>The <CODE>Interval</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+
+<H2 CLASS="title"><A NAME="JobId">JobId</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  JobId 123
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>JobId</CODE> directive specifies the
+<CODE>job-id</CODE> for job subscriptions.</P>
+
+<P>The <CODE>JobId</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+
+<H2 CLASS="title"><A NAME="LeaseDuration">LeaseDuration</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  LeaseDuration 
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>LeaseDuration</CODE> directive specifies the number
+of seconds that the subscription is valid. A value of 0 means
+that the subscription will last forever or the life of the print
+job the subscription is attached to.</P>
+
+<P>The <CODE>LeaseDuration</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+
+<H2 CLASS="title"><A NAME="NextEventId">NextEventId</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  NextEventId 999
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>NextEventId</CODE> directive specifies the
+<CODE>notify-sequence-number</CODE> value for the next
+notification event. It starts at 1 and increases for every event
+that is delivered for the subscription.</P>
+
+<P>The <CODE>NextEventId</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+
+<H2 CLASS="title"><A NAME="NextSubscriptionId">NextSubscriptionId</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+NextSubscriptionId 999
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>NextSubscriptionId</CODE> directive specifies the
+next subscription ID to use. It defaults to 1 more than the
+highest subscription number seen.</P>
+
+
+<H2 CLASS="title"><A NAME="Owner">Owner</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  Owner username
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Owner</CODE> directive specifies the user that owns
+this subscription.</P>
+
+<P>The <CODE>Owner</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+
+<H2 CLASS="title"><A NAME="PrinterName">PrinterName</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  PrinterName name
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>PrinterName</CODE> directive specifies the name of
+the printer or class that is associated with this
+subscription.</P>
+
+<P>The <CODE>PrinterName</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+
+<H2 CLASS="title"><A NAME="Recipient">Recipient</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  Recipient mailto:foo@domain.com
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Recipient</CODE> directive specifies the
+<CODE>notify-recipient-uri</CODE> value for push-type
+notifications. The URI scheme name determines which notifier
+program is used to send the event(s).</P>
+
+<P>The <CODE>Recipient</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+
+<H2 CLASS="title"><A NAME="Subscription">Subscription</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Subscription</CODE> section defines a single
+subscription in the system. Each subscription is assigned a
+unique (to the server) number starting at 1.</P>
+
+
+<H2 CLASS="title"><A NAME="UserData">UserData</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+&lt;Subscription NNN&gt;
+  ...
+  UserData mailto:bar<40>domain.com
+&lt;/Subscription&gt;
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>UserData</CODE> directive specifies the
+<CODE>notify-user-data</CODE> value, which is normally the "from"
+address used in <CODE>mailto</CODE> notifications. Binary values
+are introduced by encoding the bytes as hexadecimal values inside
+angle brackets, e.g. "<1234>".</P>
+
+<P>The <CODE>UserData</CODE> directive must appear inside a <A
+HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html#Subscription"><CODE>Subscription</CODE></A> section.</P>
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

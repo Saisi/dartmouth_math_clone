@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ZoomIt.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(linalg):<br>
+<br>
+ZoomIn:=proc(V,S,E)<br>
+local n,M,i,j,K,k,C,N,l,J,p;<br>
+M:=[];<br>
+n:=nops(S);<br>
+for j from 1 to n<br>
+do<br>
+K:=[];<br>
+for i from 1 to n<br>
+do<br>
+K:=[op(K),diff(S[j],V[i])];<br>
+od;<br>
+M:=[op(M),K];<br>
+od;<br>
+M;<br>
+C:={};<br>
+for k from 1 to n<br>
+do<br>
+C:={op(C),V[k]=E[k]};<br>
+od;<br>
+J:=[];<br>
+for p from 1 to n<br>
+do<br>
+J:=[op(J),subs(C,S[p])];<br>
+od;<br>
+N:=[];<br>
+for l from 1 to n<br>
+do<br>
+N:=[op(N),subs(C,M[l])];<br>
+od;<br>
+lprint("When I evaluate the system at the equilibrium point I<br>
+see",evalf(simplify(J)));<br>
+lprint("Assuming this is zero and I really have an equillibrium point, as I zoom<br>
+in to the equilibrium point I see the following linear system of determinat",<br>
+evalf(simplify(det(N))));<br>
+evalf(simplify(N));<br>
+end:<br>
+<br>
+<br>
+Detect:=proc(M)<br>
+local d,E;<br>
+lprint("The eigenvalues are ");<br>
+{evalf(eigenvalues(M))};<br>
+end:</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000> S1:=ZoomIn([x,y],[x*(1-x)-2*x*y,-y+2*x*y],[1/2,1/2-(1/2)^2]); </font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [0., 0.]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .5000000000</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Zoomy2/ZoomIt1.gif" width=241 height=13 alt="S1 := [[-.5000000000, -1.], [.5000000000, 0.]]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Detect(S1); <br>
+</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Zoomy2/ZoomIt2.gif" width=335 height=13 alt="{-.2500000000-.6614378278*I, -.2500000000+.66143782...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S2:=ZoomIn([x,y],[x*(1-x)-1.1*x*y,-y+1.1*x*y],[1/(1.1),1/(1.1)-(1/(1.1))^2]); </font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [-.1000000000e-10, 0.]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .9090909091e-1</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Zoomy2/ZoomIt3.gif" width=247 height=13 alt="S2 := [[-.9090909089, -1.], [.9090909091e-1, 0.]]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Detect(S2); </font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Zoomy2/ZoomIt4.gif" width=169 height=13 alt="{-.1143947831, -.7946961258}">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+evalf(((1+ sqrt(2))/2));<br>
+<br>
+<br>
+S3:=ZoomIn([x,y],[x*(1-x)-((1+ sqrt(2))/2)*x*y,-y+((1+ sqrt(2))/2)*x*y],[1/((1+ sqrt(2))/2),1/((1+ sqrt(2))/2)-(1/((1+ sqrt(2))/2))^2]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Zoomy2/ZoomIt5.gif" width=79 height=13 alt="1.207106781">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [0., 0.]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .1715728751</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Zoomy2/ZoomIt6.gif" width=241 height=13 alt="S3 := [[-.8284271248, -1.], [.1715728751, 0.]]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Detect(S3);</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Zoomy2/ZoomIt7.gif" width=169 height=13 alt="{-.4142268326, -.4142002922}">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.rounded-corners {
+  behavior: url("http://www.math.dartmouth.edu/~mqed/FinancialLiteracyProject/border-radius.htc");
+}
+
+.main {
+	width:830px;
+	margin: 10px 0px 10px 0px;
+	padding: 10px;
+	/*min-height: 480px;*/
+	border: solid 1px #006600;
+	background-color:#fff;
+	behavior: url("http://www.math.dartmouth.edu/~mqed/FinancialLiteracyProject/border-radius.htc");
+	}
+	
+#footer { 
+	display: inline-block;
+	background-color:#fff;
+	width:810px;
+	margin: 5px 0px 5px 0px; 
+	padding: 7px 20px 7px 20px;
+	behavior: url("http://www.math.dartmouth.edu/~mqed/FinancialLiteracyProject/border-radius.htc");
+    font-size: 80%;
+}

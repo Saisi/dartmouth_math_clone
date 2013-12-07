@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "math31style.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Exams</title>
+<link rel="stylesheet" type="text/css" href="math31style.css">
+<script src="https://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Math 31: Topics in Algebra</h1>
+<h2>Summer 2013</h2>
+<br>
+
+<!-- Javascript for automatically generating the date and time of last update. Prints in
+	the format "Last updated (Month) (Day), (Year) at xx:xx am/pm EDT".
+-->
+<div style="text-align:center;">
+<span style="color:DarkSlateGray;">
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+</span>
+</div>
+<br>
+
+    
+<!-- Generates header with links to other components of the course webpage. -->
+<table class="header">
+<tbody>
+
+<tr>
+<td class="header"><p class="header"><a class="header" href="index.html">Main Page
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="info.html">Course Information
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="syllabus.html">Syllabus
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="homework.html">Homework
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="exams.html">Exams & Quizzes
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="projects.html">Projects
+</a></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+<!-- Title of this page: Exams -->
+<h1>Quizzes</h1>
+<p class="alg">We will have weekly quizzes, which are designed to check your understanding 
+and recall of the fundamental concepts without the aid of your textbook or notes. They 
+will generally focus on the statements of definitions and theorems, and you may need to 
+provide some simple examples or perform short computations. They will generally be given 
+each Friday at the beginning of class, for a total of 8 quizzes. Each quiz should take no 
+more than 10 minutes.
+</p>
+
+<p class="alg">If expect to miss class on the day of a quiz, you need to let me know in 
+advance (i.e., before the start of that class) so we can arrange for you to make it up. 
+You will not be able to make up missed quizzes otherwise.
+</p>
+
+<p class="alg">I may give you the chance to earn a bonus point on each quiz by researching
+a famous algebraist in the week beforehand. Stay tuned for details.
+</p>
+
+<br>
+<hr class="footer">
+<br>
+
+
+<h1>Exams</h1>
+
+<p class="alg">There will be two exams in this course: one midterm exam and a final exam. 
+The two exams will have slightly different formats.
+</p>
+
+<p class="alg"><b>Midterm:</b> The midterm will be divided into two parts &ndash; an 
+in-class portion and a take-home exam.
+</p>
+
+<ul class="alg">
+	<li>
+	The in-class part will be designed to test basic concepts, such as statements of 
+	definitions and theorems. There will also be some fairly basic proof questions. This 
+	part of the exam will be <i>closed-book</i>. As an indicator of the level of 
+	difficulty for the proof questions, I will hand out a list of practice questions in 
+	advance of the exam. These questions should give you an idea of the sorts of things 
+	that I expect you to be able to prove on your own. The exam questions will not 
+	necessarily come from the practice list, but they will be of the same level of 
+	difficulty. This part of the exam will be given in the x-hour on <b>July 23rd</b>.
+	
+	<br>
+	
+	Here are some notes on the midterm exam, including sample problems for the in-class 
+	part: <a href="Midterm%20Review.pdf">Midterm Review</a>
+	</li>
+
+	<br>
+	<li>
+	The take-home portion will be open-book. This means that you may use the course text 
+	(Saracino), the reserve text (Gallian), your lecture notes, and old homework 
+	assignments. Other textbooks and physical materials are off limits, as are any 
+	electronic sources (i.e., the internet). Also, you are not allowed to collaborate with 
+	one another, and you should not expect help from me, other than clarification of 
+	questions. The questions will mostly ask you to prove things that are slightly more 
+	difficult than the questions asked on the in-class exam. There may also be some 
+	computational questions. This part of the exam will be due in class on <b>Friday, July
+	26th</b>.
+	</li>
+	
+	<br>
+	<li>
+	Here are solutions to the <a href="M31x13%20Midterm%20Solutions.pdf">in-class</a> and
+	<a href="M31x13%20Take%20Home%20Solutions.pdf">take-home</a> midterm exams.
+	</li>
+</ul>
+
+<p class="alg"><b>Final:</b> The final exam will be entirely take-home. The same rules 
+given for the take-home midterm will apply here. The exam will be handed out in the last 
+few days of class and will be due during the final exam period.
+</p>
+<ul class="alg">
+	<li>
+	Here are solutions to the <a href="M31x13%20Final%20Solutions.pdf">final exam</a>.
+	</li>
+</ul>
+
+<p class="alg">
+Dates for exams:
+</p>
+
+<ul class="alg">
+	<li>
+	The in-class midterm will be held on <b>Tuesday, July 23rd in the x-hour</b>. The 
+	take-home part will be handed out at the end of the in-class exam, <b>due 
+	Friday, July 26th at the beginning of class</b>.
+	</li>
+
+	<br>
+	<li>
+	The take-home final will be handed out on the last day of class (August 21st). It will 
+	be <b>due by 5 PM on Monday, August 26th</b>.
+	</li>
+</ul>
+
+<br>
+<hr class="footer">
+<br>
+
+</body>
+</html>

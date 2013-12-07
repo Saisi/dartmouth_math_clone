@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Estimation by interior points--relation to Heller's PWDM</TITLE>
+<META NAME="description" CONTENT="Estimation by interior points--relation to Heller's PWDM">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node64.html">
+<LINK REL="previous" HREF="node62.html">
+<LINK REL="up" HREF="node62.html">
+<LINK REL="next" HREF="node64.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html951"
+  HREF="node64.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html949"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html943"
+  HREF="node62.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html952"
+  HREF="node64.html">Exact form on the</A>
+<B> Up:</B> <A NAME="tex2html950"
+  HREF="node62.html">The choice of norm</A>
+<B> Previous:</B> <A NAME="tex2html944"
+  HREF="node62.html">The choice of norm</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00641000000000000000">
+Estimation by interior points--relation to Heller's PWDM</A>
+</H2>
+
+<P>
+The simplest approximation to <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> involves approximating the domain integral
+by a sum over <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img770.gif"
+ ALT="$M_I$"> interior points:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G_{ij}(k) \; = \; \frac{{\mathsf{V}}}{M_I}
+	\sum_{m=1}^{M_I} \phi_i(k;{\mathbf r}_m) \phi_j(k;{\mathbf r}_m) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:gpoints"></A><IMG
+ WIDTH="422" HEIGHT="59" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img771.gif"
+ ALT="\begin{displaymath}
+G_{ij}(k) \; = \; \frac{{\mathsf{V}}}{M_I}
+\sum_{m=1}^{M_I} \phi_i(k;{\mathbf r}_m) \phi_j(k;{\mathbf r}_m) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img772.gif"
+ ALT="${\mathbf r}_m$"> are points inside <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">.
+In the case of a uniform grid spacing <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img773.gif"
+ ALT="$a$"> for these points, convergence
+would be reached for <IMG
+ WIDTH="59" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img774.gif"
+ ALT="$ka \ll 1$"> (and resulting error converges like
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img773.gif"
+ ALT="$a$">, in numerical experiments), requiring a very large
+number <!-- MATH
+ $M_I \gg {\mathsf{V}}k^d$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img775.gif"
+ ALT="$M_I \gg {\mathsf{V}}k^d$">.
+In this case all the advantages of a boundary method are lost.
+However, a Monte Carlo estimate can be reached for a much smaller <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img770.gif"
+ ALT="$M_I$">:
+in general the estimation error will be Gaussian with a width
+<IMG
+ WIDTH="55" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img776.gif"
+ ALT="$M_I^{-1/2}$"> as a fraction of the value.
+This requires that the points be chosen in `statistically independent'
+regions of the wavefunction, a criterion which for ergodic systems
+(excluding heavily-scarred states) it is easy to fulfill.
+The slow convergence means that accuracy cannot be high.
+Generally an optimal choice for <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img770.gif"
+ ALT="$M_I$"> is such that the time spent evaluating
+<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> is no more than for <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$">, preserving the `boundary' scaling of the method.
+This method has the
+advantage of simplicity: only basis function values are required
+(the exact form below requires values and derivatives).
+
+<P>
+The case <IMG
+ WIDTH="61" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img777.gif"
+ ALT="$M_I = 1$"> is interesting, since it corresponds to the original
+recipe of
+Heller [<A
+ HREF="node161.html#hellerleshouches">91</A>]. This recipe involves finding the closest
+solution to
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{c}
+	A(k) {\mathbf x} \; = \; {\mathbf 0} \\
+	{\mathbf y}^{{\mbox{\tiny T}}} {\mathbf x} \; = \; 1
+\end{array} \right.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:heller"></A><IMG
+ WIDTH="329" HEIGHT="54" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img778.gif"
+ ALT="\begin{displaymath}
+\left\{ \begin{array}{c}
+A(k) {\mathbf x} \; = \; {\mathbf ...
+...}^{{\mbox{\tiny T}}} {\mathbf x} \; = \; 1
+\end{array} \right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $A_{mn}(k) = \phi_n(k;{\mathbf s}_m)$
+ -->
+<IMG
+ WIDTH="156" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img779.gif"
+ ALT="$A_{mn}(k) = \phi_n(k;{\mathbf s}_m)$">, and <!-- MATH
+ $y_n = \phi_n(k;{\mathbf r}_1)$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img780.gif"
+ ALT="$y_n = \phi_n(k;{\mathbf r}_1)$"> at
+the randomly-chosen interior point <IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img781.gif"
+ ALT="${\mathbf r}_1$">.
+Heller's choice of the <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$">, the number of columns of <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img52.gif"
+ ALT="$A$">, was about 1.4
+times <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img723.gif"
+ ALT="$N_{sc}$">.
+The density of boundary matching points <IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img782.gif"
+ ALT="${\mathbf s}_m$"> was about 2.6 per wavelength.
+It is easy to see that taking the 2-norm of the above equations
+gives (<A HREF="node58.html#eq:fg">5.12</A>) for the version of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> involving a single interior point.
+The result <!-- MATH
+ $F = A^{{\mbox{\tiny T}}} A$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img783.gif"
+ ALT="$F = A^{{\mbox{\tiny T}}} A$"> is needed (shown in Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A>).
+The singular value decomposition of <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img52.gif"
+ ALT="$A$"> is therefore
+equivalent to diagonalization of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> [<A
+ HREF="node161.html#golub+vanloan">81</A>].
+Looking at Fig.&nbsp;<A HREF="node62.html#fig:heller">5.5</A> one can see that the effect of some of the
+eigenstate dips is almost gone, depending on the choice of <IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img781.gif"
+ ALT="${\mathbf r}_1$">.
+Also notice that the transition from one state to another is not very `clean'.
+Even though Heller's prescription was then followed by another
+normalization
+step and a hunt for the resulting <EM>normalized</EM> tension minima,
+if an eigenstate never appears in the solution of the above for any <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">,
+then this normalization step cannot recover it--it becomes a
+`missing state'.
+
+<P>
+What is the expected fraction of such missing states in Heller's method?
+An exact answer is hard, but empirically seems to be of the order of 1%
+for the <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$"> stadium billiard at <IMG
+ WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img784.gif"
+ ALT="$k &lt; 400$">.
+(Some users have reported as high as 8% in other systems [<A
+ HREF="node161.html#lirobnik95">136</A>]).
+If a true normalized billiard
+eigenstate has a very small value of <!-- MATH
+ $\psi({\mathbf r}_1)$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img785.gif"
+ ALT="$\psi({\mathbf r}_1)$">, being
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img281.gif"
+ ALT="$\varepsilon$"> times the RMS value,
+then this state's parabolic tension-minimum curve will be multiplied
+by <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img786.gif"
+ ALT="$1/\varepsilon $"> (this multiplication is visible in Fig.&nbsp;<A HREF="node62.html#fig:heller">5.5</A>).
+If the `dynamic range' <IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img787.gif"
+ ALT="$r_d$"> (see Section&nbsp;<A HREF="node68.html#sec:dynrange">5.5.3</A>)
+is less than <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img786.gif"
+ ALT="$1/\varepsilon $">, then the parabola will typically be
+`blown' to large enough values that it is obscured by
+those of neighboring states, and will never be noticed.
+Since the chances of <!-- MATH
+ $|\varepsilon | < r_d$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img788.gif"
+ ALT="$\vert\varepsilon \vert &lt; r_d$"> occurring are proportional to <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img789.gif"
+ ALT="$1/r_d$">
+(the Porter-Thomas
+probability distribution on <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> is flat around <IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img790.gif"
+ ALT="$\psi = 0$">),
+one would expect roughly <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img789.gif"
+ ALT="$1/r_d$"> states to be missed.
+The dynamic range decreases with increasing <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">
+so it is expected that this will become
+more severe a problem at high <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html951"
+  HREF="node64.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html949"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html943"
+  HREF="node62.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html952"
+  HREF="node64.html">Exact form on the</A>
+<B> Up:</B> <A NAME="tex2html950"
+  HREF="node62.html">The choice of norm</A>
+<B> Previous:</B> <A NAME="tex2html944"
+  HREF="node62.html">The choice of norm</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

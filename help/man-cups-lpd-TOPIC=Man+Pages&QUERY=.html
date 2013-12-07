@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>cups-lpd(8) - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="cups-lpd(8)">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/man-cups-lpd.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Man Pages">
+
+<P ALIGN="CENTER"><B>Search in
+cups-lpd(8):</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l1"><A HREF="man-backend-TOPIC=Man+Pages&QUERY=.html">backend(7)</A></P>
+<P CLASS="l1"><A HREF="man-cancel-TOPIC=Man+Pages&QUERY=.html">cancel(1)</A></P>
+<P CLASS="l1"><A HREF="man-cups-config-TOPIC=Man+Pages&QUERY=.html">cups-config(1)</A></P>
+<P CLASS="l1"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html">cups-lpd(8)</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#COMPATIBILITY">Compatibility</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#COPYRIGHT">Copyright</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#DESCRIPTION">Description</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#NAME">Name</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#OPTIONS">Options</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#PERFORMANCE">Performance</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#SECURITY">Security</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#SEE_ALSO">See Also</A></P>
+<P CLASS="l2"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html#SYNOPSIS">Synopsis</A></P>
+<P CLASS="l1"><A HREF="man-cups-snmp-TOPIC=Man+Pages&QUERY=.html">cups-snmp(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupsaccept-TOPIC=Man+Pages&QUERY=.html">cupsaccept(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupsaddsmb-TOPIC=Man+Pages&QUERY=.html">cupsaddsmb(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupsd-TOPIC=Man+Pages&QUERY=.html">cupsd(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupsenable-TOPIC=Man+Pages&QUERY=.html">cupsenable(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupstestdsc-TOPIC=Man+Pages&QUERY=.html">cupstestdsc(1)</A></P>
+<P CLASS="l1"><A HREF="man-cupstestppd-TOPIC=Man+Pages&QUERY=.html">cupstestppd(1)</A></P>
+<P CLASS="l1"><A HREF="man-filter-TOPIC=Man+Pages&QUERY=.html">filter(7)</A></P>
+<P CLASS="l1"><A HREF="man-ipptool-TOPIC=Man+Pages&QUERY=.html">ipptool(1)</A></P>
+<P CLASS="l1"><A HREF="man-ipptoolfile-TOPIC=Man+Pages&QUERY=.html">ipptoolfile(5)</A></P>
+<P CLASS="l1"><A HREF="man-lp-TOPIC=Man+Pages&QUERY=.html">lp(1)</A></P>
+<P CLASS="l1"><A HREF="man-lpadmin-TOPIC=Man+Pages&QUERY=.html">lpadmin(8)</A></P>
+<P CLASS="l1"><A HREF="man-lpc-TOPIC=Man+Pages&QUERY=.html">lpc(8)</A></P>
+<P CLASS="l1"><A HREF="man-lpinfo-TOPIC=Man+Pages&QUERY=.html">lpinfo(8)</A></P>
+<P CLASS="l1"><A HREF="man-lpmove-TOPIC=Man+Pages&QUERY=.html">lpmove(8)</A></P>
+<P CLASS="l1"><A HREF="man-lpoptions-TOPIC=Man+Pages&QUERY=.html">lpoptions(1)</A></P>
+<P CLASS="l1"><A HREF="man-lppasswd-TOPIC=Man+Pages&QUERY=.html">lppasswd(1)</A></P>
+<P CLASS="l1"><A HREF="man-lpq-TOPIC=Man+Pages&QUERY=.html">lpq(1)</A></P>
+<P CLASS="l1"><A HREF="man-lpr-TOPIC=Man+Pages&QUERY=.html">lpr(1)</A></P>
+<P CLASS="l1"><A HREF="man-lprm-TOPIC=Man+Pages&QUERY=.html">lprm(1)</A></P>
+<P CLASS="l1"><A HREF="man-lpstat-TOPIC=Man+Pages&QUERY=.html">lpstat(1)</A></P>
+<P CLASS="l1"><A HREF="man-mime.convs-TOPIC=Man+Pages&QUERY=.html">mime.convs(5)</A></P>
+<P CLASS="l1"><A HREF="man-mime.types-TOPIC=Man+Pages&QUERY=.html">mime.types(5)</A></P>
+<P CLASS="l1"><A HREF="man-notifier-TOPIC=Man+Pages&QUERY=.html">notifier(7)</A></P>
+<P CLASS="l1"><A HREF="man-ppdc-TOPIC=Man+Pages&QUERY=.html">ppdc(1)</A></P>
+<P CLASS="l1"><A HREF="man-ppdhtml-TOPIC=Man+Pages&QUERY=.html">ppdhtml(1)</A></P>
+<P CLASS="l1"><A HREF="man-ppdi-TOPIC=Man+Pages&QUERY=.html">ppdi(1)</A></P>
+<P CLASS="l1"><A HREF="man-ppdmerge-TOPIC=Man+Pages&QUERY=.html">ppdmerge(1)</A></P>
+<P CLASS="l1"><A HREF="man-ppdpo-TOPIC=Man+Pages&QUERY=.html">ppdpo(1)</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>cups-lpd(8)</H1>
+<FORM ACTION="/help/man-cups-lpd.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+<h1 class="title">cups-lpd(8)</h1>
+<h2 class="title"><a name="NAME">Name</a></h2>
+cups-lpd - receive print jobs and report printer status to lpd clients
+<h2 class="title"><a name="SYNOPSIS">Synopsis</a></h2>
+<b>cups-lpd
+</b>[ -h
+<i>hostname[:port]
+</i>] [ -n ] [ -o
+<i>option=value
+</i>]
+<h2 class="title"><a name="DESCRIPTION">Description</a></h2>
+<i>cups-lpd</i> is the CUPS Line Printer Daemon ("LPD")
+mini-server that supports legacy client systems that use the LPD
+protocol. <i>cups-lpd</i> does not act as a standalone network
+daemon but instead operates using the Internet "super-server"
+<i>inetd(8)</i> or <i>xinetd(8)</i>. If you are using <i>inetd</i>,
+add the following line to the <i>inetd.conf</i> file to enable the
+<i>cups-lpd</i> mini-server:
+<br>
+<pre>
+
+    printer stream tcp nowait lp /usr/lib/cups/daemon/cups-lpd cups-lpd \
+        -o document-format=application/octet-stream
+</pre>
+<p><p><b>Note:</b> If you are using Solaris 10 or higher, you must run
+the <i>inetdconv(1m)</i> program to register the changes to the
+inetd.conf file.
+<p>If you are using the newer <i>xinetd(8)</i> daemon, create a file
+named <i>/etc/xinetd.d/cups</i> containing the following lines:
+<br>
+<pre>
+
+    service printer
+    {
+        socket_type = stream
+        protocol = tcp
+        wait = no
+        user = lp
+	group = sys
+	passenv =
+        server = /usr/lib/cups/daemon/cups-lpd
+	server_args = -o document-format=application/octet-stream
+    }
+</pre>
+<h2 class="title"><a name="OPTIONS">Options</a></h2>
+<dl>
+<dt>-h hostname[:port]
+</dt>
+<dd></dd>
+<dd>Sets the CUPS server (and port) to use.
+</dd>
+<dt>-n
+</dt>
+<dd></dd>
+<dd>Disables reverse address lookups; normally <i>cups-lpd</i> will
+try to discover the hostname of the client via a reverse DNS
+lookup.
+</dd>
+<dt>-o name=value
+</dt>
+<dd></dd>
+<dd>Inserts options for all print queues. Most often this is used to
+disable the "l" filter so that remote print jobs are filtered as
+needed for printing; the examples in the previous section set the
+"document-format" option to "application/octet-stream" which
+forces autodetection of the print file format.
+</dd>
+</dl>
+<h2 class="title"><a name="PERFORMANCE">Performance</a></h2>
+<i>cups-lpd</i> performs well with small numbers of clients and
+printers. However, since a new process is created for each
+connection and since each process must query the printing system
+before each job submission, it does not scale to larger
+configurations. We highly recommend that large configurations
+use the native IPP support provided by CUPS instead.
+<h2 class="title"><a name="SECURITY">Security</a></h2>
+<i>cups-lpd</i> currently does not perform any access control
+based on the settings in <a href='man-cupsd.conf-TOPIC=Man+Pages.html'>cupsd.conf(5)</a> or in the
+<i>hosts.allow(5)</i> or <i>hosts.deny(5)</i> files used by TCP
+wrappers. Therefore, running <i>cups-lpd</i> on your server will
+allow any computer on your network (and perhaps the entire
+Internet) to print to your server.
+<p>While <i>xinetd</i> has built-in access control support, you
+should use the TCP wrappers package with <i>inetd</i> to limit
+access to only those computers that should be able to print
+through your server.
+<p><i>cups-lpd</i> is not enabled by the standard CUPS distribution.
+Please consult with your operating system vendor to determine
+whether it is enabled on your system.
+<h2 class="title"><a name="COMPATIBILITY">Compatibility</a></h2>
+<i>cups-lpd</i> does not enforce the restricted source port
+number specified in RFC 1179, as using restricted ports does not
+prevent users from submitting print jobs. While this behavior is
+different than standard Berkeley LPD implementations, it should
+not affect normal client operations.
+<p>The output of the status requests follows RFC 2569, Mapping
+between LPD and IPP Protocols. Since many LPD implementations
+stray from this definition, remote status reporting to LPD
+clients may be unreliable.
+<h2 class="title"><a name="SEE_ALSO">See Also</a></h2>
+<i>cups(1)</i>, <a href='man-cupsd-TOPIC=Man+Pages.html'>cupsd(8)</a>, <i>inetconv(1m)</i>,
+<i>inetd(8)</i>, <i>xinetd(8)</i>,
+<br>
+<a href='http://localhost:631/help'>http://localhost:631/help</a>
+<h2 class="title"><a name="COPYRIGHT">Copyright</a></h2>
+Copyright 2007-2013 by Apple Inc.
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

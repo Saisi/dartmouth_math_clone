@@ -1,0 +1,137 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>2001-10.17.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>T:= n -&gt; taylor(exp(x),x=0,n+1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-101.gif" width=202 height=29 alt="T := proc (n) options operator, arrow; taylor(exp(x...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>for n from 0 to 10 do</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>print(T(n));</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>od;</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-102.gif" width=68 height=20 alt="series(1+O(x),x,1)">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-103.gif" width=99 height=29 alt="series(1+1*x+O(x^2),x,2)">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-104.gif" width=140 height=45 alt="series(1+1*x+1/2*x^2+O(x^3),x,3)">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-105.gif" width=181 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+O(x^4),x,4)">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-106.gif" width=229 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+1/24*x^4+O(x^5),x,5)">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-107.gif" width=284 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+O(x...">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-108.gif" width=339 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+1/7...">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-109.gif" width=401 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+1/7...">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1010.gif" width=470 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+1/7...">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1011.gif" width=553 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+1/7...">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1012.gif" width=643 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+1/7...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>T(5);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1013.gif" width=284 height=45 alt="series(1+1*x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+O(x...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot({exp(x),convert(T(1),polynom)},x=-10..10, y=-3..20,numpoints=500);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1014.gif" width=309 height=309 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Q := n -&gt; taylor(sin(x),x=0,n+1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1015.gif" width=225 height=20 alt="Q := proc (n) options operator, arrow; taylor(sin(x...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot({sin(x),convert(Q(10),polynom)},x=-12..12, y=-2..2,numpoints=500);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1016.gif" width=309 height=309 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Q(1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1017.gif" width=76 height=29 alt="series(1*x+O(x^2),x,2)">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Q(2);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1018.gif" width=76 height=29 alt="series(1*x+O(x^3),x,3)">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Q(3);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1019.gif" width=117 height=45 alt="series(1*x-1/6*x^3+O(x^4),x,4)">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>Q(10);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1020.gif" width=317 height=45 alt="series(1*x-1/6*x^3+1/120*x^5-1/5040*x^7+1/362880*x^...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>T:= n -&gt; taylor(cos(x),x=Pi/4,n+1);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1021.gif" width=240 height=45 alt="T := proc (n) options operator, arrow; taylor(cos(x...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>T(3);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8f01/maple/Taylor/2001-10-17-images/2001-1022.gif" width=480 height=60 alt="series(1/2*sqrt(2)+(-1/2*sqrt(2))*(x-1/4*Pi)+(-1/4*...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

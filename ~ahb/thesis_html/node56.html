@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Brief history of the quantum billiard eigenproblem</TITLE>
+<META NAME="description" CONTENT="Brief history of the quantum billiard eigenproblem">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node52.html">
+<LINK REL="up" HREF="node50.html">
+<LINK REL="next" HREF="node57.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html878"
+  HREF="node57.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html876"
+  HREF="node50.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html872"
+  HREF="node55.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html879"
+  HREF="node57.html">Definition of the billiard</A>
+<B> Up:</B> <A NAME="tex2html877"
+  HREF="node50.html">Introduction and history of</A>
+<B> Previous:</B> <A NAME="tex2html873"
+  HREF="node55.html">C) Other methods</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00613000000000000000">
+Brief history of the quantum billiard eigenproblem</A>
+</H2>
+
+<P>
+A billiard is a closed region of space <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">
+in which the wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> is independent of the position <!-- MATH
+ ${\mathbf r} \in \mathcal{D}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img656.gif"
+ ALT="${\mathbf r} \in \mathcal{D}$">.
+Boundary conditions are defined on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">.
+The number of degrees of freedom (dimensionality of the problem)
+is <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">.
+The case of <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$"> (or occasionally 3) has become a paradigm system for the
+study of quantum chaos.
+For this reason, the solution of billiard eigenstates at high energies
+(quantum number <IMG
+ WIDTH="51" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img681.gif"
+ ALT="$n \gg 1$">)
+has been of recurring interest in the last 20 years.
+I will confine myself to study of the case without magnetic field.
+(I refer the interested reader to the magnetic field billiard method of
+Smilansky[<A
+ HREF="node161.html#smilanskymagnetic">98</A>]).
+
+<P>
+Since the billiard interior is a region of free space whose Green's function
+is known analytically, Class B is the most common approach.
+Since Class B can reach much higher quantum numbers (being a surface rather
+than volume method), it is the only viable way to reach the semiclassical
+regime (<!-- MATH
+ $\lambda_{{\mbox{\tiny B}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img523.gif"
+ ALT="$\lambda_{{\mbox{\tiny B}}}$"> of order <IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img682.gif"
+ ALT="$L/100$"> or less).
+Two methods have dominated the field.
+The first is the Boundary Integral Method (BIM), where wavefunctions are
+represented by a dipole source distribution on the boundary.
+This was used in the pioneering 
+study by MacDonald and Kaufman[<A
+ HREF="node161.html#macdonald">145</A>],
+using the BIM as presented by Riddell[<A
+ HREF="node161.html#riddellbim">166</A>].
+A similar method was then presented by Berry and Wilkinson [<A
+ HREF="node161.html#berrywilk">28</A>],
+which has since been used in an essentially unaltered form
+[<A
+ HREF="node161.html#boasman">33</A>,<A
+ HREF="node161.html#litests">137</A>,<A
+ HREF="node161.html#bim2">121</A>].
+The BIM still provides the most reliable (it handles a large variety
+of billiard shapes), if not the
+most efficient method for billiard eigenproblems.
+The second is
+Heller's Plane Wave Decomposition Method (PWDM), which has the edge on efficiency
+and simplicity over the BIM, mainly due to the simpler basis functions.
+It has been used apparently in an unaltered form (for instance
+[<A
+ HREF="node161.html#lirobnik95">136</A>,<A
+ HREF="node161.html#litests">137</A>,<A
+ HREF="node161.html#liscar">134</A>])
+since its invention
+in 1984 [<A
+ HREF="node161.html#Heller84">90</A>,<A
+ HREF="node161.html#hellerleshouches">91</A>].
+The only significant improvement to this method has been a slightly better
+search in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">-space [<A
+ HREF="node161.html#limethod">135</A>].
+
+<P>
+In 1995 a <EM>scaling method</EM> which found a large cluster of states
+in a single diagonalization was invented by Vergini and Saraceno [<A
+ HREF="node161.html#v+s">195</A>].
+This is a Class B method which nevertheless returns many states per
+diagonalization in the manner of Class A methods.
+It is without doubt the most significant tool in billiard quantization to
+have emerged in the last 15 years.
+However its workings are very poorly and briefly explained [<A
+ HREF="node161.html#v+s">195</A>]
+(much to the lament of many [<A
+ HREF="node161.html#bulgac">39</A>]), and there are in fact
+errors in this explanation.
+The aim of Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A> is to remedy this situation.
+
+<P>
+It should be noted that all the above Class B methods have difficulties with certain
+billiard shapes.
+The PWDM (and the scaling method) are most sensitive in this respect, because
+only certain shapes are known for which a good plane-wave basis set exists.
+Much more study is needed in this area.
+The BIM suffers from problems with non-convex shapes [<A
+ HREF="node161.html#litests">137</A>], an
+active area of research.
+Currently I believe there is no method reliable for arbitrary shapes, even in
+<IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$">.
+
+<P>
+Other, semiclassically-motivated
+methods have been employed for billiards, for instance KKR
+[<A
+ HREF="node161.html#berrykkr">23</A>,<A
+ HREF="node161.html#primack">162</A>] and the surface of section
+approaches of Bogomolny [<A
+ HREF="node161.html#bogomolny">34</A>] and Smilansky [<A
+ HREF="node161.html#Doron92b">66</A>].
+The KKR is applicable only to Sinai-type billiards
+(cells of periodic lattices).
+Prosen's matching method [<A
+ HREF="node161.html#prosenmatching">163</A>] (a variant of that of Bogomolny)
+require the shape
+to be composed of the union of two <EM>integrable</EM> regions.
+As an example of the latter case,
+the stadium billiard so common in quantum chaos (and in this
+thesis, see Fig.&nbsp;<A HREF="node27.html#fig:bil">2.6</A>)
+is composed of a circular end-cap joined to a rectangular box, and
+could be thus solved to arbitrary accuracy without any basis-set choice problems.
+However, we will see in the next chapter than the efficiency of the scaling method
+will far exceed any other Class B approach.
+
+<P>
+Finally, the brute-force Class A approach of Robnik
+[<A
+ HREF="node161.html#robnikconformal">171</A>,<A
+ HREF="node161.html#robnikconformal2">165</A>]
+should not be overlooked, if only
+on the grounds of its impressive computational requirements.
+A banded matrix of order <IMG
+ WIDTH="87" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img683.gif"
+ ALT="$N=35000$">
+was diagonalized to give highly accurate low-energy billiard eigenstates
+(these energies have been a useful standard for error analysis of other methods
+[<A
+ HREF="node161.html#litests">137</A>]). 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html878"
+  HREF="node57.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html876"
+  HREF="node50.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html872"
+  HREF="node55.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html879"
+  HREF="node57.html">Definition of the billiard</A>
+<B> Up:</B> <A NAME="tex2html877"
+  HREF="node50.html">Introduction and history of</A>
+<B> Previous:</B> <A NAME="tex2html873"
+  HREF="node55.html">C) Other methods</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

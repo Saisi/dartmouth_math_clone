@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <TITLE>Strang Colloquium</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; OSF1 V3.2 alpha) [Netscape]">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<H1 ALIGN=CENTER>The Discrete Cosine Transform and the Discrete Wavelet
+Transform</H1>
+
+<H3 ALIGN=CENTER>Gil Strang</H3>
+
+<H3 ALIGN=CENTER>Mathematics Department<BR>
+MIT</H3>
+
+<H3 ALIGN=CENTER>Thursday, April 23, 1998<BR>
+4:00 PM</H3>
+
+<H3 ALIGN=CENTER>Room 102, Bradley Hall</H3>
+
+<P>Each Discrete Cosine Transform uses N real basis vectors whose components
+are cosines. In the DCT-4, for example, the jth component of v_k is cos[(j+1/2)(k+1/2)pi/N].
+These basis vectors are orthogonal and the transform is extremely useful
+in image processing. If the vector x gives the intensities along a row
+of pixels, its cosine series c_k v_k has the coefficients c_k = &lt;x,
+v_k&gt;/N. They are quickly computed from an FFT of length 2N. But a direct
+proof of orthogonality, by calculating inner products, does not reveal
+how natural these cosine vectors are.</P>
+
+<P>We prove orthogonality in a different way. Each DCT&nbsp;basis comes
+from the eigenvectors of a symmetric &quot;second difference&quot; matrix.
+&nbsp;By varying the boundary conditions we get the established transforms
+DCT-1 through DCT-4. Other combinations lead to four additional cosine
+transforms. The type of boundary condition (Dirichlet or Neumann, centered
+at a meshpoint or a midpoint) determines the period: N-1 or N in the established
+transforms. N-1/2 or N+1/2 in teh other four. The key point is that all
+these eigenvectors of cosines come from simple and familiar matrices.</P>
+
+</BODY>
+</HTML>

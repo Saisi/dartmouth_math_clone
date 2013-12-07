@@ -1,0 +1,345 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Appendix G: Numerical evaluation of wavefunction boundary integrals</TITLE>
+<META NAME="description" CONTENT="Appendix G: Numerical evaluation of wavefunction boundary integrals">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node137.html">
+<LINK REL="previous" HREF="node133.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node135.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1713"
+  HREF="node135.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1711"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1705"
+  HREF="node133.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1714"
+  HREF="node135.html">Convergence with number of</A>
+<B> Up:</B> <A NAME="tex2html1712"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1706"
+  HREF="node133.html">Appendix F: Cross correlations</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001600000000000000000"></A>
+<A NAME="ap:discr"></A>
+<BR>
+Appendix G: Numerical evaluation of wavefunction boundary integrals
+</H1>
+
+<P>
+Boundary methods are a central component of this thesis.
+Closed integrals of a function <!-- MATH
+ $f{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1752.gif"
+ ALT="$f{({\mathbf s})}$">
+over the boundary coordinate <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$"> are ubiquitous.
+Generally <!-- MATH
+ $f{({\mathbf s})}= g{({\mathbf s})}h{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1753.gif"
+ ALT="$f{({\mathbf s})}= g{({\mathbf s})}h{({\mathbf s})}$"> and
+a square
+matrix <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> of integrals
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_{nm} \; = \; \oint d{\mathbf s}\, g_n{({\mathbf s})}h_m{({\mathbf s})},
+	\hspace{1in} n,m \; = \; 1 \cdots N ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:matint"></A><IMG
+ WIDTH="494" HEIGHT="42" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1754.gif"
+ ALT="\begin{displaymath}
+F_{nm} \; = \; \oint d{\mathbf s}\, g_n{({\mathbf s})}h_m{({\mathbf s})},
+\hspace{1in} n,m \; = \; 1 \cdots N ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(G.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+is required, where the indices label multiple functions.
+For evaluation of the quantum band profile (Chapters&nbsp;<A HREF="node12.html#ch:review">2</A> and
+<A HREF="node32.html#ch:dil">3</A>),
+the local density of states (Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A>),
+the tension and area-norm matrices (Chapter&nbsp;<A HREF="node49.html#ch:ipwdm">5</A>), and
+the Vergini matrix
+and its derivative (Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A>),
+<!-- MATH
+ $g{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1755.gif"
+ ALT="$g{({\mathbf s})}$"> and <!-- MATH
+ $h{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1756.gif"
+ ALT="$h{({\mathbf s})}$"> are basis functions or eigenstates
+which oscillate about zero on the length scale <!-- MATH
+ $\lambda_{{\mbox{\tiny B}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img523.gif"
+ ALT="$\lambda_{{\mbox{\tiny B}}}$">, the quantum
+(de Broglie) free-space wavelength.
+The deformation function boundary integrals (Chapter&nbsp;<A HREF="node42.html#ch:wall">4</A>)
+do not involve any quantum scale, but are also evaluated using the method
+below.
+I will present only the <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$"> case where boundary integrals over <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$">
+become
+line integrals over <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$">; the generalization to higher <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> is simple.
+
+<P>
+My tool for evaluation of an integral on a closed curve is the
+discretization
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F \; \equiv \; \oint ds f(s) \; \longrightarrow \;
+	\frac{L}{M} \sum_{i=1}^M f(s_i) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:discr"></A><IMG
+ WIDTH="407" HEIGHT="58" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1757.gif"
+ ALT="\begin{displaymath}
+F \; \equiv \; \oint ds f(s) \; \longrightarrow \;
+\frac{L}{M} \sum_{i=1}^M f(s_i) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(G.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img511.gif"
+ ALT="$L$"> is the range of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$">, that is, the length of the line integral
+(billiard perimeter).
+The <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> points are spread uniformly (equidistant in <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$">)
+along the closed curve.
+Because no point is special, no special quadrature [<A
+ HREF="node161.html#numrec">161</A>]
+weights arise near any endpoints: all weights are equal.
+More sophisticated and accurate approximations
+exist for closed line integral
+evaluation [<A
+ HREF="node161.html#davis+rabinowitz">58</A>], however this is sufficient for my needs
+and is very simple to code.
+Its errors will be discussed and tested below.
+
+<P>
+A single integral (<A HREF="node134.html#eq:discr">G.2</A>) requires <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> function evaluations of <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img193.gif"
+ ALT="$f$">.
+Naively one might guess that filling a matrix <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> using (<A HREF="node134.html#eq:matint">G.1</A>)
+requires <IMG
+ WIDTH="74" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1758.gif"
+ ALT="$O(N^2M)$"> evaluations.
+However, the correct way to compute (<A HREF="node134.html#eq:matint">G.1</A>) requires only
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img761.gif"
+ ALT="$O(NM)$"> such evaluations:
+First fill the rectangular matrices <!-- MATH
+ $G_{im} = g_m(s_i)$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1759.gif"
+ ALT="$G_{im} = g_m(s_i)$"> and
+<!-- MATH
+ $H_{im} = h_m(s_i)$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1760.gif"
+ ALT="$H_{im} = h_m(s_i)$">, from which follows
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F \; = \; \frac{L}{M} G^{{\mbox{\tiny T}}} H .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:matfast"></A><IMG
+ WIDTH="335" HEIGHT="42" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1761.gif"
+ ALT="\begin{displaymath}
+F \; = \; \frac{L}{M} G^{{\mbox{\tiny T}}} H .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(G.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This matrix multiplication <EM>does</EM> require <IMG
+ WIDTH="47" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1762.gif"
+ ALT="$N^2M$"> operations, but being
+simple adds and multiplications (and using optimized library code
+<I>e.g. </I>BLAS), it is very fast and does not affect the scaling.
+If you like, the matrix multiply `performs' the integration over <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img447.gif"
+ ALT="$i$">.
+In the case where <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img694.gif"
+ ALT="$g$"> and <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1763.gif"
+ ALT="$h$"> are the same function, only <IMG
+ WIDTH="39" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1764.gif"
+ ALT="$NM$"> evaluations
+are required.
+Note that if a general weighting function <!-- MATH
+ $w{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img810.gif"
+ ALT="$w{({\mathbf s})}$"> is required in the
+integrand (<A HREF="node134.html#eq:matint">G.1</A>), it can easily be incorporated into <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> or <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$">,
+or equivalently be included as a diagonal matrix <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img29.gif"
+ ALT="$W$"> inserted between
+<!-- MATH
+ $G^{{\mbox{\tiny T}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1765.gif"
+ ALT="$G^{{\mbox{\tiny T}}}$"> and <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$"> in (<A HREF="node134.html#eq:matfast">G.3</A>).
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html1715"
+  HREF="node135.html">Convergence with number of sample points--theory</A>
+<LI><A NAME="tex2html1716"
+  HREF="node136.html">Convergence in practice</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1713"
+  HREF="node135.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1711"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1705"
+  HREF="node133.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1714"
+  HREF="node135.html">Convergence with number of</A>
+<B> Up:</B> <A NAME="tex2html1712"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1706"
+  HREF="node133.html">Appendix F: Cross correlations</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

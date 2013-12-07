@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Chapter 7: Conductance of quantum point contacts and half-plane scattering</TITLE>
+<META NAME="description" CONTENT="Chapter 7: Conductance of quantum point contacts and half-plane scattering">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node102.html">
+<LINK REL="previous" HREF="node71.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node95.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1288"
+  HREF="node95.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1286"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1280"
+  HREF="node93.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1289"
+  HREF="node95.html">Conductance in terms of</A>
+<B> Up:</B> <A NAME="tex2html1287"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1281"
+  HREF="node93.html">Discussion</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00800000000000000000"></A>
+<A NAME="ch:qpc"></A>
+<BR>
+Chapter 7: Conductance of quantum point contacts and half-plane scattering
+</H1>
+
+<P>
+The quantum point contact (QPC)[<A
+ HREF="node161.html#been">20</A>,<A
+ HREF="node161.html#dittrich">65</A>]
+has played a
+central role in the understanding of mesoscopic conductance.
+It is the simplest example of a 2DEG system
+where the quantum coherent nature of the electron controls the bulk
+transport properties.
+The Landauer-B&#252;ttiker (LB) formalism
+[<A
+ HREF="node161.html#LB1">129</A>,<A
+ HREF="node161.html#LB2">130</A>,<A
+ HREF="node161.html#LB3">41</A>,<A
+ HREF="node161.html#datta">55</A>,<A
+ HREF="node161.html#dittrich">65</A>]
+reduces the calculation of quantum conductance
+in the linear response regime
+to the evaluation of single-particle wavefunction transmission amplitudes.
+Traditionally, these amplitudes are measured between
+travelling wave basis states in the `leads'.
+Far from the scattering system the leads
+have constant profiles of
+finite-width, and support a finite number of
+transverse modes (channels).
+Eventually the leads are impedance-matched (that is, without
+reflection) into `reservoirs'
+which act as thermalized sources of electrons at their respective
+potentials; these potentials are taken to reflect the measured
+bias voltage (hence the resulting conductance is between
+points deep within the reservoirs).
+Such theoretical constructs have been remarkably successful at describing
+transport
+phenomena,
+for instance conductance quantization [<A
+ HREF="node161.html#wees88">193</A>,<A
+ HREF="node161.html#been">20</A>,<A
+ HREF="node161.html#dittrich">65</A>], because
+the scattering systems involved have generally had
+good lead-to-reservoir matching.
+
+<P>
+We consider `open' 2-terminal mesoscopic systems,
+namely those
+where a QPC is <EM>non-adiabatic</EM> 
+(possessing rapid longitudinal variation in
+transverse profile<A NAME="tex2html59"
+  HREF="footnode.html#foot13268"><SUP>7.1</SUP></A> [<A
+ HREF="node161.html#been">20</A>]) and has short or
+nonexistent leads
+(for instance if it suddenly abutts onto the `reservoir' regions),
+or those where there can be scattering off nearby
+objects in the `reservoir' region.
+We call such systems `open' because the fully two-dimensional (2D)
+nature of the `reservoirs'
+(<I>i.e. </I>the surrounding semi-infinite regions of free space) is important,
+and therefore they cannot be reduced using the quasi-1D approach described
+above.
+This includes a variety of recent
+mesoscopic experiments, for example the combination of QPCs with nearby
+resonator structures [<A
+ HREF="node161.html#kati97">112</A>] or with a nearby
+depletion region underneath
+an AFM tip [<A
+ HREF="node161.html#topinka">192</A>].
+It also includes any QPC system where elastic backscattering from
+disorder in the reservoirs is significant, or generally where the
+lead-reservoir matching is bad.
+In such systems, the conventional quasi-1D picture
+does not apply: the scattering system is not coupled to leads
+in the usual sense, indeed the
+distinction between leads and reservoirs
+is no longer clear.
+(The quasi-1D approach can be retained by attaching very wide
+leads to such systems, following [<A
+ HREF="node161.html#szafer">189</A>],
+although this has both numerical and conceptual limitations).
+The aim of the present work is to
+introduce a 2D scattering approach
+which can handle such systems, and to consider some of the consequences
+for mesoscopic quantum conductance.
+We will stay within the non-interacting quasiparticle picture,
+consider zero applied magnetic field, and assume spin degeneracy of 2
+throughout.
+
+<P>
+We imagine
+a geometry where a 2DEG exists in two semi-infinite
+half-plane
+regions, separated by an impenetrable potential barrier which we
+align with the <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img371.gif"
+ ALT="$y$">-axis
+(see Fig. <A HREF="node94.html#fig:geom">7.1</A>a).
+Our general `QPC scattering system'
+is any gap in this barrier which allows coupling of the
+wavefunction on the left and right sides.
+This gap can be defined by an arbitrary form of the elastic potential,
+and may include other nearby scattering objects, disorder, etc.
+(which would all be placed within the box
+shown in Fig.&nbsp;<A HREF="node94.html#fig:geom">7.1</A>a).
+The only important limitation is that this coupling region
+(the `system') be of finite
+<IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img371.gif"
+ ALT="$y$"> extent, so that electrons 
+which leave
+the system do so via a well-defined terminal:
+either the left (<IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1123.gif"
+ ALT="$x&lt;0$">) or 
+the right (<IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1124.gif"
+ ALT="$x&gt;0$">).
+We also assume that the system size <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img511.gif"
+ ALT="$L$">
+is much smaller than both the dephasing length <IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1125.gif"
+ ALT="$l_\phi$"> and
+the momentum relaxation (elastic scattering) length <IMG
+ WIDTH="17" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1126.gif"
+ ALT="$l_e$">.
+The former requirement allows treatment using a coherent wavefunction
+across the system; the latter allows free-space elastic scattering concepts
+to be applied.
+
+<P>
+The conventional distinction between `reservoir' and `lead'
+is no longer applicable, however
+at short distances outside the system
+(<IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1127.gif"
+ ALT="$r &gt; L$"> but <IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1128.gif"
+ ALT="$r \ll l_\phi$"> and <IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1129.gif"
+ ALT="$r \ll l_e$">) the two semi-infinite
+free space regions behave like leads, since they support scattering-free
+`channels' (see Section&nbsp;<A HREF="node96.html#sec:pw">7.2</A>).
+At large distances the <EM>same</EM> regions behave as reservoirs:
+for <IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1130.gif"
+ ALT="$r \gg l_e$"> ergodicity ensures that the momentum distribution
+is uniform in angle, and
+for <IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1131.gif"
+ ALT="$r \gg l_\phi$"> the energy is redistributed to ensure equilibrium at
+the relevant (experimentally-measured) chemical potential of each terminal.
+In the intermediate region, there is a broad cross-over from lead to reservoir.
+
+<P>
+In this work we first derive a general relation between
+transmission cross section
+(a concept we define using scattering in the half-plane)
+and conductance for this open geometry, in Section&nbsp;<A HREF="node95.html#sec:rel">7.1</A>.
+In Section&nbsp;<A HREF="node96.html#sec:pw">7.2</A> we show that partial-wave type states,
+defined in the half-plane regions,
+can take the place of transverse lead modes in the Landauer formula.
+In Section <A HREF="node97.html#sec:slit">7.3</A> we examine
+an idealized, highly non-adiabatic QPC
+(a hole in a thin hard wall), for which we discuss
+the small hole (tunneling), large hole (semiclassical)
+and intermediate regimes.
+In Section&nbsp;<A HREF="node98.html#sec:coupled">7.4</A> we
+discuss the maximum conductance through this QPC,
+which is reached when a resonator is placed on one side of the QPC.
+We find a universal result <EM>regardless</EM> how small the hole is.
+This illuminates the findings
+of a recent experiment[<A
+ HREF="node161.html#kati97">112</A>] in such an open geometry.
+In Section&nbsp;<A HREF="node99.html#sec:max">7.5</A> we discuss attempts to exceed the universal
+quantum of conductance in a single channel.
+A reciprocity relation for cross section is derived in Section&nbsp;<A HREF="node100.html#sec:atom">7.6</A>,
+and the possibility of breaking this
+reciprocity, due to a non-thermal reservoir occupation, is described.
+We discuss an application to matter-wave `conductance' through
+a 3D QPC.
+Finally we conclude in Section&nbsp;<A HREF="node101.html#sec:qpcconc">7.7</A>.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:geom"></A><A NAME="13270"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.1:</STRONG>
+
+Schematic QPC geometry in 2D:
+<B>a)</B> general point 
+contact scatterer coupling two semi-infinite regions of free space.
+The solid curves are contours of an elastic scattering potential <!-- MATH
+ $V{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1132.gif"
+ ALT="$V{({\mathbf r})}$">.
+The `system' size <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img511.gif"
+ ALT="$L$"> (dashed box) we take to be the region where <!-- MATH
+ $V{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1132.gif"
+ ALT="$V{({\mathbf r})}$">
+has not yet reached its asympotic form
+(which is zero apart from a <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img371.gif"
+ ALT="$y$">-invariant profile around the <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img371.gif"
+ ALT="$y$">-axis).
+Also shown are
+an incoming plane wave,
+and the coordinate system.
+<B>b)</B> The idealized `slit' aperture in a thin, hard wall
+considered in Section&nbsp;<A HREF="node97.html#sec:slit">7.3</A>.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="388" HEIGHT="449" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1133.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_qpc/geom.eps,width=0.7\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html1290"
+  HREF="node95.html">Conductance in terms of cross section</A>
+<LI><A NAME="tex2html1291"
+  HREF="node96.html">Partial-wave channel modes for a 2-terminal system</A>
+<LI><A NAME="tex2html1292"
+  HREF="node97.html">Idealized `slit' aperture point contact</A>
+<LI><A NAME="tex2html1293"
+  HREF="node98.html">Point contact coupled to a resonator</A>
+<LI><A NAME="tex2html1294"
+  HREF="node99.html">What is the maximum conductance of a single quantum channel?</A>
+<LI><A NAME="tex2html1295"
+  HREF="node100.html">Reciprocity and `conductance' of atom waves</A>
+<LI><A NAME="tex2html1296"
+  HREF="node101.html">Conclusions</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1288"
+  HREF="node95.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1286"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1280"
+  HREF="node93.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1289"
+  HREF="node95.html">Conductance in terms of</A>
+<B> Up:</B> <A NAME="tex2html1287"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1281"
+  HREF="node93.html">Discussion</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

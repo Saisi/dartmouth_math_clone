@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Hypoth1.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>"This is an example of a maple worksheet. If this is your first time using maple I recommend hitting return. By doing</font><font color="#ff0000" size="3" face="Monospaced">
+<br> this you will teach the computer the following commands. If you want to modify the commands you can, but maybe not</font><font color="#ff0000" size="3" face="Monospaced">
+<br> your first time.": </font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> Spikegraph:=proc(distributionlist,xmin,xmax,show,c)</font><font color="#ff0000" size="3" face="Monospaced">
+<br> local num,linelist,j,i,templist:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> templist:=[]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> if ((distributionlist[1][1]&lt;xmin) or </font><font color="#ff0000" size="3" face="Monospaced">
+<br> (distributionlist[nops(distributionlist)][1]&gt;xmax)</font><font color="#ff0000" size="3" face="Monospaced">
+<br> ) then</font><font color="#ff0000" size="3" face="Monospaced">
+<br> lprint(`Note: some data values lie outside the user-defined interval.`)</font><font color="#ff0000" size="3" face="Monospaced">
+<br> fi:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> for i from 1 to nops(distributionlist) do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> if not((distributionlist[i][1]&lt;xmin) or (distributionlist[i][1]&gt;xmax)) then</font><font color="#ff0000" size="3" face="Monospaced">
+<br> templist:=[op(templist),</font><font color="#ff0000" size="3" face="Monospaced">
+<br> [distributionlist[i][1],</font><font color="#ff0000" size="3" face="Monospaced">
+<br> distributionlist[i][2]</font><font color="#ff0000" size="3" face="Monospaced">
+<br> ]</font><font color="#ff0000" size="3" face="Monospaced">
+<br> ]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> fi:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> num:=nops(templist):</font><font color="#ff0000" size="3" face="Monospaced">
+<br> linelist:=[]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> for j from 1 to num do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> linelist:=[op(linelist),[templist[j][1],0]]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> linelist:=[op(linelist),[templist[j][1],templist[j][2]]]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> linelist:=[op(linelist),[templist[j][1],0]]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> if show then plot(linelist,style=LINE,color=c) fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> Bin:=proc(n,p,k)</font><font color="#ff0000" size="3" face="Monospaced">
+<br> (binomial(n,k))*(p^k)*((1-p)^(n-k));</font><font color="#ff0000" size="3" face="Monospaced">
+<br> end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "This programs computes for us the probabilty that our result is due to chance error givne the null hypothesis is true. Its</font><font color="#ff0000" size="3" face="Monospaced">
+<br> ofeten called a significane measure. ":</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> BinomialPlot:=proc(n,m,p,q)</font><font color="#ff0000" size="3" face="Monospaced">
+<br> local length,i,j1,j2,j3,j4,j5,spikelist1,spikelist2,spikelist3,</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist4,spikelist5,A1,A2,A3,A4,A5,e:</font><font color="#ff0000" size="3" face="Monospaced">
+<br>e:=.1*(1-2/n);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist1:=[]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist2:=[]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist3:=[]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist4:=[]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist5:=[]:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> for j2 from 0 to n </font><font color="#ff0000" size="3" face="Monospaced">
+<br> do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist2:=[op(spikelist2),Bin(n,p,j2)] ;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> for j1 from 0 to m-1 </font><font color="#ff0000" size="3" face="Monospaced">
+<br> do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist1:=[op(spikelist1),[j1+e,Bin(n,p,j1)]] ;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> for j5 from m to n do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist5:=[op(spikelist5),[j5+e,Bin(n,p,j5)]] ;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> for j3 from 0 to m-1</font><font color="#ff0000" size="3" face="Monospaced">
+<br> do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist3:=[op(spikelist3),[j3 -e,Bin(n,q,j3)]] ;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> for j4 from m to n do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> spikelist4:=[op(spikelist4),[j4- e ,Bin(n,q,j4)]] ;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> A1:= Spikegraph(spikelist1,0-e,m+e,true,blue);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> A5:=Spikegraph(spikelist5,m-1-e,n+e,true,green);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> A3:= Spikegraph(spikelist3,0-e,m+1+e,true,yellow);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> A4:=Spikegraph(spikelist4,m-1-e,n+e,true,red);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> A2:=Spikegraph([[m-.5,(1.1)*max(op(spikelist2))]],m-.5,m-.5,true,black);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> display(A1,A5,A3,A4,A2);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> end: </font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> Hyp:=proc(n,m,p,q)</font><font color="#ff0000" size="3" face="Monospaced">
+<br> local r,s;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> r:=sum(</font><font color="#ff0000" size="3" face="Monospaced">
+<br> binomial(n,k)*(p^k)*((1-p)^(n-k)),k=m...n</font><font color="#ff0000" size="3" face="Monospaced">
+<br> );</font><font color="#ff0000" size="3" face="Monospaced">
+<br> s:=sum(</font><font color="#ff0000" size="3" face="Monospaced">
+<br> binomial(n,k)*(q^k)*((1-q)^(n-k)),k=0...m-1</font><font color="#ff0000" size="3" face="Monospaced">
+<br> );</font><font color="#ff0000" size="3" face="Monospaced">
+<br> lprint("There is a",100*r,"percent chance that we accept H1 given &nbsp;that H0 is correct, and a &nbsp;",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> 100*s,"percent &nbsp;chance that we accept H0 given &nbsp;that H1 is correct. &nbsp;Our cut off was", m-.5);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> BinomialPlot(n,m,p,q); </font><font color="#ff0000" size="3" face="Monospaced">
+<br> end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>"Eneter Hyp(n = Trial Number,n_c = Cut Off-.5, theta_0,theta_1) and assume theta_0&lt;theta_1. ";</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/images/Hypoth1_1.gif" width="470" height="12" alt=""Eneter Hyp(n = Trial Number,n_c = Cut Off-.5, theta_0,theta_1) and assume theta_0<theta_1. "" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Hyp(4,2,.2,.7);</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">"There is a", 18.08000000, "percent chance that we accept H1 given &nbsp;that\</font><font color="#0000ff" size="3" face="Monospaced">
+<br> H0 is correct, and a &nbsp;", 8.370000000, "percent &nbsp;chance that we accept H\</font><font color="#0000ff" size="3" face="Monospaced">
+<br>0 given &nbsp;that H1 is correct. &nbsp;Our cut off was", 1.5</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m50w05/files/images/Hypoth1_2.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Hyp(6,3,.2,.7);</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">"There is a", 9.888000000, "percent chance that we accept H1 given &nbsp;that\</font><font color="#0000ff" size="3" face="Monospaced">
+<br> H0 is correct, and a &nbsp;", 7.047000000, "percent &nbsp;chance that we accept H\</font><font color="#0000ff" size="3" face="Monospaced">
+<br>0 given &nbsp;that H1 is correct. &nbsp;Our cut off was", 2.5</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m50w05/files/images/Hypoth1_3.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Hyp(10,5,.2,.7);</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">"There is a", 3.279349760, "percent chance that we accept H1 given &nbsp;that\</font><font color="#0000ff" size="3" face="Monospaced">
+<br> H0 is correct, and a &nbsp;", 4.734898740, "percent &nbsp;chance that we accept H\</font><font color="#0000ff" size="3" face="Monospaced">
+<br>0 given &nbsp;that H1 is correct. &nbsp;Our cut off was", 4.5</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m50w05/files/images/Hypoth1_4.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Hyp(100,45,.2,.7);</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">"There is a", 0.1432655271e-5, "percent chance that we accept H1 given &nbsp;\</font><font color="#0000ff" size="3" face="Monospaced">
+<br>that H0 is correct, and a &nbsp;", 0.5850510633e-5, "percent &nbsp;chance that we \</font><font color="#0000ff" size="3" face="Monospaced">
+<br>accept H0 given &nbsp;that H1 is correct. &nbsp;Our cut off was", 44.5</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m50w05/files/images/Hypoth1_5.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

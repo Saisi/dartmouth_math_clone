@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Energy spreading--periodic driving case</TITLE>
+<META NAME="description" CONTENT="Energy spreading--periodic driving case">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html441"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html439"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html433"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html442"
+  HREF="node17.html">Fokker-Planck equation for energy</A>
+<B> Up:</B> <A NAME="tex2html440"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html434"
+  HREF="node15.html">Energy spreading constant velocity</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00313000000000000000"></A>
+<A NAME="sec:spreadper"></A>
+<BR>
+Energy spreading--periodic driving case
+</H2>
+
+<P>
+We can build on the results of the previous section to
+see how things change if the parameteric driving
+is sinusoidal: <!-- MATH
+ $x(t) = A \sin (\omega t)$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img51.gif"
+ ALT="$x(t)=A\sin(\omega t)$">.
+We will find the new spreading rate <!-- MATH
+ $D_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img154.gif"
+ ALT="$D_{{\mbox{\tiny E}}}$"> in the same fashion.
+For a general <IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img103.gif"
+ ALT="$x(t)$">, Eq. (<A HREF="node15.html#eq:hdiff">2.7</A>) becomes
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathcal{H}}(t) - E(x(t)) = - \int_0^t dt_1 \dot{x}(t_1) {\mathcal{F}}(t_1),
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="421" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img174.gif"
+ ALT="\begin{displaymath}
+{\mathcal{H}}(t) - E(x(t)) = - \int_0^t dt_1 \dot{x}(t_1) {\mathcal{F}}(t_1),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+As before, squaring this and taking the microcanonical average gives
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:perspr"></A>
+<!-- MATH
+ \begin{eqnarray}
+\langle [ {\mathcal{H}}(t) - E(x(t)) ]^2 \rangle_{{\mbox{\tiny E}}}
+	\; & =\; &
+	(A \omega)^2 \, \int_0^t \int_0^t dt_1 dt_2 \;
+	\cos (\omega t_1) \cos (\omega t_2)
+	\langle {\mathcal{F}}(t_1) {\mathcal{F}}(t_2) \rangle_{{\mbox{\tiny E}}} \nonumber \\
+& \approx & \frac{(A \omega)^2}{2} \, \int_0^t dt'
+	\int_{-\infty}^\infty d\tau
+	[ \cos(2\omega t') + \cos(\omega \tau) ] \,
+	C_{{\mbox{\tiny E}}}(\tau) \nonumber \\& = &  \frac{(A \omega)^2}{2} \left( \frac{\sin (2\omega t)}{2\omega}
+	\nu_{{\mbox{\tiny E}}}\: + \: \tilde{C}_{{\mbox{\tiny E}}}(\omega)\cdot t \right) .
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="162" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img142.gif"
+ ALT="$\displaystyle \langle [ {\mathcal{H}}(t) - E(x(t)) ]^2 \rangle_{{\mbox{\tiny E}}}
+\;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="391" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img175.gif"
+ ALT="$\displaystyle (A \omega)^2 \, \int_0^t \int_0^t dt_1 dt_2 \;
+\cos (\omega t_1) ...
+...a t_2)
+\langle {\mathcal{F}}(t_1) {\mathcal{F}}(t_2) \rangle_{{\mbox{\tiny E}}}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img145.gif"
+ ALT="$\textstyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="366" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img176.gif"
+ ALT="$\displaystyle \frac{(A \omega)^2}{2} \, \int_0^t dt'
+\int_{-\infty}^\infty d\tau
+[ \cos(2\omega t') + \cos(\omega \tau) ] \,
+C_{{\mbox{\tiny E}}}(\tau)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="265" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img177.gif"
+ ALT="$\displaystyle \frac{(A \omega)^2}{2} \left( \frac{\sin (2\omega t)}{2\omega}
+\nu_{{\mbox{\tiny E}}}\: + \: \tilde{C}_{{\mbox{\tiny E}}}(\omega)\cdot t \right) .$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.17)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+On the second line above,
+the same transformation of time variables   was used as before
+(Fig.&nbsp;<A HREF="node15.html#fig:spread">2.2</A>a, except now multiplied by the `checkerboard'
+of the cos functions),
+and the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img152.gif"
+ ALT="$\tau$"> range expanded as before to <!-- MATH
+ $[-\infty,\infty]$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img153.gif"
+ ALT="$[-\infty,\infty]$">,
+appropriate when  <!-- MATH
+ $t \gg \tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img140.gif"
+ ALT="$t \gg \tau_{{\mbox{\tiny cl}}}$">.
+The final line shows an oscillating term
+and a diffusive term (linear in <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">),
+and is valid for any <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">.
+The diffusion
+becomes dominant in the limit <!-- MATH
+ $\omega t \gg 1$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img178.gif"
+ ALT="$\omega t \gg 1$"> corresponding
+to observation over a large number of parameter oscillation periods
+(the fractional error due to the oscillating term dying like
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img179.gif"
+ ALT="$1/\omega t$">),
+giving linear growth of the second moment.
+This long-time diffusion rate is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+D_{{\mbox{\tiny E}}} \; = \;  \mbox{\small$\frac{1}{2}$}\tilde{C}_{{\mbox{\tiny E}}}(\omega)V^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="345" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img180.gif"
+ ALT="\begin{displaymath}
+D_{{\mbox{\tiny E}}} \; = \; \mbox{\small$\frac{1}{2}$}\tilde{C}_{{\mbox{\tiny E}}}(\omega)V^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="26" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img181.gif"
+ ALT="$V^2$"> is now defined as the <EM>mean square</EM> parameter velocity
+<!-- MATH
+ $\langle \dot{x}^2 \rangle = \mbox{\small$\frac{1}{2}$}(\omega A)^2$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img182.gif"
+ ALT="$\langle \dot{x}^2 \rangle = \mbox{\small$\frac{1}{2}$}(\omega A)^2$">.
+
+<P>
+So it is apparent that the diffusion is determined by the
+spectral density of <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> at the driving frequency.
+As this frequency goes to zero, the linear driving result (<A HREF="node15.html#eq:de">2.13</A>)
+is recovered.
+This can be verified by taking the limit <!-- MATH
+ $\omega\rightarrow0$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img61.gif"
+ ALT="$\omega\rightarrow0$">
+while <!-- MATH
+ $\omega A = \dot{x}$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img183.gif"
+ ALT="$\omega A = \dot{x}$"> is held constant, using
+<!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega\rightarrow0) = \nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img184.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega\rightarrow0) = \nu_{{\mbox{\tiny E}}}$">,
+and noticing that
+the two terms in (<A HREF="node16.html#eq:perspr">2.17</A>) now contribute equally.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html441"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html439"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html433"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html442"
+  HREF="node17.html">Fokker-Planck equation for energy</A>
+<B> Up:</B> <A NAME="tex2html440"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html434"
+  HREF="node15.html">Energy spreading constant velocity</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

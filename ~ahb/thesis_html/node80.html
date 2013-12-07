@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Solving for the scaling eigenfunctions</TITLE>
+<META NAME="description" CONTENT="Solving for the scaling eigenfunctions">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node77.html">
+<LINK REL="up" HREF="node72.html">
+<LINK REL="next" HREF="node81.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1149"
+  HREF="node81.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1147"
+  HREF="node72.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1143"
+  HREF="node79.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1150"
+  HREF="node81.html">Generalized eigenproblem</A>
+<B> Up:</B> <A NAME="tex2html1148"
+  HREF="node72.html">The basic scaling method</A>
+<B> Previous:</B> <A NAME="tex2html1144"
+  HREF="node79.html">Use of a scaling</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00714000000000000000">
+Solving for the scaling eigenfunctions</A>
+</H2>
+
+<P>
+We have a very-nearly-diagonal form for the tension matrix
+for wavenumbers which are close to <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">, in a scaling eigenfunction basis
+(Section&nbsp;<A HREF="node74.html#sec:quasi">6.1.2</A>).
+We consider this matrix and its
+derivative with respect to <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">,
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:f+dfdk"></A>
+<!-- MATH
+ \begin{eqnarray}
+\tilde{F}_{\mu \nu}(k) \;& = \;&
+	2 \delta_\mu \delta_\nu M_{\mu \nu} \ + \ O(\delta^3) \cdots \\
+	\frac{d\tilde{F}_{\mu \nu}}{dk} & = & 2 (\delta_\mu + \delta_\nu)
+	M_{\mu \nu} \ + \ O(\delta^2) \cdots ,
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img878.gif"
+ ALT="$\displaystyle \tilde{F}_{\mu \nu}(k) \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="179" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img977.gif"
+ ALT="$\displaystyle 2 \delta_\mu \delta_\nu M_{\mu \nu} \ + \ O(\delta^3) \cdots$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.19)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="45" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img978.gif"
+ ALT="$\displaystyle \frac{d\tilde{F}_{\mu \nu}}{dk}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="221" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img979.gif"
+ ALT="$\displaystyle 2 (\delta_\mu + \delta_\nu)
+M_{\mu \nu} \ + \ O(\delta^2) \cdots ,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.20)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the tilde indicates the scaling eigenfunction representation.
+Use has been made of <!-- MATH
+ $d \delta_\mu/dk = 1$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img980.gif"
+ ALT="$d \delta_\mu/dk = 1$">.
+(I will not write the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependence of the <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">'s explicitly).
+The quasi-diagonality of both these matrices results from that of <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$">,
+whereas the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependence results from the <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">'s.
+
+<P>
+The transformation between matrix representations is 
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\tilde{F}(k) \; & = \; & X^{{\mbox{\tiny T}}} F(k) X \\
+	\frac{d\tilde{F}}{dk} \; & = \; & X^{{\mbox{\tiny T}}} \frac{dF}{dk} X ,
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="46" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img981.gif"
+ ALT="$\displaystyle \tilde{F}(k) \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="82" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img982.gif"
+ ALT="$\displaystyle X^{{\mbox{\tiny T}}} F(k) X$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.21)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="36" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img983.gif"
+ ALT="$\displaystyle \frac{d\tilde{F}}{dk} \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="76" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img984.gif"
+ ALT="$\displaystyle X^{{\mbox{\tiny T}}} \frac{dF}{dk} X ,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.22)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <!-- MATH
+ $X_{i\mu} \equiv x_i^{(\mu)}$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img985.gif"
+ ALT="$X_{i\mu} \equiv x_i^{(\mu)}$"> are the desired coefficient vectors
+of the scaling eigenfunctions (the error functions in (<A HREF="node79.html#eq:basiskverg">6.17</A>)
+will be dropped).
+<IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img986.gif"
+ ALT="$X$"> is rectangular with some number of columns less than <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$">; the
+small-<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$"> approximation breaks down before this number is reached anyway.
+The scaling basis representations
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+F_{ij}(k) \; & = \;& \oint_\Gamma \!\! d{\mathbf s} \,\frac{1}{r_n} \, \phi_i(k,{\mathbf r})
+	\phi_j(k,{\mathbf r})
+	\\
+	 \frac{dF_{ij}}{dk}  & = & \frac{1}{k} \oint_\Gamma \!\! d{\mathbf s} \,\frac{1}{r_n} \,
+	\phi_i(k,{\mathbf r}) \, {\mathbf r}\cdot\nabla\phi_j(k,{\mathbf r}) +
+	\mbox{transpose}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img987.gif"
+ ALT="$\displaystyle F_{ij}(k) \;$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img143.gif"
+ ALT="$\textstyle =\;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="175" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img988.gif"
+ ALT="$\displaystyle \oint_\Gamma \!\! d{\mathbf s} \,\frac{1}{r_n} \, \phi_i(k,{\mathbf r})
+\phi_j(k,{\mathbf r})$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.23)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="40" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img989.gif"
+ ALT="$\displaystyle \frac{dF_{ij}}{dk}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="323" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img990.gif"
+ ALT="$\displaystyle \frac{1}{k} \oint_\Gamma \!\! d{\mathbf s} \,\frac{1}{r_n} \,
+\ph...
+...,{\mathbf r}) \, {\mathbf r}\cdot\nabla\phi_j(k,{\mathbf r}) +
+\mbox{transpose}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.24)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+can easily be evaluated using the method
+of Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A>.
+
+<P>
+Then diagonalization of the matrix <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img830.gif"
+ ALT="$F(k)$"> can give eigenvectors which are very
+close to the desired rows of <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img986.gif"
+ ALT="$X$">. In particular, an eigenvector very close to
+the scaling eigenfunction <!-- MATH
+ ${\mathbf x}_\mu$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img666.gif"
+ ALT="${\mathbf x}_\mu$"> may be returned (if <!-- MATH
+ $\delta_\mu \ll
+1/{\mathsf{L}}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img991.gif"
+ ALT="$\delta_\mu \ll
+1/{\mathsf{L}}$">). However the eigenvalue will equal the tension of the state resulting
+from a unit norm <!-- MATH
+ $|{\mathbf x}| = 1$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img992.gif"
+ ALT="$\vert{\mathbf x}\vert = 1$"> in coefficient space, which has no physical
+significance in the basis sets used (RPWs + EPWs). Also the null-space vectors in <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$"> produce small-eigenvalue
+solutions (exponentially spread down to machine precision, as in
+Fig.&nbsp;<A HREF="node58.html#fig:fevals">5.3</A>) which interfere (mix) with the desired vectors.
+However the parabolic tension minima are still visible.
+The same is true if the matrix <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img22.gif"
+ ALT="$dF/dk$"> is diagonalized, only now small
+eigenvalues correspond to both Dirichlet (upwards-travelling) and Neumann
+(downwards-travelling) eigenstates.
+Therefore direct diagonalization is not a good way to extract the desired
+states.
+Fig.&nbsp;<A HREF="node76.html#fig:sweeps">6.4</A> shows the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependence of these two diagonalizations.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html1151"
+  HREF="node81.html">Generalized eigenproblem</A>
+<LI><A NAME="tex2html1152"
+  HREF="node82.html">The scaling method in action</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1149"
+  HREF="node81.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1147"
+  HREF="node72.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1143"
+  HREF="node79.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1150"
+  HREF="node81.html">Generalized eigenproblem</A>
+<B> Up:</B> <A NAME="tex2html1148"
+  HREF="node72.html">The basic scaling method</A>
+<B> Previous:</B> <A NAME="tex2html1144"
+  HREF="node79.html">Use of a scaling</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

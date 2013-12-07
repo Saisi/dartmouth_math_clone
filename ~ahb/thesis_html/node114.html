@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Tests of accuracy and convergence</TITLE>
+<META NAME="description" CONTENT="Tests of accuracy and convergence">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node115.html">
+<LINK REL="previous" HREF="node113.html">
+<LINK REL="up" HREF="node112.html">
+<LINK REL="next" HREF="node115.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1515"
+  HREF="node115.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1513"
+  HREF="node112.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1507"
+  HREF="node113.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1516"
+  HREF="node115.html">Results</A>
+<B> Up:</B> <A NAME="tex2html1514"
+  HREF="node112.html">Numerical solution of the</A>
+<B> Previous:</B> <A NAME="tex2html1508"
+  HREF="node113.html">The vector Finite Element</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00942000000000000000">
+Tests of accuracy and convergence</A>
+</H2>
+
+<P>
+For the rectangular guide,
+the fractional error <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> in the propagation constant <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1376.gif"
+ ALT="$k_z$"> was
+less than <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1480.gif"
+ ALT="$1\%$">, and the accuracy of the electric field strengths in the
+trapping region <IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1481.gif"
+ ALT="$\approx 3\%$">, when we used <IMG
+ WIDTH="78" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1482.gif"
+ ALT="$N \sim 5000$"> degrees of freedom.
+This was sufficiently accurate for the present work.
+
+<P>
+We estimated the accuracy of the method by solving a cylindrical guide in an
+identical fashion with the same <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> and a very similar non-uniform grid, for
+which there are
+known field solutions [<A
+ HREF="node161.html#snitzer">183</A>].
+This system is quite similar to the rectangular guide in question,
+although it does not possess sharp corners.
+However, representing the circular cross-section by a
+pixellated approximation
+on a square grid (which cannot represent surfaces
+other than horizontal and vertical)
+was taken to be a stringent test of the method's ability to
+handle corners sensibly.
+
+<P>
+We performed a sweep in radius of the guide from below cut-off to
+where there are several bound modes:
+Fig.&nbsp;<A HREF="node111.html#fig:dielnum">8.4</A>
+shows the propagation constant agrees with the analytics
+to within 1%, even
+close to cut-off.
+The convergence with <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> was measured for the rectangular guide case, and
+found to be
+<!-- MATH
+ $\epsilon \sim N^{-\gamma}$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1483.gif"
+ ALT="$\epsilon \sim N^{-\gamma}$"> with <!-- MATH
+ $0.55 < \gamma < 0.7$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1484.gif"
+ ALT="$0.55 &lt; \gamma &lt; 0.7$">.
+This is less than
+optimal for first-order elements (which have a maximum possible
+convergence of <IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1485.gif"
+ ALT="$\gamma = 1$">), and is believed to be
+due to an inability of the bilinear functions to represent
+physical in-plane <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> and <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$"> components at dielectric steps, or the weak
+field singularities which can physically occur at any exterior dielectric
+sharp edges (regardless of whether acute or obtuse).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1515"
+  HREF="node115.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1513"
+  HREF="node112.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1507"
+  HREF="node113.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1516"
+  HREF="node115.html">Results</A>
+<B> Up:</B> <A NAME="tex2html1514"
+  HREF="node112.html">Numerical solution of the</A>
+<B> Previous:</B> <A NAME="tex2html1508"
+  HREF="node113.html">The vector Finite Element</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

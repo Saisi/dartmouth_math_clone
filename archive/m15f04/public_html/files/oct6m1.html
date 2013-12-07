@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>oct6m.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Approx:=proc(n)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,D,an,r;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>D:=sqrt(x);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>an:=1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to n</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do </font><font color="#ff0000" size="3" face="Monospaced">
+<br>D:=diff(D,x);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>r:=subs(x=1,D);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>an:=an+(1/factorial(i))*(r)*(.01)^i;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>lprint(an);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>an;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Digits:=60;</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Approx(30);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>evalf(sqrt(1.01));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct6images/oct6m_1.gif" width="57" height="12" alt="Digits := 60" align="center">
+</font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">1.00500000000000000000000000000000000000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">1.00498750000000000000000000000000000000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756250000000000000000000000000000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756210937500000000000000000000000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211210937500000000000000000000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208886718750000000000000000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902832031250000000000000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902701110839843750000000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702201843261718750000000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192569732666015625000000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649822235107421875000000000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649121451377868652343750000000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127650618553161621093750000000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595268189907073974609375000000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595766343176364898681640625000</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761828662361949682235717773</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869824107270687818527221</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869446791271911934018134</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">1.00498756211208902702192649127595761869450266550848027691244</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234404517868824768</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234703019506014242</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700238013485886</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700264014394303</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700263770635787</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700263772927117</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700263772905526</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700263772905730</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700263772905728</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700263772905728</font><font color="#0000ff" size="3" face="Monospaced">
+<br>1.00498756211208902702192649127595761869450234700263772905728</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct6images/oct6m_2.gif" width="363" height="12" alt="1.00498756211208902702192649127595761869450234700263772905728" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct6images/oct6m_3.gif" width="363" height="12" alt="1.00498756211208902702192649127595761869450234700263772905728" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Digits:=8:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>ExploreSin:=proc(n,e)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H,f,k;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>f:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for k from 0 to n</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do</font><font color="#ff0000" size="3" face="Monospaced">
+<br>f:=f+(-1)^k/factorial(2*k+1)*(x)^(2*k+1);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),plot(f,x=-e..e)];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>lprint(f);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(op(H),plot(sin(x),x=-e..e,color=blue));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>ExploreSin(3,Pi);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">x-1/6*x^3+1/120*x^5-1/5040*x^7</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct6images/oct6m_4.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p></p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Lecture 14
+</title>
+<STYLE>
+A	{text-decoration:none; color:#cc9933}
+OL	{color: #cc9933}
+</STYLE>
+
+</head>
+<body>
+
+<table border = 0 width = 100% cellpadding = 5 cellspacing = 0>
+<tr>
+<td bgcolor = maroon><font size = +3 color = white>Calculus on Demand at Dartmouth College</font>
+<td align = right bgcolor = maroon><font color = #6666ff><b>
+<a href = "lecture13index.htm"><font color = #6666ff><b>Lecture 13</b></font></a> | 
+<a href = "index.htm"><font color = #6666ff><b>Index</b></font></a> | 
+<a href = "lecture15index.htm"><font color = #6666ff><b>Lecture 15</b></font></a></b></font>
+<tr>
+<td bgcolor = maroon>
+<td bgcolor = maroon align = right><font size = +2 color = white>Lecture 14</font>
+</table>
+<p>
+
+<table border = 1 cellpadding = 8 cellspacing = 0>
+<!--
+first column is resources
+-->
+
+<tr>
+
+<td bgcolor = #006633 valign = top width = 200><center><a href = "aboutimage.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/m3logo.jpg" height = 120 width = 150 border = 0></a>
+<br><h2><font color = #cc9933>Resources</font></h2>
+</center>
+
+<p>
+<b>
+<a href = "http://math.dartmouth.edu/~m3cod/m3index.htm">Math 3 Course Home Page</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/m3sched.htm">Math 3 Course Syllabus</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/study.htm">Practice Exams</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/textbook.htm">Textbook Home Page</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/comments" target = "new">Post a Comment</a>
+<br>
+</b>
+
+
+
+<!--
+second column is contents
+-->
+
+<td valign = top background = "http://www.math.dartmouth.edu/~m3cod/m3logo.gif">
+<h1>Contents</h1>
+In this lecture we look at two applications of the derivative: finding the zeroes of a function, and approximating the value of a function with a line. The former application leads to a numerical procedure called "Newton's Method" which, for example, is a popular technique used by calculators to find square roots.
+<p>
+<hr>
+<p>
+
+<h3>Quick Question</h3>
+
+What is the equation of the line tangent to the graph of ln(x) at x = e? 
+<p>
+<img src = "http://www.math.dartmouth.edu/~m3cod/lec14graph.gif">
+<br>
+<a href = "lec14qqans.htm" target = "qqans"><font color = blue>Answer</font></a>
+<p>
+
+
+<h3>Textbook</h3>
+
+
+<a href = "textbooksections.htm#lec14" target = "book"><font color = blue>Newton's Method</font></a>
+<br>
+<a href = "textbooksections.htm#lec14" target = "book"><font color = blue> Linear Approximations 
+</font></a>
+
+
+<h3>Today's Homework</h3>
+
+<a href = "webworklogin.htm" target = "webwork"><font color = blue>Log into WebWorK</font></a>
+
+<h3>Quiz</h3>
+
+<a href = "http://math.dartmouth.edu/~m3cod/quiztop/quiz/213quiz_index.htm" target = "quiz"><font color = blue>Newton's Method Quiz</font></a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/quiztop/quiz/214quiz_index.htm" target = "quiz"><font color = blue>Linear Approximations Quiz</font></a>
+
+
+<h3>Examples</h3>
+<ul>
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/2.13/213examples/213badnewt.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>Consider the equation x<sup>1/3</sup> = 0 and say you intend to solve it using Newton's method. If the initial value chosen is not 0, what will happen when you apply Newton's method? 
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/2.13/213examples/213newtsin.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>Using Newton's Method, find the equation of a line tangent to the curve y = sin(x) that passes through the origin. Give the answer to 6 decimal places. 
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/2.13/213examples/213tan.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>Use Newton's Method to approximate to 6 decimal places the solution to the equation tan(x/4) = 1.
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/2.14/214examples/214sin.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>When solving problems in geometric optics, engineers and physicists often use the simplifying assumption that, for small angles &theta;, sin(&theta;) is approximately equal to &theta;. Find a linear approximation for sin(x) that shows why this is a reasonable assumption.
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/2.14/214examples/214pizza.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>A pizza restaurant sells an average of 80 pizzas per day at its usual price of $12.95. It experiments with sales and coupons for dollars off the usual price, and finds that the number of pizzas sold when the price decreases by 2 dollars is 135. It estimates that the number of pizzas sold when the price goes down by x dollars is modeled by the function 50 ln(x + 1) + 80. Use linear approximation to find the change in the number of pizzas sold when the price drops from $10.95 to $9.95. 
+<li>
+<a href = "http://math.dartmouth.edu/~klbooksite/2.14/214examples/214sqrt.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 alt = "Click to see the example"></a>Find the linear approximation of the function f(x) = &radic;(1 &minus; x) about a = 0. Use it to approximate the square root of 0.9.
+</ul>
+
+
+<h3>Applets</h3>
+<ul>
+<li><a href = "http://math.dartmouth.edu/~klbooksite/appfolder/213unit/Newton.html" target = "applet"><img src = "http://www.math.dartmouth.edu/~m3cod/applet.gif" border = 0 alt = "Click to see the applet"></a>Newton's Method
+<li><a href = "http://math.dartmouth.edu/~klbooksite/appfolder/214unit/ErrorFunction.html" target = "applet"><img src = "http://www.math.dartmouth.edu/~m3cod/applet.gif" border = 0 alt = "Click to see the applet"></a>Best Linear Approximation
+
+
+</ul>
+
+
+<h3>Videos</h3>
+
+
+<ul>
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus8.rm?start=37:49&end=40:54" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Newtons method  
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus8.rm?start=41:09&end=43:34" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Newton's method might go wrong   
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus8.rm?start=43:48&end=46:25" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Newton's method bites the dust    
+
+<li> <A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus6.rm?start=31:54&end=34:59" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Find the equation for the tangent line of 4x<sup>2</sup> + 10x + 5 at the point (2,1) using power rule to find formula for derivative
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=24:11&end=35:05" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>cos(x) at &pi;/3
+
+</ul>
+
+
+
+</table>
+<p>
+<!--
+Navigation footer
+-->
+<p align = right>
+<font color = #6666ff>
+<b>
+<a href = "lecture13index.htm"><font color = #6666ff><b>Lecture 13</b></font></a> | 
+<a href = "index.htm"><font color = #6666ff><b>Index</b></font></a> | 
+<a href = "lecture15index.htm"><font color = #6666ff><b>Lecture 15</b></font></a></b></font>
+
+</p>
+
+
+</body>
+</html>

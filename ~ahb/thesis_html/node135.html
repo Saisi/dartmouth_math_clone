@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Convergence with number of sample points--theory</TITLE>
+<META NAME="description" CONTENT="Convergence with number of sample points--theory">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node136.html">
+<LINK REL="previous" HREF="node134.html">
+<LINK REL="up" HREF="node134.html">
+<LINK REL="next" HREF="node136.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1725"
+  HREF="node136.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1723"
+  HREF="node134.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1717"
+  HREF="node134.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1726"
+  HREF="node136.html">Convergence in practice</A>
+<B> Up:</B> <A NAME="tex2html1724"
+  HREF="node134.html">Appendix G: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1718"
+  HREF="node134.html">Appendix G: Numerical evaluation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001610000000000000000">
+Convergence with number of sample points--theory</A>
+</H1>
+
+<P>
+What is the minimum <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> required for a given accuracy in (<A HREF="node134.html#eq:discr">G.2</A>)?
+Writing <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1732.gif"
+ ALT="$f(s)$"> as a complex Fourier series on the periodic interval <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img511.gif"
+ ALT="$L$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+f(s)\; = \; \sum_{n=-\infty}^{\infty} \tilde{f}_n e^{i k_n s} ,
+	\hspace{1in} \mbox{where} \; k_n = \frac{2 \pi n}{L} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fseries"></A><IMG
+ WIDTH="486" HEIGHT="56" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1766.gif"
+ ALT="\begin{displaymath}
+f(s)\; = \; \sum_{n=-\infty}^{\infty} \tilde{f}_n e^{i k_n s} ,
+\hspace{1in} \mbox{where} \; k_n = \frac{2 \pi n}{L} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(G.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+it is clear that the desired integral <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> is just <IMG
+ WIDTH="32" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1767.gif"
+ ALT="$L \tilde{f}_0$">.
+The approximation (<A HREF="node134.html#eq:discr">G.2</A>) instead gives the sum
+<!-- MATH
+ $L (\tilde{f}_0 + \tilde{f}_{\pm M} + \tilde{f}_{\pm 2M} + \cdots )$
+ -->
+<IMG
+ WIDTH="205" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1768.gif"
+ ALT="$L (\tilde{f}_0 + \tilde{f}_{\pm M} + \tilde{f}_{\pm 2M} + \cdots )$">.
+The notation <!-- MATH
+ $\tilde{f}_{\pm n}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1769.gif"
+ ALT="$\tilde{f}_{\pm n}$"> implies the sum of <IMG
+ WIDTH="22" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1770.gif"
+ ALT="$\tilde{f}_{n}$"> and
+<!-- MATH
+ $\tilde{f}_{-n}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1771.gif"
+ ALT="$\tilde{f}_{-n}$"> both with arbitrary phase factors.
+This is an example of the Nyquist sampling theorem[<A
+ HREF="node161.html#numrec">161</A>]:
+<IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img193.gif"
+ ALT="$f$"> is completely represented up to spatial frequencies <IMG
+ WIDTH="55" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1772.gif"
+ ALT="$\pm k_{M/2}$">, but
+beyond this the spectrum is folded back into this range.
+In particular the frequencies <IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1773.gif"
+ ALT="$k_{jM}$"> for integer <IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1774.gif"
+ ALT="$j \neq 0$"> get folded back
+to zero-frequency, corrupting the estimate of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$">.
+Thus one should choose sample spacing <!-- MATH
+ $L/M < 2\pi/k_{{\mbox{\tiny max}}}$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1775.gif"
+ ALT="$L/M &lt; 2\pi/k_{{\mbox{\tiny max}}}$">, where
+<!-- MATH
+ $k_{{\mbox{\tiny max}}}$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1776.gif"
+ ALT="$k_{{\mbox{\tiny max}}}$"> is the <EM>bandwidth</EM> of <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1732.gif"
+ ALT="$f(s)$">.
+That is, <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1732.gif"
+ ALT="$f(s)$"> is assumed to have negligible components
+beyond wavenumber <!-- MATH
+ $k_{{\mbox{\tiny max}}}$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1776.gif"
+ ALT="$k_{{\mbox{\tiny max}}}$">.
+
+<P>
+The functions <IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1733.gif"
+ ALT="$g(s)$"> and <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1777.gif"
+ ALT="$h(s)$"> are wavefunctions
+(Helmholtz equation solutions existing in the plane), measured along
+a closed curve, which I first take as smooth and of large curvature radius.
+So to a first approximation <IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1733.gif"
+ ALT="$g(s)$"> and <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1777.gif"
+ ALT="$h(s)$">
+are <EM>bandwidth-limited</EM> to  <!-- MATH
+ $k_{{\mbox{\tiny max}}} = k$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1778.gif"
+ ALT="$k_{{\mbox{\tiny max}}} = k$">,
+where the free-space wavenumber is <!-- MATH
+ $k \equiv 2\pi/\lambda_{{\mbox{\tiny B}}}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1779.gif"
+ ALT="$k \equiv 2\pi/\lambda_{{\mbox{\tiny B}}}$">.
+Therefore <!-- MATH
+ $\tilde{f} = \tilde{g} \ast \tilde{h}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1780.gif"
+ ALT="$\tilde{f} = \tilde{g} \ast \tilde{h}$">
+is bandwidth-limited to <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1781.gif"
+ ALT="$2k$">.
+This would suggest that just over
+2 samples per free-space wavelength are needed to achieve
+high accuracy, and that convergence is exponential beyond this.
+
+<P>
+Two facts heavily modify this simple semiclassical picture:
+1) there exist evanescent wave components in
+eigenstates or basis functions (for instance, evanescent basis functions
+can oscillate at up to <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1080.gif"
+ ALT="$4k$">, see Section&nbsp;<A HREF="node89.html#sec:epwprobs">6.3.3</A>),
+and
+2) the boundary may not be infinitely differentiable
+(required for exponential convergence),
+rather corners (and `kinks') may introduce discontinuities into the function
+<IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1732.gif"
+ ALT="$f(s)$"> which give power-law Fourier tails (and power-law convergence).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1725"
+  HREF="node136.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1723"
+  HREF="node134.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1717"
+  HREF="node134.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1726"
+  HREF="node136.html">Convergence in practice</A>
+<B> Up:</B> <A NAME="tex2html1724"
+  HREF="node134.html">Appendix G: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1718"
+  HREF="node134.html">Appendix G: Numerical evaluation</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>nov22</TITLE>
+<META NAME="description" CONTENT="nov22">
+<META NAME="keywords" CONTENT="nov22">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="nov22.css">
+</HEAD>
+<BODY >
+
+<P>
+<B>Covered today:</B> More heat equation problems.  
+
+<P>
+<B>For next time:</B> 10.5 - 1,2,4,9,12 (skip (d) on 12 if you want)
+
+<P>
+<B>Maple commands:</B>
+
+<P>
+
+<UL><LI>Once you've got your <I>b</I><SUB><I>m</I></SUB>'s computed, enter them in like so:  
+
+<P>
+<TT>b := m -&gt; (-100/(m*Pi)) * (cos(2*m*Pi/3) - cos(m*Pi/3)); </TT>
+
+<P>
+Or, you can let Maple compute them for you:
+
+<P>
+<TT>b:= m -&gt; (2/3) * int(50 * sin(m*Pi*x/3)  , x=1..2);  </TT>
+
+<P>
+
+<LI>Now define <I>u</I>(<I>x</I>,<I>t</I>) in terms of the <I>b</I><SUB><I>m</I></SUB>'s:
+
+<P>
+<TT>u := (x,t) -&gt;  sum(b(m) * exp(-m^2*Pi^2*t/9) * sin(m*Pi*x/3)
+,m=1..50); </TT>
+
+<P>
+
+<LI>To look at cross-sections of <I>u</I> (like your book does), you can
+enter (for example) 
+
+<P>
+<TT>plot(u(x,0), x=0..3);</TT>
+
+<P>
+or 
+
+<P>
+<TT>plot(u(1,t), t=0..10);</TT>
+
+<P>
+
+<LI>In order to view a 3D plot of <I>u</I>, you need to invoke the plotting
+package.  Type:
+
+<P>
+<TT>with(plots);</TT>
+
+<P>
+Then:
+
+<P>
+<TT>plot3d(u(x,t), x=0..3, t=0..10);</TT>
+
+<P>
+
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 23 Fall 1999</I>
+<BR><I>1999-11-23</I>
+</ADDRESS>
+</BODY>
+</HTML>

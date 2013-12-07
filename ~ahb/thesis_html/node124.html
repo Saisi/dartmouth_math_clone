@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Considerations in a billiard system</TITLE>
+<META NAME="description" CONTENT="Considerations in a billiard system">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node123.html">
+<LINK REL="up" HREF="node121.html">
+<LINK REL="next" HREF="node125.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1612"
+  HREF="node125.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1610"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1606"
+  HREF="node123.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1613"
+  HREF="node125.html">Appendix C: Numerical evaluation</A>
+<B> Up:</B> <A NAME="tex2html1611"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1607"
+  HREF="node123.html">General system windowed estimation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001130000000000000000">
+Considerations in a billiard system</A>
+</H1>
+
+<P>
+In billiards the signal <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> consists of an irregular
+series of spikes
+(corresponding to the
+collisions with the walls--they are
+infinitely narrow in the hard-wall limit),
+with the average value subtracted (see Section&nbsp;<A HREF="node34.html#sec:spikes">3.1.1</A>).
+
+<P>
+In order to use the FFT as in the previous section, <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> is needed
+on a <EM>regular</EM> time grid.
+The problem arises: how to represent irregular <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">-functions on a
+regular grid?
+Is the limit of grid spacing <!-- MATH
+ $\Delta t\rightarrow0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1613.gif"
+ ALT="$\Delta t\rightarrow0$"> needed?
+The answer is no.
+The spikes can be replaced by
+(<I>i.e. </I>convolved with) Gaussians of width <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1574.gif"
+ ALT="$t_r$">, if <!-- MATH
+ $\tilde{C}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img471.gif"
+ ALT="$\tilde{C}(\omega)$"> is only
+desired up to frequency <IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1321.gif"
+ ALT="$\omega_0$">.
+This modified signal is then windowed to give <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1593.gif"
+ ALT="$A(t)$"> and resampled on 
+regular grid of spacing <!-- MATH
+ $\Delta t < t_r$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1614.gif"
+ ALT="$\Delta t &lt; t_r$">.
+For efficiency of the FFT, <IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1615.gif"
+ ALT="$\Delta t$"> is chosen such that
+the number of samples, <IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1616.gif"
+ ALT="$T_0 \Delta t$">, is an integer power of 2.
+In frequency-space, the convolution has the effect of multiplying
+<!-- MATH
+ $\tilde{A}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1611.gif"
+ ALT="$\tilde{A}(\omega)$"> by a high-frequency `roll-off' function
+<!-- MATH
+ $R(\omega) = e^{-t_r^2 \omega^2 / 2}$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1617.gif"
+ ALT="$R(\omega) = e^{-t_r^2 \omega^2 / 2}$">.
+Since this roll-off is known, it can be exactly corrected for
+by division of <!-- MATH
+ $\tilde{A}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1611.gif"
+ ALT="$\tilde{A}(\omega)$"> by <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1618.gif"
+ ALT="$R(\omega)$">.
+This correction allowed accurate <!-- MATH
+ $\tilde{C}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img471.gif"
+ ALT="$\tilde{C}(\omega)$"> estimation up to <!-- MATH
+ $\omega \approx
+2 / t_r$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1619.gif"
+ ALT="$\omega \approx
+2 / t_r$">.
+
+<P>
+Note that the <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">-function nature of the signal might suggest that
+its FT could best be performed by direct summation of the terms
+<!-- MATH
+ $e^{i \omega t_i}$
+ -->
+<IMG
+ WIDTH="37" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1620.gif"
+ ALT="$e^{i \omega t_i}$"> arising from each collision <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img447.gif"
+ ALT="$i$">. However this turns
+out to scale like <IMG
+ WIDTH="28" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img241.gif"
+ ALT="$N^2$"> where <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> is the number of collisions needed
+(<!-- MATH
+ $\approx T_0/\tau_{{\mbox{\tiny bl}}}$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1621.gif"
+ ALT="$\approx T_0/\tau_{{\mbox{\tiny bl}}}$">), <I>i.e. </I>it is a `slow' FT. Resampling onto an even grid
+and using the FFT, which scales like
+<IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1622.gif"
+ ALT="$N \log_2 N$">, is vastly superior.
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1612"
+  HREF="node125.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1610"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1606"
+  HREF="node123.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1613"
+  HREF="node125.html">Appendix C: Numerical evaluation</A>
+<B> Up:</B> <A NAME="tex2html1611"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1607"
+  HREF="node123.html">General system windowed estimation</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

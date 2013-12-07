@@ -1,0 +1,324 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51C-SGI [en] (X11; I; IRIX64 6.5 IP
+26) [Netscape]">
+   <title>Alex Barnett: software</title>
+</head>
+<body bgcolor="#FFFFFF" background="http://www.math.dartmouth.edu/~ahb/images/beach.gif">
+&nbsp;
+<center>
+<h1><b>Alex Barnett: software</b></h1>
+<img SRC="http://www.math.dartmouth.edu/~ahb/images/bar45.gif" height=10 width
+=500>
+</center>
+
+<p>
+Here's a collection of codes I have written for various general or
+specific scientific applications,
+generally in Matlab or C/C++, and usually with enough documentation
+to be useful.
+If you use any of these, I'd really appreciate it if you do let me know
+at <img src="http://www.math.dartmouth.edu/~ahb/images/myemail.jpg">
+
+<p>List of codes with links (<code>*.m</code> files are Matlab;
+otherwise it's C code which compiles under linux):
+<ul>
+<li><a href="http://code.google.com/p/mpspack"><code>MPSpack</code></a>:
+Object-oriented MATLAB toolbox for solution of Helmholtz/Laplace
+boundary-value problems. Co-authored with Timo Betcke. <i>Version 1.0 
+released Aug 2009</i>. Fully documented plus 31-page tutorial.
+(This will eventually supercede the following 3 codes, and more...)
+<li><a href="index.html#lp2d"><code>LP2D</code></a> <font color=red>(NEW)</font>: self-interaction of
+Helmholtz layer-potentials on smooth planar curves (Alpert quadratures
++ uses FMMLIB2D).
+<li><a href="index.html#vergini"><code>vergini</code></a>: Scaling method for
+Dirichlet eigenmodes in a variety of 2D domains
+<li><a href="http://www.math.dartmouth.edu/~ahb/software/eigenmode.tar.gz"><code>eigenmode</code></a>:
+Method of Particular Solutions for Neumann eigenmodes of polygons
+(obsolete)
+<li><a href="index.html#fparamin"><code>fparamin</code></a>: 1D minimization
+algorithm for Method of Particular Solutions (obsolete; see <code>MPSpack</code>)
+<li><a href="index.html#tfwd"><code>tfwd</code></a>: Time-dependent photon migration
+package for voxellized 3D tissue geometries (diffusion, Monte Carlo, viewer) 
+<li><a href="index.html#slab"><code>slab</code></a>: Time-dependent 3D diffusion equation
+for surface measurements on multi-layered media
+<li><a href="index.html#glspect"><code>glSpect</code></a> <font color=red>(NEW)</font>: Real-time scrolling audio spectrogram (linux, OpenGL, ALSA)
+<li><a href="index.html#viewer"><code>viewer</code></a>: Interactive OpenGL oscilloscope-style viewer for multiple functions of 1,2 variables (eg vergini output)
+<li><a href="index.html#pview"><code>pview</code></a>: Interactive OpenGL animated
+viewer for particles in 3D
+<li><a href="http://math.dartmouth.edu/~m23f05/taylor.m"><code>taylor</code></a>: Demo of complex Taylor series with color (needs <a href="http://math.dartmouth.edu/~m23f05/show_zser.m"><code>show_zser.m</code></a>)
+<li><a href="../rpws/index.html"><code>rpw2d</code></a>: Fast generator of 2D
+Random Plane Waves at constant wavenumber magnitude
+
+<li><a href="index.html#ray"><code>ray</code></a>: Simple ray-tracing code for
+generating photorealistic images of geometric solids
+<li> <a href="http://www.math.dartmouth.edu/~ahb/software/pdf2djvu"><code>pdf2djvu</code></a>: Unix shell script to convert
+multipage PDF files
+to the excellent, highly-compressed
+<a href="http://www.djvuzone.org">DjVu</a> format, via PBM.
+<li> My <a href="http://www.mathworks.com/matlabcentral/fileexchange/loadAuthor.do?objectType=author&objectId=1093591">Matlab file exchange contributions</a>:
+<code>legnum</code> which annotates plots (5 star rating).
+</ul>
+
+
+<br>
+<p><i>Some of this material is based upon work supported by the National 
+Science Foundation under Grant Nos. DMS-0507614, 0811005, and 1216656</i>
+
+<hr>
+<a name="lp2d"></a>
+<h3><font color="#990000"><font size=+2>LP2D</font></font></h3>
+
+<p>
+Layer Potentials in Two Dimensions.
+This links against the recent <a href="http://www.cims.nyu.edu/cmcl/fmm2dlib/fmm2dlib.html">FMMLIB2D library of Greengard-Gimbutas 2011</a> to
+compute the self-interation of 2D Helmholtz SLP and DLP on potentials
+and normal derivatives on a single smooth closed curve. The curve is
+specified by equally-spaced quadrature nodes in the curve
+parametrization, the normals at the nodes, and the parametric speed at
+the nodes. The main content here is applying Alpert corrections in an
+efficient manner for the S, D, D^T operators.  (The codes also apply
+them to the T operator, but this would only be meaningful when the
+difference of T_1-T_2 is taken at two wavenumbers.) The code also
+allows for the interaction of nearest-neighbor copies of the curve to
+be included, useful for periodic grating scattering problems.
+Thanks to Mike O'Neil and Zydrunas Gimbutas for pieces of their code.
+
+<p>
+This is needed if one wants to use FMM + GMRES iteration as a BVP solution technique in <a href="http://code.google.com/p/mpspack/">MPSpack</a>
+
+<p>
+Download <a href="http://www.math.dartmouth.edu/~ahb/software/lp2d.tgz">here</a> the version of 10/17/12, and
+see <a href="http://www.math.dartmouth.edu/~ahb/software/README.lp2d">README</a> and
+<a href="http://www.math.dartmouth.edu/~ahb/software/INSTALL.lp2d">Installation instructions</a>.
+
+
+<p>
+<hr>
+
+<a name="fparamin"></a>
+<h3><font color="#990000"><font size=+2>fparamin</font></font></h3>
+
+<p>
+(<font color=red>Obsolete</font>; see <code>MPSpack</code> in particular <code>@evp.solvespectrum</code> method 'ms')
+
+
+<p>
+<code>fparamin</code> is Matlab code to find a complete list of
+local minima of a function of one variable lying in an interval,
+in the style of
+<code>fminbnd</code>. The twist is that the function may return a vector
+of values, all of which are used to find the minima (of
+the smallest entry of the vector) more reliably. This is designed
+for the Method of Particular Solutions (MPS), where the minima of
+a vector of (generalized)
+singular values are sought. Download <a href="http://www.math.dartmouth.edu/~ahb/software/fparamin.tar.gz">gzipped
+tar file</a>
+(0.5MB), which contains m-files to place in your matlab path,
+and documentation (the PDF file).
+Version 0.9; 14 Aug 2006.
+
+<p>
+<hr>
+
+<a name="viewer"></a>
+<h3><font color="#990000"><font size=+2>viewer</font></font></h3>
+
+<p>
+<code>viewer</code> is an interactive scientific data viewer for
+multiple 1d and 2d real arrays, sampled on regular grids. It provides
+natural `oscilloscope-like' modes of zoom and pan in 2d, and
+rotation with free-spinning animation in 3d.
+Arrays are read from a text file. (One day I plan to have arrays accessed in
+memory and updated in real time using a forked process - let me know if you
+hear of existence of similar display library).
+It was written in 1999-2000, in C and OpenGL/GLUT,
+and hasn't changed much since.
+Go to the <a href="viewer/index.html">viewer page</a>.
+
+<p>
+<hr>
+
+<a name="vergini"</a>
+<h3><font color="#990000"><font size=+2>vergini</font></font></h3>
+
+Efficient computation of Dirichlet eigenfunctions and eigenvalues using
+the scaling method, originally invented by Vergini and Saraceno,
+and continued development by myself (see
+<a href="../pubs.html">publications</a>).
+Includes variety of billiard shapes (stadium, Sinai, generalized Sinai,
+general polar functions, triangle, L-shape, etc),
+basis types (plane waves, evanescent waves,
+irregular Bessel point sources), symmetry classes (non-symmetric, odd-odd,
+even-even, etc), and tasks (test routines, scaling method, mass integral
+calculations, inhomogeneous BVP).
+The executable is command-line driven via a human-readable set of flags
+(most of which are chosen to have sensible default settings);
+there is basic
+<a href="http://www.math.dartmouth.edu/~ahb/software/README.vergini">documentation</a> and more documentation in code.
+There are a range of verbosity levels giving diagnostic output.
+You will need experience to choose basis sets appropriate to the desired
+billiard shape and wavenumber.
+
+<p>
+Most output files are in <i>viewer</i> format so can be immediately
+displayed with the above software package.
+A set of documented MATLAB M-files is included to perform basic I/O
+in this format, plot billiard and basis geometries,
+also driver routines which perform repeated system calls to
+<i>vergini</i> and collect the result into MATLAB data structures.
+
+<p>
+The code is in continual development, according to my needs, from 1999-2004.
+It is in C++ but makes minor use of ++ features, the object-orientation
+coming from sensible use of C <code>struct</code>s and modules.
+The Makefile has options to sense architecture, and currently compiles
+on Linux/i386, SGI/IRIX, Sun/Solaris platforms. Math library locations
+(heavy use of BLAS/LAPACK is made) may need to be adjusted for your machine.
+
+<p>
+Download version of 9/18/12: gzipped tarball <a href="http://www.math.dartmouth.edu/~ahb/software/vergini.tar.gz">here</a>,
+or ZIP archive <a href="http://www.math.dartmouth.edu/~ahb/software/vergini.zip">here</a>.
+Compilation once expanded is done by executing <code>make</code>.
+<p><hr>
+
+
+<a name="tfwd"></a>
+<h3><font color="#990000"><font size=+2>tfwd</font></font></h3>
+
+<p>
+Numerical simulations of photon migration in complex segmented 3D
+geometries.
+<i>tfwd</i> stands for <b>t</b>ime-dependent <b>f</b>or<b>w</b>ar<b>d</b>
+models.
+The two physical models are
+<ul>
+<li> Radiative transport via Monte Carlo simulation
+(with David Boas and Jon Stott),
+an update of code described
+<a href="http://www.opticsexpress.org/abstract.cfm?URI=OPEX-10-3-159">here</a>,
+and
+<li> Diffusion approximation via finite-difference time evolution,
+described and used <a href="../papers/aob_preprint.pdf">here</a>.
+</ul>
+The models conveniently use compatible tissue system and output formats
+(developed with Jon Stott),
+and come with an OpenGL viewer which overlays the tissue types,
+measurement points,
+and fluence movie, and allows interactive 3D exploration of data in
+mesh and image forms.
+(The viewer, <i>tmcv</i> is based on the 3d mode of above <i>viewer</i>).
+Read the <a href="http://www.math.dartmouth.edu/~ahb/software/README.tfwd">README</a> for more detail, also a
+<a href="http://www.math.dartmouth.edu/~ahb/software/anand.msg">reply</a> to Anand's questions.
+
+<p>
+The complete package, download <a href="http://www.math.dartmouth.edu/~ahb/software/tfwd.tar">here (512kB)</a>,
+also provides
+minimal documentation, example files, and Makefile for compilation
+on Linux systems. To install, untar then use make with no options.
+(The slab package below is included; untar it from inside slab directory).
+tFDimg.c source should be altered for single (default) or double precision.
+
+<p>
+It stands at version 6 (Monte Carlo v.6 and Finite Difference v.3),
+Nov 2004.
+
+<p>
+<hr>
+
+<a name="slab"></a>
+<h3><font color="#990000"><font size=+2>slab</font></font></h3>
+
+<p>
+Fast numerical simulation of time-dependent diffusion (heat equation) in
+multi-layered 3D slab geometry, either of finite or infinite total thickness.
+Used for simulation of
+photon migration in layered tissue such as the cranial
+surface of the human head. The method actually is applicable to
+arbitrary depth profiles of absorption and scattering coefficients.
+The method is described <a href="../papers/sla.pdf">this preprint</a>.
+
+<p>The algorithm is efficient. For example it
+currently takes of order 0.1 sec to run for
+relative errors of 1%, a minimum desired
+measurement time of 100 ps, in a medium of reduced scattering coefficients
+about 1 per mm. It is still in development, and uses variable timestepping.
+The package is written as a C library with a MEX interface which allows
+it to be called from Matlab, or it may be linked and called directly from
+C or Fortran. <a href="http://www.math.dartmouth.edu/~ahb/software/slab.m">Documentation</a> is provided.
+
+<p>Download the package <a href="http://www.math.dartmouth.edu/~ahb/software/slab.tar">here (170kB)</a>.
+To install, untar then compile within Matlab via <code>mex slab.c</code>.
+Test with Matlab code <code>test.m</code> (undocumented). Matlab codes
+<code>fig_*.m</code>
+can be used to generate the figures from the accompanying paper.
+The `matlab-free' way to use it is by calling the
+routine from C or Fortran. An example driver <code>main.c</code> is provided
+which can be built by the <code>Makefile</code>. Requires BLAS/LAPACK
+libraries (adjust the makefile for your library locations).
+
+<p>It stands at version 1.5, July 2003, interface updated May 2006.
+
+<hr>
+
+<a name="glspect"></a>
+<h3><font color="#990000"><font size=+2>glSpect</font></font></h3>
+
+<p>
+This is a simple linux real-time spectrogram in C++ based upon the OpenGL, GLUT, ALSA, and FFTW libraries (and upon the elegant <a href="http://luke.no-ip.org/code/downloads/glscope.tar.gz">glScope</a> by <a href="http://luke.no-ip.org/">Luke Campagnola</a>).
+The color range and contrast, as well as the time scroll rate, are adjustable
+in real time. The frequency range is command-line adjustable in powers of 2.
+Smaller windows at the bottom display graphs of the spectrum and the signal.
+It is perfect for audio demonstrations of vibration modes, resonance, formants, periodic signals, and many other aspects of the course <a href="http://math.dartmouth.edu/~m5f10">Math 5: The Mathematics of Music and Sound</a>.
+Initial version written 12/20/10 to 12/26/10.
+
+<p>
+<a href="http://www.math.dartmouth.edu/~ahb/software/glSpect.tar.gz">Download tarball package here</a> (25kB).
+
+<hr>
+
+<a name="pview"></a>
+<h3><font color="#990000"><font size=+2>pview</font></font></h3>
+
+<p>
+Interactive viewer for point particles in 3D. Options for solid spheres,
+points, numbers. Uses OpenGL and GLUT libraries.
+Useful to modify for your application. Contains crude 1st-order
+Newtonian dynamics with regularized Coulomb interaction (this routine,
+<code>evolve()</code>
+should be replaced by your own). Coordinate arrays are global variables
+for added
+crudeness! <a href="http://www.math.dartmouth.edu/~ahb/software/pview.tar">Download</a> tar file (30kB).
+(last updated Aug 2004).
+
+<hr>
+
+<a name="ray"></a>
+<h3><font color="#990000"><font size=+2>ray</font></font></h3>
+
+<p>
+Written in 1993 (during a boring summer internship in Manchester, UK)
+in the now-obsolete IRISGL predecessor to OpenGL, this program
+reads a human-readable scene description file (*.r) and generates a ray-traced
+image of the scene. It originally had interactive click and rotate interface
+to choose view direction with a wireframe model, menus, etc. I haven't ported that aspect to
+OpenGL. However I have extracted the computational core, which is here:
+<a href="http://www.math.dartmouth.edu/~ahb/software/r8_core.c">r8_core.c</a>. Compile against math library only.
+It implements multiple lights, reflection, refraction,
+bump-mapping, environment-mapping, quasi-random fractal textures (note the marble around the pool; I later
+discovered these had already been invented by Ken Perlin).
+The image is output as raw floats and can be read into matlab using
+<a href="http://www.math.dartmouth.edu/~ahb/software/imgread.m">imgread.m</a>.
+<p>
+Here are example generated
+images (the scene files are <a href="http://www.math.dartmouth.edu/~ahb/software/pool.r">pool.r</a>
+and <a href="http://www.math.dartmouth.edu/~ahb/software/bob.r">bob.r</a>). They take around 1 minute each to compute:
+<a href="http://www.math.dartmouth.edu/~ahb/software/pool.jpg"><img src="http://www.math.dartmouth.edu/~ahb/software/pool.jpg" height=200></a>
+<a href="http://www.math.dartmouth.edu/~ahb/software/bob.jpg"><img src="http://www.math.dartmouth.edu/~ahb/software/bob.jpg" height=200></a>
+
+
+
+</body>
+</html>

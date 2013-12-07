@@ -1,0 +1,633 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>jan31</TITLE>
+<META NAME="description" CONTENT="jan31">
+<META NAME="keywords" CONTENT="jan31">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="jan31.css">
+</HEAD>
+<BODY >
+<B>This WeekÕs Homework:</B>
+(It is very short because of  the exam).
+
+<P>
+Make sure you can do 2.3: 1,2,5,7,12 and read the below stuff on
+<B>exciting conventions!</B> as well as doing the exercise at the bottom of
+this page.
+
+<P>
+Turn in:2.3: 3,6,11,14 and 6.3: 3(a,c),6 and the following:
+
+<P>
+1.  Let <I>V</I> be
+an inner-product space and let <I>W</I> ba a subspace of <I>V</I>.  Show 
+<!-- MATH
+ $V
+= W \oplus W^{\perp}$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img1.gif"
+ ALT="$V
+= W \oplus W^{\perp}$">.
+(As usual you may assume that our field is the
+real numbers).
+
+<P>
+(notice this
+assignment was shortened on Wednesday)
+
+<P>
+<B>Proposed Topics For this Week:</B>
+The first  exam will be handed out on Monday, and an extra copy will be
+posted on the web.  <B>If you find any typos please tell me so I can
+pass them along and  post them on this page.</B> In Monday's
+lecture we will show that
+the composition  of linear maps can be achieved by matrix multiplication
+in the presence of specified finite bases.  Wednesday we will continue our
+geometric exploration by defining the adjoint of an operator as well as   
+showing that  bilinear forms (like linear transformations) can also be
+understood via the use of matrices.  On Friday 
+we will discuss invertibility and isomorphism,  sec 2.4.
+
+<P>
+<B>Exam Hints and some Corrections</B>(largely answers to questions posed 
+by  students)
+<DL COMPACT>
+<DT>1.
+<DD><B>problem one</B> is not designed to be
+difficult, especially
+the first 4 parts.  Simply look at last Friday's lecture where we explored
+the stikingly similar 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+P_u(v) = v -<v,u>u .
+\end{displaymath}
+ -->
+
+<I>P</I><SUB><I>u</I></SUB>(<I>v</I>) = <I>v</I> -&lt;<I>v</I>,<I>u</I>&gt;<I>u</I> .
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Note this is a very similar function, so please look into that lecture for
+some serious hints!
+
+<P>
+Reminder:  
+
+<P>
+<DL COMPACT>
+<DT>(a)
+<DD>In class we defined bilinear forms and inner products only  on <B>real</B>
+vector
+spaces; <B>so assume <I>V</I> is a real innerproduct space!</B> (i.e. you never
+need a bar).
+<DT>(b)
+<DD>The definition of isometry: an isometry form <I>V</I> to itself is a linear
+map  <I>L</I> from <I>V</I> to itself satisfying 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\left< v,v \right> = \left<L(v),L(v)  \right>
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="137" HEIGHT="28" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img2.gif"
+ ALT="\begin{displaymath}\left&lt; v,v \right&gt; = \left&lt;L(v),L(v) \right&gt;\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for every vector <I>v</I>.
+
+<P>
+<DT>(c)
+<DD>Recall a unit vector <I>u</I> is one where &lt;<I>u</I>,<I>u</I>&gt; = 1 and <I>u</I> and <I>v</I> are
+said to be orthogonal if &lt;<I>u</I>,<I>v</I>&gt;=0.  A set is said to be orthonormal if
+its elements are all unit vectors and every pair of distinct
+vectors <I>u</I> and <I>v</I> from this set are orthogonal.
+
+<P>
+<DT>(d)
+<DD>"orthonoral" in 1(e) should read orthonormal.
+
+<P>
+<DT>(e)
+<DD>In the second line we are using the reflection through <I>u</I>, not the
+reflection "though" <I>u</I>.
+
+<P>
+<DT>(f)
+<DD>Notice <I>R</I><SUB><I>u</I></SUB> is a linear maaping for each <I>u</I>,  in other words for each
+unit vector I can form such a mappping.
+
+<P>
+<DT>(g)
+<DD>On problem 1(e) there have been some questions regarding the use
+of induction to "find" the right formula.  I don't care how you guess the
+right formula!  However, when your done finding it you must use induction
+to verify its truth.    
+
+<P>
+<DT>(h)
+<DD>The <I>e</I><SUB><I>i</I></SUB> in 1(h) should be an <I>e</I><SUB>1</SUB>. 
+</DL>
+
+<P>
+<DT>2.
+<DD> <B>problems two and three</B>. 
+
+<P>
+<DL COMPACT>
+<DT>(a)
+<DD>Notice 
+<!-- MATH
+ $\beta_0 = \{e_1,
+e_2\}$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img3.gif"
+ ALT="$\beta_0 = \{e_1, e_2\}$">
+is the
+stndard
+basis on <I>R</I><SUP>2</SUP>, i.e. <I>e</I><SUB>1</SUB> =(1,0) and <I>e</I><SUB>2</SUB> = (0,1).
+<P>
+<DT>(b)
+<DD>Recall that
+<I>M</I><SUP>1+1</SUP> is <I>R</I><SUP>2</SUP> 
+with the bilinear form <I>H</I>(-,-) on it defined by 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+H(a e_1 + be_2, ce_1 + d
+e_2) = ac -bd .
+\end{displaymath}
+ -->
+
+
+<I>H</I>(<I>a e</I><SUB>1</SUB> + <I>be</I><SUB>2</SUB>, <I>ce</I><SUB>1</SUB> + <I>d</I>
+<I>e</I><SUB>2</SUB>) = <I>ac</I> -<I>bd</I> .
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Also notice that for the problem you are never asked to make a
+computations
+with this bilinear form, only to explore tha bases 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\beta_s =  \{ \cosh(s)  e_1 +   \sinh(s)e_2,
+ \sinh(s) e_1 + \cosh(s)e_2\} .
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="357" HEIGHT="28" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img4.gif"
+ ALT="\begin{displaymath}\beta_s = \{ \cosh(s) e_1 + \sinh(s)e_2,
+\sinh(s) e_1 + \cosh(s)e_2\} .\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Recall we varified in the first x-session that for each real number <I>s</I>
+that <IMG
+ WIDTH="20" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img5.gif"
+ ALT="$\beta_s$">
+was an   "ortho-normal" basis  with
+respect to the above bilinear form <I>H</I>(-,-): and we  even graphed these
+bases  in the 
+<IMG
+ WIDTH="20" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img6.gif"
+ ALT="$\beta_0$">
+cordinate plane.
+
+<P>
+<DT>(c)
+<DD>Notice we are denoting <B>vectors</B> in <I>M</I><SUP>1+1</SUP> with the symbol 
+<I>p</I> and for each basis we get coordinates descibing <I>p</I>; and in particular
+we get 
+a coordinate plane to view all such <I>p</I> simultaneously.
+
+<P>
+<DT>(d)
+<DD>Notice the statement that 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{x_1 -x_0}{(t_0+1) -t_0} = 1
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="115" HEIGHT="41" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img7.gif"
+ ALT="\begin{displaymath}\frac{x_1 -x_0}{(t_0+1) -t_0} = 1\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+in 3(a) is an <B>hypothesis</B> you may use to verify the needed
+computation.
+
+<P>
+<DT>5.
+<DD><B>problems four and five</B>
+
+<P>
+<DL COMPACT>
+<DT>(a)
+<DD>There are some notation issues.  Namely 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+Q_N = Q^N
+\end{displaymath}
+ -->
+
+<I>Q</I><SUB><I>N</I></SUB> = <I>Q</I><SUP><I>N</I></SUP>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and  in particular 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+Q_3 = Q^3.
+\end{displaymath}
+ -->
+
+
+<I>Q</I><SUB>3</SUB> = <I>Q</I><SUP>3</SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Much more importantly please re-index <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img8.gif"
+ ALT="$\beta_Q$">
+and <IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img9.gif"
+ ALT="$\beta_Q^N$">
+by
+starting a zero rather than 1, i.e.  
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\beta_Q = \{\psi_i\}_{i=0}^{\infty}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="93" HEIGHT="29" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img10.gif"
+ ALT="\begin{displaymath}\beta_Q = \{\psi_i\}_{i=0}^{\infty}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\beta^N_Q = \{\psi_i\}_{i=0}^{N}   .
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="99" HEIGHT="30" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img11.gif"
+ ALT="\begin{displaymath}\beta^N_Q = \{\psi_i\}_{i=0}^{N} . \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<DT>(b)
+<DD>For us applying the Grahm-Schidt proceedure means forming an orthonormal
+set, 
+not just an orthogonal set (i.e. it must consist of unit vectors).  Notice
+you can easily check if you did this correctly by doing 5(b).   
+</DL></DL>
+
+<P>
+For a revised coppy of the exam click 
+<a
+href="../x1/x1.html"> Here .</a>.  (At the moment my converter program is having some
+problems,  so the exam doesn't look so hot.)
+
+<P>
+<B>The X-session
+Topic:</B>  I will go over the exam. 
+
+<P>
+<B>Some Exciting  Convensions!</B>
+
+<P>
+Transforming a linear mapping between finite dimensional vector spaces
+into a matrix involves some choices, which I will call conventions.   Let
+<I>L</I> be a linear mapping from <I>V</I> to <I>W</I>, let 
+<!-- MATH
+ $\alpha = \{v_i\}_{i=1}^{n}$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img12.gif"
+ ALT="$\alpha = \{v_i\}_{i=1}^{n}$">
+is a basis is <I>V</I>, ley 
+<!-- MATH
+ $\beta = \{w_i\}_{i=1}^{m}$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img13.gif"
+ ALT="$\beta = \{w_i\}_{i=1}^{m}$">
+is a basis is <I>W</I>. and
+<I>x in V</I>.
+
+<P>
+One is an indexing convention often called EinsteinÕs notation 
+wich we will denote <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img14.gif"
+ ALT="${\bf E}$">.
+When using this convention  we let
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+a_{row column} = a_{column}^{row}.
+\end{displaymath}
+ -->
+
+
+<I>a</I><SUB><I>row column</I></SUB> = <I>a</I><SUB><I>column</I></SUB><SUP><I>row</I></SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+(This convention is extremely useful when dealing with a generalization
+of matricies and vectors known as tensors.  Tensors are the syntax of
+much of physics and its good to get used to this notation here amoungst
+linear transformations.)
+
+<P>
+The other convention choice  is whether to view composition as
+occurring on the
+left or the right, i.e. 
+<!-- MATH
+ $(TU)(x) = T(U(x))$
+ -->
+(<I>TU</I>)(<I>x</I>) = <I>T</I>(<I>U</I>(<I>x</I>))
+  (<B>L</B>) or  
+<!-- MATH
+ $(TU)(x) = U(T(x))$
+ -->
+(<I>TU</I>)(<I>x</I>) = <I>U</I>(<I>T</I>(<I>x</I>)) (<B>R</B>).  (I feel its a bit 20th
+century (i.e. old fasion) to view composition on the left,  but this is
+probably what you are most used to.)
+
+<P>
+The book's conventions  are to not use the Einstein convention and to use
+left composition (not(<B>E</B>) and <B>L</B>) 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+x  =\sum_{i=1}^{n} a_i v_i
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="80" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img15.gif"
+ ALT="\begin{displaymath}x =\sum_{i=1}^{n} a_i v_i \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+L(v_j )  =  \sum_{i=1}^{m} a_{ij} w_i .
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="124" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img16.gif"
+ ALT="\begin{displaymath}L(v_j ) = \sum_{i=1}^{m} a_{ij} w_i .\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+With these  conventions we let 
+<!-- MATH
+ $[L]_{\alpha}^{\beta} = [a_{ij}].$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img17.gif"
+ ALT="$[L]_{\alpha}^{\beta} = [a_{ij}].$">
+
+<P>
+In class we will adopt the right composition convention,  and will also
+use EinsteinÕs notation, i.e. <B>E</B> and <B>L</B>, with these conventions 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+x  =\sum_{i=1}^{n} a^i v_i
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="80" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img18.gif"
+ ALT="\begin{displaymath}x =\sum_{i=1}^{n} a^i v_i \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+L(v_j )  =  \sum_{i=1}^{m} a^i_j w_i .
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="119" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img19.gif"
+ ALT="\begin{displaymath}L(v_j ) = \sum_{i=1}^{m} a^i_j w_i .\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+With these  convention we let 
+<!-- MATH
+ $[L]_{\alpha}^{\beta} = [a^i_{j}].$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img20.gif"
+ ALT="$[L]_{\alpha}^{\beta} = [a^i_{j}].$">
+
+<P>
+In my life I usually use 
+<B>E</B> and <B>R</B>, i.e. 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+x  =\sum_{i=1}^{n} a_i v^i
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="81" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img21.gif"
+ ALT="\begin{displaymath}x =\sum_{i=1}^{n} a_i v^i \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+L(v^j )  =  \sum_{i=1}^{m} a^j_i w^i .
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="120" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img22.gif"
+ ALT="\begin{displaymath}L(v^j ) = \sum_{i=1}^{m} a^j_i w^i .\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In this  convention we let 
+<!-- MATH
+ $[L]_{\alpha}^{\beta} = [a^j_{i}].$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img23.gif"
+ ALT="$[L]_{\alpha}^{\beta} = [a^j_{i}].$">
+(In practice the difference is that vectors become rows and matrix
+multiplication of a vector is  on the right.)
+
+<P>
+Last week I foolishly mixed up what the book was doing and used 
+(not(<B>E</B>) and <B>R</B>) 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+x  =\sum_{i=1}^{n} a_i v_i
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="80" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img15.gif"
+ ALT="\begin{displaymath}x =\sum_{i=1}^{n} a_i v_i \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+L(v_j )  =  \sum_{i=1}^{m} a_{ji} w_i .
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="124" HEIGHT="53" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img24.gif"
+ ALT="\begin{displaymath}L(v_j ) = \sum_{i=1}^{m} a_{ji} w_i .\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In this  convention we let 
+<!-- MATH
+ $[L]_{\alpha}^{\beta} = [a_{ji}].$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w00/jan31/img25.gif"
+ ALT="$[L]_{\alpha}^{\beta} = [a_{ji}].$">
+(Ironically,  in terms of the above convention possibilities this is the
+exact opposite of the
+convention we will be using in class.)
+
+<P>
+As an exercise please redo the examples from last Thursday using the <B>E</B> and <B>R</B> notation and the book convention.  
+Also note that the array obtained using <B>R</B> is 
+the transposes of the <B>L</B> array.  (Giving us our first taste of how
+fundamental the transpose operation really is.)
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 24 Winter 2000</I>
+<BR><I>2000-02-02</I>
+</ADDRESS>
+</BODY>
+</HTML>

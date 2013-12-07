@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ex9.html</title>
+<!-- Created by Maple V Release 5, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots);</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m23w99/animations/images/ex91.gif" width=507 height=13 alt="[Maple Math]">
+<br>
+<img src="http://www.math.dartmouth.edu/~m23w99/animations/images/ex92.gif" width=504 height=13 alt="[Maple Math]">
+<br>
+<img src="http://www.math.dartmouth.edu/~m23w99/animations/images/ex93.gif" width=518 height=13 alt="[Maple Math]">
+<br>
+<img src="http://www.math.dartmouth.edu/~m23w99/animations/images/ex94.gif" width=499 height=13 alt="[Maple Math]">
+<br>
+<img src="http://www.math.dartmouth.edu/~m23w99/animations/images/ex95.gif" width=525 height=13 alt="[Maple Math]">
+<br>
+<img src="http://www.math.dartmouth.edu/~m23w99/animations/images/ex96.gif" width=393 height=13 alt="[Maple Math]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>u:=(x,t)-&gt;(40/Pi^2)*evalf(sum((1/n^2)*sin(n*Pi/2)*sin(n*Pi/10)*sin(n*Pi*x/10)*sin(n*Pi*t/10),n=1..100));</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23w99/animations/images/ex97.gif" width=407 height=77 alt="[Maple Math]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>animate(u(x,t),x=0..10,t=0..20,frames=75,color=red);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23w99/animations/images/ex98.gif" width=348 height=258 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</body>
+</html>

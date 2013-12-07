@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Bending the waveguide</TITLE>
+<META NAME="description" CONTENT="Bending the waveguide">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node117.html">
+<LINK REL="up" HREF="node116.html">
+<LINK REL="next" HREF="node119.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1553"
+  HREF="node119.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1551"
+  HREF="node116.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1547"
+  HREF="node117.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1554"
+  HREF="node119.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html1552"
+  HREF="node116.html">Further decoherence and loss</A>
+<B> Previous:</B> <A NAME="tex2html1548"
+  HREF="node117.html">Effects of surface interactions</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00952000000000000000"></A>
+<A NAME="sec:bend"></A>
+<BR>
+Bending the waveguide
+</H2>
+
+<P>
+It would be very useful to be able to carry atom beams
+along curved paths, by bending our
+atom waveguide in the plane of the substrate, without significant atom
+loss.
+Here we briefly estimate three limitations on the waveguide minimum bending
+radius (in decreasing order of leniency):
+1) the limit imposed by optical radiation leakage,
+2) the limit needed for incoherent atom transport,
+and 3) the limit needed
+for coherent atom transport in the transverse groundstate.
+This will give us an idea of the practicality of curved atomic guides.
+
+<P>
+Firstly, whenever a dielectric optical guide has curvature, there is a loss
+rate (exponentially small in the curvature radius <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img726.gif"
+ ALT="$R$">), which can
+be viewed as tunneling out of the guide's `potential well' induced by
+the addition of an effective centrifugal potential.
+In the limit <IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1497.gif"
+ ALT="$R \gg W$">, the effective potential is linear with x (the radial
+coordinate), and the fractional loss per radian of curvature can be
+estimated<A NAME="tex2html82"
+  HREF="footnode.html#foot15227"><SUP>8.6</SUP></A>,
+for instance using the one-dimensional WKB formula, to be
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\alpha = C \, \frac{R}{\lambda} \exp \left( -\frac{1}{6 \pi^2}
+	\frac{\lambda^2 R}{L_x^3}
+	\right) \, ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:wkb"></A><IMG
+ WIDTH="387" HEIGHT="54" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1498.gif"
+ ALT="\begin{displaymath}
+\alpha = C \, \frac{R}{\lambda} \exp \left( -\frac{1}{6 \pi^2}
+\frac{\lambda^2 R}{L_x^3}
+\right) \, ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1499.gif"
+ ALT="$L_x$"> is the evanescent decay length in the radial direction, and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1500.gif"
+ ALT="$C$"> is
+a constant of order unity.
+Therefore for negligible light loss at a <IMG
+ WIDTH="32" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1501.gif"
+ ALT="$\pi/2$"> bend we need
+<!-- MATH
+ $R > 60\pi^2 L_x^3 / \lambda^2$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1502.gif"
+ ALT="$R &gt; 60\pi^2 L_x^3 / \lambda^2$">, typically a couple of tens of microns.
+This is so small chiefly because we are using an optical guide with
+a large refractive index
+step[<A
+ HREF="node161.html#tamir">117</A>].
+
+<P>
+Secondly, we consider atom
+loss from an incoherent beam with a
+transverse temperature <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1503.gif"
+ ALT="$k_B T_\bot$"> (assumed small compared to the
+trap depth magnitude <IMG
+ WIDTH="42" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1430.gif"
+ ALT="$U_{\rm max}$">),
+and a longitudinal
+kinetic energy <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1504.gif"
+ ALT="$E_\Vert$">.
+We call the approximate spatial
+extent of the trap potential in the x direction <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1505.gif"
+ ALT="$2 \xi$">,
+and restrict ourselves to one-dimensional classical
+motion in this direction.
+When in a region of radius of curvature <IMG
+ WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1506.gif"
+ ALT="$R \gg \xi$">,
+an effective centrifugal term adds to the
+trapping potential giving
+<!-- MATH
+ $U(x) = U_{\rm dip}(x) - 2E_\| (x/R)$
+ -->
+<IMG
+ WIDTH="216" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1507.gif"
+ ALT="$U(x) = U_{\rm dip}(x) - 2E_\Vert (x/R)$">.
+This causes the atoms to `slosh' towards positive x, only ever returning
+if there
+exists a point where <!-- MATH
+ $U(x) > -U_{\rm max}$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1508.gif"
+ ALT="$U(x) &gt; -U_{\rm max}$"> for <IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1124.gif"
+ ALT="$x&gt;0$">.
+We can estimate that this will happen if <!-- MATH
+ $U_{\rm max} > 2E_\| (\xi/R)$
+ -->
+<IMG
+ WIDTH="139" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1509.gif"
+ ALT="$U_{\rm max} &gt; 2E_\Vert (\xi/R)$">,
+giving our lower
+limit on <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img726.gif"
+ ALT="$R$"> as <!-- MATH
+ $2\xi E_\| / U_{\rm max}$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1510.gif"
+ ALT="$2\xi E_\Vert / U_{\rm max}$">.
+In our design <!-- MATH
+ $\xi \approx 0.5\,\mu$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1511.gif"
+ ALT="$\xi \approx 0.5\,\mu$">m, so if we choose <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img376.gif"
+ ALT="$R=1$">mm we can
+expect loss-free transport of a beam at a longitudinal kinetic
+energy up to <IMG
+ WIDTH="29" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1512.gif"
+ ALT="$10^3$"> times the trap depth.
+
+<P>
+Thirdly, to model coherent matter-wave propagation along a curved guide,
+we consider the amplitude for remaining in the transverse ground-state, having
+passed into a curved section and back into a straight section.
+If again we assume one-dimensional x motion, and assume a harmonic potential
+<!-- MATH
+ $U(x) = {\textstyle\frac{1}{2}} M \omega_x^2 (x-x_0)^2$
+ -->
+<IMG
+ WIDTH="183" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1513.gif"
+ ALT="$U(x) = {\textstyle\frac{1}{2}} M \omega_x^2 (x-x_0)^2$"> around the trap minimum, then
+the effect of curvature is to shift the minimum position from <IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1514.gif"
+ ALT="$x_0 = 0$">
+to <!-- MATH
+ $x_0 = 2 E_\| / M \omega_x^2 R$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1515.gif"
+ ALT="$x_0 = 2 E_\Vert / M \omega_x^2 R$">.
+If this shift is much less than the characteristic ground-state size
+<!-- MATH
+ $(\hbar/M \omega_x)^{1/2}$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1516.gif"
+ ALT="$(\hbar/M \omega_x)^{1/2}$"> then the projection at each transition will be high,
+resulting in high flux transmission coefficient.
+This gives <!-- MATH
+ $R \gg 2 E_\| / (\hbar M \omega_x^3)^{1/2}$
+ -->
+<IMG
+ WIDTH="165" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1517.gif"
+ ALT="$R \gg 2 E_\Vert / (\hbar M \omega_x^3)^{1/2}$"> as our condition,
+which for <!-- MATH
+ $E_\| / k_B = 10\,$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1518.gif"
+ ALT="$E_\Vert / k_B = 10\,$">mK (that is, <IMG
+ WIDTH="66" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1519.gif"
+ ALT="$v_\Vert = 1.1$">ms<IMG
+ WIDTH="22" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1457.gif"
+ ALT="$^{-1}$">)
+and <!-- MATH
+ $\omega_x/2\pi = 40$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1520.gif"
+ ALT="$\omega_x/2\pi = 40$">kHz
+corresponds to <IMG
+ WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1521.gif"
+ ALT="$R \gg 0.45$">mm.
+This limit is very conservative since we have not yet made
+use of the adiabatic condition
+<!-- MATH
+ $\Omega \ll \omega_x$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1522.gif"
+ ALT="$\Omega \ll \omega_x$"> (where <!-- MATH
+ $\Omega \equiv v_\| /R$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1523.gif"
+ ALT="$\Omega \equiv v_\Vert /R$"> is the rate of
+change of direction of the guided atom),
+to design a waveguide path without discontinuities in
+the curvature.
+
+<P>
+In conclusion, we have shown that it is possible to bend atoms
+both incoherently and
+coherently through large angles on a compact substrate structure of a few
+millimeters in size.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1553"
+  HREF="node119.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1551"
+  HREF="node116.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1547"
+  HREF="node117.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1554"
+  HREF="node119.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html1552"
+  HREF="node116.html">Further decoherence and loss</A>
+<B> Previous:</B> <A NAME="tex2html1548"
+  HREF="node117.html">Effects of surface interactions</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

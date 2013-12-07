@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Use of a scaling basis</TITLE>
+<META NAME="description" CONTENT="Use of a scaling basis">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node78.html">
+<LINK REL="up" HREF="node77.html">
+<LINK REL="next" HREF="node80.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1141"
+  HREF="node80.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1139"
+  HREF="node77.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1135"
+  HREF="node78.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1142"
+  HREF="node80.html">Solving for the scaling</A>
+<B> Up:</B> <A NAME="tex2html1140"
+  HREF="node77.html">Representation in a Helmholtz</A>
+<B> Previous:</B> <A NAME="tex2html1136"
+  HREF="node78.html">Linear function space at</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00713200000000000000">
+Use of a scaling basis</A>
+</H3>
+
+<P>
+Because the scaling eigenfunctions <!-- MATH
+ $\psi_\mu(k,{\mathbf r})$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img865.gif"
+ ALT="$\psi_\mu(k,{\mathbf r})$">
+defined above all have
+the same <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">, and are normalizable, they fall into the above linear space.
+They can be represented by
+coefficient vectors <!-- MATH
+ ${\mathbf x}^{(\mu)}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img968.gif"
+ ALT="${\mathbf x}^{(\mu)}$"> of a
+Helmholtz basis set with a <EM>single</EM> wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\psi_\mu(k,{\mathbf r}) \; = \; \sum_{i=1}^N x_i^{(\mu)} \phi_i(k;{\mathbf r})
+	+ \varepsilon _\mu(k;{\mathbf r}) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:basiskverg"></A><IMG
+ WIDTH="421" HEIGHT="58" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img969.gif"
+ ALT="\begin{displaymath}
+\psi_\mu(k,{\mathbf r}) \; = \; \sum_{i=1}^N x_i^{(\mu)} \phi_i(k;{\mathbf r})
++ \varepsilon _\mu(k;{\mathbf r}) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $\varepsilon _\mu$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img970.gif"
+ ALT="$\varepsilon _\mu$"> is some small error function for each state.
+(The error function is a Helmholtz solution and is orthogonal to the basis
+set space).
+The functions <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img971.gif"
+ ALT="$\phi_i$"> will not be orthogonal over <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">, and there will
+be some (numerical) null-space of vectors <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$"> that has negligible effect
+on wavefunctions inside <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> (see Section&nbsp;<A HREF="node59.html#sec:rank">5.3.1</A>).
+
+<P>
+The boundary tension <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img703.gif"
+ ALT="$f(k)$"> is a quadratic form
+in the linear space.
+Applying this form to the error <!-- MATH
+ $\varepsilon _\mu(k;{\mathbf k})$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img972.gif"
+ ALT="$\varepsilon _\mu(k;{\mathbf k})$"> gives the
+achievable tension minimum <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$"> for each state.
+In the <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$">-dimensional above basis, the quadratic form is written
+<!-- MATH
+ ${\mathbf x}^{{\mbox{\tiny T}}} F(k) {\mathbf x}$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img973.gif"
+ ALT="${\mathbf x}^{{\mbox{\tiny T}}} F(k) {\mathbf x}$"> where <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> is the tension matrix.
+
+<P>
+In the methods of the previous chapter the only requirement on the
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependence of this basis set was that at a given <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> all the functions
+are Helmholtz solutions at that <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+In this chapter we must specialize to a <EM>scaling basis</EM>,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\phi_i(k;{\mathbf r}) \; = \; \phi_i(k,{\mathbf r}) \; \equiv \;
+	\bar{\phi}_i(k{\mathbf r})
+	\hspace{0.4in} \forall i .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:scalingbasis"></A><IMG
+ WIDTH="424" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img974.gif"
+ ALT="\begin{displaymath}
+\phi_i(k;{\mathbf r}) \; = \; \phi_i(k,{\mathbf r}) \; \equiv \;
+\bar{\phi}_i(k{\mathbf r})
+\hspace{0.4in} \forall i .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Note that <!-- MATH
+ $(k,{\mathbf r})$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img975.gif"
+ ALT="$(k,{\mathbf r})$"> implies a scaling function whereas <!-- MATH
+ $(k;{\mathbf r})$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img976.gif"
+ ALT="$(k;{\mathbf r})$"> implies
+some more general <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependence.
+The expansion of any scaling function, as in (<A HREF="node79.html#eq:basiskverg">6.17</A>), now has a
+coefficient vector <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$"> which is constant as <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> changes.
+This will be necessary for our particular case of the
+scaling eigenfunctions.
+Note that certain basis sets, most notably that of the BIM, <EM>cannot</EM> be
+used because their basis functions
+(Green's functions) have origins at <EM>different</EM> points
+`pinned' to the boundary <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1141"
+  HREF="node80.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1139"
+  HREF="node77.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1135"
+  HREF="node78.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1142"
+  HREF="node80.html">Solving for the scaling</A>
+<B> Up:</B> <A NAME="tex2html1140"
+  HREF="node77.html">Representation in a Helmholtz</A>
+<B> Previous:</B> <A NAME="tex2html1136"
+  HREF="node78.html">Linear function space at</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

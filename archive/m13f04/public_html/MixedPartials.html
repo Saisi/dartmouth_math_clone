@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>MixedPartials.html</title>
+<!-- Created by Maple 9.50, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="MixedPartials.html#MapleAutoBookmark1">MixedPartials.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><strong></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 13 Fall 2004</strong></u></font></p>
+<p align="center"><font size="4"><strong></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Calculus of Vector-valued Functions</strong></u></font></p>
+<p align="center"><font size="4"><strong></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Example of a function that has</strong></font></p>
+<p align="center"><font size="4"><strong></font><font color="#0000cc" size="5" face="Lucida Bright"> different mixed partial derivatives at (0,0)</strong></font><font size="4"><strong></font><font size="4" face="Lucida Bright">
+<br></strong></font></p>
+<p align="center"><font size="4"><strong></font><font color="#0000cc" size="5" face="Lucida Bright"><u>October 4, 2004</strong></u></font></p>
+<p><font size="5" face="Lucida Bright"><strong>
+<br> &nbsp;&nbsp;&nbsp;Define a scalar-valued function of two variables</strong></font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong></font><font color="#ff0000" size="3" face="Monospaced">f := (x, y) -&gt; x * y * (x^2 - y^2) / (x^2 + y^2);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_1.gif" width="148" height="45" alt="f := proc (x, y) options operator, arrow; x*y*(x^2-y^2)/(x^2+y^2) end proc" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;Have a look at its graph</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>plot3d(f(x, y), x = -1..1, y = -1..1);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_2.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong>Both partial derivatives of f are continuous everywhere,</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong>so f is differentiable at (0, 0)</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>f_x := factor(diff(f(x, y), x)); </font><font color="#ff0000" face="Monospaced">
+<br>f_y := factor(diff(f(x, y), y));</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_3.gif" width="167" height="50" alt="f_x := y*(x^4-y^4+4*x^2*y^2)/(x^2+y^2)^2" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_4.gif" width="164" height="50" alt="f_y := x*(x^4-y^4-4*x^2*y^2)/(x^2+y^2)^2" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>plot3d(f_x, x = -2..2, y = -2..2);</font><font color="#ff0000" face="Monospaced">
+<br>plot3d(f_y, x = -2..2, y = -2..2);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_5.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_6.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong>Let's explicitly compute the mixed partial derivatives of f at (0, 0)</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>f_xy_00 := limit(subs(x = h, y = 0, f_x) / h, h = 0);</font><font color="#ff0000" face="Monospaced">
+<br>f_yx_00 := limit(subs(x = 0, y = h, f_x) / h, h = 0);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_7.gif" width="72" height="13" alt="f_xy_00 := 0" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_8.gif" width="79" height="13" alt="f_yx_00 := -1" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;They are </strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#ff0000" size="5" face="Lucida Bright"><u><strong>different!!!</strong></u></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#ff0000" size="5" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong>Let's plot both mixed partial derivatives of f</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>plot3d(diff(f(x, y), y, x), x = -1..1, y = -1..1);</font><font color="#ff0000" face="Monospaced">
+<br>plot3d(diff(f(x, y), x, y), x = -1..1, y = -1..1);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_9.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_10.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;They are obviously </strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#ff0000" size="5" face="Lucida Bright"><u><strong>discontinuous</strong></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong>!!!</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#0000ff" size="5" face="Lucida Bright"><u><strong>Remark</strong></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong>: mixed partial derivatives are </strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#ff0000" size="5" face="Lucida Bright"><u><strong>the same</strong></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> away from (0, 0)</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>factor(diff(f(x, y), y, x));</font><font color="#ff0000" face="Monospaced">
+<br>factor(diff(f(x, y), x, y));</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_11.gif" width="221" height="50" alt="(-y+x)*(x+y)*(y^4+10*x^2*y^2+x^4)/(x^2+y^2)^3" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/MixedPartials_12.gif" width="221" height="50" alt="(-y+x)*(x+y)*(y^4+10*x^2*y^2+x^4)/(x^2+y^2)^3" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong></strong></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

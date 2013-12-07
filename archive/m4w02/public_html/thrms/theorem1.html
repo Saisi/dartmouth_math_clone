@@ -1,0 +1,72 @@
+
+ <HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>The Fundamental Theorem</TITLE>
+</HEAD>
+
+
+<BODY BGCOLOR="#FFFFFF"
+      LINK="#white"
+      VLINK="#0055AA"
+      ALINK="#FF0000">
+
+
+<CENTER>
+<H1> 
+The Fundamental Theorem  </H1>
+</CENTER>
+
+This result will be at the very heart of this course.  It tells us that
+the method we are using to approximate a solution to a system of
+differential equations on maple really works!
+Recall the method was simply a careful  articulation of
+what a differential equation tells us, namely if we know what time
+it is and where we are then the equation tells us (approximately) where
+we will be after a small increment of time (the Deltat in the program).
+To see this method in action look at any of our maple  <a
+href="../map.html"> templates  </a>
+In the
+statement of the theorem
+we use the terms mean T,T_0,I_0 and N to mean exactly what they
+meant  in these programs and in lecture lecture, namely T_0 is the
+initial time, T is the final time, I0 is the initial position, and
+N is the number of increments that T-T_0 has been divided into.
+
+<p>
+<b> The Fundamental Theorem :</b>
+Given a system of differential equations
+d <b> x </b> /dt = <b> f </b> (<b> x </b> ,t)
+if the components  of <b> f </b>  have continuous derivatives
+everywhere then then for any fixed T > T0 and I0 as N goes to infinity  
+our approximation tends  to the unique solution of this system with
+<b> f </b>(T0)=I0 </b>.
+
+<p>
+Its nice to see this, and in particular the $N$ dependency, in
+action.  In this 
+<a
+href="../temps/t1.html"> example 
+</a>  we see a sequence of approximation to a solution of  
+dy/dt=-y^2+5sin(t) converging to an actual solution as N increases.
+
+<p>
+<p>
+A careful reading of this theorem reveals three things:
+<p>
+
+1.That such a system of equations always has a solution for any initial
+data. This is often referred to as an existence result.
+
+<p>
+
+2. That such a system  has a unique solution. This is often called a
+uniqueness result.
+
+<p>
+
+3. That our method tends to the actual solution, in other words that
+we can "trust" the numbers and graphs produced by
+maple. In order to estimate how big $N$ really needs
+to be is one of
+the topics  covered during  a course on "numerical methods".

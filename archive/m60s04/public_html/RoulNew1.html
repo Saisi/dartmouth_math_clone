@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>RoulNew.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>P:=evalf(Matrix([[0,18/20,2/20],[18/20,0,2/20],[1/2,1/2,0]]));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Covert2R:=proc(x)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local A;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if </font><font color="#ff0000" size="3" face="Monospaced">
+<br>x=1 then A:=R</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if </font><font color="#ff0000" size="3" face="Monospaced">
+<br>x=2 then A:=B</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if </font><font color="#ff0000" size="3" face="Monospaced">
+<br>x=3 then A:=G</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>evalf(A);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>RusRoul:=proc(X)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local N;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if </font><font color="#ff0000" size="3" face="Monospaced">
+<br>X=R then </font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=Covert2R(stats[random,empirical[P[1,1],P[1,2],P[1,3]]](1));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if </font><font color="#ff0000" size="3" face="Monospaced">
+<br>X=B then </font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=Covert2R(stats[random,empirical[P[2,1],P[2,2],P[2,3]]](1));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if </font><font color="#ff0000" size="3" face="Monospaced">
+<br>X=G then </font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=Covert2R(stats[random,empirical[P[3,1],P[3,2],P[3,3]]](1));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>N;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>ManyRR:=proc(N)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[Covert2R(stats[random,empirical[18/38,18/38,2/38]](1))];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to N-1</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),RusRoul(H[i])];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CountG:=proc(H)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local C,i;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>C:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to nops(H)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if H[i]=G </font><font color="#ff0000" size="3" face="Monospaced">
+<br>then </font><font color="#ff0000" size="3" face="Monospaced">
+<br>C:=C+1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>evalf(C/nops(H));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m60s04/Roul/RoulNew_1.gif" width="310" height="69" alt="P := Matrix([[0., .9000000000, .1000000000], [.9000000000, 0., .1000000000], [.5000000000, .5000000000, 0.]])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>M:=ManyRR(10000):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>CountG(M);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m60s04/Roul/RoulNew_2.gif" width="75" height="12" alt="0.9440000000e-1" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,465 @@
+/*
+   This is the style sheet used when Gallery running standalone and
+   'bars002' is selected.
+
+   If you would like to customize the styles please create
+   copy of this file called
+
+   "screen.css" (same name without ".default")
+
+   If that file is found in this directory it will be
+   used instead of this one.
+
+   Some of the styles below are overriden by specific
+   album properties. These are noted
+
+   $Id: screen.css 12387 2005-12-23 19:26:50Z jenst $
+*/
+
+
+/*
+   default text styles - background and colors overriden by
+   album 'bgcolor', 'background', and 'textcolor' properties.
+*/
+
+body {
+    background-color: #749BFB;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    background-color: #dddddd;
+    color:#202020;
+}
+
+img {
+    border: none;
+}
+
+td,p {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+/* 
+   link colors - overridden by the album 'linkcolor' property.
+*/
+
+A   	{ color: #202020; text-decoration: none; }
+A:link	{ color: #202020; text-decoration: none; }
+A:visited { color: #202020; text-decoration: none; }
+A:active { color: #202020; }
+A:hover	{ color: #C51B1B; }
+
+popup a:hover {
+    color: #4E2192;
+}
+
+.popup td {
+    color: #000000;
+}
+
+.popup td.tab-hi {
+    color: #FFFFFF;
+}
+
+/* 
+   text styles 
+*/
+.title   /* album titles on main page */
+	{ 
+	  line-height:140%;
+	  padding-right:2px;
+	  padding-left:3px;
+	  padding-bottom:4px;
+      
+	}
+.title a,
+.title a:link,
+.title a:visited,
+.title a:active {
+	  font-family:verdana, arial, sans-serif;
+	  color:#000000;
+	  font-size:x-small;
+	  font-weight:bold;  
+	  text-decoration: none;
+	}
+.title a:hover {
+	  color: #C51B1B;
+	  text-decoration: none;
+	} 
+	
+.mod_title	/* album title  Text is controled by .title */ 
+	{ 
+	  background-image: url("https://www.math.dartmouth.edu/gallery/skins/bars002/images/topbar.jpg");
+	  background-repeat: repeat-x;
+	  width: 100%;
+	}
+.mod_title_bg	/* album title hightlight Text is controled by .title */ 
+	{
+	}
+.mod_title_right  /* album title hightlight  Text is controled by .title*/ 
+	{ 
+	}
+.mod_title_left  /* album title hightlight  Text is controled by .title */ 
+	{
+	}
+.albumdesc  /*album description includes all text and background*/
+	{
+	  font-family:verdana, arial, sans-serif;
+	  background-color: #f0f0f0; color:#202020;
+	  font-size:xx-small;
+	  font-weight:normal;
+	  line-height:140%;
+	  border: 2px groove #E6E9F2;
+	}
+.desc  /* album descriptions on main page just description and author*/
+	{ 
+	  font-family:verdana, arial, sans-serif;
+	  color:#202020;
+	  font-size:x-small;
+	  font-weight:bold;
+	  line-height:140%;
+	  margin-top:2px;		 
+	}
+.caption  /* photo captions on all pages */
+	{ 
+	  font-size: 10px; 	
+	}
+.modcaption  /* modifies background for caption text to reside */
+	{
+	  font-family:verdana, arial, sans-serif;
+	  color: #202020;
+	  font-size: x-small;
+	  font-weight:bold;
+	  line-height:140%;
+	  padding:2px;
+	  margin-top:2px;
+	  border: 0px groove #E6E9F2;
+	}
+.pcaption /* brackets all caption text below photo */
+	{ 	  
+	  font-family:verdana, arial, sans-serif;
+	  color: #202020;
+	  font-size: x-small;
+	  font-weight:bold;
+	  line-height:140%;
+	  padding:2px;
+	  margin-top:2px;
+	  border: 2px groove #E6E9F2;
+	}
+.pview /* brackets both the image and all text in one frame */
+	{
+	}
+.commentbox
+	{
+	}
+.commentboxhead
+	{
+	}
+.commentboxfooter
+	{
+	}
+.commentlabel
+	{
+	}
+.vatable /* table which all div sets are located - view albums  */
+	{ 
+	}
+.vathumbs /* full background bracket for images and text - veiw albums  */
+	{ 
+	border: 2px solid #c0c0c0;
+	background-color: #f0f0f0;
+	padding: 3px;
+	}
+.vafloat /* float for view album - text */
+	{
+	float: left; 
+	border: 0px solid #c0c0c0;
+	width: 250px;
+	}
+.vafloat2 /* float for view album - images */
+	{
+	float: left;
+	}
+.vasummary /* controls the view of Album summary */
+	{
+        font-family:verdana, arial, sans-serif;
+        color: #CB3B3B;
+        font-weight:bold;
+        padding:2px;
+        margin-top:10px;
+        border:3px groove #CB3B3B;
+        width:80%;
+	}
+.vapoll /* controls the text for poll */
+	{
+	}
+.dim /* controls the dimension text under the image */
+	{
+	}
+.commentIndication /* for the (star) indicating comment */ 
+	{ 
+	  color: red; 
+	  font-size: 12px; 
+	}
+.error  /* all error text */
+	{ 
+	  color: red; 
+	  font-size: 12px; 
+	}
+.attention {
+    color: red;
+    font-weight: bold;
+}
+
+.headbox  /* box around the page headers */
+	{
+	}
+.head  /* page headers behind the Gallery title*/
+	{ 
+	  font-family:verdana, arial, sans-serif;
+	  color:#000000;
+	  font-size: 16px;
+	  font-weight:bold;
+	  padding:0px;
+	  line-height:140%;	  
+	  border:0px dashed #202020;
+	    
+	}
+.mod_headliner  /* Gallery & Album titles. Text is controled by .head */ 
+	{ background-image: url("https://www.math.dartmouth.edu/gallery/skins/bars002/images/topbar.jpg");
+	  background-repeat: repeat-x;
+	  width: 100%;
+	}
+.mod_toplight_bg  /* Gallery & Album titles. Text is controled by .head */ 
+	{ 
+	  
+	}
+.mod_toplight_right  /* Gallery & Album titles. Text is controled by .head*/ 
+	{ 
+	}
+.mod_toplight_left  /* Gallery & Album titles. Text is controled by .head */ 
+	{ 
+	}
+.bread  /* used in breadcrumb bars */
+	{ 
+	  font-size: 10px; 
+	}
+.nav    /* used in navigation bars */
+	{
+	  font-size: 12px;
+	}
+.bordertop
+	{
+	}
+.borderright
+	{
+	}
+.borderleft
+	{
+	}
+.fineprint  /* used for fine print */
+	{ 
+	  font-size: 10px; 
+	}
+
+.viewcounter
+	{
+	  font-size: 10px;
+	}
+.editlink,  /* Used for the [edit] tags */
+.editlink a,
+.editlink a:link,
+.editlink a:visited,
+.editlink a:active
+	{
+	  font-size: 10px;
+	  font-weight: normal;
+	  color: #202020;	  
+	}
+.modnavbox  /* main navigation bar next and previous */ 
+{ 
+    font-family:verdana, arial, sans-serif;	
+    color:#000000;
+    font-size: 14px; font-weight:bold;
+    line-height:140%;
+    background-image: url("https://www.math.dartmouth.edu/gallery/skins/bars002/images/navbar.jpg");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 20px;
+}
+
+.modnavbox a,
+.modnavbox a:link,
+.modnavbox a:visited,
+.modnavbox a:active {
+	  font-weight: normal;
+	  color:#000000;
+	  text-decoration: none;
+	}
+.modnavbox a:hover {
+	  font-weight: normal;
+	  color:#C51B1B;
+	  text-decoration: underline;
+	}
+.admin  /* used in admin bars - the search text*/
+	{ 
+	  font-size: 10px;
+	  color: #202020; 
+	  font-weight: bold;
+	}
+.adminform {
+	  font-size: 10px;
+	  font-weight: bold;
+	  color: #202020 ;
+	}
+.search  /* used in admin bars - the search text*/
+	{ 
+	  font-size: 10px;
+	  color: #202020; 
+	  font-weight: bold;
+	}
+.searchform /* defines form for search */
+	{
+	}
+.leftspacer /* amount of space to the left of the header and titles */
+	{
+	  width: 50px;
+	}
+.pollresults /* poll result text */
+	{
+	  font-size: 12px;
+	  color: #202020; 
+	  font-weight: bold;
+	}
+.modnavboxtop  /*navagation bar top of screen where admin buttons show*/
+	{ 
+	  font-family:verdana, arial, sans-serif;
+	  color: #202020;
+	  font-size: 10px;
+	  font-weight:bold;
+	  line-height:140%;
+	  letter-spacing: .1em;
+	  border:0px dashed #202020;
+	  width: 100%  
+	}
+.modnavboxtop a,
+.modnavboxtop a:link,
+.modnavboxtop a:visited,
+.modnavboxtop a:active {
+	  font-weight: normal;
+	  color: #202020;
+	  text-decoration: none;
+	}
+.modnavboxtop a:hover {
+	  font-weight: normal;
+	  color: #C51B1B;
+	  text-decoration: none;
+	}
+.modnavboxmid  /*navagation bar middle where the link for the albums show*/
+	{ 
+	  font-family:verdana, arial, sans-serif;
+	  color: #202020;
+	  font-size: 10px;
+	  font-weight:bold;
+	  line-height:140%;
+	  border:0px dashed #202020;
+	  width: 100%  
+	}
+.modnavboxmid a,
+.modnavboxmid a:link,
+.modnavboxmid a:visited,
+.modnavboxmid a:active {
+	  font-weight: normal;
+	  color:#202020;
+	  text-decoration: none;
+	}
+.modnavboxmid a:hover {
+	  font-weight: normal;
+	  color: #C51B1B;
+	  text-decoration: underline;
+	}
+.modfooter  /*footer where the Gallery version is located*/
+	{ 
+	  font-family:verdana, arial, sans-serif;
+	  color:#202020;
+	  font-size: 8px;
+	  font-weight:normal;
+	  line-height:140%;
+	  padding:2px;
+	  border:0px dashed #202020;
+	  width:100%   
+	}
+.modfooter a,
+.modfooter a:link,
+.modfooter a:visited,
+.modfooter a:active {
+	  color:#202020;
+	  text-decoration: none;
+	}
+.modfooter a:hover {
+	  color: #C51B1B;
+	  text-decoration: none;
+	}
+
+/* popups */
+
+.popupbody  /* controls the background of popup. */ 
+{
+    margin: 5px;
+    background-color: #909090;
+}
+	
+.popuphead, .separator  /* controls the title and background */ 
+{
+    margin: 0px; padding:0px;
+    background-image: url("https://www.math.dartmouth.edu/gallery/skins/bars002/images/navbar.jpg");
+    text-align:center;
+    font-size: 14px; font-weight: bold;
+    color: #202020;
+    padding-left: 5px;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+
+.popup /* controls the main text and message body */
+{
+    font-size: 12px;
+    color: #202020;
+    padding: 5px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    margin-bottom: 10px;  
+}
+
+.popupform /* controls form textarea */
+{
+    font-size: 12px;
+    line-height: 120%;
+    color: #202020;
+    padding: 2px;
+    border: 1px solid #000000;
+    background-color: #c0c0c0;
+}
+
+#adminbox {
+    background-color: #f0f0f0;
+    padding: 2px;
+}
+
+#adminbox td {
+    background-color: #f0f0f0;
+}
+
+#adminbox {
+    color: #000000;
+}
+
+.tab {
+    color: #c0c0c0;
+}
+
+.tab-hi {
+    background-color: #c0c0c0; color: #000000;
+}

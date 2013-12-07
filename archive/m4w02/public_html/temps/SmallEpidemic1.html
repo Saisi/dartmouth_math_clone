@@ -1,0 +1,531 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>SmallEpidemic.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+with(linalg):<br>
+<br>
+ZoomIn:=proc(V,S,E)<br>
+local n,M,i,j,K,k,C,N,l,J,p;<br>
+M:=[];<br>
+n:=nops(S);<br>
+for j from 1 to n<br>
+do<br>
+K:=[];<br>
+for i from 1 to n<br>
+do<br>
+K:=[op(K),diff(S[j],V[i])];<br>
+od;<br>
+M:=[op(M),K];<br>
+od;<br>
+M;<br>
+C:={};<br>
+for k from 1 to n<br>
+do<br>
+C:={op(C),V[k]=E[k]};<br>
+od;<br>
+J:=[];<br>
+for p from 1 to n<br>
+do<br>
+J:=[op(J),subs(C,S[p])];<br>
+od;<br>
+N:=[];<br>
+for l from 1 to n<br>
+do<br>
+N:=[op(N),subs(C,M[l])];<br>
+od;<br>
+lprint("When I evaluate the system at the equilibrium point I<br>
+see",evalf(simplify(J)));<br>
+lprint("Assuming this is zero and I really have an equillibrium point, as I zoom<br>
+in to the equilibrium point I see the following linear system of determinat",<br>
+evalf(simplify(det(N))));<br>
+evalf(simplify(N));<br>
+end:<br>
+<br>
+Detect:=proc(M)<br>
+local d,E;<br>
+lprint("The eigenvalues are ");<br>
+{evalf(eigenvalues(M))};<br>
+end: <br>
+<br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][3]]];<br>
+od;<br>
+NewList <br>
+end: <br>
+<br>
+Make4:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][4]]];<br>
+od;<br>
+NewList <br>
+end: <br>
+<br>
+<br>
+ARNM:=proc(T0,N,T,w,m,n,k,L)<br>
+local i,List,Deltat,Val,Time,K,v,s,u,a,b,p;<br>
+Digits:=5;<br>
+Time:=T0;<br>
+K:=1.62*w^(-.7);<br>
+v:=0.6*w^(-.27);<br>
+u:=0.4*w^(-.26);<br>
+p:=n*u;<br>
+s:=k*u;<br>
+a:=(m-1)*u;<br>
+b:=L*(2.47)*(10^(-2))*(m+n)*w^(.44);<br>
+Val:=[0.7*K,0.3*K,0,0];<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(<br>
+(v-u)*<br>
+(<br>
+1-((Val[1]+Val[2]+Val[4])/K)<br>
+)<br>
+*Val[1]-<br>
+(b*Val[1]*Val[3])<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+(b*Val[1]*Val[2])-(s+u)*Val[2]<br>
+)<br>
+)<br>
+,<br>
+evalf(<br>
+Val[3]+Deltat*(<br>
+s*Val[2]-(a+u+p)*Val[3]<br>
+)<br>
+),<br>
+evalf(<br>
+Val[4]+Deltat*(p*Val[3]-u*Val[4]<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+<br>
+<br>
+<br>
+Stability:=proc(V,E,w,m,n,k,L)<br>
+local S,Val,K,v,s,u,a,b,p;<br>
+Digits:=5;<br>
+K:=1.62*w^(-.7);<br>
+v:=0.6*w^(-.27);<br>
+u:=0.4*w^(-.26);<br>
+p:=n*u;<br>
+s:=k*u;<br>
+a:=(m-1)*u;<br>
+b:=L*(2.47)*(10^(-2))*(m+n)*w^(.44);<br>
+Val:=V;<br>
+S:=<br>
+[<br>
+(v-u)*<br>
+(<br>
+1-((Val[1]+Val[2]+Val[4])/K)<br>
+)<br>
+*Val[1]-<br>
+(b*Val[1]*Val[3])<br>
+,<br>
+(b*Val[1]*Val[2])-(s+u)*Val[2]<br>
+,<br>
+s*Val[2]-(a+u+p)*Val[3]<br>
+,<br>
+p*Val[3]-u*Val[4]<br>
+<br>
+];<br>
+ZoomIn(V,S,E);<br>
+end: <br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"T0,N,T,w,m,n,k,L":<br>
+<br>
+S0:=ARNM(0,3000,100,1,2,1,1,10):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+V3:=Make4(S0):<br>
+<br>
+P0:=listplot(V0,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V1,color=blue,legend="Exposed"):<br>
+<br>
+P2:=listplot(V2,color=green,legend="Infected"):<br>
+<br>
+P3:=listplot(V3,color=cyan,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,P3,title="An Epidemic Model"); <br>
+<br>
+F:=S0[3000];<br>
+<br>
+K:=Stability([S,E,In,R],S0[3000][2],1,2,1,1,10);<br>
+<br>
+Detect(K);<br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic2.gif" width=249 height=29 alt="F := [2999/30, [1.0779, .16289, .54384e-1, .54614e-...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [-.24200e-3, -.21000e-3, -.10500e-3, -.92000e-4]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .25787e-1</font></pre></tt>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic3.gif" width=468 height=13 alt="K := [[-.13331, -.13308, -.79872, -.13308], [.12070...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic4.gif" width=134 height=13 alt="K := [[-.13331, -.13308, -.79872, -.13308], [.12070...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic5.gif" width=491 height=13 alt="{-.4178671518, -1.226169303, -.4527677239e-1-.21972...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"T0,N,T,w,m,n,k,L":<br>
+<br>
+S0:=ARNM(0,3000,100,1,10,1,1,5):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+V3:=Make4(S0):<br>
+<br>
+P0:=listplot(V0,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V1,color=blue,legend="Exposed"):<br>
+<br>
+P2:=listplot(V2,color=green,legend="Infected"):<br>
+<br>
+P3:=listplot(V3,color=cyan,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,P3,title="An Epidemic Model"); <br>
+<br>
+F:=S0[3000];<br>
+<br>
+K:=Stability([S,E,In,R],F[2],1,10,1,1,5);<br>
+<br>
+Detect(K);<br>
+<br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic6.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic7.gif" width=249 height=29 alt="F := [2999/30, [.62183, .44774, .40311e-1, .39134e-...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [.51980e-2, .20040e-1, .17300e-2, .47000e-3]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .16648</font></pre></tt>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic8.gif" width=476 height=13 alt="K := [[-.68412e-1, -.76771e-1, -.84476, -.76771e-1]...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic9.gif" width=134 height=13 alt="K := [[-.68412e-1, -.76771e-1, -.84476, -.76771e-1]...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic10.gif" width=503 height=13 alt="{-.4074411199, -4.410502719, -.2854080552e-2-.30435...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+"T0,N,T,w,m,n,k,L":<br>
+<br>
+S0:=ARNM(0,3000,100,1,10,1,1,1):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+V3:=Make4(S0):<br>
+<br>
+P0:=listplot(V0,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V1,color=blue,legend="Exposed"):<br>
+<br>
+P2:=listplot(V2,color=green,legend="Infected"):<br>
+<br>
+P3:=listplot(V3,color=cyan,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,P3,title="An Epidemic Model"); <br>
+<br>
+F:=S0[3000];<br>
+<br>
+K:=Stability([S,E,In,R],S0[3000][2],1,10,1,1,1);<br>
+<br>
+Detect(K);<br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic11.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic12.gif" width=333 height=29 alt="F := [2999/30, [1.6125, .25321e-16, .25083e-17, .25...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [.14964e-2, -.91630e-17, -.90900e-18, -.93887e-17]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .12621</font></pre></tt>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic13.gif" width=488 height=19 alt="K := [[-.19816, -.19908, -.43812, -.19908], [.68797...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic14.gif" width=134 height=13 alt="K := [[-.19816, -.19908, -.43812, -.19908], [.68797...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic15.gif" width=313 height=13 alt="{-.4000000000, -4.400000000, -.3618800000, -.198160...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+"T0,N,T,w,m,n,k,L":<br>
+<br>
+S0:=ARNM(0,3000,100,1,10,1,1,2):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+V3:=Make4(S0):<br>
+<br>
+P0:=listplot(V0,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V1,color=blue,legend="Exposed"):<br>
+<br>
+P2:=listplot(V2,color=green,legend="Infected"):<br>
+<br>
+P3:=listplot(V3,color=cyan,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,P3,title="An Epidemic Model"); <br>
+<br>
+F:=S0[3000];<br>
+<br>
+K:=Stability([S,E,In,R],S0[3000][2],1,10,1,1,2);<br>
+<br>
+Detect(K);<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic16.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic17.gif" width=261 height=29 alt="F := [2999/30, [1.4748, .10288, .93524e-2, .93488e-...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [-.14889e-2, .14600e-3, .10000e-5, .15000e-5]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .26259e-1</font></pre></tt>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic18.gif" width=470 height=13 alt="K := [[-.18309, -.18208, -.80141, -.18208], [.55905...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic19.gif" width=134 height=13 alt="K := [[-.18309, -.18208, -.80141, -.18208], [.55905...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic20.gif" width=503 height=13 alt="{-4.400942698, -.4039125746, -.8841236374e-1-.83396...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"T0,N,T,w,m,n,k,L":<br>
+<br>
+<br>
+"Notive with a reasonable sigms that th tresh hold clearly is not working":<br>
+<br>
+"T0,N,T,w,m,n,k,L":<br>
+<br>
+S0:=ARNM(0,3000,100,1,10,1,10,5):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+V3:=Make4(S0):<br>
+<br>
+P0:=listplot(V0,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V1,color=blue,legend="Exposed"):<br>
+<br>
+P2:=listplot(V2,color=green,legend="Infected"):<br>
+<br>
+P3:=listplot(V3,color=cyan,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,P3,title="An Epidemic Model"); <br>
+<br>
+F:=S0[3000];<br>
+<br>
+K:=Stability([S,E,In,R],F[2],1,10,1,10,5);<br>
+<br>
+Detect(K);<br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic21.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic22.gif" width=345 height=29 alt="F := [2999/30, [1.6125, .11595e-102, .21172e-102, ....">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [.14964e-2, -.25618e-102, -.46777e-102, -.10038e-18]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .77055</font></pre></tt>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic23.gif" width=470 height=19 alt="K := [[-.19816, -.19908, -2.1906, -.19908], [.15752...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic24.gif" width=134 height=13 alt="K := [[-.19816, -.19908, -2.1906, -.19908], [.15752...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic25.gif" width=313 height=13 alt="{-.4000000000, -4.400000000, -2.209400000, -.198160...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"T0,N,T,w,m,n,k,L":<br>
+<br>
+"Notice with a reasonable sigms that th tresh hold clearly is not working":<br>
+<br>
+"T0,N,T,w,m,n,k,L":<br>
+<br>
+S0:=ARNM(0,3000,100,1,10,10,10,5):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+V2:=Make3(S0):<br>
+<br>
+V3:=Make4(S0):<br>
+<br>
+P0:=listplot(V0,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V1,color=blue,legend="Exposed"):<br>
+<br>
+P2:=listplot(V2,color=green,legend="Infected"):<br>
+<br>
+P3:=listplot(V3,color=cyan,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,P3,title="An Epidemic Model"); <br>
+<br>
+F:=S0[3000];<br>
+<br>
+K:=Stability([S,E,In,R],F[2],1,10,1,10,5);<br>
+<br>
+Detect(K);<br>
+<br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic26.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic27.gif" width=333 height=29 alt="F := [2999/30, [1.6125, .85082e-26, .44881e-26, .21...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"When I evaluate the system at the equilibrium point I\nsee", [.14964e-2, -.18799e-25, .14285e-25, -.87768e-18]</font></pre></tt>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"Assuming this is zero and I really have an equillibrium point, as I zoom\nin to the equilibrium point I see the following linear system of determinat", .77055</font></pre></tt>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic28.gif" width=464 height=19 alt="K := [[-.19816, -.19908, -2.1906, -.19908], [.11558...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic29.gif" width=134 height=13 alt="K := [[-.19816, -.19908, -2.1906, -.19908], [.11558...">
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>"The eigenvalues are "</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Epi/SmallEpidemic30.gif" width=313 height=13 alt="{-.4000000000, -4.400000000, -2.209400000, -.198160...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

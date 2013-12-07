@@ -1,0 +1,75 @@
+
+<html>
+<body bgcolor = #f8ffff >
+
+<h3>An efficient numerical method for vesicle simulations
+</h3>
+<p></p>
+<i> <p>George Biros</p> </i>
+<p style="font-size:smaller">Computational Science and Engineering, 
+Georgia Tech</p>
+<p><img src="https://www.math.dartmouth.edu/~acms/line.gif">
+<br>
+
+<p>
+<table border="0" width="530" cellspacing="0">
+
+<td>
+<p>
+Fluid membranes are area-preserving interfaces that resist bending. They 
+are
+models of cell membranes, intracellular organelles, and viral 
+particles.
+We
+are interested in developing simulation tools for dilute suspensions of
+deformable vesicles. These tools should be computationally efficient, 
+that
+is, they should scale well as the number of vesicles increases.
+For 
+very
+low Reynolds numbers, as it is often the case in mesoscopic length 
+scales,
+the Stokes approximation can be used for the background fluid.
+We use a
+boundary integral formulation for the fluid that results in a set of
+nonlinear integro-differential equations for the vesicle dynamics. The
+motion of the vesicles is determined by balancing the nonlocal 
+hydrodynamic
+forces with the elastic forces due to bending and tension. Numerical
+simulations of such vesicle motions are quite challenging. On one hand,
+explicit time-stepping schemes suffer from a severe stability constraint 
+due
+to the stiffness related to high-order spatial derivatives and a milder
+constraint due to a transport-like stability condition. On the other 
+hand,
+an implicit scheme can be expensive because it requires the solution of 
+a
+set of nonlinear equations at each time step. We present two 
+semi-implicit
+schemes that circumvent the severe stability constraints on the time 
+step
+and whose computational cost per time step is comparable to that of an
+explicit scheme. We discretize the equations by using a spectral method 
+in
+space, and a multistep third-order accurate scheme in time. We use the 
+fast
+multipole method to efficiently compute vesicle-vesicle interaction 
+forces
+in a suspension with a large number of vesicles. We report results from
+numerical experiments that demonstrate the convergence and algorithmic
+complexity properties of our scheme.
+
+
+</td>
+
+</table>
+
+
+<p><img src="https://www.math.dartmouth.edu/~acms/line.gif"></p>
+
+<p style="font-size:smaller">Back to <a href="index.html">ACMS schedule</a></p>
+
+
+</body>
+</html>
+

@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>graphs1.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000 size=4>                          </font></b>
+<font color=#000000 size=4>   </font>
+<b><font color=#000000 size=5>15.1 Graphing functions of several variables</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>One interesting thing about functions of two variables f=f(x,y) is that we can graph them, similarly with the way we graph ordinary one variable functions. This is done by interpreating the value f(x,y) that f takes at the point (x,y) as a third coordinate z=f(x,y). As we have already observed when we discussed curves, the computers come handy in better understanding some of the properties of functions. As an example, try to match the three graphs below with the functions:</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>f(x,y) = -x^2 + y^2     (saddle for humans)</font>
+</p>
+<p align=left>
+<font color=#000000>f(x,y) = xy^2 - x^3     (saddle for monkeys)</font>
+</p>
+<p align=left>
+<font color=#000000>f(x,y) = xy^3 - yx^3   (saddle for dogs)</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/graphs11.gif" width=455 height=428 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/graphs12.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/graphs13.gif" width=386 height=398 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>F:=plot3d([x,y,-x^2+y^2],x=-1..1,y=-1..1,style=wireframe,color=blue,numpoints=2000): display(F,axes=frame,labels=[x,y,z]);</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>G:=plot3d([x,y,-x^3+x*y^2],x=-1..1,y=-1..1,style=wireframe,color=blue,numpoints=2000): display(G,axes=frame,labels=[x,y,z]);</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>H:=plot3d([x,y,x*y^3 - y*x^3],x=-1..1,y=-1..1,style=wireframe,color=blue,numpoints=2000): display(H,axes=frame,labels=[x,y,z]);</font></b>
+</p>
+</basefont>
+</body>
+</html>

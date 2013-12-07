@@ -1,0 +1,217 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>SmallEp.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+with(linalg):<br>
+<br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][3]]];<br>
+od;<br>
+NewList <br>
+end: <br>
+<br>
+Make4:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][4]]];<br>
+od;<br>
+NewList <br>
+end: <br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>TwoCases:=proc(T0,N,F,I0)<br>
+local S,E,In,R,Val,K,T,v,s,u,a,b,p,C,g,r,Deltat,List,i,Time;<br>
+Digits:=5;<br>
+Time:=T0;<br>
+Val:=I0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(F-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+S:=Val[1];<br>
+In:=Val[2];<br>
+R:=Val[3];<br>
+Val:=<br>
+[<br>
+evalf(<br>
+S+Deltat*(<br>
+-(14/(2900*10))*S*In<br>
++(1/4)*R<br>
+)<br>
+),<br>
+evalf(<br>
+In+Deltat*(<br>
+(14/(2900*10))*In*S<br>
+-(1)*In<br>
+<br>
+)<br>
+)<br>
+,<br>
+evalf(<br>
+R+Deltat*(<br>
+(1)*In-(1/4)*R<br>
+<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=TwoCases(0,3,100,[2900,10,0]); </font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/2las/SmallEp1.gif" width=451 height=29 alt="S0 := [[0, [2900, 10, 0]], [100/3, [2433.3, 143.33,...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/2las/SmallEp2.gif" width=178 height=29 alt="S0 := [[0, [2900, 10, 0]], [100/3, [2433.3, 143.33,...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=TwoCases(0,2000,20,[2900,10,0]):<br>
+<br>
+ "T0,N,T,w,m,n,k,L":<br>
+<br>
+<br>
+<br>
+V1:=Make1(S0):<br>
+<br>
+V2:=Make2(S0):<br>
+<br>
+V3:=Make3(S0):<br>
+<br>
+P0:=listplot(V1,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V2,color=blue,legend="Infected"):<br>
+<br>
+P2:=listplot(V3,color=green,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,title="An Epidemic Model"); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/2las/SmallEp3.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>OneCase:=proc(T0,N,F,I0)<br>
+local S,E,In,R,Val,K,T,v,s,u,a,b,p,C,g,r,Deltat,List,i,Time;<br>
+Digits:=5;<br>
+Time:=T0;<br>
+Val:=I0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(F-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+S:=Val[1];<br>
+In:=Val[2];<br>
+R:=Val[3];<br>
+Val:=<br>
+[<br>
+evalf(<br>
+S+Deltat*(<br>
+-(7/(2900*10))*S*In<br>
++(1/4)*R<br>
+)<br>
+),<br>
+evalf(<br>
+In+Deltat*(<br>
+(7/(2900*10))*In*S<br>
+-(1)*In<br>
+<br>
+)<br>
+)<br>
+,<br>
+evalf(<br>
+R+Deltat*(<br>
+(1)*In-(1/4)*R<br>
+<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=OneCase(0,3,100,[2900,10,0]); <br>
+<br>
+</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/2las/SmallEp4.gif" width=437 height=29 alt="S0 := [[0, [2900, 10, 0]], [100/3, [2666.7, -90., 3...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/2las/SmallEp5.gif" width=178 height=29 alt="S0 := [[0, [2900, 10, 0]], [100/3, [2666.7, -90., 3...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+S0:=OneCase(0,2000,20,[2000,1000,0]):<br>
+<br>
+V1:=Make1(S0):<br>
+<br>
+V2:=Make2(S0):<br>
+<br>
+V3:=Make3(S0):<br>
+<br>
+P0:=listplot(V1,color=red,legend="Susceptible"):<br>
+<br>
+P1:=listplot(V2,color=blue,legend="Infected"):<br>
+<br>
+P2:=listplot(V3,color=green,legend="Recovered"):<br>
+<br>
+display(P0,P1,P2,title="An Epidemic Model"); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/2las/SmallEp6.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

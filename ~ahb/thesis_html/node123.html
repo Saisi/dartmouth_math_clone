@@ -1,0 +1,581 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>General system--windowed estimation of correlation spectrum</TITLE>
+<META NAME="description" CONTENT="General system--windowed estimation of correlation spectrum">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node124.html">
+<LINK REL="previous" HREF="node122.html">
+<LINK REL="up" HREF="node121.html">
+<LINK REL="next" HREF="node124.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1604"
+  HREF="node124.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1602"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1596"
+  HREF="node122.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1605"
+  HREF="node124.html">Considerations in a billiard</A>
+<B> Up:</B> <A NAME="tex2html1603"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1597"
+  HREF="node122.html">Trajectories the issue of</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001120000000000000000">
+General system--windowed estimation of correlation spectrum</A>
+</H1>
+
+<P>
+I assume that <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> (which I call the `signal')
+for a single, ergodic trajectory
+has been generated and stored at a fine enough time-resolution <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1574.gif"
+ ALT="$t_r$">
+to capture
+all the desired features.
+This can be done by evaluating <!-- MATH
+ $-\partial {\mathcal{H}} / \partial x$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img55.gif"
+ ALT="$-\partial {\mathcal{H}}/\partial x$"> along the trajectory, and subtracting
+the average value (estimated, or often analytically known).
+We need <!-- MATH
+ $t_r < \omega_0$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1575.gif"
+ ALT="$t_r &lt; \omega_0$">, where <IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1321.gif"
+ ALT="$\omega_0$"> is the upper
+frequency limit desired for the band profile.
+
+<P>
+The auto-correlation spectrum of this single signal is <!-- MATH
+ $\tilde{C}_{\mathcal{F}}(\omega)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1576.gif"
+ ALT="$\tilde{C}_{\mathcal{F}}(\omega)$">, and if
+the signal exists over all times <!-- MATH
+ $-\infty < t < \infty$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1577.gif"
+ ALT="$-\infty &lt; t &lt; \infty$"> then <!-- MATH
+ $\tilde{C}_{\mathcal{F}}(\omega)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1576.gif"
+ ALT="$\tilde{C}_{\mathcal{F}}(\omega)$">
+is a stochastic quantity uncorrelated in <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">.
+The microcanonical average 
+<!-- MATH
+ $\tilde{C}(\omega)= \langle \tilde{C}_{\mathcal{F}}(\omega)\rangle_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1578.gif"
+ ALT="$\tilde{C}(\omega)= \langle \tilde{C}_{\mathcal{F}}(\omega)\rangle_{{\mbox{\tiny E}}}$"> (I drop the energy subscript)
+is reached by averaging over initial conditions of
+trajectories.
+It is <!-- MATH
+ $\tilde{C}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img471.gif"
+ ALT="$\tilde{C}(\omega)$"> that is the desired `band profile'.
+However, <!-- MATH
+ $\tilde{C}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img471.gif"
+ ALT="$\tilde{C}(\omega)$"> is also the <EM>local mean</EM> of <!-- MATH
+ $\tilde{C}_{\mathcal{F}}(\omega)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1576.gif"
+ ALT="$\tilde{C}_{\mathcal{F}}(\omega)$">, so can be more easily
+estimated by smoothing <!-- MATH
+ $\tilde{C}_{\mathcal{F}}(\omega)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1576.gif"
+ ALT="$\tilde{C}_{\mathcal{F}}(\omega)$">.
+This smoothing (convolution with Gaussian of width <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1117.gif"
+ ALT="$\omega_s$">)
+is performed using the Fast Fourier Transform (FFT) [<A
+ HREF="node161.html#numrec">161</A>].
+Since computationally the signal must be of necessarily finite length
+<IMG
+ WIDTH="37" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1579.gif"
+ ALT="$\sim t_0$">,
+correlations in <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">-space arise in <!-- MATH
+ $\tilde{C}_{\mathcal{F}}(\omega)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1576.gif"
+ ALT="$\tilde{C}_{\mathcal{F}}(\omega)$"> on the scale <IMG
+ WIDTH="29" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1580.gif"
+ ALT="$t_0^{-1}$">.
+Therefore the smoothing operation corresponds to averaging <!-- MATH
+ $N \approx
+\omega_s t_0$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1581.gif"
+ ALT="$N \approx
+\omega_s t_0$"> independent samples, and a fractional error of <IMG
+ WIDTH="52" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1582.gif"
+ ALT="$N^{-1/2}$">
+results for the band profile estimate.
+This estimation error appears as multiplicative noise with
+frequency correlation scale <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1117.gif"
+ ALT="$\omega_s$">.
+Typical parameters were <!-- MATH
+ $\omega_0 = 4,
+\omega_s = 10^{-2}$
+ -->
+<IMG
+ WIDTH="139" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1583.gif"
+ ALT="$\omega_0 = 4,
+\omega_s = 10^{-2}$">, <IMG
+ WIDTH="67" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1584.gif"
+ ALT="$t_0 = 10^5$">, giving
+about 3% RMS estimation error.
+
+<P>
+There is another `failure mode' of this estimation procedure:
+There are only <!-- MATH
+ $M = \sim t_0/\tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1585.gif"
+ ALT="$M = \sim t_0/\tau_{{\mbox{\tiny cl}}}$"> independent samples in the finite sample
+length, therefore only <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> independent values can appear in <IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1586.gif"
+ ALT="$cfw$">.
+If <!-- MATH
+ $M \ll \omega_0 t_0$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1587.gif"
+ ALT="$M \ll \omega_0 t_0$"> then the errors may exceed that quoted above,
+because samples are no longer independent.
+This failure mode only arises when <!-- MATH
+ $\tilde{C}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img471.gif"
+ ALT="$\tilde{C}(\omega)$"> is desired at large <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">,
+which forces <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1574.gif"
+ ALT="$t_r$"> to shrink, and therefore <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1588.gif"
+ ALT="$t_0$"> to also shrink if
+the memory requirements are not to grow.
+In this case, true averaging over trajectories is the only remedy.
+
+<P>
+Now I describe how to find <!-- MATH
+ $\tilde{C}_{\mathcal{F}}(\omega)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1576.gif"
+ ALT="$\tilde{C}_{\mathcal{F}}(\omega)$"> given  <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$">.
+I will always use the Fourier Transform (FT) convention
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:ftconv"></A>
+<!-- MATH
+ \begin{eqnarray}
+\tilde{A}(\omega) & \; = \; & \int_{-\infty}^{\infty} \!\!dt \,
+	e^{i \omega t} A(t) \hspace{1.4in} \mbox{forward},
+	\nonumber \\
+	A(t) & \; = \; & \frac{1}{2\pi} \int_{-\infty}^{\infty} \!\!d\omega \,
+	e^{-i \omega t} \tilde{A}(\omega) \hspace{1in} \mbox{backward}.
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1589.gif"
+ ALT="$\displaystyle \tilde{A}(\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img271.gif"
+ ALT="$\textstyle \; = \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="338" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1590.gif"
+ ALT="$\displaystyle \int_{-\infty}^{\infty} \!\!dt \,
+e^{i \omega t} A(t) \hspace{1.4in} \mbox{forward},$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1591.gif"
+ ALT="$\displaystyle A(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img271.gif"
+ ALT="$\textstyle \; = \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="352" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1592.gif"
+ ALT="$\displaystyle \frac{1}{2\pi} \int_{-\infty}^{\infty} \!\!d\omega \,
+e^{-i \omega t} \tilde{A}(\omega) \hspace{1in} \mbox{backward}.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+For this general real signal <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1593.gif"
+ ALT="$A(t)$">,
+the Wiener-Khinchin Theorem (easy to prove [<A
+ HREF="node161.html#numrec">161</A>]) equates
+the power spectrum to the FT of the auto-correlation,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+|\tilde{A}(\omega) |^2 \;= \; \tilde{C}_A(\omega) , \hspace{.8in}
+	\mbox{with} \hspace{.2in}
+	C_A(\tau) \; \equiv \; \int_{-\infty}^{\infty} \!\!dt \,
+	A(t) A(t+\tau).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:wk"></A><IMG
+ WIDTH="540" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1594.gif"
+ ALT="\begin{displaymath}
+\vert\tilde{A}(\omega) \vert^2 \;= \; \tilde{C}_A(\omega) ,...
+...; \equiv \; \int_{-\infty}^{\infty} \!\!dt \,
+A(t) A(t+\tau).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+I choose <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1593.gif"
+ ALT="$A(t)$"> to be a windowed version of the signal,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A(t) \; = \; W(t) \, {\mathcal{F}}(t), \hspace{1in}
+	\mbox{$W(t) = $\  windowing function},
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:windowing"></A><IMG
+ WIDTH="519" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1595.gif"
+ ALT="\begin{displaymath}
+A(t) \; = \; W(t) \, {\mathcal{F}}(t), \hspace{1in}
+\mbox{$W(t) = $\ windowing function},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $W(\pm\infty)\rightarrow0$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1596.gif"
+ ALT="$W(\pm\infty)\rightarrow0$"> and has
+finite characteristic width <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1588.gif"
+ ALT="$t_0$">.
+This windowing function defines the maximum trajectory length needed.
+Therefore the auto-correlation is related to the desired
+<!-- MATH
+ $C_{\mathcal{F}}(\tau)$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1597.gif"
+ ALT="$C_{\mathcal{F}}(\tau)$"> by
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+C_A(\tau) \; = \; \int_{-\infty}^{\infty} \!\!dt \,
+	W(t) W(t+\tau) {\mathcal{F}}(t) {\mathcal{F}}(t+\tau) \; = \;
+	C_W(\tau) C_{\mathcal{F}}(\tau),
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:corrwindow"></A><IMG
+ WIDTH="515" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1598.gif"
+ ALT="\begin{displaymath}
+C_A(\tau) \; = \; \int_{-\infty}^{\infty} \!\!dt \,
+W(t) W...
+...\mathcal{F}}(t+\tau) \; = \;
+C_W(\tau) C_{\mathcal{F}}(\tau),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the last step involved identifying <!-- MATH
+ $W(t) W(t+\tau)$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1599.gif"
+ ALT="$W(t) W(t+\tau)$"> as a
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img152.gif"
+ ALT="$\tau$">-dependent weighting function whose <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">-integral is <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1600.gif"
+ ALT="$C_W(\tau)$">,
+giving a generalization of the `top-hat' weighting function of <I>e.g. </I>
+Eq.(<A HREF="node19.html#eq:ctraj">2.30</A>).
+Applying the Convolution Theorem[<A
+ HREF="node161.html#numrec">161</A>] and dividing by <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1601.gif"
+ ALT="$Z$">,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{|\tilde{A}(\omega)|^2}{Z} \; = \;
+	\frac{1}{Z}(\tilde{C}_{\mathcal{F}} \ast \tilde{C}_W)(\omega) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:cest"></A><IMG
+ WIDTH="389" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1602.gif"
+ ALT="\begin{displaymath}
+\frac{\vert\tilde{A}(\omega)\vert^2}{Z} \; = \;
+\frac{1}{Z}(\tilde{C}_{\mathcal{F}} \ast \tilde{C}_W)(\omega) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<!-- MATH
+ $\tilde{C}_W(\omega)$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1603.gif"
+ ALT="$\tilde{C}_W(\omega)$"> is a narrowly peaked function <!-- MATH
+ $\approx
+Z \delta(\omega)$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1604.gif"
+ ALT="$\approx
+Z \delta(\omega)$"> where the normalization is <!-- MATH
+ $Z = 2\pi \int_{-\infty}^{\infty} \!\!dt \, W(t)^2$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1605.gif"
+ ALT="$Z = 2\pi \int_{-\infty}^{\infty} \!\!dt \, W(t)^2$">.
+Therefore we have the LHS as our estimate for <!-- MATH
+ $\tilde{C}_{\mathcal{F}}(\omega)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1576.gif"
+ ALT="$\tilde{C}_{\mathcal{F}}(\omega)$">.
+Structure below frequency scale <IMG
+ WIDTH="29" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1580.gif"
+ ALT="$t_0^{-1}$"> (the <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">-function width)
+is lost.
+I typically used the Gaussian window <!-- MATH
+ $W(t) = e^{-t^2/(2t_0^2)}$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1606.gif"
+ ALT="$W(t) = e^{-t^2/(2t_0^2)}$">, for which
+<!-- MATH
+ $Z = 2 \pi^{3/2} t_0$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1607.gif"
+ ALT="$Z = 2 \pi^{3/2} t_0$">.
+The maximum signal length <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1608.gif"
+ ALT="$T_0$"> needed to evaluate the windowed signal
+<IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1593.gif"
+ ALT="$A(t)$"> was typically chosen as <IMG
+ WIDTH="36" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1609.gif"
+ ALT="$10 t_0$">, beyond which <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1610.gif"
+ ALT="$W(t)$">
+is negligible.
+Because <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1610.gif"
+ ALT="$W(t)$"> dies to zero very smoothly,
+the windowed signal <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1593.gif"
+ ALT="$A(t)$"> of length <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1608.gif"
+ ALT="$T_0$"> can now be used as a periodic
+discretely-sampled array,
+and the FFT used to find <!-- MATH
+ $\tilde{A}(\omega)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1611.gif"
+ ALT="$\tilde{A}(\omega)$">.
+
+<P>
+All FFTs were implemented on a
+Compaq XP1000 (21264 667MHz Alpha processor) running C++ and
+the Compaq Extended Math Library (CXML).
+Using this setup, an 8 million (<IMG
+ WIDTH="27" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1612.gif"
+ ALT="$2^{23}$">) point double-precision
+FFT takes about 5 seconds.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1604"
+  HREF="node124.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1602"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1596"
+  HREF="node122.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1605"
+  HREF="node124.html">Considerations in a billiard</A>
+<B> Up:</B> <A NAME="tex2html1603"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1597"
+  HREF="node122.html">Trajectories the issue of</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

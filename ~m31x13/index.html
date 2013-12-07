@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Header: Title goes here.
+	
+	Note: Style declarations are located in the CSS file "math31style.css". Contact Scott
+	LaLonde to obtain it.
+	
+	Last line of header loads MathJax - available on the Gauss server.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Math 31 - Summer 2013</title>
+<link rel="stylesheet" type="text/css" href="math31style.css">
+<script src="https://www.math.dartmouth.edu/include/MathJax/MathJax.js?config=default" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Math 31: Topics in Algebra</h1>
+<h2>Summer 2013</h2>
+<br>
+
+<!-- Javascript for automatically generating the date and time of last update. Prints in
+	the format "Last updated (Month) (Day), (Year) at xx:xx am/pm EDT".
+-->
+<div style="text-align:center;">
+<span style="color:DarkSlateGray;">
+<script language="javascript"> 
+months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December']; 
+var d=new Date();
+var weekday=new Array(7);
+
+var d = new Date();
+(d.getFullYear());
+
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(60*60)) ) 
+var hours = theDate.getHours();
+var minutes = theDate.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+with (theDate) { 
+document.write("Last updated "+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+
+' at '+hours+':'+minutes+' '+ampm+" EDT") 
+}
+</script>
+</span>
+</div>
+<br>
+
+    
+<!-- Generates header with links to other components of the course webpage. -->
+<table class="header">
+<tbody>
+
+<tr>
+<td class="header"><p class="header"><a class="header" href="index.html">Main Page
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="info.html">Course Information
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="syllabus.html">Syllabus
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="homework.html">Homework
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="exams.html">Exams & Quizzes
+</a></p></td>
+
+<td class="header"><p class="header"><a class="header" href="projects.html">Projects
+</a></p></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+
+
+<!-- Insert picture of famous algebraists. -->
+<div class="alg">
+<a href="algebraists.html"><img style="height:400px" src="https://www.math.dartmouth.edu/~m31x13/Algebraists.png"></a>
+</div>
+<br>
+
+
+<!-- Insert table with instructor information. -->
+<!-- <table align="center" width=30% border=0 cellpadding=10 cellspacing=2 width=375>
+<tr bgcolor="99cccc">
+
+<td align=center> -->
+<div class="instructor" style="background-color: #99cccc;">
+<u>Instructor</u>
+<br>
+Scott LaLonde
+<br>
+Office: 219 Kemeny Hall
+<br>
+E-mail: <a href="mailto:scott.m.lalonde.gr@dartmouth.edu">scott.m.lalonde@dartmouth.edu
+</a>
+</div>
+
+<div class="instructor" style="background-color: #a4c6cc;">
+<u>Scheduled Lectures</u>
+<br>
+MWF 12:30&ndash;1:35 <br> Tu 1:00&ndash;1:50 (x-period)
+<br>
+Location: Kemeny 105
+</div>
+
+<div class="instructor" style="background-color: #b0bfcb;">
+<u>Office Hours</u>
+<br>
+Monday 2:00&ndash;3:30 pm
+<br>
+Tuesday 2:00&ndash;4:00 pm
+<br>
+Friday 10:00&ndash;11:00 am
+<br>
+or by appointment
+</div>
+
+
+<BR>
+<BR>
+<BR>
+
+</BODY>
+</HTML>

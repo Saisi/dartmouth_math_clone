@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>Using Kerberos Authentication - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="Using Kerberos Authentication">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/kerberos.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Getting Started">
+
+<P ALIGN="CENTER"><B>Search in
+Using Kerberos Authentication:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l1"><A HREF="options-TOPIC=Getting+Started&QUERY=.html">Command-Line Printing and Options</A></P>
+<P CLASS="l1"><A HREF="glossary-TOPIC=Getting+Started&QUERY=.html">Glossary</A></P>
+<P CLASS="l1"><A HREF="policies-TOPIC=Getting+Started&QUERY=.html">Managing Operation Policies</A></P>
+<P CLASS="l1"><A HREF="overview-TOPIC=Getting+Started&QUERY=.html">Overview of CUPS</A></P>
+<P CLASS="l1"><A HREF="accounting-TOPIC=Getting+Started&QUERY=.html">Printer Accounting Basics</A></P>
+<P CLASS="l1"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html">Printer Sharing</A></P>
+<P CLASS="l1"><A HREF="security-TOPIC=Getting+Started&QUERY=.html">Server Security</A></P>
+<P CLASS="l1"><A HREF="license-TOPIC=Getting+Started&QUERY=.html">Software License Agreement</A></P>
+<P CLASS="l1"><A HREF="standard-TOPIC=Getting+Started&QUERY=.html">Standard Configuration</A></P>
+<P CLASS="l1"><A HREF="translation-TOPIC=Getting+Started&QUERY=.html">Translating and Customizing CUPS</A></P>
+<P CLASS="l1"><A HREF="cgi-TOPIC=Getting+Started&QUERY=.html">Using CGI Programs</A></P>
+<P CLASS="l1"><A HREF="kerberos-TOPIC=Getting+Started&QUERY=.html">Using Kerberos Authentication</A></P>
+<P CLASS="l2"><A HREF="kerberos.html#CUPS">Configuring CUPS to Use Kerberos</A></P>
+<P CLASS="l2"><A HREF="kerberos.html#KRB5">Configuring Kerberos on Your System</A></P>
+<P CLASS="l2"><A HREF="kerberos.html#IMPLEMENT">Implementation Information</A></P>
+<P CLASS="l2"><A HREF="kerberos.html#REQUIREMENTS">System Requirements</A></P>
+<P CLASS="l1"><A HREF="network-TOPIC=Getting+Started&QUERY=.html">Using Network Printers</A></P>
+<P CLASS="l1"><A HREF="whatsnew-TOPIC=Getting+Started&QUERY=.html">What&#39;s New in CUPS 1.6</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>Using Kerberos Authentication</H1>
+<FORM ACTION="/help/kerberos.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">Using Kerberos Authentication</H1>
+
+<P>CUPS allows you to use a Key Distribution Center (KDC) for authentication on your local CUPS server and when printing to a remote authenticated queue. This document describes how to configure CUPS to use Kerberos authentication and provides links to the MIT help pages for configuring Kerberos on your systems and network.</P>
+
+
+<H2 CLASS="title"><A NAME="REQUIREMENTS">System Requirements</A></H2>
+
+<p>The following are required to use Kerberos with CUPS:</p>
+
+<ol>
+
+	<li>Heimdal Kerberos (any version) or MIT Kerberos (1.6.3 or newer)</li>
+
+	<li>Properly configured Domain Name System (DNS) infrastructure (for your servers):<ol type='a'>
+		<li>DNS server(s) with static IP addresses for all CUPS servers or configured to allow DHCP updates to the host addresses and</li>
+		<li>All CUPS clients and servers configured to use the same
+DNS server(s).</li>
+	</ol></li>
+
+	<li>Properly configured Kerberos infrastructure:<ol type='a'>
+		<li>KDC configured to allow CUPS servers to obtain Service Granting Tickets (SGTs) for the "host" service,</li>
+		<li>LDAP-based user accounts - both OpenDirectory and ActiveDirectory provide this with the KDC, and</li>
+		<li>CUPS clients and servers bound to the same KDC and LDAP
+	server(s).</li>
+	</ol></li>
+
+	<li>A "host" Service Granting Ticket (SGT) for every CUPS server</li>
+
+</ol>
+
+
+<H2 CLASS="title"><A NAME="KRB5">Configuring Kerberos on Your System</A></H2>
+
+<P>Before you can use Kerberos with CUPS, you will need to configure Kerberos on your system and setup a system as a KDC. Because this configuration is highly system and site-specific, please consult the following on-line resources provided by the creators of Kerberos at the Massachusetts Institute of Technology (MIT):</P>
+
+<UL>
+
+	<LI><A HREF="http://web.mit.edu/kerberos/">Kerberos: The Network Authentication Protocol</A></LI>
+
+	<LI><A HREF="http://web.mit.edu/macdev/KfM/Common/Documentation/faq-osx.html">Kerberos
+	on OS X Frequently Asked Questions</A></LI>
+
+</UL>
+
+<P>The Linux Documentation Project also has a HOWTO on Kerberos:</P>
+
+<UL>
+
+	<LI><A HREF="http://tldp.org/HOWTO/html_single/Kerberos-Infrastructure-HOWTO/">Kerberos
+	Infrastructure HOWTO</A></LI>
+
+</UL>
+
+
+<H2 CLASS="title"><A NAME="CUPS">Configuring CUPS to Use Kerberos</A></H2>
+
+<P>Once youhave configured Kerberos on your system(s), you can then enable Kerberos authentication by selecting the <tt>Negotiate</tt> authentication type. The simplest way to do this is using the <tt>cupsctl(8)</tt> command on your server(s):</P>
+
+<PRE CLASS="command">
+<KBD>cupsctl DefaultAuthType=Negotiate</KBD>
+</PRE>
+
+<P>You can also enable Kerberos from the web interface by checking the <VAR>Use Kerberos Authentication</VAR> box and clicking <VAR>Change Settings</VAR>:</P>
+
+<PRE CLASS="command">
+http://server.example.com:631/admin
+</PRE>
+
+<P>After you have enabled Kerberos authentication, use the built-in "authenticated" policy or your own custom policies with the printers you will be sharing. See <a href="policies.html">Managing Operation Policies</a> for more information.</P>
+
+
+<H2 CLASS="title"><A NAME="IMPLEMENT">Implementation Information</A></H2>
+
+<P>CUPS implements Kerberos over HTTP using GSSAPI and the service name "host". Because of limitations in the HTTP GSSAPI protocol extension, only a single domain/KDC is supported for authentication. The HTTP extension is described in <a href="http://tools.ietf.org/html/rfc4559">RFC 4559</a>.</P>
+
+<P>When doing printing tasks that require authentication, CUPS requests single-use "tickets" from your login session to authenticate who you are. These tickets give CUPS a username of the form "user@REALM", which is then converted to just "user" for purposes of user and group checks.</P>
+
+<P>In order to support printing to a shared printer, CUPS runs the IPP backend as the owner of the print job so it can obtain the necessary credentials.</P>
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

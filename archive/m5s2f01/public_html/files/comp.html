@@ -1,0 +1,101 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>Math 5 (Computational Resources) Ð Fall 2001</title></head>
+<body background="http://www.math.dartmouth.edu/~m5s2f01/files/blue_pap.gif">
+<h2> Maple Tools  </h2>
+
+WARNING: When you copy stuff into maple avoid copying in anything that is
+<FONT SIZE ="+1", color="blue"> blue </FONT>.  
+<p>
+Many of your projects will involve involve small numbers.  When using
+small numbers the use of the normal curve to find confidence intervals and
+determine whether to reject or accept an hypothesis is not necessarily a
+good idea.   Hence I am providing you with some computational tools to
+help you accurately report and deal with small numbers.
+<p>
+Perhaps the most important is to be able to accurately compute the
+<a
+href="http://math.dartmouth.edu/~m5s2f01/files/Confidence.html">
+confidence </a> you have
+about a percentage you wish to quote.  This 
+program will allow to explore the reportable  confidence  for your given
+number samples as you vary the choice of confidence interval.  It will
+also provide you with a picture which may help you and any reader of your
+work to understand where this computation came from and why they should
+put faith in it.  It is based on using our good friend the binomial
+distributions.  
+<p>
+The next most important tool will likely be your ability to test an
+ <a
+href="http://math.dartmouth.edu/~m5s2f01/files/improved.html">
+hypothesis</a> (new and improved!).  Many
+common tests (like the chi-squared test) will not work
+well if when testing a single hypothesis and are rather inaccurate when
+using  small amount of data.  Here we give a way to explore the chance
+that a given measurement is due to chance alone, given the acceptance a
+null hypothesis.  It also provides a picture so that you may easily remind
+your readers why they should put faith in your methodology. 
+Once again this test  is based on using our good friend the binomial
+distributions.
+
+<p>
+Here is a program allowing you to <a
+href="http://math.dartmouth.edu/~m5s2f01/files/Competion.html">
+compete </a> hypothesis
+against each other. 
+
+<p>
+Excel does not produce nice <a
+href="http://math.dartmouth.edu/~m5s2f01/files/Histogram.html"> histograms
+</a> with out some effort.  This maple program does a pretty good job ,and
+will help you confirm some of the  numbers which arise when looking at a
+single set of data.
+
+<p>
+Excel does a better job at producing <a
+href="http://math.dartmouth.edu/~m5s2f01/files/Scatter.html"> scatter
+plots
+</a>.  This maple program however will fuzz out the data and will be
+particularly useful if you data contains lots of repeated information.
+Once again it may also will help you confirm some of you numerical
+suspicions.
+
+
+<p>
+
+Here is a program to help you understand <a
+href="http://math.dartmouth.edu/~m5s2f01/files/Streak.html">
+steaks </a> and run
+large
+numbers of streak experiments to compare empirical data.
+
+<p>
+
+Here is program allowing you to <a
+href="http://math.dartmouth.edu/~m5s2f01/files/Simulate.html">
+simulate </a> your own
+probability distribution.  This
+will help you compare what you believe is going on with some actual data
+produced given this belief.
+
+<p>
+Here is a program allowing you to use  the slightly more
+involved <a
+href="http://math.dartmouth.edu/~m5s2f01/files/chit.html"> chi-square
+test </a> (corrected 11/28/01).   This program does involve an
+approximation and for small
+amounts of data may not be accurate.  If you use this test and any of the
+"classes" involved  have less than five members or there are only two
+classes you must warn your reader that this test is known to
+be  inaccurate when applied in such a setting.  Otherwise it is a test
+you are free to simply use it.
+
+
+<p>
+
+Here  is a program that probably will not help you deal with <a
+href="http://math.dartmouth.edu/~m5s2f01/files/NonLinear.html">
+non-linear  </a>
+correlations, but if you see me together we can probably get it to do so! 
+</body>
+</html>
+

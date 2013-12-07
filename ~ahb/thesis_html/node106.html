@@ -1,0 +1,609 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Design of the light fields</TITLE>
+<META NAME="description" CONTENT="Design of the light fields">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node107.html">
+<LINK REL="previous" HREF="node105.html">
+<LINK REL="up" HREF="node104.html">
+<LINK REL="next" HREF="node107.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1433"
+  HREF="node107.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1431"
+  HREF="node104.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1425"
+  HREF="node105.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1434"
+  HREF="node107.html">Discussion of optical cut-off</A>
+<B> Up:</B> <A NAME="tex2html1432"
+  HREF="node104.html">Trap Concept</A>
+<B> Previous:</B> <A NAME="tex2html1426"
+  HREF="node105.html">Theory of the light</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00922000000000000000"></A>
+<A NAME="sec:des"></A>
+<BR>
+Design of the light fields
+</H2>
+
+<P>
+Our basic task is to create intense evanescent light fields with a potential
+minimum sufficiently far
+from a dielectric surface to make
+the surface interaction potential and heating mechanisms
+negligible (discussed in Section <A HREF="node117.html#sec:surf">8.5.1</A>).
+The main difficulty arises because the evanescent fields have
+a typical exponential decay length <!-- MATH
+ $\sim \lambda / 2\pi$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1311.gif"
+ ALT="$\sim \lambda / 2 \pi$">,
+so if we are to have a trap of useful
+depth, we are restricted to keep it within roughly <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img83.gif"
+ ALT="$\lambda$"> of the surface
+(less than a micron).
+
+<P>
+A potential minimum in one dimension can be obtained using a blue (repulsive)
+light field of higher intensity at the
+dielectric surface than the red (attractive) light field, and ensuring the
+decay lengths obey <!-- MATH
+ $L_{\rm red} > L_{\rm blue}$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1359.gif"
+ ALT="$L_{\rm red} &gt; L_{\rm blue}$">, giving a potential
+of the form
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U_{\rm dip}(y) =
+	A_{\rm blue} e^{-y/L_{\rm blue}} \,- A_{\rm red} e^{-y/L_{\rm red}}\,.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:uofy"></A><IMG
+ WIDTH="432" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1360.gif"
+ ALT="\begin{displaymath}
+U_{\rm dip}(y) =
+A_{\rm blue} e^{-y/L_{\rm blue}} \,- A_{\rm red} e^{-y/L_{\rm red}}\,.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This gives a repulsive force at short range, which becomes attractive at long
+range (see Figure <A HREF="node103.html#fig:dielgeom">8.1</A>b),
+and is the scheme for the planar trap of Ovchinnikov <I>et al. </I>[<A
+ HREF="node161.html#ov91">156</A>].
+A large amount of insight into our proposed trap can be gleaned from this
+simple one-dimensional model (which we call the
+<EM>exponential approximation</EM>),
+because the squared electric fields above the guide will turn out to
+approximate
+exponential forms in the vertical direction quite closely.
+
+<P>
+If we define a normalized decay length difference
+<!-- MATH
+ $\alpha_L \equiv (L_{\rm red} - L_{\rm blue})/L_{\rm blue}$
+ -->
+<IMG
+ WIDTH="199" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1361.gif"
+ ALT="$\alpha_L \equiv (L_{\rm red} - L_{\rm blue})/L_{\rm blue}$">, then
+we can give two reasons why increasing <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1362.gif"
+ ALT="$\alpha_L$"> is a vital
+design objective.
+Firstly, it is easy to show that for small <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1362.gif"
+ ALT="$\alpha_L$">
+the deepest available trap depth (found by optimizing the ratio of surface
+intensities <!-- MATH
+ $A_{\rm red}/A_{\rm blue}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1363.gif"
+ ALT="$A_{\rm red}/A_{\rm blue}$">)
+scales as <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1362.gif"
+ ALT="$\alpha_L$">.
+Secondly, a larger <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1362.gif"
+ ALT="$\alpha_L$"> is beneficial for trap coherence,
+(giving
+a smaller spontaneous decay rate
+at a given trap depth and detuning), because the sum of the
+intensities can be kept lower (see equation (<A HREF="node105.html#eq:spont">8.5</A>)) for a given
+intensity difference (equation (<A HREF="node105.html#eq:pot">8.4</A>)).
+We will quantify this latter connection in Section <A HREF="node109.html#sec:dep">8.3.1</A>.
+
+<P>
+Our two key differences from the proposal of Ovchinnikov <I>et al. </I>are as follows.
+Firstly, we create a non-zero <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1362.gif"
+ ALT="$\alpha_L$"> by using two orthogonally-polarized
+bound modes of a dielectric slab guide, which have different evanescent decay
+lengths at the same frequency<A NAME="tex2html73"
+  HREF="footnode.html#foot14873"><SUP>8.2</SUP></A>.
+This contrasts with Ovchinnikov <I>et al. </I>
+who suggest varying the decay lengths
+by varying the reflection angles from the inside surface of a glass prism.
+Secondly, horizontal confinement is achieved by limiting the width of the
+slab guide to approximately <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img83.gif"
+ ALT="$\lambda$">
+(forming what is called a <EM>channel guide</EM> [<A
+ HREF="node161.html#tamir">117</A>]),
+which automatically creates a
+maximum in each light intensity field
+in the horizontal direction. This results in a tight horizontal confinement
+in the atomic potential, of similar size to the vertical confinement, and
+is something very hard to achieve in a prism geometry.
+
+<P>
+A schematic of our design is shown in Figure <A HREF="node103.html#fig:dielgeom">8.1</A>a.
+The optical guide
+height <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$"> and width <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img29.gif"
+ ALT="$W$"> are kept small enough to guarantee
+that
+there are exactly two bound modes, differing in
+polarization but not in nodal structure
+(in optical terminology this is called <I>single-mode</I>):
+<IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1364.gif"
+ ALT="$E_{11}^x$"> has an electric field predominantly 
+in the x direction<A NAME="tex2html74"
+  HREF="footnode.html#foot15200"><SUP>8.3</SUP></A>, and is
+to be excited by blue-detuned laser light,
+and <IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1369.gif"
+ ALT="$E_{11}^y$"> has electric field predominantly in the y direction
+and is
+to be excited by red-detuned laser light.
+We can see
+why their vertical decay lengths differ by considering the case of the slab
+(<EM>i.e.</EM> taking the width
+<!-- MATH
+ $W \rightarrow \infty$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1370.gif"
+ ALT="$W \rightarrow \infty$">), where these 
+modes are simply the slab TE and TM modes respectively.
+For both these slab modes the purely transverse field
+obeys the differential equation
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{\partial^2 \phi}{\partial y^2} =
+	k_0^2 \, [(n_{\rm eff}^{(i)})^2 - n(y)^2] \, \phi \,,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:slab"></A><IMG
+ WIDTH="386" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1371.gif"
+ ALT="\begin{displaymath}
+\frac{\partial^2 \phi}{\partial y^2} =
+k_0^2 \, [(n_{\rm eff}^{(i)})^2 - n(y)^2] \, \phi \,,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="59" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1372.gif"
+ ALT="$\phi = E_x$"> (<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1373.gif"
+ ALT="$H_x$">) for the TE (TM) mode, the eigenvalue
+<!-- MATH
+ $n_{\rm eff}^{(i)} \equiv k_z^{(i)}/k_0$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1374.gif"
+ ALT="$n_{\rm eff}^{(i)} \equiv k_z^{(i)}/k_0$"> is the effective refractive index for
+the <IMG
+ WIDTH="24" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1375.gif"
+ ALT="$i^{\rm th}$"> mode
+(<IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1376.gif"
+ ALT="$k_z$"> being the wavenumber in the propagation direction
+and
+<IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img857.gif"
+ ALT="$k_0$"> the free space wavenumber), and <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1377.gif"
+ ALT="$n(y)$"> is the spatially-dependent
+refractive index [<A
+ HREF="node161.html#tamir">117</A>].
+(This is equivalent to a one-dimensional quantum problem in the
+direction normal to the slab, in a potential <IMG
+ WIDTH="76" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1378.gif"
+ ALT="$-k_0^2 n(y)^2$"> with
+<!-- MATH
+ $\hbar^2/2m = 1$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1379.gif"
+ ALT="$\hbar^2/2m = 1$">).
+However the boundary conditions on the slab surfaces differ for the two mode
+types: <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1137.gif"
+ ALT="$\phi$"> is always continuous, but
+<!-- MATH
+ $\partial \phi / \partial y$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1380.gif"
+ ALT="$\partial \phi / \partial y$"> is continuous for TE as opposed to
+<!-- MATH
+ $n^{-2} \partial \phi / \partial y$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1381.gif"
+ ALT="$n^{-2} \partial \phi / \partial y$"> continuous for TM.
+This asymmetry exists because the permittivity <!-- MATH
+ $\epsilon = n^2$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1382.gif"
+ ALT="$\epsilon = n^2$"> varies
+in space but the permeability <IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$"> is assumed to be constant.
+This discontinuity in the gradient for the TM mode forces
+it to have a lower <IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1383.gif"
+ ALT="$n_{\rm eff}$"> than that of the TE mode,
+which means it is less tightly bound
+so has a longer
+evanescent decay length.
+This effect becomes more pronounced as the slab index increases or as optical
+cut-off is
+approached (which
+happens when <IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1383.gif"
+ ALT="$n_{\rm eff}$"> decreases until it reaches <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img102.gif"
+ ALT="$n_s$">
+and the mode becomes unbound).
+This tendency
+is preserved even as the width is decreased to only
+a few times the height, as in our scheme.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:dielcutoff"></A><A NAME="15202"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.2:</STRONG>
+
+Numerically solved cut-off curves for a dielectric optical waveguide
+of <IMG
+ WIDTH="77" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img28.gif"
+ ALT="$n_g = 1.56$"> (with <IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1384.gif"
+ ALT="$n_s = 1$">)
+as a function of its
+width and height (dashed curves)
+and, on the same axes, contours of the maximum trapping potential depth
+achievable at fixed total laser power
+(thin solid curves in rectangular overlayed box region).
+Also shown is the symmetry line <IMG
+ WIDTH="62" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1367.gif"
+ ALT="$W=H$">
+(thin dash-dotted line).
+Note that the contours show depth <EM>increasing</EM> as <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$"> decreases,
+almost independent of
+<IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img29.gif"
+ ALT="$W$">, near the suggested
+operating dimensions (shown as a solid ellipse).
+Cut-off is defined as reaching
+an effective refractive index <!-- MATH
+ $n_{\rm eff} \equiv
+k_z/k_o = 1.05$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1385.gif"
+ ALT="$n_{\rm eff} \equiv
+k_z/k_o = 1.05$">, except for <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1386.gif"
+ ALT="$E^x_{21}$"> and <IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1387.gif"
+ ALT="$E^y_{21}$"> (thick dashed lines)
+which we show cut-off at
+<!-- MATH
+ $n_{\rm eff} = 1.02$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1388.gif"
+ ALT="$n_{\rm eff} = 1.02$">.</CAPTION>
+<TR><TD><IMG
+ WIDTH="611" HEIGHT="606" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1389.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_atom/atom_fig2.eps,width=5.5in}}\vspace{0.1in}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+No analytic solution exists for the general rectangular guide,
+so we used the finite element method discussed in Section <A HREF="node112.html#sec:num">8.4</A>
+to solve for the bound mode <IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1383.gif"
+ ALT="$n_{\rm eff}$"> values and fields as a
+function of guide dimensions.
+Figure <A HREF="node106.html#fig:dielcutoff">8.2</A>
+shows the resulting `cut-off curves', that is, contours
+of constant <IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1383.gif"
+ ALT="$n_{\rm eff}$"> in the parameter space <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1390.gif"
+ ALT="$(W,H)$">.
+In this example we chose a guide index <IMG
+ WIDTH="77" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img28.gif"
+ ALT="$n_g = 1.56$">
+(typical for a polymer dielectric) and, as a preliminary case,
+a substrate index <IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1384.gif"
+ ALT="$n_s = 1$">.
+
+<P>
+The single-mode region, in which we wish to remain,
+is bounded below by the <IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1391.gif"
+ ALT="$E^y_{11}$"> and <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1392.gif"
+ ALT="$E^x_{11}$"> curves
+and above by the <IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1387.gif"
+ ALT="$E^y_{21}$"> curve.
+Note that, as in any dielectric guiding structure uniform in the z axis, the
+lowest two modes (<IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1391.gif"
+ ALT="$E^y_{11}$"> and <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1392.gif"
+ ALT="$E^x_{11}$"> in our case)
+<EM>never</EM> truly reach cut-off, rather, they approach it exponentially
+as the guide cross-section is shrunk to zero.
+For this reason, we chose the practical definition of cut-off for these modes
+to be
+<!-- MATH
+ $n_{\rm eff} = 1.05$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1393.gif"
+ ALT="$n_{\rm eff} = 1.05$">, which corresponds to only about 20% of the power being
+carried inside the guide.
+In contrast, higher modes do have true cut-offs[<A
+ HREF="node161.html#snitzer">183</A>,<A
+ HREF="node161.html#tamir">117</A>]
+(this distinction is illustrated
+by the dispersion curves of Figure <A HREF="node111.html#fig:dielnum">8.4</A>), and for the <IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1387.gif"
+ ALT="$E^y_{21}$">
+mode our (numerically limited) contour choice of <!-- MATH
+ $n_{\rm eff} = 1.02$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1394.gif"
+ ALT="$n_{\rm eff} = 1.02$"> falls
+very close to the true cut-off curve.
+
+<P>
+Using the numerically calculated electric field strengths of the
+<IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1391.gif"
+ ALT="$E^y_{11}$"> and <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1392.gif"
+ ALT="$E^x_{11}$">
+modes, we found the red and blue guided laser powers which gave the deepest
+trap, subject to the constraint of fixed total power (keeping the
+detuning constant <A NAME="tex2html76"
+  HREF="footnode.html#foot14926"><SUP>8.4</SUP></A>).
+We also imposed the restriction that the zero of trapping potential come no
+closer than 100nm along the vertical line <IMG
+ WIDTH="46" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img244.gif"
+ ALT="$x=0$">, which kept the trap minimum
+a reasonable distance from the surface (see Section
+<A HREF="node117.html#sec:surf">8.5.1</A>).
+Performing this optimization over a region of the parameter space covering
+the single-mode region gave a contour plot of maximum achievable depth for a
+given total power, shown within the rectangle overlayed on Figure
+<A HREF="node106.html#fig:dielcutoff">8.2</A>.
+This depth increases from negligible values in the top left to
+the largest depths in the lower right, indicating that choosing <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img29.gif"
+ ALT="$W$"> and <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$"> to
+be in this latter corner of the single-mode region is best for depth.
+The depth shows very little variation with <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img29.gif"
+ ALT="$W$"> in this corner, rather
+it is clear that varying <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$"> to stay within our definition of
+the single-mode region
+has become the limiting factor on achievable depth.
+We indicate a practical choice of <!-- MATH
+ $W = 0.97 \,\lambda$
+ -->
+<IMG
+ WIDTH="91" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1395.gif"
+ ALT="$W = 0.97 \,\lambda$"> and <!-- MATH
+ $H = 0.25 \,\lambda$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1396.gif"
+ ALT="$H = 0.25 \,\lambda$">
+as a small marker on Figure <A HREF="node106.html#fig:dielcutoff">8.2</A>.
+Example trapping potentials shapes possible with these parameters are
+shown in Figure
+<A HREF="node107.html#fig:dielpot">8.3</A>;
+we discuss their properties in Section
+<A HREF="node108.html#sec:prop">8.3</A>.
+
+<P>
+In Figure <A HREF="node103.html#fig:dielgeom">8.1</A>a the direct
+excitation of the optical guide by the two
+laser beams is
+shown only schematically.
+In a realistic experimental setup this coupling
+into the guide would happen on the order of
+a centimeter
+from the atom guiding region, and could involve tapered or Bragg
+couplers[<A
+ HREF="node161.html#tamir">117</A>]
+from beams or from other fibers.
+At this distance we estimate that isotropic stray
+light due to an insertion loss of 0.5
+would have 8 orders of magnitude less intensity than
+the EW fields in the guiding region.
+Assuming the light is coherent, this limits the fractional
+modulation of the guiding
+potential to <IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1397.gif"
+ ALT="$10^{-4}$">.
+More improvements are possible, including the use of absorbing shields,
+bending the guide through large angles
+away from the original coupling direction, and reducing the coherence length.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1433"
+  HREF="node107.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1431"
+  HREF="node104.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1425"
+  HREF="node105.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1434"
+  HREF="node107.html">Discussion of optical cut-off</A>
+<B> Up:</B> <A NAME="tex2html1432"
+  HREF="node104.html">Trap Concept</A>
+<B> Previous:</B> <A NAME="tex2html1426"
+  HREF="node105.html">Theory of the light</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

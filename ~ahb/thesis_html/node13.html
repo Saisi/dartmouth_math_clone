@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Review of classical dissipation in a general system</TITLE>
+<META NAME="description" CONTENT="Review of classical dissipation in a general system">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node12.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html405"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html403"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html397"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html406"
+  HREF="node14.html">Adiabatic invariance of phase-space</A>
+<B> Up:</B> <A NAME="tex2html404"
+  HREF="node12.html">Chapter 2: Quantum and</A>
+<B> Previous:</B> <A NAME="tex2html398"
+  HREF="node12.html">Chapter 2: Quantum and</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00310000000000000000"></A>
+<A NAME="sec:classreview"></A>
+<BR>
+Review of classical dissipation in a general system
+</H1>
+
+<P>
+Here I review the mechanism for dissipation in
+a classical ergodic system whose Hamiltonian is
+dependent on an external parameter <IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img103.gif"
+ ALT="$x(t)$">.
+An example model to keep in mind
+is that of a gas particle trapped inside a deformable chaotic cavity,
+where heating of the particle (increase in
+expectation value of the particle kinetic energy) can occur
+due to time-dependent deformation (driving).
+Note that
+the cavity wall is ``cold'', <I>i.e. </I>there are no
+thermal fluctuations in its velocity.
+Heating rate in the cavity case will be discussed in detail in
+Chapters&nbsp;<A HREF="node32.html#ch:dil">3</A> and <A HREF="node42.html#ch:wall">4</A>.
+
+<P>
+The heating has two components:
+I will only be concerned with the <EM>irreversible</EM>
+part, which we will see is due to broadening of the distribution in energy.
+The <EM>reversible</EM> part, which vanishes for any cyclic parameter change,
+is due to solely to changes of phase space volume
+and corresponds to adiabatic heating found in
+the usual thermodynamic treatment of a classical gas.
+In terms of the <EM>generalized force</EM> acting on the parameter,
+the former corresponds to a friction force
+(<!-- MATH
+ $\propto \dot{x}^2$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img104.gif"
+ ALT="$\propto \dot{x}^2$">), and the latter an elastic
+force (gradient of a conservative potential).
+Note that the notion of irreversibility relies on the assumption that
+you are not allowed to ``look'' at the particle in order to decide how
+to vary the deformation (clearly in that case, any heating is `reversible').
+
+<P>
+As is usual in classical statistical mechanics, a `state' of the system will
+mean a distribution in phase space.
+The expectation of quantity is then defined over this distribution
+(this will sometimes be referred to as an `ensemble average').
+It is simplest to derive the energy spreading rate assuming an
+initial distribution which is microcanonical
+(uniform in a single energy shell).
+I will derive this for the case of the parameter changing
+slowly and non-periodically
+in time with velocity <IMG
+ WIDTH="52" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img105.gif"
+ ALT="$\dot{x} = V$">,
+and in the case of sinusoidal time-dependence
+<!-- MATH
+ $x(t) = A\sin(\omega t)$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img51.gif"
+ ALT="$x(t)=A\sin(\omega t)$">.
+Energy spreading leads to an energy diffusion equation.
+The heating rate can then be found for arbitrary initial distribution.
+
+<P>
+This field is quite young:
+Koonin and Randrup [<A
+ HREF="node161.html#koonincl">120</A>] first derived the dissipation rate in the
+context of one-body nuclear viscous forces, in 1977,
+using classical linear response theory.
+My presentation generally follows that of the wave of activity
+since 1990, chiefly
+Wilkinson [<A
+ HREF="node161.html#wilk90">201</A>] (following on the work of Ott [<A
+ HREF="node161.html#ott79">153</A>]),
+Jarzynski [<A
+ HREF="node161.html#jarz92">106</A>,<A
+ HREF="node161.html#jarz93">107</A>], and Cohen [<A
+ HREF="node161.html#doroncrs">47</A>,<A
+ HREF="node161.html#doronfrc">46</A>].
+I will not consider the interesting case of
+more than one parameter, in which Berry's phase effects arise
+(see [<A
+ HREF="node161.html#berryrobbins">27</A>]).
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:shell"></A><A NAME="1275"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.1:</STRONG>
+
+a) General picture: constant-energy contours in phase-space
+at initial time, and subsequent phase-space spreading about a
+moving energy shell.
+b) Invariance of phase-space volume <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$"> determines
+shell energy <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img107.gif"
+ ALT="$E(x)$"> in the adiabatic limit.
+This can be seen as contours of the surface <IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1.gif"
+ ALT="$\Omega (E;x)$"> in 3D.
+The elastic force <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img108.gif"
+ ALT="$F(x)$"> is the negative of the slope of <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img107.gif"
+ ALT="$E(x)$">.
+At any parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> and energy <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">,
+the shell weight <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img110.gif"
+ ALT="$g(E;x)$"> is the tangent slope in the constant-<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> plane.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="553" HEIGHT="194" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img111.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_review/shell.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html407"
+  HREF="node14.html">Adiabatic invariance of phase-space volume</A>
+<LI><A NAME="tex2html408"
+  HREF="node15.html">Energy spreading--constant velocity case</A>
+<LI><A NAME="tex2html409"
+  HREF="node16.html">Energy spreading--periodic driving case</A>
+<LI><A NAME="tex2html410"
+  HREF="node17.html">Fokker-Planck equation for energy evolution</A>
+<LI><A NAME="tex2html411"
+  HREF="node18.html">Irreversible growth of average energy</A>
+<LI><A NAME="tex2html412"
+  HREF="node19.html">Microcanonical averages and trajectory averages</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html405"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html403"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html397"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html406"
+  HREF="node14.html">Adiabatic invariance of phase-space</A>
+<B> Up:</B> <A NAME="tex2html404"
+  HREF="node12.html">Chapter 2: Quantum and</A>
+<B> Previous:</B> <A NAME="tex2html398"
+  HREF="node12.html">Chapter 2: Quantum and</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

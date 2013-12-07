@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>oct6m.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CompareS1:=proc(N)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H,L,P,Q,s1,s2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s1:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s2:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to N </font><font color="#ff0000" size="3" face="Monospaced">
+<br>do </font><font color="#ff0000" size="3" face="Monospaced">
+<br>s1:= 3^i/(5^i+i+4)+s1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s2:=3^i/5^i+s2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[i,s1]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=[op(L),[i,s2]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=pointplot({op(H) }, color=red);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=pointplot({op(L) }, color=blue);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P,Q);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CompareS1(50);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct6images/oct6m_1.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CompareS2:=proc(N)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H,L,P,Q,s1,s2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s1:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s2:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to N </font><font color="#ff0000" size="3" face="Monospaced">
+<br>do </font><font color="#ff0000" size="3" face="Monospaced">
+<br>s1:= (i^2+2*i+5)/(i^3-(1/2))+s1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s2:=(1)^1/i+s2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[i,s1]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=[op(L),[i,s2]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=pointplot({op(H) }, color=red);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=pointplot({op(L) }, color=blue);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P,Q);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CompareS2(100);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct6images/oct6m_2.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CompareS3:=proc(N)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H,L,P,Q,s1,s2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s1:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s2:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to N </font><font color="#ff0000" size="3" face="Monospaced">
+<br>do </font><font color="#ff0000" size="3" face="Monospaced">
+<br>s1:= (i^3+3*i+2)/(sqrt(i^9+7))+s1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s2:=(i^3/i^(9/2))+s2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[i,s1]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=[op(L),[i,s2]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=pointplot({op(H) }, color=red);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=pointplot({op(L) }, color=blue);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P,Q);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CompareS3(50);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct6images/oct6m_3.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CompareS4:=proc(N)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H,L,P,Q,s1,s2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s1:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s2:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to N </font><font color="#ff0000" size="3" face="Monospaced">
+<br>do </font><font color="#ff0000" size="3" face="Monospaced">
+<br>s2:=(1)^1/i+s2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>s1:=(-1)^i/i+s1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[i,s1]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=[op(L),[i,s2]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=pointplot({op(H) }, color=red);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=pointplot({op(L) }, color=blue);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P,Q);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>CompareS4(50);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct6images/oct6m_4.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

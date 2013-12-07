@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>pDerivatives_15.4.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000 size=5>15.4 Geometric significance of partial derivatives</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><font color=#000000>Problem 80, page 942. </font></b>
+<font color=#000000>The paraboloid z=</font>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/pDerivatives_151.gif" width=118 height=46 alt="6-x-x^2-2*y^2" align=middle>
+<font color=#000000> intersects the plane x=1 in a parabola.</font>
+</p>
+<p align=left>
+<font color=#000000>find the parametric equations for the tangent line to this parabola at the point (1,2,-4).</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):                                   F:=plot3d([1,y,z],y=-3..4,z=-10..6,style=wireframe,color=yellow,numpoints=4000):   P:=plot3d([x,y,15-3*x-8*y],x=-2..1,y=-0..4,style=wireframe,color=blue,numpoints=5500): G:=plot3d([x,y,6-x-x^2-2*y^2],x=-2..1,y=-2..4,style=wireframe,color=black,numpoints=400): display(F,G,P,axes=frame,labels=[x,y,z]);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/pDerivatives_152.gif" width=612 height=680 alt="[Maple Plot]">
+</p>
+</basefont>
+</body>
+</html>

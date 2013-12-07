@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Fokker-Planck equation for energy evolution</TITLE>
+<META NAME="description" CONTENT="Fokker-Planck equation for energy evolution">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html451"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html449"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html443"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html452"
+  HREF="node18.html">Irreversible growth of average</A>
+<B> Up:</B> <A NAME="tex2html450"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html444"
+  HREF="node16.html">Energy spreading periodic driving</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00314000000000000000"></A>
+<A NAME="sec:ediffuse"></A>
+<BR>
+Fokker-Planck equation for energy evolution
+</H2>
+
+<P>
+Stochastic evolution is generally governed by a <EM>Fokker-Planck equation</EM>,
+describing
+drift and diffusion of a density function (see Appendix&nbsp;<A HREF="node120.html#ap:fokker">A</A>
+and [<A
+ HREF="node161.html#gard">79</A>]).
+The derivation of the correct Fokker-Planck equation
+for the time-evolution of the
+energy distribution <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img3.gif"
+ ALT="$\rho (E,t)$">
+is not trivial.
+Now that we have the energy diffusion rate <!-- MATH
+ $D_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img154.gif"
+ ALT="$D_{{\mbox{\tiny E}}}$">
+at a given energy <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">, it is
+tempting to use it directly as a standard (energy-dependent)
+diffusion term <!-- MATH
+ $\frac{\partial }{\partial E} (D_{{\mbox{\tiny E}}} \frac{\partial \rho}{\partial E} )$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img185.gif"
+ ALT="$\frac{\partial }{\partial E} (D_{{\mbox{\tiny E}}} \frac{\partial \rho}{\partial E} )$">.
+This simple answer is wrong, and would give the wrong heating rate.
+As discussed in Appendix&nbsp;<A HREF="node120.html#ap:fokker">A</A>, care is needed in
+writing the diffusion term.
+The equation was first written down correctly (without derivation)
+by Wilkinson [<A
+ HREF="node161.html#wilk90">201</A>].
+Jarzynski [<A
+ HREF="node161.html#jarz92">106</A>] derives
+it in a clear fashion (which I will follow), and later he [<A
+ HREF="node161.html#jarzprl">108</A>]
+and Berry and Robbins
+[<A
+ HREF="node161.html#berryrobbins">27</A>] rederive it using expansions
+of the full phase-space density in powers of a `slowness parameter'
+(<IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img186.gif"
+ ALT="$\propto V$">).
+
+<P>
+It must be realised that, although the spreading rate was derived in energy,
+it is <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$"> that is the `natural' variable in which to discuss spreading.
+Not only is the evolution of <!-- MATH
+ $\eta(\Omega,t)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img125.gif"
+ ALT="$\eta(\Omega,t)$"> simple,
+but the consideration of Liouville's theorem becomes obvious.
+In the adiabatic limit <IMG
+ WIDTH="54" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img187.gif"
+ ALT="$V\rightarrow0$"> we have seen that
+<!-- MATH
+ $\eta(\Omega,t)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img125.gif"
+ ALT="$\eta(\Omega,t)$"> is constant (<A HREF="node14.html#eq:adiab">2.5</A>).
+At finite <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$"> the evolution generally becomes
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\dot{\eta} = -\frac{\partial }{\partial \Omega} ( u \eta)  +
+	\frac{\partial }{\partial \Omega} \left(D_\Omega \frac{\partial \eta}{\partial \Omega} \right).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fokker"></A><IMG
+ WIDTH="398" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img189.gif"
+ ALT="\begin{displaymath}
+\dot{\eta} = -\frac{\partial }{\partial \Omega} ( u \eta) +...
+... \left(D_\Omega \frac{\partial \eta}{\partial \Omega} \right).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Liouville's equation of motion [<A
+ HREF="node161.html#landaumech">126</A>] for <!-- MATH
+ $f({\mathbf q},{\mathbf p},t)$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img190.gif"
+ ALT="$f({\mathbf q},{\mathbf p},t)$">,
+the full phase-space probability density, is
+<!-- MATH
+ $\dot{f} = -\{ f, {\mathcal{H}} \}$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img191.gif"
+ ALT="$\dot{f} = -\{ f, {\mathcal{H}} \}$">.
+Regardless of the Hamiltonian and its time-dependence,
+this means that a constant
+density must remain so for all times.
+Recalling that <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img192.gif"
+ ALT="$\eta$"> is just the average of <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img193.gif"
+ ALT="$f$"> over an energy-shell,
+this means <!-- MATH
+ $\eta(\Omega,t) = \mbox{const}$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img194.gif"
+ ALT="$\eta(\Omega,t) = \mbox{const}$"> must
+be a solution of (<A HREF="node17.html#eq:fokker">2.19</A>).
+It must also be a solution
+with zero flux <IMG
+ WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img195.gif"
+ ALT="$j_\eta$"> everywhere in <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">
+(if this we not so, a discontinuity
+would arise at <IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img196.gif"
+ ALT="$\Omega=0$">; see also Appendix&nbsp;B of [<A
+ HREF="node161.html#jarz92">106</A>] ).
+This implies that in (<A HREF="node17.html#eq:fokker">2.19</A>) the drift term <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img197.gif"
+ ALT="$u$"> is zero,
+and the diffusion is <EM>unbiased</EM> in <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">-space.
+By `unbiased' I mean that at every value of <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">,
+zero density gradient results in zero flux.
+Note that the <IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img198.gif"
+ ALT="$D_\Omega$"> may still depend on <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img106.gif"
+ ALT="$\Omega$">.
+
+<P>
+Now this ``Liouville trick'' has been performed, we can transform
+the evolution back to energy-space;
+this is done using Appendix&nbsp;<A HREF="node120.html#ap:fokker">A</A>, and gives
+a Fokker-Planck equation with non-zero drift,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+v \; = \; \dot{x}\left. \frac{\partial E}{\partial x}\right|_{\Omega} +
+	\frac{1}{g}\left. \frac{\partial g}{\partial E}\right|_{t} D_{{\mbox{\tiny E}}} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:rhodrift"></A><IMG
+ WIDTH="383" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img199.gif"
+ ALT="\begin{displaymath}
+v \; = \; \dot{x}\left. \frac{\partial E}{\partial x}\right...
+...\partial g}{\partial E}\right\vert _{t} D_{{\mbox{\tiny E}}} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The first term gives the usual adiabatic energy change, while the second
+is a drift term entirely due to diffusion.
+This gives the final energy evolution, written with the <!-- MATH
+ $D_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img154.gif"
+ ALT="$D_{{\mbox{\tiny E}}}$"> terms
+grouped together to give a modified diffusion term,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\dot{\rho} \; = \; -\dot{x} \frac{\partial }{\partial E}
+	\left( \left. \frac{\partial E}{\partial x}\right|_{\Omega} \rho \right)
+	 \; + \;
+	\frac{\partial }{\partial E}
+	\left[ D_{{\mbox{\tiny E}}} \, g \frac{\partial }{\partial E} \left( \frac{\rho}{g} \right) \right].
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:rhoev"></A><IMG
+ WIDTH="462" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img200.gif"
+ ALT="\begin{displaymath}
+\dot{\rho} \; = \; -\dot{x} \frac{\partial }{\partial E}
+\...
+...{\partial }{\partial E} \left( \frac{\rho}{g} \right) \right].
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Remember that (<A HREF="node17.html#eq:rhoev">2.21</A>)
+is an effective equation for timescales longer than
+the ergodic time.
+In the context of billiards, energy evolution
+can be thought of as the
+biased `random walk' in energy space due to the
+sum of `kicks' due to the particle hitting the moving walls [<A
+ HREF="node161.html#jarz93">107</A>].
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html451"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html449"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html443"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html452"
+  HREF="node18.html">Irreversible growth of average</A>
+<B> Up:</B> <A NAME="tex2html450"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html444"
+  HREF="node16.html">Energy spreading periodic driving</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

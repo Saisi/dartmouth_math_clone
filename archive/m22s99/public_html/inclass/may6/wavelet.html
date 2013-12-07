@@ -1,0 +1,74 @@
+<html>
+<title>
+wavelet.html
+</title>
+<body bgcolor=ffffff>
+
+<!-- "This html document was created by converting a 3.0 \
+Mathematica notebook using the Convert`HTMLConvert` \
+package" -->
+
+<H2>Here's the &quot;true&quot; Song:</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr1.gif" ALT="[Graphics:waveletgr1.gif]">
+
+<H2>This is what's on the CD:</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr3.gif" ALT="[Graphics:waveletgr3.gif]">
+
+<H2>A typical music CD has about 600 megabytes of capacity on it; a 5-minute song can be about 60 megabytes big.<br>That's alot of diskspace...how can I fit<br>my favourite CDs on my computer? Is<br>it possible? Yes! (e.g. mp3)</H2>
+<H2>First, let's start with a smaller example.<br><br>Suppose I have 8 samples of some f(t):<br><br>f(0) = 12, f(1) = 6, f(2) = 8, f(3) = 10<br>f(4) = 14, f(5) = 10, f(6) = 20, f(7) = 12<br><br>Remember, I don't have the &quot;true&quot; f(t);<br>all I have are its samples. So let me try<br>to approximate the true function with<br>some function I can get my hands on:<br>b(x):<br><br>if 0 &lt;= x &lt; 1 let b(x) = 1, otherwise b(x) = 0</H2>
+<H2>Here's the graph of b(x):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr4.gif" ALT="[Graphics:waveletgr4.gif]">
+
+<H2>And b(x - 1):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr5.gif" ALT="[Graphics:waveletgr5.gif]">
+
+<H2>And b(x-2):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr6.gif" ALT="[Graphics:waveletgr6.gif]">
+
+<H2>V0 = Span{..., b(x+1), b(x), b(x-1),...} is a subspace of L^2(R) (the vector space where the true song function lives)</H2>
+<H2>Using these boxcars, I can approximate<br>the true function as:<br><br>f(x) = f(0) b(x) + f(1) b(x-1) + ... + f(7) b(x-7):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr7.gif" ALT="[Graphics:waveletgr7.gif]">
+
+<H2>Compute averages and differences of consecutive pairs:<br>samples: {12, 6, 8, 10, 14, 10, 20, 12}<br>averages: {9, 9, 12, 16}<br>differences: {3, -1, 2, 4}<br><br>Note:<br>9+3 = 12, 9-3 = 6<br>9 + -1 = 8, 9 - -1 = 10<br>12 + 2 = 14, 12 - 2 = 10<br>16 + 4 = 20, 16 - 4 = 12<br><br>So I can get the original samples back!</H2>
+<H2>Let me use those averages to get a new function fa(x) that I'll build out of dilated<br>boxcars: b(x/2 - i)<br><br>Here's the graph of b(x/2):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr8.gif" ALT="[Graphics:waveletgr8.gif]">
+
+<H2>And here's b(x/2 - 1):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr9.gif" ALT="[Graphics:waveletgr9.gif]">
+
+<H2>Notice how it's a stretched version of b(x).</H2>
+<H2>Like before, I can take the subspace spanned by these dilated boxcars:<br><br>V1 = Span{b(x/2 - i): i is an integer}<br><br>It turns out (not coincidentally) that<br>V1 is a subspace of V0. (Think of their<br>graphs.)</H2>
+<H2>fa(x) = 9 b(x/2) + 9 b(x/2-1) + 12 b(x/2-2) + 16 b(x/2 - 3); here is its plot:</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr10.gif" ALT="[Graphics:waveletgr10.gif]">
+
+<H2>How does it compare with the original?</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr11.gif" ALT="[Graphics:waveletgr11.gif]">
+
+<H2>Ok, now how about the differences, or &quot;details&quot; ?<br><br>Let me introduce a new function, called a wavelet, w(x):<br><br>If 0&lt;= x&lt; 1/2 then w(x) = 1<br>If 1/2 &lt;= x &lt; 1 then w(x) = -1<br>If x &lt; 0 or 1 &lt;= x then w(x) = 0<br><br>Here's w(x):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr12.gif" ALT="[Graphics:waveletgr12.gif]">
+
+<H2>And here's w(x/2 - 1)</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr13.gif" ALT="[Graphics:waveletgr13.gif]">
+
+<H2>Let W1 = Span{w(x/2 - i): i is an integer}<br>This is a subspace, too.<br><br>Let fw(x) =<br> 3 w(x/2)-w(x/2 -1)+2 w(x/2 -2)+4 w(x/2 -3):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr14.gif" ALT="[Graphics:waveletgr14.gif]">
+
+<H2>Let's plot fa(x) + fw(x):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr15.gif" ALT="[Graphics:waveletgr15.gif]">
+
+<H2>A match with the original!<br><br>This picture should make the following statement believable: the function f(x) in V0 can be written as a sum of two functions, fa(x) in V1 and fw(x) in W1.</H2>
+<H2>I can go further with this. Let me now average the averages, and do their differences, too.<br><br>averages: {9, 9, 12, 16}<br>averages of averages: {9, 14}<br>differences of averages: {0, -2}<br><br>Define<br>faa(x) = 9 b(x/4) + 14 b(x/4 - 1)<br>faw(x) = 0 w(x/4) - 2 w(x/4 - 1)<br><br>Here's how faa(x) compares with f(x):</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr16.gif" ALT="[Graphics:waveletgr16.gif]">
+
+<H2>Let<br>V2 = Span{b(x/4 - i): i is an integer}<br>W2 = Span{w(x/4 - i): i is an integer}<br><br>So we have<br><br>f(x) = fa(x) + fw(x) = faa(x) + faw(x) + fw(x)<br><br>or in terms of subspaces<br><br>V0 = V1 + W1 = (V2 + W2) + W1</H2>
+<H2>So where does the music come in ?<br><br>Here are the numbers we computed:<br><br>avg of the avgs = { 9, 14 }<br>diffs of the avgs = {0, -2}<br>diffs (at the start) = {3, -1, 2, 4}<br><br>I can exactly reconstruct the original f(x) from these numbers.<br><br>Suppose I decided to throw away all diffs<br>whose absolute values are less than or equal to 2. Then I have<br><br>avg of the avgs = {9, 14}<br>new diffs of the avgs = {0, 0}<br>new diffs (at the start) = {3, 0, 0, 4}<br><br>Suppose I reconstruct with these numbers. So I get a new function that isn't exactly the original f(x). What does it look like? How does it compare with the original f(x) ?</H2>
+<IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr17.gif" ALT="[Graphics:waveletgr17.gif]">
+
+<H2>Not the greatest fit, but not bad either, considering we essentially threw away half the numbers.<br><br>This is how you get a song to fit on your computer: you represent the song function by f(x) in some subspace of L^2(R), and &quot;massage&quot; f(x) like we just did to throw away the unimportant details, the details that you won't notice are missing.<br><br>The boxcar function and wavelet we used in the massaging our necessarily the best functions to use. Neither is the way we chose the &quot;unimportant&quot; details. There are other functions you can use, and lots better ways of dropping the unimportant details.<br><br>These ideas will also work for images.</H2>
+<p>
+<PRE><B><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr2.gif" ALT="[Graphics:waveletgr2.gif]"><IMG SRC="http://www.math.dartmouth.edu/~m22s99/inclass/may6/waveletgr18.gif" ALT="[Graphics:waveletgr18.gif]"></B></PRE>
+
+
+
+</body>
+</html>

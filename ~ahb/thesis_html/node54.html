@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>B) `Green's function matching' (sweep in energy)</TITLE>
+<META NAME="description" CONTENT="B) `Green's function matching' (sweep in energy)">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node55.html">
+<LINK REL="previous" HREF="node53.html">
+<LINK REL="up" HREF="node52.html">
+<LINK REL="next" HREF="node55.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html862"
+  HREF="node55.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html860"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html854"
+  HREF="node53.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html863"
+  HREF="node55.html">C) Other methods</A>
+<B> Up:</B> <A NAME="tex2html861"
+  HREF="node52.html">Categories of existing numerical</A>
+<B> Previous:</B> <A NAME="tex2html855"
+  HREF="node53.html">A) `Basis diagonalization'</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00612200000000000000">
+B) `Green's function matching' (sweep in energy)</A>
+</H3>
+
+<P>
+Class B can be applied when the Green's function (<I>i.e. </I>the eigenstates
+of <IMG
+ WIDTH="20" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img671.gif"
+ ALT="$\hat H$"> the in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> with some different BCs) is known analytically.
+It has the advantage that this Green's function can now be used to propagate
+between points on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> without explicit solution over the volume
+of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">.
+This reduces the dimensionality of the problem from <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> to <IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img483.gif"
+ ALT="$d{-}1$">.
+Why is this an enormous reduction in computational effort?
+Generally the number of bases <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> is reduced from <!-- MATH
+ $O({\mathsf{V}}/\lambda_{{\mbox{\tiny B}}}^d)$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img676.gif"
+ ALT="$O({\mathsf{V}}/\lambda_{{\mbox{\tiny B}}}^d)$"> to
+<!-- MATH
+ $O({\mathsf{A}}/\lambda_{{\mbox{\tiny B}}}^{d-1})$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img677.gif"
+ ALT="$O({\mathsf{A}}/\lambda_{{\mbox{\tiny B}}}^{d-1})$">, where <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img69.gif"
+ ALT="${\mathsf{V}}$"> is the volume of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> and <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img428.gif"
+ ALT="${\mathsf{A}}$"> is the
+area of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">. The typical quantum wavelength at the energy of interest
+is <!-- MATH
+ $\lambda_{{\mbox{\tiny B}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img523.gif"
+ ALT="$\lambda_{{\mbox{\tiny B}}}$">.
+This is a typical reduction in <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> of <!-- MATH
+ $O({\mathsf{L}}/\lambda_{{\mbox{\tiny B}}})$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img678.gif"
+ ALT="$O({\mathsf{L}}/\lambda_{{\mbox{\tiny B}}})$"> where <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img429.gif"
+ ALT="${\mathsf{L}}$"> is the typical
+length scale of the region.
+Given that the required dense matrix techniques
+take time <IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img679.gif"
+ ALT="$O(N^3)$">, this is a huge reduction in effort
+when there are many wavelengths across the system (semiclassical limit).
+This corresponds to very high quantum number of interest <!-- MATH
+ $n_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img672.gif"
+ ALT="$n_{{\mbox{\tiny E}}}$">.
+The problem has now become a one of matching on the boundary.
+If the length in coefficient space <!-- MATH
+ $|{\mathbf x}|^2$
+ -->
+<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img680.gif"
+ ALT="$\vert{\mathbf x}\vert^2$"> roughly corresponds to
+a state's norm in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">, then the BC matching is equivalent to
+a zero-determinant condition (see Table&nbsp;<A HREF="node51.html#tbl:bases">5.1</A>).
+The <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> values for which the BCs can be obeyed must be found.
+However the linearity in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> of the matrix equation has been sacrificed.
+There is usually no way to tell at what <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> the determinant will vanish,
+so a `sweep' or `hunt' (search routine)
+in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">-space is required, taking many iterations per solution found.
+
+<P>
+The Boundary Integral Method (BIM or BEM), probably the most common example
+of Class B methods, has been used extensively in
+engineering and physics [<A
+ HREF="node161.html#bim1">36</A>,<A
+ HREF="node161.html#bim2">121</A>,<A
+ HREF="node161.html#berrywilk">28</A>,<A
+ HREF="node161.html#boasman">33</A>,<A
+ HREF="node161.html#bogomolny">34</A>].
+It emerged in the engineering community in the 1950s
+(see Chapter 1 of [<A
+ HREF="node161.html#bim1">36</A>]).
+Also in Class B are
+similar methods which replace matching on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> by
+`internal boundary conditions' where two (or more)
+different Hamiltonians may be joined
+(matched) along an internal surface, which is simply a quantum version
+of a Poincar&#233; surface of section.
+Examples are Bogomolny's method [<A
+ HREF="node161.html#bogomolny">34</A>] (where the propagation
+in each half-region is found semiclassically),
+the variation of Prosen [<A
+ HREF="node161.html#prosenmatching">163</A>] (where the Hamiltonians are known
+analytically),
+the variation of Smilansky [<A
+ HREF="node161.html#smilanskywedge">172</A>], and
+the Korringa-Kohn-Rostoker (KKR) method (as first used in the quantum chaos
+community by Berry [<A
+ HREF="node161.html#berrykkr">23</A>], also see [<A
+ HREF="node161.html#primack">162</A>] and references within).
+Equally important for quantum billiard problems is Heller's
+PWDM, upon which this chapter is based, discussed below.
+The above methods differ mainly in the choice of basis set, and the way in which the
+matching is expressed.
+However they all suffer from the need to `sweep' along the energy axis.
+
+<P>
+For specialized problems other Class B methods have been invented,
+for instance the t-matrix inversion technique of Lupu-Sax [<A
+ HREF="node161.html#adamthesis">140</A>]
+for eigenstates of domains containing point-scatterers.
+Note that the standard `shooting method' [<A
+ HREF="node161.html#kooninmeredith">119</A>] for
+problems in <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img48.gif"
+ ALT="$d=1$"> 
+(where it is possible to integrate directly the
+ordinary differential equation resulting from the position-space
+form of (<A HREF="node51.html#eq:tise">5.1</A>))
+is essentially a Class B method because an energy sweep is required.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html862"
+  HREF="node55.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html860"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html854"
+  HREF="node53.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html863"
+  HREF="node55.html">C) Other methods</A>
+<B> Up:</B> <A NAME="tex2html861"
+  HREF="node52.html">Categories of existing numerical</A>
+<B> Previous:</B> <A NAME="tex2html855"
+  HREF="node53.html">A) `Basis diagonalization'</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

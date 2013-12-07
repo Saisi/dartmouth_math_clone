@@ -1,0 +1,481 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="http://www.math.dartmouth.edu/~m108w08/index_archivos/filelist.xml">
+<link rel=Edit-Time-Data href="http://www.math.dartmouth.edu/~m108w08/index_archivos/editdata.mso">
+<!--[if !mso]>
+<style>v\:* {behavior:url("index.html#default%23VML");}
+o\:* {behavior:url("index.html#default%23VML");}
+w\:* {behavior:url("index.html#default%23VML");}
+.shape {behavior:url("index.html#default%23VML");}
+</style>
+<![endif]-->
+<title>Math 108. Topics in Combinatorics.</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Sergi Elizalde</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Sergi Elizalde</o:LastAuthor>
+  <o:Revision>6</o:Revision>
+  <o:TotalTime>725</o:TotalTime>
+  <o:Created>2008-03-04T01:33:00Z</o:Created>
+  <o:LastSaved>2008-03-04T02:08:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>595</o:Words>
+  <o:Characters>3394</o:Characters>
+  <o:Company> </o:Company>
+  <o:Lines>28</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>4168</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:536902279 -2147483648 8 0 511 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:18.0pt;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:#0055AA;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#0055AA;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1068383338;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-656373212 353943610 348551364 1742607894 -1869737590 1465940044 -1736440858 -521076812 1406430286 1982898138;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:2045133765;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1073490598 2088954488 -2111025464 -1553060498 1398332864 -869211976 -1387390294 1692421620 -415991920 1179402504;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:2072535845;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2102077048 201981953 201981955 201981957 201981953 201981955 201981957 201981953 201981955 201981957;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:71.4pt;
+	mso-level-number-position:left;
+	margin-left:71.4pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=ES link="#0055aa" vlink="#0055aa" style='tab-interval:
+35.4pt' alink="#FF0000">
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-US style='mso-ansi-language:
+EN-US;font-weight:normal'>Math 108.</span><span lang=EN-US style='mso-ansi-language:
+EN-US'> <span style='color:#993300'>Topics in Combinatorics: <i>The
+probabilistic method</i>.</span><o:p></o:p></span></h1>
+
+<p align=center style='text-align:center'><b><span style='font-size:18.0pt'>Winter
+2008</span></b></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span style='font-size:13.5pt'>Instructor:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'><a
+href="../../../~sergi/index.html"><span lang=ES style='mso-ansi-language:
+ES'>Sergi Elizalde</span></a></span></b></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Lectures:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>TuTh </span><span
+lang=EN-US style='font-size:13.5pt;mso-bidi-font-size:12.0pt;mso-ansi-language:
+EN-US'>10:00-11:50 in Kemeny 244</span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>X-period:</span></b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:13.5pt;mso-bidi-font-size:12.0pt;mso-ansi-language:
+EN-US'>W 3:00-3:50</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Office Hours:&nbsp;&nbsp;&nbsp; </span></b><span lang=EN-US
+style='font-size:13.5pt;mso-ansi-language:EN-US'>Tu 11:50-12:30, Th 1:30-3:30,
+and by appointment</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Office:</span></b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Kemeny 332</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Email:</span></b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<script>
+secondpart = "elizalde";
+thirdpart = "dartmouth.";
+fourthpart = "edu";
+middlepart = "@";
+firstpart = "sergi.";
+document.write("<a href=mailto:"+firstpart + secondpart+ middlepart + thirdpart +fourthpart+">");
+document.write(firstpart + secondpart + middlepart + thirdpart +fourthpart+"</a>");
+</script></span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;mso-ansi-language:EN-US'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>Phone:</span></b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+646-8191</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Course
+description</span></b><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>The probabilistic method is
+a powerful tool to tackle many problems in discrete mathematics. Roughly
+speaking, here is how the method works: in order to prove that a certain object
+with some desired properties exists, one shows that a random object selected
+from an appropriate probability space has the desired properties with positive
+probability.<br>
+This method uses randomness to prove theorems that involve no probability
+themselves, and that would otherwise be very difficult to prove. <br>
+The probabilistic method has recently been developed intensively and it has
+become a very useful tool in Combinatorics and Theoretical Computer Science.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This course is based on a
+course taught by Joel Spencer while visiting MIT a few years ago.<o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Homework</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='margin-left:71.4pt;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 71.4pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'><a
+href="ass1.pdf">Problem Set 1</a>. Due
+on Tuesday, Jan. 22.<o:p></o:p></span></p>
+
+<p style='margin-left:71.4pt;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 71.4pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'><a
+href="ass2.pdf">Problem Set 2</a>. Due
+on Tuesday, Feb. 5.<o:p></o:p></span></p>
+
+<p style='margin-left:71.4pt;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 71.4pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'><a
+href="ass3.pdf">Problem Set 3</a>. Due
+on Tuesday, Feb. 19.<o:p></o:p></span></p>
+
+<p style='margin-left:71.4pt;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 71.4pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'><a
+href="ass4.pdf">Problem Set 4</a>. Due
+on Tuesday, Mar. 4.<o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Textbook<o:p></o:p></span></b></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>The textbook for this
+course is <i><a
+href="http://cs.nyu.edu/cs/faculty/spencer/nogabook/nogabook.html">The
+Probabilistic Method</a></i> by Noga Alon and Joel Spencer, 2<sup>nd</sup> edition,
+J. Wiley and Sons, New York, 2000. (Available at Wheelock Books.)<o:p></o:p></span></p>
+
+<p align=center style='text-align:center'><img border=0 width=120 height=169
+id="_x0000_i1028" src="http://www.math.dartmouth.edu/~m108w08/tpm4.jpg"><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Another
+useful source are <a href="http://kam.mff.cuni.cz/~matousek/prob-ln.ps.gz">these
+notes</a> by Jiri Matousek and Jan Vondrák.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Topics</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-indent:.25in'><span lang=EN-US style='mso-ansi-language:EN-US'>Here’s a
+tentative list of topics that I will try to cover.<o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo7;tab-stops:list .5in'><i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Chapter 1</span></i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>. The basic method. Examples.<br>
+     - Ramsey’s Theorem.<br>
+     - Tournaments.<br>
+     - 2-colorable families. Upper and lower bounds.<br>
+     - The Erdös-Ko-Rado Theorem.<br style='mso-special-character:line-break'>
+     <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+     <![endif]><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo7;tab-stops:list .5in'><i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Chapter 2</span></i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>. Linearity of expectation.<br>
+     - Dominating sets.<br>
+     - Sum-free subsets.<br>
+     - Hamiltonian paths in tournaments.<br>
+     - Large deviations.<br>
+     - Ranking the vertices of a tournament.<br>
+     - Balancing vectors.<br>
+     - Balancing lights.<br style='mso-special-character:line-break'>
+     <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+     <![endif]><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo7;tab-stops:list .5in'><i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Chapter 3. </span></i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Alterations.<br>
+     - Ramsey numbers.<br>
+     - Independent sets.<br>
+     - The Heilbronn problem.<br style='mso-special-character:line-break'>
+     <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+     <![endif]><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo7;tab-stops:list .5in'><i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Chapter 4. </span></i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>The second moment method.<br>
+     - Prime divisors.<br>
+     - Random graphs.<br>
+     - Clique number.<br style='mso-special-character:line-break'>
+     <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+     <![endif]><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo7;tab-stops:list .5in'><i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Chapter 8.</span></i><span lang=EN-US
+     style='mso-ansi-language:EN-US'> The Poisson paradigm<i>.</i><br>
+     - Janson’s inequality.<br>
+     - Brun’s sieve.<br>
+     - Random graphs: isolated points, connectivity.<br style='mso-special-character:
+     line-break'>
+     <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+     <![endif]><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo7;tab-stops:list .5in'><i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Chapter 5. </span></i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>The Lovász Local Lemma.<br>
+     - The lemma.<br>
+     - Property B.<br>
+     - Lower bounds for Ramsey numbers.<br style='mso-special-character:line-break'>
+     <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+     <![endif]><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo7;tab-stops:list .5in'><i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Chapter 10. </span></i><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Random graphs.<br>
+     - Subgraphs.<br>
+     - Clique number.<br>
+     - Chromatic number.<br>
+     - The evolution of random graphs.<br>
+     - Birth processes.<br>
+     - The giant component.<br style='mso-special-character:line-break'>
+     <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+     <![endif]><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo7;tab-stops:list .5in'><i><span lang=FR
+     style='mso-ansi-language:FR'>Chapter 14.</span></i><span lang=FR
+     style='mso-ansi-language:FR'><br>
+     - Liar game.<o:p></o:p></span></li>
+</ul>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:EN-US'>Homework,
+exams, and grading</span></b><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>The grade will be based on the
+homework and a project presentation. There will be <b>no exams</b>. <br>
+The homework will consist of a problem set every two weeks. You are encouraged
+to collaborate on the homework, but the solutions must be written individually.<br>
+The project will consist of preparing a topic, individually or in groups of 2
+or 3, and presenting it in class. Here is a list of suggested <a
+href="projects.pdf">projects</a>.<br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-ansi-language:EN-US'>
+
+<hr size=3 width="100%" align=center>
+
+</span></div>
+
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span
+lang=EN-US style='font-family:Times;mso-ansi-language:EN-US'>Students with
+disabilities: </span></b><span lang=EN-US style='font-family:Times;mso-ansi-language:
+EN-US'>Students with disabilities enrolled in this course that may need
+disability-related classroom accommodations are encouraged to make an office
+appointment to see me before the end of the second week of the term. All
+discussions will remain </span><span lang=EN-US style='mso-ansi-language:EN-US'>confidential,
+although the Student Accessibility Services office may be consulted to discuss </span><span
+lang=EN-US style='font-family:Times;mso-ansi-language:EN-US'>appropriate
+implementation of any accommodation requested.</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p><i><span lang=EN-US style='font-size:10.0pt;mso-ansi-language:EN-US'>Last
+modified on Mar 3, 2008. </span></i><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

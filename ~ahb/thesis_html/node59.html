@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Numerical rank of the basis set</TITLE>
+<META NAME="description" CONTENT="Numerical rank of the basis set">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node60.html">
+<LINK REL="previous" HREF="node58.html">
+<LINK REL="up" HREF="node58.html">
+<LINK REL="next" HREF="node60.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html911"
+  HREF="node60.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html909"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html903"
+  HREF="node58.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html912"
+  HREF="node60.html">Truncating the singular generalized</A>
+<B> Up:</B> <A NAME="tex2html910"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<B> Previous:</B> <A NAME="tex2html904"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00631000000000000000"></A>
+<A NAME="sec:rank"></A>
+<BR>
+Numerical rank of the basis set
+</H2>
+
+<P>
+Examination of the matrices <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$">
+shows that they both become <EM>singular</EM> [<A
+ HREF="node161.html#strangbook">188</A>]
+at almost exactly the point when the 
+basis set size (matrix order)
+<IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> becomes sufficiently large to represent the solutions at the desired <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">
+to sufficient accuracy.
+This makes (<A HREF="node58.html#eq:geneigprob">5.14</A>) a singular generalized eigenproblem.
+Such singularity causes failure of standard generalized matrix eigensolvers
+(for instance <TT>dsygv</TT> in LAPACK [<A
+ HREF="node161.html#lapack">5</A>]).
+This might be seen as a huge setback--however I will show that
+singularity seems to be an inevitable
+result of using a basis which obeys the Helmholtz equation
+(however, the issue of this singularity in the special case of the BIM basis set
+is unknown).
+Also I will discuss correct handling of the singular problem.
+
+<P>
+Why do the matrices become singular?
+The answer is that
+physically, wavefunctions <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> which are arbitrary
+solutions of the Helmholtz equation at a single wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">
+are effectively limited to a finite number of degrees of freedom
+inside a given billiard.
+This can be seen intuitively by realising that two real plane waves (RPWs)
+much closer in angular separation
+than <!-- MATH
+ $(k{\mathsf{L}})^{-1}$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img720.gif"
+ ALT="$(k{\mathsf{L}})^{-1}$"> (where <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img429.gif"
+ ALT="${\mathsf{L}}$"> is the typical system length)
+cannot be distinguished when only
+their values inside the billiard are considered.
+The overlap of the two RPWs in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">
+becomes very similar to their individual norms in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">, <I>i.e. </I>they tend
+to the same function in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">.
+(In contrast, when considered over <EM>all</EM> space, the RPWs are always
+orthogonal).
+This would indicate that in <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$"> a basis size of
+<!-- MATH
+ $N \sim k{\mathsf{L}}$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img721.gif"
+ ALT="$N \sim k{\mathsf{L}}$"> is sufficient to represent all solutions at <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+This has been formalised in a more rigorous fashion [<A
+ HREF="node161.html#dietz">64</A>]
+for convex billiards in <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$">,
+as a <EM>semiclassical basis size</EM> <!-- MATH
+ $N_{sc} = kL/\pi$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img722.gif"
+ ALT="$N_{sc} = kL/\pi$">, where <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img511.gif"
+ ALT="$L$"> is
+the perimeter (length of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">).
+This is simply the number of half-wavelengths along the perimeter.
+(I believe the generalization to higher <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> would be that <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img723.gif"
+ ALT="$N_{sc}$"> is given
+by the Weyl law for a <IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img483.gif"
+ ALT="$d{-}1$"> dimensional `volume' <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img428.gif"
+ ALT="${\mathsf{A}}$">).
+
+<P>
+Not only is this basis size sufficient, but attempts to improve
+accuracy by increasing <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> beyond this rapidly fail.
+Above <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img723.gif"
+ ALT="$N_{sc}$"> it becomes exponentially hard to introduce new
+(non-evanescent) functions
+into the basis.
+This can be illustrated by considering an  angular-momentum (<IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$">) basis around
+some origin inside <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">.
+The inside wavefunction is strongly affected by states with <IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img725.gif"
+ ALT="$\vert l\vert &lt; kR$">
+(where <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img726.gif"
+ ALT="$R$"> is the maximum radius from the origin).
+For higher <IMG
+ WIDTH="20" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img727.gif"
+ ALT="$\vert l\vert$"> the billiard falls into the `classically-forbidden' region
+(the circle of radius <IMG
+ WIDTH="56" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img728.gif"
+ ALT="$\approx \vert l\vert/k$">), so these <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img724.gif"
+ ALT="$l$">-states have
+an effect on <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> which dies exponentially with <IMG
+ WIDTH="20" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img727.gif"
+ ALT="$\vert l\vert$">.
+For these states, the only effect on <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> is an exponentially-small
+evanescent wave.
+
+<P>
+Fig.&nbsp;<A HREF="node58.html#fig:fevals">5.3</A> shows the eigenvalues <IMG
+ WIDTH="26" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img729.gif"
+ ALT="$\lambda^F_n$"> of the <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$">
+(tension) matrix.
+These <IMG
+ WIDTH="26" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img729.gif"
+ ALT="$\lambda^F_n$"> are simply the tensions produced by eigenvectors
+<!-- MATH
+ ${\mathbf x}^{(N)}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img730.gif"
+ ALT="${\mathbf x}^{(N)}$">
+of unit length in <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$">-space (coefficient space).
+The figure shows that up to <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img723.gif"
+ ALT="$N_{sc}$"> the eigenvalues are <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img731.gif"
+ ALT="$O(1)$">, but beyond
+this they plummet exponentially, finally settling at <IMG
+ WIDTH="65" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img732.gif"
+ ALT="$\sim 10^{-16}$"> which
+is the rounding error of the double-precision arithmetic used.
+By analogy with singular values this defines a numerical
+<EM>rank</EM> [<A
+ HREF="node161.html#strangbook">188</A>,<A
+ HREF="node161.html#gillbook">80</A>]: the number
+<IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img733.gif"
+ ALT="$N_r$"> of eigenvalues above a certain
+cut-off <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $">, which is chosen as roughly the working precision.
+Examining the figure, the <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> matrix for <IMG
+ WIDTH="70" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img734.gif"
+ ALT="$N=250$"> has a rank of about 182,
+not much larger than <IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img735.gif"
+ ALT="$N_{sc} = 164$">.
+The eigenvectors with <!-- MATH
+ $\lambda^F_n < \epsilon$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img736.gif"
+ ALT="$\lambda^F_n &lt; \epsilon$"> fall into the numerical
+<EM>null-space</EM>, and have a numerically irrelevant (tiny) effect on the value
+of <!-- MATH
+ ${\mathbf x}^{{\mbox{\tiny T}}}F {\mathbf x}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img737.gif"
+ ALT="${\mathbf x}^{{\mbox{\tiny T}}}F {\mathbf x}$">, and therefore on the value of <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> anywhere within <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">.
+An eigenvector heading towards the null space is shown in Fig.&nbsp;<A HREF="node58.html#fig:fevecs">5.4</A>b;
+it has negligible value inside <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> and resembles a high angular-momentum
+state outside.
+What is surprising is that increasing <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> further has little or no effect
+on the rank <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img733.gif"
+ ALT="$N_r$">.
+As Vergini has realised[<A
+ HREF="node161.html#verginithesis">194</A>],
+this behavior has profound consequences for the representation
+of billiard eigenstates by RPWs.
+Namely, once the rank of the problem is reached (at a particular <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">)
+it is very hard to improved accuracy simply by `throwing' more
+real plane wave basis states
+at the problem (a method usually successful in other basis solution
+techniques).
+Most of the basis functions thus `thrown' will simply fall into the numerical
+null space without contributing to the accuracy of the <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> found.
+
+<P>
+This self-truncation of the basis set size would appear quite bizarre to
+a numerical analyst trained on the likes of lattice and FEM approaches.
+In these latter approaches the basis set size <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> can be increased without limit,
+and increased <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> always results in higher accuracy of solution.
+However, because the basis sets of this chapter are already solutions
+of the wave equation, self-truncation occurs
+when the basis becomes (semiclassically) overcomplete.
+The exception to this is if suitable evanescent waves are
+added close to the boundary (see Appendix&nbsp;<A HREF="node154.html#ap:basis">J</A>).
+Therefore if highly accuracy is needed (or if the semiclassical limit is
+to be reached), EPWs must be added, as demonstrated by Vergini
+[<A
+ HREF="node161.html#verginithesis">194</A>].
+Discussion of the Helmholtz solution function space is continued in
+Section&nbsp;<A HREF="node78.html#sec:functionspace">6.1.3</A>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html911"
+  HREF="node60.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html909"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html903"
+  HREF="node58.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html912"
+  HREF="node60.html">Truncating the singular generalized</A>
+<B> Up:</B> <A NAME="tex2html910"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<B> Previous:</B> <A NAME="tex2html904"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

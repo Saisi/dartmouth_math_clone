@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>PHP-basd comments page</TITLE>
+</HEAD>
+<BODY bgcolor="#ffffff" 
+      text="#000000" 
+      link="#549377" 
+      alink="#000000"  
+      vlink="#549377">
+
+The following explains briefly how to download and use the 
+Comments page.
+<P>
+<UL>
+<LI>Download the <A HREF="https://www.math.dartmouth.edu/news-resources/computing/resources_general/comments.tar.gz">comments tar file</A> to
+ your hard disk.  
+<P>
+<LI>Using a secure copy or secure ftp program, copy
+ it to your <TT>public_html</TT> directory on www.math.dartmouth.edu.
+ This can be the <TT>public_html</TT> of your personal account or a
+ course account.
+<P>
+<LI> Now ssh to that account on www.math.dartmouth.edu, and change to
+the <TT>public_html</TT> directory.
+<P>
+<LI>Type the command:<BR> <TT>tar zxpf comments.tar.gz </TT> (and hit
+return)
+<P>
+<LI>You should now have a directory called comments in your public_html
+directory. 
+<P>
+
+
+
+The comments page can immediately be accessed via:
+<BR>
+<TT>http://www.math.dartmouth.edu/~your-login-name/comments</TT>
+
+
+<LI>Before using the comments page, you must edit the file 
+<tt>index.phtml</tt> and make some choices about access.
+<P>
+
+
+Near the top of the file you will find the following self-documenting code:
+
+<pre>
+/* 
+   If this comments page should only be posted to by people with 
+   Dartmouth IP addresses, leave this variable set equal to yes.  This
+   is probably appropriate for course accounts.  If you want anybody
+   to be able to post to this account, answer no
+*/
+$restrict_access_to_dartmouth = "yes"; /* or no */
+
+/*
+   If you want to receive a mail message when someone posts to your
+   page, answer yes here.  Otherwise answer no.  For pages which get
+   few posts, the yes option is the best since you don't have to check
+   your comments pages regularly.  If this is for a class account, you
+   will have to decide how many messages it is likely to generate.
+*/
+$mail_to_maintainer = "yes"; /* or no */
+if ( $mail_to_maintainer == "yes" )
+   {
+    $mail_to_address = "john.q.maintainer@dartmouth.edu";
+    $mail_to_subject = "New comment posted";
+   }
+</pre>
+
+<UL>
+
+<LI>By default, the variable $restrict_access_to_dartmouth = "yes";
+If you want or need users with IP addresses outside of Dartmouth to
+access your pages, set this to "no".
+<BR>
+<LI>Next choose whether you want to receive mail when somebody posts
+to your comments page, and if so, ehter your correct email address.
+
+</UL>
+<BR>
+<LI>Another file to be aware of is <TT>comments-made.html</TT>.  This file
+contains all of the comments which actually appear on the main page.
+<P>
+You can edit this file as you see fit, choosing to archive or simply
+remove (any inappropriate) comments.  Note, this file either needs
+global read/write permissions (rw-rw-rw-) or needs the webserver
+(www-data for us) to be the group with (rw-rw----) permissions.
+<BR>
+
+<LI>The last file to be aware of is
+<TT>comments-template.html</TT>. This is another HTML document which
+governs the format in which the comments appear on your page.  Feel
+free to modify it as well.  </UL> </UL>
+
+
+<h2>A final note on security</h2>
+Generally the file <TT>comments-made.html</TT> is globally writable.
+In the past there have been instances of spammers writing to these
+files, so you should make sure, you monitor it.
+<P>
+If this comments page is for a course account, make sure that at the
+end of the term you change the permissions to be rw-r--r-- via
+<tt>chmod 644 comments-made.html</tt>
+</BODY>
+</HTML>

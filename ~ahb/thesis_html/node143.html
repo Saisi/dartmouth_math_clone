@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Volume integrals of vector quantities</TITLE>
+<META NAME="description" CONTENT="Volume integrals of vector quantities">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node142.html">
+<LINK REL="up" HREF="node141.html">
+<LINK REL="next" HREF="node144.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1813"
+  HREF="node144.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1811"
+  HREF="node141.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1807"
+  HREF="node142.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1814"
+  HREF="node144.html">Other matrix elements</A>
+<B> Up:</B> <A NAME="tex2html1812"
+  HREF="node141.html">Matrix trick for pushing</A>
+<B> Previous:</B> <A NAME="tex2html1808"
+  HREF="node142.html">Volume integrals of scalar</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001722000000000000000">
+Volume integrals of vector quantities</A>
+</H2>
+
+<P>
+A tensor divergence analogy of the above trick can easily be found.
+Using Einstein summation convention, one can write tensors on the
+LHS whose divergence gives vectors on the RHS,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\partial_i \left( \begin{array}{c}
+\delta_{ij} a^* b \\r_j a^* \partial_i b \\r_j b \partial_i a^* \\
+a^* \partial_i \partial_j b \\b \partial_i \partial_j a^* \\
+\delta_{ij} \partial_m a^* \partial_m b
+\end{array} \right)
+\; \; = \; \;
+\left( \begin{array}{cccccc}
+	1&1&0&0&0&0\\
+	1&0&-k_b^2 & 1 &0&0\\
+	0&1&-k_a^2 & 1 &0&0\\
+	-k_b^2&0&0&0&1&0\\
+	0&-k_a^2&0&0&0&1\\
+	0&0&0&0&1&1
+\end{array} \right)
+\left( \begin{array}{c}
+a^* \partial_j b \\b \partial_j a^* \\r_j a^* b \\
+r_j \partial_m a^* \partial_m b \\(\partial_m a^* ) \partial_m \partial_j b \\
+(\partial_m b ) \partial_m \partial_j a^*
+\end{array} \right) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:hag2"></A><IMG
+ WIDTH="587" HEIGHT="137" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1842.gif"
+ ALT="\begin{displaymath}
+\partial_i \left( \begin{array}{c}
+\delta_{ij} a^* b \\ r_j ...
+...\partial_m b ) \partial_m \partial_j a^*
+\end{array} \right) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Notice that no dependence on <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> has entered.
+The relation can be written
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\partial_i t_{ij}^{(\alpha)} \; = \; {\mathcal{T}}_{\alpha \beta} \,
+	w_j^{(\beta)}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:hagtens"></A><IMG
+ WIDTH="349" HEIGHT="34" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1843.gif"
+ ALT="\begin{displaymath}
+\partial_i t_{ij}^{(\alpha)} \; = \; {\mathcal{T}}_{\alpha \beta} \,
+w_j^{(\beta)}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Remember that Roman indices <!-- MATH
+ $i,j,m = 1\cdots d$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1844.gif"
+ ALT="$i,j,m = 1\cdots d$"> are spatial, whereas Greek indices
+<!-- MATH
+ $\alpha,\beta = 1\cdots 6$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1829.gif"
+ ALT="$\alpha,\beta = 1\cdots6$"> label coefficients.
+Note that the vector of vectors <!-- MATH
+ ${\mathbf w}^{(\beta)}$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1845.gif"
+ ALT="${\mathbf w}^{(\beta)}$">
+does contain some different functions than
+<!-- MATH
+ ${\mathbf v}_\beta$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1846.gif"
+ ALT="${\mathbf v}_\beta$"> from Section&nbsp;<A HREF="node142.html#sec:hagsc">H.2.1</A>.
+The matrix determinant is det<!-- MATH
+ ${\mathcal{T}} = \varepsilon ^2$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1847.gif"
+ ALT="${\mathcal{T}} = \varepsilon ^2$">, the same as for <IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1831.gif"
+ ALT="$\mathcal{M}$">.
+The tensor Gauss' theorem is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\int_{\mathcal{D}} \!\! d{\mathbf r} \, \partial_i A_{ij} \; = \; \oint_\Gamma \!\! d{\mathbf s} \,
+	n_i A_{ij} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="374" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1848.gif"
+ ALT="\begin{displaymath}
+\int_{\mathcal{D}} \!\! d{\mathbf r} \, \partial_i A_{ij} \; = \; \oint_\Gamma \!\! d{\mathbf s} \,
+n_i A_{ij} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Applying this to the domain integral of
+(<A HREF="node143.html#eq:hagtens">H.16</A>) gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\int_{\mathcal{D}} \!\! d{\mathbf r} \, w_j^{(\alpha)} \; = \;
+	({\mathcal{T}}^{-1})_{\alpha \beta} \oint_\Gamma \!\! d{\mathbf s} \,n_i \, t_{ij}^{(\beta)} ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="406" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1849.gif"
+ ALT="\begin{displaymath}
+\int_{\mathcal{D}} \!\! d{\mathbf r} \, w_j^{(\alpha)} \; =...
+...ta} \oint_\Gamma \!\! d{\mathbf s} \,n_i \, t_{ij}^{(\beta)} ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which are the desired closed-form expressions for volume integrals of
+(the <IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1556.gif"
+ ALT="$j$"> component of) the vector functions <!-- MATH
+ ${\mathbf w}^{(\alpha)}$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1850.gif"
+ ALT="${\mathbf w}^{(\alpha)}$">.
+The symbolic inverse is found to be,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathcal{T}}^{-1} \; \; = \; \; \frac{1}{\varepsilon }
+\left( \begin{array}{cccccc}
+	k_a^2&0&0&1&1&-1 \\
+	-k_b^2&0&0&-1&-1&1 \\
+	-(k_a^2 + k_b^2)/\varepsilon & 1 &-1& -2/\varepsilon & -2/\varepsilon & 2/\varepsilon \\
+	-(k_a^4 + k_b^4)/\varepsilon & k_a^2 & -k_b^2 &
+		-(k_a^2 + k_b^2)/\varepsilon & -(k_a^2 + k_b^2)/\varepsilon &
+		(k_a^2 + k_b^2)/\varepsilon \\
+	k_a^2 k_b^2 &0&0& k_a^2 & k_b^2 &-k_b^2 \\
+	-k_a^2 k_b^2 &0&0& -k_a^2 & -k_b^2 &k_a^2
+\end{array} \right) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:haginvt"></A><IMG
+ WIDTH="655" HEIGHT="137" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1851.gif"
+ ALT="\begin{displaymath}
+{\mathcal{T}}^{-1} \; \; = \; \; \frac{1}{\varepsilon }
+\lef...
+...k_a^2 k_b^2 &amp;0&amp;0&amp; -k_a^2 &amp; -k_b^2 &amp;k_a^2
+\end{array} \right) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(H.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Again, singular solutions can still be found when <IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1807.gif"
+ ALT="$k_a = k_b$">.
+The full consequences of these types of matrix relations have not been explored.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1813"
+  HREF="node144.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1811"
+  HREF="node141.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1807"
+  HREF="node142.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1814"
+  HREF="node144.html">Other matrix elements</A>
+<B> Up:</B> <A NAME="tex2html1812"
+  HREF="node141.html">Matrix trick for pushing</A>
+<B> Previous:</B> <A NAME="tex2html1808"
+  HREF="node142.html">Volume integrals of scalar</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

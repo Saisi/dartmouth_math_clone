@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Polynesians.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>JPAK1:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Val,Time;<br>
+Digits:=5;<br>
+Val:=I0;<br>
+Time:=T0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(<br>
+(2.5/7-1/60)*Val[1]*(1-Val[1]/500)<br>
+-<br>
+(<br>
+2*(33/40)*<br>
+(1/(500*2))<br>
+)*<br>
+Val[2]*Val[1]<br>
+-.98*(99)*(1/(500*190))*<br>
+Val[3]*Val[1]<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+(4/12-1/20)*(1-Val[2]/2)<br>
+*Val[2]<br>
+)<br>
+),<br>
+evalf(Val[3]+Deltat*(((1/15-1/26)*Val[3]*(1-Val[3]/190) <br>
+-((16/18)*Val[2])*(1/(2*190))<br>
+*Val[3])/2<br>
++<br>
+(<br>
+(16/30)*<br>
+(1/(190*500))<br>
+)*<br>
+Val[1]*Val[3]<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+<br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][3]]];<br>
+od;<br>
+NewList <br>
+end: <br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>JPAK1(0,[1,1,1],3,10);<br>
+</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Polynesians1.gif" width=389 height=29 alt="[[0, [1, 1, 1]], [10/3, [2.1238, 1.4722, 1.0429]], ...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Polynesians2.gif" width=168 height=29 alt="[[0, [1, 1, 1]], [10/3, [2.1238, 1.4722, 1.0429]], ...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=JPAK1(0,[500,.7,1],1000,500):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0[1000];</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Polynesians3.gif" width=170 height=29 alt="[999/2, [261.88, 1.9997, 157.02]]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>V0:=Make1(S0):<br>
+V1:=Make2(S0):<br>
+V2:=Make3(S0):                                                                                                                                                                                                                              </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+P0:=listplot(V0,color=red,legend="Kakapo"):<br>
+P1:=listplot(V1,color=blue,legend="People"):<br>
+<br>
+P2:=listplot(V2,color=black,legend="Predators"):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(P0,P1,P2,title="Time vs Kakapo and People and Predators",labels=[Years,Population]); <br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Polynesians4.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+display(P0,P1,title="Time vs Kakapo and People",labels=[Years,Population]); <br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Polynesians5.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(P0,P2,title="Time vs Kakapo and Predators",labels=[Years,Population]); <br>
+</font></b>
+</p>
+<p align=center>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Polynesians6.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

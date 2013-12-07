@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The scaling method in action</TITLE>
+<META NAME="description" CONTENT="The scaling method in action">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node81.html">
+<LINK REL="up" HREF="node80.html">
+<LINK REL="next" HREF="node83.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1169"
+  HREF="node83.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1167"
+  HREF="node80.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1163"
+  HREF="node81.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1170"
+  HREF="node83.html">Higher-order correction and normalization</A>
+<B> Up:</B> <A NAME="tex2html1168"
+  HREF="node80.html">Solving for the scaling</A>
+<B> Previous:</B> <A NAME="tex2html1164"
+  HREF="node81.html">Generalized eigenproblem</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00714200000000000000">
+The scaling method in action</A>
+</H3>
+
+<P>
+In Figs.&nbsp;<A HREF="node81.html#fig:compare">6.5</A> and <A HREF="node81.html#fig:comparezm">6.6</A>
+I show that the <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> (and tensions <IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1006.gif"
+ ALT="$t_\mu$">) found 
+coincide with tension minima found by the sweep
+method of the previous chapter.
+The <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> agreement is well within the sweep method error due to the finite rounding
+of the minima.
+Because the scaling method does not just compute the tension of a single
+state, it is able to distinguish close eigenvalues that cannot be
+distinguished using the sweep method (using the same basis set).
+How far this can be pushed has not yet been investigated.
+The finite tension minima are highly correlated between the methods,
+and are therefore a function of the limitation of the RPW basis set chosen.
+
+<P>
+The remarkable improvement in efficiency over the sweep methods
+of the previous chapter (or any other known method!)
+comes from the fact that <!-- MATH
+ $\sim (k{\mathsf{L}})^{d-1}$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img902.gif"
+ ALT="$\sim (k{\mathsf{L}})^{d-1}$"> billiard eigenstates
+are computed using a single diagonalization.
+The effort per state therefore scales like <!-- MATH
+ $\sim k^{2(d-1)}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1012.gif"
+ ALT="$\sim k^{2(d-1)}$">
+compared to  <!-- MATH
+ $\sim k^{3(d-1)}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1013.gif"
+ ALT="$\sim k^{3(d-1)}$"> for sweep methods.
+In <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$"> this gives an improvement in
+efficiency of <IMG
+ WIDTH="48" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img86.gif"
+ ALT="$\sim 10^3$"> at <IMG
+ WIDTH="62" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1014.gif"
+ ALT="$k\sim10^3$"> if only moderate accuracy is required.
+More specifically, the basis set size is <!-- MATH
+ $N \approx N_{sc}$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1015.gif"
+ ALT="$N \approx N_{sc}$">, and
+about <IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img85.gif"
+ ALT="$N/10$"> usable states are returned per diagonalization
+(moderate accuracy, <!-- MATH
+ $|t_\mu|<10^{-5}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1016.gif"
+ ALT="$\vert t_\mu\vert&lt;10^{-5}$">), or about <IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1009.gif"
+ ALT="$N/50$"> (very high accuracy,
+<!-- MATH
+ $|t_\mu|<10^{-10}$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1017.gif"
+ ALT="$\vert t_\mu\vert&lt;10^{-10}$">).
+This assumes that the basis set is adequate for the particular billiard shape.
+Errors will be further analysed in Section&nbsp;<A HREF="node86.html#sec:verrors">6.3</A>.
+
+<P>
+Now I give a practical example.
+A very high energy state of the stadium billiard (odd-odd symmetry class)
+is shown in Fig.&nbsp;<A HREF="node81.html#fig:1000">6.7</A>, with <!-- MATH
+ $k=1000.00275996$
+ -->
+<IMG
+ WIDTH="147" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img23.gif"
+ ALT="$k=1000.00275996$">, and tension
+<!-- MATH
+ $8 \times 10^{-12}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1018.gif"
+ ALT="$8 \times 10^{-12}$">.
+The error in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> is about <IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1019.gif"
+ ALT="$\pm 1$"> in the last digit.
+At this <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">, corresponding to about the 142000'th odd-odd eigenstate,
+the basis size is <IMG
+ WIDTH="70" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1020.gif"
+ ALT="$N = 950$">.
+It takes about 10 seconds to fill <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> and <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img22.gif"
+ ALT="$dF/dk$">, another
+50 seconds for diagonalization,
+returning about 16-100 usable states (depending on required tension accuracy),
+and about 2 seconds per state to evaluate
+the wavefunction and its normal gradient on the perimeter (2000 sample
+points around the quarter-perimeter of the stadium).
+It takes a further 300 seconds to generate spatial plots of the type of
+Fig.&nbsp;<A HREF="node81.html#fig:1000">6.7</A> with resolution 1000*500 samples.
+Because the plotting algorithm generates plots of the scaling eigenfunctions
+simultaneously, it
+does not take much longer to evaluate more than one such plot
+(in each case <IMG
+ WIDTH="48" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1021.gif"
+ ALT="$\sim 10^9$"> sin or cos evaluations are required).
+This was performed on a Compaq XP1000 workstation, with alpha processor 21264,
+667MHz, using C++ and LAPACK [<A
+ HREF="node161.html#lapack">5</A>].
+It is clear that obtaining spatial plots is the limiting factor above
+(due to the number of basis function evaluations required), rather
+than solving for the eigenstate <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> and coefficients themselves!
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1169"
+  HREF="node83.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1167"
+  HREF="node80.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1163"
+  HREF="node81.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1170"
+  HREF="node83.html">Higher-order correction and normalization</A>
+<B> Up:</B> <A NAME="tex2html1168"
+  HREF="node80.html">Solving for the scaling</A>
+<B> Previous:</B> <A NAME="tex2html1164"
+  HREF="node81.html">Generalized eigenproblem</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

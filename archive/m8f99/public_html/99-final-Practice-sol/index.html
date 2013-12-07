@@ -1,0 +1,845 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>99-final-Practice-sol</TITLE>
+<META NAME="description" CONTENT="99-final-Practice-sol">
+<META NAME="keywords" CONTENT="99-final-Practice-sol">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/99-final-Practice-sol.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+  Math 8 Practice Exam Problems
+
+</DIV>
+
+<P><P>
+<BR>
+As always, no guarantees on solutions...
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Find the general solution to the differential equation
+
+<!-- MATH
+ $\displaystyle \frac{dy}{dx} + \frac{y}{x\ln x} = x$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img1.gif"
+ ALT="$ \displaystyle \frac{dy}{dx} + \frac{y}{x\ln x} = x$">.
+<P>
+This is a first order linear differential equation with integrating
+factor equal to 
+<!-- MATH
+ $\displaystyle e^{\int dx/(x\ln x)}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img2.gif"
+ ALT="$ \displaystyle e^{\int dx/(x\ln x)}$">.  Now 
+<!-- MATH
+ $\displaystyle \int
+\frac{dx}{x\ln x} = \ln(\ln x) + C$
+ -->
+<IMG
+ WIDTH="196" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img3.gif"
+ ALT="$ \displaystyle \int
+\frac{dx}{x\ln x} = \ln(\ln x) + C$">
+using the substitution <IMG
+ WIDTH="70" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img4.gif"
+ ALT="$ u = \ln
+x$">, so 
+<!-- MATH
+ $\displaystyle e^{\int dx/(x\ln x)} = e^{\ln(\ln x)} = \ln x$
+ -->
+<IMG
+ WIDTH="220" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img5.gif"
+ ALT="$ \displaystyle e^{\int dx/(x\ln x)} = e^{\ln(\ln x)} = \ln x$">.
+Multiplying both sides of the differential equation by this factor
+yields 
+<!-- MATH
+ $\displaystyle \frac{d}{dx}\left(y \ln x\right) = x\ln x$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img6.gif"
+ ALT="$ \displaystyle \frac{d}{dx}\left(y \ln x\right) = x\ln x$">.  We integrate
+(the right hand side by parts): 
+<!-- MATH
+ $\displaystyle y\ln x = \int x\ln x\,dx =
+\frac12 x^2\ln x - \frac{x^2}{4} + C$
+ -->
+<IMG
+ WIDTH="334" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img7.gif"
+ ALT="$ \displaystyle y\ln x = \int x\ln x\,dx =
+\frac12 x^2\ln x - \frac{x^2}{4} + C$">, hence
+
+<!-- MATH
+ $\displaystyle y = \frac12 x^2 - \frac{x^2}{4\ln x} + \frac{C}{\ln x}$
+ -->
+<IMG
+ WIDTH="196" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img8.gif"
+ ALT="$ \displaystyle y = \frac12 x^2 - \frac{x^2}{4\ln x} + \frac{C}{\ln x}$">.
+
+<P>
+<DT>2.
+<DD>Find the equation of the tangent plane to the level surface of
+  
+<!-- MATH
+ $f(x,y,z) = ye^{-x^2}\sin z$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img9.gif"
+ ALT="$ f(x,y,z) = ye^{-x^2}\sin z$">
+at 
+<!-- MATH
+ $(0,1,\pi/3)$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img10.gif"
+ ALT="$ (0,1,\pi/3)$">.
+  
+  We need only compute the gradient of <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img11.gif"
+ ALT="$ f$">
+at 
+<!-- MATH
+ $(0,1,\pi/3)$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img10.gif"
+ ALT="$ (0,1,\pi/3)$">.
+<BR>
+  
+<!-- MATH
+ $\displaystyle \nabla f(x,y,z) = \langle -2xye^{-x^2}\sin z,e^{-x^2}\sin z,
+ye^{-x^2}\cos z\rangle$
+ -->
+<IMG
+ WIDTH="426" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img12.gif"
+ ALT="$ \displaystyle \nabla f(x,y,z) = \langle -2xye^{-x^2}\sin z,e^{-x^2}\sin z,
+ye^{-x^2}\cos z\rangle $">, so 
+
+<!-- MATH
+ $\displaystyle \nabla f(0,1,\pi/3) = \langle 0, \frac{\sqrt 3}{2}, \frac12 \rangle$
+ -->
+<IMG
+ WIDTH="220" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img13.gif"
+ ALT="$ \displaystyle \nabla f(0,1,\pi/3) = \langle 0, \frac{\sqrt 3}{2}, \frac12 \rangle $">, and
+  the equation of the plane is
+  
+<!-- MATH
+ $\displaystyle 0(x-0) + \frac{\sqrt 3}{2}(y-1) +  \frac12 (z-\pi/3) = 0$
+ -->
+<IMG
+ WIDTH="329" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img14.gif"
+ ALT="$ \displaystyle 0(x-0) + \frac{\sqrt 3}{2}(y-1) + \frac12 (z-\pi/3) = 0$">, or
+  more simply, 
+<!-- MATH
+ $\sqrt 3 y + z = \sqrt3 + \pi/3$
+ -->
+<IMG
+ WIDTH="176" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img15.gif"
+ ALT="$ \sqrt 3 y + z = \sqrt3 + \pi/3$">.
+
+<P>
+<DT>3.
+<DD>Suppose that 
+<!-- MATH
+ $z = f(x,y)$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img16.gif"
+ ALT="$ z = f(x,y)$">
+is a smooth real-valued function of two
+  variables, and that 
+<!-- MATH
+ $\displaystyle \frac{\partial f}{\partial x}(1,1) = 3$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img17.gif"
+ ALT="$ \displaystyle \frac{\partial f}{\partial x}(1,1) = 3$">
+and 
+
+<!-- MATH
+ $\displaystyle \frac{\partial f}{\partial y}(1,1) = -1$
+ -->
+<IMG
+ WIDTH="122" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img18.gif"
+ ALT="$ \displaystyle \frac{\partial f}{\partial y}(1,1) = -1$">. If <IMG
+ WIDTH="57" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img19.gif"
+ ALT="$ x = s^2$">
+and <IMG
+ WIDTH="56" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img20.gif"
+ ALT="$ y =
+s^3$">, we may then view <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img21.gif"
+ ALT="$ z$">
+as a function of the single variable <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img22.gif"
+ ALT="$ s$">.
+The value of 
+<!-- MATH
+ $\displaystyle \frac{dz}{ds}$
+ -->
+<IMG
+ WIDTH="28" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img23.gif"
+ ALT="$ \displaystyle \frac{dz}{ds}$">
+at <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img24.gif"
+ ALT="$ s = 1$">
+is:
+
+<P>
+By the chain rule, 
+<!-- MATH
+ $\displaystyle \frac{dz}{ds} =
+\frac{\partial z}{\partial x}\frac{dx}{ds} + 
+\frac{\partial z}{\partial y}\frac{dy}{ds} = 
+\frac{\partial z}{\partial x}2s + 
+ \frac{\partial z}{\partial y}3s^2$
+ -->
+<IMG
+ WIDTH="315" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img25.gif"
+ ALT="$ \displaystyle \frac{dz}{ds} =
+\frac{\partial z}{\partial x}\frac{dx}{ds} +
+\...
+...dy}{ds} =
+\frac{\partial z}{\partial x}2s +
+\frac{\partial z}{\partial y}3s^2$">. When <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img24.gif"
+ ALT="$ s = 1$">, <IMG
+ WIDTH="85" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img26.gif"
+ ALT="$ x = y = 1$">, so we
+ have
+
+<!-- MATH
+ $\displaystyle \frac{dz}{ds}\Big|_{s=1}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img27.gif"
+ ALT="$ \displaystyle \frac{dz}{ds}\Big\vert _{s=1}$">
+is 3(2) + (-1)(3) = 3.
+
+<P>
+<DT>4.
+<DD>Find an equation of the curve <IMG
+ WIDTH="76" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img28.gif"
+ ALT="$ y = f(x)$">
+that passes through the
+  point <IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img29.gif"
+ ALT="$ (1,1)$">
+and intersects all level curves of the function
+  
+<!-- MATH
+ $g(x,y) = x^4 + y^2$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img30.gif"
+ ALT="$ g(x,y) = x^4 + y^2$">
+at right angles.
+
+<P>
+
+<!-- MATH
+ $\nabla g(x,y) = \langle 4x^3, 2y\rangle$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img31.gif"
+ ALT="$ \nabla g(x,y) = \langle 4x^3, 2y\rangle $">
+is always orthogonal to the level curves of
+  <IMG
+ WIDTH="58" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img32.gif"
+ ALT="$ g(x,y)$">, so we want the tangent line to <IMG
+ WIDTH="76" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img28.gif"
+ ALT="$ y = f(x)$">
+to be parallel
+  to the gradient at each point <IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img33.gif"
+ ALT="$ (x,y)$">, that is, the slope
+  
+<!-- MATH
+ $\displaystyle \frac{dy}{dx} = \frac{2y}{4x^3} = \frac{y}{2x^3}$
+ -->
+<IMG
+ WIDTH="142" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img34.gif"
+ ALT="$ \displaystyle \frac{dy}{dx} = \frac{2y}{4x^3} = \frac{y}{2x^3}$">.  This is a
+  separable differential equation:  
+<!-- MATH
+ $\displaystyle \frac{dy}{y} =
+\frac{dx}{2x^3}$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img35.gif"
+ ALT="$ \displaystyle \frac{dy}{y} =
+\frac{dx}{2x^3}$">.  Integrating, we obtain 
+<!-- MATH
+ $\ln |y| = -x^{-2}/4 + C$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img36.gif"
+ ALT="$ \ln \vert y\vert = -x^{-2}/4 + C$">,
+  so 
+<!-- MATH
+ $\displaystyle y = Ae^{-x^{-2}/4}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img37.gif"
+ ALT="$ \displaystyle y = Ae^{-x^{-2}/4}$">.  Given that the curve passes through
+  <IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img29.gif"
+ ALT="$ (1,1)$">, we have 
+<!-- MATH
+ $\displaystyle y = e^{1/4}e^{-x^{-2}/4}$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img38.gif"
+ ALT="$ \displaystyle y = e^{1/4}e^{-x^{-2}/4}$">.
+
+<P>
+<DT>5.
+<DD>A ball is placed at the point <IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img39.gif"
+ ALT="$ (1,2,3)$">
+on the surface 
+<!-- MATH
+ $z= y^2 -
+x^2$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img40.gif"
+ ALT="$ z= y^2 -
+x^2$">.  Give the direction in the <IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img41.gif"
+ ALT="$ xy$">-plane corresponding to the
+  direction in which the ball will start to roll.  Describe the path
+  in the <IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img41.gif"
+ ALT="$ xy$">-plane which the ball will follow. At the point <IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img39.gif"
+ ALT="$ (1,2,3)$">
+  what is the maximum rate at which the ball is descending.
+  
+  Let 
+<!-- MATH
+ $f(x,y) = y^2 - x^2$
+ -->
+<IMG
+ WIDTH="143" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img42.gif"
+ ALT="$ f(x,y) = y^2 - x^2$">. The gradient of <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img11.gif"
+ ALT="$ f$">
+points in the
+  direction of maximum increase of <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img11.gif"
+ ALT="$ f$">
+(the height), so <IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img43.gif"
+ ALT="$ -\nabla f$">
+  points in the direction of maximum decrease, and hence the direction
+  in which the ball will roll.  
+<!-- MATH
+ $\displaystyle \nabla f(x,y) =\langle -2x,2y\rangle$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img44.gif"
+ ALT="$ \displaystyle \nabla f(x,y) =\langle -2x,2y\rangle $">, so 
+   
+<!-- MATH
+ $-\displaystyle \nabla f(1,2) = \langle 2,-4 \rangle$
+ -->
+<IMG
+ WIDTH="170" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img45.gif"
+ ALT="$ -\displaystyle \nabla f(1,2) = \langle 2,-4 \rangle $">
+indicates the direction in which
+  the ball will start to roll.  The path followed by the ball is
+  similar to the previous problem, namely we expect 
+  
+<!-- MATH
+ $\displaystyle \frac{dy}{dx} = \frac{-y}{x}$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img46.gif"
+ ALT="$ \displaystyle \frac{dy}{dx} = \frac{-y}{x}$">.  This yields <IMG
+ WIDTH="69" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img47.gif"
+ ALT="$ y = 2/x$">
+for a
+  solution.  The maximum rate of increase is 
+<!-- MATH
+ $\displaystyle |\nabla f(1,2)| =
+\sqrt{20}$
+ -->
+<IMG
+ WIDTH="144" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img48.gif"
+ ALT="$ \displaystyle \vert\nabla f(1,2)\vert =
+\sqrt{20}$">.
+
+<P>
+<DT>6.
+<DD>Let 
+<!-- MATH
+ $f(x,y)= x^4 + y^4 + x^2 - y^2$
+ -->
+<IMG
+ WIDTH="225" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img49.gif"
+ ALT="$ f(x,y)= x^4 + y^4 + x^2 - y^2$">.  Find and classify all
+  critical points of <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img11.gif"
+ ALT="$ f$">.  Use the method of Lagrange multipliers to
+  find the largest and smallest values of <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img11.gif"
+ ALT="$ f$">
+on the circle 
+<!-- MATH
+ $x^2 + y^2
+= 4$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img50.gif"
+ ALT="$ x^2 + y^2
+= 4$">.
+
+<P>
+
+<!-- MATH
+ $\displaystyle \nabla f(x,y) = \langle 4x^3 + 2x, 4y^3 - 2y\rangle = \langle 0,0 \rangle$
+ -->
+<IMG
+ WIDTH="330" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img51.gif"
+ ALT="$ \displaystyle \nabla f(x,y) = \langle 4x^3 + 2x, 4y^3 - 2y\rangle = \langle 0,0 \rangle $">.
+  From this we have 
+<!-- MATH
+ $x(2x^2+1) = 0$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img52.gif"
+ ALT="$ x(2x^2+1) = 0$">
+and 
+<!-- MATH
+ $y(2y^2 - 1)$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img53.gif"
+ ALT="$ y(2y^2 - 1)$">, so the only
+  solutions are <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img54.gif"
+ ALT="$ x=0$">, and 
+<!-- MATH
+ $y = 0, \pm 1/\sqrt2$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img55.gif"
+ ALT="$ y = 0, \pm 1/\sqrt2$">.
+
+<P>
+The Hessian matrix (second derivative test) is 
+  
+<!-- MATH
+ $\begin{pmatrix}
+12x^2 + 2&0\\0&12y^2-2
+    \end{pmatrix}$
+ -->
+<IMG
+ WIDTH="187" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img56.gif"
+ ALT="$ \begin{pmatrix}
+12x^2 + 2&amp;0\\ 0&amp;12y^2-2
+\end{pmatrix}$">
+
+<P>
+At the points 
+<!-- MATH
+ $(0, \pm 1/\sqrt2)$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img57.gif"
+ ALT="$ (0, \pm 1/\sqrt2)$">, the determinant is positive
+  indicating local extrema which, since 
+<!-- MATH
+ $f_{11}(0,\pm 1/\sqrt2) > 0$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img58.gif"
+ ALT="$ f_{11}(0,\pm 1/\sqrt2) &gt; 0$">,
+  are local minima.  At <IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img59.gif"
+ ALT="$ (0,0)$">, the Hessian has negative determinant,
+  indicating the origin is a saddle point. 
+  
+  For Lagrange multipliers, let 
+<!-- MATH
+ $g(x,y) = x^2 + y^2$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img60.gif"
+ ALT="$ g(x,y) = x^2 + y^2$">.  We need to
+  solve the system given by 
+<!-- MATH
+ $\nabla f = \lambda \nabla g$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img61.gif"
+ ALT="$ \nabla f = \lambda \nabla g$">
+and 
+<!-- MATH
+ $g(x,y)
+= 4$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img62.gif"
+ ALT="$ g(x,y)
+= 4$">.  This gives 
+  <P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="75" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img63.gif"
+ ALT="$\displaystyle 4x^3 + 2x$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img64.gif"
+ ALT="$\displaystyle = \lambda 2x$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img65.gif"
+ ALT="$\displaystyle 4y^3 - 2y$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img66.gif"
+ ALT="$\displaystyle = \lambda 2y$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="63" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img67.gif"
+ ALT="$\displaystyle x^2 + y^2$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="34" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img68.gif"
+ ALT="$\displaystyle = 4$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+We have to exercise a little caution here.  We would like to say that 
+
+<!-- MATH
+ $\lambda = 2x^2 + 1 = 2y^2 - 1$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img69.gif"
+ ALT="$ \lambda = 2x^2 + 1 = 2y^2 - 1$">, but this is true only if <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img70.gif"
+ ALT="$ x$">
+and <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img71.gif"
+ ALT="$ y$">
+are not zero.  Since zero is a possible value for <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img70.gif"
+ ALT="$ x$">
+and <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img71.gif"
+ ALT="$ y$">, we must
+make three cases:  <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img54.gif"
+ ALT="$ x=0$">
+yielding the two points 
+<!-- MATH
+ $(0, \pm 2)$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img72.gif"
+ ALT="$ (0, \pm 2)$">; <IMG
+ WIDTH="49" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img73.gif"
+ ALT="$ y = 0$">
+yielding the two points <IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img74.gif"
+ ALT="$ (\pm2, 0)$">, and the ``desired'' case where
+
+<!-- MATH
+ $2x^2 + 1 = 2y^2 - 1$
+ -->
+<IMG
+ WIDTH="149" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img75.gif"
+ ALT="$ 2x^2 + 1 = 2y^2 - 1$">.  In this last case, we have 
+<!-- MATH
+ $x^2 - y^2 = -1$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img76.gif"
+ ALT="$ x^2 - y^2 = -1$">
+and
+
+<!-- MATH
+ $x^2 + y^2 = 4$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img50.gif"
+ ALT="$ x^2 + y^2
+= 4$">
+which yields (adding the two equations) <IMG
+ WIDTH="67" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img77.gif"
+ ALT="$ 2x^2 = 3$">.
+<IMG
+ WIDTH="76" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img78.gif"
+ ALT="$ x^2 = 3/2$">
+implies <IMG
+ WIDTH="75" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img79.gif"
+ ALT="$ y^2 = 5/2$">
+which provides 4 points 
+<!-- MATH
+ $(\pm
+\sqrt{3/2}, \pm \sqrt{5/2})$
+ -->
+<IMG
+ WIDTH="152" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img80.gif"
+ ALT="$ (\pm
+\sqrt{3/2}, \pm \sqrt{5/2})$">.
+
+<P>
+Testing all points we see that 
+<!-- MATH
+ $f(0,\pm2) = 12$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img81.gif"
+ ALT="$ f(0,\pm2) = 12$">, 
+<!-- MATH
+ $f(\pm2,0) = 20$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img82.gif"
+ ALT="$ f(\pm2,0) = 20$">, and 
+
+<!-- MATH
+ $f(\pm \sqrt{3/2}, \pm \sqrt{5/2}) = 15/2$
+ -->
+<IMG
+ WIDTH="225" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img83.gif"
+ ALT="$ f(\pm \sqrt{3/2}, \pm \sqrt{5/2}) = 15/2$">.  Thus the maximum value
+is 20 which occurs at <IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img74.gif"
+ ALT="$ (\pm2, 0)$">, and the minimum value is <IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img84.gif"
+ ALT="$ 15/2$">
+which occurs at 
+<!-- MATH
+ $(\pm \sqrt{3/2}, \pm \sqrt{5/2})$
+ -->
+<IMG
+ WIDTH="152" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img80.gif"
+ ALT="$ (\pm
+\sqrt{3/2}, \pm \sqrt{5/2})$">.
+
+<P>
+<DT>7.
+<DD>Consider a function 
+<!-- MATH
+ $z = f(x,y)$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img16.gif"
+ ALT="$ z = f(x,y)$">
+which is defined and has
+  partial derivatives of all orders for all <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img70.gif"
+ ALT="$ x$">
+and <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img71.gif"
+ ALT="$ y$">.  Suppose the
+  function <IMG
+ WIDTH="58" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img85.gif"
+ ALT="$ f(x,b)$">
+has a local maximum at <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img86.gif"
+ ALT="$ x=a$">
+and the function
+  <IMG
+ WIDTH="58" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img87.gif"
+ ALT="$ f(a,y)$">
+has a local minimum at <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img88.gif"
+ ALT="$ y=b$">.  Can one infer that the point
+  <IMG
+ WIDTH="45" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img89.gif"
+ ALT="$ (a,b)$">
+is a critical point, saddle point, local maximum, local
+  minimum?
+
+<P>
+This is clearly a saddle point as the function increases in the
+  direction of the <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img71.gif"
+ ALT="$ y$">
+axis, but decreases in the direction of the
+  <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/img70.gif"
+ ALT="$ x$">
+axis.
+
+<P>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/~m8f99/99-final-Practice-sol/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 8 Fall 1999</I>
+<BR><I>1999-12-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>$FILE</TITLE>
+<META NAME="description" CONTENT="$FILE">
+<META NAME="keywords" CONTENT="slide08">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="slide08.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html64"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html65"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER"><FONT SIZE="+3">
+Section 2.3 
+<BR>
+Separable Equations
+</FONT></DIV>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Given a general first order D.E.
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} = f(x,y)
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="100" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja07/slide08/img1.gif"
+ ALT="\begin{displaymath}\frac{dy}{dx} = f(x,y)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">we rewrite it in the form
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+M(x,y)dx + N(x,y)dy = 0
+\end{displaymath}
+ -->
+
+
+<I>M</I>(<I>x</I>,<I>y</I>)<I>dx</I> + <I>N</I>(<I>x</I>,<I>y</I>)<I>dy</I> = 0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Now, if <I>M</I> is purely a function of <I>x</I>, and <I>N</I> is purely a 
+function of <I>y</I>, then we may simply write:
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+M(x)dx + N(y)dy = 0
+\end{displaymath}
+ -->
+
+
+<I>M</I>(<I>x</I>)<I>dx</I> + <I>N</I>(<I>y</I>)<I>dy</I> = 0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Let
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+H_1'(x) = M(x),   H_2'(y) = N(y)
+\end{displaymath}
+ -->
+
+
+<I>H</I><SUB>1</SUB>'(<I>x</I>) = <I>M</I>(<I>x</I>),   <I>H</I><SUB>2</SUB>'(<I>y</I>) = <I>N</I>(<I>y</I>)
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">now we can rewrite our D.E. again as
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+H_1'(x) + H_2'(y)\frac{dy}{dx} = 0
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="176" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja07/slide08/img2.gif"
+ ALT="\begin{displaymath}H_1'(x) + H_2'(y)\frac{dy}{dx} = 0\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">by the chain rule we can obtain
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{d}{dx}H_2(y) = H_2'(y)\frac{dy}{dx}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="165" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja07/slide08/img3.gif"
+ ALT="\begin{displaymath}\frac{d}{dx}H_2(y) = H_2'(y)\frac{dy}{dx}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">and so we get (noting that 
+<!-- MATH
+ $H_1'(x) = \frac{d}{dx}H_1(x)$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja07/slide08/img4.gif"
+ ALT="$H_1'(x) = \frac{d}{dx}H_1(x)$">)
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\frac{d}{dx}[H_1(x) + H_2(y)]
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="149" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja07/slide08/img5.gif"
+ ALT="\begin{displaymath}\frac{d}{dx}[H_1(x) + H_2(y)]\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">and now we integrate (Note: with respect to x) to obtain
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+H_1(x) + H_2(y) = c.
+\end{displaymath}
+ -->
+
+
+<I>H</I><SUB>1</SUB>(<I>x</I>) + <I>H</I><SUB>2</SUB>(<I>y</I>) = <I>c</I>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Question: what would have happened if we just integrated the equation
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+M(x)dx + N(y)dy = 0?
+\end{displaymath}
+ -->
+
+
+<I>M</I>(<I>x</I>)<I>dx</I> + <I>N</I>(<I>y</I>)<I>dy</I> = 0?
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">Answer: nothing terrible
+</FONT></FONT>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{displaymath}
+\int{M(x) dx} + \int{N(y) dy} = \int{0 \: d?}
+\end{displaymath}
+ -->
+
+
+<IMG
+ WIDTH="272" HEIGHT="49" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja07/slide08/img6.gif"
+ ALT="\begin{displaymath}\int{M(x) dx} + \int{N(y) dy} = \int{0 \: d?}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html66"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html64"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html65"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-07</I>
+</ADDRESS>
+</BODY>
+</HTML>

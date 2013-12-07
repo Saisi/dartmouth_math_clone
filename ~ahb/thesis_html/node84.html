@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Correction of the eigenwavenumbers</TITLE>
+<META NAME="description" CONTENT="Correction of the eigenwavenumbers">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node85.html">
+<LINK REL="previous" HREF="node83.html">
+<LINK REL="up" HREF="node83.html">
+<LINK REL="next" HREF="node85.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1191"
+  HREF="node85.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1189"
+  HREF="node83.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1183"
+  HREF="node83.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1192"
+  HREF="node85.html">`Automatic' normalisation of states</A>
+<B> Up:</B> <A NAME="tex2html1190"
+  HREF="node83.html">Higher-order correction and normalization</A>
+<B> Previous:</B> <A NAME="tex2html1184"
+  HREF="node83.html">Higher-order correction and normalization</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00721000000000000000">
+Correction of the eigenwavenumbers</A>
+</H2>
+
+<P>
+In Fig.&nbsp;<A HREF="node76.html#fig:sweeps">6.4</A> (bottom) the consistent curvature in the predicted
+shifts <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$"> implies that higher-order effects could be important
+in predicting the <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> values.
+There are many levels of higher-order correction possible
+once the basic diagonalization of (<A HREF="node81.html#eq:vergep">6.25</A>) has been performed:
+1) identification of the higher-order diagonal terms in <IMG
+ WIDTH="18" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img876.gif"
+ ALT="$\tilde{F}$">
+and <IMG
+ WIDTH="55" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img997.gif"
+ ALT="$d\tilde{F}/dk$"> for an average state, then correcting all the <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">
+according to the same resulting formula,
+2) using <!-- MATH
+ $\partial_n \psi_\mu$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img872.gif"
+ ALT="$\partial_n \psi_\mu$"> for each state on the boundary to
+compute a correction for each corresponding <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">,
+3) using <!-- MATH
+ $\partial_n \psi_\mu$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img872.gif"
+ ALT="$\partial_n \psi_\mu$"> for each state on the boundary and knowledge of
+off-diagonal terms in <IMG
+ WIDTH="18" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img876.gif"
+ ALT="$\tilde{F}$"> and <IMG
+ WIDTH="55" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img997.gif"
+ ALT="$d\tilde{F}/dk$"> to compute
+corrections to the eigenvectors <!-- MATH
+ ${\mathbf x}_\mu$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img666.gif"
+ ALT="${\mathbf x}_\mu$"> as well as the <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">.
+I will only report on the first of these ideas, since it is easiest to
+routinely implement.
+The other two levels of correction are areas for investigation, however
+it is not known whether they will prove even worthwhile (there
+is a trade-off betweeen correcting the results of one diagonalization and
+simply performing more diagonalizations).
+My inkling is that in practice
+the corrections presented here will be the only worthwhile ones.
+
+<P>
+Appendix&nbsp;<A HREF="node148.html#ap:tension">I</A> shows that the expansion of the diagonal of the
+tension matrix is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\tilde{F}_{\mu\mu} \ = \ 2\delta_\mu^2 - 2 \frac{\delta_\mu^3}{k_\mu}
+	+ C_4 \delta_\mu^4 + O(\frac{\delta_\mu^5 {\mathsf{L}}^2}{k_\mu}) +
+	O(\delta^6 {\mathsf{L}}^4) \cdots
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:tensdiagexp"></A><IMG
+ WIDTH="473" HEIGHT="52" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1022.gif"
+ ALT="\begin{displaymath}
+\tilde{F}_{\mu\mu} \ = \ 2\delta_\mu^2 - 2 \frac{\delta_\mu...
+...5 {\mathsf{L}}^2}{k_\mu}) +
+O(\delta^6 {\mathsf{L}}^4) \cdots
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.27)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the coefficient <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1023.gif"
+ ALT="$C_4$"> is the sum of many complicated boundary integrals
+of <!-- MATH
+ $\partial_n\psi_\mu$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img872.gif"
+ ALT="$\partial_n \psi_\mu$">, <!-- MATH
+ $\partial_{nt}\psi_\mu$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1024.gif"
+ ALT="$\partial_{nt}\psi_\mu$">, etc, and
+the local curvature <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1025.gif"
+ ALT="$\alpha$"> and its derivative.
+It is possible in theory to perform a random-wave estimate for these integrals
+to reach an expression in terms of the billiard shape.
+However in practice it is much easier to fit for <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1023.gif"
+ ALT="$C_4$"> by measuring the
+average value for
+a few states.
+For instance, in the quarter stadium of length 2 by height 1, <!-- MATH
+ $C_4 \approx -1.3$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1026.gif"
+ ALT="$C_4 \approx -1.3$">.
+However, it varies from state to state
+<A NAME="tex2html49"
+  HREF="footnode.html#foot10621"><SUP>6.3</SUP></A>,
+taking smaller values for states with higher average transverse momentum on the
+boundary, or for states which are scarred so as to avoid regions of high
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img882.gif"
+ ALT="$r_n$">.
+Note that <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1023.gif"
+ ALT="$C_4$"> has units of length squared, so that if the billiard changes
+size, then <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1023.gif"
+ ALT="$C_4$"> will need to be scaled accordingly.
+
+<P>
+The generalized eigenvalue is
+<!-- MATH
+ $\lambda_\mu  = (d\tilde{F}_{\mu\mu}/dk)/\tilde{F}_{\mu\mu}$
+ -->
+<IMG
+ WIDTH="162" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1027.gif"
+ ALT="$\lambda_\mu = (d\tilde{F}_{\mu\mu}/dk)/\tilde{F}_{\mu\mu}$"> which can be
+found from (<A HREF="node84.html#eq:tensdiagexp">6.27</A>). Inversion of the series expansion
+is needed to get the series for our estimate for <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img24.gif"
+ ALT="$\delta _\mu $">, giving
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+k_\mu \ \equiv \ k - \delta_\mu \ = \ k - \frac{2}{\lambda_\mu}
+	+ \frac{2}{k\lambda_\mu^2} - \frac{4 C_4}{\lambda_\mu^3} +
+	O(\frac{1}{\lambda_\mu^4}) \cdots ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:predk4"></A><IMG
+ WIDTH="479" HEIGHT="49" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1028.gif"
+ ALT="\begin{displaymath}
+k_\mu \ \equiv \ k - \delta_\mu \ = \ k - \frac{2}{\lambda_...
+...c{4 C_4}{\lambda_\mu^3} +
+O(\frac{1}{\lambda_\mu^4}) \cdots ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.28)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where corrections of <!-- MATH
+ $O(\delta_\mu/k)$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1029.gif"
+ ALT="$O(\delta_\mu/k)$"> have been ignored. This is our
+improved version of (<A HREF="node81.html#eq:predk2">6.26</A>).
+In tests, use of this formula had little effect on the <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1030.gif"
+ ALT="$N/100$">
+most accurate states, but the resulting wavenumber shift reduced the
+tension of the remainder of the
+useful states by a factor of <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1031.gif"
+ ALT="$\approx 8$"> (see Fig.&nbsp;<A HREF="node85.html#fig:err">6.9</A>).
+Also, the <!-- MATH
+ $O(\lambda_\mu^{-2})$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1032.gif"
+ ALT="$O(\lambda_\mu^{-2})$"> term had very little effect (much less
+than the <!-- MATH
+ $O(\lambda_\mu^{-3})$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1033.gif"
+ ALT="$O(\lambda_\mu^{-3})$">) because
+of the <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img765.gif"
+ ALT="$1/k$"> factor.
+The utility of higher-order expansion is minimal (the next significant, the
+sixth-order, has little effect).
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:norm"></A><A NAME="10867"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.8:</STRONG>
+
+Automatic normalization of states returned by the scaling method at
+<IMG
+ WIDTH="62" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1034.gif"
+ ALT="$k\approx 10^3$">, using (<A HREF="node85.html#eq:vnorm">6.29</A>). The error from 1 is shown.
+The growth of random norm errors roughly follows a second power law
+(shown by the staight line).
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="376" HEIGHT="228" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1035.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/norm.eps,width=0.7\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1191"
+  HREF="node85.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1189"
+  HREF="node83.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1183"
+  HREF="node83.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1192"
+  HREF="node85.html">`Automatic' normalisation of states</A>
+<B> Up:</B> <A NAME="tex2html1190"
+  HREF="node83.html">Higher-order correction and normalization</A>
+<B> Previous:</B> <A NAME="tex2html1184"
+  HREF="node83.html">Higher-order correction and normalization</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

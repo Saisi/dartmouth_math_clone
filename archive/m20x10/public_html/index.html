@@ -1,0 +1,364 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Math 20. Discrete Probability</title></head>
+<body alink="#FF0000" bgcolor="#ffffff" link="#0055AA" vlink="#0055AA">
+
+
+<center>
+<h1><span style="font-weight: 400">Math 20.</span> Discrete Probability</h1>
+<p><font size="5"><b>Summer 2010</b></font></p>
+</center>
+
+<ul>
+  <li>
+
+<p align="left"><b><font size="4">Instructor:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Greg Petrics</font></b></p>
+  </li>
+  <li>
+<p align="left"><b><font size="4">Lectures:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></b>
+<font size="4">MWF 11:15-12:20 in Kemeny 105</font></p>
+  </li>
+  <li>
+
+<p align="left"><font size="4"><b>X-period:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Tu 12:00 - 12:50.  X-hours will be used sparingly throughout the term. Use will be announced in class and in the announcements below.</font></p> 
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Office Hours:&nbsp;&nbsp;&nbsp; </b>To be finalized after the start of class, but for the first week: Monday 
+12:30-2:00, Wednesday 1:30-3:00 and by appointment</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Office:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ 
+
+Kemeny 214</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Email:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<script>
+secondpart = "petrics";
+thirdpart = "dartmouth.";
+fourthpart = "edu";
+middlepart = "@";
+firstpart = "gregory.";
+middleinitial = "c.";
+document.write("<a href=mailto:"+firstpart + middleinitial + secondpart+ middlepart + thirdpart +fourthpart+">");
+document.write(firstpart + middleinitial + secondpart + middlepart + thirdpart +fourthpart+"</a>");
+</script>
+
+</font></p>
+  </li>
+  <li>
+<p align="left"><font size="4"><b>Phone:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (603) 646-9809</font></p>
+
+  </li>
+</ul>
+
+<hr>
+<a href="homework.html">HOMEWORK PAGE SHORTCUT</a>
+<hr>
+<p align="left"><font size="4"><b>Announcements</b></font></p>
+<ul>
+<li> Solutions for Midterm Exam 2 can be found <a href="http://www.math.dartmouth.edu/~m20x10/exam_solns/midterm_2/">here</a>. (there is no page 1)</li>
+<li> Solutions to Homework 7 can be found <a href="http://www.math.dartmouth.edu/~m20x10/hw_solns/hw7_solns/">here</a>. Because solutions are posted ABSOLUTELY NO late homeworks will be accepted now.</li>
+<li> All programs related to Markov Chains are available <a href="http://www.math.dartmouth.edu/~m20x10/markov_chains/">here</a>. All programs require Matlab.</li>
+<li> The FINAL EXAM is Sunday August 29th at 8AM (MORNING) in Kemeny 008.</li>
+<li> The homework assigned for Friday August 13th, is due Wednesday August 18th. This is a departure from normal in which the homework is usually not due for at least 1 week from the day it is assigned. ALSO, note that problem 15 from Section 9.2 was made EASIER. See the note on the homework page which describes what you need (and need not) do.</li>
+<li> Solutions to Homework 6 can be found <a href="http://www.math.dartmouth.edu/~m20x10/hw_solns/hw6_solns/">here</a>. Because solutions are posted ABSOLUTELY NO late homeworks will be accepted now.</li>
+<li> The second midterm is tonight from 5-7PM in Rockefeller Room 003. As mentioned in class
+it covers all material through section 9.1 in the text. The lecture which cooresponds to this material was given on Friday July 30th, 2010.</li>
+<li> You can download the <b>CLT_general</b> program mentioned in class <a href="http://math.dartmouth.edu/~m20x10/general_CLT/">here</a> (right click - save as the individual files). You will need Matlab to run the files. NOTE: You will need to download ALL the files in this director to THE SAME directory on your computer 
+to get any of the files to work.</li>
+<li> Solutions for homework 5 can be found <a href="http://www.math.dartmouth.edu/~m20x10/hw_solns/hw5_solns/">here</a>. Because solutions are posted ABSOLUTELY NO late homeworks will be accepted now.</li>
+<li> As has been noted below for several weeks, the second exam is Monday August 9th at 5pm.</li>
+<li> Solutions for Midterm Exam 1can be found <a href="http://www.math.dartmouth.edu/~m20x10/exam_solns/midterm_1/">here</a>. (there is no page 1)</li>
+<li> Solutions for homework 4 can be found <a href="http://www.math.dartmouth.edu/~m20x10/hw_solns/hw4_solns/">here</a>. Because solutions are posted ABSOLUTELY NO late homeworks will be accepted now.</li>
+<li> You can download the program <b>S_n_star_compare_ND</b> mentioned in class <a href="http://math.dartmouth.edu/~m20x10/S_N_STAR/">here</a> (right click - save as). You will need Matlab to run the file.</li>
+<li> Solutions for homework 3 can be found <a href="http://www.math.dartmouth.edu/~m20x10/hw_solns/hw3_solns/">here</a>.</li>
+<li> You can download the Central Limit Theorem for BTPs programs mentioned in class <a href="http://math.dartmouth.edu/~m20x10/CLT_BTP/">here</a> (right click - save as the individual files). You will need Matlab to run the files. </li>
+<li> You can download the program <b>BTP_LoLN</b> mentioned in class <a href="http://math.dartmouth.edu/~m20x10/BTP_LoLN.m">here</a> (right click - save as). You will need Matlab to run the file. </li>
+<li> You can download the program <b>benford_analysis</b> mentioned in class <a href="http://math.dartmouth.edu/~m20x10/benford_analysis.m">here</a> (right click - save as). You will also need to download (to the same directory as benford_analysis) the file found <a href="http://math.dartmouth.edu/~m20x10/first_dig_input.m">here</a>. You will need Matlab to run the file. Here's the <a href="http://math.dartmouth.edu/~m20x10/snowfall_data.mat">snow data</a>, and the <a href="http://math.dartmouth.edu/~m20x10/daily_precip_data.mat">liquid precip data</a>.</li>
+<li> You can download the program <b>Bomb_Dropper</b> mentioned in class <a href="http://math.dartmouth.edu/~m20x10/Bomb_Dropper.m">here</a> (right click - save as). You will need Matlab to run the file.</li>
+<li> Solutions for homework 1 can be found <a href="http://www.math.dartmouth.edu/~m20x10/hw_solns/hw1_solns/">here</a>. Solutions for homework 2 can be found <a href="http://www.math.dartmouth.edu/~m20x10/hw_solns/hw2_solns/">here</a>.</li>
+<li> <del>Last summer's first midterm is available for practice <a href="http://math.dartmouth.edu/~m20x10/Math20_PRACTICEMidterm1.pdf">here</a>. Problems like Problem 8 WILL NOT be asked. Expect a few more theoretical problems. See e.g. problem 26 in section 4.1. </del> This exam is not representative of what our exam will be like. Please focus your studies on notes, practice problems, homework problems, and the assigned reading from the text instead of working on this exam. Apologies for the inconvienence.</li>
+<li> You can download the program <b>Craps</b> mentioned in the book <a href="http://math.dartmouth.edu/~m20x10/Craps.m">here</a> (right click - save as). A non-verbose version is available <a href="http://math.dartmouth.edu/~m20x10/quiet_Craps.m">here</a>. You will need Matlab to run the file. </li>
+<li> Exam dates have been posted below. The first exam is Monday July 19th at 5pm.</li>
+<li> <b>REMINDER:</b> First homework is due at the start of class Friday, July 9th, 2010.</li>
+<li> No class Monday July 5th, 2010 in observance of Independence Day in the United States.</li>
+<li> You can download the program <b>Birthday</b> mentioned in the book <a href="http://math.dartmouth.edu/~m20x10/Birthday.m">here</a> (right click - save as). You will need Matlab to run the file.</li>
+<li> The first homework's due date has been changed to July 9th, 2010 (Friday). The second homework will be due July 14, 2010 (Wednesday).</li>
+<li> You can download the program <b>FixedPoints</b> mentioned in the book <a href="http://math.dartmouth.edu/~m20x10/fixed_points.m">here</a> (right click - save as). You will need Matlab to run the file.</li>
+<li> Class will be held during X-Hour on June 29th, 2010.</li>
+<li> First homework is due <del>Wednesday July 7th</del> Friday July 9th at the START OF CLASS.</li>
+<li> First day of class is Friday June 25th, 2010.</li>
+<li> The Saturday June 26th, 2010 class is MOVED to X-hour Tuesday June 29th, 2010. NO CLASS ON SATURDAY.</li?
+</ul>
+<!--
+<p align="left">To practice for the final I suggest trying out the earlier homeworks, midterms and exercises from 5.1 (this is useful because it doesn't
+mention which distribution to use, so it helps in practicing figuring out the distribution just like in a test). Section 11.2 has a lot of good exercises and 
+I will likely grab a problem from this section (as I like it a lot). If you want to know if you are solving the problems correctly, feel free to email me or 
+come to office hours (I will hold office hours on Tuesday, Wednesday and Friday in the afternoon).
+</p>
+
+<p align="left"> Homework 8 is due on Wednesday August 26, 2009 (note that Homework 7 is due the same day, homework 8 is meant to represent class on Friday):<br>
+Section 11.3: 1,2,3, 6, 24
+</p>
+
+<p align="left">Homework 7 is due on Wednesday August 26, 2009: <br>
+Section 11.1: 2, 4, 8, 11, 19<br>
+Section 11.2: 2, 4, 6, 8, 9, 13, 15
+</p>
+
+<p align="left">Here's the solution to the <a href="http://math.dartmouth.edu/~m20x09/Solutions5.pdf">fifth homework set</a> <br>
+I won't post solutions for the fourth homework set, if you have any questions about that homework, just email me.
+
+<p align="left">Here's the solution to the <a href="http://math.dartmouth.edu/~m20x09/SolutionsPE.pdf">Practice Exam</a></p>
+
+<p align="left"> Solutions to the third homework set can be read <a href="http://math.dartmouth.edu/~m20x09/Solutions3.pdf">here</a></p>
+
+
+<p align="left"> Solutions to the first homework set found <a href="http://math.dartmouth.edu/~m20x09/Solutions1.pdf">here</a><br>
+Solutions to the second homework set found <a href="http://math.dartmouth.edu/~m20x09/Solutions2.pdf">here</a></p>
+
+<br>
+<p align="left"> The midterms have been scheduled: July 20, 2009 from 5pm-7pm at room 008. August 10, 2009 from 5pm to 7pm at room 008.</p> 
+
+<p align="left"> The final exam is Sunday August 30, 2009 at 8am. Room to be announced</p>
+-->
+<hr>
+
+<p>
+
+
+<font size="4"><b>Textbook</b></font></p>
+
+<p><i>Introduction to Probability</i> (2nd revised edition) by Charles M. 
+Grinstead and J. Laurie Snell</p>
+<p>This book is available at Wheelock Books for $50, and also may be downloaded 
+from
+
+<a href="http://www.dartmouth.edu/~chance/teaching_aids/book_articles/probability_book/pdf.html">
+http://www.dartmouth.edu/~chance/teaching_aids/book_articles/probability_book/pdf.html</a></p>
+
+<hr>
+
+<p>
+
+
+<font size="4"><b>Tentative syllabus</b></font></p>
+
+<p>
+
+
+This syllabus is subject to change, but it should give you an idea of the topics 
+we will cover.</p>
+
+<div class="Section1">
+  <div class="MsoNormal" style="text-align: center;" align="center">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+    <table style="width: 621" border="1" cellspacing="0">
+      <tr>
+        <td valign="top" width="98"><br>
+&nbsp;</td>
+        <td style="color: rgb(0, 33, 0);" valign="top" width="114">
+        <p align="center"><b><font face="Arial" style="font-size: smaller">
+        Sections in the textbook</font></b></td>
+
+        <td style="color: rgb(0, 33, 0);" valign="top" width="395">
+        <p align="center"><small><b><font face="Arial">Brief Description</font></b></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 1</font></b></small></small></td>
+        <td valign="top" width="114"><small><small><small><b>
+        <font face="Arial" size="2">1.2, 3.1</font></b></small></small></small></td>
+
+        <td valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Basic  </font></small></small></small>
+        <font face="Garamond" size="2">probability. Combinatorics: permutations.<br>
+&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 2</font></b></small></small></td>
+
+        <td valign="top" width="114"><b>
+        <font face="Arial" style="font-size: smaller">3.2, 4.1</font></b></td>
+        <td valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Combinations. Conditional probability.<br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+
+        <font size="2" face="Arial">Week 3</font></b></small></small></td>
+        <td valign="top" width="114"><b><font face="Arial" size="2">6</font></b><small><small><small><b><font face="Arial" size="2">.1, 
+        6.2</font></b></small></small></small></td>
+        <td valign="top" width="395"><small><small><small>
+        <font size="2" face="Garamond">Expected value. Variance.<br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 4</font></b></small></small></td>
+        <td valign="top" width="114"><b><font face="Arial" size="2">5.1</font></b></td>
+        <td valign="top" width="395">
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <font face="Garamond" size="2"> <i>Midterm 1. </i></font>
+    </span>
+
+        <font face="Garamond" size="2">Important 
+        distributions.</font><small><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 5</font></b></small></small></td>
+        <td valign="top" width="114"><b><font face="Arial" size="2">8.1</font></b></td>
+        <td valign="top" width="395">
+
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <font face="Garamond" size="2">Law of large numbers.</font></span><small><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 6</font></b></small></small></td>
+        <td valign="top" width="114">
+
+    <span style="font-size: 14pt; color: rgb(0, 51, 0);">
+        <b><font face="Arial" size="2">9</font></b><small><small><small><font face="Arial" size="2"><b>.1</b></font></small></small></small></span></td>
+        <td valign="top" width="395"><font face="Garamond" size="2">
+    <span style="color: rgb(0, 51, 0)">
+        Central Limit Theorem: Bernoulli trials</span></font><small><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 7</font></b></small></small></td>
+        <td valign="top" width="114">
+    <b><font face="Arial" size="2" color="#003300">9.2</font></b><span style="font-size: 14pt; color: rgb(0, 51, 0);"><small><small><small><b><font face="Arial" size="2"><br>
+&nbsp;</font></b></small></small></small></span></td>
+        <td valign="top" width="395">
+        <font face="Garamond" size="2" color="#003300">Central Limit Theorem: 
+        Independent trials. <i>Midterm 2.</i></font><span style="font-size: 14pt; color: rgb(0, 51, 0);"><small><small><small><font size="2" face="Garamond"><br>
+
+&nbsp;</font></small></small></small></span></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 8</font></b></small></small></td>
+        <td valign="top" width="114">
+    <b><font face="Arial" size="2" color="#003300">11</font></b><span style="font-size: 14pt; color: rgb(0, 51, 0);"><small><small><small><b><font face="Arial" size="2">.1, 
+    11.2</font></b></small></small></small></span></td>
+        <td valign="top" width="395">
+
+    <small><small><small><font size="2" face="Garamond">
+    <span style="color: #003300">Introduction to Markov chains. Absorbing Markov 
+    chains.</span><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      <tr>
+        <td valign="top" width="98"><small><small><b>
+        <font size="2" face="Arial">Week 9</font></b></small></small></td>
+        <td valign="top" width="114">
+
+    <b><font face="Arial" size="2" color="#003300">11.3</font></b></td>
+        <td valign="top" width="395"><small>
+        <font face="Garamond" color="#003300">Regular Markov chains, ergodic 
+        Markov chains</font><small><small><font size="2" face="Garamond"><br>
+&nbsp;</font></small></small></small></td>
+      </tr>
+      </table>
+    </span>
+  </div>
+
+</div>
+<!--
+Besides these topics there will be Bonus Lectures given on x-hours about Probability Gems such as Card Shuffling (Chapter 3.3). The bonus lectures will be for students that want to learn extra stuff not covered in the exams.
+-->
+<hr>	
+<font size="4"><b>Grading</b></font></p>
+
+<p>
+
+
+The course grade will be based on: <br> Homework  15%, <br> Midterm 1    25% , <br> Midterm 2    25% 
+and <br> Final Exam   35%.</p>
+
+<p>
+
+
+<font size="4"><b>Attendance</b></font></p>
+
+
+<UL>
+	<LI><p>Class meets three times per week and occasionally on X-hours. 
+		You will be expected to attend class; excessive absences
+		will affect your course grade.</p>
+
+	<LI><p>If you must miss class, please contact your instructor in advance.</p>
+
+</UL>
+
+
+<p>
+
+<font size="4"><b>Homework</b></font></p>
+
+<p>
+
+
+There will be <a href="homework.html">homework</a> due 
+roughly every week. It will consist typically of a reading assignment 
+(of the part of the book covered in class) and some problems. Collaboration in 
+the homework is permitted, 
+but you are not allowed to copy someone else's work. The solutions must be 
+written individually. You have to mention on your problem set the names of the 
+students that you worked with.</p>
+
+<p>
+
+<font size="4"><b>Exams</b></font><br>
+<br>
+On the midterms and the final exam you must work on the problems on 
+your own. <b>No collaboration permitted</b> in the exams<b>.<br>
+&nbsp;</b><br>
+There will be two midterms and a final.<br><br>
+
+The first midterm will be on Monday July 19, 2010 from 5pm to 7pm in Rockefeller Room 003.<br>
+The second midterm will be on Monday August 09, 2010 from 5pm to 7pm in Rockefeller Room 003.<br>
+The final exam will be on or about Sunday August 29, 2010 at a time and a room to be determined by the registrar.<br>
+
+<hr>
+<p class="MsoNormal"><span style="font-family:Times"><b>Students with 
+disabilities: </b>Students with learning, 
+physical, or psychiatric disabilities enrolled in this course that may need 
+disability-related classroom accommodations are encouraged to make an office 
+appointment to see me before the end of the second week of the term. All 
+discussions will remain </span>confidential, although the Student Disability 
+Services office may be consulted to discuss <span style="font-family:Times">
+
+appropriate implementation of any accommodation requested.</span><br>
+<small>
+<img src="http://www.math.dartmouth.edu/website_dartmouth/Sample%20Web%20Page_files/surfbar-75x1.gif" width="75" height="1">
+</small></p>
+
+<p>
+
+<font size="4"><b>Honor Principle</b></font><br>
+<br>
+A recap of what is stated above. On homeworks, collaboration is permitted, but each student writes his/her own solutions.<br>
+In the midterms and exams, <b>No collaboration</b> is permitted.
+</p>
+
+
+<p>
+<small><i>Last modified on June 21, 2010
+</i></small>
+
+
+</p></body></html>

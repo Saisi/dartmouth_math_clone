@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>carwind</TITLE>
+<META NAME="description" CONTENT="carwind">
+<META NAME="keywords" CONTENT="carwind">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="carwind.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#0000">
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+The Car and the Wind
+
+</DIV>
+
+<P>
+<B>Question:</B> There is a car with a weathervane attached
+to its roof. (Why would anyone attach a weathervane to the roof of
+their car?) As the car drives north at a speed of 50 kph, the
+weathervane indicates that the wind is coming from due west. As the
+car drives north at 100 kph, the weathervane indicates that the wind
+is coming from the northwest. From what direction is the wind
+<I>really</I> coming? And what is the wind's speed?
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>Answer:</B>
+First we need to introduce some notation and set up the problem.
+Let the vector <B>w</B> represent the <I>true</I> speed <IMG
+ WIDTH="16" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img1.gif"
+ ALT="$ w$">
+and direction
+<IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img2.gif"
+ ALT="$ \theta$">
+of the wind, i.e. this is the speed of the wind relative
+to the ground:
+<BR>
+<DIV ALIGN="CENTER"><A NAME="truewind"></A>
+<!-- MATH
+ \begin{eqnarray}
+{\bf w}_{\mbox{wind/ground}} =
+w \cos\theta {\bf i} + w \sin\theta {\bf j}.
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="255" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img3.gif"
+ ALT="$\displaystyle {\bf w}_{\mbox{wind/ground}} =
+w \cos\theta {\bf i} + w \sin\theta {\bf j}.$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Where do the 
+<!-- MATH
+ $\cos\theta$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img4.gif"
+ ALT="$ \cos\theta$">
+and 
+<!-- MATH
+ $\sin\theta$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img5.gif"
+ ALT="$ \sin\theta$">
+come from? They come from
+the following picture which some (all?) of you may have seen before:
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ $\epsfig{figure=circletheta.ps,width=0.4\textwidth}$
+ -->
+<IMG
+ WIDTH="220" HEIGHT="152" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img6.gif"
+ ALT="\epsfig{figure=circletheta.ps,width=0.4\textwidth}">
+</DIV>
+I can use the angle <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img2.gif"
+ ALT="$ \theta$">
+to indicate which way the wind is
+blowing.
+Therefore, to find the speed and direction of the wind, we need
+to find <IMG
+ WIDTH="16" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img1.gif"
+ ALT="$ w$">
+and <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img2.gif"
+ ALT="$ \theta$">.
+
+<P>
+What do we know? We are given two situations. The first situation
+occurs when the car is travelling due north at 50 kph. Using
+the way I've labeled the axes in the above picture, this means
+that the speed of the car relative to the ground is
+
+<!-- MATH
+ \begin{displaymath}
+{\bf v}_{\mbox{car/ground}} = 50{\bf j}.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="140" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img7.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{car/ground}} = 50{\bf j}.
+$">
+</DIV><P></P>
+In this case, the weathervane says that the wind is coming from
+due west. So the speed and direction of the wind, relative to the
+car, is
+
+<!-- MATH
+ \begin{displaymath}
+{\bf v}_{\mbox{wind/car}} = v_1 {\bf i}.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="123" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img8.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{wind/car}} = v_1 {\bf i}.
+$">
+</DIV><P></P>
+Remember, all I know is that the wind seems to be coming from the
+west. I don't know its speed. I denote the unknown speed <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img9.gif"
+ ALT="$ v_1$">.
+Therefore, the speed and direction of the wind relative to the
+ground is
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn1"></A>
+<!-- MATH
+ \begin{eqnarray}
+{\bf v}_{\mbox{wind/ground}} & = &
+{\bf v}_{\mbox{wind/car}} + {\bf v}_{\mbox{car/ground}} \nonumber\\
+ & = & v_1 {\bf i} + 50{\bf j}.
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="105" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img10.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{wind/ground}}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="185" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img12.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{wind/car}} + {\bf v}_{\mbox{car/ground}}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="69" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img13.gif"
+ ALT="$\displaystyle v_1 {\bf i} + 50{\bf j}.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+The second situation has to do when the car is travelling due north
+at 100 kph:
+
+<!-- MATH
+ \begin{displaymath}
+{\bf v}_{\mbox{car/ground}} = 100{\bf j}.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="148" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img14.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{car/ground}} = 100{\bf j}.
+$">
+</DIV><P></P>
+In this case, the weather vane says that the wind is coming from
+the northwest. So the speed and direction of the wind, relative to the
+car, is
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+{\bf v}_{\mbox{wind/car}} & = &
+v_2\cos(-\pi/4){\bf i} + v_2\sin(-\pi/4){\bf j} \\
+ & = & v_2\frac{\sqrt{2}}{2}{\bf i} - v_2\frac{\sqrt{2}}{2}{\bf j}
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="77" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img15.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{wind/car}}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="211" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img16.gif"
+ ALT="$\displaystyle v_2\cos(-\pi/4){\bf i} + v_2\sin(-\pi/4){\bf j}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="114" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img17.gif"
+ ALT="$\displaystyle v_2\frac{\sqrt{2}}{2}{\bf i} - v_2\frac{\sqrt{2}}{2}{\bf j}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+As in the first situation, I do not know how fast the wind appears
+to be coming from the northwest. All I know is that it is coming
+from the northwest. So let <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img18.gif"
+ ALT="$ v_2$">
+denote the unknown speed in this
+situation. Therefore, the speed and direction of the wind relative
+to the ground is
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn2"></A>
+<!-- MATH
+ \begin{eqnarray}
+{\bf v}_{\mbox{wind/ground}} & = &
+{\bf v}_{\mbox{wind/car}} + {\bf v}_{\mbox{car/ground}} \nonumber\\
+ & = & v_2\frac{\sqrt{2}}{2}{\bf i} - v_2\frac{\sqrt{2}}{2}{\bf j}
+ + 100{\bf j} \nonumber\\
+ & = &
+ v_2\frac{\sqrt{2}}{2}{\bf i} + \left(100 - v_2\frac{\sqrt{2}}{2}\right)
+{\bf j}
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="105" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img10.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{wind/ground}}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="185" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img12.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{wind/car}} + {\bf v}_{\mbox{car/ground}}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="163" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img19.gif"
+ ALT="$\displaystyle v_2\frac{\sqrt{2}}{2}{\bf i} - v_2\frac{\sqrt{2}}{2}{\bf j}
++ 100{\bf j}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="185" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img20.gif"
+ ALT="$\displaystyle v_2\frac{\sqrt{2}}{2}{\bf i} + \left(100 - v_2\frac{\sqrt{2}}{2}\right)
+{\bf j}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+I now have <I>three</I> different vectors representing the speed and
+direction of the wind relative to the ground:
+Equations <A HREF="carwind.html#truewind">1</A>, <A HREF="carwind.html#eqn1">2</A> and <A HREF="carwind.html#eqn2">3</A>. All these
+three vectors are equal. So let me start solving for the unknown
+quantities <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img9.gif"
+ ALT="$ v_1$">, <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img18.gif"
+ ALT="$ v_2$">, <IMG
+ WIDTH="16" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img1.gif"
+ ALT="$ w$">
+and <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img2.gif"
+ ALT="$ \theta$">.
+
+<P>
+Solving for <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img18.gif"
+ ALT="$ v_2$">
+seems easiest, because I can equate the
+<B>j</B> components in Equations <A HREF="carwind.html#eqn1">2</A> and <A HREF="carwind.html#eqn2">3</A>:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+\left(100 - v_2\frac{\sqrt{2}}{2}\right) & = & 50
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="113" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img21.gif"
+ ALT="$\displaystyle \left(100 - v_2\frac{\sqrt{2}}{2}\right)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img22.gif"
+ ALT="$\displaystyle 50$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Solving the above for <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img18.gif"
+ ALT="$ v_2$">
+yields 
+<!-- MATH
+ $v_2 = 50\sqrt{2}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img23.gif"
+ ALT="$ v_2 = 50\sqrt{2}$">.
+And that means Equation <A HREF="carwind.html#eqn2">3</A> is (plugging in the value for
+<IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img18.gif"
+ ALT="$ v_2$">):
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqnv2"></A>
+<!-- MATH
+ \begin{eqnarray}
+{\bf v}_{\mbox{wind/ground}}
+=
+50 {\bf i} + 50 {\bf j}.
+\end{eqnarray}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="192" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img24.gif"
+ ALT="$\displaystyle {\bf v}_{\mbox{wind/ground}}
+=
+50 {\bf i} + 50 {\bf j}.$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Equating the <IMG
+ WIDTH="9" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img25.gif"
+ ALT="$ {\bf i}$">
+and <IMG
+ WIDTH="10" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img26.gif"
+ ALT="$ {\bf j}$">
+components of Equations
+<A HREF="carwind.html#truewind">1</A> and <A HREF="carwind.html#eqnv2">4</A>, I get
+
+<!-- MATH
+ $w \cos\theta = 50$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img27.gif"
+ ALT="$ w \cos\theta = 50$">
+and 
+<!-- MATH
+ $w \sin\theta = 50$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img28.gif"
+ ALT="$ w \sin\theta = 50$">.
+Therefore
+
+<!-- MATH
+ \begin{displaymath}
+w \cos\theta = w \sin\theta \Rightarrow
+\cos\theta=\sin\theta.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="229" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img29.gif"
+ ALT="$\displaystyle w \cos\theta = w \sin\theta \Rightarrow
+\cos\theta=\sin\theta.
+$">
+</DIV><P></P>
+For what values of <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img2.gif"
+ ALT="$ \theta$">
+is the above true? For
+
+<!-- MATH
+ $\displaystyle{\theta = \frac{\pi}{4}\mbox{ and }\frac{5 \pi}{4}.}$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img30.gif"
+ ALT="$ \displaystyle{\theta = \frac{\pi}{4}\mbox{ and }\frac{5 \pi}{4}.}$">
+Which <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img2.gif"
+ ALT="$ \theta$">
+do we choose?
+
+<P>
+By studying the circle picture we started with and seeing where
+the wind appears to be coming from when the car drives at 50 kph and
+100 kph, we can reason that the wind will be coming somewhere from
+the west. (Draw vectors that indicate the two directions the wind
+seems to be heading. As the car slows down from 100 kph to
+50 kph, how are the two ``wind'' vectors you drew changing?) So
+that means the wind is coming from the southwest:
+
+<!-- MATH
+ $\displaystyle{\theta = \frac{\pi}{4}}$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img31.gif"
+ ALT="$ \displaystyle{\theta = \frac{\pi}{4}}$">.
+
+<P>
+And now I can <I>finally</I> solve for <IMG
+ WIDTH="16" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img1.gif"
+ ALT="$ w$">, the speed of the wind.
+I'll do this by equating the <IMG
+ WIDTH="9" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img25.gif"
+ ALT="$ {\bf i}$">
+components of Equations
+<A HREF="carwind.html#truewind">1</A> and <A HREF="carwind.html#eqn2">3</A>:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+v_2 \frac{\sqrt{2}}{2} & = & w \cos\theta\\
+50\sqrt{2}\left(\frac{\sqrt{2}}{2}\right) & = &
+ w \cos\left(\frac{\pi}{4}\right) \\
+50 & = & w \frac{\sqrt{2}}{2}\\
+50 \sqrt{2} & = & w.
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="44" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img32.gif"
+ ALT="$\displaystyle v_2 \frac{\sqrt{2}}{2}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="50" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img33.gif"
+ ALT="$\displaystyle w \cos\theta$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="94" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img34.gif"
+ ALT="$\displaystyle 50\sqrt{2}\left(\frac{\sqrt{2}}{2}\right)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="75" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img35.gif"
+ ALT="$\displaystyle w \cos\left(\frac{\pi}{4}\right)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img22.gif"
+ ALT="$\displaystyle 50$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="41" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img36.gif"
+ ALT="$\displaystyle w \frac{\sqrt{2}}{2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="41" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img37.gif"
+ ALT="$\displaystyle 50 \sqrt{2}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img11.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img38.gif"
+ ALT="$\displaystyle w.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Therefore, the wind is coming from the southwest at a speed of
+
+<!-- MATH
+ $50\sqrt{2}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img39.gif"
+ ALT="$ 50\sqrt{2}$">
+kph (and I never had to solve for <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m8s00/hw12sup/carwind/img9.gif"
+ ALT="$ v_1$">). And as they
+say, the answer is blowing in the wind.
+
+<P>
+
+<P><P>
+<BR>
+Note: There are other ways of solving this problem.
+This is just one of them.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 8 Spring 2000</I>
+<BR><I>2000-04-24</I>
+</ADDRESS>
+</BODY>
+</HTML>

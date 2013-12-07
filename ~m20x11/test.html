@@ -1,0 +1,242 @@
+
+ 
+ 
+ 
+ 
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+	
+ 	<link type="text/css" rel="stylesheet" href="nkomstylesheet.css"> 
+	<script type="text/javascript" src="http://www.math.dartmouth.edu/~m20x11/js/jquery.js"></script> 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js">
+	<script type="text/javascript" src="nkomjs.js"></script> 
+	<script type="text/javascript" src="http://www.math.dartmouth.edu/~m20x11/jquery.iframe-auto-height.plugin.js"></script> 
+ 
+	<script type="text/javascript"> 
+		var whites = 1;		
+ 		var play = 1;
+		var count = 0;
+		var simTime = 1000;
+		var gridSize = 10;
+		var speed = 5;
+		var stone;
+		var neighbor;
+	
+		function buildGrid(size){
+				$("table.stonegrid tr").remove();
+					
+
+				for(var i=0;i<size;i++){ //row i
+					var row = $('<tr> </tr>');
+						var black = $('<td class="blackstone"></td>');
+						var white = $('<td class="whitestone"></td>');
+	
+						for (var j=0;j<size;j++) { //column j
+							if (Math.floor(Math.random()*2) == 0){
+								black.clone().appendTo(row);					
+							}
+							else {
+								white.clone().appendTo(row);
+								whites++;
+							}
+						}
+					row.appendTo('table.stonegrid');
+				}
+			}
+
+
+			function updateOnce(){
+
+					//select a random element (the (r,c)-element of the table)
+						var rows = $('table.stonegrid tr'); //select from rows
+						var r = Math.floor(Math.random()*(rows.length)); //select random row
+		
+						var cells = rows.eq(r).children('td'); //select from cells in that row
+						var c = Math.floor(Math.random()*(cells.length));
+						
+						stone = cells.eq(c);
+						
+						if (play == 0) {		
+							if (stone.hasClass('whitestone')) {
+								stone.addClass('chosenwhitestone');
+							}
+							else if (stone.hasClass('blackstone')){
+								stone.addClass('chosenblackstone');
+							}
+							stone.append(1);
+						}
+						
+						//select a random neighbor of the (r,c)-element.
+						var vert = Math.floor(Math.random()*3 - 1); //-1, 0, or 1
+						var horiz = Math.floor(Math.random()*3 - 1); //-1, 0, or 1
+						
+						while (vert == 0 && horiz == 0){
+							vert = Math.floor(Math.random()*3 - 1); //-1, 0, or 1
+							horiz = Math.floor(Math.random()*3 - 1); //-1, 0, or 1
+						}
+
+						var rownum = r + horiz % rows.length; 
+						var colnum = c + vert % cells.length;
+						
+						var newcells = rows.eq(rownum).children('td'); //look at row containing random neighbor
+
+						neighbor = newcells.eq(colnum);
+						if (play == 0) {
+							
+							if (neighbor.hasClass('whitestone')) {
+								neighbor.addClass('chosenwhitestone',500);
+							}
+							else if (neighbor.hasClass('blackstone')){
+								neighbor.addClass('chosenblackstone',500);
+							}
+							neighbor.append(2);
+						}
+
+						
+						
+						
+						if (neighbor.hasClass('whitestone')){ //if random neighbor is white, make (r,c)-element white
+							if (stone.hasClass('blackstone') ) {whites++} //change the number of white stones if necessary
+							if (play == 1) {stone.addClass('whitestone');}
+							else if (play == 0) {stone.addClass('whitestone',500);}
+							stone.removeClass('blackstone');
+						}
+						else if (neighbor.hasClass('blackstone')) { //otherwise make it black
+							if (stone.hasClass('whitestone') ) {whites--} //change the number of white stones if necessary
+							if (play == 1) {stone.addClass('blackstone');}
+							else if (play == 0) {stone.addClass('blackstone',500);}
+							stone.removeClass('whitestone');
+						}
+						
+					
+
+			}
+			
+			
+			function updateGrid(){
+
+					updateOnce();
+
+					if (play == 1 && (simTime ==  0 || count < simTime) && whites > 0 && whites < gridSize^2) {
+						setTimeout('updateGrid()', speed); 
+						count++;
+						
+					}
+			}
+			
+
+
+
+	$(document).ready(function(){
+			
+			buildGrid(15);
+
+			$('a.pseudosubmit').click(function() {
+  				  // get all the inputs into an array.
+				count = 0;
+   				var inputs = $('#myForm :input');
+				gridSize = inputs[0].value;
+				simTime = inputs[1].value;
+				
+				buildGrid(gridSize);
+				updateGrid();
+			});
+
+
+			$('.playpause').mouseover(function() {
+				$(this).css('cursor','pointer');
+			});
+
+ 			$('a.slower').mouseover(function() {
+ 				$(this).css('cursor','pointer');
+ 			});
+
+ 			$('a.faster').mouseover(function() {
+ 				$(this).css('cursor','pointer');
+ 			});
+			
+			$('a.pseudosubmit').mouseover(function() {
+				$(this).css('cursor','pointer');
+			});
+
+			$('.playpause').click(function() {
+				if (play == 0) {
+					if (stone.hasClass('whitestone')){
+						stone.replaceWith('<td class="whitestone"></td>');
+					}
+					else if (stone.hasClass('blackstone')){
+						stone.replaceWith('<td class="blackstone"></td>');
+					}
+							
+					if (neighbor.hasClass('whitestone')){
+						neighbor.replaceWith('<td class="whitestone"></td>');
+					}
+					else if (neighbor.hasClass('blackstone')){
+						neighbor.replaceWith('<td class="blackstone"></td>');
+					}			
+					play = 1; 
+					$(".playpause").val("pause");
+					updateGrid();
+				}
+				else if (play == 1) {
+					$(this).val("play");
+					play = 0;
+				}
+			});
+
+			
+			$('.slower').click(function() {
+				speed += 35;
+			});
+
+
+			$('.faster').click(function() {
+				if (play == 1) {
+					speed -= 35;
+				}
+				
+				else if (play == 0){	
+					if (stone.hasClass('whitestone')){
+						stone.replaceWith('<td class="whitestone"></td>');
+					}
+					else if (stone.hasClass('blackstone')){
+						stone.replaceWith('<td class="blackstone"></td>');
+					}
+							
+					if (neighbor.hasClass('whitestone')){
+						neighbor.replaceWith('<td class="whitestone"></td>');
+					}
+					else if (neighbor.hasClass('blackstone')){
+						neighbor.replaceWith('<td class="blackstone"></td>');
+					}							
+					
+					updateOnce();
+				}
+			});
+
+	
+ 	
+		});
+	</script> 
+	<title>Stepping Stone Model</title> 
+ </head> 
+<body> 
+ Welcome to the stepping stone model simulation! At each step, this simulation picks a random square and a random neighbor, and turns the square's color to that of its neighbor. You can adjust on what size grid you want to simulate the model and how long you want the simulation to continue. If you enter "0" in for time, the simulation will continue until all the squares are of one color. You can also pause and adjust the speed of the simulation.<br>
+
+		<div align="center">
+			<form id="myForm"> 
+				Grid size: <input id ="size" type="text" name="name" value="15"/> 
+				Time:<input type="text" name="name" value="0"/>
+				<a class="pseudosubmit"> start!</a> 
+			</form>
+	
+			<div align="center"> <a class="slower"> << </a>&nbsp;&nbsp;&nbsp;<input type = "text" class="playpause" value="pause" style="background-color:transparent;border:0px;text-align:center;font-weight:bold;" />&nbsp;&nbsp;&nbsp;<a class="faster"> >> </a></div>
+		
+			<br>
+			<table class="stonegrid"> </table>
+		</div>
+ 
+ 
+</body> 
+</html> 

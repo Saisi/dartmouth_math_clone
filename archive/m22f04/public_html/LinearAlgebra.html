@@ -1,0 +1,198 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>LinearAlgebra.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="LinearAlgebra.html#MapleAutoBookmark1">LinearAlgebra.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 22 Fall 2004</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Linear Algebra with Applications</b></u></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Crash Course in Doing Linear Algebra with Maple</b></font></p>
+<p align="center"><font size="4"><b></font><font color="#0000cc" size="5" face="Lucida Bright"><u>September 29, 2004</b></u></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;</b></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b>Load the package for doing Linear Algebra</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>with(LinearAlgebra):</b></font></td>
+</tr>
+</table></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Column vectors and row vectors</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>v1 := &lt;1|2|3|4&gt;:</font><font color="#ff0000" face="Monospaced">
+<br>v2 := &lt;5,4,3,1&gt;:</font><font color="#ff0000" face="Monospaced">
+<br>v3 := Vector[row](5):</font><font color="#ff0000" face="Monospaced">
+<br>v4 := Vector(4, symbol = x):</font><font color="#ff0000" face="Monospaced">
+<br>v5 := Vector[row](5, i -&gt; sin(Pi / i)):</font><font color="#ff0000" face="Monospaced">
+<br>v1, v2, v3, v4, v5;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_1.gif" width="391" height="116" alt="Vector[row]([1, 2, 3, 4]), Vector[column]([[5], [4], [3], [1]]), Vector[row]([0, 0, 0, 0, 0]), Vector[column]([[x[1]], [x[2]], [x[3]], [x[4]]]), Vector[row]([0, 1, 1/2*3^(1/2), 1/2*2^(1/2), sin(1/5*Pi..." align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Matrix is a row of column vectors or a column of row vectors</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>M1 := &lt;&lt;1,2,3,4&gt; | &lt;3,4,5,6&gt; | &lt;5,6,7,8&gt;&gt;:</font><font color="#ff0000" face="Monospaced">
+<br>M2 := &lt;&lt;3|2|1&gt;, &lt;-4|3|2&gt;, &lt;5|3|-1&gt;, &lt;6|-2|4&gt;&gt;:</font><font color="#ff0000" face="Monospaced">
+<br>u1 := Vector(3, symbol = x): u2 := Vector(3, symbol = y):</font><font color="#ff0000" face="Monospaced">
+<br>u3 := Vector(3, symbol = z): u4 := Vector([4, -2, 1]):</font><font color="#ff0000" face="Monospaced">
+<br>M3 := &lt;u1 | u2 | u3 | u4&gt;:</font><font color="#ff0000" face="Monospaced">
+<br>M4 := Matrix(4, 3, symbol = a):</font><font color="#ff0000" face="Monospaced">
+<br>M1, M2, M3, M4;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_2.gif" width="515" height="116" alt="Matrix([[1, 3, 5], [2, 4, 6], [3, 5, 7], [4, 6, 8]]), Matrix([[3, 2, 1], [-4, 3, 2], [5, 3, -1], [6, -2, 4]]), Matrix([[x[1], y[1], z[1], 4], [x[2], y[2], z[2], -2], [x[3], y[3], z[3], 1]]), Matrix([[..." align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;Elements of vectors and matrices can be accessed by their indices</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>v5[2]; M3[2, 3]; M4[3, 2]; v5[5] := evalf(v5[5]): v5;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_3.gif" width="7" height="13" alt="1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_4.gif" width="12" height="17" alt="z[2]" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_5.gif" width="25" height="17" alt="a[3, 2]" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_6.gif" width="200" height="38" alt="Vector[row]([0, 1, 1/2*3^(1/2), 1/2*2^(1/2), .5877852524])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;We can apply a map to the whole vector or matrix</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>Map(exp, v1), Map(x -&gt; x^2, M3);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_7.gif" width="258" height="106" alt="Vector[row]([exp(1), exp(2), exp(3), exp(4)]), Matrix([[x[1]^2, y[1]^2, z[1]^2, 16], [x[2]^2, y[2]^2, z[2]^2, 4], [x[3]^2, y[3]^2, z[3]^2, 1]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Operations with vectors and matrices</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>M1 + 2 * M4, v2.v4, M3.M2;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_8.gif" width="909" height="116" alt="Matrix([[1+2*a[1, 1], 3+2*a[1, 2], 5+2*a[1, 3]], [2+2*a[2, 1], 4+2*a[2, 2], 6+2*a[2, 3]], [3+2*a[3, 1], 5+2*a[3, 2], 7+2*a[3, 3]], [4+2*a[4, 1], 6+2*a[4, 2], 8+2*a[4, 3]]]), 5*x[1]+4*x[2]+3*x[3]+x[4],..." align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Conversion from a linear system to a matrix, and back</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>eqsys := [2*x[1] - x[3] = 5, -x[1] + x[2] + x[3] = -2, 2*x[2]+x[3]=3];</font><font color="#ff0000" face="Monospaced">
+<br>vars := [x[1], x[2], x[3]]; </b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_9.gif" width="337" height="17" alt="eqsys := [2*x[1]-x[3] = 5, -x[1]+x[2]+x[3] = -2, 2*x[2]+x[3] = 3]" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_10.gif" width="104" height="17" alt="vars := [x[1], x[2], x[3]]" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>A, b := GenerateMatrix(eqsys, vars):</font><font color="#ff0000" face="Monospaced">
+<br>A1 := GenerateMatrix(eqsys, vars, augmented=true ): </font><font color="#ff0000" face="Monospaced">
+<br>A, b, A1, &lt;A|b&gt; - A1;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_11.gif" width="427" height="75" alt="Matrix([[2, 0, -1], [-1, 1, 1], [0, 2, 1]]), Vector[column]([[5], [-2], [3]]), Matrix([[2, 0, -1, 5], [-1, 1, 1, -2], [0, 2, 1, 3]]), Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>M5 := Transpose(M1);</font><font color="#ff0000" face="Monospaced">
+<br>GenerateEquations(M5, [x, y, z]); GenerateEquations(M5, [x, y, z, w], &lt;10, -3, 2&gt;);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_12.gif" width="161" height="75" alt="M5 := Matrix([[1, 2, 3, 4], [3, 4, 5, 6], [5, 6, 7, 8]])" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_13.gif" width="350" height="13" alt="[x+2*y+3*z = 4, 3*x+4*y+5*z = 6, 5*x+6*y+7*z = 8]" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_14.gif" width="481" height="13" alt="[x+2*y+3*z+4*w = 10, 3*x+4*y+5*z+6*w = -3, 5*x+6*y+7*z+8*w = 2]" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Transform matrices to echelon and reduced echelon forms</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>GaussianElimination(A1), GaussianElimination(A1, method=FractionFree), ReducedRowEchelonForm(A1);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_15.gif" width="404" height="116" alt="Matrix([[2, 0, -1, 5], [0, 1, 1/2, 1/2], [0, 0, 0, 2]]), Matrix([[2, 0, -1, 5], [0, 2, 1, 1], [0, 0, 0, 4]]), Matrix([[1, 0, (-1)/2, 0], [0, 1, 1/2, 0], [0, 0, 0, 1]])" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>A[1, 2] := h:</font><font color="#ff0000" face="Monospaced">
+<br>GaussianElimination(&lt;A | b&gt;);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_16.gif" width="223" height="116" alt="Matrix([[2, h, -1, 5], [0, 1+1/2*h, 1/2, 1/2], [0, 0, h/(2+h), (4+3*h)/(2+h)]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;&nbsp;Solve a linear system given by a matrix</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>LinearSolve(A, b);</font><font color="#ff0000" face="Monospaced">
+<br>LinearSolve(A1);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_17.gif" width="64" height="136" alt="Vector[column]([[(5*h+2)/h], [-2/h], [(4+3*h)/h]])" align="center">
+</font></p>
+<p align="left"><font color="#ff00ff" size="3" face="Monospaced">Error, (in LinearSolve) inconsistent system</font><font color="#ff00ff" size="3" face="Monospaced">
+<br></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>A1[1, 2] := h:</font><font color="#ff0000" face="Monospaced">
+<br>LinearSolve(A, b), LinearSolve(A1);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m22f04/Math22-images/LinearAlgebra_18.gif" width="135" height="136" alt="Vector[column]([[(5*h+2)/h], [-2/h], [(4+3*h)/h]]), Vector[column]([[(5*h+2)/h], [-2/h], [(4+3*h)/h]])" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> &nbsp;&nbsp;&nbsp;Use </b></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#0000ff" size="5" face="Lucida Bright"><u><b>help</b></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="4" face="Lucida Bright"><b> for more help</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>?LinearAlgebra</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

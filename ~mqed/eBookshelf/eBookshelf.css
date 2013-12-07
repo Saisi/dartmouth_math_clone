@@ -1,0 +1,40 @@
+.book_icon {
+  width:138px;
+  height:125px;
+  
+  }
+
+.bookshelf_spine {
+  display:inline-block;
+  float:left;
+  text-align:left;
+  background-color:#ffffff;
+  color:#000000;
+  font-weight:normal;
+  vertical-align:middle;
+  height:125px;
+  width:452px;
+  padding-left:7px;
+  }
+  
+.bookspine_icon {
+  display:inline-block;
+  float:left; 
+  text-align:left;
+  /*background-color:#ffffff; */
+  color:#000000;
+  vertical-align:middle;
+  width:140px; 
+  height:125px;
+  }
+
+ 
+.bookshelf_title {
+  display:inline-block;
+  padding:3px;
+  text-align:center;
+  font-weight:bold;
+  /* background-color:#980c0c; */
+  color:#ffffff;
+  width:600px;
+  }

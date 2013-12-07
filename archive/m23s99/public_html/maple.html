@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <TITLE>Maple Information</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<FONT COLOR="#000000">
+<font size=+2>
+<p align="center">
+Maple Information
+<font size=+1>
+</p>
+<ul>
+<li>Maple V can be downloaded from Public at Public/Licensed Software/
+Key Server Controlled/Limited Support/Maple V
+</li>
+<li>Information about installing Maple can be found at the mathematics
+department's <a href="http://www.math.dartmouth.edu/software">Software Resources</a>
+page.
+<li>A basic introduction to Maple (in PDF format - you'll need
+Adobe Acrobat Reader to view it) can be 
+<a href="http://www.math.dartmouth.edu/projects/software/mapleintro.pdf">downloaded</a>
+</li>
+<li> Once you've installed Maple, start it up and try it out.  Here
+are a few differential equations-related commands to try.  Hit the
+"enter" key after them, not the "return" key; also, those semicolons
+at the end are necessary.
+<dd> > plot([exp(t)+exp(-t),2*exp(t)-exp(-t),t=-1..1]); <br>
+<i> this will create a parametric plot with x=e^t+e^(-t),y=2e^t-e^(-t),
+-1<=t<=1</i><br>
+<dd> > with(DEtools); <br>
+<i>this loads some extra tools for solving d.e. problems
+</i>
+<dd> > dfieldplot((2*x+y)/(x-y),[x,y],x=0..5,y=0..5); <br>
+<i> this creates a direction
+field for dy/dx=(2*x+y)/(x-y), with x and y running between 0 and 5</i>
+<br>
+<dd> > ?dfieldplot <br>
+ <i>this brings up a help page for the command "dfieldplot"</i>
+
+
+<hr>
+</body>
+</html>

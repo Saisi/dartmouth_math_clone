@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>xhour1</TITLE>
+<META NAME="description" CONTENT="xhour1">
+<META NAME="keywords" CONTENT="xhour1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.math.dartmouth.edu/~m24w99/assignments/xhour1.css">
+<LINK REL="next" HREF="http://www.math.dartmouth.edu/~m24w99/assignments/node1.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="http://www.math.dartmouth.edu/~m24w99/assignments/node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="http://www.math.dartmouth.edu/~m24w99/assignments/node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Dartmouth College</B></DIV>
+<DIV ALIGN="CENTER">
+Mathematics 24</DIV>
+
+<P><P>
+<BR>
+Consider the following examples for our discussion on Thursday.  At
+the start of class on Thursday, each of you must hand in your best
+guess about the validity of each of these conjectures, as well as your
+reason for each assertion.  Be prepared to discuss proofs,
+counterexamples, new conjectures and frustrations.  Some of these
+examples are taken from Sominskii's book on <I>The Method of
+  Mathematical Induction</I>.
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Let 
+<!-- MATH
+ $\displaystyle {S_n = \frac{1}{1\cdot2} + \frac{1}{2\cdot 3} + \cdots +
+\frac{1}{n(n+1)}}$
+ -->
+<IMG
+ WIDTH="268" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img1.gif"
+ ALT="$ \displaystyle {S_n = \frac{1}{1\cdot2} + \frac{1}{2\cdot 3} + \cdots +
+\frac{1}{n(n+1)}}$">.  Then it is easy to verify that:
+<P>
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img2.gif"
+ ALT="$\displaystyle S_1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="92" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img3.gif"
+ ALT="$\displaystyle = \frac{1}{1\cdot2} = \frac{1}{2}$"></TD>
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="58" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img4.gif"
+ ALT="$\displaystyle \qquad S_2$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="148" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img5.gif"
+ ALT="$\displaystyle = \frac{1}{1\cdot2} + \frac{1}{2\cdot 3} = \frac{2}{3}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img6.gif"
+ ALT="$\displaystyle S_3$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="203" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img7.gif"
+ ALT="$\displaystyle = \frac{1}{1\cdot2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} = \frac{3}{4}$"></TD>
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="58" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img8.gif"
+ ALT="$\displaystyle \qquad S_4$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="258" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img9.gif"
+ ALT="$\displaystyle = \frac{1}{1\cdot2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} + \frac{1}{4\cdot 5} = \frac{4}{5}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Based upon these four examples, one might <I>conjecture</I> that for all
+natural numbers <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img10.gif"
+ ALT="$ n$">, 
+<!-- MATH
+ $\displaystyle {S_n = \frac{n}{n+1}}$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img11.gif"
+ ALT="$ \displaystyle {S_n = \frac{n}{n+1}}$">.  Is the conjecture valid?
+Can you justify your assertion (i.e., proof or
+counterexample)?
+
+<P>
+<DT>2.
+<DD>Consider the polynomial 
+<!-- MATH
+ $p(x) = x^2 + x + 41$
+ -->
+<IMG
+ WIDTH="147" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img12.gif"
+ ALT="$ p(x) = x^2 + x + 41$">, first studied by
+Euler (1707 - 1783).  Consider the values of this polynomial for various
+nonnegative integer values of <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img13.gif"
+ ALT="$ x$">.  Recall that a prime <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img14.gif"
+ ALT="$ p$">
+is a number
+divisible only by by <IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img15.gif"
+ ALT="$ \pm 1$">
+and <IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img16.gif"
+ ALT="$ \pm p$">.  Note that <IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img17.gif"
+ ALT="$ p(0) = 41$">
+is prime.
+So too is <IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img18.gif"
+ ALT="$ p(1) = 43$">.  And also <IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img19.gif"
+ ALT="$ p(2) = 47$">, <IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img20.gif"
+ ALT="$ p(3) = 53$">, <IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img21.gif"
+ ALT="$ p(4) = 61$">, and
+
+<!-- MATH
+ $p(5) = 71)$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img22.gif"
+ ALT="$ p(5) = 71)$">.  Is <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img23.gif"
+ ALT="$ p(n)$">
+a prime number for all integers <IMG
+ WIDTH="47" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img24.gif"
+ ALT="$ n\ge 0$">?
+
+<P>
+<DT>3.
+<DD>For positive integers <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img10.gif"
+ ALT="$ n$">, the polynomial <IMG
+ WIDTH="53" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img25.gif"
+ ALT="$ x^n -1$">
+is of great
+importance in mathematics;  its roots are called roots of unity.  Consider the
+following factorizations into ``irreducible" polynomials over in the integers:
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img26.gif"
+ ALT="$\displaystyle x^1 - 1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="68" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img27.gif"
+ ALT="$\displaystyle = x-1,$"></TD>
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img28.gif"
+ ALT="$\displaystyle \qquad x^2 - 1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="135" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img29.gif"
+ ALT="$\displaystyle = (x-1)(x+1),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img30.gif"
+ ALT="$\displaystyle x^3 - 1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="173" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img31.gif"
+ ALT="$\displaystyle = (x-1)(x^2 + x + 1),$"></TD>
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img32.gif"
+ ALT="$\displaystyle \qquad x^4 - 1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="196" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img33.gif"
+ ALT="$\displaystyle = (x-1)(x+1)(x^2 + 1),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img34.gif"
+ ALT="$\displaystyle x^5 - 1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="251" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img35.gif"
+ ALT="$\displaystyle = (x-1)(x^4 + x^3 + x^2 + x + 1),$"></TD>
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img36.gif"
+ ALT="$\displaystyle \qquad x^6 - 1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="319" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img37.gif"
+ ALT="$\displaystyle = (x-1)(x+1)(x^2 + x + 1)(x^2 - x + 1),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Note that the absolute value of the coefficients of the factors never exceed 1.
+Is this true in general?
+
+<P>
+<DT>4.
+<DD>What is wrong with the following proof using induction?
+
+<P>
+<B>Theorem:</B> All horses have the same color.
+
+<P></P>
+
+<P>
+<I>Proof:</I>  We establish this well-known fact by mathematical
+induction.  Clearly, all horses in any set of 1 horse have the same
+color.  This completes the base step of the induction.  Now assume
+that all horses in any set of <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img10.gif"
+ ALT="$ n$">
+horses have the same color.
+Consider a set of <IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img38.gif"
+ ALT="$ n+1$">
+horses, labeled with the integers 
+<!-- MATH
+ $1,2,\ldots,
+n+1$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img39.gif"
+ ALT="$ 1,2,\ldots,
+n+1$">.  By the induction hypothesis, the horses 
+<!-- MATH
+ $1,2,\ldots,n$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img40.gif"
+ ALT="$ 1,2,\ldots,n$">
+all have
+the same color, as do the horses 
+<!-- MATH
+ $2,3,\ldots n+1$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img41.gif"
+ ALT="$ 2,3,\ldots n+1$">.  Since the two sets
+have common members, namely 
+<!-- MATH
+ $2,3,\ldots,n$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img42.gif"
+ ALT="$ 2,3,\ldots,n$">, all <IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/img38.gif"
+ ALT="$ n+1$">
+horses must have
+the same color.
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="http://www.math.dartmouth.edu/~m24w99/assignments/node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="http://www.math.dartmouth.edu/~m24w99/assignments/node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/~m24w99/assignments/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="http://www.math.dartmouth.edu/~m24w99/assignments/node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Thomas R. Shemanske</I>
+<BR><I>1998-12-30</I>
+</ADDRESS>
+</BODY>
+</HTML>

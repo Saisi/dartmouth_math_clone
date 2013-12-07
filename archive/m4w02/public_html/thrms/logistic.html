@@ -1,0 +1,190 @@
+    
+   <HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>The Logistic Equation </TITLE>
+ </HEAD>
+
+
+<BODY BGCOLOR="#FFFFFF"
+      LINK="#white"
+      VLINK="#0055AA"
+      ALINK="#FF0000">
+
+
+<CENTER>
+<H1> 
+The Logistic Observation  </H1>
+</CENTER>
+
+
+The following theorem helps us understand the logistic equation in a more
+useful and realistic way.  Let P be the density of a fixed
+population, v the population's birth rate at small population
+(or rather the fecundity), u the population's death rate, and  K
+the population's carrying capacity (the population maximal density for a
+sustainable population). Recall
+one way to justify the use of the logistic equation
+<CENTER> 
+dP/dt = (v-u)(1-P/K)P
+</CENTER>   
+is to note that if we know the  birth rate and death rate of a population
+then the population would exponential increase and be determined by dP/dt
+= (v-u)P but as we approach the carrying capacity of that population
+we need the derivative to go to zero.  This equation does the trick of
+capturing this statement, but if we try to decouple the birth and death
+rate from each other we might be led to 
+ <center>
+dP/dt = v(1-P/K)P-u(1-P/K)P 
+</CENTER>     
+But this makes less sense.  The birth rate going to zero as we approach
+the carrying capacity makes a certain amount of sense but clearly the
+magnitude of the death rate should probably not be getting
+smaller!   We might say this as "this
+is not the right way to
+<b> decouple
+</b> the birth and death-rate".  Another
+possibility
+is to assume a more sensible form to this equation, something like 
+ <center>
+dP/dt = v(1-P/C)P-uP
+</CENTER>  
+Here we are making the some more reasonable assumption that
+the death-rate is independent of population
+size.  We would like a stable equilibrium at the carrying capacity to we
+solve 
+<center>
+0  = v(1-K/C)K-uK
+</center>
+  for C and find 
+<center>
+C  = vK/(v-u)
+</center>
+In fact as you might expect...
+<p> 
+
+<b> Theorem: </b> 
+Letting C=  vK/(v-u) we have 
+ <center>
+dP/dt = v(1-P/C)P-uP=(v-u)(1-P/K)P.
+</CENTER>
+<P>
+
+This isn't much of theorem mathematically but biologically it is rather
+important since it shows us how to correctly  decouple the birth and
+death  rates.  It tells us what the correct birth rate in population
+with a given carrying capacity should be v(1-T/C) where 
+K is the carrying capacity, v the birthrate at small
+population, u the natural death rate, and C=  vK/(u-v).
+This will be particularly useful when the a population
+is split into categories and birth is viewed as a <b> transition </b> from
+one
+category to another.  For
+example someone infected by  a given disease might have offspring which are
+not infected  and hence should be modeled by  
+<center>
+dS/dt= v(1-T/C)(S) - u S  - beta SI
+<p>
+dI/dt= beta SI - u I - alpha I 
+</center>
+where T is the total population contributing to the utilization of
+resources, in this case T=S+I.  Recall beta is 
+measuring how catchy the disease is, 
+and alpha is the increase in the death rate do to the disease. 
+
+
+</body>
+
+</HTML>   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

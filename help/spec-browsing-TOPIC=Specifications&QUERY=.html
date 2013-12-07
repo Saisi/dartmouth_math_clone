@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>CUPS Browse Protocol - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="CUPS Browse Protocol">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/spec-browsing.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Specifications">
+
+<P ALIGN="CENTER"><B>Search in
+CUPS Browse Protocol:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+<P CLASS="l1"><A HREF="spec-banner-TOPIC=Specifications&QUERY=.html">CUPS Banner File Format</A></P>
+<P CLASS="l1"><A HREF="spec-browsing-TOPIC=Specifications&QUERY=.html">CUPS Browse Protocol</A></P>
+<P CLASS="l2"><A HREF="spec-browsing-TOPIC=Specifications&QUERY=.html#FORMAT">Browse Packet Format</A></P>
+<P CLASS="l2"><A HREF="spec-browsing-TOPIC=Specifications&QUERY=.html#INTRO">Introduction</A></P>
+<P CLASS="l2"><A HREF="spec-browsing-TOPIC=Specifications&QUERY=.html#SECURITY">Security Considerations</A></P>
+<P CLASS="l1"><A HREF="spec-command-TOPIC=Specifications&QUERY=.html">CUPS Command File Format</A></P>
+<P CLASS="l1"><A HREF="spec-design-TOPIC=Specifications&QUERY=.html">CUPS Design Description</A></P>
+<P CLASS="l1"><A HREF="spec-cmp-TOPIC=Specifications&QUERY=.html">CUPS Developer Guide</A></P>
+<P CLASS="l1"><A HREF="spec-ipp-TOPIC=Specifications&QUERY=.html">CUPS Implementation of IPP</A></P>
+<P CLASS="l1"><A HREF="spec-pdf-TOPIC=Specifications&QUERY=.html">CUPS PDF Format</A></P>
+<P CLASS="l1"><A HREF="spec-ppd-TOPIC=Specifications&QUERY=.html">CUPS PPD Extensions </A></P>
+<P CLASS="l1"><A HREF="spec-raster-TOPIC=Specifications&QUERY=.html">CUPS Raster Format</A></P>
+<P CLASS="l1"><A HREF="spec-stp-TOPIC=Specifications&QUERY=.html">CUPS Software Test Plan</A></P>
+<P CLASS="l1"><A HREF="spec-postscript-TOPIC=Specifications&QUERY=.html">Generating PostScript for CUPS</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>CUPS Browse Protocol</H1>
+<FORM ACTION="/help/spec-browsing.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+<!--
+  "$Id: spec-browsing.html 10762 2012-12-13 20:28:30Z mike $"
+
+  CUPS Browse Protocol specification for CUPS.
+
+  Copyright 2008-2012 by Apple Inc.
+  Copyright 1997-2005 by Easy Software Products.
+
+  These coded instructions, statements, and computer programs are the
+  property of Apple Inc. and are protected by Federal copyright
+  law.  Distribution and use rights are outlined in the file "LICENSE.txt"
+  which should have been included with this file.  If this file is
+  file is missing or damaged, see the license at "http://www.cups.org/".
+-->
+
+<BLOCKQUOTE><B>Note:</B>
+
+<P>The CUPS Browse Protocol was deprecated in CUPS 1.4 and is no longer supported.</P>
+
+</BLOCKQUOTE>
+
+<H1 CLASS="title">CUPS Browse Protocol</H1>
+
+<h2><a name='INTRO'>Introduction</a></h2>
+
+<p>This specification describes the CUPS browsing protocol which was used for
+printer sharing. The protocol was a UDP/IP-based broadcast service that
+operated on IP service port 631 by default. Each broadcast packet described
+a single printer or class being shared.</p>
+
+<p>For simple networks with a single subnet, a CUPS system sharing a printer
+(the <em>server</em>) would periodically broadcast that printer's availability
+and status information to the subnet. Every other CUPS system on the subnet
+(the <em>clients</em>) would receive the broadcast and make that printer
+available to local users. If a client stopped receiving broadcasts from the
+server, or if the server sent a special "deleted" broadcast message, the
+client would remove its copy of the printer.</p>
+
+<p>For larger networks with multiple subnets, a relay configuration could be used
+where one or more client systems polled the server and then broadcast the
+availability and status information for the server's shared printers to the
+clients' local subnets.</p>
+
+<p>A key feature of CUPS printer sharing was support for <em>implicit
+classes</em>, which are automatically-created classes for printers that are
+shared by multiple servers. These implicit classes provided automatic load
+balancing and fail-safe printing functionality transparently to the user.</p>
+
+
+<h2><a name='SECURITY'>Security Considerations</a></h2>
+
+<p>Like most discovery protocols, CUPS browse packets were not encrypted or
+signed, so it was possible for malicious systems on a network to advertise
+or remove printers on that network to cause denial of service or information
+disclosure. In order to combat this, CUPS logged incoming browse packets and
+provided access controls to limit browse packet reception to known hosts.</p>
+
+
+<h2><a name='FORMAT'>Browse Packet Format</a></h2>
+
+<p>Each broadcast packet is an ASCII text string of up to 1450 bytes ending
+with a line feed (0x0a). The general format is:</p>
+
+<p class='summary'>
+printer-type printer-state printer-uri "printer-location" "printer-info"
+"printer-make-and-model" name=value name2=value2 ...
+</p>
+
+<p>Each of the fields contains the value of the corresponding IPP attribute.
+The trailing "name=value" information is used to convey default job template
+attribute values (job-sheets-default, media-default, etc.), authentication
+requirements (auth-info-required), and additional IPP URI options that are
+requested by the server (ipp-options).</p>
+
+<h3>ABNF Definition</h3>
+
+<p>The following ABNF definition [RFC4234, RFC3986] defines the format of each
+browse packet:</p>
+
+<pre class='command'>
+PACKET         = TYPE WSP STATE WSP URI WSP LOCATION WSP INFO WSP
+                 MAKE-AND-MODEL WSP *[ WSP ATTR-NAME "=" ATTR-VALUE ] LF
+
+TYPE           = 1*HEXDIG
+
+STATE          = "3" / "4" / "5"
+
+URI            = "ipp://" ( 1*NAMECHAR / IP-literal / IPv4address )
+                 [ ":" 1*DIGIT ] ( "/printers/" / "/classes/" ) 1*NAMECHAR
+NAMECHAR       = %x21.22.24.26-2E.30-7E / %x25 HEXDIG HEXDIG
+IP-literal     = See RFC 3986
+IPv4address    = See RFC 3986
+
+LOCATION       = QUOTED-STRING
+INFO           = QUOTED-STRING
+MAKE-AND-MODEL = QUOTED-STRING
+
+ATTR-NAME      = 1*( ALPHA / DIGIT / "-" / "." )
+ATTR-VALUE     = QUOTED-STRING / 1*UNQUOTE-CHAR
+
+QUOTED-STRING  = DQUOTE *QUOTED-CHAR DQUOTE
+QUOTED-CHAR    = %x20.21.23-5B.5D-7E / UTF8-CHAR / %x5C %x5C / %x5C %x22
+UNQUOTE-CHAR   = %x21.23-26.28-5B.5D-7E / UTF8-CHAR
+UTF8-CHAR      = %xC0.DF %x80.BF / %xE0.EF %x80.BF %x80.BF /
+                 %xF0.F7 %x80.BF %x80.BF %x80.BF
+</pre>
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

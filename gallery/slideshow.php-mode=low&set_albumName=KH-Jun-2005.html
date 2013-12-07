@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Slideshow for album :: June 2005
+</title>
+<meta http-equiv="content-style-type" content="text/css">
+  <meta http-equiv="content-type" content="Mime-Type; charset=utf-8">
+  <meta name="content-language" content="en-US">
+
+  <link rel="stylesheet" type="text/css" href="css/base.css.default">
+  <link rel="stylesheet" type="text/css" href="skins/bars002/css/screen.css">
+  <link rel="shortcut icon" href="https://www.math.dartmouth.edu/gallery/images/favicon.ico">
+</head>
+<body dir="ltr">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+	<table cellpadding="0" cellspacing="0" width="100%" border="0" align="center" class="mod_headliner">
+        <tr valign="middle">
+		<td class="leftspacer"></td>
+		<td>
+		<table cellspacing="0" cellpadding="0" class="mod_toplight_bg">
+		<tr>
+            <td class="mod_toplight_left" align="right"></td>
+			<td class="head" align="left">&nbsp;Slideshow for album :: June 2005
+&nbsp;</td>
+            <td class="mod_toplight_right" align="left"></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	</table>
+	<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="mod_under_hl"></td>
+	</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td  align="center" valign="top">
+
+<script src="https://www.math.dartmouth.edu/gallery/js/client_sniff.js" type="text/javascript"></script>
+<script type="text/javascript">
+</script>
+
+<script type="text/javascript">
+var timer;
+var current_location = 1;
+var next_location = 1;
+var pics_loaded = 0;
+var onoff = 0;
+var timeout_value;
+var images = new Array;
+var photo_urls = new Array;
+var photo_captions = new Array;
+var loop = 0;
+var full = 0;
+var direction = 1;
+photo_urls[1] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/P7030004.sized.jpg";
+photo_captions[1] = "Pretty close to Bradley ...";
+photo_urls[2] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/P7030007.sized.jpg";
+photo_captions[2] = "Another close footing";
+photo_urls[3] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/P7030006.sized.jpg";
+photo_captions[3] = "2 June 2005";
+photo_urls[4] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/P7030008.sized.jpg";
+photo_captions[4] = "2 June 2005";
+photo_urls[5] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/P7030009.sized.jpg";
+photo_captions[5] = "2 June 2005";
+photo_urls[6] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0404.sized.jpg";
+photo_captions[6] = "dscn0404.jpg";
+photo_urls[7] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0405.sized.jpg";
+photo_captions[7] = "dscn0405.jpg";
+photo_urls[8] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0406.sized.jpg";
+photo_captions[8] = "dscn0406.jpg";
+photo_urls[9] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0407.sized.jpg";
+photo_captions[9] = "dscn0407.jpg";
+photo_urls[10] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0410.sized.jpg";
+photo_captions[10] = "dscn0410.jpg";
+photo_urls[11] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0411.sized.jpg";
+photo_captions[11] = "dscn0411.jpg";
+photo_urls[12] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0428.sized.jpg";
+photo_captions[12] = "dscn0428.jpg";
+photo_urls[13] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0429.sized.jpg";
+photo_captions[13] = "dscn0429.jpg";
+photo_urls[14] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0431.sized.jpg";
+photo_captions[14] = "dscn0431.jpg";
+photo_urls[15] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0432.sized.jpg";
+photo_captions[15] = "dscn0432.jpg";
+photo_urls[16] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0434.sized.jpg";
+photo_captions[16] = "dscn0434.jpg";
+photo_urls[17] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0436.sized.jpg";
+photo_captions[17] = "dscn0436.jpg";
+photo_urls[18] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0437.sized.jpg";
+photo_captions[18] = "dscn0437.jpg";
+photo_urls[19] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0439.sized.jpg";
+photo_captions[19] = "dscn0439.jpg";
+photo_urls[20] = "https://www.math.dartmouth.edu/albums/KH-Jun-2005/dscn0440.sized.jpg";
+photo_captions[20] = "dscn0440.jpg";
+var photo_count = 20;
+
+function stop() {
+    onoff = 0;
+    status = "The slideshow is stopped, click [play] to resume.";
+    clearTimeout(timer);
+}
+
+function play() {
+    onoff = 1;
+    status = "Slideshow is running...";
+    wait_for_current_photo();
+}
+
+function toggleLoop() {
+    if (loop) {
+        loop = 0;
+    } else {
+        loop = 1;
+    }
+}
+
+function reset_timer() {
+    clearTimeout(timer);
+    if (onoff) {
+        timeout_value = document.TopForm.time.options[document.TopForm.time.selectedIndex].value * 1000;
+        timer = setTimeout('go_to_next_page()', timeout_value);
+    }
+}
+
+function wait_for_current_photo() {
+
+    /* Show the current photo */
+    if (!show_current_photo()) {
+
+        /*
+        * The current photo isn't loaded yet.  Set a short timer just to wait
+        * until the current photo is loaded.
+        */
+        status = "Picture is loading...(" + current_location + " of " + photo_count +
+        ").  Please Wait..." ;
+
+        clearTimeout(timer);
+        timer = setTimeout('wait_for_current_photo()', 500);
+        return 0;
+    }
+	else {
+        preload_next_photo();
+        reset_timer();
+    }
+}
+
+function go_to_next_page() {
+
+    var slideShowUrl = "https://www.math.dartmouth.edu/gallery/slideshow.php?set_albumName=KH-Jun-2005&mode=low";
+
+    document.location = slideShowUrl + "&slide_index=" + next_location + "&slide_full=" + full
+        + "&slide_loop=" + loop + "&slide_pause=" + (timeout_value / 1000)
+        + "&slide_dir=" + direction;
+    return 0;
+}
+
+function preload_next_photo() {
+
+    /* Calculate the new next location */
+    next_location = (parseInt(current_location) + parseInt(direction));
+    if (next_location > photo_count) {
+        next_location = 1;
+        if (!loop) {
+            stop();
+        }
+    }
+    if (next_location < 1) {
+        next_location = photo_count;
+        if (!loop) {
+            stop();
+        }
+    }
+
+    /* Preload the next photo */
+    preload_photo(next_location);
+}
+
+function show_current_photo() {
+
+    /*
+    * If the current photo is not completely loaded don't display it.
+    */
+    if (!images[current_location] || !images[current_location].complete) {
+        preload_photo(current_location);
+        return 0;
+    }
+
+    return 1;
+}
+
+function preload_photo(index) {
+
+    /* Load the next picture */
+    if (pics_loaded < photo_count) {
+
+        /* not all the pics are loaded.  Is the next one loaded? */
+        if (!images[index]) {
+            images[index] = new Image;
+            images[index].src = photo_urls[index];
+            pics_loaded++;
+        }
+    }
+}
+
+</script>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td class="navtableborderbegin">
+<table width="100%"  cellspacing="0" cellpadding="0" id="adminbox">
+  <tr>
+    <td align="left">Slide Show</td>
+    <td align="right">
+	<form name="admin_options_form" action="view_album.php">
+	&nbsp;<a href="slideshow.php-mode=high&set_albumName=KH-Jun-2005.html">[Modern browsers]</a>&nbsp;Compatible but limited	</form>
+    </td>
+  </tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td class="navtableborderend">
+
+<table style="" width="100%" border="0" cellspacing="0" cellpadding="0" class="modnavboxmid">
+<tr>
+	
+	<td class="bread" style="text-align:right; padding-left: 5px; padding-right: 5px;">
+			Gallery: <a href="albums.php.html">Math Department Photos&nbsp;<img src="https://www.math.dartmouth.edu/gallery/images/icons/navigation/nav_home.gif" alt="navigate up" title="navigate up"></a>
+
+		Album: <a href="Kemeny-Haldeman-Project.html">Kemeny-Haldeman Construction&nbsp;<img src="https://www.math.dartmouth.edu/gallery/images/icons/navigation/nav_home.gif" alt="navigate up" title="navigate up"></a>
+
+		Album: <a href="KH-Jun-2005.html">June 2005
+&nbsp;<img src="https://www.math.dartmouth.edu/gallery/images/icons/navigation/nav_home.gif" alt="navigate up" title="navigate up"></a>
+
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+<tr>
+	<td class="navtableborderend">
+<form name="TopForm" style="margin:0px" action="#">
+
+<table id="menu" align="right"><tr>
+	<td><a href="slideshow.php-mode=low&set_albumName=KH-Jun-2005.html#" onClick="stop(); return false;">[Stop]</a></td>
+	<td><a href="slideshow.php-mode=low&set_albumName=KH-Jun-2005.html#" onClick="play(); return false;">[Play]</a></td>
+	<td><a href="slideshow.php-set_albumName=KH-Jun-2005&slide_index=1&slide_loop=0&slide_pause=3&slide_full=0&slide_dir=-1&mode=low.html">[Forward direction]</a></td>
+	<td><a href="slideshow.php-set_albumName=KH-Jun-2005&slide_index=1&slide_loop=0&slide_pause=3&slide_full=1&slide_dir=1&mode=low.html">[Full size]</a></td>
+	<td class="noLink">[Delay]:</td>
+	<td class="noLink"><select name="time" size="1" onchange="reset_timer()" class="adminform"><option value="1">1 second</option><option value="2">2 seconds</option><option value="3" selected>3 seconds</option><option value="5">5 seconds</option><option value="10">10 seconds</option><option value="15">15 seconds</option><option value="30">30 seconds</option><option value="45">45 seconds</option><option value="60">1 Minute</option></select></td>
+</tr>
+</table></form>
+	</td>
+</tr>
+</table>
+
+<br><div align="center">
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td>
+	<script type="text/javascript">
+	    document.write("<img border==1 bgcolor=black src="+photo_urls[1]+" name=slide>");
+	</script>
+</tr>
+</table>
+
+<br>
+
+<script type="text/javascript">
+/* show the caption either in a nice div or an ugly form textarea */
+document.write("<div class='pcaption'>" + "[" + current_location + " of " + photo_count + "] " + photo_captions[1] + "</div>");
+
+/* Start the show. */
+play();
+
+</script>
+
+</div>
+
+      <table width="100%" cellspacing="0" cellpadding="0" class="modfooter">
+        <tr>
+          <td valign="top">
+            <!-- The Gallery code version number, linked to the Gallery home page -->
+            <span class="fineprint">
+	    <a href="http://gallery.sourceforge.net" target="_blank"><img src="https://www.math.dartmouth.edu/gallery/images/gallery1.gif" alt="Powered by Gallery v1" title="Powered by Gallery v1"></a>
+<!-- 1.5.10.dfsg-debian1 -->            </span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

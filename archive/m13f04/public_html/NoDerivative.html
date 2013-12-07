@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>NoDerivative.html</title>
+<!-- Created by Maple 9.50, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="NoDerivative.html#MapleAutoBookmark1">NoDerivative.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="4"><strong></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Math 13 Fall 2004</strong></u></font></p>
+<p align="center"><font size="4"><strong></font><font color="#ff0033" size="6" face="Lucida Bright"><u>Calculus of Vector-valued Functions</strong></u></font></p>
+<p align="center"><font size="4"><strong></font><font color="#0000cc" size="5" face="Lucida Bright">
+<br>Example of a function that has</strong></font></p>
+<p align="center"><font size="4"><strong></font><font color="#0000cc" size="5" face="Lucida Bright"> both partial derivatives at (0,0),</font><font color="#0000cc" size="5" face="Lucida Bright"> but is not differentiable</strong></font></p>
+<p align="center"><font size="4"><strong></strong></font></p>
+<p align="center"><font size="4"><strong></font><font color="#0000cc" size="5" face="Lucida Bright"><u>October 4, 2004</strong></u></font></p>
+<p><font size="5" face="Lucida Bright"><strong>
+<br> &nbsp;&nbsp;&nbsp;</font><font size="5" face="Lucida Bright">Define a scalar-valued function of two variables</strong></font></p>
+<p></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong></font><font color="#ff0000" size="3" face="Monospaced">f := (x, y) -&gt; x^3 / (x^2 + y^2);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/NoDerivative_1.gif" width="122" height="45" alt="f := proc (x, y) options operator, arrow; x^3/(x^2+y^2) end proc" align="center">
+</font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;Have a look at its graph</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>plot3d(f(x, y), x = -1..1, y = -1..1);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/NoDerivative_2.gif" width="400" height="300" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;f seems to be continuous everywhere and indeed it is.</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;But f is </strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#ff0000" size="5" face="Lucida Bright"><u><strong>not</strong></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> differentiable at (0, 0) (see the handout for details).</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong>Let's plot its partial derivatives</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>plot3d(diff(f(x, y), x), x = -1..1, y = -1..1);</font><font color="#ff0000" face="Monospaced">
+<br>plot3d(diff(f(x, y), y), x = -1..1, y = -1..1);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/NoDerivative_3.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/NoDerivative_4.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;They are obviously </strong></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#ff0000" size="5" face="Lucida Bright"><u><strong>discontinuous</strong></u></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="5" face="Lucida Bright"><strong>!!!</strong></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong>factor(diff(f(x, y), x));</font><font color="#ff0000" face="Monospaced">
+<br>factor(diff(f(x, y), y));</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/NoDerivative_5.gif" width="88" height="50" alt="x^2*(x^2+3*y^2)/(x^2+y^2)^2" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="http://www.math.dartmouth.edu/~m13f04/Math13-images/NoDerivative_6.gif" width="75" height="50" alt="-2*x^3*y/(x^2+y^2)^2" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><strong></strong></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

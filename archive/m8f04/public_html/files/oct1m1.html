@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>oct1m.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=50;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=plot((1-1/x),x=1..N):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=plot(1,x=1..N,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P,Q);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_1.gif" width="37" height="12" alt="N := 50" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_2.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=15;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=plot((1/x^2),x=1..N):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=plot((cos(x))^2/x^2,x=1..N,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P,Q);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_3.gif" width="37" height="12" alt="N := 15" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_4.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=15;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=plot(((3+exp(-1))/x),x=1..N):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=plot((3+exp(-x))/x,x=1..N,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P,Q);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_5.gif" width="37" height="12" alt="N := 15" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_6.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P0:=plot((1/sqrt(1-x)),x=0..0.999):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=plot((1/(1-x)),x=0..0.99,color=green):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=plot((1/(1-x)^2),x=0..0.9,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P0,P,Q);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_7.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=40:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>ListIt:=proc(n)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to n</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[i,i/(1+i)^2]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L:=ListIt(N):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=pointplot({op(L)},axes=BOXED):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>Q:=plot((x/(1+x)^2),x=1..N,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P,Q);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_8.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=15:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>ListIt1:=proc(n)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to n</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[i,factorial(i)/(i^i)]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>ListIt2:=proc(n)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to n</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[i,1/(i)]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>ListIt3:=proc(n)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to n</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[op(H),[i,0]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>L1:=ListIt1(N):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L2:=ListIt2(N):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>L3:=ListIt3(N):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>P1:=pointplot({op(L1)},axes=BOXED,color=red):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P2:=pointplot({op(L2)},axes=BOXED):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P3:=pointplot({op(L3)},axes=BOXED,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P2,P3,P1);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/oct1images/oct1m_9.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p></p>
+</body>
+</html>

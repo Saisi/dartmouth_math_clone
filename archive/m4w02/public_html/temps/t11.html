@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>t1.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"By hitting return we will load in a program capable of solving a differential equation. This is precisely the method we<br>
+discussed in lecture. The explicit equation here is dY/dt = Y^2 + sin(t), you may modify it to solve other equations. To run<br>
+the program you must specify the initial time T0, the initial value I0, the final value of interest T and the number of<br>
+increments N that you'd like to break the interval [T0,T] into.":<br>
+<br>
+with(plots):<br>
+<br>
+<br>
+DE1:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Position,Time;<br>
+Digits:=5;<br>
+Position:=I0;<br>
+Time:=T0;<br>
+List:=[[Time,Position]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Position:=evalf(Position+Deltat*(-Position^2+5*sin(Time)));<br>
+Time:=evalf(Time+Deltat);<br>
+List:=[op(List),[Time,Position]];<br>
+od;<br>
+List;<br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"In order to solve the equation with time .2 corresponding to the value 4 up to time 3 with 20 increments do..":<br>
+<br>
+<br>
+S1:=DE1(.2,4,20,3); </font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t1Im/t11.gif" width=511 height=13 alt="S1 := [[.2, 4], [.34000, 1.8990], [.48000, 1.6276],...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t1Im/t12.gif" width=529 height=13 alt="S1 := [[.2, 4], [.34000, 1.8990], [.48000, 1.6276],...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t1Im/t13.gif" width=529 height=13 alt="S1 := [[.2, 4], [.34000, 1.8990], [.48000, 1.6276],...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t1Im/t14.gif" width=274 height=13 alt="S1 := [[.2, 4], [.34000, 1.8990], [.48000, 1.6276],...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"If you don't want to view the list use a colon, like..":<br>
+<br>
+S1:=DE1(.2,4,20,3):<br>
+<br>
+"To plot these points first create the plot":<br>
+<br>
+P1:=listplot(S1,color=red):<br>
+<br>
+"Then view it":<br>
+<br>
+display(P1); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t1Im/t15.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>"Now let us view multiple curves":<br>
+<br>
+S2:=DE1(.2,4,30,3):<br>
+<br>
+P2:=listplot(S2,color=green):<br>
+<br>
+S3:=DE1(.2,4,40,3):<br>
+<br>
+P3:=listplot(S3,color=blue):<br>
+<br>
+S4:=DE1(.2,4,50,3):<br>
+<br>
+P4:=listplot(S4,color=orange,thickness=2):<br>
+<br>
+S5:=DE1(.2,4,100,3):<br>
+<br>
+P5:=listplot(S5,color=black,thickness=2):<br>
+<br>
+display(P5,P4,P3,P2,P1); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/t1Im/t16.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

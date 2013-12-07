@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Representation by a Helmholtz basis</TITLE>
+<META NAME="description" CONTENT="Representation by a Helmholtz basis">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node62.html">
+<LINK REL="previous" HREF="node57.html">
+<LINK REL="up" HREF="node49.html">
+<LINK REL="next" HREF="node59.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html898"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html896"
+  HREF="node49.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html890"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html899"
+  HREF="node59.html">Numerical rank of the</A>
+<B> Up:</B> <A NAME="tex2html897"
+  HREF="node49.html">Chapter 5: Improved sweep</A>
+<B> Previous:</B> <A NAME="tex2html891"
+  HREF="node57.html">Definition of the billiard</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00630000000000000000">
+Representation by a Helmholtz basis</A>
+</H1>
+
+<P>
+I choose a basis set composed entirely of solutions to (<A HREF="node57.html#eq:helm">5.5</A>)
+in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">.
+Therefore they are <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependent (equivalently, energy-dependent),
+and this means we are joining the Class B methods.
+Since the basis functions do not obey the BCs we can choose the
+BCs for which the analytic forms of the functions are simplest,
+namely, free space.
+The eigenfunctions can be chosen real-valued everywhere, so we can
+choose entirely real basis functions.
+Typical basis functions at wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> include:
+Real Plane Waves (RPWs),
+Evanescent Plane Waves (EPWs),
+and angular momentum states (<I>e.g. </I>the singular <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img706.gif"
+ ALT="$Y_0(kr)$">) based at various origins
+(which if they are singular, must be outside <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">, or placed on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">
+as in the BIM basis set).
+Each of these forms is oscillatory with wavenumber <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+Following Heller's PWDM, the `default' basis will be RPWs uniformly spaced
+in angle, containing both sin and cos terms, and suitably symmetrized for
+the billiard shape.
+The basis size <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> will be discussed below.
+Helmholtz basis sets will be further discussed in Sections&nbsp;<A HREF="node59.html#sec:rank">5.3.1</A> and
+<A HREF="node78.html#sec:functionspace">6.1.3</A>, and examples described in
+Appendix&nbsp;<A HREF="node154.html#ap:basis">J</A>.
+
+<P>
+Substitution of the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependent basis representation
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\psi{({\mathbf r})}\; = \; \sum_{n=1}^N x_n \phi_n(k;{\mathbf r}) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:basisk"></A><IMG
+ WIDTH="367" HEIGHT="58" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img707.gif"
+ ALT="\begin{displaymath}
+\psi{({\mathbf r})}\; = \; \sum_{n=1}^N x_n \phi_n(k;{\mathbf r}) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+into (<A HREF="node57.html#eq:bcsrelax">5.10</A>) and (<A HREF="node57.html#eq:norm">5.7</A>) gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+		{\mathbf x}^{{\mbox{\tiny T}}}F(k) {\mathbf x} = \mbox{min} \\
+		{\mathbf x}^{{\mbox{\tiny T}}}G(k) {\mathbf x} = 1,
+	\end{array} \right.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fg"></A><IMG
+ WIDTH="345" HEIGHT="54" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img708.gif"
+ ALT="\begin{displaymath}
+\left\{ \begin{array}{l}
+{\mathbf x}^{{\mbox{\tiny T}}}F(k...
+...}^{{\mbox{\tiny T}}}G(k) {\mathbf x} = 1,
+\end{array} \right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependent positive definite matrices are given by
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_{ij}(k) \equiv \oint_\Gamma \!\! w{({\mathbf s})}d{\mathbf s} \,
+	\phi_i(k;{\mathbf s})\phi_j(k;{\mathbf s}),
+	\hspace{0.5in}
+	G_{ij}(k) \equiv \int_{\mathcal{D}} \!\! d{\mathbf r} \, \phi_i(k;{\mathbf r})\phi_j(k;{\mathbf r}).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fgdefs"></A><IMG
+ WIDTH="549" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img709.gif"
+ ALT="\begin{displaymath}
+F_{ij}(k) \equiv \oint_\Gamma \!\! w{({\mathbf s})}d{\mathb...
+...\! d{\mathbf r} \, \phi_i(k;{\mathbf r})\phi_j(k;{\mathbf r}).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> matrix can be evaluated using methods in Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A>,
+and the evaluation of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> is discussed in Section&nbsp;<A HREF="node62.html#sec:normmatrix">5.4</A>.
+
+<P>
+The condition (<A HREF="node58.html#eq:fg">5.12</A>) is equivalent [<A
+ HREF="node161.html#arfken">7</A>] to
+finding the maximum-eigenvalue solution to the generalized
+eigenproblem
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G(k) {\mathbf x} \; = \; \lambda F(k) {\mathbf x}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:geneigprob"></A><IMG
+ WIDTH="350" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img710.gif"
+ ALT="\begin{displaymath}
+G(k) {\mathbf x} \; = \; \lambda F(k) {\mathbf x}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The maximum eigenvalue is <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img80.gif"
+ ALT="$\lambda_1$">, and <!-- MATH
+ $\lambda_1^{-1}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img82.gif"
+ ALT="$\lambda_1^{-1}$">
+is then simply the tension <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img703.gif"
+ ALT="$f(k)$">
+corresponding to the `best' solution.
+The basis coefficients of this best solution are returned in the
+eigenvector <!-- MATH
+ ${\mathbf x}^{(1)}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img711.gif"
+ ALT="${\mathbf x}^{(1)}$">.
+
+<P>
+Essentially, the method proposed in this chapter is then searching for
+local minima in the inverse largest eigenvalue of
+(<A HREF="node58.html#eq:geneigprob">5.14</A>), as a function of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+An example sweep in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> is plotted in Fig.&nbsp;<A HREF="node57.html#fig:tensmin">5.2</A>.
+However there are implementation issues without which this specification
+is all but useless.
+The rest of the chapter is devoted to such issues.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fevals"></A><A NAME="8190"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.3:</STRONG>
+
+Eigenvalues of the `tension matrix' <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$">.
+Left side: sweep over <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+Right side: slice at a single <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">, with <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img712.gif"
+ ALT="$\lambda_n$"> sorted into decreasing order.
+The billiard is the quarter stadium of Fig.&nbsp;<A HREF="node27.html#fig:bil">2.6</A>.
+The basis set used was a set of 250 real plane waves, symmetrized so as
+to fall into the odd-odd symmetry class.
+The semiclassical basis size at this <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> is <!-- MATH
+ $N_{sc} \approx 164$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img713.gif"
+ ALT="$N_{sc} \approx 164$">.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="535" HEIGHT="267" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img714.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_ipwdm/fevals.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fevecs"></A><A NAME="8192"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.4:</STRONG>
+
+Eigenvectors <!-- MATH
+ ${\mathbf x}^{(n)}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img715.gif"
+ ALT="${\mathbf x}^{(n)}$"> of the `tension matrix' <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> at a single <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">:
+<B>a)</B> <!-- MATH
+ $\lambda^F_n \approx 1.3$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img716.gif"
+ ALT="$\lambda^F_n \approx 1.3$">, in the `semiclassical region',
+<B>b)</B> <!-- MATH
+ $\lambda^F_n \approx 7 \times 10^{-10}$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img717.gif"
+ ALT="$\lambda^F_n \approx 7 \times 10^{-10}$">, in the
+rapid decay towards the null-space region.
+The corresponding regions are shown in the previous figure as a) and b).
+The billiard (shown in outline)
+and basis are the same as the previous figure, except at <IMG
+ WIDTH="55" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img718.gif"
+ ALT="$k = 50$">.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="552" HEIGHT="185" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img719.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_ipwdm/fevecs.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html900"
+  HREF="node59.html">Numerical rank of the basis set</A>
+<LI><A NAME="tex2html901"
+  HREF="node60.html">Truncating the singular generalized eigenproblem</A>
+<LI><A NAME="tex2html902"
+  HREF="node61.html">Choice of <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> for truncation</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html898"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html896"
+  HREF="node49.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html890"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html899"
+  HREF="node59.html">Numerical rank of the</A>
+<B> Up:</B> <A NAME="tex2html897"
+  HREF="node49.html">Chapter 5: Improved sweep</A>
+<B> Previous:</B> <A NAME="tex2html891"
+  HREF="node57.html">Definition of the billiard</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

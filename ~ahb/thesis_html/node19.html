@@ -1,0 +1,540 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Microcanonical averages and trajectory averages</TITLE>
+<META NAME="description" CONTENT="Microcanonical averages and trajectory averages">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html469"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html467"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html463"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html470"
+  HREF="node20.html">Review of the linear</A>
+<B> Up:</B> <A NAME="tex2html468"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html464"
+  HREF="node18.html">Irreversible growth of average</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00316000000000000000"></A>
+<A NAME="sec:traj"></A>
+<BR>
+Microcanonical averages and trajectory averages
+</H2>
+
+<P>
+In the preceding sections <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img108.gif"
+ ALT="$F(x)$"> and <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> were defined in terms of
+the microcanonical average over  initial conditions,
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:microavg"></A>
+<!-- MATH
+ \begin{eqnarray}
+\langle \cdots \rangle_{{\mbox{\tiny E}}} \; \equiv \;
+	\int d{\mathbf q} d{\mathbf p} \; f({\mathbf q},{\mathbf p},0)
+	(\cdots) , \\
+	f({\mathbf q},{\mathbf p},0) \; = \; 
+	\frac{1}{g(E)} \delta({\mathcal{H}}({\mathbf q},{\mathbf p},x) - E)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="252" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img220.gif"
+ ALT="$\displaystyle \langle \cdots \rangle_{{\mbox{\tiny E}}} \; \equiv \;
+\int d{\mathbf q} d{\mathbf p} \; f({\mathbf q},{\mathbf p},0)
+(\cdots) ,$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.27)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="280" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img221.gif"
+ ALT="$\displaystyle f({\mathbf q},{\mathbf p},0) \; = \;
+\frac{1}{g(E)} \delta({\mathcal{H}}({\mathbf q},{\mathbf p},x) - E)$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.28)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The assumption
+was made that the change in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> over the correlation time <!-- MATH
+ $\tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img139.gif"
+ ALT="$\tau_{{\mbox{\tiny cl}}}$"> is
+insignificant.
+This means that the `frozen' Hamiltonian (at fixed <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">) can
+be used, so the distribution is unchanging in time
+<!-- MATH
+ $f({\mathbf q},{\mathbf p},t) = f({\mathbf q},{\mathbf p},0)$
+ -->
+<IMG
+ WIDTH="165" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img222.gif"
+ ALT="$f({\mathbf q},{\mathbf p},t) = f({\mathbf q},{\mathbf p},0)$">.
+All resulting averages are constant in time
+(or, if they involve multiple times, they are functions of time differences
+only),
+and the choice of initial
+time <IMG
+ WIDTH="43" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img132.gif"
+ ALT="$t=0$"> is arbitrary.
+
+<P>
+However, these averages need not be taken using an average over phase space.
+By ergodicity [<A
+ HREF="node161.html#gard">79</A>], they are equal to time averages over a single
+trajectory.
+Namely, the conservative force (<A HREF="node14.html#eq:force">2.3</A>) can be written
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F(x) \; = \;
+	- \lim_{T\rightarrow\infty}
+	\frac{1}{T} \; \int_{0}^{T} dt \;
+	\frac{\partial \mathcal{H}}{\partial x}({\mathbf q}(t),{\mathbf p}(t),x) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:favgeval"></A><IMG
+ WIDTH="445" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img223.gif"
+ ALT="\begin{displaymath}
+F(x) \; = \;
+- \lim_{T\rightarrow\infty}
+\frac{1}{T} \; \...
+...al \mathcal{H}}{\partial x}({\mathbf q}(t),{\mathbf p}(t),x) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.29)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+seen to be the mean force due to motion of a
+single particle in the system.
+Similarly, the auto-correlation is written
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+C_{{\mbox{\tiny E}}}(\tau) \; = \; \lim_{T\rightarrow\infty}
+	\frac{1}{T} \; \int_{0}^{T} dt \; {\mathcal{F}}(t) {\mathcal{F}}(t + \tau) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ctraj"></A><IMG
+ WIDTH="426" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img224.gif"
+ ALT="\begin{displaymath}
+C_{{\mbox{\tiny E}}}(\tau) \; = \; \lim_{T\rightarrow\infty...
+... \int_{0}^{T} dt \; {\mathcal{F}}(t) {\mathcal{F}}(t + \tau) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.30)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+There is now an issue of convergence: the number of independent
+samples of any quantity along a trajectory is <!-- MATH
+ $N \approx T/\tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img225.gif"
+ ALT="$N \approx T/\tau_{{\mbox{\tiny cl}}}$">, and
+the fractional error of the estimate of the above quantities converges
+slowly as <IMG
+ WIDTH="70" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img226.gif"
+ ALT="$\sim N^{-1/2}$">.
+Therefore very long trajectories are required to get good estimates.
+However, this is often easier than performing the <IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img227.gif"
+ ALT="$2d{-}1$"> dimensional integral
+over the energy shell which would be required for the explicit
+evaluation of the phase-space average,
+especially since the integrand in (<A HREF="node19.html#eq:ctraj">2.30</A>) already involves
+propagation forward
+in time.
+This technique of evaluation of a multi-dimensional integral using a random
+sample of points taken from the distribution function is called
+<EM>Monte Carlo</EM> integration [<A
+ HREF="node161.html#numrec">161</A>].
+However, in practice, rather than compute <!-- MATH
+ $C_{{\mbox{\tiny E}}}(\tau)$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img155.gif"
+ ALT="$C_{{\mbox{\tiny E}}}(\tau)$"> and take the
+Fourier transform, <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> is most efficiently
+estimated directly from the Fourier transform of
+<!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$">. This approach is discussed
+in detail in Appendix&nbsp;<A HREF="node121.html#ap:band_cl">B</A>.
+
+<P>
+In an identical fashion to that shown in Fig.&nbsp;<A HREF="node15.html#fig:spread">2.2</A>a,
+Eq.(<A HREF="node19.html#eq:ctraj">2.30</A>) describes <!-- MATH
+ $C_{{\mbox{\tiny E}}}(\tau)$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img155.gif"
+ ALT="$C_{{\mbox{\tiny E}}}(\tau)$"> as the projection
+of the function <!-- MATH
+ ${\mathcal{F}}(t_1){\mathcal{F}}(t_2)$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img168.gif"
+ ALT="${\mathcal{F}}(t_1){\mathcal{F}}(t_2)$"> onto the <!-- MATH
+ $\tau = t_2 - t_1$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img149.gif"
+ ALT="$\tau = t_2-t_1$"> axis.
+However only a single trajectory is involved, so <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> is noisy, and
+an average over the time axis
+<!-- MATH
+ $t' = \mbox{\small$\frac{1}{2}$}(t_2 + t_1)$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img228.gif"
+ ALT="$t' = \mbox{\small$\frac{1}{2}$}(t_2 + t_1)$"> is required.
+In this figure, one can imagine the `box'
+of allowed <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img229.gif"
+ ALT="$t_1$">,<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img230.gif"
+ ALT="$t_2$"> values now bounded by <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img231.gif"
+ ALT="$[0,T]$">.
+The average converges in the limit <!-- MATH
+ $T \rightarrow \infty$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img232.gif"
+ ALT="$T \rightarrow \infty$">.
+
+<P>
+An instructive convergence
+issue arises if we extend this single-trajectory estimate
+to the noise intensity
+<!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$">. Naive use of (<A HREF="node15.html#eq:noise">2.14</A>) and (<A HREF="node19.html#eq:ctraj">2.30</A>) would give
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\nu_{{\mbox{\tiny E}}}\; = \; \lim_{T\rightarrow\infty}
+	\frac{1}{T} \int_{0}^{T} \!\! dt \int_{\infty}^{\infty} \!\! d\tau \;
+	{\mathcal{F}}(t) {\mathcal{F}}(t + \tau)
+	\hspace{.5in} \mbox{non-convergent}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:nutrajbad"></A><IMG
+ WIDTH="518" HEIGHT="46" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img233.gif"
+ ALT="\begin{displaymath}
+\nu_{{\mbox{\tiny E}}}\; = \; \lim_{T\rightarrow\infty}
+\f...
+... {\mathcal{F}}(t + \tau)
+\hspace{.5in} \mbox{non-convergent}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.31)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This does not converge because the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img152.gif"
+ ALT="$\tau$"> integral involves an infinite number
+of similarly-sized contributions (the integrand is similar in size for
+all <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img89.gif"
+ ALT="$t$">, <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img152.gif"
+ ALT="$\tau$">). Averaging over any finite <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img234.gif"
+ ALT="$T$"> cannot remove this divergence.
+Another option is to look back to Eq.(<A HREF="node15.html#eq:diffuse">2.8</A>) which is responsible
+for the appearance of <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> in the spreading rate.
+So I could define
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\nu_{{\mbox{\tiny E}}}
+	 = \lim_{T\rightarrow\infty}
+	\frac{1}{T} \left[ \int_{0}^{T} \!\! dt \; {\mathcal{F}}(t) \right]^2
+	=  \lim_{T\rightarrow\infty}
+	\frac{1}{T} \int_{0}^{T} \!\! dt_1 \int_0^{T} \!\! dt_2 \;
+	{\mathcal{F}}(t_1) {\mathcal{F}}(t_2)
+	\hspace{.2in} \mbox{nearly convergent},
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:nutrajsquare"></A><IMG
+ WIDTH="633" HEIGHT="58" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img235.gif"
+ ALT="\begin{displaymath}
+\nu_{{\mbox{\tiny E}}}
+= \lim_{T\rightarrow\infty}
+\frac{...
+...1) {\mathcal{F}}(t_2)
+\hspace{.2in} \mbox{nearly convergent},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.32)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which is the same integral (<A HREF="node19.html#eq:nutrajbad">2.31</A>) with different limits.
+This is simply proportional to the energy variance <IMG
+ WIDTH="34" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img236.gif"
+ ALT="$\delta E^2$"> after time <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img234.gif"
+ ALT="$T$"> 
+for the single trajectory involved, divided by <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img234.gif"
+ ALT="$T$">.
+The term inside the square brackets is simply a random walk (on timescales
+<!-- MATH
+ $\gg \tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img237.gif"
+ ALT="$\gg \tau_{{\mbox{\tiny cl}}}$">), giving a Gaussian distribution whose variance grows linearly.
+Therefore this estimate of <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> will not converge, rather it will wander
+for all <!-- MATH
+ $T\rightarrow \infty$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img232.gif"
+ ALT="$T \rightarrow \infty$">, taking values with a <IMG
+ WIDTH="23" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img238.gif"
+ ALT="$\chi^2$"> distribution
+whose mean is the correct <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$">. In effect this reproduces exactly the
+stochastic energy spreading whose variance is desired!
+However, it is `more convergent' than (<A HREF="node19.html#eq:nutrajbad">2.31</A>).
+A convergent estimate can only be created by limiting the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img152.gif"
+ ALT="$\tau$"> integration
+further, to give
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\nu_{{\mbox{\tiny E}}}\; = \; \lim_{t_0\rightarrow\infty} 
+	\lim_{T\rightarrow\infty}
+	\frac{1}{T} \int_{0}^{T} \!\! dt \int_{-t_0}^{t_0} \!\! d\tau \;
+	{\mathcal{F}}(t) {\mathcal{F}}(t + \tau)
+	\hspace{.5in} \mbox{convergent},
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="523" HEIGHT="48" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img239.gif"
+ ALT="\begin{displaymath}
+\nu_{{\mbox{\tiny E}}}\; = \; \lim_{t_0\rightarrow\infty}
+...
+...}(t) {\mathcal{F}}(t + \tau)
+\hspace{.5in} \mbox{convergent},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.33)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which will converge once <!-- MATH
+ $T \gg t_0 \gg \tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img240.gif"
+ ALT="$T \gg t_0 \gg \tau_{{\mbox{\tiny cl}}}$">.
+In essence the convergence arises because the limits do not allow the
+number of independent <!-- MATH
+ $\tau_{{\mbox{\tiny cl}}}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img139.gif"
+ ALT="$\tau_{{\mbox{\tiny cl}}}$">-squared-sized `patches' of the integrand to
+grow as fast as <IMG
+ WIDTH="28" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img241.gif"
+ ALT="$N^2$">, where <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> is defined as above.
+The nearly-convergent case (<A HREF="node19.html#eq:nutrajsquare">2.32</A>) corresponds to
+exactly <IMG
+ WIDTH="28" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img241.gif"
+ ALT="$N^2$"> growth.
+
+<P>
+The above considerations will not relate directly to the numerical method
+of finding <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> (which will be via <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega\rightarrow 0)$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img242.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega\rightarrow 0)$">).
+However they serve to warn and provide intuition about convergence
+when a single trajectory is used for estimation.
+
+<P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html469"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html467"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html463"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html470"
+  HREF="node20.html">Review of the linear</A>
+<B> Up:</B> <A NAME="tex2html468"
+  HREF="node13.html">Review of classical dissipation</A>
+<B> Previous:</B> <A NAME="tex2html464"
+  HREF="node18.html">Irreversible growth of average</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

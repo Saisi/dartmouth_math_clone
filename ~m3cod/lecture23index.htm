@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Lecture 23
+</title>
+<STYLE>
+A	{text-decoration:none; color:#cc9933}
+OL	{color: #cc9933}
+</STYLE>
+
+</head>
+<body>
+
+<table border = 0 width = 100% cellpadding = 5 cellspacing = 0>
+<tr>
+<td bgcolor = maroon><font size = +3 color = white>Calculus on Demand at Dartmouth College</font>
+<td align = right bgcolor = maroon><font color = #6666ff><b>
+<a href = "lecture22index.htm"><font color = #6666ff><b>Lecture 22</b></font></a> | 
+<a href = "index.htm"><font color = #6666ff><b>Index</b></font></a> | 
+<a href = "lecture24index.htm"><font color = #6666ff><b>Lecture 24</b></font></a></b></font>
+<tr>
+<td bgcolor = maroon>
+<td bgcolor = maroon align = right><font size = +2 color = white>Lecture 23</font>
+</table>
+<p>
+
+<table border = 1 cellpadding = 8 cellspacing = 0>
+<!--
+first column is resources
+-->
+
+<tr>
+
+<td bgcolor = #006633 valign = top width = 200><center><a href = "aboutimage.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/m3logo.jpg" height = 120 width = 150 border = 0></a>
+<br><h2><font color = #cc9933>Resources</font></h2>
+</center>
+
+<p>
+<b>
+<a href = "http://math.dartmouth.edu/~m3cod/m3index.htm">Math 3 Course Home Page</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/m3sched.htm">Math 3 Course Syllabus</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/study.htm">Practice Exams</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/textbook.htm">Textbook Home Page</a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/comments" target = "new">Post a Comment</a>
+<br>
+</b>
+
+
+
+<!--
+second column is contents
+-->
+
+<td valign = top background = "http://www.math.dartmouth.edu/~m3cod/m3logo.gif">
+<h1>Contents</h1>
+In this lecture we state and prove the Fundamental Theorem of Calculus. This theorem has that name because it relates derivatives and integrals, the two main branches of calculus. We also discuss some resulting techniques for evaluating definite integrals.
+<p>
+<hr>
+<p>
+
+<h3>Quick Question</h3>
+
+What is the area under the graph of f(x) = 1/2 + x/2 and above the interval [0,1]? Now let F(x) = x/2 + x<sup>2</sup>/4; what is F(1) &minus; F(0)? 
+<p>
+<img src = "http://www.math.dartmouth.edu/~m3cod/lec23graph.gif">
+<br>
+<a href = "lec23qqans.htm" target = "qqans"><font color = blue>Answer</font></a>
+<p>
+
+<h3>Outline</h3>
+<a href = "Ionescuoutlines.html#lec23" target = "outline"><font color = blue>Outlines for
+<br>The Fundamental Theorem of Calculus
+<br>Techniques of Integration</font></a>
+
+
+<h3>Textbook</h3>
+
+
+<a href = "textbooksections.htm#lec23" target = "book"><font color = blue>The Fundamental Theorem of Calculus
+</font></a>
+<br>
+<a href = "textbooksections.htm#lec23" target = "book"><font color = blue>Techniques of Integration
+</font></a>
+
+<h3>Today's Homework</h3>
+
+<a href = "webworklogin.htm" target = "webwork"><font color = blue>Log into WebWorK</font></a>
+
+<h3>Quiz</h3>
+
+<a href = "http://math.dartmouth.edu/~m3cod/quiztop/quiz/404quiz_index.htm" target = "quiz"><font color = blue>The Fundamental Theorem of Calculus Quiz</font></a>
+<br>
+<a href = "http://math.dartmouth.edu/~m3cod/quiztop/quiz/405quiz_index.htm" target = "quiz"><font color = blue>Techniques of Integration Quiz</font></a>
+
+
+<h3>Examples</h3>
+<ul>
+<li><a href = "../~klbooksite/4.04/404examples/404sat.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 ></a>The Scholastic Aptitude Test (SAT) is rescaled so that the scores of n people, ranging from 0 to 1600, fit a distribution in the shape of the following function:  f(x) = sin(&pi;x/1600) (n&pi;/3200).  What is the probability that a random person will score between 1200 and 1250?
+<li><a href = "../~klbooksite/4.04/404examples/404product.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 ></a>Find the derivative of a product of a function and an integral.
+<li><a href = "../~klbooksite/4.04/404examples/404quotient.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 ></a>Find the derivative of a product of a function and an integral.
+
+<li><a href = "../~klbooksite/4.05/405examples/405tanint.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 ></a>
+Find the integral from 0 to &pi;/4 of tan(x).
+
+<li><a href = "../~klbooksite/4.05/405examples/405ibpsin.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 ></a>Use integration by parts to find an expression for the integral from 0 to &pi;/4 of sin(x)<sup>5</sup>.
+taking u = (sin(x))<sup>4</sup> and dv = sin(x) dx. 
+<li><a href = "../~klbooksite/4.05/405examples/405x2ex.htm"><img src = "http://www.math.dartmouth.edu/~m3cod/example.gif" border = 0 ></a>Find
+the integral of x<sup>2</sup>e<sup>x</sup>.
+</ul>
+
+
+<!--
+there are no applets for this section
+
+<h3>Applets</h3>
+<ul>
+
+</ul>
+-->
+
+
+<h3>Videos</h3>
+
+
+<ul>
+
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=0:08&end=0:36" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Use the fundamental theorem of calculus for definite integrals (1)<BR>
+
+<A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=3:49&end=4:15" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Use the fundamental theorem of calculus for definite integrals (2)
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=0:44&end=3:33" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Find the area under y = x<sup>4</sup> between x = 1 and x = 5
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=4:22&end=6:01" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Find the integral from &#0150;1 to 1 of x<sup>3</sup>
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=6:10&end=7:51" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Doing the chain rule, backwards
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=7:59&end=11:27" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Integrate e<sup>x</sup>/(1 + e<sup>2x</sup>)
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=11:35&end=15:20" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Integrate (sin(x))<sup>4</sup> &middot;(cos(x))<sup>3</sup>
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus5.rm?start=15:27&end=19:31" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Integrate (x + 2)/&radic;(x<sup>2</sup> + 4x + &pi;)
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus6.rm?start=0:32&end=5:13" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Integrate x<sup>27</sup> + 3sin(x)
+
+<li><A HREF="http://mathvideo.dartmouth.edu:8080/ramgen/calcsite/calculus6.rm?start=5:15&end=8:05" TARGET="_self"><img src="http://www.math.dartmouth.edu/~m3cod/video.gif" border = 0 alt="click to see the video"></A>Integrate Ax<sup>2</sup> + Bx + C
+
+
+</ul>
+
+
+</table>
+<p>
+<!--
+Navigation footer
+-->
+<p align = right>
+<font color = #6666ff>
+<b>
+<a href = "lecture22index.htm"><font color = #6666ff><b>Lecture 22</b></font></a> | 
+<a href = "index.htm"><font color = #6666ff><b>Index</b></font></a> | 
+<a href = "lecture24index.htm"><font color = #6666ff><b>Lecture 24</b></font></a></b></font>
+
+</p>
+
+
+</body>
+</html>

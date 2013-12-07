@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>`Automatic' normalisation of states</TITLE>
+<META NAME="description" CONTENT="`Automatic' normalisation of states">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node84.html">
+<LINK REL="up" HREF="node83.html">
+<LINK REL="next" HREF="node86.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1199"
+  HREF="node86.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1197"
+  HREF="node83.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1193"
+  HREF="node84.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1200"
+  HREF="node86.html">Sources of error in</A>
+<B> Up:</B> <A NAME="tex2html1198"
+  HREF="node83.html">Higher-order correction and normalization</A>
+<B> Previous:</B> <A NAME="tex2html1194"
+  HREF="node84.html">Correction of the eigenwavenumbers</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00722000000000000000"></A>
+<A NAME="sec:autonorm"></A>
+<BR>
+`Automatic' normalisation of states
+</H2>
+
+<P>
+A feature of the scaling method, as VS realised, is that the eigenstates
+found are already normalized in a known fashion.
+(This contrasts the BIM, Heller's PWDM for which explicit normalization
+is required).
+The numerical diagonalization of (<A HREF="node81.html#eq:vergep">6.25</A>) usually returns
+eigenvectors normalized so <!-- MATH
+ ${\mathbf x}^{{\mbox{\tiny T}}} F {\mathbf x} = 1$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1036.gif"
+ ALT="${\mathbf x}^{{\mbox{\tiny T}}} F {\mathbf x} = 1$">,
+corresponding to scaling eigenfunctions with unit tension.
+However, we already know the tension of such functions when they are normalized
+to unity in the domain <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">: this is given by (<A HREF="node84.html#eq:tensdiagexp">6.27</A>).
+Therefore by taking the square root we obtain the
+amplitude correction factor,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathbf x}_\mu \ \longleftarrow \ \left(\tilde{F}_{\mu\mu}\right)^{1/2}
+	{\mathbf x}_\mu.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:vnorm"></A><IMG
+ WIDTH="361" HEIGHT="40" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1037.gif"
+ ALT="\begin{displaymath}
+{\mathbf x}_\mu \ \longleftarrow \ \left(\tilde{F}_{\mu\mu}\right)^{1/2}
+{\mathbf x}_\mu.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.29)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Of course, with (<A HREF="node140.html#eq:berrynorm">H.9</A>) and the method of Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A>
+we are armed with a rapid tool for checking the normalization of states.
+This is done in Fig.&nbsp;<A HREF="node84.html#fig:norm">6.8</A>, showing that for high <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">, the
+normalization is correct to 1% for the <IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img85.gif"
+ ALT="$N/10$"> useful states, and
+correct to 0.01% for the <IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1009.gif"
+ ALT="$N/50$"> highest accuracy ones.
+The growth of norm errors is random from state to state, and follows a
+second power law.
+In practice, since the boundary derivatives of the eigenstates are needed
+anyway, a final normalization using (<A HREF="node140.html#eq:berrynorm">H.9</A>) was performed.
+If the norm deviates much from 1, it is a very useful indicator that something
+is wrong (<I>e.g. </I>a spurious state has been found).
+This is probably the single most important use of automatic normalisation.
+Such errors are now analysed in the next section.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:err"></A><A NAME="10869"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.9:</STRONG>
+
+Growth of tension (2-norm of error from obeying the boundary conditions)
+with <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img24.gif"
+ ALT="$\delta _\mu $">
+of eigenstates returned from a single scaling diagonalization at
+<IMG
+ WIDTH="62" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1034.gif"
+ ALT="$k\approx 10^3$">.
+The basic method using (<A HREF="node81.html#eq:predk2">6.26</A>) (crosses) and corrected wavenumbers
+(<A HREF="node84.html#eq:predk4">6.28</A>) (dots) are shown.
+Both show a sixth power law (straight line),
+with small deviations from state to state.
+Truncation at <IMG
+ WIDTH="76" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1038.gif"
+ ALT="$t\sim10^{-11}$"> is due to limitations of the basis set.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="367" HEIGHT="241" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1039.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/err.eps,width=0.7\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:mix"></A><A NAME="10871"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.10:</STRONG>
+
+Exploration of the effect of weakening the quasi-diagonality of
+<IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img896.gif"
+ ALT="$M_{\mu\nu}$">.
+The dots show the same as Fig.&nbsp;<A HREF="node85.html#fig:err">6.9</A>.
+The other sets of points show the tension errors for
+<!-- MATH
+ $w{({\mathbf s})}= (1-\beta) r_n^{-1} + \beta r_n^{-2}$
+ -->
+<IMG
+ WIDTH="201" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1040.gif"
+ ALT="$w{({\mathbf s})}= (1-\beta) r_n^{-1} + \beta r_n^{-2}$">, with the
+different choices of <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1041.gif"
+ ALT="$\beta$"> labelled in the upper left corner.
+This corresponds to <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$"> being the dilation deformation with some
+`constant' (CO) deformation mixed in (see Table&nbsp;<A HREF="node35.html#tbl:deftypes">3.1</A>).
+As <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1041.gif"
+ ALT="$\beta$"> increases a new type of error emerges
+with a different power-law and much greater random state-to-state fluctuations.
+Examining the <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> boundary errors shows that they are dominated by the
+effect of the one or two states with smallest <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img25.gif"
+ ALT="$\vert\delta _\mu \vert$">.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="367" HEIGHT="244" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1042.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/mix.eps,width=0.7\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ngrper"></A><A NAME="10873"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.11:</STRONG>
+
+Normal gradients <!-- MATH
+ $\partial_n\psi_\mu$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img872.gif"
+ ALT="$\partial_n \psi_\mu$"> (upper) and values <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img640.gif"
+ ALT="$\psi_\mu$"> (lower)
+as a function of the boundary coordinate <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$">.
+The plots have been displaced vertically by state (with increasing <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">).
+The states correspond to those shown in Fig.&nbsp;<A HREF="node81.html#fig:compare">6.5</A>,
+except that a better RPW and EPW basis set has been used to reduce
+basis-related errors.
+The billiard is the 2D quarter stadium at <IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img26.gif"
+ ALT="$k=500$">.
+The coordinate <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$"> is measured from the upper-left to the lower-right
+`corner' of the quarter stadium, on the outer edge (which is also present in the
+full stadium). The small `blip' at <IMG
+ WIDTH="44" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1043.gif"
+ ALT="$s=1$"> corresponds to the `kink' in the
+stadium boundary.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="535" HEIGHT="620" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1044.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/ngrper500.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1199"
+  HREF="node86.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1197"
+  HREF="node83.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1193"
+  HREF="node84.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1200"
+  HREF="node86.html">Sources of error in</A>
+<B> Up:</B> <A NAME="tex2html1198"
+  HREF="node83.html">Higher-order correction and normalization</A>
+<B> Previous:</B> <A NAME="tex2html1194"
+  HREF="node84.html">Correction of the eigenwavenumbers</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

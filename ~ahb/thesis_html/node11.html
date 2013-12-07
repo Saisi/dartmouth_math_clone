@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Chapter&nbsp;8: Waveguides for neutral atoms using
+evanescent light fields</TITLE>
+<META NAME="description" CONTENT="Chapter&nbsp;8: Waveguides for neutral atoms using
+evanescent light fields">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html366"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html364"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html360"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html367"
+  HREF="node12.html">Chapter 2: Quantum and</A>
+<B> Up:</B> <A NAME="tex2html365"
+  HREF="node6.html">Chapter 1: Introduction and summary</A>
+<B> Previous:</B> <A NAME="tex2html361"
+  HREF="node10.html">Chapter&nbsp;7: Quantum point contact</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00250000000000000000">
+Chapter&nbsp;</A><A HREF="node102.html#ch:atom">8</A>: Waveguides for neutral atoms using
+evanescent light fields
+</H1>
+
+<P>
+The fourth and final part is a self-contained proposal for a new
+design of coherent
+atom waveguide, using the forces exerted on atoms by near-resonant
+laser fields.
+As an independent project, it
+does not connect directly with other theoretical work in this thesis.
+However it shares many common themes:
+the motion of atoms in the trapping potential is a 2D quantum bound mode
+problem (in a smooth potential), and
+the optical waveguide
+bound mode calculation
+is also similar to this same problem
+(dielectric constant playing the role of a negative potential).
+Because the optical `potential' is not hard-walled, and because the fields
+are vector rather than scalar,
+the efficient methods of Chapter&nbsp;<A HREF="node49.html#ch:ipwdm">5</A> or <A HREF="node71.html#ch:verg">6</A>
+do not apply; rather Finite Elements[<A
+ HREF="node161.html#FEreview">56</A>] will be used.
+
+<P>
+There has been much recent
+progress
+in the
+trapping and cooling of neutral atoms, opening up new areas of
+ultra-low energy and matter-wave physics [<A
+ HREF="node161.html#churev">45</A>,<A
+ HREF="node161.html#cctrev">51</A>,<A
+ HREF="node161.html#billrev">159</A>].
+Waveguides for such atoms are of great interest for atom optics,
+atom interferometery, and atom lithography.
+Multimode atom waveguides act as
+incoherent atom pipes
+that could
+trap atoms, transport them along complicated paths or
+between different environments, or deliver
+highly localized atom beams to a surface.
+Single-mode waveguides (or multimode guides populated only by atoms in
+the transverse
+ground-state) could be used for coherent atom optics and interferometry
+[<A
+ HREF="node161.html#interf">151</A>,<A
+ HREF="node161.html#adams">2</A>], as well as a tool for one-dimensional physics
+such as boson-fermion duality
+[<A
+ HREF="node161.html#joseph">190</A>,<A
+ HREF="node161.html#Maxim">152</A>,<A
+ HREF="node161.html#1Deffects">44</A>] and low-dimensional
+Bose-Einstein condensation effects [<A
+ HREF="node161.html#1Dbec">115</A>].
+
+<P>
+In Chapter&nbsp;<A HREF="node102.html#ch:atom">8</A> we propose a dipole-force
+linear waveguide which confines neutral
+atoms up to <IMG
+ WIDTH="32" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img93.gif"
+ ALT="$\lambda/2$"> above a
+microfabricated single-mode dielectric optical guide.
+The optical guide
+carries
+far blue-detuned light in the horizontally-polarized TE mode
+and
+far red-detuned light in the vertically-polarized TM mode,
+with both modes close to optical
+cut-off.
+A trapping minimum
+in the transverse plane is formed above the optical guide
+due to
+the differing evanescent
+decay lengths of the two modes.
+This design allows
+manufacture of
+mechanically stable atom-optical elements on a
+substrate.
+
+<P>
+We find that a rectangular optical guide of 0.8<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">m by 0.2<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">m
+carrying 6mW of total laser power
+(detuning
+<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img94.gif"
+ ALT="$\pm$">15nm about the D2 line)
+gives a trap depth of 
+200<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">K for cesium atoms (<IMG
+ WIDTH="63" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img95.gif"
+ ALT="$m_F = 0$">),
+transverse oscillation frequencies of <IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img96.gif"
+ ALT="$f_x = 40$">kHz and
+<IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img97.gif"
+ ALT="$f_y = 160$">kHz,
+collection area <IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img98.gif"
+ ALT="$\sim 1\,\mu$">m<IMG
+ WIDTH="12" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img99.gif"
+ ALT="$^{2}$">
+and coherence time
+of 9ms.
+The laser powers required are orders of magnitude less than those commonly
+needed for dipole traps.
+The large tranverse frequencies achieved allow the possibility of
+atomic single-mode occupation (hence coherent guiding) when
+fed from a source at cesium MOT temperature (<!-- MATH
+ $\approx 3\mu K$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img100.gif"
+ ALT="$\approx 3\mu K$">).
+We present design equations allowing optimal parameter choices to be made.
+We also  discuss the effects of
+non-zero <IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img101.gif"
+ ALT="$m_F$">, the D1 line, surface interactions, heating rate,
+the substrate refractive index <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img102.gif"
+ ALT="$n_s$">,
+and the limits on waveguide bending radius.
+It emerges that lowering <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img102.gif"
+ ALT="$n_s$"> is the main goal if large trap depths
+are desired of order an optical wavelength from the guide surface.
+
+<P>
+As known in the engineering community, the
+optical bound mode problem is notoriously hard [<A
+ HREF="node161.html#FEreview">56</A>].
+We calculate the full vector bound modes for an arbitrary guide shape
+using two-dimensional
+non-uniform finite elements in the frequency-domain,
+allowing us to
+optimize atom waveguide properties.
+We chose rectangular guide cross-sections for this optimization, for simplicity.
+There are many other shapes possible; the fabrication technique will
+be the determining factor on what is practical.
+
+<P>
+This work on atom waveguides, an admittedly far-fetched topic
+for a student of Rick Heller,
+was in fact a collaboration with the following members of the Prentiss Group:
+Steve Smith (my principal collaborator),
+Maxim Olshanii,
+Kent Johnson,
+Allan Adams (who introduced me to the problem), and Mara Prentiss.
+I also benefitted from discussions with Joseph Thywissen and Yilong Lu.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html366"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html364"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html360"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html367"
+  HREF="node12.html">Chapter 2: Quantum and</A>
+<B> Up:</B> <A NAME="tex2html365"
+  HREF="node6.html">Chapter 1: Introduction and summary</A>
+<B> Previous:</B> <A NAME="tex2html361"
+  HREF="node10.html">Chapter&nbsp;7: Quantum point contact</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

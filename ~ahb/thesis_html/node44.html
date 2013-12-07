@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Addition of deformations: numerical tests</TITLE>
+<META NAME="description" CONTENT="Addition of deformations: numerical tests">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node46.html">
+<LINK REL="previous" HREF="node43.html">
+<LINK REL="up" HREF="node42.html">
+<LINK REL="next" HREF="node45.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html735"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html733"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html727"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html736"
+  HREF="node45.html">Symmetry effects</A>
+<B> Up:</B> <A NAME="tex2html734"
+  HREF="node42.html">Chapter 4: Improving upon</A>
+<B> Previous:</B> <A NAME="tex2html728"
+  HREF="node43.html">Decomposition of general deformations</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00520000000000000000"></A>
+<A NAME="sec:testnorm"></A>
+<BR>
+Addition of deformations: numerical tests
+</H1>
+
+<P>
+On the basis of the discussion in the previous section we <EM>define</EM> 
+normal deformation as those that are orthogonal to all special deformations, 
+in the sense of Eq.&nbsp;(<A HREF="node43.html#e20">4.5</A>). Obviously there are `good' normal 
+deformations for which the WNA is an excellent approximation 
+(P1 and W8 in Fig.&nbsp;<A HREF="node35.html#fig:wna_corr">3.4</A>, for example), and there are  
+`bad' normal deformations for which the WNA
+is not a very good approximation (FR in Fig.&nbsp;<A HREF="node35.html#fig:wna_corr">3.4</A>,
+and the normal component in Fig.&nbsp;<A HREF="node47.html#fig:decomp">4.8</A>b).
+In this section we present numerical evidence that verifies
+the theoretical results of the previous section,
+and investigate how `bad' a normal deformation has to be for them
+to break down.
+
+<P>
+From what we have claimed it follows that if
+<!-- MATH
+ $D_1{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img606.gif"
+ ALT="$D_1{({\mathbf s})}$"> and <!-- MATH
+ $D_2{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img607.gif"
+ ALT="$D_2{({\mathbf s})}$"> are orthogonal 
+normal deformations, then <!-- MATH
+ $\nu_{1+2}=\nu_1+\nu_2$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img608.gif"
+ ALT="$\nu_{1+2}=\nu_1+\nu_2$">.
+We could as well write
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e21"></A>
+<!-- MATH
+ \begin{eqnarray}
+\tilde{C}_{1+2}(\omega) \; \approx \;
+	\tilde{C}_1(\omega)+\tilde{C}_2(\omega)
+\nonumber \hspace*{2cm} \\\ \ \ \ \ \mbox{if 1{=}normal, 2{=}normal, and 1 $\perp$\  2}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="302" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img609.gif"
+ ALT="$\displaystyle \tilde{C}_{1+2}(\omega) \; \approx \;
+\tilde{C}_1(\omega)+\tilde{C}_2(\omega)
+\hspace*{2cm}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="298" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img610.gif"
+ ALT="$\displaystyle \ \ \ \ \ \mbox{if 1{=}normal, 2{=}normal, and 1 $\perp$\ 2}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.8)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+because by assumption the three correlation functions
+are approximately flat.
+We demonstrate this addition rule in
+the case of two `good' deformations which are orthogonal in
+Fig.&nbsp;<A HREF="node43.html#fig:add_goodgood">4.2</A>.
+We found that small `pistons' (P2 is significant on only <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img611.gif"
+ ALT="$\sim 1/50$"> of the
+perimeter) were needed to achieve addition of the
+accuracy (a few %) shown.
+However, the restriction on the `wiggle' type of deformation
+was somewhat more lenient (WG is <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img612.gif"
+ ALT="$\sim 5$"> times wider than P2 yet
+obeys the WNA better than P2 does).
+
+<P>
+In general we observe that the quality of the addition
+rule is limited by the
+deviation from the WNA of the <EM>better</EM> of the two deformations.
+In Fig.&nbsp;<A HREF="node43.html#fig:add_badbad">4.3</A> we see that 
+if both <!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$"> and <!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$"> are bad, then also 
+the addition rule (<A HREF="node44.html#e21">4.8</A>) becomes quite bad.
+Fig.&nbsp;<A HREF="node43.html#fig:add_goodany">4.4</A> shows that the addition rule (<A HREF="node44.html#e21">4.8</A>)
+is reasonably well satisfied also 
+if <EM>either</EM> <!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$"> or <!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$"> 
+is a `good' normal deformation.
+We have chosen <!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$"> as WG (good), 
+and <!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$"> as SX which is almost completely
+dominated by the special x-translation deformation.
+The addition rule (<A HREF="node44.html#e21">4.8</A>) is obeyed at all <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">. 
+This proves that our assertions Eq.(<A HREF="node43.html#e_20">4.4</A>) about the vanishing 
+of <!-- MATH
+ $C^{{\mbox{\tiny non-self}}}_{1,2}(\tau)$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img613.gif"
+ ALT="$C^{{\mbox{\tiny non-self}}}_{1,2}(\tau)$"> is indeed correct.  
+It holds here as a non-trivial statement 
+(<!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$"> is general and `bad').  
+
+<P>
+Finally, we consider the case where <!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$"> is 
+general and <!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$"> is special.
+This is 
+illustrated in Fig.&nbsp;<A HREF="node43.html#fig:add_anyspec">4.5</A>.
+The addition rule (<A HREF="node44.html#e21">4.8</A>) becomes exact in the limit 
+of small frequency corresponding to the vanishing of
+<!-- MATH
+ $\tilde{C}_{1,2}(\omega\rightarrow0)$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img614.gif"
+ ALT="$\tilde{C}_{1,2}(\omega\rightarrow0)$"> as implied by 
+Eq.(<A HREF="node43.html#e_19">4.3</A>). In particular this implies that <!-- MATH
+ $\nu_{1+2}=\nu_1$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img615.gif"
+ ALT="$\nu_{1+2}=\nu_1$">.
+Note that there is <EM>no</EM> condition on the orthogonality of
+<!-- MATH
+ $D_1({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img596.gif"
+ ALT="$D_1({\mathbf s})$"> and <!-- MATH
+ $D_2({\mathbf s})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img597.gif"
+ ALT="$D_2({\mathbf s})$">).
+This will be the key to for improving over the WNA, which 
+we are going to discuss in the next section.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html737"
+  HREF="node45.html">Symmetry effects</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html735"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html733"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html727"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html736"
+  HREF="node45.html">Symmetry effects</A>
+<B> Up:</B> <A NAME="tex2html734"
+  HREF="node42.html">Chapter 4: Improving upon</A>
+<B> Previous:</B> <A NAME="tex2html728"
+  HREF="node43.html">Decomposition of general deformations</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

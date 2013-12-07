@@ -1,0 +1,159 @@
+body {
+  color: #453c3b;
+  background: transparent;
+  min-width: 600px;
+  margin-top: 0px;
+  margin-right: auto;
+  
+  font-family: 'ArialMT', 'Arial', 'sans-serif';
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 16px;
+
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+#navigation {
+        height: 25px;
+        width:800px;
+	margin: 30px auto 30px auto;
+#        border:#777777 2px solid;  /* debuging */
+}
+
+#navigation table {
+color: #969696;
+margin: 0 auto 0 auto;
+width: 80%;
+border-collapse: collapse;
+}
+
+#navigation table td {
+
+width: 100px;
+text-align: center;
+font-weight: bold;
+#border:#000000 2px solid;
+}
+
+#navigation table th {
+ color: #453c3b;
+width: 100px;
+text-align: center;
+font-weight: bold;
+#border:#000000 2px solid;
+}
+
+#navigation hr {
+  border: 0;
+  width: 80%;
+  color: #000;
+  background-color: #000;
+  height: 1px;
+}
+
+#name {
+        height: 70px;
+        width:800px;
+	color: #969696;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	#margin: T, R, B, L;
+	margin: 15px auto 0 auto;        
+}
+
+
+a {
+    color: #969696;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #453c3b;
+}
+
+#main {
+	margin-top: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 50px;
+        width:800px;
+}
+
+
+#main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+/*   these three lines above center the image   */
+    margin-bottom: 50px;
+}
+
+
+#main #right {
+margin-left: 450px;
+}
+
+
+#main bold {
+color: #000000;
+}
+
+
+
+#main #right table {
+color: #808080;
+font-weight: 700;
+font-size: 15px;
+width: 400px;
+margin-bottom: 50px;
+border-collapse: collapse;
+#border:#00f 2px solid; /* debugging */
+}
+
+#main #left table th {
+padding: 10px 30px 10px 0px; 
+border-top:1px;
+text-align: left;
+}
+#main #left table td {
+padding: 10px 30px 10px 0px; 
+border-top:1px;
+text-align: left;
+}
+
+
+#footer
+{
+        margin: 0 auto;
+        width:800px;
+        padding:0;
+	font-size: .8em;
+        border:#ccc 0px solid;
+}
+
+
+#footer table {
+border-collapse: collapse;
+margin: 0 0;
+font-size: .9em;
+}
+
+#footer a {
+font-size: 1em;
+}
+
+
+
+
+small {
+  color: #666666;
+  font-size: .8em;
+}
+
+small.bold {
+  font-weight: bold;
+}

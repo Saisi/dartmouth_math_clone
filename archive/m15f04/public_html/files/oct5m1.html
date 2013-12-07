@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>oct5m.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>"Conservative Forces";</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Explore1:=proc(a,b,c)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>evalf(int(a*diff(a,t)+b*</font><font color="#ff0000" size="3" face="Monospaced">diff(b,t)+c*diff(c,t),t=0..1))</font><font color="#ff0000" size="3" face="Monospaced">;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore1(t^2,t^3,t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore1(t,t,t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore1(t^3,t^4,t^6);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore1(sin(Pi/2*t),(exp(t)-1)/(exp(1)-1),t^6);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore1(tan(t*Pi/4), (exp(t^2)-1)/(exp(1)-1),t^6);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_1.gif" width="63" height="12" alt="1.500000000" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_2.gif" width="63" height="12" alt="1.500000000" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_3.gif" width="63" height="12" alt="1.500000000" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_4.gif" width="63" height="12" alt="1.500000000" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_5.gif" width="63" height="12" alt="1.500000000" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Explore2:=proc(a,b,c)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>evalf(int(a*b*diff(a,t)+b*diff(b,t)+c*diff(c,t),t=0..1));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore2(t^2,t^3,t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore2(t,t,t);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore2(t^3,t^4,t^6);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore2(sin(Pi/2*t),(exp(t)-1)/(exp(1)-1),t^6);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Explore2(tan(t*Pi/4), (exp(t^2)-1)/(exp(1)-1),t^6);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_6.gif" width="63" height="12" alt="1.285714286" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_7.gif" width="63" height="12" alt="1.333333333" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_8.gif" width="63" height="12" alt="1.300000000" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_9.gif" width="63" height="12" alt="1.200229251" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/oct5images/oct5m_10.gif" width="63" height="12" alt="1.247745251" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Trajectories--the issue of exponential divergence</TITLE>
+<META NAME="description" CONTENT="Trajectories--the issue of exponential divergence">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node123.html">
+<LINK REL="previous" HREF="node121.html">
+<LINK REL="up" HREF="node121.html">
+<LINK REL="next" HREF="node123.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1594"
+  HREF="node123.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1592"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1586"
+  HREF="node121.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1595"
+  HREF="node123.html">General system windowed estimation</A>
+<B> Up:</B> <A NAME="tex2html1593"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1587"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001110000000000000000">
+Trajectories--the issue of exponential divergence</A>
+</H1>
+
+<P>
+In the hard-chaotic systems we consider, there is exponential divergence
+of initially-close trajectories [<A
+ HREF="node161.html#ottbook">154</A>].
+We need to simulate the Hamiltonian dynamics using a computer with
+necessarily finite-precision arithmetic.
+This means that numerical round-off error will, after a few times
+the Lyapunov time <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1570.gif"
+ ALT="$t_{\lambda}$">,
+grow to dominate any trajectory, thereby destroying any relevance of
+the initial conditions.
+Might this be a problem for estimating correlation spectra of functions
+along such a trajectory?
+Especially one might worry about frequencies <!-- MATH
+ $\omega \ll t_{\lambda}^{-1}$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1571.gif"
+ ALT="$\omega \ll t_{\lambda}^{-1}$">,
+which are fundamental to the demonstration of the various <!-- MATH
+ $\omega\rightarrow0$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img61.gif"
+ ALT="$\omega\rightarrow0$">
+behaviours in Chapters&nbsp;<A HREF="node32.html#ch:dil">3</A> and <A HREF="node42.html#ch:wall">4</A>.
+
+<P>
+It turns out that there is no cause for concern.
+One is saved by the very
+same exponential divergence, which forces all correlation functions to
+die exponentially like <!-- MATH
+ $e^{-t/t_{\lambda}}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1572.gif"
+ ALT="$e^{-t/t_{\lambda}}$">.
+Therefore times separated by <!-- MATH
+ $\gg t_{\lambda}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1573.gif"
+ ALT="$\gg t_{\lambda}$"> are effectively
+independent samples
+and do not contribute to small-frequency components in a spectrum.
+All the <!-- MATH
+ $\omega\rightarrow0$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img61.gif"
+ ALT="$\omega\rightarrow0$"> behaviours in hard-chaos systems result from
+short time correlations less than or order <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1570.gif"
+ ALT="$t_{\lambda}$">,
+approximately the ergodic time.
+(This fact alone is sufficient to deduce the possible power laws--done in
+Appendix&nbsp;<A HREF="node128.html#ap:howmany">D</A>).
+
+<P>
+This issue is slightly modified for chaotic systems with power-law
+correlation function decay, for instance the stadium
+(see Section&nbsp;<A HREF="node41.html#sec:wnarev">3.4</A>).
+If correlations persist for long times, the Lyapunov time of contributing orbits
+must be equally long. Therefore these orbits will not become dominated by
+amplified round-off error noise, rather they will stay numerically
+accurate.
+In general, any trajectory can be computed accurately enough that round-off
+error does not invalidate its contribution to a correlation function.
+
+<P>
+It turns out that in hyperbolic chaotic systems, a numerically-generated
+`pseudo-trajectory' <EM>shadows</EM> (is very close to)
+a true trajectory with slightly different initial conditions
+[<A
+ HREF="node161.html#shadowing1">89</A>,<A
+ HREF="node161.html#shadowing2">83</A>].
+However, due to the above arguments, this shadowing theorem is not necessary to
+give us confidence in correlation function estimates.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1594"
+  HREF="node123.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1592"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1586"
+  HREF="node121.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1595"
+  HREF="node123.html">General system windowed estimation</A>
+<B> Up:</B> <A NAME="tex2html1593"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1587"
+  HREF="node121.html">Appendix B: Numerical evaluation</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

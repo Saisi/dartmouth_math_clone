@@ -1,0 +1,83 @@
+BODY { 
+     color: black; 
+     background-color: white; 
+     letter-spacing: normal; 
+     font-family: Verdana, Helvetica, Arial, sans-serif; 
+     font-weight: normal; font-variant: normal; 
+     font-size: 1.0em; 
+     font-style: normal; 
+     text-decoration: none; 
+     text-transform: none; 
+} 
+
+B { 
+  color: black; 
+  letter-spacing: normal; 
+  font-family: Verdana, Helvetica, Arial, sans-serif; 
+  font-weight: bold;
+  font-variant: normal; 
+  font-size: 1.0em; 
+  font-style: normal;
+  text-decoration: none; 
+  text-transform: none; 
+} 
+
+TD { 
+   color: black;
+   letter-spacing: normal; 
+   font-family: Verdana, Helvetica, Arial, sans-serif; 
+   font-weight: normal; 
+   font-variant: normal; 
+   font-size: .8em; 
+   font-style: normal; 
+   text-decoration: none; 
+   text-transform: none;
+} 
+
+TH.n14 { 
+       color: black; 
+       letter-spacing: normal; 
+       font-family: Verdana, Helvetica, Arial, sans-serif; 
+       font-weight: bold; 
+       font-variant: normal;
+       font-size: 1.0em; 
+       font-style: normal; 
+       text-decoration: none;
+       text-transform: none; 
+} 
+
+LI { 
+   color: black; 
+   letter-spacing: normal;
+   font-weight: normal; 
+   font-variant: normal; 
+   font-size: .9em;
+   font-style: normal; 
+   text-decoration: none; 
+   text-transform: none; 
+} 
+
+A {
+  color: navy; 
+  letter-spacing: normal; 
+  font-family: Verdana, Helvetica, Arial, sans-serif; 
+  font-weight: normal; 
+  font-variant: normal;
+  font-size: 1.0em; 
+  font-style: normal; 
+  text-decoration: none;
+  text-transform: none; 
+} 
+
+A:hover { 
+        color: red; 
+        letter-spacing: normal;
+        font-family: Verdana, Helvetica, Arial, sans-serif; 
+        font-weight: normal; 
+        font-variant: normal; 
+        font-size: 1.0em; 
+        font-style: normal;
+        text-decoration: none; 
+        text-transform: none; 
+} 
+

@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Discussion of optical cut-off and substrate choice</TITLE>
+<META NAME="description" CONTENT="Discussion of optical cut-off and substrate choice">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node106.html">
+<LINK REL="up" HREF="node104.html">
+<LINK REL="next" HREF="node108.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1441"
+  HREF="node108.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1439"
+  HREF="node104.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1435"
+  HREF="node106.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1442"
+  HREF="node108.html">Trap properties</A>
+<B> Up:</B> <A NAME="tex2html1440"
+  HREF="node104.html">Trap Concept</A>
+<B> Previous:</B> <A NAME="tex2html1436"
+  HREF="node106.html">Design of the light</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00923000000000000000">
+Discussion of optical cut-off and substrate choice</A>
+</H2>
+
+<P>
+We have shown
+in Figure <A HREF="node106.html#fig:dielcutoff">8.2</A>
+that parameters optimized for trap depth are near
+optical cut-off.
+It is worth gathering together the physical reasons for this.
+Firstly, on general geometric grounds,
+the typical available intensities in a guide scale inversely with the
+effective cross-sectional area of the bound mode, which, far from cut-off
+(that is, when <!-- MATH
+ $n_g - n_{\rm eff} \ll n_g - n_s$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1398.gif"
+ ALT="$n_g - n_{\rm eff} \ll n_g - n_s$">)
+follows very closely the cross-sectional area of the guide.
+This makes it favorable to shrink guiding structures to areas less than a
+square wavelength, where they generally become single-mode.
+Secondly, once we're in the single-mode regime, as we approach
+cut-off the mode power is carried increasingly outside the guide, increasing
+the ratio of surface intensity to guide center intensity.
+Thirdly, the evanescent decay length in the vacuum is longer
+as we approach cut-off
+(recall that in the case of the slab, this is exactly expressed by
+<!-- MATH
+ $L^{-1} = 2 k_0 \sqrt{n_{\rm eff}^2 - 1}$
+ -->
+<IMG
+ WIDTH="155" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1399.gif"
+ ALT="$L^{-1} = 2 k_0 \sqrt{n_{\rm eff}^2 - 1}$"> [<A
+ HREF="node161.html#tamir">117</A>], where the factor of 2
+arises because we are considering intensity decay length rather than
+amplitude).
+In the special case of <IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1384.gif"
+ ALT="$n_s = 1$">,
+the decay length diverges to infinity as we approach
+cut-off.
+Finally,
+the ratio <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1362.gif"
+ ALT="$\alpha_L$"> becomes larger as we approach cut-off, with corresponding
+beneficial effects on depth and coherence (due to increasing the
+`goodness factor' we will introduce in Section <A HREF="node109.html#sec:dep">8.3.1</A>).
+
+<P>
+Unfortunately, these purely theoretical reasons for approaching cut-off
+are in opposition to more practical ones.
+The closer to cut-off a guide is, the more sensitive it is to manufacturing
+variations in cross-section: in our case this will be predominantly a
+sensitivity to <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$">.
+The result is that small variations in <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$">
+cause large variations in mode size, or, at worst, complete cut-off.
+If the mode size change is rapid (nonadiabatic)
+along the z axis, (for instance if
+this change is due
+to surface roughness or refractive index inhomogeneities)
+the resulting mismatches will be
+a source of scattering of
+the guided power.
+Any coherent scattering back down the guide will set up
+periodic modulations of the light field over long distances. (One way to
+reduce the distance over which coherent addition is possible
+is to use very broad
+line-width light sources, which would dramatically reduce
+modulations due to both guided and stray scattered light).
+The consequence for the atoms would be a z-dependent trap depth and shape,
+and this could lead to partial reflection or even localization of
+the matter waves.
+In general we expect scattering
+to
+limit how close to cut-off we can reliably operate.
+
+<P>
+With regard to the substrate, further practical issues arise.
+In the above cut-off calculation we chose the simplest
+case of <IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1384.gif"
+ ALT="$n_s = 1$">, corresponding to a guide surrounded by vacuum.
+A real substrate with <IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1400.gif"
+ ALT="$n_s &gt; 1$"> has the
+unfortunate effect of limiting the propagation constant <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1376.gif"
+ ALT="$k_z$">
+of strictly bound modes
+to be larger than the freely propagating wavevector in the substrate;
+in other words, <!-- MATH
+ $n_{\rm eff} > n_s$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1401.gif"
+ ALT="$n_{\rm eff} &gt; n_s$"> must hold or the light field
+will rapidly tunnel into the
+`attractive potential' of the
+substrate.
+This in turn limits the decay lengths and <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1362.gif"
+ ALT="$\alpha_L$"> that can be achieved.
+The trap properties quoted in the abstract and in Sections
+<A HREF="node109.html#sec:dep">8.3.1</A> and <A HREF="node110.html#sec:other">8.3.2</A> rely on very low
+<IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1383.gif"
+ ALT="$n_{\rm eff}$"> values (1.07 for the <IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1391.gif"
+ ALT="$E^y_{11}$"> mode, 1.18 for <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1392.gif"
+ ALT="$E^x_{11}$">)
+for the reason that a low <IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1383.gif"
+ ALT="$n_{\rm eff}$"> is the only way to
+create long evanescent decay lengths in the vacuum.
+(This is equivalent to Ovchinnikov <I>et al. </I>
+choosing reflection angles very close to
+critical[<A
+ HREF="node161.html#ov91">156</A>].)
+However, in Section <A HREF="node111.html#sec:sub">8.3.3</A> we present preliminary results for
+a substrate of sodium fluoride (the lowest-index common optical
+mineral, at <IMG
+ WIDTH="69" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1402.gif"
+ ALT="$n = 1.32$">), and do not believe the substrate alters
+the basic feasibility of our waveguide.
+
+<P>
+For completeness, here we list some other possible
+approaches to the substrate issue.
+1) Use an aerogel substrate, which can have exceptionally low
+refractive indices and low loss (films of several <IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">m thickness with
+indices of about 1.1 can be produced[<A
+ HREF="node161.html#aerogels1">147</A>,<A
+ HREF="node161.html#aerogels2">150</A>]).
+2) Use a dielectric multilayer substrate
+with an effective index
+of unity or less (very low loss multilayer mirrors[<A
+ HREF="node161.html#kimble">169</A>]
+with effective indices
+less than unity
+can be created).
+3) Investigate if there exist guide shapes which have sufficiently small
+tunnelling rate into a conventional substrate that the fact that the modes are
+not strictly bound becomes irrelevant (for instance, a wedge shape with the
+smallest face in contact with the substrate).
+4) Unsupported guiding structures could
+be produced over short distances[<A
+ HREF="node161.html#hank">176</A>].
+Finally, it is important to note that the idea of replacing the substrate by a
+metallic reflective layer
+is not practical because they are too lossy.
+
+<P>
+Ultimately, the best values of <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img29.gif"
+ ALT="$W$"> and <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img30.gif"
+ ALT="$H$">, the best guide
+cross-sectional shape,
+and the substrate
+choice
+will depend on many of the above
+factors and is an area for further research.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:dielpot"></A><A NAME="14957"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.3:</STRONG>
+
+Trapping potential contours in the xy plane, with guide
+dimensions of 0.83<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">m by 0.21<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">m and an index of 1.56.
+In each case the maximum depth is <IMG
+ WIDTH="44" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1403.gif"
+ ALT="$100\,\mu$">K and the
+coherence time of atoms in
+the ground state is 19ms, achieved with
+detuning <IMG
+ WIDTH="35" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1316.gif"
+ ALT="$\pm 15$">nm from the cesium D2 line.
+The outer contour shows a depth
+of <IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1404.gif"
+ ALT="$3\,\mu$">K, the cesium MOT temperature.
+Subsequent contours are
+spaced by <IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1405.gif"
+ ALT="$6\,\mu$">K.
+The plots illustrate the range of trapping distances acheivable:
+the upper trap (<IMG
+ WIDTH="59" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1406.gif"
+ ALT="$p=0.4$">, using a total guided power of 1mW)
+has a minimum 0.24<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">m from the surface; the lower trap (<IMG
+ WIDTH="59" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1407.gif"
+ ALT="$p=0.2$">,
+total guided power of 7.5mW) has a minimum 0.44<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$">m from the surface.</CAPTION>
+<TR><TD><IMG
+ WIDTH="536" HEIGHT="708" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1408.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_atom/atom_fig3.eps,width=5in}}\vspace{0.1in}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1441"
+  HREF="node108.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1439"
+  HREF="node104.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1435"
+  HREF="node106.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1442"
+  HREF="node108.html">Trap properties</A>
+<B> Up:</B> <A NAME="tex2html1440"
+  HREF="node104.html">Trap Concept</A>
+<B> Previous:</B> <A NAME="tex2html1436"
+  HREF="node106.html">Design of the light</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

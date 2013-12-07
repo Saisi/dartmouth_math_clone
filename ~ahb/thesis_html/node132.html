@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Appendix E: Cross correlations I: general-special</TITLE>
+<META NAME="description" CONTENT="Appendix E: Cross correlations I: general-special">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node133.html">
+<LINK REL="previous" HREF="node128.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node133.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1693"
+  HREF="node133.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1691"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1685"
+  HREF="node131.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1694"
+  HREF="node133.html">Appendix F: Cross correlations</A>
+<B> Up:</B> <A NAME="tex2html1692"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1686"
+  HREF="node131.html">Scaling potentials and the</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001400000000000000000"></A>
+<A NAME="ap:alex"></A>
+<BR>
+Appendix E: Cross correlations I: general-special
+</H1>
+
+<P>
+Consider two noisy signals <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> and <!-- MATH
+ ${\mathcal{G}}(t)$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img553.gif"
+ ALT="${\mathcal{G}}(t)$">.
+We assume that
+<!-- MATH
+ $\langle {\mathcal{F}}(t)\rangle  = \langle {\mathcal{G}}(t)\rangle = 0$
+ -->
+<IMG
+ WIDTH="152" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1708.gif"
+ ALT="$\langle {\mathcal{F}}(t)\rangle = \langle {\mathcal{G}}(t)\rangle = 0$">.  
+The angular brackets stand for an average over realizations. 
+The auto-correlations of <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> and <!-- MATH
+ ${\mathcal{G}}(t)$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img553.gif"
+ ALT="${\mathcal{G}}(t)$"> 
+are described by functions <!-- MATH
+ $C_{{\mbox{\tiny F}}}(\tau)$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1709.gif"
+ ALT="$C_{{\mbox{\tiny F}}}(\tau)$"> and 
+<!-- MATH
+ $C_{{\mbox{\tiny G}}}(\tau)$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1710.gif"
+ ALT="$C_{{\mbox{\tiny G}}}(\tau)$"> respectively. We assume that both 
+auto-correlation functions are short-range, meaning 
+no power-law tails (this corresponds to the hard chaos 
+assumption of this paper),
+and that they are negligible beyond a time <!-- MATH
+ $\tau_{{\mbox{\tiny c}}}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1711.gif"
+ ALT="$\tau_{{\mbox{\tiny c}}}$">.
+We call a signal `special' if the algebraic area under its auto-correlation
+is zero.
+The cross-correlation function is defined as 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e_1"></A>
+<!-- MATH
+ \begin{eqnarray}
+C_{{\mbox{\tiny F,G}}}(\tau) \equiv
+	\langle {\mathcal{F}}(t') {\mathcal{G}}(t'') \rangle ,
+	\hspace{.5in}
+	\tau \equiv t'-t'' .
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="325" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1712.gif"
+ ALT="$\displaystyle C_{{\mbox{\tiny F,G}}}(\tau) \equiv
+\langle {\mathcal{F}}(t') {\mathcal{G}}(t'') \rangle ,
+\hspace{.5in}
+\tau \equiv t'-t'' .$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(E.1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+We assume stationary processes so that the cross-correlation 
+function depends only on the time difference <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img152.gif"
+ ALT="$\tau$">. 
+We also symmetrize this function if it does not have 
+<!-- MATH
+ $\tau\mapsto-\tau$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1713.gif"
+ ALT="$\tau\mapsto-\tau$"> symmetry. We assume that <!-- MATH
+ $C_{{\mbox{\tiny F,G}}}(\tau)$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1714.gif"
+ ALT="$C_{{\mbox{\tiny F,G}}}(\tau)$"> 
+is short-range, meaning that it becomes negligibly small  
+for  <!-- MATH
+ $|\tau| > \tau_{{\mbox{\tiny c}}}$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1715.gif"
+ ALT="$\vert\tau\vert &gt; \tau_{{\mbox{\tiny c}}}$">.
+We would like to prove that if either <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> or 
+<!-- MATH
+ ${\mathcal{G}}(t)$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img553.gif"
+ ALT="${\mathcal{G}}(t)$"> is special
+then the algebraic area under the cross-correlation 
+function equals zero.
+
+<P>
+Consider the case where <!-- MATH
+ ${\mathcal{F}}(t)$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img138.gif"
+ ALT="${\mathcal{F}}(t)$"> is general
+while <!-- MATH
+ ${\mathcal{G}}(t)$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img553.gif"
+ ALT="${\mathcal{G}}(t)$"> is special.
+The integral of <!-- MATH
+ $C_{{\mbox{\tiny F}}}(\tau)$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1709.gif"
+ ALT="$C_{{\mbox{\tiny F}}}(\tau)$"> will be 
+denoted by <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img583.gif"
+ ALT="$\nu$">.
+Define the processes 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e_2a"></A><A NAME="e_2b"></A>
+<!-- MATH
+ \begin{eqnarray}
+X(t) &=& \int_0^t {\mathcal{F}}(t') dt'  \\Y(t) &=& \int_0^t {\mathcal{G}}(t'') dt'' .
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1716.gif"
+ ALT="$\displaystyle X(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="87" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1717.gif"
+ ALT="$\displaystyle \int_0^t {\mathcal{F}}(t') dt'$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(E.2)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1718.gif"
+ ALT="$\displaystyle Y(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="97" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1719.gif"
+ ALT="$\displaystyle \int_0^t {\mathcal{G}}(t'') dt'' .$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(E.3)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+From our assumptions it follows, disregarding 
+a transient, that for <!-- MATH
+ $t \gg \tau_{{\mbox{\tiny c}}}$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1720.gif"
+ ALT="$t \gg \tau_{{\mbox{\tiny c}}}$"> we have
+diffusive growth <!-- MATH
+ $\langle X(t)^2 \rangle \approx \nu t$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1721.gif"
+ ALT="$\langle X(t)^2 \rangle \approx \nu t$">.
+(It may help the reader to review the discussion in Section&nbsp;<A HREF="node19.html#sec:traj">2.1.6</A>).
+However since <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1722.gif"
+ ALT="$Y(t)$"> is a stationary process [<A
+ HREF="node161.html#gard">79</A>],
+<!-- MATH
+ $\langle Y(t)^2 \rangle \approx \mbox{const}$
+ -->
+<IMG
+ WIDTH="122" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1723.gif"
+ ALT="$\langle Y(t)^2 \rangle \approx \mbox{const}$">.
+Therefore for a typical realization we have 
+<!-- MATH
+ $|X(t)| \le \mbox{const} \times \sqrt{\nu t}$
+ -->
+<IMG
+ WIDTH="165" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1724.gif"
+ ALT="$\vert X(t)\vert \le \mbox{const} \times \sqrt{\nu t}$">
+and <!-- MATH
+ $|Y(t)| \le \mbox{const}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1725.gif"
+ ALT="$\vert Y(t)\vert \le \mbox{const}$">. Consequently, without 
+making any claims on the independence of <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1726.gif"
+ ALT="$X(t)$"> and <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1722.gif"
+ ALT="$Y(t)$">,
+we get that <!-- MATH
+ $\langle X(t) Y(t) \rangle$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1727.gif"
+ ALT="$\langle X(t) Y(t) \rangle$"> cannot grow
+faster than <!-- MATH
+ $\mbox{const} \times \sqrt{ \nu t}$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1728.gif"
+ ALT="$\mbox{const} \times \sqrt{ \nu t}$">.
+Using the definitions (<A HREF="node132.html#e_2a">E.2</A>), (<A HREF="node132.html#e_2b">E.3</A>)
+and (<A HREF="node132.html#e_1">E.1</A>) we can write
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e_3"></A>
+<!-- MATH
+ \begin{eqnarray}
+\int_{-\infty}^{\infty} C_{{\mbox{\tiny F,G}}}(\tau) d\tau
+	=
+	\frac{\langle X(t) Y(t) \rangle}{t}
+	\approx
+	\frac{\mbox{const}}{\sqrt{t}} \rightarrow 0
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="329" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1729.gif"
+ ALT="$\displaystyle \int_{-\infty}^{\infty} C_{{\mbox{\tiny F,G}}}(\tau) d\tau
+=
+\fra...
+...angle X(t) Y(t) \rangle}{t}
+\approx
+\frac{\mbox{const}}{\sqrt{t}} \rightarrow 0$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(E.4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the limit <!-- MATH
+ $t\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1730.gif"
+ ALT="$t\rightarrow\infty$"> is taken.
+Thus we have proved our assertion.
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1693"
+  HREF="node133.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1691"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1685"
+  HREF="node131.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1694"
+  HREF="node133.html">Appendix F: Cross correlations</A>
+<B> Up:</B> <A NAME="tex2html1692"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1686"
+  HREF="node131.html">Scaling potentials and the</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

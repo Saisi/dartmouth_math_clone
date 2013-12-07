@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>$FILE</TITLE>
+<META NAME="description" CONTENT="$FILE">
+<META NAME="keywords" CONTENT="ratio">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="ratio.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+_n=k^
+
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER"><FONT SIZE="+3">
+Ratio Test
+<BR>
+Examples
+</FONT></DIV>
+<P>
+
+<P>
+<B>Ratio test</B>: Let <I>a</I><SUB><I>n</I></SUB> be a sequence of nonnegative numbers.
+
+<UL><LI>if 
+<!-- MATH
+ $\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img1.gif"
+ ALT="$\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}$">
+exists and is less than
+1, then <IMG
+ WIDTH="47" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img2.gif"
+ ALT="$\sum a_n$">
+converges
+
+<LI>if 
+<!-- MATH
+ $\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img1.gif"
+ ALT="$\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}$">
+does not exist or 
+if it exists and is greater than
+1, then <IMG
+ WIDTH="47" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img2.gif"
+ ALT="$\sum a_n$">
+diverges.
+
+</UL>
+
+<P>
+The ratio test is in some ways much simpler than the comparison test.
+You don't have to look around for some other series to work with, you
+just use the terms of the series that you are given.
+
+<P>
+Let's look at some examples.
+
+<P>
+1.  Determine whether the series 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{2^n}{n!}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img3.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{2^n}{n!}$">
+coverges or
+    diverges.
+
+<P>
+Apply the ratio test:
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+
+<!-- MATH
+ \begin{eqnarray}
+\lim_{n \to \infty}\left| \frac{\frac{2^{n+1}}{(n+1)!}}{\frac{2^n}{n!}} \right| & =
+& \lim_{n \to \infty}\frac{2}{n+1}\\
+& = & 0 < 1
+\end{eqnarray}
+ -->
+
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="103" HEIGHT="79" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img4.gif"
+ ALT="$\displaystyle \lim_{n \to \infty}\left\vert \frac{\frac{2^{n+1}}{(n+1)!}}{\frac{2^n}{n!}} \right\vert$"></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="90" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img5.gif"
+ ALT="$\displaystyle \lim_{n \to \infty}\frac{2}{n+1}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP>0 &lt; 1</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Since the result of the ratio test is a number less than 1, we get
+that the series converges.  Simple as that!
+
+<P>
+2.  Determine whether the series 
+<!-- MATH
+ $\sum_{n=k}^{\infty}\frac{2^n}{n^2}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img6.gif"
+ ALT="$\sum_{n=k}^{\infty}\frac{2^n}{n^2}$">
+coverges or
+    diverges.
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+
+<!-- MATH
+ \begin{eqnarray}
+\lim_{n \to \infty}\left| \frac{\frac{2^{n+1}}{(n+1)^2}}{\frac{2^n}{n^2}} \right| & =
+& \lim_{n \to \infty}\frac{2n^2}{n^2 + 2n + 1}\\
+& = & 2 > 1.
+\end{eqnarray}
+ -->
+
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="106" HEIGHT="79" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img7.gif"
+ ALT="$\displaystyle \lim_{n \to \infty}\left\vert \frac{\frac{2^{n+1}}{(n+1)^2}}{\frac{2^n}{n^2}} \right\vert$"></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="142" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja12/ratio/img8.gif"
+ ALT="$\displaystyle \lim_{n \to \infty}\frac{2n^2}{n^2 + 2n + 1}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP>2 &gt; 1.</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Since the ratio test returns a result greater than 1, the series must
+diverge.
+
+<P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

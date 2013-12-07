@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>wk2</title>
+<!-- Created by Maple V Release 5.1, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(linalg):<br>
+<br>
+"Here we plug our Gauss-Jordon Elimination problem into an arrqy..."; <br>
+<br>
+A := array( [[1,1,0,3,0], [1,0,1,5,0], [0,0,0,0,0], [0,0,0,0,0], [0,0,0,0,0]]);<br>
+<br>
+<br>
+"and then compute with";<br>
+<br>
+gaussjord(A);<br>
+<br>
+"Two find the orthonormal basis put in our vectors";<br>
+<br>
+u1 := vector([-1,1,1,0]);<br>
+u2 := vector([-5,2,0,1]);<br>
+<br>
+"and the find the fk vectors with, to get the normal vectors you would divide by the norm.";<br>
+<br>
+GramSchmidt([u1,u2]);<br>
+<br>
+<br>
+<br>
+with(plottools): <br>
+with(plots):<br>
+<br>
+"Here¹s a happy  little  face";<br>
+<br>
+p  := plot([t - 0.7, 0.7,t=-0.25..0.25]): <br>
+q := plot([2*cos(t), 2*sin(t),t=0..2*Pi]): <br>
+r  := plot([0.25*cos(t) + 0.7,0.19*sin(t)  + 0.7,t=0..2*Pi]): <br>
+r1 := plot([0.07*cos(t) + 0.7,0.07*sin(t)  + 0.7,t=0..2*Pi]): <br>
+s := plot([cos(t),0.25*sin(t) - 1,t=Pi..2*Pi]): <br>
+s1 := plot([cos(t),0.18*sin(t) - 1,t=Pi..2*Pi]):<br>
+Id := transform((x,y) -&gt;[x ,y ]):<br>
+dis1 := a -&gt; display(a(p),a(q),a(r),a(r1),a(s),a(s1)):<br>
+dis2 := (a,b) -&gt; display(b(a(p)),b(a(q)),b(a(r)),b(a(r1)),b(a(s)),b(a(s1))):<br>
+dis3 := (a,b,c) -&gt; display(c(b(a(p))),c(b(a(q))),c(b(a(r))),c(b(a(r1))),c(b(a(s))),c(b(a(s1)))):<br>
+<br>
+dis1(Id);<br>
+<br>
+"Here is a theta degree rotation";<br>
+R1 := t -&gt; transform((x,y) -&gt;[ (cos(t))*x- (sin(t))*y, (sin(t))*x+ (cos(t))*y]):<br>
+<br>
+"Here it is as a function as a picture":<br>
+<br>
+R := t -&gt; dis1(R1(t)):<br>
+<br>
+R(Pi/4);<br>
+<br>
+<br>
+"Here¹s a reflection";<br>
+F1  := transform((x,y) -&gt;[-x,y]):<br>
+<br>
+dis1(F1);<br>
+<br>
+<br>
+"Here¹s a shearing transformation";<br>
+S1  := transform((x,y) -&gt;[x+y,y]):<br>
+<br>
+<br>
+dis1(S1);<br>
+<br>
+<br>
+<br>
+<br>
+"Here¹s a projection onto the x-axis";<br>
+P1  := transform((x,y) -&gt;[x,0]):<br>
+<br>
+<br>
+dis1(P1);<br>
+<br>
+<br>
+"For later....";<br>
+<br>
+"F(alpha) is  the reflection across the line determined by alpha as a picture ";<br>
+F := t -&gt; dis3(R1(-t),F1,R1(t)):<br>
+<br>
+F(Pi/4);<br>
+<br>
+"P(alpha)  the projection onto the line determined by alpha as a picture ";<br>
+P := t -&gt; dis3(R1(-t),P1,R1(t)):<br>
+<br>
+P(Pi/4);<br>
+<br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/ww2/images/wk21.gif" width=349 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk22.gif" width=152 height=105 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk23.gif" width=132 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk24.gif" width=127 height=105 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk25.gif" width=259 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk26.gif" width=97 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk27.gif" width=97 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk28.gif" width=438 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk29.gif" width=149 height=29 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk210.gif" width=150 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk211.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk212.gif" width=166 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk213.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk214.gif" width=114 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk215.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk216.gif" width=182 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk217.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk218.gif" width=190 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk219.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk220.gif" width=78 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk221.gif" width=371 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk222.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk223.gif" width=354 height=13 alt="[Maple Math]">
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m24w00/ww2/images/wk224.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</body>
+</html>

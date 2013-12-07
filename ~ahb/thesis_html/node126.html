@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Deformation matrix elements</TITLE>
+<META NAME="description" CONTENT="Deformation matrix elements">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node127.html">
+<LINK REL="previous" HREF="node125.html">
+<LINK REL="up" HREF="node125.html">
+<LINK REL="next" HREF="node127.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1634"
+  HREF="node127.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1632"
+  HREF="node125.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1626"
+  HREF="node125.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1635"
+  HREF="node127.html">Smoothing</A>
+<B> Up:</B> <A NAME="tex2html1633"
+  HREF="node125.html">Appendix C: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1627"
+  HREF="node125.html">Appendix C: Numerical evaluation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001210000000000000000">
+Deformation matrix elements</A>
+</H1>
+
+<P>
+When a billiard is deformed, the potential <!-- MATH
+ $U{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img544.gif"
+ ALT="$U{({\mathbf r})}$"> changes
+by an infinite amount (in the hard-wall limit)
+in narrow regions of space on the boundary.
+These regions are simply those excluded from or newly-included into the
+cavity interior by the deformation.
+The operator <!-- MATH
+ $\partial {\mathcal{H}} / \partial x$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img56.gif"
+ ALT="$\partial {\mathcal{H}}/\partial x$"> is therefore either infinite or zero in a position
+representation.
+Therefore it might be a surprise that the
+matrix elements <!-- MATH
+ $(\partial {\mathcal{H}} / \partial x)_{nm}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img295.gif"
+ ALT="$(\partial {\mathcal{H}} / \partial x)_{nm}$"> in the energy representation are in fact
+finite.
+The following derivation has been known for some time
+[<A
+ HREF="node161.html#berrywilk">28</A>,<A
+ HREF="node161.html#kooninqm">118</A>,<A
+ HREF="node161.html#doronfrc">46</A>].
+
+<P>
+The position of a particle in the vicinity of a wall element  
+is conveniently described by <!-- MATH
+ ${\mathbf r}=({\mathbf s},z)$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1623.gif"
+ ALT="${\mathbf r}=({\mathbf s},z)$">,  
+where <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$"> is a <IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img483.gif"
+ ALT="$d{-}1$"> dimensional surface coordinate 
+and <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img479.gif"
+ ALT="$z$"> is a perpendicular `radial' coordinate.
+I set <!-- MATH
+ $U{({\mathbf r})}= U_0$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1624.gif"
+ ALT="$U{({\mathbf r})}= U_0$"> outside the undeformed billiard; this will relax
+the usual Dirichlet condition <IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img790.gif"
+ ALT="$\psi = 0$"> on the boundary (at <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1625.gif"
+ ALT="$z=0$">).
+Later I will take the limit <!-- MATH
+ $U_0 \rightarrow \infty$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1626.gif"
+ ALT="$U_0 \rightarrow \infty$">.
+I have
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{\partial \mathcal{H}}{\partial x}\; = \; 
+	- [{\mathbf n}({\mathbf s}) {\cdot} \hat{{\mathbf D}}({\mathbf s})] \,
+	U_0 \delta(z) .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:dhdxbil"></A><IMG
+ WIDTH="387" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1627.gif"
+ ALT="\begin{displaymath}
+\frac{\partial \mathcal{H}}{\partial x}\; = \;
+- [{\mathb...
+...}) {\cdot} \hat{{\mathbf D}}({\mathbf s})] \,
+U_0 \delta(z) .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(C.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The <EM>normal derivative</EM> (derivative with respect to <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img479.gif"
+ ALT="$z$">) of an
+eigenfunction <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> measured on the boundary is
+<!-- MATH
+ $\varphi({\mathbf s}) \equiv {\mathbf n}{\cdot}\nabla\psi$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1628.gif"
+ ALT="$\varphi({\mathbf s}) \equiv {\mathbf n}{\cdot}\nabla\psi$">.
+The `logarithmic derivative' is defined as
+the ratio of gradient to value,
+<!-- MATH
+ $\varphi({\mathbf s})/\psi({\mathbf s})$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1629.gif"
+ ALT="$\varphi({\mathbf s})/\psi({\mathbf s})$">.
+For <IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1630.gif"
+ ALT="$z&gt;0$"> the wavefunction <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> is a decaying
+exponential in <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img479.gif"
+ ALT="$z$">, using simple one-dimensional
+considerations which hold true if the decay length is much smaller than
+any radius of curvature. Hence the logarithmic derivative of 
+the wavefunction on the boundary should be equal 
+to <!-- MATH
+ $-\sqrt{2mU_0}/\hbar$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1631.gif"
+ ALT="$-\sqrt{2mU_0}/\hbar$">.  Consequently one obtains
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left( \frac{\partial \mathcal{H}}{\partial x} \right)_{\!nm}\; = \;	-\frac{\hbar^2}{2m} \oint \varphi_n({\mathbf s})
+	\varphi_m({\mathbf s}) \, ({\mathbf n}{\cdot}\hat{{\mathbf D}}) d{\mathbf s} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:defmatel"></A><IMG
+ WIDTH="441" HEIGHT="49" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1632.gif"
+ ALT="\begin{displaymath}
+\left( \frac{\partial \mathcal{H}}{\partial x} \right)_{\!n...
+...bf s}) \, ({\mathbf n}{\cdot}\hat{{\mathbf D}}) d{\mathbf s} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(C.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The weighting <!-- MATH
+ $({\mathbf n}{\cdot}\hat{{\mathbf D}})$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1633.gif"
+ ALT="$({\mathbf n}{\cdot}\hat{{\mathbf D}})$"> is simply the deformation
+function <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$">.
+Note that for any <EM>finite</EM> deformation <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">, the matrix elements
+of <!-- MATH
+ ${\mathcal{H}}(x)$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img248.gif"
+ ALT="${\mathcal{H}}(x)$"> in the original energy basis
+become infinite--this problem is avoided by always
+remaining in the local adiabatic energy basis [<A
+ HREF="node161.html#doronfrc">46</A>,<A
+ HREF="node161.html#pnm">48</A>].
+
+<P>
+Therefore, given a subset of <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> adjacent eigenstates, an on-diagonal
+block of
+the matrix <!-- MATH
+ $(\partial {\mathcal{H}} / \partial x)_{nm}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img295.gif"
+ ALT="$(\partial {\mathcal{H}} / \partial x)_{nm}$"> can be found.
+A resulting example is shown in Fig.&nbsp;<A HREF="node29.html#fig:matimage">2.7</A>.
+The integrals are evaluated using the techniques of Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1634"
+  HREF="node127.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1632"
+  HREF="node125.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1626"
+  HREF="node125.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1635"
+  HREF="node127.html">Smoothing</A>
+<B> Up:</B> <A NAME="tex2html1633"
+  HREF="node125.html">Appendix C: Numerical evaluation</A>
+<B> Previous:</B> <A NAME="tex2html1627"
+  HREF="node125.html">Appendix C: Numerical evaluation</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

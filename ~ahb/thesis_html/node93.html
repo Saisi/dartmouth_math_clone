@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Discussion</TITLE>
+<META NAME="description" CONTENT="Discussion">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node90.html">
+<LINK REL="up" HREF="node71.html">
+<LINK REL="next" HREF="node94.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1278"
+  HREF="node94.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1276"
+  HREF="node71.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1272"
+  HREF="node92.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1279"
+  HREF="node94.html">Chapter 7: Conductance of</A>
+<B> Up:</B> <A NAME="tex2html1277"
+  HREF="node71.html">Chapter 6: The scaling</A>
+<B> Previous:</B> <A NAME="tex2html1273"
+  HREF="node92.html">Computation of overlap matrix</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00750000000000000000"></A>
+<A NAME="sec:vdisc"></A>
+<BR>
+Discussion
+</H1>
+
+<P>
+I have explained and demonstrated the workings of what is probably the most
+powerful tool for billiard eigenproblems in existence today: the
+scaling method of Vergini and Saraceno.
+Certain errors in the original authors' work have been corrected,
+most notably the
+understanding of quasi-orthogonality
+(which has been deepened through a semiclassical estimate), and the
+derivation of higher-order terms (Appendix&nbsp;<A HREF="node148.html#ap:tension">I</A>).
+A comparison between the results of the scaling method and of the
+sweep method of the previous
+chapter has also been made.
+An analysis of the different types of error in the scaling method
+has been given.
+Most surprising is the fact that the deviation of <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img21.gif"
+ ALT="$M$"> (equivalently the tension
+matrix) from diagonality seems <EM>not</EM> to be responsible for the dominant
+error, namely the sixth-power-law growth of tension error with the wavenumber
+shift <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img403.gif"
+ ALT="$\delta$">. The understanding of this type of error is a most pressing
+area of research in the scaling method.
+
+<P>
+However there are many more directions to investigate.
+Work on the deformed stadium shows that much
+more research is sorely needed in the area of basis set choice, in general
+billiard shapes.
+It suggests that Vergini's EPW basis for the stadium
+is in fact very special. Vergini has noted that for the Sinai
+billiard no such high-quality basis has yet been found[<A
+ HREF="node161.html#verginithesis">194</A>].
+I have found similarly-disappointing results in the generalised Sinai billiard
+of Fig.&nbsp;<A HREF="node33.html#fig:gsinai">3.2</A>a
+(the tension minima barely reach <IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1122.gif"
+ ALT="$10^{-3}$">).
+Currently investigations are underway of the use of a BIM-type basis set
+of singular angular-momentum states (the Green's function, or <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img706.gif"
+ ALT="$Y_0(kr)$">
+Neumann functions or their derivatives).
+
+<P>
+How could the scaling method be applied elsewhere?
+The BIM for Helholtz eigenvalue problems
+is very widely used in the physics, engineering, and acoustics
+communities [<A
+ HREF="node161.html#bim1">36</A>,<A
+ HREF="node161.html#bim2">121</A>] (in contrast
+the PWDM has not been used outside the quantum chaos
+sub-field to my knowledge).
+It has an basis set which is `pinned' to the boundary (the effective finite basis
+is due to discretization of the integral equation).
+Therefore this basis, which has been immensely successful and seems not
+to suffer from the sensitivity to evanescent waves that a plane-wave basis
+set does, cannot be used with the scaling method.
+Either a quasi-orthogonality relation could be found for such a basis,
+or more likely, a BIM-like basis which <EM>is</EM> a scaling basis could
+be created for use with the scaling method.
+Work is in progress on the latter idea.
+This way, the very expensive `hunt' for zeros of the BIM
+determinant could be replaced
+by a diagonalization returning a large number of states at once.
+The resulting impact on any research field where Helmholtz
+eigenstates are needed could be huge.
+
+<P>
+Other generalizations of the scaling method may also exist.
+One possibility is that a quasi-orthogonality relation exists for
+Neumann (or even mixed) boundary conditions.
+This would allow solution of for example acoustic problems where Neumann
+BCs are appropriate.
+Another is the generalization to other <EM>scaling systems</EM>,
+for instance those given by homogeneous potentials of the form
+(<A HREF="node131.html#eq:scalev">D.11</A>).
+
+<P>
+
+<P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1278"
+  HREF="node94.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1276"
+  HREF="node71.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1272"
+  HREF="node92.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1279"
+  HREF="node94.html">Chapter 7: Conductance of</A>
+<B> Up:</B> <A NAME="tex2html1277"
+  HREF="node71.html">Chapter 6: The scaling</A>
+<B> Previous:</B> <A NAME="tex2html1273"
+  HREF="node92.html">Computation of overlap matrix</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

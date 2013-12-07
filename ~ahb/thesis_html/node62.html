@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The choice of norm matrix </TITLE>
+<META NAME="description" CONTENT="The choice of norm matrix ">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node65.html">
+<LINK REL="previous" HREF="node58.html">
+<LINK REL="up" HREF="node49.html">
+<LINK REL="next" HREF="node63.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html939"
+  HREF="node63.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html937"
+  HREF="node49.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html931"
+  HREF="node61.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html940"
+  HREF="node63.html">Estimation by interior points</A>
+<B> Up:</B> <A NAME="tex2html938"
+  HREF="node49.html">Chapter 5: Improved sweep</A>
+<B> Previous:</B> <A NAME="tex2html932"
+  HREF="node61.html">Choice of for truncation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00640000000000000000"></A>
+<A NAME="sec:normmatrix"></A>
+<BR>
+The choice of norm matrix <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$">
+</H1>
+
+<P>
+Accurate evaluation of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> is a rapid procedure 
+because it only involves integration over the boundary <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">.
+It requires <IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img761.gif"
+ ALT="$O(NM)$"> basis function evaluations,
+where the number of discretization points on the boundary is
+<!-- MATH
+ $M \sim k^{d-1}{\mathsf{A}}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img762.gif"
+ ALT="$M \sim k^{d-1}{\mathsf{A}}$"> (see Appendix&nbsp;<A HREF="node134.html#ap:discr">G</A>).
+However the evaluation of the norm matrix <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> at first sight seems like a
+tremendous bottleneck.
+Eq.(<A HREF="node58.html#eq:fgdefs">5.13</A>) for <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$">
+involves computing <IMG
+ WIDTH="28" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img241.gif"
+ ALT="$N^2$"> overlaps
+<!-- MATH
+ $\left\langle \phi_i \left|\phi_j\right.\right\rangle _{\mathcal{D}}$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img763.gif"
+ ALT="$\left\langle \phi_i \left\vert\phi_j\right.\right\rangle _{\mathcal{D}}$"> each of which is a <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$"> dimensional
+integral over the domain.
+Since the <!-- MATH
+ $\phi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img764.gif"
+ ALT="$\phi{({\mathbf r})}$"> are oscillatory at scale <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img765.gif"
+ ALT="$1/k$">, each integral
+would require <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img766.gif"
+ ALT="$O(k^{d})$"> basis function evaluations, and the construction
+of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> would scale as <IMG
+ WIDTH="39" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img767.gif"
+ ALT="$k^{d+2}$">.
+If this were performed literally, then much of the advantage of
+a surface method would be lost.
+In fact, in any implementation of the
+PWDM as originally described,
+almost all the time is spent performing normalizations
+over the domain, which is wasteful.
+
+<P>
+The aim of this section is to describe more rapid evaluations
+of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$">, both approximate and exact, which scale like the boundary.
+(In Section&nbsp;<A HREF="node65.html#sec:hunt">5.5</A> we will see that the accuracy of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> needed is
+actually quite low).
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:heller"></A><A NAME="7986"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.5:</STRONG>
+
+Tension minima using single-interior-point method for calculation of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$">
+(many dotted lines, each for different interior point choice), versus
+exact <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> (solid line).
+Note that the single-interior-point minima are often indistinct,
+and one is missed (<IMG
+ WIDTH="95" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img768.gif"
+ ALT="$k=200.390$">).
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="497" HEIGHT="308" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img769.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_ipwdm/heller.eps,width=0.9\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html941"
+  HREF="node63.html">Estimation by interior points--relation to Heller's PWDM</A>
+<LI><A NAME="tex2html942"
+  HREF="node64.html">Exact form on the boundary and Dirichlet approximation</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html939"
+  HREF="node63.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html937"
+  HREF="node49.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html931"
+  HREF="node61.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html940"
+  HREF="node63.html">Estimation by interior points</A>
+<B> Up:</B> <A NAME="tex2html938"
+  HREF="node49.html">Chapter 5: Improved sweep</A>
+<B> Previous:</B> <A NAME="tex2html932"
+  HREF="node61.html">Choice of for truncation</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

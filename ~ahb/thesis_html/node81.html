@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Generalized eigenproblem</TITLE>
+<META NAME="description" CONTENT="Generalized eigenproblem">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node82.html">
+<LINK REL="previous" HREF="node80.html">
+<LINK REL="up" HREF="node80.html">
+<LINK REL="next" HREF="node82.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1161"
+  HREF="node82.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1159"
+  HREF="node80.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1153"
+  HREF="node80.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1162"
+  HREF="node82.html">The scaling method in</A>
+<B> Up:</B> <A NAME="tex2html1160"
+  HREF="node80.html">Solving for the scaling</A>
+<B> Previous:</B> <A NAME="tex2html1154"
+  HREF="node80.html">Solving for the scaling</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00714100000000000000"></A>
+<A NAME="sec:vergep"></A>
+<BR>
+Generalized eigenproblem
+</H3>
+
+<P>
+The problem is solved by a forming a generalized eigenequation,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left(\frac{dF}{dk} - \lambda_\mu F\right) {\mathbf x}^{(\mu)}
+	\; = \; {\mathbf 0},
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:vergep"></A><IMG
+ WIDTH="371" HEIGHT="45" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img993.gif"
+ ALT="\begin{displaymath}
+\left(\frac{dF}{dk} - \lambda_\mu F\right) {\mathbf x}^{(\mu)}
+\; = \; {\mathbf 0},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.25)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which finds the eigenstates of the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-derivative of tension, treating the
+tension quadratic form <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> as a norm which is held constant.
+The presence of a norm based on the wavefunction at <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $">
+means that null-space vectors can be excluded by the method
+of Section&nbsp;<A HREF="node60.html#sec:trunc">5.3.2</A> with truncation <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> set at about <IMG
+ WIDTH="47" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img994.gif"
+ ALT="$10^{-14}$">.
+It is possible to replace this tension norm <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> by other norms, for instance
+the exact or Dirichlet <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> from the previous chapter, however they will not
+be quasi-diagonal in the scaling eigenfunction basis. This destroys much of the
+benefit of the quasi-diagonality of <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img22.gif"
+ ALT="$dF/dk$"> in this basis.
+The power of (<A HREF="node81.html#eq:vergep">6.25</A>), as realised by VS,
+is that <EM>both</EM> matrices are quasi-diagonal in this
+basis.
+Therefore, simultaneous diagonalization (that is, solving the generalized
+eigenproblem) of <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img22.gif"
+ ALT="$dF/dk$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> in the computational basis <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img971.gif"
+ ALT="$\phi_i$">
+returns a very good approximation to the transformation <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img986.gif"
+ ALT="$X$"> into the
+desired eigenfunction basis.
+
+<P>
+From (<A HREF="node80.html#eq:f+dfdk">6.20</A>) to lowest order the
+diagonal elements of <IMG
+ WIDTH="41" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img995.gif"
+ ALT="$\tilde{F}(k)$"> are <IMG
+ WIDTH="30" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img996.gif"
+ ALT="$2\delta_\mu^2$"> and
+those of <IMG
+ WIDTH="55" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img997.gif"
+ ALT="$d\tilde{F}/dk$"> are <IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img998.gif"
+ ALT="$4\delta_\mu$">.
+The ratio gives the generalized eigenvalue <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img999.gif"
+ ALT="$\lambda_\mu$">.
+The prediction for the eigenwavenumber is
+<!-- MATH
+ $k_\mu = k - \delta_\mu$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1000.gif"
+ ALT="$k_\mu = k - \delta_\mu$">, giving to lowest order (see Section&nbsp;<A HREF="node83.html#sec:higher">6.2</A>
+for higher orders),
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+k_\mu \; = \; k - 2 \lambda_\mu^{-1} + O(\lambda_\mu^{-2}) \cdots .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:predk2"></A><IMG
+ WIDTH="392" HEIGHT="34" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1001.gif"
+ ALT="\begin{displaymath}
+k_\mu \; = \; k - 2 \lambda_\mu^{-1} + O(\lambda_\mu^{-2}) \cdots .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.26)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The method will compute <EM>all</EM> the scaling eigenfunctions
+within a wavenumber range of up to about 1, for a system size <!-- MATH
+ ${\mathsf{L}}\approx 1$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1002.gif"
+ ALT="${\mathsf{L}}\approx 1$">.
+This corresponds to whose rescaled boundaries lie within
+about <IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1003.gif"
+ ALT="$1/12$"> wavelength of the original boundary.
+The predicted <IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1004.gif"
+ ALT="$-\delta_\mu$"> as a function of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> are shown in
+Fig.&nbsp;<A HREF="node76.html#fig:sweeps">6.4</A> (bottom).
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:compare"></A><A NAME="10862"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.5:</STRONG>
+
+Comparison of eigenvalue
+solutions returned by a single diagonalization of
+(<A HREF="node81.html#eq:vergep">6.25</A>) (shown by points, at their resulting <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> and tensions
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$">) against those
+obtained by the sweep method of the previous chapter (tension shown by line).
+The agreement is excellent (well within the errors of the sweep minima),
+apart from the state at <IMG
+ WIDTH="103" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1005.gif"
+ ALT="$k = 500.0003$"> which suffers from error discussed
+in Section&nbsp;<A HREF="node88.html#sec:near">6.3.2</A>.
+Close eigenvalues not distiguished by the sweep method <EM>are</EM>
+found by the scaling
+method, even though the same basis set (500 symmetrized RPWs in the stadium)
+was used.
+The tensions <IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1006.gif"
+ ALT="$t_\mu$"> from the scaling method are a factor of 2-3 larger than the
+sweep method minima <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$">.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="378" HEIGHT="212" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1007.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/compare500.eps,width=0.7\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:comparezm"></A><A NAME="10864"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.6:</STRONG>
+
+Zoom in on Fig.&nbsp;<A HREF="node81.html#fig:compare">6.5</A>, with solid line and crosses showing
+the sweep and scaling methods respectively (basis of 500 RPWs).
+The dotted line and points show the same with an improved basis
+(500 RPWs and 30 EPWs).
+The scaling method returns <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$"> that are well within the `tension rounding
+error' width <!-- MATH
+ $\Delta k(\epsilon_\mu)$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img817.gif"
+ ALT="$\Delta k(\epsilon_\mu)$"> from the sweep method.
+The evanescent wave improvement is dramatic, and allows the scaling <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">
+to reach accuracy <IMG
+ WIDTH="58" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1008.gif"
+ ALT="$\sim 10^{-6}$"> for the <IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1009.gif"
+ ALT="$N/50$"> most accurate states.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="368" HEIGHT="212" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1010.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/compare500zm.eps,width=0.7\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:1000"></A><A NAME="10583"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.7:</STRONG>
+
+Odd-odd symmetry Dirichlet eigenstate of the 2D stadium billiard
+at <!-- MATH
+ $k=1000.00275996$
+ -->
+<IMG
+ WIDTH="147" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img23.gif"
+ ALT="$k=1000.00275996$">, shown as a probability density plot.
+Only the quarter-stadium is shown (spanning about 320 wavelengths).
+Scarring by the `bow-tie' orbit is visible.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="326" HEIGHT="657" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1011.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/1000.eps,width=0.6\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1161"
+  HREF="node82.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1159"
+  HREF="node80.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1153"
+  HREF="node80.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1162"
+  HREF="node82.html">The scaling method in</A>
+<B> Up:</B> <A NAME="tex2html1160"
+  HREF="node80.html">Solving for the scaling</A>
+<B> Previous:</B> <A NAME="tex2html1154"
+  HREF="node80.html">Solving for the scaling</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

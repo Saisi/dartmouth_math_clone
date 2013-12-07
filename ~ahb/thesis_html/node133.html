@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Appendix F: Cross correlations II: normal-general</TITLE>
+<META NAME="description" CONTENT="Appendix F: Cross correlations II: normal-general">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node134.html">
+<LINK REL="previous" HREF="node132.html">
+<LINK REL="up" HREF="thesis_html.html">
+<LINK REL="next" HREF="node134.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1703"
+  HREF="node134.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1701"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1695"
+  HREF="node132.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1704"
+  HREF="node134.html">Appendix G: Numerical evaluation</A>
+<B> Up:</B> <A NAME="tex2html1702"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1696"
+  HREF="node132.html">Appendix E: Cross correlations</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001500000000000000000"></A><A NAME="ap:cross"></A>
+<BR>
+Appendix F: Cross correlations II: normal-general
+</H1>
+
+<P>
+In this section we further discuss some features 
+of the cross-correlation function. 
+For the purpose of presentation we 
+we would like to view the time as an integer 
+variable <IMG
+ WIDTH="90" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1731.gif"
+ ALT="$t=1,2,3...$">. One may think of each instant
+of time as corresponding to a bounce.
+
+<P>
+Let us assume that we have functions <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1732.gif"
+ ALT="$f(s)$"> and <IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1733.gif"
+ ALT="$g(s)$">,  
+and a time-sequence 
+<BR><!-- MATH
+ $(s_1,s_2, s_3,...)$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1734.gif"
+ ALT="$(s_1,s_2, s_3,...)$">.
+This gives two stochastic-like processes 
+<!-- MATH
+ $({\mathcal{F}}_1, {\mathcal{F}}_2, {\mathcal{F}}_3,...)$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1735.gif"
+ ALT="$({\mathcal{F}}_1, {\mathcal{F}}_2, {\mathcal{F}}_3,...)$"> and 
+<!-- MATH
+ $({\mathcal{G}}_1, {\mathcal{G}}_2, {\mathcal{G}}_3,...)$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1736.gif"
+ ALT="$({\mathcal{G}}_1, {\mathcal{G}}_2, {\mathcal{G}}_3,...)$">.
+The cross correlation of these two processes is 
+defined as follows: 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e35"></A>
+<!-- MATH
+ \begin{eqnarray}
+C_{{\mbox{\tiny F,G}}}(i-j) = \langle  {\mathcal{F}}_i  {\mathcal{G}}_j  \rangle 
+= \langle f(s_i) g(s_j) \rangle
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="271" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1737.gif"
+ ALT="$\displaystyle C_{{\mbox{\tiny F,G}}}(i-j) = \langle {\mathcal{F}}_i {\mathcal{G}}_j \rangle
+= \langle f(s_i) g(s_j) \rangle$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(F.1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+It is implicit in this definition that we assume 
+that the processes are stationary, so the result depends 
+only on the difference <IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1738.gif"
+ ALT="$\tau=(i-j)$">. 
+The angular brackets stand for an average over realizations 
+of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$">-sequences.  
+
+<P>
+If the sequences are ergodic on the <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$"> domain, 
+then it follows that 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:ergself"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nonumber
+\langle {\mathcal{F}} \rangle &=& \int \! f(s) ds 
+\\\nonumber
+\langle {\mathcal{G}} \rangle &=& \int \! g(s) ds 
+\\C_{{\mbox{\tiny F,G}}}(0) &=& \int \! f(s)g(s) ds
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1739.gif"
+ ALT="$\displaystyle \langle {\mathcal{F}} \rangle$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="70" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1740.gif"
+ ALT="$\displaystyle \int \! f(s) ds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1741.gif"
+ ALT="$\displaystyle \langle {\mathcal{G}} \rangle$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="68" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1742.gif"
+ ALT="$\displaystyle \int \! g(s) ds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1743.gif"
+ ALT="$\displaystyle C_{{\mbox{\tiny F,G}}}(0)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="100" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1744.gif"
+ ALT="$\displaystyle \int \! f(s)g(s) ds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(F.2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The <IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1745.gif"
+ ALT="$\tau \ne 0$"> cross-correlations requires information 
+beyond mere ergodicity. In case that the <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$"> sequence 
+is completely uncorrelated in time we can factorized the 
+averaging and we get 
+<!-- MATH
+ $C_{{\mbox{\tiny F,G}}}(\tau \ne 0) = 
+\langle {\mathcal{F}} \rangle  \times 
+\langle {\mathcal{G}} \rangle$
+ -->
+<IMG
+ WIDTH="190" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1746.gif"
+ ALT="$C_{{\mbox{\tiny F,G}}}(\tau \ne 0) =
+\langle {\mathcal{F}} \rangle \times
+\langle {\mathcal{G}} \rangle$">. 
+If <!-- MATH
+ $\langle {\mathcal{F}} \rangle = 0$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1747.gif"
+ ALT="$\langle {\mathcal{F}} \rangle = 0$"> then 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e36"></A>
+<!-- MATH
+ \begin{eqnarray}
+C_{{\mbox{\tiny F,G}}}(\tau \ne 0) = 0
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1748.gif"
+ ALT="$\displaystyle C_{{\mbox{\tiny F,G}}}(\tau \ne 0) = 0$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(F.3)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+irrespective of <!-- MATH
+ $\langle {\mathcal{G}} \rangle$
+ -->
+<IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1749.gif"
+ ALT="$\langle {\mathcal{G}} \rangle$">. 
+
+<P>
+However, we would like to define circumstances 
+in which Eq.(<A HREF="node133.html#e36">F.3</A>) is valid, even if 
+the <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img512.gif"
+ ALT="$s$"> sequence is <EM>not</EM> uncorrelated. 
+In such case either the <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1670.gif"
+ ALT="${\mathcal{F}}$"> or the 
+<IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1750.gif"
+ ALT="${\mathcal{G}}$"> may possess time correlations. 
+(Such is the case if <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1750.gif"
+ ALT="${\mathcal{G}}$"> is `special'). 
+So let us consider the case where the <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1670.gif"
+ ALT="${\mathcal{F}}$"> 
+sequence <EM>looks random</EM>, while assuming nothing about 
+the <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1750.gif"
+ ALT="${\mathcal{G}}$"> sequence. By the phrase `looks random' 
+we mean that the conditional probability satisfies 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e37"></A>
+<!-- MATH
+ \begin{eqnarray}
+\mbox{Prob}({\mathcal{F}}_i | s_j) = \mbox{Prob}({\mathcal{F}}_i)
+\ \ \ \ \ \ \mbox{for any $i \ne j$}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="317" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1751.gif"
+ ALT="$\displaystyle \mbox{Prob}({\mathcal{F}}_i \vert s_j) = \mbox{Prob}({\mathcal{F}}_i)
+\ \ \ \ \ \ \mbox{for any $i \ne j$}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(F.4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Eq. (<A HREF="node133.html#e36">F.3</A>) straightforwardly follows 
+provided <!-- MATH
+ $\langle {\mathcal{F}} \rangle = 0$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1747.gif"
+ ALT="$\langle {\mathcal{F}} \rangle = 0$">, 
+irrespective of the <IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1733.gif"
+ ALT="$g(s)$"> involved. 
+Given <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1732.gif"
+ ALT="$f(s)$">, the goodness of assumption (<A HREF="node133.html#e37">F.4</A>) 
+can be actually tested. However, it is not 
+convenient to consider  (<A HREF="node133.html#e37">F.4</A>) as a practical  
+definition of a `normal' deformation. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1703"
+  HREF="node134.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1701"
+  HREF="thesis_html.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1695"
+  HREF="node132.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1704"
+  HREF="node134.html">Appendix G: Numerical evaluation</A>
+<B> Up:</B> <A NAME="tex2html1702"
+  HREF="thesis_html.html">Dissipation in Deforming Chaotic</A>
+<B> Previous:</B> <A NAME="tex2html1696"
+  HREF="node132.html">Appendix E: Cross correlations</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

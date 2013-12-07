@@ -1,0 +1,154 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51C-SGI [en] (X11; I; IRIX64 6.5 IP26) [Netscape]">
+   <meta name="Author" content="Alex Barnett">
+   <meta name="Keywords" content="thesis format, harvard">
+   <title>Converting LaTeX Thesis via latex2html</title>
+</head>
+<body text="#000000" bgcolor="#FFFFF0" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<center>
+<h1>
+<b><font size=+2>&nbsp;</font></b></h1></center>
+
+<center>
+<h1>
+<b><font color="#667700"><font size=+2>Converting a LaTeX Thesis
+to HTML with <font color="#AA7788">latex2html</font></font></font></b></h1>
+</center>
+
+
+<p>Here's my tips for putting your Latex'ed thesis
+<a href="../thesis_html/index.html">online</a>.
+Now that <a href="http://www.google.com">Google</a> can search PDF files,
+there is less urgency to do this,
+but I like having it online, and I'm your sure
+potential collaborators would like it too...
+I'm assuming a Harvard-style document (<i>i.e.</i> using <i>huthesis.cls</i>;
+see <a href="index.html">
+my page on this</a>), but most of what I say applies to any
+custom thesis style.
+
+<p><font color="#BB00BB">Keep in mind that it is a least a day's work
+(at least it was for me, with all the debugging below). More if you
+want it perfect.</font>
+
+
+<h3>HOW TO DO IT (rough guide):</h3>
+
+<ul>
+
+<li>Back up thesis. Make a new version (<i>eg thesis_html.tex</i> etc)
+which is in regular \documentclass[11pt]{book} form.
+Cut out table of contents.
+Add 'Chapter 1: ', 'Appendix A: ', etc at start of
+\chapter{} arguments for each chapter and appendix.
+(Here you have to do the counting by hand: it's clumsy).
+
+<li>Cut out all huthesis.cls special things: reorganise frontmatter
+into a separate chapter. (reset the chapter counter after this so your
+chapters don't get numbers offset). Put each frontmatter piece as a
+regular section{} rather than the huthesis.cls environments.
+Build title-page by hand within the \author{} and \date{} commands
+(clumsy).
+
+<li>Make sure compiles with regular latex. Do so 3 times for correct refs.
+
+<li>Change the bibilography to be \input{thesis.bbl} if you used BibTeX,
+rather
+than the call to bibs.bib. This hack gives you a regular book-style
+bibliography so latex2html can handle it.
+
+<li>Make sure you have a recent version of <a
+href="http://www-texdev.mpce.mq.edu.au/l2h/docs/manual/">latex2html</a>.
+Version 2k.1 seems to come with recent linux dists.
+
+<li>Check your version of netpbm library via <b>rpm -qa | grep netpbm</b>
+(if you're on Linux).
+If 9.11 or less, either update (see <a
+href="http://netpbm.sourceforge.net/">sourceforge distribution</a>)
+or make yourself a new patched verion of pstoimg script as
+described in <a href="http://webhost.math.rochester.edu/webworkdocs/discuss/msgReader$390?mode=topic">Ross Moore's black border
+fix</a>.
+
+<li>Copy the icons directory in your latex2html distribution to
+your public_html directory (they must be accessible from outside world!)
+
+<li>Use following .latex2html_init in local directory:
+<blockquote>
+<pre>
+# Force white background and black text
+$BODYTEXT = "text=\"\#000000\" bgcolor=\"\#FFFFFF\"";
+# This ensures that some figures do not end up with a grey background
+$WHITE_BACKGROUND = 1;
+# Tell LATEX:
+$LATEX_COLOR = "\\pagecolor{white}";
+
+$PSTOIMG = "$PERL /home/barnett/lib/pstoimg";
+
+# use GIF rather than PNG:
+$IMAGE_TYPE  = $IMAGE_TYPES[1];
+
+
+$ICONSERVER = "http://monsoon.harvard.edu/~barnett/icons";
+
+1;      # This must be the last line
+</pre>
+</blockquote>
+Note that you only need the $PSTOIMG line if you made your own patched
+version of pstoimg, in which case have it point to wherever you put your
+version.
+The $ICONSERVER line points to where you put your icons directory.
+
+<li>Run latex2html on a paired-down document (eg all but 1 chapter
+removed) first.
+
+<li>My final top-level document:
+<a href="http://www.math.dartmouth.edu/~ahb/thesis/thesis_html.tex">thesis_html.tex</a>
+(cf original <a href="http://www.math.dartmouth.edu/~ahb/thesis/thesis.tex">thesis.tex</a>.
+My final frontmatter: <a href="http://www.math.dartmouth.edu/~ahb/thesis/frontmatter_html.tex">frontmatter_html.tex</a>
+(cf original <a href="http://www.math.dartmouth.edu/~ahb/thesis/frontmatter.tex">frontmatter.tex</a>.
+
+
+<li>My command line: <pre>
+latex2html -white -antialias -image_type gif -html_version 3.2 thesis_html
+</pre>
+This creates (or modifies) the directory thesis_html
+
+<li>If not all inline images or equations appear in final HTML form,
+scan though <b>images.log</b> file generated in the output directory.
+Most likely latex got stuck in a loop and died, failing to produce the
+remaining .ps images. You may need to alter your math latex code
+until it works. I needed to remove \mathletters calls altogether.
+<font color="#BB0000">Anyone got any help on \mathletters
+(less buggy version)?</font>
+
+
+<li>Move the resulting directory into your public_html directory.
+The resulting size was only a few Mb, much less than the
+(uncompressed) PostScript version, about the same as in PDF.
+The entrance URL is then thesis_html/index.html
+
+</ul>
+
+<h3>Useful resources</h3>
+
+<ul>
+<li>man page for latex2html can be viewed with <b>latex2html -h</b>
+<li>search <a href="http://www.xray.mpe.mpg.de/mailing-lists/latex2html/">
+latex2html mailing list archive</a>
+<li><a href="http://webhost.math.rochester.edu/webworkdocs/discuss/msgReader$390?mode=topic">help</a> on lack borders around inline images and equations.
+<li>Thanks to Paul Kent's
+<a href="http://www.tcm.phy.cam.ac.uk/~prck2/tools/l2html.html">
+page on white backgrounds, how to handle revtex etc</a>
+<li>search <a href="http://groups.google.com">Google Groups</a>...
+</ul>
+
+<p>
+Alex Barnett, October 2001.
+
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>mailto.conf - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="mailto.conf">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/ref-mailto-conf.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="References">
+
+<P ALIGN="CENTER"><B>Search in
+mailto.conf:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l1"><A HREF="ref-access_log-TOPIC=References&QUERY=.html">access_log</A></P>
+<P CLASS="l1"><A HREF="ref-classes-conf-TOPIC=References&QUERY=.html">classes.conf</A></P>
+<P CLASS="l1"><A HREF="ref-client-conf-TOPIC=References&QUERY=.html">client.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cups-files-conf-TOPIC=References&QUERY=.html">cups-files.conf</A></P>
+<P CLASS="l1"><A HREF="ref-cupsd-conf-TOPIC=References&QUERY=.html">cupsd.conf</A></P>
+<P CLASS="l1"><A HREF="ref-error_log-TOPIC=References&QUERY=.html">error_log</A></P>
+<P CLASS="l1"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html">mailto.conf</A></P>
+<P CLASS="l2"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html#Cc">Cc</A></P>
+<P CLASS="l2"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html#From">From</A></P>
+<P CLASS="l2"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html#Sendmail">Sendmail</A></P>
+<P CLASS="l2"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html#SMTPServer">SMTPServer</A></P>
+<P CLASS="l2"><A HREF="ref-mailto-conf-TOPIC=References&QUERY=.html#Subject">Subject</A></P>
+<P CLASS="l1"><A HREF="ref-page_log-TOPIC=References&QUERY=.html">page_log</A></P>
+<P CLASS="l1"><A HREF="ref-ppdcfile-TOPIC=References&QUERY=.html">PPD Compiler Driver Information File Reference</A></P>
+<P CLASS="l1"><A HREF="ref-printers-conf-TOPIC=References&QUERY=.html">printers.conf</A></P>
+<P CLASS="l1"><A HREF="ref-snmp-conf-TOPIC=References&QUERY=.html">snmp.conf</A></P>
+<P CLASS="l1"><A HREF="ref-subscriptions-conf-TOPIC=References&QUERY=.html">subscriptions.conf</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>mailto.conf</H1>
+<FORM ACTION="/help/ref-mailto-conf.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">mailto.conf</H1>
+
+<P>The <VAR>/etc/cups/mailto.conf</VAR> file contains several
+directives that defines the local mail server and email
+notification preferences for CUPS. Each directive is listed on a
+line by itself followed by its value. Comments are introduced
+using the number sign ("#") character at the beginning of a
+line.</P>
+
+
+<H2 CLASS="title"><A NAME="Cc">Cc</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+Cc bigbrother@example.com
+Cc John Doe &lt;jd@example.com>
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Cc</CODE> directive specifies an additional
+recipient ("carbon copy") for all email notifications. The
+default is to not send a copy to anyone but the subscriber.</P>
+
+
+<H2 CLASS="title"><A NAME="From">From</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+From printserver@example.com
+From Your Happy Printer &lt;printserver@example.com>
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>From</CODE> directive specifies the sender of email
+notifications. The default is the <A
+HREF="ref-cupsd-conf.html#ServerAdmin"><TT>ServerAdmin</TT><A>
+address defined in the <VAR>cupsd.conf</VAR> file.</P>
+
+
+<H2 CLASS="title"><A NAME="Sendmail">Sendmail</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+Sendmail /usr/sbin/sendmail
+Sendmail /usr/lib/sendmail -bm -i
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Sendmail</CODE> directive specifies the command to
+run to deliver an email locally. This directive cannot be used
+with the <TT>SMTPServer</TT> directive, and if both
+<TT>Sendmail</TT> and <TT>SMTPServer</TT> lines appear in the
+<VAR>mailto.conf</VAR> file, only the last line is used. The
+default is <TT>/usr/sbin/sendmail</TT>.</P>
+
+
+<H2 CLASS="title"><A NAME="SMTPServer">SMTPServer</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+SMTPServer mail.example.com
+SMTPServer 192.168.2.1
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>SMTPServer</CODE> directive specifies a hostname or
+IP address of a (possibly remote) SMTP mail server. This
+directive cannot be used with the <TT>Sendmail</TT> directive,
+and if both <TT>Sendmail</TT> and <TT>SMTPServer</TT> lines
+appear in the <VAR>mailto.conf</VAR> file, only the last line is
+used. The default is to use the <TT>Sendmail</TT> command
+instead.</P>
+
+
+<H2 CLASS="title"><A NAME="Subject">Subject</A></H2>
+
+<H3>Examples</H3>
+
+<PRE CLASS="command">
+Subject [CUPS]
+Subject URGENT EMAIL NOTIFICATION
+</PRE>
+
+<H3>Description</H3>
+
+<P>The <CODE>Subject</CODE> directive specifies a prefix string to
+add to the subject of each email notification. The default is to
+not add a prefix string.</P>
+
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

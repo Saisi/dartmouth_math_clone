@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>may22</TITLE>
+<META NAME="description" CONTENT="may22">
+<META NAME="keywords" CONTENT="may22">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="may22.css">
+</HEAD>
+<BODY >
+
+<P>
+<B>Monday</B>
+
+<P>
+Read 10.1 and 12.1.  Do form 10.3 numbers 7,9,10 and from 10.1 do 1,2.
+
+<P>
+<B>Wednesday</B>
+
+<P>
+Read 12.1 and 3.3.  From 10.1 do numbers 3 and 4; from 12.1 do
+1,3,6 and 7.   
+
+<P>
+<B>Friday</B>
+
+<P>
+<B>Homework</B>
+
+<P>
+Read 3.3 again and read carefully the New-Age solitare game described on
+page 129. 
+
+<P>
+<B>Problem  1:</B>  Obtain and order a  deck of cards as if it were a
+new
+deck (as described
+on page
+129),  play the new age solitare 10 times, and record whether yin or yang
+suits win each time.  
+
+<P>
+<B>Problem 2:</B>
+ show up for Tuesday's x-hour.
+
+<P>
+<B>Extra Credit</B>
+
+<P>
+Notice this week's assignment is the last assignment of the quarter  and
+is
+particularly easy.  Please use this
+opportunity  to catch up on any assignments which you have
+missed;  you will receive partial credit on any such
+efforts.  Once you have made an effort on <B>all</B> the assignments 
+you may redo any  problems from any time during the quarter which you
+missed and receive extra credit for your efforts.  (This is intended as an
+opportunity to review old material in a constructive way.)
+
+<P>
+If instead you would like to try some new (and fun!) problems and receive
+extra credit then
+do  as many of 8-15 in section 12.1 as you can.
+
+<P>
+<B>Next Wednesday is the last time to turn anything in
+for credit, including the above extra credit opportunities and late
+assignments.</B>  Next Wednesday you will receive your take home final
+which will be due by 10 o'clock in the morning Tuesday June 6 (under my
+office door).
+
+<P>
+<B>Comment</B>
+
+<P>
+Here are the  programs re-explored on Friday
+
+<P>
+Walk1d := proc(n)
+local i, ran, position, positionlist,walk;
+with(plottools):
+position := 0;
+positionlist :=[[0,0]];
+for i from 0 to n 
+do
+if position = 0  then
+lprint(`Im home at  step ` , i ,  ``);
+fi;
+ran := rand(1..2)();
+if ran = 1 then
+position := position + 1; 
+else
+position := position  - 1 ;
+fi;
+positionlist := [op(positionlist),[i,position]];
+od;
+lprint(`my final position is `, position,``); 
+lprint(`Here is a graph of my random adventure in one dimension, viewed
+with "time" as the x-axis.`);
+ walk := curve(positionlist,color=red,thickness =1 );
+plots[display](walk); 
+end:
+
+<P>
+Walk1d(1000);
+
+<P>
+with(plottools):
+
+<P>
+Walk2d := proc(n,show)
+local i, ran, positionx, positiony, positionlist,walk,list3,walk3;
+with(plottools):
+positionlist := [[0,0]];
+list3 := [[0,0,0]];
+positionx := 0;
+positiony := 0;
+for i from 0 to n 
+do
+if positionx = 0  and positiony = 0  then
+lprint(`Im home at  step ` , i ,   ``);
+fi;
+ran := rand(1..4)();
+if ran = 1 then
+positionx := positionx + 1; 
+fi;
+if ran = 2 then
+positionx := positionx  - 1 ;
+fi;
+if ran = 3 then
+positiony := positiony  + 1 ;
+fi;
+if ran = 4 then
+positiony := positiony  - 1 ;
+fi;
+positionlist := [op(positionlist),[positionx,positiony]];
+list3 := [op(list3),[positionx,positiony,i]];
+od; 
+lprint(`my final position is `, [positionx , positiony],``); 
+if show then
+lprint(`Here is a graph of my random adventure in two dimensinos.`);
+walk := curve(positionlist,color=green,thickness =2 );
+plots[display](walk); 
+else
+lprint(`Here is the walk vied over time, with time as the z axis.`);
+walk3 := curve(list3);
+plots[display](walk3,orientation=[0,0],axes=box,thickness=2);
+fi;
+end:
+
+<P>
+Walk2d(1000,true);
+
+<P>
+Walk2d(1000,false);
+
+<P>
+Walk3d := proc(n)
+local i, ran, positionx, positiony , positionz, positionlist,walk;
+with(plottools):
+positionx := 0;
+positiony := 0;
+positionz := 0;
+positionlist :=[[0,0,0]];
+for i from 0 to n 
+do
+if positionx = 0  and positiony = 0  and positionz = 0 then
+lprint(`Im home at  step` , i ,  ``);
+fi;
+ran := rand(1..6)();
+if ran = 1 then
+positionx := positionx + 1; 
+fi;
+if ran = 2  then
+positionx := positionx  - 1 ;
+fi;
+if ran = 3   then
+positiony := positiony  + 1 ;
+fi;
+if ran = 4  then
+positiony := positiony  - 1 ;
+fi;
+if ran = 5  then
+positionz := positionz  +  1 ;
+fi;
+if ran = 4  then
+positionz := positionz  - 1 ;
+fi;
+positionlist := [op(positionlist),[positionx,positiony,positionz]];
+od; 
+lprint(`my final position is `, [positionx , positiony,positionz], ``);  
+lprint(`Here is a graph of my random adventure in three dimensions.`);
+walk := curve(positionlist,thickness=2);
+plots[display](walk); 
+end:
+
+<P>
+Walk3d(1000);
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 60 Spring 2000</I>
+<BR><I>2000-05-26</I>
+</ADDRESS>
+</BODY>
+</HTML>

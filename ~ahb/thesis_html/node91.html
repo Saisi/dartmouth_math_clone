@@ -1,0 +1,328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Deformations and eigenstate computation</TITLE>
+<META NAME="description" CONTENT="Deformations and eigenstate computation">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node92.html">
+<LINK REL="previous" HREF="node90.html">
+<LINK REL="up" HREF="node90.html">
+<LINK REL="next" HREF="node92.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1262"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1260"
+  HREF="node90.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1254"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1263"
+  HREF="node92.html">Computation of overlap matrix</A>
+<B> Up:</B> <A NAME="tex2html1261"
+  HREF="node90.html">Application: local density of</A>
+<B> Previous:</B> <A NAME="tex2html1255"
+  HREF="node90.html">Application: local density of</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00741000000000000000">
+Deformations and eigenstate computation</A>
+</H2>
+
+<P>
+Examples of a `special' deformation and a `generic' deformation were used
+(see Chapters&nbsp;<A HREF="node32.html#ch:dil">3</A> and <A HREF="node42.html#ch:wall">4</A>).
+The special deformation chosen was rotation about the origin (lower-left corner).
+This corresponds to <!-- MATH
+ $D(s) = {\mathbf n}(s) \cdot {\mathbf e}_z \times {\mathbf r}(s)$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1082.gif"
+ ALT="$D(s) = {\mathbf n}(s) \cdot {\mathbf e}_z \times {\mathbf r}(s)$">
+(see Table&nbsp;<A HREF="node37.html#tbl:specdefs">3.2</A>).
+Because the special deformations preserve shape, the eigenstates of a
+thus-deformed billiard are unchanged (space is invariant under translation
+and rotation).
+Therefore only one set of eigenstates is required for all <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> values.
+
+<P>
+The generic deformation used was <!-- MATH
+ $D(s) = \sin^2(\theta)$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1083.gif"
+ ALT="$D(s) = \sin^2(\theta)$">, where
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img480.gif"
+ ALT="$\theta$"> is the angle on the circular part of the boundary measured from the
+vertical. <IMG
+ WIDTH="73" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1084.gif"
+ ALT="$D(s) = 0$"> on the top, left, and bottom straight sections of the
+boundary. This has the effect of pushing out the curved part into an ellipse
+(and a corresponding lengthening of the bottom straight section).
+This deformation was chosen because it was possible to create large
+deformations with minimum sacrifice to the quality of the basis-dependent
+tension minima <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$">.
+
+<P>
+Generally, it has been found that almost any non-special deformation
+of the stadium creates a shape for which the RPW basis becomes much worse,
+and that improvement by addition of EPWs is also limited.
+For deformations that are localized on the perimeter, this renders the
+problem unsolvable if <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> approaches <!-- MATH
+ $\lambda_{{\mbox{\tiny B}}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img523.gif"
+ ALT="$\lambda_{{\mbox{\tiny B}}}$"> (de Broglie wavelength) or larger.
+In the above choice of deformation at <IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img11.gif"
+ ALT="$k \approx 400$">
+it was possible to deform from <IMG
+ WIDTH="46" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img244.gif"
+ ALT="$x=0$"> to
+<!-- MATH
+ $x = 10 \lambda_{{\mbox{\tiny B}}}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1085.gif"
+ ALT="$x = 10 \lambda_{{\mbox{\tiny B}}}$"> with a corresponding change in typical
+tension from <!-- MATH
+ $3 \times 10^{-11}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1086.gif"
+ ALT="$3 \times 10^{-11}$"> to <IMG
+ WIDTH="58" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1087.gif"
+ ALT="$\sim 10^{-7}$">.
+A few states of the deformed system had higher tensions of <IMG
+ WIDTH="58" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1088.gif"
+ ALT="$\sim 10^{-5}$">.
+This was acceptable for the calculation.
+
+<P>
+At each <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">, all the states in the wavenumber range <IMG
+ WIDTH="113" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img894.gif"
+ ALT="$398 &lt; k &lt; 402$">
+were gathered using multiple applications of the scaling method at choices
+of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> equally spaced by <!-- MATH
+ $2\delta_{{\mbox{\tiny max}}} = 0.016$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1089.gif"
+ ALT="$2\delta_{{\mbox{\tiny max}}} = 0.016$"> in wavenumber.
+Thus only states falling within <!-- MATH
+ $|\delta_\mu| < \delta_{{\mbox{\tiny max}}}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1090.gif"
+ ALT="$\vert\delta_\mu\vert &lt; \delta_{{\mbox{\tiny max}}}$"> were
+kept from each scaling diagonalization.
+This rather small value of <!-- MATH
+ $\delta_{{\mbox{\tiny max}}}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1091.gif"
+ ALT="$\delta_{{\mbox{\tiny max}}}$"> means that only about 2 states
+were found per diagonalization.
+However, because of the limitation of the basis set in such deformed shapes,
+this gave the highest accuracy.
+Because the scaling method is so fast, it did not slow down the overall
+computation by much (the evaluation of eigenstate values and gradients on the
+perimeter was the main bottleneck).
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:avoided"></A><A NAME="10779"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.13:</STRONG>
+
+Parameter-dependent eigenvalues in the stadium billiard
+at <IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img11.gif"
+ ALT="$k \approx 400$">.
+Avoided crossings are clearly visible. The parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> controlled a
+deformation which bent the upper straight section outwards and the curved
+part inwards.
+As a result a small integrable pocket of phase-space is created;
+the resulting fast-moving eigenstates become visible at the extremes of the
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> range.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="518" HEIGHT="428" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1092.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/avoided.eps,width=\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+To illustrate the effect of deformation on the eigenvalues,
+Fig.&nbsp;<A HREF="node91.html#fig:avoided">6.13</A> shows their parameter-dependence under a (different)
+generic deformation.
+This was generated (to lower accuracy) by a single scaling diagonalization
+at each <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> value.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:pnm_rs"></A><A NAME="10885"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.14:</STRONG>
+
+Local density of states for finite rotations of the 2D quarter stadium at
+<IMG
+ WIDTH="63" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img11.gif"
+ ALT="$k \approx 400$">.
+Profiles of the matrix <IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img27.gif"
+ ALT="$P(n\vert m)$"> are shown for 41 choices of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$"> logarithmically
+spaced from <!-- MATH
+ $x/\lambda_{{\mbox{\tiny B}}}= 10^{-3}$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1093.gif"
+ ALT="$x/\lambda_{{\mbox{\tiny B}}}= 10^{-3}$"> to <!-- MATH
+ $x/\lambda_{{\mbox{\tiny B}}}= 10$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1094.gif"
+ ALT="$x/\lambda_{{\mbox{\tiny B}}}= 10$"> (giving the rotation angle
+in radians).
+The upper plot shows the profiles, with the FOPT result for the smallest <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">
+shown as the bold dashed line.
+The lower plot shows the profiles divided by <IMG
+ WIDTH="22" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1095.gif"
+ ALT="$x^2$">, so that the breakdown of
+FOPT is clear.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="483" HEIGHT="586" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1096.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/pnm400rs.eps,width=0.9\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:pnm_bows"></A><A NAME="10887"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.15:</STRONG>
+
+Same as the upper plot of Fig.&nbsp;<A HREF="node91.html#fig:pnm_rs">6.14</A>, except for the
+generic deformation explained in the text.
+Drift to the left is due to the lack of volume-preservation of this deformation.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="483" HEIGHT="296" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1097.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_vergini/pnm400bows.eps,width=0.9\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1262"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1260"
+  HREF="node90.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1254"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1263"
+  HREF="node92.html">Computation of overlap matrix</A>
+<B> Up:</B> <A NAME="tex2html1261"
+  HREF="node90.html">Application: local density of</A>
+<B> Previous:</B> <A NAME="tex2html1255"
+  HREF="node90.html">Application: local density of</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

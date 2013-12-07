@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>sep22m.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot([(x/sqrt(2*Pi))*exp(-x^2/2),1/</font><font color="#ff0000" size="3" face="Monospaced">sqrt(2*Pi*exp(1))*</font><font color="#ff0000" size="3" face="Monospaced">x^2],x=0..1.5,labels=[x, y],thickness=2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/images/sep22m_1.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>int(</font><font color="#ff0000" size="3" face="Monospaced">(x/sqrt(2*Pi))*exp(-x^2/2)-1/sqrt(2*Pi*exp(1))*x^2,x);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/images/sep22m_2.gif" width="121" height="66" alt="-1/2*2^(1/2)*exp(-1/2*x^2)/Pi^(1/2)-1/6*2^(1/2)*x^3/(Pi*exp(1))^(1/2)" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>
+<br>Spin:=proc(n)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local i,H;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>for i from 1 to n</font><font color="#ff0000" size="3" face="Monospaced">
+<br>do;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>H:=[</font><font color="#ff0000" size="3" face="Monospaced">plot3d(sin(h),t=0..(i/n)*2*Pi,h=0..2*Pi, coords=cylindrical),</font><font color="#ff0000" size="3" face="Monospaced">op(H)];</font><font color="#ff0000" size="3" face="Monospaced">
+<br>od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(H,insequence=true);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Spin(30);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/archive/m8f04/public_html/files/images/sep22m_3.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+<p></p>
+</body>
+</html>

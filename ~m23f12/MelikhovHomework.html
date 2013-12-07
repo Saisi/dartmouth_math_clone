@@ -1,0 +1,864 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Math 23 &quot;Differential Equations&quot;</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.2  (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGED" CONTENT="20121112;17260700">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+	<META NAME="CHANGEDBY" CONTENT="Math Visitor">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=CENTER><STRONG><FONT SIZE=5>Math 23 &quot;Differential
+Equations&quot;</FONT></STRONG></P>
+<P ALIGN=CENTER><STRONG><FONT SIZE=5>Fall 2012</FONT></STRONG></P>
+<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=5>Section taught by
+Sergey Melikhov</FONT></FONT></P>
+<P><FONT COLOR="#ff00cc"><FONT SIZE=4><SPAN STYLE="background: #ffff66">Announcements</SPAN></FONT></FONT></P>
+<P><STRONG><FONT COLOR="#ff0000"><FONT SIZE=4>Final Exam: Friday
+11/16, </FONT></FONT></STRONG><STRONG><FONT COLOR="#ff0000"><SPAN STYLE="text-decoration: none"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="background: transparent">11:30am-2:30pm
+in Kemeny Hall, Room 008 </SPAN></FONT></SPAN></FONT></STRONG>
+</P>
+<P><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#0033ff" CELLPADDING=15 CELLSPACING=0 BGCOLOR="#66ffff">
+	<COL WIDTH=80*>
+	<COL WIDTH=55*>
+	<COL WIDTH=57*>
+	<COL WIDTH=64*>
+	<TR>
+		<TD WIDTH=31%>
+			<P ALIGN=CENTER><STRONG>Lecture Dates</STRONG></P>
+		</TD>
+		<TD WIDTH=21%>
+			<P ALIGN=CENTER><STRONG>Sections in Textbook</STRONG></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P ALIGN=CENTER><STRONG>Homework Problems</STRONG></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P ALIGN=CENTER><STRONG>Deadlines for Homework</STRONG></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=31%>
+			<P>Wednesday 10/24</P>
+		</TD>
+		<TD WIDTH=21%>
+			<P><FONT SIZE=3>7.5</FONT></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><FONT SIZE=3>9, 11, 12, 14</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=25%>
+			<P><BR><BR>
+			</P>
+			<P><FONT SIZE=3><B>(cont'd)</B></FONT></P>
+			<P><FONT SIZE=3><B>Due on Wednesday 10/31.</B></FONT></P>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=31%>
+			<P>Thursday 10/25 <FONT COLOR="#ff0000">x-hour</FONT></P>
+			<P><FONT COLOR="#ff0000">No class on</FONT> <FONT COLOR="#666666">Friday
+			10/26</FONT></P>
+			<P><FONT COLOR="#ff00ff"><SPAN STYLE="background: #ffff66">Homecoming
+			weekend</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=21%>
+			<P><FONT SIZE=3>7.6</FONT></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><FONT SIZE=3>3(a), 5(a), 7</FONT></P>
+			<P><FONT SIZE=3>(<SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition: only solve and express in terms of real-valued functions
+			in problems 3, 5)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=31%>
+			<P>Monday 10/29</P>
+		</TD>
+		<TD WIDTH=21%>
+			<P><FONT SIZE=3>7.8</FONT></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><FONT SIZE=3>2(c), 3(c), 5</FONT></P>
+			<P><FONT SIZE=3>(<SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition: only solve the system in problems 2, 3)</FONT></P>
+		</TD>
+		<TD ROWSPAN=5 WIDTH=25%>
+			<P><FONT SIZE=3><B>Due on Wednesday 11/7.</B></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=31%>
+			<P>Wednesday 10/31</P>
+		</TD>
+		<TD WIDTH=21%>
+			<P><FONT SIZE=3>7.8</FONT></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P><FONT SIZE=3>10.1</FONT></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><FONT SIZE=3>1, 5, 10, 14</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=31%>
+			<P>Friday 11/2</P>
+		</TD>
+		<TD WIDTH=21%>
+			<P><FONT SIZE=3>10.5</FONT></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><FONT SIZE=3>3, 5</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P><FONT SIZE=3>10.7, 10.B</FONT></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=31%>
+			<P>Monday 11/5</P>
+		</TD>
+		<TD WIDTH=21%>
+			<P><FONT SIZE=3>10.7</FONT></P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><FONT SIZE=3>Solve #1(a,b) using the method of D'Alembert
+			(discussed in class; a sketch can be found in Problems 13, 14, 16
+			and 20 in Section 10.7).</FONT></P>
+		</TD>
+		<TD ROWSPAN=6 WIDTH=25%>
+			<P><FONT SIZE=3><B>Due on <FONT COLOR="#ff0000">Monday</FONT>
+			11/12.</B></FONT></P>
+			<P STYLE="font-weight: normal"><FONT SIZE=3>Same numbers in the
+			8<SUP>th</SUP> edition.</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=31%>
+			<P>Wednesday 11/7</P>
+		</TD>
+		<TD WIDTH=21%>
+			<P>10.7</P>
+		</TD>
+		<TD WIDTH=22%>
+			<P>Solve #1(a) using Fourier series.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>10.2</P>
+		</TD>
+		<TD WIDTH=22%>
+			<P>14, 15</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=3 WIDTH=31%>
+			<P>Thursday 11/8 <FONT COLOR="#ff0000">x-hour</FONT></P>
+			<P><FONT COLOR="#ff0000">No class on </FONT><FONT COLOR="#666666">Friday
+			11/9</FONT></P>
+		</TD>
+		<TD WIDTH=21%>
+			<P>10.3</P>
+		</TD>
+		<TD WIDTH=22%>
+			<P>6</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>10.4</P>
+		</TD>
+		<TD WIDTH=22%>
+			<P>16, 17</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>10.5</P>
+		</TD>
+		<TD WIDTH=22%>
+			<P>9, 10</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=31%>
+			<P>Monday 11/12</P>
+			<P><FONT COLOR="#ff0000">No class on</FONT> <FONT COLOR="#666666">Wednesday
+			11/14</FONT></P>
+			<P><FONT COLOR="#ff00ff"><SPAN STYLE="background: #ffff66">Pre-examination
+			break 11/14-11/15</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=21%>
+			<P>10.6</P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><FONT SIZE=3>9(a)</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=25%>
+			<P><FONT SIZE=3>This assignment will not be collected or graded,
+			but similar problems may appear on the final.</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>10.7</P>
+		</TD>
+		<TD WIDTH=22%>
+			<P><FONT SIZE=3>5(a)</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=CENTER><STRONG><FONT COLOR="#ff0000"><FONT SIZE=4>Final:
+Friday 11/16,</FONT></FONT></STRONG></P>
+<P ALIGN=CENTER><STRONG><FONT COLOR="#ff0000">11:30am-2:30pm in
+Kemeny Hall, Room 008 </FONT></STRONG>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P ALIGN=CENTER><FONT COLOR="#ff00ff"><SPAN STYLE="background: #ffff66">Final
+Exams End on Tuesday 11/20</SPAN></FONT></P>
+<P><BR><BR>
+</P>
+<P ALIGN=CENTER><IMG SRC="http://www.math.dartmouth.edu/usr/lib/openoffice/basis3.2/share/gallery/rulers/redrulr5.gif" NAME="graphics1" ALIGN=LEFT WIDTH=600 HEIGHT=9 BORDER=0><BR><BR>
+</P>
+<P ALIGN=CENTER><FONT SIZE=7 STYLE="font-size: 32pt"><B>OLD STUFF</B></FONT></P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#0033ff" CELLPADDING=15 CELLSPACING=0 BGCOLOR="#66ffff">
+	<COL WIDTH=41*>
+	<COL WIDTH=40*>
+	<COL WIDTH=129*>
+	<COL WIDTH=46*>
+	<TR>
+		<TD WIDTH=16%>
+			<P ALIGN=CENTER><STRONG>Lecture Dates</STRONG></P>
+		</TD>
+		<TD WIDTH=16%>
+			<P ALIGN=CENTER><STRONG>Sections in Textbook</STRONG></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P ALIGN=CENTER><STRONG>Homework Problems</STRONG></P>
+		</TD>
+		<TD WIDTH=18%>
+			<P ALIGN=CENTER><STRONG>Deadlines for Homework</STRONG></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=16%>
+			<P>Monday 09/10</P>
+		</TD>
+		<TD WIDTH=16%>
+			<P>1.1</P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><A NAME="e8734"></A>#7. Write down a differential equation of
+			the form d<EM>y</EM>/d<EM>t=ay+b</EM> whose all solutions approach
+			<EM>y=</EM>3 as <EM>t</EM>→∞.</P>
+			<P><A NAME="e87342"></A><A NAME="e87341"></A>#12. Draw a direction
+			field for <EM>y'=-y</EM>(5<EM>-y</EM>)<EM>.</EM> Based on the
+			direction field, determine the behavior of <EM>y</EM> as <EM>t</EM>→∞.
+			If this behavior depends on the initial value of <EM>y</EM> at
+			<EM>t=</EM>0, describe this dependency.</P>
+		</TD>
+		<TD ROWSPAN=7 WIDTH=18%>
+			<P><B>Due on Wednesday 9/19</B></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16% SDVAL="1.3" SDNUM="1033;">
+			<P>1.3</P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=16%>
+			<P>Wednesday 9/12</P>
+		</TD>
+		<TD WIDTH=16% SDVAL="1.2" SDNUM="1033;">
+			<P>1.2</P>
+		</TD>
+		<TD WIDTH=50%>
+			<P>#8. Consider a population <EM>p</EM> of field mice that grows
+			at a rate proportional to the current population, so that
+			d<EM>p</EM>/d<EM>t=rp</EM>.</P>
+			<P>(a) Find the rate constant <EM>r</EM> if the population doubles
+			in 30 days.</P>
+			<P>(b) Find <EM>r</EM> if the population doubles in <EM>N</EM>
+			days.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16% SDVAL="2.1" SDNUM="1033;">
+			<P>2.1</P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><BR><BR>
+			</P>
+			<P><BR><BR>
+			</P>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=3 WIDTH=16%>
+			<P>Friday 9/14</P>
+		</TD>
+		<TD WIDTH=16%>
+			<P>1.3 (cont'd)</P>
+		</TD>
+		<TD WIDTH=50%>
+			<P>#12. Verify that <EM>y</EM><SUB>1</SUB>(<EM>t</EM>)<EM>=t</EM><SUP>-2</SUP>
+			and <EM>y</EM><SUB>2</SUB>(<EM>t</EM>)<EM>=t</EM><SUP>-2</SUP>ln<EM>t</EM>
+			are solutions of <EM>t</EM><SUP>2</SUP><EM>y''+</EM>5<EM>ty'+</EM>4<EM>y=</EM>0
+			for <EM>t&gt;</EM>0<EM>.</EM></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P>2.1 (cont'dite)</P>
+		</TD>
+		<TD WIDTH=50%>
+			<P STYLE="margin-bottom: 0in">#15. Find the solution of the
+			initial value problem <EM>ty'+</EM>2<EM>y=t</EM><SUP>2</SUP><EM>-t+</EM>1<EM>,
+			y</EM>(1)=1/2, for <EM>t&gt;</EM>0.</P>
+			<P>#17. Find the solution of the initial value problem <EM>y'-</EM>2<EM>y=e</EM><SUP>2</SUP><EM><SUP>t</SUP></EM><EM>,
+			y</EM>(0)=2.</P>
+			<P><A NAME="e87344"></A><A NAME="e87343"></A>#33. Show that if <EM>a</EM>
+			and <EM>λ</EM> are positive constants, and <EM>b</EM> is any real
+			number, then every solution of the equation <EM>y'+ay=be</EM><EM><SUP>-</SUP></EM><EM><SUP><FONT FACE="Times New Roman"><FONT SIZE=3>λ</FONT></FONT></SUP></EM><EM><SUP>t</SUP></EM>
+			has the property that <EM>y→</EM>0 as <EM>t</EM>→∞.</P>
+			<P><EM>Hint. </EM><EM><SPAN STYLE="font-style: normal">Consider
+			the cases </SPAN></EM><EM><I>a=λ</I></EM><EM> </EM><EM><SPAN STYLE="font-style: normal">and
+			</SPAN></EM><EM><I>a≠λ</I></EM><EM> </EM><EM><SPAN STYLE="font-style: normal">separately.</SPAN></EM></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16% SDVAL="2.2" SDNUM="1033;">
+			<P>2.2</P>
+		</TD>
+		<TD WIDTH=50%>
+			<P>#3. Solve the equation <EM>y'+y</EM><SUP>2</SUP>sin<EM>x=</EM>0.</P>
+			<P>#8. Solve the equation d<EM>y</EM>/d<I>x</I><EM>=x</EM><SUP>2</SUP>/(1<EM>+y</EM><SUP>2</SUP>).</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P>Monday 9/17</P>
+		</TD>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>2.4</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><A NAME="e960"></A>#3. Without solving the initial value
+			problem <EM>y'+</EM>(tan<EM>t</EM>)<EM>y=</EM>sin<EM>t, y</EM>(<EM>π</EM>)=0,
+			determine an interval in which the solution is certain to exist.</P>
+			<P>#14. Solve the initial value problem <EM>y'=</EM>2<EM>ty</EM><SUP>2</SUP><EM>,
+			y</EM>(0)<EM>=y</EM><SUB>0</SUB>, and determine how the interval
+			in which the solution exists depends on the initial value <EM>y</EM><SUB>0</SUB>.</P>
+			<P>#25. Let <EM>y=y</EM><SUB>1</SUB>(<EM>t</EM>) be a solution of
+			<EM>y'+p</EM>(<EM>t</EM>)<EM>y=</EM>0 and let <EM>y=y</EM><SUB>2</SUB>(<EM>t</EM>)
+			be a solution of <EM>y'+p</EM>(<EM>t</EM>)<EM>y=g</EM>(<EM>t</EM>).
+			Show that <EM>y=y</EM><SUB>1</SUB>(<EM>t</EM>)<EM>+y</EM><SUB>2</SUB>(<EM>t</EM>)
+			is also a solution of the latter equation.</P>
+			<P><FONT SIZE=3>#33. Solve the initial value problem </FONT><EM><FONT SIZE=3>y'+p</FONT></EM><FONT SIZE=3>(</FONT><EM><FONT SIZE=3>t</FONT></EM><FONT SIZE=3>)</FONT><EM><FONT SIZE=3>y=</FONT></EM><FONT SIZE=3>0</FONT><EM><FONT SIZE=3>,
+			y</FONT></EM><FONT SIZE=3>(0)=1, where </FONT><EM><FONT SIZE=3>p</FONT></EM><FONT SIZE=3>(</FONT><EM><FONT SIZE=3>t</FONT></EM><FONT SIZE=3>)=2
+			for 0</FONT><EM>≤</EM><EM><FONT SIZE=3>t≤</FONT></EM><FONT SIZE=3>1
+			and </FONT><EM><FONT SIZE=3>p</FONT></EM><FONT SIZE=3>(</FONT><EM><FONT SIZE=3>t</FONT></EM><FONT SIZE=3>)=1
+			for </FONT><EM><FONT SIZE=3>t&gt;</FONT></EM><FONT SIZE=3>1.</FONT></P>
+		</TD>
+		<TD ROWSPAN=6 WIDTH=18%>
+			<P><FONT SIZE=3><B>Due on Wednesday 9/26. </B></FONT>
+			</P>
+			<P><BR><BR>
+			</P>
+			<P><FONT SIZE=3>All problem numbers also work for the 8<SUP>th</SUP>
+			edition.</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=16%>
+			<P>Wednesday 9/19</P>
+		</TD>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>2.4 (cont'd)</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16% SDVAL="2.3" SDNUM="1033;">
+			<P><FONT SIZE=3>2.3</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P>Thursday 9/20</P>
+			<P><FONT COLOR="#ff0000">x-hour</FONT></P>
+		</TD>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>2.3 (cont'd)</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><FONT SIZE=3>2, 4 and 8(a,b)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=16%>
+			<P>Friday 9/21</P>
+		</TD>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>2.5</FONT></P>
+			<P><FONT SIZE=3>We draw the entire graph and phase line, in
+			contrast to the first quadrant / positive ray figures in the book.
+			</FONT>
+			</P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><FONT SIZE=3>3, 13 and 15(a)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>2.4 (cont'd)</FONT></P>
+		</TD>
+		<TD WIDTH=50% SDVAL="28" SDNUM="1033;">
+			<P><FONT SIZE=3>28</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P>Monday 9/24</P>
+		</TD>
+		<TD WIDTH=16% SDVAL="2.6" SDNUM="1033;">
+			<P><FONT SIZE=3>2.6</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><FONT SIZE=3>2, 14, 28</FONT></P>
+			<P><BR>
+			</P>
+		</TD>
+		<TD ROWSPAN=6 WIDTH=18%>
+			<P><FONT SIZE=3><B>Due on Wednesday 10/3. </B></FONT>
+			</P>
+			<P><BR><BR>
+			</P>
+			<P STYLE="font-weight: normal"><FONT SIZE=3>Same problem numbers
+			in the <FONT COLOR="#ff0000">corresponding sections</FONT> in the
+			8<SUP>th</SUP> edition.</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=3 WIDTH=16%>
+			<P>Wednesday 9/26</P>
+		</TD>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>2.6</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><FONT SIZE=3>24, and the following problem: </FONT>
+			</P>
+			<P><FONT SIZE=3>#24α. Use #24 to solve the equation
+			(3<I>y</I><SUP>2</SUP>+4<I>xy</I>)+(4<I>xy</I>+3<I>x</I><SUP>2</SUP>)<I>y'</I>=0.</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>3.1</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><FONT SIZE=3>11, 12</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>4.1, 4.2</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P>Thursday 9/27</P>
+			<P><FONT COLOR="#ff0000">x-hour</FONT></P>
+		</TD>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>3.3: Complex Roots (=3.4 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><FONT SIZE=3>1, 5, 11, 19</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>Friday 9/28</FONT></P>
+		</TD>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>3.4: Repeated Roots (=3.5 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><FONT SIZE=3>2, 13, 14, 23, 25</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16%>
+			<P>Monday 10/1</P>
+		</TD>
+		<TD WIDTH=16%>
+			<P><FONT SIZE=3>3.5, 3.8 (=3.6, 3.9 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=18%>
+			<P><FONT SIZE=3><B>Due on Wednesday 10/10 </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=CENTER><STRONG><FONT COLOR="#ff0000"><FONT SIZE=4>Midterm 1:
+Tuesday 10/2,</FONT></FONT></STRONG></P>
+<P ALIGN=CENTER><STRONG><FONT COLOR="#ff0000">6-8pm in </FONT></STRONG><STRONG><FONT COLOR="#ff0000"><SPAN STYLE="background: #ffffff">Carpenter
+Hall, Room 013</SPAN></FONT></STRONG></P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#0033ff" CELLPADDING=15 CELLSPACING=0 BGCOLOR="#66ffff">
+	<COL WIDTH=54*>
+	<COL WIDTH=63*>
+	<COL WIDTH=65*>
+	<COL WIDTH=75*>
+	<TR>
+		<TD WIDTH=21%>
+			<P ALIGN=CENTER><STRONG>Lecture Dates</STRONG></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P ALIGN=CENTER><STRONG>Sections in Textbook</STRONG></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P ALIGN=CENTER><STRONG>Homework Problems</STRONG></P>
+		</TD>
+		<TD WIDTH=29%>
+			<P ALIGN=CENTER><STRONG>Deadlines for Homework</STRONG></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>Monday 10/1</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.5, 3.8 (=3.6, 3.9 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD ROWSPAN=5 WIDTH=29%>
+			<P><BR><BR>
+			</P>
+			<P><BR><BR>
+			</P>
+			<P><BR><BR>
+			</P>
+			<P><FONT SIZE=3><B>Due on Wednesday 10/10.</B></FONT></P>
+			<P><BR><BR>
+			</P>
+			<P><FONT SIZE=3><SPAN STYLE="font-weight: normal">Same problem
+			numbers in the </SPAN><FONT COLOR="#ff0000"><SPAN STYLE="font-weight: normal">corresponding
+			sections</SPAN></FONT> <SPAN STYLE="font-weight: normal">in the
+			8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			<SPAN STYLE="font-weight: normal">edition.</SPAN></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=21%>
+			<P>Wednesday 10/3</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.5: Undetermined Coefficients (=3.6 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>1, 2, 13, 14, 16, 18, 19(a)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.8 (=3.9 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=21%>
+			<P><FONT SIZE=3>Friday 10/5</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.7: Vibrations (=3.8 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>6</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.8: Forced Vibrations (=3.9 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>9, 11</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=21%>
+			<P>Monday 10/8</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.8: Forced Vibrations (=3.9 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD ROWSPAN=8 WIDTH=29%>
+			<P><BR><BR>
+			</P>
+			<P><BR><BR>
+			</P>
+			<P><FONT SIZE=3><B>Due on Wednesday 10/17.</B></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>7.3</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>Wednesday 10/10</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>7.3</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>8, 29 (=7, 28 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+			<P><FONT SIZE=3>In #29 don't assume anything about det <B>A</B><SPAN STYLE="font-weight: normal">.
+			</SPAN></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>Thursday 10/11</P>
+			<P><FONT COLOR="#ff0000">x-hour</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>4.1</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>8</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=4 WIDTH=21%>
+			<P>Friday 10/12</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.2</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>11</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>4.1</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>2, 6</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>7.1</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>5, 9</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>7.4</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>5</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=21%>
+			<P>Monday 10/15</P>
+		</TD>
+		<TD WIDTH=25% SDVAL="4.2" SDNUM="1033;">
+			<P><FONT SIZE=3>4.2</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>2, 13, 14, 23, 25</FONT></P>
+		</TD>
+		<TD ROWSPAN=7 WIDTH=29%>
+			<P><FONT SIZE=3><B>Due on Wednesday 10/24.</B></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>7.4</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=21%>
+			<P>Wednesday 10/17</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.2</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>23, 27 (22, 26 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>7.4</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>6</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>Thursday 10/18</P>
+			<P><FONT COLOR="#ff0000">x-hour</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.2 (3.3 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>35, 39 (=21, 25 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=21%>
+			<P>Friday 10/19</P>
+		</TD>
+		<TD WIDTH=25% SDVAL="3.2" SDNUM="1033;">
+			<P><FONT SIZE=3>3.2</FONT></P>
+		</TD>
+		<TD WIDTH=25% SDVAL="19" SDNUM="1033;">
+			<P><FONT SIZE=3>19</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>3.6 (=3.7 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>10, 15</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=21%>
+			<P>Monday 10/22</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>7.3</FONT></P>
+		</TD>
+		<TD WIDTH=25%>
+			<P><FONT SIZE=3>19, 25 (=18, 24 in the <SPAN STYLE="font-weight: normal">8</SPAN><SUP><SPAN STYLE="font-weight: normal">th</SPAN></SUP>
+			edition)</FONT></P>
+		</TD>
+		<TD WIDTH=29%>
+			<P><FONT SIZE=3><B>Due on Wednesday 10/31.</B></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=CENTER><STRONG><FONT COLOR="#ff0000"><FONT SIZE=4>Midterm 2:
+Tuesday 10/23,</FONT></FONT></STRONG></P>
+<P ALIGN=CENTER><STRONG><FONT COLOR="#ff0000"><SPAN STYLE="background: #ffffff">6-8pm
+in Carpenter Hall, Room 013</SPAN></FONT></STRONG></P>
+</BODY>
+</HTML>

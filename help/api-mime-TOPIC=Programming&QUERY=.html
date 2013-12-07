@@ -1,0 +1,608 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>MIME API  - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="MIME API ">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/api-mime.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Programming">
+
+<P ALIGN="CENTER"><B>Search in
+MIME API :</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l1"><A HREF="api-array-TOPIC=Programming&QUERY=.html">Array API </A></P>
+<P CLASS="l1"><A HREF="api-cgi-TOPIC=Programming&QUERY=.html">CGI API </A></P>
+<P CLASS="l1"><A HREF="api-cups-TOPIC=Programming&QUERY=.html">CUPS API </A></P>
+<P CLASS="l1"><A HREF="postscript-driver-TOPIC=Programming&QUERY=.html">Developing PostScript Printer Drivers </A></P>
+<P CLASS="l1"><A HREF="raster-driver-TOPIC=Programming&QUERY=.html">Developing Raster Printer Drivers </A></P>
+<P CLASS="l1"><A HREF="api-filedir-TOPIC=Programming&QUERY=.html">File and Directory APIs </A></P>
+<P CLASS="l1"><A HREF="api-filter-TOPIC=Programming&QUERY=.html">Filter and Backend Programming </A></P>
+<P CLASS="l1"><A HREF="api-httpipp-TOPIC=Programming&QUERY=.html">HTTP and IPP APIs </A></P>
+<P CLASS="l1"><A HREF="api-overview-TOPIC=Programming&QUERY=.html">Introduction to CUPS Programming </A></P>
+<P CLASS="l1"><A HREF="ppd-compiler-TOPIC=Programming&QUERY=.html">Introduction to the PPD Compiler </A></P>
+<P CLASS="l1"><A HREF="api-mime-TOPIC=Programming&QUERY=.html">MIME API </A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#const">const</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#TYPES">Data Types</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#FUNCTIONS">Functions</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mime_filter_t">mime_filter_t</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mime_magic_t">mime_magic_t</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mime_op_t">mime_op_t</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeAddFilter">mimeAddFilter</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeAddType">mimeAddType</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeAddTypeRule">mimeAddTypeRule</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeDelete">mimeDelete</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeDeleteFilter">mimeDeleteFilter</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeDeleteType">mimeDeleteType</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeFileType">mimeFileType</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeFilter">mimeFilter</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeFilter2">mimeFilter2</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeFilterLookup">mimeFilterLookup</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeFirstFilter">mimeFirstFilter</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeFirstType">mimeFirstType</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeLoad">mimeLoad</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeLoadFilters">mimeLoadFilters</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeLoadTypes">mimeLoadTypes</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeNew">mimeNew</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeNextFilter">mimeNextFilter</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeNextType">mimeNextType</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeNumFilters">mimeNumFilters</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeNumTypes">mimeNumTypes</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeSetErrorCallback">mimeSetErrorCallback</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#mimeType">mimeType</A></P>
+<P CLASS="l2"><A HREF="api-mime-TOPIC=Programming&QUERY=.html#OVERVIEW">Overview</A></P>
+<P CLASS="l1"><A HREF="api-ppd-TOPIC=Programming&QUERY=.html">PPD API (DEPRECATED) </A></P>
+<P CLASS="l1"><A HREF="api-ppdc-TOPIC=Programming&QUERY=.html">PPD Compiler API </A></P>
+<P CLASS="l1"><A HREF="api-driver-TOPIC=Programming&QUERY=.html">Printer Driver API </A></P>
+<P CLASS="l1"><A HREF="api-raster-TOPIC=Programming&QUERY=.html">Raster API </A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>MIME API </H1>
+<FORM ACTION="/help/api-mime.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+<div class='body'>
+<!--
+  "$Id: api-mime.html 9772 2011-05-12 05:46:30Z mike $"
+
+  MIME API header for CUPS.
+
+  Copyright 2009 by Apple Inc.
+
+  These coded instructions, statements, and computer programs are the
+  property of Apple Inc. and are protected by Federal copyright
+  law.  Distribution and use rights are outlined in the file "LICENSE.txt"
+  which should have been included with this file.  If this file is
+  file is missing or damaged, see the license at "http://www.cups.org/".
+-->
+
+<h1 class='title'>MIME API</h1>
+
+<div class='summary'><table summary='General Information'>
+<thead>
+<tr>
+	<th>Header</th>
+	<th>cups/mime.h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th>Library</th>
+	<td>-lcupsmime</td>
+</tr>
+<tr>
+	<th>See Also</th>
+	<td>Programming: <a href='api-overview.html' target='_top'>Introduction to CUPS Programming</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="title">Contents</h2>
+<ul class="contents">
+<li><a href="api-mime-TOPIC=Programming&QUERY=.html#OVERVIEW">Overview</a></li>
+<li><a href="api-mime-TOPIC=Programming&QUERY=.html#FUNCTIONS">Functions</a><ul class="code">
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeAddFilter" title="Add a filter to the current MIME database.">mimeAddFilter</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeAddType" title="Add a MIME type to a database.">mimeAddType</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeAddTypeRule" title="Add a detection rule for a file type.">mimeAddTypeRule</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeDelete" title="Delete (free) a MIME database.">mimeDelete</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeDeleteFilter" title="Delete a filter from the MIME database.">mimeDeleteFilter</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeDeleteType" title="Delete a type from the MIME database.">mimeDeleteType</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeFileType" title="Determine the type of a file.">mimeFileType</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeFilter" title="Find the fastest way to convert from one type to another.">mimeFilter</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeFilter2" title="Find the fastest way to convert from one type to another,
+including file size.">mimeFilter2</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeFilterLookup" title="Lookup a filter.">mimeFilterLookup</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeFirstFilter" title="Get the first filter in the MIME database.">mimeFirstFilter</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeFirstType" title="Get the first type in the MIME database.">mimeFirstType</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeLoad" title="Create a new MIME database from disk.">mimeLoad</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeLoadFilters" title="Load filter definitions from disk.">mimeLoadFilters</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeLoadTypes" title="Load type definitions from disk.">mimeLoadTypes</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeNew" title="Create a new, empty MIME database.">mimeNew</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeNextFilter" title="Get the next filter in the MIME database.">mimeNextFilter</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeNextType" title="Get the next type in the MIME database.">mimeNextType</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeNumFilters" title="Next type">mimeNumFilters</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeNumTypes" title="MIME database">mimeNumTypes</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeSetErrorCallback" title="Set the callback for error messages.">mimeSetErrorCallback</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mimeType" title="Lookup a file type.">mimeType</a></li>
+</ul></li>
+<li><a href="api-mime-TOPIC=Programming&QUERY=.html#TYPES">Data Types</a><ul class="code">
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#const" title="MIME Database">const</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mime_filter_t" title="MIME Conversion Filter Data">mime_filter_t</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mime_magic_t" title="MIME Magic Data">mime_magic_t</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mime_op_t" title="Types/structures...">mime_op_t</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t" title="MIME Database">mime_t</a></li>
+	<li><a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t" title="MIME Type Data">mime_type_t</a></li>
+</ul></li>
+</ul>
+<!--
+  "$Id: api-mime.html 9772 2011-05-12 05:46:30Z mike $"
+
+  MIME API introduction for CUPS.
+
+  Copyright 2009 by Apple Inc.
+
+  These coded instructions, statements, and computer programs are the
+  property of Apple Inc. and are protected by Federal copyright
+  law.  Distribution and use rights are outlined in the file "LICENSE.txt"
+  which should have been included with this file.  If this file is
+  file is missing or damaged, see the license at "http://www.cups.org/".
+-->
+
+<h2 class='title'><a name='OVERVIEW'>Overview</a></h2>
+
+<p>The MIME API provides file typing and conversion services for CUPS.</p>
+<h2 class="title"><a name="FUNCTIONS">Functions</a></h2>
+<h3 class="function"><a name="mimeAddFilter">mimeAddFilter</a></h3>
+<p class="description">Add a filter to the current MIME database.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_filter_t">mime_filter_t</a> *mimeAddFilter (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *src,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *dst,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int cost,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *filter<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>src</dt>
+<dd class="description">Source type</dd>
+<dt>dst</dt>
+<dd class="description">Destination type</dd>
+<dt>cost</dt>
+<dd class="description">Relative time/resource cost</dd>
+<dt>filter</dt>
+<dd class="description">Filter program to run</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New filter</p>
+<h3 class="function"><a name="mimeAddType">mimeAddType</a></h3>
+<p class="description">Add a MIME type to a database.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *mimeAddType (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *super,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *type<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>super</dt>
+<dd class="description">Super-type name</dd>
+<dt>type</dt>
+<dd class="description">Type name</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New (or existing) MIME type</p>
+<h3 class="function"><a name="mimeAddTypeRule">mimeAddTypeRule</a></h3>
+<p class="description">Add a detection rule for a file type.</p>
+<p class="code">
+int mimeAddTypeRule (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *mt,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *rule<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mt</dt>
+<dd class="description">Type to add to</dd>
+<dt>rule</dt>
+<dd class="description">Rule to add</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">0 on success, -1 on failure</p>
+<h3 class="function"><a name="mimeDelete">mimeDelete</a></h3>
+<p class="description">Delete (free) a MIME database.</p>
+<p class="code">
+void mimeDelete (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+</dl>
+<h3 class="function"><a name="mimeDeleteFilter">mimeDeleteFilter</a></h3>
+<p class="description">Delete a filter from the MIME database.</p>
+<p class="code">
+void mimeDeleteFilter (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_filter_t">mime_filter_t</a> *filter<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>filter</dt>
+<dd class="description">Filter</dd>
+</dl>
+<h3 class="function"><a name="mimeDeleteType">mimeDeleteType</a></h3>
+<p class="description">Delete a type from the MIME database.</p>
+<p class="code">
+void mimeDeleteType (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *mt<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>mt</dt>
+<dd class="description">Type</dd>
+</dl>
+<h3 class="function"><a name="mimeFileType">mimeFileType</a></h3>
+<p class="description">Determine the type of a file.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *mimeFileType (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *pathname,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *filename,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int *compression<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>pathname</dt>
+<dd class="description">Name of file to check on disk</dd>
+<dt>filename</dt>
+<dd class="description">Original filename or NULL</dd>
+<dt>compression</dt>
+<dd class="description">Is the file compressed?</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Type of file</p>
+<h3 class="function"><a name="mimeFilter">mimeFilter</a></h3>
+<p class="description">Find the fastest way to convert from one type to another.</p>
+<p class="code">
+cups_array_t *mimeFilter (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *src,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *dst,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int *cost<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>src</dt>
+<dd class="description">Source file type</dd>
+<dt>dst</dt>
+<dd class="description">Destination file type</dd>
+<dt>cost</dt>
+<dd class="description">Cost of filters</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Array of filters to run</p>
+<h3 class="function"><a name="mimeFilter2">mimeFilter2</a></h3>
+<p class="description">Find the fastest way to convert from one type to another,
+including file size.</p>
+<p class="code">
+cups_array_t *mimeFilter2 (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *src,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;size_t srcsize,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *dst,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int *cost<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>src</dt>
+<dd class="description">Source file type</dd>
+<dt>srcsize</dt>
+<dd class="description">Size of source file</dd>
+<dt>dst</dt>
+<dd class="description">Destination file type</dd>
+<dt>cost</dt>
+<dd class="description">Cost of filters</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Array of filters to run</p>
+<h3 class="function"><a name="mimeFilterLookup">mimeFilterLookup</a></h3>
+<p class="description">Lookup a filter.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_filter_t">mime_filter_t</a> *mimeFilterLookup (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *src,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *dst<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>src</dt>
+<dd class="description">Source type</dd>
+<dt>dst</dt>
+<dd class="description">Destination type</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Filter for src-&gt;dst</p>
+<h3 class="function"><a name="mimeFirstFilter">mimeFirstFilter</a></h3>
+<p class="description">Get the first filter in the MIME database.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_filter_t">mime_filter_t</a> *mimeFirstFilter (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Filter or NULL</p>
+<h3 class="function"><a name="mimeFirstType">mimeFirstType</a></h3>
+<p class="description">Get the first type in the MIME database.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *mimeFirstType (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Type or NULL</p>
+<h3 class="function"><a name="mimeLoad">mimeLoad</a></h3>
+<p class="description">Create a new MIME database from disk.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mimeLoad (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *pathname,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *filterpath<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>pathname</dt>
+<dd class="description">Directory to load</dd>
+<dt>filterpath</dt>
+<dd class="description">Directory to load</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">New MIME database</p>
+<h4 class="discussion">Discussion</h4>
+<p class="discussion">This function uses <a href="api-mime-TOPIC=Programming&QUERY=.html#mimeLoadFilters"><code>mimeLoadFilters</code></a> and <a href="api-mime-TOPIC=Programming&QUERY=.html#mimeLoadTypes"><code>mimeLoadTypes</code></a> to
+create a MIME database from a single directory.</p>
+<h3 class="function"><a name="mimeLoadFilters">mimeLoadFilters</a></h3>
+<p class="description">Load filter definitions from disk.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mimeLoadFilters (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *pathname,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *filterpath<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>pathname</dt>
+<dd class="description">Directory to load from</dd>
+<dt>filterpath</dt>
+<dd class="description">Default filter program directory</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">MIME database</p>
+<h4 class="discussion">Discussion</h4>
+<p class="discussion">This function loads all of the .convs files from the specified directory.
+Use <a href="api-mime-TOPIC=Programming&QUERY=.html#mimeLoadTypes"><code>mimeLoadTypes</code></a> to load all types before you load the filters.</p>
+<h3 class="function"><a name="mimeLoadTypes">mimeLoadTypes</a></h3>
+<p class="description">Load type definitions from disk.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mimeLoadTypes (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *pathname<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database or <code>NULL</code> to create a new one</dd>
+<dt>pathname</dt>
+<dd class="description">Directory to load from</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">MIME database</p>
+<h4 class="discussion">Discussion</h4>
+<p class="discussion">This function loads all of the .types files from the specified directory.
+Use <a href="api-mime-TOPIC=Programming&QUERY=.html#mimeLoadFilters"><code>mimeLoadFilters</code></a> to load all filters after you load the types.</p>
+<h3 class="function"><a name="mimeNew">mimeNew</a></h3>
+<p class="description">Create a new, empty MIME database.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mimeNew (void);</p>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">MIME database</p>
+<h3 class="function"><a name="mimeNextFilter">mimeNextFilter</a></h3>
+<p class="description">Get the next filter in the MIME database.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_filter_t">mime_filter_t</a> *mimeNextFilter (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Filter or NULL</p>
+<h3 class="function"><a name="mimeNextType">mimeNextType</a></h3>
+<p class="description">Get the next type in the MIME database.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *mimeNextType (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Type or NULL</p>
+<h3 class="function"><a name="mimeNumFilters">mimeNumFilters</a></h3>
+<p class="description">Next type</p>
+<p class="code">
+int mimeNumFilters (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Get the number of filters in a MIME database.</p>
+<h3 class="function"><a name="mimeNumTypes">mimeNumTypes</a></h3>
+<p class="description">MIME database</p>
+<p class="code">
+int mimeNumTypes (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Get the number of types in a MIME database.</p>
+<h3 class="function"><a name="mimeSetErrorCallback">mimeSetErrorCallback</a></h3>
+<p class="description">Set the callback for error messages.</p>
+<p class="code">
+void mimeSetErrorCallback (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mime_error_cb_t cb,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;void *ctx<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>cb</dt>
+<dd class="description">Callback function</dd>
+<dt>ctx</dt>
+<dd class="description">Context pointer for callback</dd>
+</dl>
+<h3 class="function"><a name="mimeType">mimeType</a></h3>
+<p class="description">Lookup a file type.</p>
+<p class="code">
+<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_type_t">mime_type_t</a> *mimeType (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#mime_t">mime_t</a> *mime,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *super,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="api-mime-TOPIC=Programming&QUERY=.html#const">const</a> char *type<br>
+);</p>
+<h4 class="parameters">Parameters</h4>
+<dl>
+<dt>mime</dt>
+<dd class="description">MIME database</dd>
+<dt>super</dt>
+<dd class="description">Super-type name</dd>
+<dt>type</dt>
+<dd class="description">Type name</dd>
+</dl>
+<h4 class="returnvalue">Return Value</h4>
+<p class="description">Matching file type definition</p>
+<h2 class="title"><a name="TYPES">Data Types</a></h2>
+<h3 class="typedef"><a name="const">const</a></h3>
+<p class="description">MIME Database</p>
+<p class="code">
+typedef void (*constmime_error_cb_t)(void *;
+</p>
+<h3 class="typedef"><a name="mime_filter_t">mime_filter_t</a></h3>
+<p class="description">MIME Conversion Filter Data</p>
+<p class="code">
+typedef struct _mime_filter_s mime_filter_t;
+</p>
+<h3 class="typedef"><a name="mime_magic_t">mime_magic_t</a></h3>
+<p class="description">MIME Magic Data</p>
+<p class="code">
+typedef struct _mime_magic_s mime_magic_t;
+</p>
+<h3 class="typedef"><a name="mime_op_t">mime_op_t</a></h3>
+<p class="description">Types/structures...</p>
+<p class="code">
+typedef enum mime_op_t;
+</p>
+<h3 class="typedef"><a name="mime_t">mime_t</a></h3>
+<p class="description">MIME Database</p>
+<p class="code">
+typedef struct _mime_s mime_t;
+</p>
+<h3 class="typedef"><a name="mime_type_t">mime_type_t</a></h3>
+<p class="description">MIME Type Data</p>
+<p class="code">
+typedef struct _mime_type_s mime_type_t;
+</p>
+</div>
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

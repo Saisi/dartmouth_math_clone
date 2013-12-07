@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Legends.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE2:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Val,Time;<br>
+Digits:=5;<br>
+Val:=I0;<br>
+Time:=T0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(<br>
+<br>
+(1/24-1/36)*Val[1]*(1-Val[1]/250)<br>
+-<br>
+((10/12)*(1/(250*10)))*<br>
+Val[2]*Val[1]<br>
+<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+(2*(2/12)*(1/250))<br>
+*Val[1]*Val[2]-(2/12)*Val[2]<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][2][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=DE2(0,[250,10],2000,100*12):<br>
+<br>
+V0:=Make1(S0):<br>
+<br>
+V1:=Make2(S0):<br>
+<br>
+<br>
+P0:=listplot(V0,color=green,legend="Fish"):<br>
+<br>
+<br>
+P1:=listplot(V1,color=cyan,legend="People"):<br>
+<br>
+display(P0,P1,title="People and Fish",labels=[months,quantity]); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Leg/Legends1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+</basefont>
+</body>
+</html>

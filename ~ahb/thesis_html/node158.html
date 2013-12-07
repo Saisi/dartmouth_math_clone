@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Symmetrization and reduction of effort</TITLE>
+<META NAME="description" CONTENT="Symmetrization and reduction of effort">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node157.html">
+<LINK REL="up" HREF="node154.html">
+<LINK REL="next" HREF="node159.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1967"
+  HREF="node159.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1965"
+  HREF="node154.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1961"
+  HREF="node157.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1968"
+  HREF="node159.html">Appendix K: Transmission cross</A>
+<B> Up:</B> <A NAME="tex2html1966"
+  HREF="node154.html">Appendix J: Helmholtz basis</A>
+<B> Previous:</B> <A NAME="tex2html1962"
+  HREF="node157.html">Adding evanescent plane waves</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001940000000000000000"></A>
+<A NAME="sec:symmetry"></A>
+<BR>
+Symmetrization and reduction of effort
+</H1>
+
+<P>
+If the billiard has symmetry, then all its quantum eigenstates will have
+definite parities under the various symmetry operations [<A
+ HREF="node161.html#sakurai">174</A>].
+If a basis set is chosen which does not share the problem symmetry,
+then all the eigenstates of the various classes will be found.
+However
+it is very beneficial to instead symmetrize the basis
+set, restricting the problem to that of finding only eigenstates in a
+single symmetry class.
+This can be repeated for all symmetry classes if desired.
+
+<P>
+Why is this beneficial?
+Consider a billiard with a single plane (or line) of reflection, <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2011.gif"
+ ALT="$\mathcal{R}$">.
+States fall into the odd or even classes.
+An unsymmetrized basis approach requires consideration of the full
+boundary area <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img428.gif"
+ ALT="${\mathsf{A}}$"> and the full domain volume <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img69.gif"
+ ALT="${\mathsf{V}}$">, leading to a basis
+set size <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> proportional to <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img428.gif"
+ ALT="${\mathsf{A}}$">.
+Consideration of only the odd class (by using an odd-symmetrized basis set)
+requires matching of the BCs on only half of the area
+(no matching is required on <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2011.gif"
+ ALT="$\mathcal{R}$">), and therefore <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> is
+halved.
+If the effort per state found scales like <IMG
+ WIDTH="28" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2012.gif"
+ ALT="$N^3$"> (<IMG
+ WIDTH="28" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img241.gif"
+ ALT="$N^2$">) with the
+sweep (scaling) method, then
+symmetrization has increased efficiency by a factor 8 (4).
+Also the level density of states is halved, making the
+states easier to distinguish (see Section&nbsp;<A HREF="node68.html#sec:dynrange">5.5.3</A>),
+raising the maximum <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> reachable.
+
+<P>
+Generally the symmetrization of the basis functions means that they take <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$">
+times as long to evaluate (where <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img287.gif"
+ ALT="$n$"> is the symmetry factor).
+This has an effect on the speed of filling matrices, and of evaluating the
+final eigenfunctions (and gradients) in position-space.
+
+<P>
+For the stadium example common in this thesis, a fourfold symmetry is
+present (<IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2013.gif"
+ ALT="$C_{4v}$">): reflection about both the x and y axes.
+Therefore all basis functions will undergo the following symmetrization:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\phi_i(x,y) \ \longleftarrow \ \frac{1}{4}\left[
+	\phi_i(x,y) + p_x \phi_i(-x,y) + p_y \phi_i(x,-y) + p_x p_y \phi_i(-x,-y)
+	\right] ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:symmetrize"></A><IMG
+ WIDTH="553" HEIGHT="42" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2014.gif"
+ ALT="\begin{displaymath}
+\phi_i(x,y) \ \longleftarrow \ \frac{1}{4}\left[
+\phi_i(x,...
+..._i(-x,y) + p_y \phi_i(x,-y) + p_x p_y \phi_i(-x,-y)
+\right] ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(J.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the parities are <!-- MATH
+ $p_x, p_y = \pm 1$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2015.gif"
+ ALT="$p_x, p_y = \pm 1$">.
+The choice of the odd-odd symmetry class corresponds to <!-- MATH
+ $p_x = p_y = -1$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2016.gif"
+ ALT="$p_x = p_y = -1$">.
+In the case of RPWs, such symmetrization results in only a single basis
+function per direction vector. For instance, the odd-odd class gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\bar{\phi}_i(\bar{{\mathbf r}}) \ =  \ \sin (n_{x,i} \bar{x})
+	\sin (n_{y,i} \bar{y}) ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:bas_symrpw"></A><IMG
+ WIDTH="390" HEIGHT="32" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2017.gif"
+ ALT="\begin{displaymath}
+\bar{\phi}_i(\bar{{\mathbf r}}) \ = \ \sin (n_{x,i} \bar{x})
+\sin (n_{y,i} \bar{y}) ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(J.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the directions <IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img1991.gif"
+ ALT="$\theta_i$"> need now only cover the range <IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2018.gif"
+ ALT="$[0,\pi/2]$">.
+For an example see Fig.&nbsp;<A HREF="node156.html#fig:r+epw">J.1</A>.
+So it turns out that for RPWs in <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img2013.gif"
+ ALT="$C_{4v}$">
+only twice as much time is spent per basis function
+evaluation than for the unsymmetrized case (<A HREF="node156.html#eq:bas_rpw">J.3</A>).
+For EPWs no such reduction in symmetrization time occurs.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1967"
+  HREF="node159.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html1965"
+  HREF="node154.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html1961"
+  HREF="node157.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1968"
+  HREF="node159.html">Appendix K: Transmission cross</A>
+<B> Up:</B> <A NAME="tex2html1966"
+  HREF="node154.html">Appendix J: Helmholtz basis</A>
+<B> Previous:</B> <A NAME="tex2html1962"
+  HREF="node157.html">Adding evanescent plane waves</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

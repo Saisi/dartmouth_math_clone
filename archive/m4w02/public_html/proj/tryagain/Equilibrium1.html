@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Equilibrium.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(plots):<br>
+<br>
+<br>
+DE1:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Position,Time;<br>
+Digits:=5;<br>
+Position:=I0;<br>
+Time:=T0;<br>
+List:=[[Time,Position]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Position:=evalf(Position+Deltat*(<br>
+(0.02*(sin((3.5)*Time/(2*Pi)))+.01*(1-Position/500)*(-.04*sin((3.5)*Time/(2*Pi))+1))*Position<br>
+));<br>
+Time:=evalf(Time+Deltat);<br>
+List:=[op(List),[Time,Position]];<br>
+od;<br>
+List;<br>
+end: <br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S1:=DE1(0,480,2000,800):<br>
+P1:=listplot(S1,color=red,legend="Kakapo")<br>
+<br>
+display(P1,title="Time vs Kakapo",labels=[Years,Population]); <br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Equilibrium1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+</basefont>
+</body>
+</html>

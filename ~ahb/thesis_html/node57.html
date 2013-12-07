@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Definition of the billiard problem</TITLE>
+<META NAME="description" CONTENT="Definition of the billiard problem">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node58.html">
+<LINK REL="previous" HREF="node50.html">
+<LINK REL="up" HREF="node49.html">
+<LINK REL="next" HREF="node58.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html888"
+  HREF="node58.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html886"
+  HREF="node49.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html880"
+  HREF="node56.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html889"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<B> Up:</B> <A NAME="tex2html887"
+  HREF="node49.html">Chapter 5: Improved sweep</A>
+<B> Previous:</B> <A NAME="tex2html881"
+  HREF="node56.html">Brief history of the</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00620000000000000000">
+Definition of the billiard problem</A>
+</H1>
+
+<P>
+Given the isotropic quadratic dispersion relation corresponding
+to (<A HREF="node51.html#eq:hisotrop">5.2</A>), we can choose energy units such that <!-- MATH
+ $E = (\hbar k)^2/2m$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img684.gif"
+ ALT="$E = (\hbar k)^2/2m$">.
+If the dispersion relation is not isotropic, it can be made so by
+a re-parametrization of <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$">.
+However, note that <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> will not play any further role.
+The numerical methods described in this thesis are
+really about finding the <EM>eigenwavenumbers</EM> <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">.
+Therefore the methods are entirely applicable to any other Helmholtz
+eigenproblem regardless of the dispersion relation, or indeed the existence
+of an `energy' (for instance <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$"> is physically irrelevant in acoustic problems).
+The only requirement is that the wavenumber be constant
+(and isotropic) in the interior.
+
+<P>
+The billiard has <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img87.gif"
+ ALT="$d$">-dimensional `volume' <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$"> and <IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img483.gif"
+ ALT="$d{-}1$"> dimensional
+`surface area' <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img428.gif"
+ ALT="${\mathsf{A}}$">, giving a typical length scale <!-- MATH
+ ${\mathsf{L}}= {\mathsf{V}}/{\mathsf{A}}$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img686.gif"
+ ALT="${\mathsf{L}}= {\mathsf{V}}/{\mathsf{A}}$">.
+Our eigenproblem can be written
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:problem"></A><A NAME="eq:helm"></A><A NAME="eq:bcs"></A><A NAME="eq:norm"></A>
+<!-- MATH
+ \begin{eqnarray}
+(\nabla^2 + k^2) \psi{({\mathbf r})}& = & 0
+	\hspace{.5in} \mbox{for all $r \in \mathcal{D}$}
+	\hspace{.5in} \mbox{(Helmholtz equation)} \\f[ \psi ] & = & 0
+	\hspace{1.5in} \mbox{(boundary conditions)} \\g[ \psi ] & = & 1
+	\hspace{1.5in} \mbox{(normalization condition)}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="112" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img687.gif"
+ ALT="$\displaystyle (\nabla^2 + k^2) \psi{({\mathbf r})}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="385" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img688.gif"
+ ALT="$\displaystyle 0
+\hspace{.5in} \mbox{for all $r \in \mathcal{D}$}
+\hspace{.5in} \mbox{(Helmholtz equation)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.5)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img689.gif"
+ ALT="$\displaystyle f[ \psi ]$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="355" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img690.gif"
+ ALT="$\displaystyle 0
+\hspace{1.5in} \mbox{(boundary conditions)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.6)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img691.gif"
+ ALT="$\displaystyle g[ \psi ]$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="380" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img692.gif"
+ ALT="$\displaystyle 1
+\hspace{1.5in} \mbox{(normalization condition)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.7)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the eigenvalue is <IMG
+ WIDTH="22" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img693.gif"
+ ALT="$k^2$">. The functionals
+<IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img193.gif"
+ ALT="$f$"> and <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img694.gif"
+ ALT="$g$"> return a scalar, and
+are <EM>quadratic</EM> in the wavefunction <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$">.
+
+<P>
+The BCs have been incorporated as (<A HREF="node57.html#eq:bcs">5.6</A>)
+rather than the linear condition (<A HREF="node51.html#eq:genbcs">5.3</A>)
+because satisfaction of the BCs by a wavefunction <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> is then
+revealed by a single number <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img695.gif"
+ ALT="$f[\psi]$">.
+This number measures the 2-norm of some error function,
+and is therefore a non-negative quantity.
+The error function (<I>e.g. </I>(<A HREF="node51.html#eq:genbcs">5.3</A>)) gives the amount
+by which the desired BCs fail to be obeyed.
+Heller[<A
+ HREF="node161.html#hellerleshouches">91</A>] named <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img193.gif"
+ ALT="$f$"> `tension', and I shall follow suit.
+The definition of <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img193.gif"
+ ALT="$f$"> is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+f[\psi] \; \equiv \; \oint_\Gamma
+	\!\! w{({\mathbf s})}d{\mathbf s} \, | ({\mathcal{L}}\psi){({\mathbf s})}|^2 ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:fdefine"></A><IMG
+ WIDTH="387" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img696.gif"
+ ALT="\begin{displaymath}
+f[\psi] \; \equiv \; \oint_\Gamma
+\!\! w{({\mathbf s})}d{\mathbf s} \, \vert ({\mathcal{L}}\psi){({\mathbf s})}\vert^2 ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $w{({\mathbf s})}\ge 0$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img697.gif"
+ ALT="$w{({\mathbf s})}\ge 0$"> is a weighting function over the boundary.
+Arbitrary weighting schemes are possible, but I will stick to <IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img698.gif"
+ ALT="$w = 1$">
+which treats all locations on <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img14.gif"
+ ALT="$\Gamma $"> equally.
+The case of Dirichlet BCs is given
+by <!-- MATH
+ $({\mathcal{L}}\psi){({\mathbf s})}\equiv \psi({\mathbf r}{({\mathbf s})})$
+ -->
+<IMG
+ WIDTH="142" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img699.gif"
+ ALT="$({\mathcal{L}}\psi){({\mathbf s})}\equiv \psi({\mathbf r}{({\mathbf s})})$">, put more simply, <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img193.gif"
+ ALT="$f$">
+measures the boundary integral of the squared value of the wavefunction.
+Generally my work will be restricted to this case from now on--however
+the same techniques would apply to other BCs.
+
+<P>
+Without a further condition, (<A HREF="node57.html#eq:helm">5.5</A>) and (<A HREF="node57.html#eq:bcs">5.6</A>) admit the
+useless solution, <!-- MATH
+ $\psi{({\mathbf r})}= 0$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img700.gif"
+ ALT="$\psi{({\mathbf r})}= 0$"> for all <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img477.gif"
+ ALT="${\mathbf r}$">.
+Therefore the quadratic functional
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+g[\psi] \; \equiv \; \left\langle \psi \left|\psi\right.\right\rangle _{\mathcal{D}} \; \equiv \;
+	\int_{\mathcal{D}} \!\! d{\mathbf r} | \psi{({\mathbf r})}|^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:areanorm"></A><IMG
+ WIDTH="399" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img701.gif"
+ ALT="\begin{displaymath}
+g[\psi] \; \equiv \; \left\langle \psi \left\vert\psi\right...
+...mathcal{D}} \!\! d{\mathbf r} \vert \psi{({\mathbf r})}\vert^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which measures the normalization (norm) in the domain
+is required. Unit norm is fixed by (<A HREF="node57.html#eq:norm">5.7</A>).
+
+<P>
+The solution <!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> is now completely determined, when <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> reaches one
+of the eigenwavenumbers <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">.
+For other <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">, no solution exists.
+Therefore in order to be able to define a `best' solution for <EM>any</EM>
+given guess
+at <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">, one of the conditions needs to be relaxed.
+The condition (<A HREF="node57.html#eq:bcs">5.6</A>) will be replaced by the minimization
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+f[\psi] \; = \; \mbox{min} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:bcsrelax"></A><IMG
+ WIDTH="328" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img702.gif"
+ ALT="\begin{displaymath}
+f[\psi] \; = \; \mbox{min} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+A sweep in <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> will now show the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">-dependent tension <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img703.gif"
+ ALT="$f(k)$">, indicating how
+well the best <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> at each <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> can match the BCs.
+When <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> approaches an eigenwavenumber <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">, the tension will drop to
+zero, indicating all the conditions (<A HREF="node57.html#eq:helm">5.5</A>), (<A HREF="node57.html#eq:bcs">5.6</A>) and
+(<A HREF="node57.html#eq:norm">5.7</A>) are satisfied simultaneously.
+Such a sweep is shown in Fig.&nbsp;<A HREF="node57.html#fig:tensmin">5.2</A>.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:tensmin"></A><A NAME="8188"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.2:</STRONG>
+
+Tension (equal to the inverse largest eigenvalue
+of (<A HREF="node58.html#eq:geneigprob">5.14</A>)), as a function of <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+Minima correspond to billiard eigenstates. The finite value <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img704.gif"
+ ALT="$\epsilon_\mu$">
+of these minima is visible (for some cases) in the magnified plot.
+</CAPTION>
+<TR><TD><IMG
+ WIDTH="387" HEIGHT="270" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img705.gif"
+ ALT="\begin{figure}\centerline{\epsfig{figure=fig_ipwdm/tensmin.eps,width=0.7\hsize}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html888"
+  HREF="node58.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html886"
+  HREF="node49.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html880"
+  HREF="node56.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html889"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<B> Up:</B> <A NAME="tex2html887"
+  HREF="node49.html">Chapter 5: Improved sweep</A>
+<B> Previous:</B> <A NAME="tex2html881"
+  HREF="node56.html">Brief history of the</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

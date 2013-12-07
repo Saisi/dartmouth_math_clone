@@ -1,0 +1,627 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE><</TITLE>
+<META NAME="description" CONTENT="<">
+<META NAME="keywords" CONTENT="slide01">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="slide01.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER"><FONT SIZE="+3">
+Section 2.6
+<BR>
+Population Dynamics
+</FONT></DIV>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">We are going to look at some equations of the form
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dt}= f(y)
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="89" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img1.gif"
+ ALT="$\displaystyle \frac{dy}{dt}= f(y)$">
+</DIV><P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">These equations are called <U>autonomous</U> because the independent variable, t, does 
+not appear in the equation.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Let 
+<!-- MATH
+ $y = \phi(t)$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img2.gif"
+ ALT="$ y = \phi(t)$">
+measure a population at time <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img3.gif"
+ ALT="$ t$">
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">The simplest model for population is exponential growth.
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dt}= ry
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="72" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img4.gif"
+ ALT="$\displaystyle \frac{dy}{dt}= ry$">
+</DIV><P></P><FONT SIZE="+3"></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">With the initial condition that 
+<!-- MATH
+ $y(0) = y_0$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img5.gif"
+ ALT="$ y(0) = y_0$">, we obtain the familiar solution
+</FONT></FONT>
+<P>
+<FONT SIZE="+3"></FONT>
+<!-- MATH
+ \begin{displaymath}
+y(t) = y_0e^{rt}
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="99" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img6.gif"
+ ALT="$\displaystyle y(t) = y_0e^{rt}$">
+</DIV><P></P><FONT SIZE="+3"></FONT>
+
+<hr>
+
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2">
+</FONT></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3">
+Logistic Growth
+</FONT></FONT></FONT></DIV><FONT SIZE="+3"><FONT SIZE="+2"></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">To take into account that populations cannot grow in an uninhibited
+fashion indefinitely, we
+can replace the proportionality constant, <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img7.gif"
+ ALT="$ r$">, with a function <IMG
+ WIDTH="40" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img8.gif"
+ ALT="$ h(y)$">:
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dt}= h(y)y
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="98" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img9.gif"
+ ALT="$\displaystyle \frac{dy}{dt}= h(y)y$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">If we assume that the growth rate decreases in proportion to the population, we
+can choose 
+<!-- MATH
+ $h(y) = r - ay \quad (a>0)$
+ -->
+<IMG
+ WIDTH="194" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img10.gif"
+ ALT="$ h(y) = r - ay \quad (a&gt;0)$">
+to obtain
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dt}= (r - ay)y
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="129" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img11.gif"
+ ALT="$\displaystyle \frac{dy}{dt}= (r - ay)y$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">This is the <U>Verhulst Equation</U>, or the <U>logistic equation</U>.
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+Rewrite this equation as
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dt}= r(1-\frac{y}{K})y
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="140" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img12.gif"
+ ALT="$\displaystyle \frac{dy}{dt}= r(1-\frac{y}{K})y$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">where 
+<!-- MATH
+ $K=\frac{r}{a}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img13.gif"
+ ALT="$ K=\frac{r}{a}$">.
+</FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">We refer to <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img7.gif"
+ ALT="$ r$">
+as the <U>intrinsic growth rate</U>.
+</FONT></FONT></FONT></FONT>
+
+<hr>
+
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+</FONT></FONT></FONT></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3">
+Logistic Growth
+</FONT></FONT></FONT></FONT></FONT></DIV><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">In solving the Verhulst equation, 
+</FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dt}= r(1-\frac{y}{K})y
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="140" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img12.gif"
+ ALT="$\displaystyle \frac{dy}{dt}= r(1-\frac{y}{K})y$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">we first search for the simplest type of solutions: constant solutions.
+</FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">If 
+<!-- MATH
+ $y = \phi(t)$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img2.gif"
+ ALT="$ y = \phi(t)$">
+is some constant solution, then 
+<!-- MATH
+ $\frac{dy}{dt}= 0$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img14.gif"
+ ALT="$ \frac{dy}{dt}= 0$">, so we just solve the
+algebraic equation
+</FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+r(1-\frac{y}{K})y = 0
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="126" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img15.gif"
+ ALT="$\displaystyle r(1-\frac{y}{K})y = 0$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">and determine that either <IMG
+ WIDTH="49" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img16.gif"
+ ALT="$ y=0$">
+or <IMG
+ WIDTH="57" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img17.gif"
+ ALT="$ y=K$">.
+</FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">These solutions are called <U>equilibrium solutions</U>.
+</FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Given the general autonomous equation
+</FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dt}= f(y),
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="94" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img18.gif"
+ ALT="$\displaystyle \frac{dy}{dt}= f(y),$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">the roots of f(y) are called <U>critical points</U> of the equation.
+</FONT></FONT></FONT></FONT></FONT></FONT>
+
+<hr>
+
+<h2>At this point, we spent time looking at Figures 2.6.2 and 2.6.3 from section 2.6.</h2>
+
+<hr>
+
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+</FONT></FONT></FONT></FONT></FONT></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3">
+Logistic Growth
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></DIV><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">We can determine the concavity of the solutions and find their inflection points
+using the second derivative test:
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{d^2y}{dt^2} = f'(y)\frac{dy}{dt}= f'(y)f(y)
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="225" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img19.gif"
+ ALT="$\displaystyle \frac{d^2y}{dt^2} = f'(y)\frac{dy}{dt}= f'(y)f(y)$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+The graph of <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img20.gif"
+ ALT="$ y$">
+is concave up when <IMG
+ WIDTH="57" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img21.gif"
+ ALT="$ y'' &gt; 0$">
+(<IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img22.gif"
+ ALT="$ f$">
+and <IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img23.gif"
+ ALT="$ f'$">
+have the same sign),
+and it is concave down when <IMG
+ WIDTH="57" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img24.gif"
+ ALT="$ y'' &lt; 0$">
+(<IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img22.gif"
+ ALT="$ f$">
+and <IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img23.gif"
+ ALT="$ f'$">
+have different signs)
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+It is also important to note that the value <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img25.gif"
+ ALT="$ K$">
+represents the
+<U>saturation level</U>, or <U>environmental carrying capacity</U> for
+the model
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+
+<hr>
+
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3">
+Logistic Growth
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></DIV><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{dt}= r(1 - \frac{y}{K})y
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="140" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img12.gif"
+ ALT="$\displaystyle \frac{dy}{dt}= r(1-\frac{y}{K})y$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">We've learned a lot about the solutions of this equation without even explicitly
+solving it, but just for fun, let's try and solve it.
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{dy}{(1-\frac{y}{K})y} = r \: dt
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="136" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img26.gif"
+ ALT="$\displaystyle \frac{dy}{(1-\frac{y}{K})y} = r \: dt$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Obtaining a partial fraction decomposition for the left side yields
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\biggl( \frac{1}{y} + \frac{\frac{y}{K}}{1 - \frac{y}{K}} \biggr) dy = r \: dt
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="196" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img27.gif"
+ ALT="$\displaystyle \biggl( \frac{1}{y} + \frac{\frac{y}{K}}{1 - \frac{y}{K}} \biggr) dy = r \: dt$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Integration gives
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\ln{|y|} - \ln{\biggl| 1 - \frac{y}{K} \biggr| } = rt + c
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="224" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img28.gif"
+ ALT="$\displaystyle \ln{\vert y\vert} - \ln{\biggl\vert 1 - \frac{y}{K} \biggr\vert } = rt + c$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Next, exponentiate
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+\frac{y}{1 - \frac{y}{K}} = Ce^{rt}
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="118" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img29.gif"
+ ALT="$\displaystyle \frac{y}{1 - \frac{y}{K}} = Ce^{rt}$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+
+<hr>
+
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3">
+Logistic Growth
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></DIV><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">Finally, given an initial condition <IMG
+ WIDTH="56" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img30.gif"
+ ALT="$ y=y_0$">, we see that
+
+<!-- MATH
+ $C=y(1-\frac{y_0}{K})$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img31.gif"
+ ALT="$ C=y(1-\frac{y_0}{K})$">.  Plugging in we get
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<!-- MATH
+ \begin{displaymath}
+y = \frac{y_0K}{y_0 + (K-y_0)e^{-rt}}
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="186" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img32.gif"
+ ALT="$\displaystyle y = \frac{y_0K}{y_0 + (K-y_0)e^{-rt}}$">
+</DIV><P></P><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+Taking the limit as 
+<!-- MATH
+ $t \rightarrow \infty$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img33.gif"
+ ALT="$ t \rightarrow \infty$">, we see that 
+<!-- MATH
+ $y \rightarrow K$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img34.gif"
+ ALT="$ y \rightarrow K$">
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2">
+<BR>
+<BR>
+<BR>
+<BR>
+We refer to the constant solution <IMG
+ WIDTH="57" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img17.gif"
+ ALT="$ y=K$">
+as an 
+<BR>
+<U>asymptotically stable
+solution</U>, whereas 
+<BR>
+the solution <IMG
+ WIDTH="49" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~m23w00/ja10/slide01/img16.gif"
+ ALT="$ y=0$">
+is an <U>unstable equilibrium
+solution</U>.
+</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<P>
+<FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"><FONT SIZE="+2"><FONT SIZE="+3"></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www.math.dartmouth.edu/usr/lib/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Math 23 Winter 2000</I>
+<BR><I>2000-01-10</I>
+</ADDRESS>
+</BODY>
+</HTML>

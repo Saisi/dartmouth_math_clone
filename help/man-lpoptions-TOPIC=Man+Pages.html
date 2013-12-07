@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>lpoptions(1) - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="lpoptions(1)">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/man-lpoptions.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Man Pages">
+
+<P ALIGN="CENTER"><B>Search in
+lpoptions(1):</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l1"><A HREF="man-backend-TOPIC=Man+Pages&QUERY=.html">backend(7)</A></P>
+<P CLASS="l1"><A HREF="man-cancel-TOPIC=Man+Pages&QUERY=.html">cancel(1)</A></P>
+<P CLASS="l1"><A HREF="man-cups-config-TOPIC=Man+Pages&QUERY=.html">cups-config(1)</A></P>
+<P CLASS="l1"><A HREF="man-cups-lpd-TOPIC=Man+Pages&QUERY=.html">cups-lpd(8)</A></P>
+<P CLASS="l1"><A HREF="man-cups-snmp-TOPIC=Man+Pages&QUERY=.html">cups-snmp(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupsaccept-TOPIC=Man+Pages&QUERY=.html">cupsaccept(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupsaddsmb-TOPIC=Man+Pages&QUERY=.html">cupsaddsmb(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupsd-TOPIC=Man+Pages&QUERY=.html">cupsd(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupsenable-TOPIC=Man+Pages&QUERY=.html">cupsenable(8)</A></P>
+<P CLASS="l1"><A HREF="man-cupstestdsc-TOPIC=Man+Pages&QUERY=.html">cupstestdsc(1)</A></P>
+<P CLASS="l1"><A HREF="man-cupstestppd-TOPIC=Man+Pages&QUERY=.html">cupstestppd(1)</A></P>
+<P CLASS="l1"><A HREF="man-filter-TOPIC=Man+Pages&QUERY=.html">filter(7)</A></P>
+<P CLASS="l1"><A HREF="man-ipptool-TOPIC=Man+Pages&QUERY=.html">ipptool(1)</A></P>
+<P CLASS="l1"><A HREF="man-ipptoolfile-TOPIC=Man+Pages&QUERY=.html">ipptoolfile(5)</A></P>
+<P CLASS="l1"><A HREF="man-lp-TOPIC=Man+Pages&QUERY=.html">lp(1)</A></P>
+<P CLASS="l1"><A HREF="man-lpadmin-TOPIC=Man+Pages&QUERY=.html">lpadmin(8)</A></P>
+<P CLASS="l1"><A HREF="man-lpc-TOPIC=Man+Pages&QUERY=.html">lpc(8)</A></P>
+<P CLASS="l1"><A HREF="man-lpinfo-TOPIC=Man+Pages&QUERY=.html">lpinfo(8)</A></P>
+<P CLASS="l1"><A HREF="man-lpmove-TOPIC=Man+Pages&QUERY=.html">lpmove(8)</A></P>
+<P CLASS="l1"><A HREF="man-lpoptions-TOPIC=Man+Pages&QUERY=.html">lpoptions(1)</A></P>
+<P CLASS="l2"><A HREF="man-lpoptions-TOPIC=Man+Pages.html#COMPATIBILITY">Compatibility</A></P>
+<P CLASS="l2"><A HREF="man-lpoptions-TOPIC=Man+Pages.html#COPYRIGHT">Copyright</A></P>
+<P CLASS="l2"><A HREF="man-lpoptions-TOPIC=Man+Pages.html#DESCRIPTION">Description</A></P>
+<P CLASS="l2"><A HREF="man-lpoptions-TOPIC=Man+Pages.html#FILES">Files</A></P>
+<P CLASS="l2"><A HREF="man-lpoptions-TOPIC=Man+Pages.html#NAME">Name</A></P>
+<P CLASS="l2"><A HREF="man-lpoptions-TOPIC=Man+Pages.html#ROOT_ACCOUNT_OPTIONS">Root Account Options</A></P>
+<P CLASS="l2"><A HREF="man-lpoptions-TOPIC=Man+Pages.html#SEE_ALSO">See Also</A></P>
+<P CLASS="l2"><A HREF="man-lpoptions-TOPIC=Man+Pages.html#SYNOPSIS">Synopsis</A></P>
+<P CLASS="l1"><A HREF="man-lppasswd-TOPIC=Man+Pages&QUERY=.html">lppasswd(1)</A></P>
+<P CLASS="l1"><A HREF="man-lpq-TOPIC=Man+Pages&QUERY=.html">lpq(1)</A></P>
+<P CLASS="l1"><A HREF="man-lpr-TOPIC=Man+Pages&QUERY=.html">lpr(1)</A></P>
+<P CLASS="l1"><A HREF="man-lprm-TOPIC=Man+Pages&QUERY=.html">lprm(1)</A></P>
+<P CLASS="l1"><A HREF="man-lpstat-TOPIC=Man+Pages&QUERY=.html">lpstat(1)</A></P>
+<P CLASS="l1"><A HREF="man-mime.convs-TOPIC=Man+Pages&QUERY=.html">mime.convs(5)</A></P>
+<P CLASS="l1"><A HREF="man-mime.types-TOPIC=Man+Pages&QUERY=.html">mime.types(5)</A></P>
+<P CLASS="l1"><A HREF="man-notifier-TOPIC=Man+Pages&QUERY=.html">notifier(7)</A></P>
+<P CLASS="l1"><A HREF="man-ppdc-TOPIC=Man+Pages&QUERY=.html">ppdc(1)</A></P>
+<P CLASS="l1"><A HREF="man-ppdhtml-TOPIC=Man+Pages&QUERY=.html">ppdhtml(1)</A></P>
+<P CLASS="l1"><A HREF="man-ppdi-TOPIC=Man+Pages&QUERY=.html">ppdi(1)</A></P>
+<P CLASS="l1"><A HREF="man-ppdmerge-TOPIC=Man+Pages&QUERY=.html">ppdmerge(1)</A></P>
+<P CLASS="l1"><A HREF="man-ppdpo-TOPIC=Man+Pages&QUERY=.html">ppdpo(1)</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>lpoptions(1)</H1>
+<FORM ACTION="/help/man-lpoptions.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+<h1 class="title">lpoptions(1)</h1>
+<h2 class="title"><a name="NAME">Name</a></h2>
+lpoptions - display or set printer options and defaults
+<h2 class="title"><a name="SYNOPSIS">Synopsis</a></h2>
+<b>lpoptions
+</b>[ -E ] [ -U
+<i>username
+</i>] [ -h
+<i>server[:port]
+</i>] -d
+<i>destination[/instance]
+</i>[ -o
+<i>option[=value]
+</i>] ... [ -o
+<i>option[=value]
+</i>]
+<br>
+<b>lpoptions
+</b>[ -E ] [ -U
+<i>username
+</i>] [ -h
+<i>server[:port]
+</i>] [ -p
+<i>destination[/instance]
+</i>] -l
+<br>
+<b>lpoptions
+</b>[ -E ] [ -U
+<i>username
+</i>] [ -h
+<i>server[:port]
+</i>] [ -o
+<i>option[=value]
+</i>] ... [ -o
+<i>option[=value]
+</i>] [ -p
+<i>destination[/instance]
+</i>] -r
+<i>option
+</i><br>
+<b>lpoptions
+</b>[ -E ] [ -U
+<i>username
+</i>] [ -h
+<i>server[:port]
+</i>] -x
+<i>destination[/instance]
+</i><h2 class="title"><a name="DESCRIPTION">Description</a></h2>
+<i>lpoptions</i> displays or sets printer options and defaults.
+<i>lpoptions</i> shows the default printer options when run with no
+arguments. Other options include:
+<dl>
+<dt>-E
+</dt>
+<dd></dd>
+<dd>Enables encryption when communicating with the CUPS server.
+</dd>
+<dt>-U username
+</dt>
+<dd></dd>
+<dd>Uses an alternate username.
+</dd>
+<dt>-d destination[/instance]
+</dt>
+<dd></dd>
+<dd>Sets the user default printer to <i>destination</i>. If <i>instance</i>
+is supplied then that particular instance is used. This option
+overrides the system default printer for the current user.
+</dd>
+<dt>-h server[:port]
+</dt>
+<dd></dd>
+<dd>Uses an alternate server.
+</dd>
+<dt>-l
+</dt>
+<dd></dd>
+<dd>Lists the printer specific options and their current settings.
+</dd>
+<dt>-o option[=value]
+</dt>
+<dd></dd>
+<dd>Specifies a new option for the named destination.
+</dd>
+<dt>-p destination[/instance]
+</dt>
+<dd></dd>
+<dd>Sets the destination and instance, if specified, for any options
+that follow. If the named instance does not exist then it is
+created.
+</dd>
+<dt>-r option
+</dt>
+<dd></dd>
+<dd>Removes the specified option for the named destination.
+</dd>
+<dt>-x destination[/instance]
+</dt>
+<dd></dd>
+<dd>Removes the options for the named destination and instance, if
+specified. If the named instance does not exist then this does
+nothing.
+</dd>
+</dl>
+<p>If no options are specified using the <i>-o</i> option, then the
+current options for the named printer are reported on the
+standard output.
+<p>Options set with the <i>lpoptions</i> command are used by the
+<a href='man-lp-TOPIC=Man+Pages.html'>lp(1)</a> and <a href='man-lpr-TOPIC=Man+Pages.html'>lpr(1)</a> commands when submitting jobs.
+<h2 class="title"><a name="ROOT_ACCOUNT_OPTIONS">Root Account Options</a></h2>
+When run by the root user, <i>lpoptions</i> gets and sets default
+options and instances for <i>all users</i> in the
+/etc/cups/lpoptions file.
+<h2 class="title"><a name="COMPATIBILITY">Compatibility</a></h2>
+The <i>lpoptions</i> command is unique to CUPS.
+<h2 class="title"><a name="FILES">Files</a></h2>
+~/.cups/lpoptions - user defaults and instances created by non-root
+users.
+<br>
+/etc/cups/lpoptions - system-wide defaults and instances
+created by the root user.
+<h2 class="title"><a name="SEE_ALSO">See Also</a></h2>
+<a href='man-cancel-TOPIC=Man+Pages.html'>cancel(1)</a>, <a href='man-lp-TOPIC=Man+Pages.html'>lp(1)</a>, <a href='man-lpadmin-TOPIC=Man+Pages.html'>lpadmin(8)</a>, <a href='man-lpr-TOPIC=Man+Pages.html'>lpr(1)</a>,
+<br>
+<a href='http://localhost:631/help'>http://localhost:631/help</a>
+<h2 class="title"><a name="COPYRIGHT">Copyright</a></h2>
+Copyright 2007-2013 by Apple Inc.
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

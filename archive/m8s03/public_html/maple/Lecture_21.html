@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Lecture_2.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<b><font color=#000000>LECTURE 2</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><font color=#000000>10.2 More about direction fields</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=center>
+<font color=#000000> </font>
+<b><font color=#000000>Direction field of the logistic equation</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>Consider the following equation:  </font>
+</p>
+<p align=left>
+<font color=#000000>                               dP/dt   =  P ( 1 - P/5 )</font>
+</p>
+<p align=left>
+<font color=#000000>where t=time=the independent variable; P=P(t)=population at time t; 5=K=carrying capacity.</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(DEtools):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(P(t),t)=P*(1-P/5):</font></b>
+</p>
+<p align=left>
+<font color=#000000>Its direction field looks as follows:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE ,P(t), t=-7..7, P=-1..6,<br>
+[[P(0)=0], [P(0)=5]], arrows=SMALL, <br>
+dirgrid=[30, 30], stepsize=.1,<br>
+linecolor=black, color=BLUE);</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>Warning, P is present as both a dependent variable and a name. Inconsistent specification of the dependent variable is deprecated, and will be removed in the next release.<br>
+</font></pre></tt>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_21.gif" width=608 height=303 alt="[Maple Plot]">
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>Note. The black curves on the picture represent the "critical points"=constant solutions. </font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>One can describe the above direction field, or, if the direction field cannot be obtained, one can  predict</font>
+</p>
+<p align=left>
+<font color=#000000>qualitatively the behaviour of the solutions by looking at the graph of the right hand side of the equation,</font>
+</p>
+<p align=left>
+<font color=#000000>F(P)=P ( 1 - P/5 ):</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>plot(P*(1-P/5),P=-1..6,title=`Graph of F(P)`);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_22.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000>Keep in mind that the important  information here  is the </font>
+<b><font color=#000000>sign</font></b>
+<font color=#000000> of F(P) (and consequently that of dP/dt).</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><font color=#000000>10.3 Separable equations and more modelling</font></b>
+</p>
+<p align=left>
+</p>
+<p align=center>
+<b><font color=#000000>Mixing problems</font></b>
+</p>
+<p align=left>
+<b><u><font color=#000000>Exercise 34, page 635.</font></u></b>
+</p>
+<p align=left>
+<font color=#000000>We obtained the IVP:  dQ/dt = 0.65 - 15 Q / 1000,  Q(0) = 0.</font>
+</p>
+<p align=left>
+<font color=#000000>Its direction field and solution(in blue) are:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( diff(Q(t),t)=0.65-15*Q(t)/1000, Q(t), t=-3..200, Q=-3..50,<br>
+[[Q(0)=0],[Q(0)=650/15]], arrows=SMALL, <br>
+dirgrid=[30, 30], stepsize=.1,<br>
+linecolor=[green,black], color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m8s03/maple/images/Lecture_23.gif" width=683 height=284 alt="[Maple Plot]">
+</p>
+<p align=center>
+<font color=#AAAAAA size="-1">
+Maple
+<sup>TM</sup> is a registered trademark of <a href="http://www.maplesoft.com" target=new><font color=#AAAAAA size="-1">Waterloo Maple Inc.</font></a><br>
+<font color=#AAAAAA size="-2">Math rendered by 
+<a href="http://www.dessci.com" target=new>
+<font color=#AAAAAA size="-2">
+WebEQ
+</font>
+</a>
+</font>
+</font>
+</p>
+</basefont>
+</body>
+</html>

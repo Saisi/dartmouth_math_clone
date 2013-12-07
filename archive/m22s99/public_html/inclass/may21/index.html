@@ -1,0 +1,531 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Cosines and Images</title>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#0000">
+
+When one wants to send data, like a picture, or a song, across
+the internet, one usually <b>compresses</b> the data first. The
+fewer bits and bytes you can use to accurately represent the picture
+or song, the less time you have to spend sending that compressed
+data across
+the web. (Remember: time is money.) In order to compress data
+<i>well</i>, we must
+first represent it in some fashion that lends itself to compression.
+Recall the audio samples I did in class - by deciding which coefficients
+would be 0, I effectively reduced the size of the sound. However,
+there was still enough coefficients left for me to recognize and
+understand the sound. ("Bring out your dead ....")
+
+<br>
+<br>
+
+There are a number of ways to represent data so that one might
+easily compress it. One method is based on the work of Joseph
+Fourier (mid 1800s). A variation of his method is used today
+in the JPEG (Joint Photographic Experts Group) compression method.
+So let's get started and see
+how to get to JPEG...
+
+<br>
+<br>
+
+<h3>
+The following is one of the most important (and useful)
+inner product spaces of <i>all</i> time.
+</H3>
+
+<br>
+
+
+Let <i>V</i> = C[-Pi, Pi], the vector space of continuous functions
+defined on the interval [-Pi, Pi]. There exists an <b>inner product</b>
+for this vector space. If f(<i>t</i>) and g(<i>t</i>) are two
+functions in <i>V</i>, then their inner product is defined
+to be the integral from -Pi to Pi of f(<i>t</i>)g(<i>t</i>).
+(See Chapter 6, Section 8, for details.)
+
+<br>
+<br>
+
+With respect to this inner product, an <b>orthogonal</b> basis
+for <i>V</i> is the
+infinite set {1, Cos(<i>t</i>), Sin(<i>t</i>),
+Cos(2<i>t</i>), Sin(2<i>t</i>),
+Cos(3<i>t</i>), Sin(3<i>t</i>), ...}.
+This means that any function f(<i>t</i>) in <i>V</i> can be written
+as a sum of sines and cosines. This sum, called the <b>Fourier
+Series</b> for f(<i>t</i>), can be determined by the good ol'
+<b>Orthogonal Decomposition Theorem</b> (page 390): each term in the
+sum is the <b>projection</b> of f(<i>t</i>) onto
+Cos(n<i>t</i>) (or Sin(n<i>t</i>), depending on which basis
+element you're projecting onto).
+
+<br>
+<br>
+
+Here are graphs of some of the basis elements:
+
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR>
+<TD></td>
+<td align=center>Sin(n<i>t</i>)</td>
+<td align=center>Cos(n<i>t</i>)</td>
+</tr>
+<TR>
+<TD>n = 1 &nbsp</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/s1.gif"></td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/c1.gif"></td>
+</tr>
+<TR>
+<TD>n = 2 &nbsp </td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/s2.gif"></td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/c2.gif"></td>
+</tr>
+<TR>
+<TD>n = 3 &nbsp </td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/s3.gif"></td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/c3.gif"></td>
+</tr>
+</table>
+</H1>
+
+<BR>
+<br>
+
+So by integrating, I can represent a function as a sum of sines
+and cosines. Unfortunately, this doesn't get me very far in
+my compression problem. First of all, my data is not a function
+f(<i>t</i>). Rather, my data consists of function f(<i>t</i>)
+sampled at different times (i.e. like f(0), f(1), f(2), ...., f(N-1)).
+What can I do?
+
+<br>
+<br>
+
+Well, as we learned in calculus, we can do a discrete
+approximation of the integral. (Does the Trapezoid Rule sound
+familiar?) And this is what's done on computers.
+
+<br>
+<br>
+
+Ok, so suppose
+my data is a function sampled at N evenly spaced intervals,
+F = ( f(0), f(1), f(2), ...., f(N-1) ). This is a vector in N
+dimensional Euclidean space.
+For reasons that don't need to be gotten into (it's a little
+beyond our scope), a <b>very good</b> basis for our purposes
+is one whose vectors are sample values of Cosines.
+
+<br>
+<br>
+
+Hold N fixed, and let b(0) = Sqrt[1/N] and b(k) = Sqrt[2/N] for k not equal
+to 0. Let A be the matrix square (N x N) whose columns are these
+fabulous vectors:
+the k-th column (I'll be numbering my columns from 0 to N-1 and
+not 1 to N) of A will be
+<br>
+<br>
+
+C_k = b(k)*( Cos(k*Pi/(2*N)), Cos(3*k*Pi/(2*N)), Cos(5*k*Pi/(2*N)),...,
+Cos((2*N-1)*k*Pi/(2*N))).
+
+<br>
+<br>
+
+This basis is very closely related to the Cosines in the
+Fourier series (though I won't go into why).
+I need the funny b(k) function to make the columns of A
+orthonormal. Yes - the matrix A is an <b>orthogonal</b>
+matrix. Here are plots of the columns of A for the case
+of N = 4, from the first column (n = 0), to the fourth (n = 3):
+
+<br>
+<br>
+
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+
+<TR>
+<TD>n = 0 &nbsp</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/col1_N4.gif"></td>
+
+<TD>n = 1 &nbsp</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/col2_N4.gif"></td>
+</tr>
+
+<TR>
+<TD>n = 2 &nbsp</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/col3_N4.gif"></td>
+
+<TD>n = 3 &nbsp</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/col4_N4.gif"></td>
+</tr>
+</table>
+</H1>
+
+
+If I looked at the matrix A as a <b>grey scale</b> image
+(so the smaller a number is, the darker I colour it; the
+larger a number is, the lighter I colour it), here's what
+it would look like:
+
+<br>
+<img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/AN4.jpg" width=400>
+<br>
+<br>
+Here's the matrix A for N = 8:
+<br>
+<img src= "http://www.math.dartmouth.edu/~m22s99/inclass/may21/AN8.jpg" width=400>
+<br>
+</h1>
+<br>
+And for N = 64:
+<br>
+<img src= "http://www.math.dartmouth.edu/~m22s99/inclass/may21/AN64.jpg" width=400>
+<br>
+</h1>
+<br>
+<br>
+
+
+Given an orthonormal basis set {u_0, ..., u_(N-1)} for R^N,
+let P be the matrix whose columns are the u_i's.
+We know that it's easy to
+write any vector X as a linear combination of the basis vectors:
+<br>
+<br>
+X = c_0 u_0 + ... c_(N-1) u_(N-1)
+<br>
+<br>
+where the weights/scalars c_i's can be computed by multiplying
+P*X. That is, the scalar c_i is the inner product of X and u_i.
+We can also think of this as a <b>change of basis </b>.
+
+<br>
+<br>
+
+And that's what we do here. 
+(Ok, back to the samples F = ( f(0), f(1), f(2), ...., f(N-1) ).)
+We want to write F as a linear
+combination of the columns of A. So we need to compute the
+inner products. That is, multiply transpose(A)*F = F-hat. In this
+case, for this special Cosine matrix A, transpose(A)*F is
+known as the <b>Discrete Cosine Transform (DCT)</b> of F.
+The vector F-hat are the <b>coefficients</b> of F.
+Note that since A is an orthogonal matrix, we also have
+A * F-hat = F (so we can go from the coefficients back to
+the signal samples).
+The JPEG standard uses the DCT. 
+
+<br>
+<br>
+Here are pictures of two examples for the case N = 8.
+In the first example, why is there only one non-zero coefficient?
+
+<br>
+<br>
+
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR>
+<TD></td>
+<td align=center>First Signal</td>
+<td align=center>First Signal's Coefficients</td>
+</tr>
+<TR>
+<TD></td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sig1.gif"></td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sig1coeff.gif"></td>
+</tr>
+<TR>
+<TD></td>
+<td align=center>Second Signal</td>
+<td align=center>Second Signal's Coefficients</td>
+</tr>
+<TR>
+<TD></td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sig2.gif"></td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sig2coeff.gif"></td>
+</tr>
+</table>
+</H1>
+<br>
+Note in the second example that alot of the coefficients
+are (relatively) close to 0. This is not entirely a
+coincidence. The DCT is designed so that the larger
+coefficients tend to occur first, and
+that the smaller coefficients occur later. This is one
+way to compress - set those smaller coefficients to 0.
+(JPEG does things a bit more cleverly.)
+
+
+<br>
+<br>
+
+Ok, so we can (sort of) see how to take the DCT of a
+one-dimensional signal. It's just a matrix times a column
+vector. But what about 2-dimensional signals? That is,
+what about images?
+
+<br>
+<br>
+
+An image F can be thought of as an N x N matrix in the vector
+space of matrices M_(NxN). (So now F is a <b>matrix </b> and
+not a vector.) We want to find a good basis of M_(NxN),
+one that lends itself to compression (like in the 1-d case).
+Since dim M_(NxN) = N^2 (N-squared), our basis will have
+N^2 matrices. How do we find them? Easy - we use the basis
+from the above 1-d case! Here's how.
+
+<br>
+<br>
+
+Remember the C_k's up above, those column vectors made
+up of sampled Cosines? Well, for j = 0, 1, ..., N-1 and
+k = 0, 1, ..., N-1, let
+
+<br>
+<br>
+B_(j,k) = C_j * transpose(C_k) &nbsp &nbsp (this is an NxN matrix)
+<br>
+<br>
+These N^2 many matrices form an <b>orthonormal </b>basis
+of M_(NxN) (with respect to the inner product I mentioned
+in class: the inner product of two matrices D and E is
+computed by first multiplying together their corresponding
+entries and then add those entries together). That's right,
+not only are they orthogonal, the B_(j,k)'s are orthonormal.
+Neat, huh?
+
+<br>
+<br>
+Here are pictures of the B_(j,k)'s for the cases N = 4
+and N = 8 (the B_(j,k)'s are arranged in a single array,
+with the top row containing the matrices B_(0,k) for k = 0,..., N-1,
+the second row containing B(1,k) for k = 0,..., N-1, and so on):
+<br>
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+
+<TR>
+<TD>N = 4</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/basisN4.jpg" width=400></td>
+</tr>
+<TR>
+<TD>N = 8</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/basisN8.jpg" width=400></td>
+</tr>
+</table>
+</H1>
+<br>
+<br>
+We define the <b>2-D DCT of an image F</b> to be
+the matrix product
+<br>
+<br>
+transpose(A) * F * A = F-hat
+<br>
+<br>
+That's the same A as in the 1-D case. Basically, what you're
+doing with the matrix product is to first take the DCT of all
+the rows of A, and then take the DCT of all the columns of that
+intermediate result. Or in other (more familiar) words, we're
+first projecting the rows of A onto the basis vectors C_k's
+(that's the F*A) followed by projecting the columns of that
+intermediate result onto the C_k's as well.
+
+<br>
+<br>
+
+
+Here's an example using a 4x4 image:
+
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+
+<TR>
+<TD Align=center>Input ( i.e. F )</td>
+<TD Align=center>Coefficients ( i.e. F-hat ) </td>
+</tr>
+<tr>
+<td align=center><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/mat1_N4.jpg" width=200></td>
+<td align=center><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/mat1_N4_coeff.jpg" width=200></td>
+</tr>
+</table>
+</H1>
+<br>
+Note that the coefficient array is brighter in the top left
+corner. As in the 1-d case, this isn't a coincidence, again
+because we're using the cool Cosine basis. As in the 1-d
+situation, a 2-d DCT is designed to "put" the larger
+coefficients in the top left corner and the smaller ones
+elsewhere. That lends itself to compression.
+<br>
+<br>
+So how do we interpret the coefficient array? This way.
+Let F-hat(i,j) denote the entry in the i-th row and j-th
+column of F-hat. Then the image/matrix F is equal to
+<br>
+<br>
+F = F-hat(0,0) * B_(0,0) + F-hat(0,1) * B_(0,1) + ... +
+F-hat(N-1,N-1) * B_(N-1,N-1)
+
+<br>
+<br>
+In a sense, as we compute first F-hat(0,0) * B_(0,0), and then
+F-hat(0,0) * B_(0,0) + F-hat(0,1) * B_(0,1), and so and so on,
+we're adding more and more detail to the image. Eventually,
+after adding N^2 many terms, we get the image back.
+
+<br>
+<br>
+Here I have arranged the partial sums for the above 4x4 case
+as an array.
+<br>
+<br>
+<img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/mat1_N4_psum.jpg" width=400>
+<br>
+<br>
+The 4x4 block in the lower right corner of the above array is
+the original image I started with. (Technical note: I'm doing
+the partial sums in a zigzag fashion. That is, I've order the
+coefficients F-hat(i,j) in the following fashion when doing
+the sums: F-hat(0,0), F-hat(0,1), F-hat(1,0), F-hat(2,0),
+F-hat(1,1), F-hat(0,2), F-hat(0,3), F-hat(1,2),
+F-hat(2,1), F-hat(3,0), F-hat(3,1), F-hat(2,2), 
+F-hat(1,3), F-hat(2,3), F-hat(3,2), F-hat(3,3).
+Why? Well, as I'm adding terms, I'm adding details. I want to
+add details in an "even" fashion. It's like I'm first adding
+horizontal features at a given level, followed by diagonal
+features at the <i>same</i> level,  followed by vertical
+features at the <i>same</i> level,. So that's adding the terms
+on one of the matrix's "anti-diagonals". Next I go to the
+next anti-diagonal, which are the details at the next
+level. And so on, and so on, and so on.
+JPEG does things
+in a zigzag way as well.)
+
+<br>
+<br>
+
+Here's an example with an image of size 256x256, showing
+how the image gets more detailed as more terms are added:
+
+<br>
+<br>
+
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR>
+<TD>1 term</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq1.jpg" width=400></td>
+</tr>
+<TR>
+<TD>10 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_psum10.jpg" width=400></td>
+</tr>
+<TR>
+<TD>20 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_psum20.jpg" width=400></td>
+</tr>
+<TR>
+<TD>50 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_psum50.jpg" width=400></td>
+</tr>
+<TR>
+<TD>75 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_psum75.jpg" width=400></td>
+</tr>
+<TR>
+<TD>100 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_psum100.jpg" width=400></td>
+</tr>
+<TR>
+<TD>500 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_psum500.jpg" width=400></td>
+</tr>
+<TR>
+<TD>1000 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq1000.jpg" width=400></td>
+</tr>
+<TR>
+<TD>2000 terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq2000.jpg" width=400></td>
+</tr>
+<TR>
+<TD>All (65536) terms</td>
+<td><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_orig.jpg" width=400></td>
+</tr>
+</table>
+</H1>
+
+<br>
+<br>
+<br>
+
+
+Given an NxN image, here's how JPEG works (roughly):
+<DL>
+<LI> First the image is divided into 8x8 blocks. (So an
+image F of size 256x256 is divided into 1024 blocks each of
+size 8x8.)
+<li> Next, JPEG calculates the DCT of <b>each</b> of those
+8x8 blocks (so if G denotes a particular 8x8 block of the 256x256
+and A is the 8x8 DCT matrix (the columns are the sampled Cosines),
+then JPEG computes transpose(A)*G*A. JPEG does this for all blocks,
+getting 1024 different G-hats).
+<li> Then JPEG "massages" each G-hat by multiplying each G-hat
+with a special matrix designed to throw away (set to 0) most of
+the smaller (i.e. unimportant) coefficients. This is why JPEG
+is known as a "lossy" compression scheme.
+<li> And finally, JPEG reconstructs the image. Enough coefficients
+have been kept so that the reconstructed image
+(i.e. A*modified(G)* transpose(A)) looks pretty much like the original.
+</dl>
+
+<br>
+<br>
+We can see this "lossiness" in the example below. JPEG
+was able to set nearly 73% of the DCT coefficients of the
+image to 0 (and there are 65,536 coefficients in total).
+<br>
+<br>
+
+<H1>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR>
+<TD Align=center>Original Image</td>
+</tr>
+<tr>
+<td align=center><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_orig.jpg" width=550></td>
+</tr>
+<tr>
+<TD Align=center>JPEG'd Image</td>
+</tr>
+<tr>
+<td align=center><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_jpeg.jpg" width=550></td>
+</tr>
+<tr>
+<TD Align=center>Difference between the original and jpeg'd image</td>
+</tr>
+<tr>
+<td align=center><img src="http://www.math.dartmouth.edu/~m22s99/inclass/may21/sq_diff.jpg" width=550></td>
+</tr>
+</table>
+</H1>
+<br>
+<br>
+
+<a href="mystery.html">Here</a> is another example of an image, both
+the partial sums and the JPEG versions.
+
+
+</body>
+</html>

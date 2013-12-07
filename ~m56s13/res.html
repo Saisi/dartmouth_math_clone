@@ -1,0 +1,223 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Math 56:  Resources
+</title>
+</head>
+
+<body bgcolor = #efffef>
+
+<center>
+<h1><font face="Helvetica">Math 56:  Resources
+- <font size=+2>SPRING 2013</font></font></h1>
+</center>
+
+<h4>Numerical Analysis</h4>
+<ul>
+
+<li> Nick Trefethen's new online book, <a href="http://www2.maths.ox.ac.uk/chebfun/ATAP/">Approximation Theory and Approximation Practice</a>. Each chapter can be compiled to a webpage or LaTeX via the Matlab <code>publish</code> command, and the figures will be generated if the Matlab toolbox <a href="http://www2.maths.ox.ac.uk/chebfun/">chebfun</a> is installed.
+<li> <a href="https://www.math.dartmouth.edu/~m56s13/www.siam.org/pdf/news/637.pdf">Top Ten Algorithms of the 20th Century</a>, from the editors at SIAM News.
+<li> <a href="http://introcs.cs.princeton.edu/java/91float/">
+Notes on floating point</a> in java, from Princeton CS dept.
+<li> <a href="http://maths-people.anu.edu.au/~brent/talks.html">Richard Brent's talks</a> on factoring large integers, etc.
+</ul>
+
+<h4>Experimental Mathematics</h4>
+<ul>
+<li> <a href="http://experimentalmath.info">Bailey's Experimental Mathematics
+site</a>
+<li> Simons Foundation <a href="https://simonsfoundation.org/features/science-news/in-computers-we-trust/">article on computer-assisted proofs</a>,
+and D. Zeilberger.
+<li> <a href="http://oldweb.cecm.sfu.ca/organics/papers/bailey/paper/html/paper.html">Bailey and Plouffe paper on PSLQ algorithm</a> of Ferguson,
+searches for integer relations amongst constants.
+</ul>
+ 
+<h4>Mathematics</h4>
+<ul>
+<li><a href="http://functions.wolfram.com/">Wolfram Functions</a> site,
+has lots of identities.
+
+<li><a href="http://dlmf.nist.gov">Digital Library of Mathematical Functions (DLMF)</a> from NIST, also amazing resource for special functions.
+
+<li> General notes on <a href="../~ahb/linalg/exam_technique.pdf">exam and study
+technique</a> (geared mainly towards final exams in intermediate-level math courses).
+
+<li> How to do and write proofs: notes by <a
+href="http://zimmer.csufresno.edu/~larryc/proofs/proofs.html">Larry
+Cusick</a>, <a
+href="http://persweb.wabash.edu/facstaff/turnerw/Writing/proofs.pdf">William
+Turner</a>, and <a
+href="http://www-cs-students.stanford.edu/~csilvers/proof/proof.html">Craig
+Silverstein</a>.
+</ul>
+
+<h4>Tools</h4>
+<ul>
+<li><a href="http://oldweb.cecm.sfu.ca/projects/ISC/">Inverse Symbolic
+Calculator</a>, attempts to identify a real number given to high precision.
+
+<li><a href="https://nebula.lbl.gov/cgi-bin/login.py">ARPREC</a>
+online arbitrary-precision calculator from Bailey and Borwein at LBL.
+
+<li><a href="http://events.ccc.de/congress/2012/Fahrplan/events/5275.en.html">Daniel J. Bernstein's talk</a> on RSA encryption.
+
+<li><a href="http://facthacks.cr.yp.to">FactHacks</a>: D. J. Bernstein's tutorial
+on large integer factorization and RSA, with sage/python codes.
+</ul>
+
+<h4>Coding tips</h4>
+<ul>
+<li>Always write on paper what you want to achieve, and then write out a pseduocode, before you start typing.
+<li>Try to put all user-adjustable parameters <b>once</b> at the top of your
+program (script). Make everything work from these parameters.
+<li>Write brief comments to explain what non-obvious lines do.
+<li>Break down tasks which are repeated into <b>subroutines</b> (in MATLAB
+these are called <b>functions</b>). Write out the interface (inputs and
+outputs) to your function on pencil and paper before you start to code it up.
+Document your function as you go.
+<li>For every function, write a test routine that goes along with it and
+verifies it does what it is supposed to do, on at least one known
+test case.
+</ul>
+
+<a name="latex"></a>
+<h4>LaTeX and graphics production</h4>
+This is the typesetting package essentially all mathematicians use.
+You will use it for projects, and, I hope, homeworks.
+<ul>
+<li><a href="../news-resources/computing/resources_common_latex.phtml.html">Here</a> is our department's LaTeX resources.
+<li>If you have a UNIX account (you probably do as a grad student; ask
+your sysadmin) or linux OS
+then you can use a standard text editor and the latex command.
+If you have Mac OSX or Windows you need to install a LaTeX
+distribution, as described <a href="http://en.wikibooks.org/wiki/LaTeX/Installation">here</a>.
+<li>Please let me know if you are stuck with installing LaTeX.
+Sarunas Burdulis (our sysadmin, behing the math office) may also be able to help better than I.
+
+<li>Here are sample files from X-hr of 3/27/13:
+<a href="https://www.math.dartmouth.edu/~m56s13/test.tex">test.tex</a>, <a href="https://www.math.dartmouth.edu/~m56s13/squiggle.eps">squiggle.eps</a>,
+and the resulting PDF output <a href="test.pdf">test.pdf</a>.
+
+<li>Once you have it installed,
+<a href="http://www.math.duke.edu/computing/tex/templates.html">here are some
+simple sample files</a> that you can edit for your homework.
+They produce PS which you can convert to a PDF file.
+<li><a href="https://www.math.dartmouth.edu/~m56s13/Downes2002ShortMathGuide_LaTeX.pdf">Here</a> is a quick guide to all the math symbols and brackets, etc. You will need to
+<code>\usepackage{amssymb,amsmath}</code> to get some of these symbols.
+
+<li><a href="https://bitbucket.org/rivanvx/beamer/wiki/Home">Beamer</a> is a great latex package in which to make slides for your talks.
+(Although I still use Prosper).
+<br>
+Here's my toy files: <code><a href="https://www.math.dartmouth.edu/~m56s13/a.tex">a.tex</a></code> which uses EPS figure
+<code><a href="https://www.math.dartmouth.edu/~m56s13/fig.eps">fig.eps</a></code>. It produces <a href="https://www.math.dartmouth.edu/~m56s13/a.pdf">this PDF</a>.
+
+<li>For drawing professional-looking figures I use <a href="http://en.wikipedia.org/wiki/Xfig">xfig</a> which you can find for linux via the usual package managers.
+For Mac OSX install see <a href="http://mediawiki.middlebury.edu/wiki/LIS/Installing_Xfig_on_Mac_OS_X">here</a> and the closest on windows (unless you
+want to do cygwin and linux version of xfig) is
+<a href="http://www.schmidt-web-berlin.de/winfig/">winfig</a>.
+
+
+</ul>
+
+
+<h4>Web authoring</h4>
+<ul>
+<li>Get yourself a website <a 
+href="http://www.dartmouth.edu/comp/web-media/web/web-accounts/apply/">account</a> 
+hosted at Dartmouth if you don't already have one
+(you probably do if you're a grad student; ask your department sysadmin).
+
+<li>Dave Raggett's <a href="http://www.w3.org/MarkUp/Guide/">simple
+HTML guide</a> is all you could ever need.
+
+<li>Don't forget to Reload the page in your browser to check that the
+updates you have made worked.
+
+<li><a href="http://math.dartmouth.edu/~m23f05/wheelock.html">Here</a>
+is the simplest webpage I ever made (`View Page Source' on your 
+browser).
+It contains text and one link; you could modify it and replace
+the address in the
+link by href="figure1.ps" if <code>figure1.ps</code> is a file in the
+same directory, for instance a figure file printed to file from Matlab.
+</ul>
+
+
+
+<h2>SOFTWARE ENVIRONMENTS &amp; PROGRAMMING</h2>
+
+<a name="mat"></a>
+<h4><a href="http://www.mathworks.com">MATLAB</a> / <a href="http://www.gnu.org/software/octave/">octave</a></h4>
+<ul>
+<li> Download Matlab from
+<a href="http://caligari.dartmouth.edu/downloads/matlab">Dartmouth</a>
+we have 100 or so on-campus licenses (to work you must be online in <code>dartmouth.edu</code> domain).
+<li> <a href="http://www.dartmouth.edu/~sas/">Susan A. Schwarz</a>
+(<a href="mailto:Susan.A.Schwarz@Dartmouth.EDU">email</a> her if you have
+Mac OS 10.2 or earlier for install CDs) can help with
+installation issues.
+
+<li> Notes from X-hr of 3/27/13: commands in a script
+<a href="https://www.math.dartmouth.edu/~m56s13/intro56.m">intro56.m</a>, and the function <a href="https://www.math.dartmouth.edu/~m56s13/tom.m">tom.m</a>.
+
+
+<li> M. Pilant's <a href="http://www.math.tamu.edu/~mpilant/math614/Matlab/index.html">Matlab examples</a>
+<li> Bent Petersen's <a href="http://oregonstate.edu/~peterseb/mth355/docs/355f2001_matlab_intro_1.html">Matlab starter page</a>
+<li> Robert Higdon's nice
+<a href="https://www.math.dartmouth.edu/~m56s13/Higdon1996notes_matlab_intro.pdf">introductory notes</a>
+
+<li> My 1-page <code><a href="https://www.math.dartmouth.edu/~m56s13/intro53.m">intro53.m</a></code> code, and
+1-page <a href="http://www.math.dartmouth.edu/~m22x06/matlab_xhr_7-25-06.m">
+intro</a> code from Linear Algebra (shows more matrix stuff)
+<li> Guide from
+<a href="http://www-h.eng.cam.ac.uk/help/tpl/programs/matlab.html">
+Cambridge University Engineering Department</a>.
+<li><a href="http://www.math.utah.edu/lab/ms/matlab/matlab.html">Simple intro</a> from Utah, Hany Farid's <a href="http://www.cs.dartmouth.edu/farid/tutorials/matlab.intro.html">intro reference</a>, and Gilbert Strang's
+<a href="http://ocw.mit.edu/OcwWeb/Mathematics/18-311Principles-of-Applied-MathematicsSpring2003/StudyMaterials/index.htm">intro</a> at MIT.
+
+<li> Self-guided courses from Dartmouth academic computing:
+<a href="http://www.dartmouth.edu/~rc/classes/intro_matlab">
+Introduction to Matlab</a>,
+<a href="http://www.dartmouth.edu/~rc/classes/matlab_prog">
+Programming in Matlab</a>, and 
+<a href="http://www.dartmouth.edu/~rc/classes/matlab_graphics">
+Introduction to Matlab Graphics</a>
+</ul>
+
+<h4><a href="http://sagemath.org">SAGE</a>/<a href="http://www.python.org">python</a></h4>
+<ul>
+<li> My <a href="matlabvspython.pdf">MATLAB vs Python</a> code example
+(<a href="https://www.math.dartmouth.edu/~m56s13/matlabvspython.tex">tex file</a>).
+The codes: <a href="https://www.math.dartmouth.edu/~m56s13/printbinary.m">printbinary.m</a>,
+<a href="https://www.math.dartmouth.edu/~m56s13/testprintbinary.m">testprintbinary.m</a>,
+and <a href="https://www.math.dartmouth.edu/~m56s13/pb.py">pb.py</a>.
+
+
+<li>
+<a href="http://www.greenteapress.com/thinkpython/">Book on python programming</a>
+
+<a href="http://www.diveintopython.net/getting_to_know_python/index.html#odbchelper.divein">how to run a program in different operating system environments</a>
+
+<li><a href="http://facthacks.cr.yp.to/sage.html">Tips</a> on fast integer
+operations and differences between sage and python math symbols.
+
+<li>How to make a <a href="http://stackoverflow.com/questions/5743291/python-function-handle-ala-matlab">function handle in python</a>
+
+<li>You can use SAGE for free by creating an account on our local server
+<a href="http://sage.dartmouth.edu">here</a> (access restricted to the
+dartmouth.edu domain).
+Or nationally <a href="http://www.sagenb.org/">here</a>.
+
+<li><a href="http://code.google.com/p/mpmath/">MPMATH</a> module for python/SAGE, <a href="http://mpmath.googlecode.com/svn/trunk/doc/build/basics.html">basic usage</a>
+
+<li><a href="../~doyle/docs/workshop/workshop/workshop.html">Workshop on computing in mathematics</a> (Dartmouth Math Dept, 2011)
+
+<li><a href="http://sagemath.wikispaces.com/Histograms">Plotting histograms in sage</a>
+
+</ul>
+
+
+<br>
+<img src="https://www.math.dartmouth.edu/~m56s13/line.gif" width=100%>
+
+</body>
+</html>

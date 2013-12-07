@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.2 beta6 (August 14th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>may1</TITLE>
+<META NAME="description" CONTENT="may1">
+<META NAME="keywords" CONTENT="may1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="may1.css">
+</HEAD>
+<BODY >
+<B>MondaysÕs Homework:</B>
+Read section 6.3.  From section 6.2 do problems 2,11,15,27 and 30.  Also 
+do either problems 17 and 18 or come to this 
+ <a
+href="http://hilbert.dartmouth.edu/~colloq/s00/odlyzko.phtml">
+talk </a>  on the distribution of
+primes this evening....
+
+<P>
+"The distribution of primes"
+
+<P>
+Monday, May 1,
+7:00-8:00 pm,
+Moore Psychology Auditorium B03.
+
+<P>
+<B>WeddaysÕs Homework:</B>    
+Read sectin 8.1 and 8.2.  (Yes chapter 8,  I think it is a good idea to do
+chapter 8 before chapter 7, we will do chapter 7 next.)  
+ From section 6.3 do 2,6,10,14,26,27,28. 
+
+<P>
+<B>Friday's Homework:</B>
+
+<P>
+Read section 8.1 and 8.2 over again.  Do problems 1,4,5,6,7 from 8.1 and
+1,2 and 4 from 8.2.
+
+<P>
+<B>Comments:</B>
+
+<P>
+Here is a program to help you simulate the weak law ...
+
+<P>
+<P>
+<TT>Areabargraph:=proc(data,xmin,xmax,k)
+</TT>
+<P>
+<TT>local sorteddata, dx, lines,graphicslist, f:	
+ 
+ sorteddata:=[]:
+ 
+	dx:=(xmax-xmin)/k:
+ 
+	lines:=[]:
+ 
+	graphicslist:=[]:
+ 
+	sorteddata:=sort(data):
+ 
+	if ((op(1,sorteddata)&lt;xmin) or
+(op(nops(sorteddata),sorteddata)&gt;xmax)) then
+ 		lprint(`Note:  some data values lie outside the
+user-defined interval.`)
+ 	fi:
+ 	f:=proc(k,sorteddata,xmin,dx,xmax,lines::evaln)
+ 		local i,j,currentupperlim,leng,index,counter,result,
+         finallist,q,numb,linelist:
+   finallist:=[]:
+   linelist:=[]:
+ 		index:=1:
+ 		leng:=nops(sorteddata):
+   currentupperlim:=xmin+dx:
+ 		result:=[]:
+ 		for q from 1 to leng do
+ 			if ((op(q,sorteddata)&gt;=xmin) and
+(op(q,sorteddata)&lt;=xmax)) 
+ 				then
+finallist:=[op(finallist),op(q,sorteddata)]
+ 			fi:
+ 		od:
+ 		numb:=nops(finallist):
+   for i from 1 to k do
+ 			counter:=0:
+ 			while ((index&lt;=numb) and
+(op(index,finallist)&lt;=currentupperlim)) do
+ 				counter:=counter+1:
+ 				index:=index+1:
+ 			od:
+ 			result:=[op(result),counter]:
+ 			currentupperlim:=currentupperlim+dx:
+ 		od:
+ 		for j from 1 to k do
+ 			linelist:=[op(linelist),[xmin + (j-1)*dx,0]]:
+ 			linelist:=[op(linelist),[xmin +
+(j-1)*dx,op(j,result)/(leng*dx)]]:
+ 			linelist:=[op(linelist),[xmin +
+j*dx,op(j,result)/(leng*dx)]]:
+ 			linelist:=[op(linelist),[xmin + j*dx,0]]:
+ 	 od:
+ 	 lines:=linelist:		
+  end:
+  f(k,sorteddata,xmin,dx,xmax,lines):  
+plot(lines,style=LINE);
+end:
+</TT>
+<P>
+<TT>"Here we plug in the  function f of the uniform random variable on the
+unit interval ,  the number of times n we will average an experiment with
+this distribution, and  m the numbers of trials of this average. Then we 
+see the density function of the average.";
+</TT>
+<P>
+<TT>Weak := proc(f,n,m)  
+</TT>
+<P>
+<TT>local  trans, U, explist, i , j, l, sum,average,avlist,xmin,xmax: 
+</TT>
+<P>
+<TT>with(stats): 
+</TT>
+<P>
+<TT>avlist:=[];
+</TT>
+<P>
+<TT>for l from 1 to m
+</TT>
+<P>
+<TT>do;  
+</TT>
+<P>
+<TT>explist:=[];
+</TT>
+<P>
+<TT>for i from 1 to n 
+</TT>
+<P>
+<TT>do; 
+</TT>
+<P>
+<TT>trans:=unapply(f,x): 
+</TT>
+<P>
+<TT>U := random[uniform[0,1]](); 
+</TT>
+<P>
+<TT>explist := [op(explist), trans(U)]; 
+</TT>
+<P>
+<TT>od;  
+</TT>
+<P>
+<TT>sum:=0;  
+</TT>
+<P>
+<TT>for j from 1 to n 
+</TT>
+<P>
+<TT>do 
+</TT>
+<P>
+<TT>sum := sum + explist[j];  
+</TT>
+<P>
+<TT>average := sum/n; 
+</TT>
+<P>
+<TT>od; 
+</TT>
+<P>
+<TT>avlist := [op(avlist),average];
+</TT>
+<P>
+<TT>od;
+</TT>
+<P>
+<TT>xmax := max(op(avlist));
+</TT>
+<P>
+<TT>xmin:= min(op(avlist));
+</TT>
+<P>
+<TT>Areabargraph(avlist,xmin - .5,xmax   + .5,30); 
+</TT>
+<P>
+<TT>end:
+</TT>
+<P>
+<TT>"The uniform example";
+</TT>
+<P>
+<TT>Weak(x,100,100);
+</TT>
+<P>
+<TT>"The exponential example";
+</TT>
+<P>
+<TT>Weak(-ln(-x+1),100,100);
+</TT>
+<P>
+<TT>"The geometric example";
+</TT>
+<P>
+<TT>Weak(ceil(ln(1-x)/ln(.5)),100,100);
+"we need a slight modification for the Cauchy example";
+</TT>
+<P>
+<TT>WeakC := proc(f,n,m)  
+</TT>
+<P>
+<TT>local  trans, U, explist, i , j, l, sum,average,avlist,xmin,xmax: 
+  with(stats): 
+avlist:=[];
+for l from 1 to m
+do;  
+explist:=[];
+ for i from 1 to n 
+ do; 
+  trans:=unapply(f,x): 
+ U := random[uniform[0,1]](); 
+explist := [op(explist), trans(U)]; 
+ od;  
+sum:=0;  
+ for j from 1 to n 
+ do 
+ sum := sum + explist[j];  
+average := sum/n; 
+od; 
+avlist := [op(avlist),average];
+od;
+xmax := max(op(avlist));
+xmin:= min(op(avlist));
+Areabargraph(avlist,-10,10,30); 
+ end:
+"The Cauchy example";
+WeakC(tan(evalf(Pi)*(x+ 1/2)),1,200);
+</TT>
+<P>
+<TT>"The Cauchy example";
+WeakC(tan(evalf(Pi)*(x+ 1/2)),100,200);
+</TT>
+<P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Math 60 Spring 2000</I>
+<BR><I>2000-05-06</I>
+</ADDRESS>
+</BODY>
+</HTML>

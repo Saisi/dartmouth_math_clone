@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Slideshow for album :: Bradley Demolition</title>
+<meta http-equiv="content-style-type" content="text/css">
+  <meta http-equiv="content-type" content="Mime-Type; charset=utf-8">
+  <meta name="content-language" content="en-US">
+
+  <link rel="stylesheet" type="text/css" href="css/base.css.default">
+  <link rel="stylesheet" type="text/css" href="skins/bars002/css/screen.css">
+  <link rel="shortcut icon" href="https://www.math.dartmouth.edu/gallery/images/favicon.ico">
+</head>
+<body dir="ltr">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+	<table cellpadding="0" cellspacing="0" width="100%" border="0" align="center" class="mod_headliner">
+        <tr valign="middle">
+		<td class="leftspacer"></td>
+		<td>
+		<table cellspacing="0" cellpadding="0" class="mod_toplight_bg">
+		<tr>
+            <td class="mod_toplight_left" align="right"></td>
+			<td class="head" align="left">&nbsp;Slideshow for album :: Bradley Demolition&nbsp;</td>
+            <td class="mod_toplight_right" align="left"></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	</table>
+	<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="mod_under_hl"></td>
+	</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td  align="center" valign="top">
+
+<script src="https://www.math.dartmouth.edu/gallery/js/client_sniff.js" type="text/javascript"></script>
+<script type="text/javascript">
+</script>
+
+<script type="text/javascript">
+var timer;
+var current_location = 1;
+var next_location = 1;
+var pics_loaded = 0;
+var onoff = 0;
+var timeout_value;
+var images = new Array;
+var photo_urls = new Array;
+var photo_captions = new Array;
+var loop = 0;
+var full = 0;
+var direction = 1;
+photo_urls[1] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2175.sized.jpg";
+photo_captions[1] = "DSCN2175.JPG";
+photo_urls[2] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2176.sized.jpg";
+photo_captions[2] = "DSCN2176.JPG";
+photo_urls[3] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2177.sized.jpg";
+photo_captions[3] = "DSCN2177.JPG";
+photo_urls[4] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2208.sized.jpg";
+photo_captions[4] = "DSCN2208.JPG";
+photo_urls[5] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2209.sized.jpg";
+photo_captions[5] = "DSCN2209.JPG";
+photo_urls[6] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2210.sized.jpg";
+photo_captions[6] = "DSCN2210.JPG";
+photo_urls[7] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2212.sized.jpg";
+photo_captions[7] = "DSCN2212.JPG";
+photo_urls[8] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2213.sized.jpg";
+photo_captions[8] = "DSCN2213.JPG";
+photo_urls[9] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2215.sized.jpg";
+photo_captions[9] = "DSCN2215.JPG";
+photo_urls[10] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2218.sized.jpg";
+photo_captions[10] = "DSCN2218.JPG";
+photo_urls[11] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2220.sized.jpg";
+photo_captions[11] = "DSCN2220.JPG";
+photo_urls[12] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2222.sized.jpg";
+photo_captions[12] = "DSCN2222.JPG";
+photo_urls[13] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2227.sized.jpg";
+photo_captions[13] = "DSCN2227.JPG";
+photo_urls[14] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2225.sized.jpg";
+photo_captions[14] = "DSCN2225.JPG";
+photo_urls[15] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2226.sized.jpg";
+photo_captions[15] = "DSCN2226.JPG";
+photo_urls[16] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2227_001.sized.jpg";
+photo_captions[16] = "DSCN2227.JPG";
+photo_urls[17] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2229.sized.jpg";
+photo_captions[17] = "DSCN2229.JPG";
+photo_urls[18] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2230.sized.jpg";
+photo_captions[18] = "DSCN2230.JPG";
+photo_urls[19] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2231.sized.jpg";
+photo_captions[19] = "DSCN2231.JPG";
+photo_urls[20] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2232.sized.jpg";
+photo_captions[20] = "DSCN2232.JPG";
+photo_urls[21] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2233.sized.jpg";
+photo_captions[21] = "DSCN2233.JPG";
+photo_urls[22] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2234.sized.jpg";
+photo_captions[22] = "DSCN2234.JPG";
+photo_urls[23] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2235.sized.jpg";
+photo_captions[23] = "DSCN2235.JPG";
+photo_urls[24] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2236.sized.jpg";
+photo_captions[24] = "DSCN2236.JPG";
+photo_urls[25] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2237.sized.jpg";
+photo_captions[25] = "DSCN2237.JPG";
+photo_urls[26] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2238.sized.jpg";
+photo_captions[26] = "DSCN2238.JPG";
+photo_urls[27] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2239.sized.jpg";
+photo_captions[27] = "DSCN2239.JPG";
+photo_urls[28] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2240.sized.jpg";
+photo_captions[28] = "DSCN2240.JPG";
+photo_urls[29] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2241.sized.jpg";
+photo_captions[29] = "DSCN2241.JPG";
+photo_urls[30] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2242.sized.jpg";
+photo_captions[30] = "DSCN2242.JPG";
+photo_urls[31] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2244.sized.jpg";
+photo_captions[31] = "DSCN2244.JPG";
+photo_urls[32] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2245.sized.jpg";
+photo_captions[32] = "DSCN2245.JPG";
+photo_urls[33] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2247.sized.jpg";
+photo_captions[33] = "DSCN2247.JPG";
+photo_urls[34] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2248.sized.jpg";
+photo_captions[34] = "DSCN2248.JPG";
+photo_urls[35] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2249.sized.jpg";
+photo_captions[35] = "DSCN2249.JPG";
+photo_urls[36] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2250.sized.jpg";
+photo_captions[36] = "DSCN2250.JPG";
+photo_urls[37] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2251.sized.jpg";
+photo_captions[37] = "DSCN2251.JPG";
+photo_urls[38] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2252.sized.jpg";
+photo_captions[38] = "DSCN2252.JPG";
+photo_urls[39] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2254.sized.jpg";
+photo_captions[39] = "DSCN2254.JPG";
+photo_urls[40] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2255.sized.jpg";
+photo_captions[40] = "DSCN2255.JPG";
+photo_urls[41] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2256.sized.jpg";
+photo_captions[41] = "DSCN2256.JPG";
+photo_urls[42] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2257.sized.jpg";
+photo_captions[42] = "DSCN2257.JPG";
+photo_urls[43] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2258.sized.jpg";
+photo_captions[43] = "DSCN2258.JPG";
+photo_urls[44] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2259.sized.jpg";
+photo_captions[44] = "DSCN2259.JPG";
+photo_urls[45] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2260.sized.jpg";
+photo_captions[45] = "DSCN2260.JPG";
+photo_urls[46] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2261.sized.jpg";
+photo_captions[46] = "DSCN2261.JPG";
+photo_urls[47] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2262.sized.jpg";
+photo_captions[47] = "DSCN2262.JPG";
+photo_urls[48] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2263.sized.jpg";
+photo_captions[48] = "DSCN2263.JPG";
+photo_urls[49] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2264.sized.jpg";
+photo_captions[49] = "DSCN2264.JPG";
+photo_urls[50] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2265.sized.jpg";
+photo_captions[50] = "DSCN2265.JPG";
+photo_urls[51] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2266.sized.jpg";
+photo_captions[51] = "DSCN2266.JPG";
+photo_urls[52] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2267.sized.jpg";
+photo_captions[52] = "DSCN2267.JPG";
+photo_urls[53] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2268.sized.jpg";
+photo_captions[53] = "DSCN2268.JPG";
+photo_urls[54] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2269.sized.jpg";
+photo_captions[54] = "DSCN2269.JPG";
+photo_urls[55] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2270.sized.jpg";
+photo_captions[55] = "DSCN2270.JPG";
+photo_urls[56] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2271.sized.jpg";
+photo_captions[56] = "DSCN2271.JPG";
+photo_urls[57] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2272.sized.jpg";
+photo_captions[57] = "DSCN2272.JPG";
+photo_urls[58] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2273.sized.jpg";
+photo_captions[58] = "DSCN2273.JPG";
+photo_urls[59] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2274.sized.jpg";
+photo_captions[59] = "DSCN2274.JPG";
+photo_urls[60] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2275.sized.jpg";
+photo_captions[60] = "DSCN2275.JPG";
+photo_urls[61] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2276.sized.jpg";
+photo_captions[61] = "DSCN2276.JPG";
+photo_urls[62] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2277.sized.jpg";
+photo_captions[62] = "DSCN2277.JPG";
+photo_urls[63] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2278.sized.jpg";
+photo_captions[63] = "DSCN2278.JPG";
+photo_urls[64] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2279.sized.jpg";
+photo_captions[64] = "DSCN2279.JPG";
+photo_urls[65] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2280.sized.jpg";
+photo_captions[65] = "DSCN2280.JPG";
+photo_urls[66] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2282.sized.jpg";
+photo_captions[66] = "DSCN2282.JPG";
+photo_urls[67] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2283.sized.jpg";
+photo_captions[67] = "DSCN2283.JPG";
+photo_urls[68] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2284.sized.jpg";
+photo_captions[68] = "DSCN2284.JPG";
+photo_urls[69] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2285.sized.jpg";
+photo_captions[69] = "DSCN2285.JPG";
+photo_urls[70] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2286.sized.jpg";
+photo_captions[70] = "DSCN2286.JPG";
+photo_urls[71] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2287.sized.jpg";
+photo_captions[71] = "DSCN2287.JPG";
+photo_urls[72] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2288.sized.jpg";
+photo_captions[72] = "DSCN2288.JPG";
+photo_urls[73] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2289.sized.jpg";
+photo_captions[73] = "DSCN2289.JPG";
+photo_urls[74] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2290.sized.jpg";
+photo_captions[74] = "DSCN2290.JPG";
+photo_urls[75] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2291.sized.jpg";
+photo_captions[75] = "DSCN2291.JPG";
+photo_urls[76] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2292.sized.jpg";
+photo_captions[76] = "DSCN2292.JPG";
+photo_urls[77] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2293.sized.jpg";
+photo_captions[77] = "DSCN2293.JPG";
+photo_urls[78] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2294.sized.jpg";
+photo_captions[78] = "DSCN2294.JPG";
+photo_urls[79] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2295.sized.jpg";
+photo_captions[79] = "DSCN2295.JPG";
+photo_urls[80] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2296.sized.jpg";
+photo_captions[80] = "DSCN2296.JPG";
+photo_urls[81] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2297.sized.jpg";
+photo_captions[81] = "DSCN2297.JPG";
+photo_urls[82] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2298.sized.jpg";
+photo_captions[82] = "DSCN2298.JPG";
+photo_urls[83] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2299.sized.jpg";
+photo_captions[83] = "DSCN2299.JPG";
+photo_urls[84] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2300.sized.jpg";
+photo_captions[84] = "DSCN2300.JPG";
+photo_urls[85] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/DSCN2301.sized.jpg";
+photo_captions[85] = "DSCN2301.JPG";
+photo_urls[86] = "https://www.math.dartmouth.edu/albums/KH-Bradley-Demolition/bradley_1.sized.jpg";
+photo_captions[86] = "bradley-1.JPG";
+var photo_count = 86;
+
+function stop() {
+    onoff = 0;
+    status = "The slideshow is stopped, click [play] to resume.";
+    clearTimeout(timer);
+}
+
+function play() {
+    onoff = 1;
+    status = "Slideshow is running...";
+    wait_for_current_photo();
+}
+
+function toggleLoop() {
+    if (loop) {
+        loop = 0;
+    } else {
+        loop = 1;
+    }
+}
+
+function reset_timer() {
+    clearTimeout(timer);
+    if (onoff) {
+        timeout_value = document.TopForm.time.options[document.TopForm.time.selectedIndex].value * 1000;
+        timer = setTimeout('go_to_next_page()', timeout_value);
+    }
+}
+
+function wait_for_current_photo() {
+
+    /* Show the current photo */
+    if (!show_current_photo()) {
+
+        /*
+        * The current photo isn't loaded yet.  Set a short timer just to wait
+        * until the current photo is loaded.
+        */
+        status = "Picture is loading...(" + current_location + " of " + photo_count +
+        ").  Please Wait..." ;
+
+        clearTimeout(timer);
+        timer = setTimeout('wait_for_current_photo()', 500);
+        return 0;
+    }
+	else {
+        preload_next_photo();
+        reset_timer();
+    }
+}
+
+function go_to_next_page() {
+
+    var slideShowUrl = "https://www.math.dartmouth.edu/gallery/slideshow.php?set_albumName=KH-Bradley-Demolition&mode=low";
+
+    document.location = slideShowUrl + "&slide_index=" + next_location + "&slide_full=" + full
+        + "&slide_loop=" + loop + "&slide_pause=" + (timeout_value / 1000)
+        + "&slide_dir=" + direction;
+    return 0;
+}
+
+function preload_next_photo() {
+
+    /* Calculate the new next location */
+    next_location = (parseInt(current_location) + parseInt(direction));
+    if (next_location > photo_count) {
+        next_location = 1;
+        if (!loop) {
+            stop();
+        }
+    }
+    if (next_location < 1) {
+        next_location = photo_count;
+        if (!loop) {
+            stop();
+        }
+    }
+
+    /* Preload the next photo */
+    preload_photo(next_location);
+}
+
+function show_current_photo() {
+
+    /*
+    * If the current photo is not completely loaded don't display it.
+    */
+    if (!images[current_location] || !images[current_location].complete) {
+        preload_photo(current_location);
+        return 0;
+    }
+
+    return 1;
+}
+
+function preload_photo(index) {
+
+    /* Load the next picture */
+    if (pics_loaded < photo_count) {
+
+        /* not all the pics are loaded.  Is the next one loaded? */
+        if (!images[index]) {
+            images[index] = new Image;
+            images[index].src = photo_urls[index];
+            pics_loaded++;
+        }
+    }
+}
+
+</script>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td class="navtableborderbegin">
+<table width="100%"  cellspacing="0" cellpadding="0" id="adminbox">
+  <tr>
+    <td align="left">Slide Show</td>
+    <td align="right">
+	<form name="admin_options_form" action="view_album.php">
+	&nbsp;<a href="slideshow.php-mode=high&set_albumName=KH-Bradley-Demolition.html">[Modern browsers]</a>&nbsp;Compatible but limited	</form>
+    </td>
+  </tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td class="navtableborderend">
+
+<table style="" width="100%" border="0" cellspacing="0" cellpadding="0" class="modnavboxmid">
+<tr>
+	
+	<td class="bread" style="text-align:right; padding-left: 5px; padding-right: 5px;">
+			Gallery: <a href="albums.php.html">Math Department Photos&nbsp;<img src="https://www.math.dartmouth.edu/gallery/images/icons/navigation/nav_home.gif" alt="navigate up" title="navigate up"></a>
+
+		Album: <a href="Kemeny-Haldeman-Project.html">Kemeny-Haldeman Construction&nbsp;<img src="https://www.math.dartmouth.edu/gallery/images/icons/navigation/nav_home.gif" alt="navigate up" title="navigate up"></a>
+
+		Album: <a href="KH-Bradley-Demolition.html">Bradley Demolition&nbsp;<img src="https://www.math.dartmouth.edu/gallery/images/icons/navigation/nav_home.gif" alt="navigate up" title="navigate up"></a>
+
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+<tr>
+	<td class="navtableborderend">
+<form name="TopForm" style="margin:0px" action="#">
+
+<table id="menu" align="right"><tr>
+	<td><a href="slideshow.php-mode=low&set_albumName=KH-Bradley-Demolition.html#" onClick="stop(); return false;">[Stop]</a></td>
+	<td><a href="slideshow.php-mode=low&set_albumName=KH-Bradley-Demolition.html#" onClick="play(); return false;">[Play]</a></td>
+	<td><a href="slideshow.php-set_albumName=KH-Bradley-Demolition&slide_index=1&slide_loop=0&slide_pause=3&slide_full=0&slide_dir=-1&mode=low.html">[Forward direction]</a></td>
+	<td><a href="slideshow.php-set_albumName=KH-Bradley-Demolition&slide_index=1&slide_loop=0&slide_pause=3&slide_full=1&slide_dir=1&mode=low.html">[Full size]</a></td>
+	<td class="noLink">[Delay]:</td>
+	<td class="noLink"><select name="time" size="1" onchange="reset_timer()" class="adminform"><option value="1">1 second</option><option value="2">2 seconds</option><option value="3" selected>3 seconds</option><option value="5">5 seconds</option><option value="10">10 seconds</option><option value="15">15 seconds</option><option value="30">30 seconds</option><option value="45">45 seconds</option><option value="60">1 Minute</option></select></td>
+</tr>
+</table></form>
+	</td>
+</tr>
+</table>
+
+<br><div align="center">
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td>
+	<script type="text/javascript">
+	    document.write("<img border==1 bgcolor=black src="+photo_urls[1]+" name=slide>");
+	</script>
+</tr>
+</table>
+
+<br>
+
+<script type="text/javascript">
+/* show the caption either in a nice div or an ugly form textarea */
+document.write("<div class='pcaption'>" + "[" + current_location + " of " + photo_count + "] " + photo_captions[1] + "</div>");
+
+/* Start the show. */
+play();
+
+</script>
+
+</div>
+
+      <table width="100%" cellspacing="0" cellpadding="0" class="modfooter">
+        <tr>
+          <td valign="top">
+            <!-- The Gallery code version number, linked to the Gallery home page -->
+            <span class="fineprint">
+	    <a href="http://gallery.sourceforge.net" target="_blank"><img src="https://www.math.dartmouth.edu/gallery/images/gallery1.gif" alt="Powered by Gallery v1" title="Powered by Gallery v1"></a>
+<!-- 1.5.10.dfsg-debian1 -->            </span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

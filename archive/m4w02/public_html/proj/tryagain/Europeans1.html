@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Europeans.html</title>
+<!-- Created by Maple 6.02, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>JPAK1:=proc(T0,I0,N,T)<br>
+local i,List,Deltat,Val,Time;<br>
+Digits:=5;<br>
+Val:=I0;<br>
+Time:=T0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-T0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(<br>
+(2.5/7-1/60)*Val[1]*(1-Val[1]/500)<br>
+-<br>
+(<br>
+(.5/12)*<br>
+(1/(500*3000))<br>
+)*<br>
+Val[2]*Val[1]<br>
+-(3/6)*(1/500*300)*<br>
+Val[3]*Val[1]-(4/7)*Val[3]<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+(2/25-1/70)*(1-Val[2]/3000)<br>
+*Val[2]<br>
+)<br>
+),<br>
+evalf(Val[3]+Deltat*(1/60*Val[3]*(1-Val[3]/300) <br>
+-((1/190)*Val[2])*(1/(300*3000))<br>
+*Val[3]<br>
++<br>
+(<br>
+(40/30)*<br>
+(1/(190*100))<br>
+)*<br>
+Val[1]*Val[3]<br>
+))<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+List;<br>
+end: <br>
+<br>
+<br>
+Make1:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][1]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make2:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][1],List[i][2][3]]];<br>
+od;<br>
+NewList <br>
+end: <br>
+                             </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>JPAK1(0,[10,1,1],3,10);</font></b>
+</p>
+<p align=left>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Europeans1.gif" width=395 height=29 alt="[[0, [10, 1, 1]], [10/3, [9.2176, 1.2190, 1.0577]],...">
+<br>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Europeans2.gif" width=168 height=29 alt="[[0, [10, 1, 1]], [10/3, [9.2176, 1.2190, 1.0577]],...">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=JPAK1(0,[32,30,1],1000,200):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>V0:=Make1(S0):<br>
+V1:=Make2(S0):<br>
+V2:=Make3(S0):                                                                                                                                                                                                                               with(plots):<br>
+<br>
+</font></b>
+</p>
+<p align=left>
+<tt><pre><font color=#0000FF size=2>Warning, the name changecoords has been redefined<br>
+</font></pre></tt>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000><br>
+P0:=listplot(V0,color=red,legend="Kakapo"):<br>
+P1:=listplot(V1,color=blue,legend="People"):<br>
+<br>
+P2:=listplot(V2,color=black,legend="Predators"):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(P0,P1,P2,title="Time vs Kakapo and People and Predators",labels=[Years,Population]); <br>
+</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Europeans3.gif" width=336 height=249 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(P1,title="Time vs  Europeans",labels=[Years,Population]); <br>
+</font></b>
+</p>
+<p align=center>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=center>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Europeans4.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(P2,title="Time vs Predators",labels=[Years,Population]); <br>
+</font></b>
+</p>
+<p align=center>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/proj/tryagain/t1Im/Europeans5.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

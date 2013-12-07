@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The quantum band profile case</TITLE>
+<META NAME="description" CONTENT="The quantum band profile case">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node39.html">
+<LINK REL="up" HREF="node38.html">
+<LINK REL="next" HREF="node41.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html691"
+  HREF="node41.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html689"
+  HREF="node38.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html685"
+  HREF="node39.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html692"
+  HREF="node41.html">The WNA revisited cavity</A>
+<B> Up:</B> <A NAME="tex2html690"
+  HREF="node38.html">`Special' deformations</A>
+<B> Previous:</B> <A NAME="tex2html686"
+  HREF="node39.html">Band profile power laws</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00432000000000000000"></A>
+<A NAME="sec:qmspecial"></A>
+<BR>
+The quantum band profile case
+</H2>
+
+<P>
+The understanding of the special deformation
+class came from classical arguments.
+We might wonder, is this special property is preserved for the
+quantum band profile? The answer is yes: for instance the
+graphs labelled DI in Fig.&nbsp;<A HREF="node39.html#fig:qust">3.7</A>
+show that the special nature of dilation is preserved to the 
+accuracy
+of the quantum calculation.
+(The corresponding <!-- MATH
+ $(\partial {\mathcal{H}} / \partial x)_{nm}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img295.gif"
+ ALT="$(\partial {\mathcal{H}} / \partial x)_{nm}$"> matrix is shown in
+Fig.&nbsp;<A HREF="node73.html#fig:dilmatimage">6.2</A>).
+Here I used the quarter stadium billiard (Fig.&nbsp;<A HREF="node27.html#fig:bil">2.6</A>)
+for the simple reason that efficient quantization methods exist
+for this shape (Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A>), but, as yet, do not exist for the
+generalized Sinai billiard (Fig.&nbsp;<A HREF="node33.html#fig:gsinai">3.2</A>).
+Agreement with the classical result, and hence the power law,
+is maintained down to the point at which errors in the
+quantum calculation become dominant--this is visible as bottoming-out
+in the leftmost point of the log-log inset plot, at <IMG
+ WIDTH="65" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img570.gif"
+ ALT="$\sim 10^{-10}$">.
+Therefore the QCC demonstrated in Section&nbsp;<A HREF="node27.html#sec:qcc">2.3</A>
+also holds for special deformations.
+This will have profound consequences for the numerical method presented in
+Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A>.
+
+<P>
+Is there a simpler direct route to the special power-law band profile behavior
+involving quantum-mechanical (wave) considerations alone?
+Koonin <I>et al. </I>[<A
+ HREF="node161.html#kooninqm">118</A>] have derived the vanishing of the quantum
+<!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$">
+for translations and rotations.
+Berry and Wilkinson [<A
+ HREF="node161.html#berrywilk">28</A>] have shown that off-diagonal matrix
+elements vanish for translations, rotations and dilations,
+in the case of exact degeneracy (<I>i.e. </I><!-- MATH
+ $\omega_{nm} = 0$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img571.gif"
+ ALT="$\omega_{nm} = 0$">).
+However, neither of these results addresses the finite <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$"> dependence.
+It is clear that direct application of a random wave assumption, which leads
+to (<A HREF="node36.html#e12">3.12</A>), completely
+fails to predict the band profile for special deformations
+(agreement is only reached when <!-- MATH
+ $\omega \gg \tau_{{\mbox{\tiny bl}}}^{-1}$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img522.gif"
+ ALT="$\omega \gg \tau_{{\mbox{\tiny bl}}}^{-1}$">).
+More generally, it can be said that the random wave approximation fails
+whenever <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$"> is significant on a large fraction of the boundary.
+
+<P>
+It might be that there exists some transformation from the boundary overlap
+form Eq.(<A HREF="node126.html#eq:defmatel">C.2</A>) to another overlap integral which can be estimated
+well by a random wave approximation.
+For instance, (<A HREF="node146.html#eq:posmateldir">H.23</A>) gives <!-- MATH
+ $(\partial {\mathcal{H}} / \partial x)_{nm}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img295.gif"
+ ALT="$(\partial {\mathcal{H}} / \partial x)_{nm}$">
+for translation in terms of the dipole
+matrix element
+(a weighted overlap of eigenstates in the billiard interior).
+A random wave argument for this overlap would predict the correct
+power law <IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img71.gif"
+ ALT="$\gamma = 4$"> for the band profile.
+A similar effort has been made in the dilation case [<A
+ HREF="node161.html#v+s">195</A>], however,
+as discussed in
+Section&nbsp;<A HREF="node74.html#sec:quasi">6.1.2</A> this leads to the wrong power law.
+Generally the use of random waves for such overlap estimates is 
+dangerous.
+No relation has been found relating to rotations.
+The prediction of special deformation band profiles using wave manipulations
+alone (<I>e.g. </I>of the type in Appendix&nbsp;<A HREF="node137.html#ap:perim">H</A>) is an area for
+research.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html691"
+  HREF="node41.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html689"
+  HREF="node38.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html685"
+  HREF="node39.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html692"
+  HREF="node41.html">The WNA revisited cavity</A>
+<B> Up:</B> <A NAME="tex2html690"
+  HREF="node38.html">`Special' deformations</A>
+<B> Previous:</B> <A NAME="tex2html686"
+  HREF="node39.html">Band profile power laws</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

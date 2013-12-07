@@ -1,0 +1,506 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Chapters 2,3 and 4: Dissipation rate and
+deformations of chaotic billiards</TITLE>
+<META NAME="description" CONTENT="Chapters 2,3 and 4: Dissipation rate and
+deformations of chaotic billiards">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html338"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html336"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html330"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html339"
+  HREF="node9.html">Chapters 5 and 6:</A>
+<B> Up:</B> <A NAME="tex2html337"
+  HREF="node6.html">Chapter 1: Introduction and summary</A>
+<B> Previous:</B> <A NAME="tex2html331"
+  HREF="node7.html">Structure of this thesis</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00220000000000000000">
+Chapters 2,3 and 4: Dissipation rate and
+deformations of chaotic billiards</A>
+</H1>
+
+<P>
+The dynamics of a particle inside a cavity
+(billiard) in <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img47.gif"
+ ALT="$d=2$"> or 3 dimensions 
+is a major theme in studies of classical and quantum chaos
+[<A
+ HREF="node161.html#ottbook">154</A>,<A
+ HREF="node161.html#hellerleshouches">91</A>,<A
+ HREF="node161.html#berryleshouches">25</A>].
+Whereas the physics of time-independent chaotic systems 
+is extensively explored, less is known 
+about the physics when such a system is `driven' (time-dependent
+chaotic Hamiltonian).
+The main exceptions are the studies of 
+the kicked rotator and related systems [<A
+ HREF="node161.html#qkr">75</A>]. 
+However, the rotator (with no kicks) 
+is a <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img48.gif"
+ ALT="$d=1$"> integrable system, whereas we 
+are interested in chaotic (<IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img49.gif"
+ ALT="$d\ge2$">) cavities.
+
+<P>
+Driven cavities have been of special interest since the 1970s in
+studies of the so-called `one-body' dissipation rate in vibrating nuclei 
+[<A
+ HREF="node161.html#wall">29</A>,<A
+ HREF="node161.html#koonincl">120</A>,<A
+ HREF="node161.html#kooninqm">118</A>,<A
+ HREF="node161.html#jarz92">106</A>,<A
+ HREF="node161.html#jarz93">107</A>].
+A renewed interest in this problem is anticipated
+in the field of mesoscopic physics. Quantum dots [<A
+ HREF="node161.html#been">20</A>,<A
+ HREF="node161.html#dittrich">65</A>]
+can be regarded as small 2D cavities whose shape 
+is controlled by electrical gates. Quasiparticle motion inside the dot
+can have long coherence (dephasing) times,
+and enable the semiclassical regime to be approached (many wavelengths
+across the system).
+
+<P>
+In Chapter&nbsp;<A HREF="node12.html#ch:review">2</A> I give tutorial review of the
+theory of dissipation in general driven
+ergodic systems, which is quite a young field.
+The Hamiltonian is controlled by a single parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">, whose
+time-dependence will be <!-- MATH
+ $x(t)=A\sin(\omega t)$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img51.gif"
+ ALT="$x(t)=A\sin(\omega t)$"> where <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img52.gif"
+ ALT="$A$"> is the amplitude  
+and <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$"> is the driving frequency.
+In both the classical (Section&nbsp;<A HREF="node13.html#sec:classreview">2.1</A>) and quantum-mechanical
+(Section&nbsp;<A HREF="node20.html#sec:qmreview">2.2</A>) pictures, dissipation is a result of
+<EM>stochastic energy spreading</EM>.
+Once this spreading is established, the pictures can be unified [<A
+ HREF="node161.html#doronfrc">46</A>].
+Irreversible growth of energy (heating) is then a result of biased diffusion
+(a random walk) in energy.
+I will confine myself to a regime where linear response theory (LRT) is valid.
+In the quantum case this is known as the Kubo formalism, although the
+language of the energy spreading picture appears different (I connect the
+two pictures in Section&nbsp;<A HREF="node25.html#sec:resp">2.2.5</A>).
+The heating rate is given by
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{d}{dt}\langle {\mathcal{H}} \rangle \ = \
+	\mu(\omega) \cdot \mbox{\small$\frac{1}{2}$}(A\omega)^2,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="i_heat"></A><IMG
+ WIDTH="374" HEIGHT="43" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img53.gif"
+ ALT="\begin{displaymath}
+\frac{d}{dt}\langle {\mathcal{H}} \rangle \ = \
+\mu(\omega) \cdot \mbox{\small$\frac{1}{2}$}(A\omega)^2,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the `friciton coefficient' <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img40.gif"
+ ALT="$\mu(\omega)$"> is related
+linearly<A NAME="tex2html1"
+  HREF="footnode.html#foot728"><SUP>1.1</SUP></A>to <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$">, the correlation spectrum
+of the time-dependent fluctuating quantity
+<!-- MATH
+ $-\partial {\mathcal{H}}/\partial x$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img55.gif"
+ ALT="$-\partial {\mathcal{H}}/\partial x$">.
+The latter (a generalized `force' on the parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">) specifies the
+random `kicks' up or down in energy that particles receive.
+In the quantum case <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> is the `band profile' (average off-diagonal shape)
+of the matrix <!-- MATH
+ $\partial {\mathcal{H}}/\partial x$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img56.gif"
+ ALT="$\partial {\mathcal{H}}/\partial x$"> in the energy representation.
+In Section&nbsp;<A HREF="node27.html#sec:qcc">2.3</A> I demonstrate theoretically and numerically the
+semiclassical equivalence of the classical and quantum versions of <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$">,
+and examine quantum effects beyond the band profile.
+
+<P>
+In Chapters&nbsp;<A HREF="node32.html#ch:dil">3</A> and <A HREF="node42.html#ch:wall">4</A> we specialize to a
+system of non-interacting particles
+inside a billiard whose walls are deformed by the parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">.
+One can specify any deformation by a function <!-- MATH
+ $D({\mathbf s})$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img57.gif"
+ ALT="$D({\mathbf s})$">,
+where&nbsp;<IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img58.gif"
+ ALT="${\mathbf s}$"> specifies location of a wall element
+on the boundary (surface) of the billiard,
+and <!-- MATH
+ $D({\mathbf s})x$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img59.gif"
+ ALT="$D({\mathbf s})x$"> is the resulting normal displacement of this
+wall element.
+We will be interested in low-frequency driving, 
+meaning <!-- MATH
+ $\omega \ll 1/\tau_{{\mbox{\tiny bl}}}$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img60.gif"
+ ALT="$\omega \ll 1/\tau_{{\mbox{\tiny bl}}}$"> the mean collision frequency.
+In the <!-- MATH
+ $\omega\rightarrow0$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img61.gif"
+ ALT="$\omega\rightarrow0$"> limit (uniform parameter velocity <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img62.gif"
+ ALT="$\dot{x}$">),
+the heating rate (<A HREF="node8.html#i_heat">1.1</A>) is given by the dc friction
+<IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img46.gif"
+ ALT="$\mu(0)$"> proportional to
+<!-- MATH
+ $\nu_{{\mbox{\tiny E}}}= \tilde{C}_{{\mbox{\tiny E}}}(\omega\rightarrow0)$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img63.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}= \tilde{C}_{{\mbox{\tiny E}}}(\omega\rightarrow0)$">.
+An assumption of uncorrelated collisions
+(the white noise approximation or WNA)
+gives an estimate for <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$">, which in turn in <IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img65.gif"
+ ALT="$d=3$">
+leads to the well-known
+`wall formula' [<A
+ HREF="node161.html#wall">29</A>] (from the nuclear application),
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mu_{{\mbox{\tiny E}}} \  = \ \frac{N}{\mathsf{V}} 
+        m v_{{\mbox{\tiny E}}} \oint D({\mathbf s})^2 d{\mathbf s}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="376" HEIGHT="44" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img66.gif"
+ ALT="\begin{displaymath}
+\mu_{{\mbox{\tiny E}}} \ = \ \frac{N}{\mathsf{V}}
+m v_{{\mbox{\tiny E}}} \oint D({\mathbf s})^2 d{\mathbf s}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This (<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img42.gif"
+ ALT="$\omega$">-independent) estimate of the friction applies to
+a microcanonical ensemble of <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img67.gif"
+ ALT="$N$"> particles
+with speed <!-- MATH
+ $v_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img68.gif"
+ ALT="$v_{{\mbox{\tiny E}}}$"> in a billiard volume <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img69.gif"
+ ALT="${\mathsf{V}}$">.
+
+<P>
+We analyze <IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img40.gif"
+ ALT="$\mu(\omega)$"> numerically in 2D billiard shapes (generalized Sinai,
+and Bunimovich stadium). We believe this is the first study of frequency-dependent
+heating rate in billiard systems.
+The chief discovery (Section&nbsp;<A HREF="node38.html#sec:spec">3.3</A>)
+is a class of deformations whose heating rate
+vanishes in the <!-- MATH
+ $\omega\rightarrow0$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img61.gif"
+ ALT="$\omega\rightarrow0$">
+limit, like a power-law <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)\sim \omega^\gamma$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img70.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)\sim \omega^\gamma$">.
+This holds even for billiards with strong chaos,
+and goes completely against the WNA prediction.
+The class of `special' deformations
+turns out to be just the class which preserves the billiard shape.
+For translations and dilations <IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img71.gif"
+ ALT="$\gamma = 4$"> and for rotations <IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img72.gif"
+ ALT="$\gamma = 2$">.
+This is to be compared to the case of a generic deformation, for which
+<IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img73.gif"
+ ALT="$\gamma = 0$"> as the WNA prediction would predict.
+We give classical explanations for the power-laws (which
+rely on correlation on short timescales <!-- MATH
+ $\sim \tau_{{\mbox{\tiny bl}}}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img74.gif"
+ ALT="$\sim \tau_{{\mbox{\tiny bl}}}$">).
+Importantly, the special class is manifested in the quantum band profile too.
+Thus the special nature of dilation, believed to be new in the literature,
+corresponds to a quasi-orthogonality relation between
+eigenstates on the boundary,
+which in turn will be the key to the powerful
+numerical method of Chapter&nbsp;<A HREF="node71.html#ch:verg">6</A>.
+We also discuss (Section&nbsp;<A HREF="node41.html#sec:wnarev">3.4</A>) non-generic shape-dependent
+effects (such as marginally-stable orbits) which may alter the power-laws
+given above.
+
+<P>
+The goal of Chapter&nbsp;<A HREF="node42.html#ch:wall">4</A> is as follows:
+given a general deformation <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$">, in a given billiard shape,
+we seek an analytical estimate of <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> (and hence
+<IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img46.gif"
+ ALT="$\mu(0)$">). It is an exact result that <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> is a quadratic form in
+the function space of <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$">.
+The WNA
+fails to take into account that <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$"> vanishes for special deformations
+(which form a linear subspace in <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$">).
+We show that how it is possible to systematically subtract
+(project out) the `special' components of a general <!-- MATH
+ $D{({\mathbf s})}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img75.gif"
+ ALT="$D{({\mathbf s})}$">.
+Applying the WNA only to the remaining (`normal') component
+gives an improved estimate of <!-- MATH
+ $\nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img64.gif"
+ ALT="$\nu_{{\mbox{\tiny E}}}$">.
+We analytically and numerically justify this projection procedure, and test
+the quality of the improved formula.
+The quality is limited by that of the WNA estimate of the `normal' component,
+which relies on the assumption of strongly chaotic motion.
+However, in the generalized Sinai billiard
+the improved formula is found to perform much better than the original WNA.
+
+<P>
+Our work replaces all <EM>ad hoc</EM> corrections which had been introduced [<A
+ HREF="node161.html#wall">29</A>]
+to account for the intuitive result that translations and rotations cause no heating
+at <IMG
+ WIDTH="48" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img76.gif"
+ ALT="$\omega=0$">.
+We thereby clear up some inconsistent habits in the nuclear community
+(Section&nbsp;<A HREF="node48.html#sec:wallhistory">4.3.2</A>).
+More significantly,
+the incorporation of the special nature of dilation is entirely new.
+
+<P>
+Note that the effect of interaction between the particles is 
+not considered. If the mean free path 
+for inter-particle collisions is large compared 
+with the size of the cavity, then we expect that our 
+analysis still applies. (However if the mean free path is 
+much smaller, then we get into the hydrodynamic regime, where viscosity
+becomes the dominant dissipative effect).
+
+<P>
+This work was performed in collaboration with Doron Cohen.
+I also benefitted greatly from use of a classical billiard trajectory code
+written by Michael Haggerty.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html338"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html336"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html330"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html339"
+  HREF="node9.html">Chapters 5 and 6:</A>
+<B> Up:</B> <A NAME="tex2html337"
+  HREF="node6.html">Chapter 1: Introduction and summary</A>
+<B> Previous:</B> <A NAME="tex2html331"
+  HREF="node7.html">Structure of this thesis</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

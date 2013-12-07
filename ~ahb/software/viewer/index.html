@@ -1,0 +1,263 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51C-SGI [en] (X11; I; IRIX64 6.5 IP26) [Netscape]">
+   <meta name="Keywords" content="visualization">
+   <title>Alex Barnett's data VIEWER program</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+&nbsp;
+<table BORDER COLS=1 WIDTH="100%" NOSAVE >
+<tr NOSAVE>
+<td BGCOLOR="#009900" NOSAVE>
+<center><b><font face="Arial,Helvetica"><font size=+4>V I E W E R</font></font></b></center>
+</td>
+</tr>
+
+<tr NOSAVE>
+<td BGCOLOR="#33CC00" NOSAVE>
+<center><font face="Times New Roman,Times"><font size=+3>i n t e r a c
+t i v e&nbsp;&nbsp; d a t a&nbsp;&nbsp; v i s u a l i z a t i o n&nbsp;&nbsp;
+t o o l</font></font></center>
+</td>
+</tr>
+
+<tr NOSAVE>
+<td BGCOLOR="#33FF33" NOSAVE>
+<center><font size=+1>by Alex Barnett</font></center>
+</td>
+</tr>
+</table>
+
+<center>
+<h6>
+<i><font color="#FF0000"><font size=+0><a href="index.html#download">Download</a>
+the VIEWER!</font></font></i></h6></center>
+
+
+
+<h3>
+<font color="#000099">INTRODUCTION</font></h3>
+This is an interactive data viewer built on <a
+href="http://www.opengl.org/developers/documentation/glut.html">GLUT</a>
+(an interrupt-driven OpenGL/Mesa small application toolkit), written in 1999-2000 in C, and
+is completely free software. Please use, enjoy, improve and disseminate!
+It is no longer actively supported - contact me if you have trouble.
+<p>It was designed for examining sets of many <i>eigenvectors</i> (in my
+case real functions of 1 or 2 spatial dimensions, sampled on regular grids),
+each with an associated <i>eigenvalue</i> (the eigenvalues together form
+a <i>spectrum</i>), emerging from my own <a href="http://www.math.dartmouth.edu/phys.html">research</a>
+needs in 2d quantum mechanics. It is currently used by many members of
+the <a href="http://monsoon.harvard.edu/">Heller Group</a>. It can handle
+3 home-grown <a href="index.html#format">file formats</a> which are very easy to
+write:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1) multiple 1d arrays (ASCII
+file)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2) multiple 2d arrays (ASCII
+file)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3) multiple 2d arrays (4-byte
+floating-point binary file)
+<p>It allows perusal of individual eigenvectors or display of all at once.
+<h4>
+Brief description of features...</h4>
+<a href="http://www.math.dartmouth.edu/~ahb/software/1d.gif"><img SRC="http://www.math.dartmouth.edu/~ahb/software/1d.gif" LOWSRC="1d.gif" ALT="example multiple graphs y(x)"
+HSPACE=10 NOSAVE height=150 width=168 align=LEFT></a>For
+<b>1d
+data</b> (ie graphs of y(x)), it is modelled on an oscilloscope, allowing
+rapid mouse-driven moving, rescaling and read-off of the central cursor
+value (bottom right). It also allows all graphs to be compared by displacing
+them vertically on the same horizontal axis.&nbsp; Both axes are auto-labelling
+in real time. Anti-aliasing and point/lines can be toggled.
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><a href="http://www.math.dartmouth.edu/~ahb/software/2d.gif"><img SRC="http://www.math.dartmouth.edu/~ahb/software/2d.gif" LOWSRC="2d.gif" ALT="multiple 2d images z(x,y)"
+HSPACE=10 height=150 width=165 align=LEFT></a><a href="http://www.math.dartmouth.edu/~ahb/software/surface.gif"><img
+SRC="http://www.math.dartmouth.edu/~ahb/software/surface.gif" LOWSRC="surface.gif" ALT="single surface points plot z(x,y)"
+HSPACE=10 height=150 width=205 align=LEFT></a>For
+<b>2d
+data</b> (ie plots of z(x,y)), individual eigenvectors can be shown as
+a surface plot point grid and spun in 3d in a responsive inertial fashion,
+or as 2d colour-scale "bit-images" (density plots).&nbsp; The z-scale (contrast)
+is adjustable, and there are basic remapping options for z=log(abs(data)),
+z=data^2, etc. Also a multiple-image plot is possible. The size of images
+is adjustable in units of integer number of pixels per data-point.
+<p>In all cases, the eigenvalue spectrum appears as green bars on a vertical
+scale, on the right hand side. Currently this has no axes. The view of
+this spectrum is also adjustable, using Shift + mouse buttons.
+<p>The Right button gives an embryonic menu, allowing for instance help
+to be dumped to the calling window. Pressing the I key gives a dump of
+the eigenvalues to the calling window (this could be extended to other
+properties).
+<p>I believe this interactivity is essential for quick grasp of data. (In
+this sense I have been influenced by <a href="http://www.scri.fsu.edu/~lyons/scian/">SciAn</a>,
+an excellent but unsupported 3d OpenGL displayer/animator). I hope some
+of you can take the small amount of time to write your data in the necessary
+format, and reap the rewards of seeing your data as adjustable-contrast
+2d images (without resorting to Mathematica or Matlab), or spinning it
+around in 3d!
+<h3>
+<a NAME="format"></a><font color="#000099">FILE FORMATS</font></h3>
+
+<h4>
+<b>1) Multiple 1d arrays (ASCII file):</b></h4>
+&lt;file begins>
+<p>d n_samples N x_0 dx
+<br>2 param_1 param_2
+<p>1 E_1
+<br>vector_1_data
+<p>2 E_2
+<br>vector_2_data
+<br>.
+<br>.
+<br>.
+<br>N E_N
+<br>vector_N_data
+<p>&lt;file ends>
+<p>Where...
+<p>d = # of dimensions = 1 in this case.
+<br>n_samples = how many data samples along the x direction.
+<br>N = # eigenvalue/eigenvector pairs, ie the # of states.
+<br>x_0 = initial x value (for first data point)
+<br>dx = x-spacing between data points. Ie, point i has x_i = x_0 + (i-1)*dx
+<p>2 param_1 param_2 = the digit 2 followed by 2 parameters which appear
+at
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower left of screen. Currently
+only 2 parameters are allowed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This could easily be changed.
+<p>k E_k = state # (k) followed by corresponding k_th eigenvalue. If the
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; integer k does not match
+up with the expected, VIEWER will tell you.
+<p>vector_k_data = list of data (y_i) values for k_th 1d array, separated
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by spaces. i goes from 1
+to n_samples.
+<p>See example_data/many1d.sta
+<h4>
+<b>2) Multiple 2d arrays (ASCII file):</b></h4>
+The differences from format 1) are as follows.
+<br>First line now must read:
+<p>d n_x_samples n_y_samples N
+<p>Where...
+<p>d = 2
+<br>n_x_samples n_y_samples = # of data points in each direction
+<br>N = the # of states, as before
+<p>The vector_k_data list now loops over both x and y, with x being the
+<br>"fast" direction. In other words, if the data-points are labelled by
+<br>integers going from i = 1 to n_x_samples (x direction), and j = 1 to
+<br>n_y_samples (y direction), then the data-point (i,j) is to be found
+in
+<br>the ( (j-1)*n_x_samples + i )_th number in the vector_k_data list.
+<p>See example_data/single2d.sta which happens to be a single data set
+<br>only (ie N = 1).
+<h4>
+<b>3) Multiple 2d arrays (binary file):</b></h4>
+This format is a variation of 2), and was designed to handle large
+<br>data-sets, being 3-4 times as efficient in terms of storage space.
+<br>For this same reason it is also restricted to 4-byte (single-precision)
+<br>floats for the vector data. However the eigenvalues are 8-byte doubles.
+<br>It also stores the N eigenvector data together at each (i,j) point.
+<br>This was optimal for the way the data happened to be generated in my
+case.
+<br>So now k has become the "fastest" direction:
+<p>&lt;file begins>
+<p>'b' '*' '*' '*'
+<br>N n_x_samples n_y_samples
+<p>E_1 ... E_N
+<p>vector_data_list
+<p>&lt;file ends>
+<p>Where...
+<p>The opening 4-character sequence must begin with 'b', and the
+<br>following 3 are arbitrary. The 'b' identifies the file as a type 3)
+<br>data-set (binary multiple 2d).
+<p>N n_x_samples n_y_samples = 4-byte integers giving same quantities as
+in 2)
+<p>E_1 ... E_N = N double-precision (8 byte) eigenvalues
+<p>vector_data_list = single-precision (4 byte) floats in binary format.
+<br>The difference from 2) is that a sweep over the state # k is
+<br>now the "fastest" loop, followed by the "fast" x loop then the "slow"
+<br>y loop. This is a triple nested loop. In other words, the data point
+<br>(i,j) of state k is found in the vector_data_list at position
+<br>((j-1)*n_x_samples + i-1)*N + k. See code for loadstates() if confused.
+<p>There are no "space" characters in the file.
+<p>There are two choices for the binary format commonly used (IEEE 754):
+<br>big- and little- endian, referring to the byte ordering of 4-byte or
+<br>8-byte numbers (Most Significant Byte first or Least Significant Byte
+<br>first). SGI (mips-IRIX) uses the opposite system to DEC
+<br>(alpha-OSF1) and alpha-Linux. Therefore, VIEWER can read both:
+if reading fails then append an 'e' argument after the filename and
+endian flipping will be done.
+<p>See example_data/many2d_binary.sta which is a type 3) multiple data-set
+stored using SGI endian ordering. For those of you in the field of quantum
+chaos, it happens to be the same stadium eigenstates displayed in Rick
+Heller's article on p.627-8 of Les Houches, 1989, however generated in
+a few seconds with the method of Vergini &amp; Saraceno.
+<h3>
+<font color="#000099">OTHER NOTES</font></h3>
+
+<ul>
+<li> PostScript (PS/EPS) multiple 2d image output with labels is now added
+(2/27/04). See <a href="http://www.math.dartmouth.edu/posters">my poster page</a> for details.
+<li> The limit on total number of data-points is #defined as 1e7 - this can
+be enlarged (via recompilation) to whatever your computer can handle.
+</ul>
+
+
+<h3>
+<a NAME="download"></a><font color="#000099">DOWNLOAD and COMPILATION</font></h3>
+<a href="http://www.math.dartmouth.edu/~ahb/software/viewer.tar">Download
+the source here</a> (82kb, use tar xvf to expand)
+<br><a href="http://www.math.dartmouth.edu/~ahb/software/example_data.tar.gz">Download
+example data here</a> (1.4Mb, use gunzip then tar xvf to expand)
+<p>The source directory contains a Makefile for compilation with alpha
+Linux systems. GLUT, OpenGL (or Mesa), gcc and the math library must be
+already installed (other platform users may need to edit the library names
+in the Makefile). The program has been tested only on alpha linux and on
+IRIX systems (IRIX requires the change: <font face="Courier New,Courier">GLUTLIBS
+= -lglut -lGLU -lGL -lXmu -lXext -lX11</font>). It is very simple, consisting
+of 3 source files and 3 header files:
+<p><tt>viewer.c&nbsp;&nbsp;&nbsp;&nbsp; useful.c&nbsp;&nbsp;&nbsp; nrutils.c</tt>
+<br><tt>constants.h&nbsp; useful.h&nbsp;&nbsp;&nbsp; nrutils.h</tt>
+<p>On alpha linux, 4 RPMs are sufficient to provide GLUT and Mesa. I used:
+<blockquote>
+<li>
+Mesa-3.0-4</li>
+
+<li>
+Mesa-devel-3.0-4</li>
+
+<li>
+Mesa-glut-3.0-4</li>
+
+<li>
+Mesa-glut-devel-3.0-4</li>
+</blockquote>
+These can be found at any RPM web site, for instance <a href="http://www.rpmfind.net/linux/RPM/">this
+one</a>. The SGI (IRIX) GLUT library can be found <a href="http://reality.sgi.com/mjk/glut3/glut3.html#3">here</a>.
+<br>&nbsp;
+<h3>
+<font color="#000099">WISH LIST</font></h3>
+Read-out of current cursor x,y,z value in 2d data-sets (2d image and 3d
+surface plots).
+<br>Axes on energy spectrum, axes on 2d images, axes on 3d surface plots.
+<br>Postscript output of 1d arrays.
+<br>Line and shaded polygon options for 3d surface plots.
+<br>Autoranging from input file.
+<br>Complex values displayed with phase colour-wheel.
+<center>
+<h4>
+<font color="#993300">&nbsp;................................... Contact
+<a href="../../../index.html">me</a>
+at barnett at cims.nyu.edu ................................</font></h4></center>
+
+<a
+href="http://www.azoft.com/people/seremina/edu/viewer_interactive-rom.html">
+View
+this
+page in Romanian</a> courtesy of <a href="http://www.azoft.com/">azoft</a>
+
+</body>
+</html>

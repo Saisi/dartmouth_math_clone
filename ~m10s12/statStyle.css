@@ -1,0 +1,59 @@
+#navBar {
+	background:#009933;
+	color:white;
+	text-align:center;
+	padding-bottom:10px;
+	padding-top:10px;
+	width:100%;
+	float:left;
+}
+
+#navBar a {
+	color:white;
+}
+
+#navBar ul {
+	list-style:none;
+}
+
+#navBar li {
+	display:inline;
+	padding-left:5%;
+	padding-right:6%;
+}
+
+#content {
+	color:grey;
+	width:100%; 
+	float:left;
+	margin-top:10px;
+}
+
+.separator {
+	width:100%;
+	color:#009933;
+	border:solid 1px #009933;
+	text-align:center;
+	margin-bottom:5px;
+}
+
+.halfCol {
+	width:45%;
+	float:left;
+	margin:2%;
+}
+
+.fullCol {
+	width:95%;
+	float:left;
+	margin:2%;
+}
+
+#footer {
+	width:100%;
+	height:50px;
+	float:left;
+	background:#009933;
+	margin-bottom:10px;
+	margin-top:10px;
+}

@@ -1,0 +1,226 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Alex Barnett: nontechnical introduction to my research (2004)</title>
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" link="#000099" vlink="#551A8B"
+alink="#FF0000" background="http://www.math.dartmouth.edu/~ahb/images/water_back2.gif" nosave>
+
+<center><h1> <font color="#bf3fbf" face="helvetica">
+Alex Barnett: Nontechnical introduction to my research</font></h1>
+
+<h4>(updated Dec 2004)</h4>
+
+</center>
+
+
+My work centers around two main issues:
+<ol>
+<li>the nature of
+resonant modes occuring in
+wave and quantum systems
+<li>'seeing' inside the human body (without
+surgery, that is, noninvasively)
+by modelling how light diffuses through tissue.
+</ol>
+A lot of what I do involves getting computers to calculate things
+(equations) that approximate real-world phenomena.
+Here is an introduction to some of the motivation, methods, and questions.
+
+<h3>Quantum chaos</h3>
+Imagine a drum stretched across a frame of a certain shape.
+When you hit the drum, different frequencies are excited, each with its
+own `mode' of vibration. (They rapidly decay, giving the drum its
+characteristic sound). For the lowest frequency mode, the whole membrane
+will move together (in phase), and higher modes will
+have increasingly complicated
+patterns, involving oscillations with decreasing wavelength.
+For example...
+<table border=0 cellspacing=5 cellpadding=5 width="90%" nosave>
+<tr>
+<td align=right>
+<a href="http://www.math.dartmouth.edu/~ahb/images/lowest.dir.lab.jpg">
+<img src="http://www.math.dartmouth.edu/~ahb/images/lowest.dir.lab.jpg" border=2 height=150>
+</a>
+</td>
+<td width=300 align=left> Lowest 10 modes of of a drum shape formed from
+two straight lines and two arcs of circles. Red indicates upward (positive)
+motion at some instant of time, and blue downward (negative).
+<font size=-1>(click to enlarge picture)</font>
+</td>
+</tr>
+</table>
+What happens as you go to much higher modes---higher in the `spectrum' of
+frequencies?
+Different drum shapes give different behaviours, depending on whether
+the shape is `chaotic' or not. Here `chaos' refers to a related problem,
+that of a point particle (imagine a <a
+href="http://serendip.brynmawr.edu/chaos/doc.html">billiard ball</a>)
+bouncing around
+a `billiard table' of that shape:
+
+<table border=0 cellspacing=5 cellpadding=5 width="90%" nosave>
+<tr align=right>
+<td>
+<a href="http://www.math.dartmouth.edu/~ahb/images/regular.gif"><img src="http://www.math.dartmouth.edu/~ahb/images/regular.gif" border=2
+height=150></a>
+</td>
+<td>
+<a href="http://www.math.dartmouth.edu/~ahb/images/erg.gif"><img src="http://www.math.dartmouth.edu/~ahb/images/erg.gif" border=2
+height=150></a>
+</td>
+<td width=300 align=left>
+Motion of a billiard ball bouncing inside regular and chaotic tables
+<font size=-1>(click to enlarge)</font>
+</tr>
+</table>
+
+The motion (dynamics) depends on the shape, and can be regular,
+chaotic, or some mixture (there are also some more exotic categories).
+There is controversy as to how much the billiard problem (the `classical'
+problem) influences the drum problem (the `quantum' problem).
+The equation for drum modes (the Laplace eigenvalue equation) is the same
+as the quantum-mechanics of a particle trapped in a cavity,
+hence the term `quantum', and the strong connection to physics.
+In fact, the drum problem emerged from classical physics (acoustics and
+electro-magnetism), and already in 1917 Einstein
+was concerned about the modes for chaotic systems
+The field of <i>quantum chaos</i> has blossomed since the 1980's.
+Questions I study include:
+In the limit of high mode number, do the modes become uniformly distributed
+across the shape, or do some modes cluster ('scar') along orbits where the
+billiard ball repeats its motion?
+What are the correlations between mode patterns?
+What are the statistics of `matrix elements' (overlaps with each other)
+of these modes?
+These statistics have real-world consequences for the heating (dissipation)
+rate in driven quantum systems, such as electrons trapped in tiny, cold
+micro-chip layers called `<a href="http://marcuslab.harvard.edu">quantum
+dots</a>'.
+Many of these issues have emerged from my <a href="phys.html">doctoral work
+</a> 
+with Rick Heller's <a href="http://www-heller.harvard.edu">group</a>
+at <a href="http://www.physics.harvard.edu">Harvard Physics Department</a>.
+
+<p>
+Such questions require <i>semiclassics</i> (the theory of how waves behave
+in the limit of short wavelengths), and also large-scale
+numerical calculation
+of the modes.  I have focussed on devising new and very efficient algorithms
+that allow a computer to be used to calculate these modes for a large
+variety of drum shapes, including with corners.
+This requires analysis of the properties of the modes themselves.
+As the wavelength gets shorter, the problem
+gets more challenging, however my methods become relatively more efficient
+compared to any other known methods. I typically
+compute many thousands of modes at around the 100,000th mode.
+Here the efficiency increase is about a thousand times!
+These methods have technological applications in designing
+<a href="http://www.opticsexpress.org/issue.cfm?issue_id=152">
+micro-cavity lasers</a>, 
+less than a hundredth of a millimeter in size, for fiber-optic communication,
+and more generally in a wealth of acoustic and waveguide problems.
+I continue to collaborate with physicists, applied and semiclassical
+mathematicians, and even number theorists
+(who care about quantum ergodicity too!).
+
+
+<h3>Medical imaging</h3>
+There has been an explosion of research on how the human brain functions
+in the last 15 years, driven largely by functional
+Magnetic Resonance Imaging (fMRI)
+technology
+via the discovery that when a part of the brain is active, it
+`blushes', that is, has increased blood flow and oxygen level.
+However, it is also possible to map blood oxygen levels in the cortex
+(which lies mainly in the first centimeter of depth from the
+inside of the skull) using near-infrared light, with sources and detectors
+placed in contact with the scalp.
+Shine a flashlight through the tissue of your fingers and you will see
+only red light gets through, and that the light <i>diffuses</i> (otherwise
+humans would be transparent!)
+<table border=0 cellspacing=5 cellpadding=5 width="90%" nosave>
+<tr>
+<td align=right>
+<a href="http://www.math.dartmouth.edu/~ahb/images/DOT_big.gif">
+<img src="http://www.math.dartmouth.edu/~ahb/images/DOT_big.gif" height=150 border=2></a>
+</td>
+<td width=300 align=left>
+The basic idea of Diffuse Optical Tomographic measurements
+<font size=-1>(click to enlarge)</font>
+</td>
+</tr>
+</table>
+Extracting useful
+information from the detected light
+signals is called <a href="http://www.opticsexpress.org/issue.cfm?issue_id=98">
+Diffuse Optical Tomography</a> (DOT).
+As you might imagine, this method is much cheaper and simpler than fMRI,
+but also allows rapid imaging (hundreds of `frames' per second)
+and can be sensitive to different chemicals (<i>eg</i> deoxy-hemaglobin and
+oxy-hemaglobin).
+<table border=0 cellspacing=5 cellpadding=5 width="90%" nosave>
+<tr>
+<td align=right>
+<img src="http://www.math.dartmouth.edu/~ahb/images/babypicture.jpg" height=150 border=2>
+</td>
+<td width=300 align=left>
+DOT is so versatile that functional brain imaging can be
+performed even on a baby who is moving around and reacting to stimuli
+</td>
+</tr>
+</table>
+
+However, the mathematics involved in some sense is harder, because
+no direct 'image' is produced,  Rather we have to solve for (that is,
+adjust in a computer simulation)
+some model of what optically is inside the head until we get similar
+detected signals. This is called a nonlinear <i>inverse problem</i>,
+and since there are <i>many</i> nearly equally-correct
+answers, the problem is called `ill-posed'.
+The image we are looking for is maps of absorption and scattering
+strength of the tissues, at the various wavelengths of light used
+(typically 700-900 nm).
+
+<p>
+I have worked on fast numerical methods to calculate how short pulses
+of light diffuse through the tissue of the human head, in the
+complicated geometry of the scalp, skull and brain.
+However, there is much to be improved in these methods.
+Speed is important since solving the inverse problem requires using this
+`forward' simulation many times.
+Since the measurements (detected light intensities as a function
+of time, on the scale of a billionth of a second) are noisy, statistical
+methods are appropriate.
+I favour <i>Bayesian</i> methods, which tell you exactly what you
+have learned about your image (parameters in your model), and no more,
+in the sense of a probability distribution.
+The price you pay is that these methods are quite slow.
+Questions remain such as: what is the ultimate practical resolution of DOT
+in the human brain? What is the
+uncertainty in measured parameters of regions of the brain, given
+a certain noise?
+How much uncertainty can there be in calibration
+parameters of the experiment?
+What are optimal
+patterns of sources and detectors on the head surface?
+
+<p>
+I collaborate with David Boas's <a href="http://rabi.nmr.mgh.harvard.edu/DOT">
+Photon Migration Imaging</a> lab
+at the <a href="http://www.nmr.mgh.harvard.edu">Martinos Center
+</a>(Radiology Department) at Massachusetts General
+Hospital and Harvard Medical School, where many DOT techniques are being
+developed.
+
+<hr>
+
+Dive into <a href="res.html">technical research summary</a>...
+
+<hr>
+
+</body>
+</html>
+
+

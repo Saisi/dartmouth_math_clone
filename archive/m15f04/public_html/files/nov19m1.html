@@ -1,0 +1,194 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>nov19m.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>with(LinearAlgebra):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>M := &lt;&lt;l1,1&gt;|&lt;l2,1&gt;&gt;:</font><font color="#ff0000" size="3" face="Monospaced">
+<br>z := &lt;B0,A0&gt;:</font><font color="#ff0000" size="3" face="Monospaced">
+<br>A:=LinearSolve(M,z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Damped:=proc(b,c,A,B,T)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local lp,lm,P1,d0,c0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if b^2-4*c &lt;&gt; 0</font><font color="#ff0000" size="3" face="Monospaced">
+<br>then</font><font color="#ff0000" size="3" face="Monospaced">
+<br>lp:=(-b + sqrt(b^2-4*c))/2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>lm:=(-b - sqrt(b^2-4*c))/2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>c0:=-(-B+lm*A)/(lp-lm);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>d0:=(lp*A-B)/(lp-lm);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P1:=plot(Re(c0*exp(lp*t)+d0*exp(lm*t)),t=0..T); </font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if b^2-4*c = 0</font><font color="#ff0000" size="3" face="Monospaced">
+<br>then</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P1:=plot(A*exp(-b*t/2)+(B+A*b/2)*t*exp(-b*t/2),t=0..T); </font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P1);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_1.gif" width="110" height="79" alt="A := Vector[column]([[-(-B0+A0*l2)/(-l2+l1)], [(l1*A0-B0)/(-l2+l1)]])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Damped(.5,1,1,-5,30);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_2.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Damped(3,1,1,-5,30);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_3.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>DampedP:=proc(b,c,A,B,T)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local lp,lm,P1,d0,c0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if b^2-4*c &lt;&gt; 0</font><font color="#ff0000" size="3" face="Monospaced">
+<br>then</font><font color="#ff0000" size="3" face="Monospaced">
+<br>lp:=(-b + sqrt(b^2-4*c))/2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>lm:=(-b - sqrt(b^2-4*c))/2;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>c0:=-(-B+lm*A)/(lp-lm);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>d0:=(lp*A-B)/(lp-lm);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P1:=plot([Re(c0*exp(lp*t)+d0*exp(lm*t)),Re(c0*lp*exp(lp*t)+d0*lm*exp(lm*t)), t=0..T]); </font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>if b^2-4*c = 0</font><font color="#ff0000" size="3" face="Monospaced">
+<br>then</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P1:=plot([A*exp(-b*t/2)+(B+A*b/2)*t*exp(-b*t/2),diff(A*exp(-b*t/2)+(B+A*b/2)*t*exp(-b*t/2),t), t=0..T]);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fi;</font><font color="#ff0000" size="3" face="Monospaced"> </font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P1);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>DampedP(.5,1,1,-5,30);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_4.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>display(DampedP(.5,1,1,-1,30),DampedP(.5,1,1,1,30),DampedP(.5,1,-1,1,30),DampedP(.5,1,-1,-1,30),DampedP(.5,1,sqrt(2),0,30),DampedP(.5,1,-sqrt(2),0,30),DampedP(.5,1,0,sqrt(2),30),DampedP(.5,1,0,-sqrt(2),30));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_5.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>display(DampedP(3,1,1,-1,30),DampedP(3,1,1,1,30),DampedP(3,1,-1,1,30),DampedP(3,1,-1,-1,30),DampedP(3,1,sqrt(2),0,30),DampedP(3,1,-sqrt(2),0,30),DampedP(3,1,0,sqrt(2),30),DampedP(3,1,0,-sqrt(2),30));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_6.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Damped(1,1/4,1,-5,30);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_7.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>display(DampedP(1,1/4,1,-1,30),DampedP(1,1/4,1,1,30),DampedP(1,1/4,-1,1,30),DampedP(1,1/4,-1,-1,30),DampedP(1,1/4,sqrt(2),0,30),DampedP(1,1/4,-sqrt(2),0,30),DampedP(1,1/4,0,sqrt(2),30),DampedP(1,1/4,0,-sqrt(2),30));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_8.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(LinearAlgebra):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>M := &lt;&lt;-t^2+w^2,-b*t&gt;|&lt;b*t,w^2-t^2&gt;&gt;:</font><font color="#ff0000" size="3" face="Monospaced">
+<br>z := &lt;1,0&gt;:</font><font color="#ff0000" size="3" face="Monospaced">
+<br>A:=LinearSolve(M,z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_9.gif" width="169" height="99" alt="A := Vector[column]([[-(-w^2+t^2)/(w^4-2*t^2*w^2+t^4+b^2*t^2)], [b*t/(w^4-2*t^2*w^2+t^4+b^2*t^2)]])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Amp:=sqrt(factor(A[1]^2+A[2]^2));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>simplify(diff(Amp,t));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>tmax:=sqrt(w^2-b^2/2);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_10.gif" width="169" height="40" alt="Amp := (1/(w^4-2*t^2*w^2+t^4+b^2*t^2))^(1/2)" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_11.gif" width="268" height="67" alt="-t*(-2*w^2+2*t^2+b^2)/((1/(w^4-2*t^2*w^2+t^4+b^2*t^2))^(1/2)*(w^4-2*t^2*w^2+t^4+b^2*t^2)^2)" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_12.gif" width="112" height="32" alt="tmax := 1/2*(4*w^2-2*b^2)^(1/2)" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>w1:=1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>b1:=1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>t1:=evalf(sqrt(x^2-y^2/2));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>evalf(subs(w=w1,b=b1,t=t1,Amp));</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_13.gif" width="37" height="12" alt="w1 := 1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_14.gif" width="34" height="12" alt="b1 := 1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_15.gif" width="95" height="12" alt="t1 := .7071067810" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_16.gif" width="63" height="12" alt="1.154700538" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot(evalf(subs(w=w1,b=b1,t=h,Amp)),h=0..10);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m15f04/files/nov19images/nov19m_17.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

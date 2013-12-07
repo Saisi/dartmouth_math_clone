@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<TITLE>Printer Accounting Basics - CUPS 1.6.2</TITLE>
+	<LINK REL="STYLESHEET" TYPE="text/css" HREF="../cups.css">
+	<LINK REL="SHORTCUT ICON" HREF="http://www.math.dartmouth.edu:631/images/cups-icon.png" TYPE="image/png">
+	
+</HEAD>
+<BODY>
+<TABLE CLASS="page" SUMMARY="Printer Accounting Basics">
+<TR><TD CLASS="body">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR HEIGHT="36">
+<TD><A HREF="http://www.cups.org/" TARGET="_blank"><IMG
+SRC="http://www.math.dartmouth.edu:631/images/left.gif" WIDTH="64" HEIGHT="36" BORDER="0" ALT=""></A></TD>
+<TD CLASS="unsel"><A HREF="../index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="http://www.math.dartmouth.edu:631/admin">&nbsp;&nbsp;Administration&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../classes/index.html">&nbsp;&nbsp;Classes&nbsp;&nbsp;</A></TD>
+<TD CLASS="sel"><A HREF="index.html">&nbsp;&nbsp;Online&nbsp;Help&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../jobs/index.html">&nbsp;&nbsp;Jobs&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel"><A HREF="../printers/index.html">&nbsp;&nbsp;Printers&nbsp;&nbsp;</A></TD>
+<TD CLASS="unsel" WIDTH="100%"><FORM ACTION="/help/" METHOD="GET"><INPUT
+TYPE="SEARCH" NAME="QUERY" SIZE="20" PLACEHOLDER="Search Help"
+VALUE="" AUTOSAVE="org.cups.help" RESULTS="20"></FORM></TD>
+<TD><IMG SRC="http://www.math.dartmouth.edu:631/images/right.gif" WIDTH="4" HEIGHT="36" ALT=""></TD>
+</TR>
+<TR><TD COLSPAN="9">&nbsp;</TD></TR>
+</TABLE>
+<DIV CLASS="indent">
+<FORM ACTION="/help/accounting.html" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="TOPIC" VALUE="Getting Started">
+
+<P ALIGN="CENTER"><B>Search in
+Printer Accounting Basics:</B> <INPUT
+TYPE="SEARCH" NAME="QUERY" VALUE="" SIZE="40" PLACEHOLDER=""
+AUTOSAVE="org.cups.help" RESULTS="20">
+<INPUT TYPE="SUBMIT" NAME="SEARCH" VALUE="Search">
+<INPUT TYPE="SUBMIT" NAME="CLEAR" VALUE="Clear"></P>
+
+</FORM>
+
+<!-- Bookmarks -->
+<DIV CLASS="sidebar"><TABLE CLASS="inset" SUMMARY="Contents">
+<TR><TD>
+
+<H3 CLASS="title">Online Help Documents</H3>
+
+<P CLASS="l0"><A HREF="index.html">All Documents</A></P>
+<HR>
+
+<P CLASS="l0"><A HREF="index-TOPIC=Getting+Started&QUERY=.html">Getting Started</A></P>
+<P CLASS="l1"><A HREF="options-TOPIC=Getting+Started&QUERY=.html">Command-Line Printing and Options</A></P>
+<P CLASS="l1"><A HREF="glossary-TOPIC=Getting+Started&QUERY=.html">Glossary</A></P>
+<P CLASS="l1"><A HREF="policies-TOPIC=Getting+Started&QUERY=.html">Managing Operation Policies</A></P>
+<P CLASS="l1"><A HREF="overview-TOPIC=Getting+Started&QUERY=.html">Overview of CUPS</A></P>
+<P CLASS="l1"><A HREF="accounting-TOPIC=Getting+Started&QUERY=.html">Printer Accounting Basics</A></P>
+<P CLASS="l2"><A HREF="accounting.html#PAGELOG">Page Logging</A></P>
+<P CLASS="l2"><A HREF="accounting.html#QUOTAS">Quota Support</A></P>
+<P CLASS="l1"><A HREF="sharing-TOPIC=Getting+Started&QUERY=.html">Printer Sharing</A></P>
+<P CLASS="l1"><A HREF="security-TOPIC=Getting+Started&QUERY=.html">Server Security</A></P>
+<P CLASS="l1"><A HREF="license-TOPIC=Getting+Started&QUERY=.html">Software License Agreement</A></P>
+<P CLASS="l1"><A HREF="standard-TOPIC=Getting+Started&QUERY=.html">Standard Configuration</A></P>
+<P CLASS="l1"><A HREF="translation-TOPIC=Getting+Started&QUERY=.html">Translating and Customizing CUPS</A></P>
+<P CLASS="l1"><A HREF="cgi-TOPIC=Getting+Started&QUERY=.html">Using CGI Programs</A></P>
+<P CLASS="l1"><A HREF="kerberos-TOPIC=Getting+Started&QUERY=.html">Using Kerberos Authentication</A></P>
+<P CLASS="l1"><A HREF="network-TOPIC=Getting+Started&QUERY=.html">Using Network Printers</A></P>
+<P CLASS="l1"><A HREF="whatsnew-TOPIC=Getting+Started&QUERY=.html">What&#39;s New in CUPS 1.6</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Man+Pages&QUERY=.html">Man Pages</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Programming&QUERY=.html">Programming</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=References&QUERY=.html">References</A></P>
+<P CLASS="l0"><A HREF="index-TOPIC=Specifications&QUERY=.html">Specifications</A></P>
+
+</TD></TR>
+</TABLE></DIV>
+
+
+<H1>Printer Accounting Basics</H1>
+<FORM ACTION="/help/accounting.html" METHOD="GET"><INPUT TYPE="HIDDEN" NAME="PRINTABLE" VALUE="YES"><INPUT TYPE="SUBMIT" VALUE="View Printable Version"></FORM>
+
+<H1 CLASS="title">Printer Accounting Basics</H1>
+
+<P>CUPS supports a variety of printer accounting schemes. Aside from the
+built-in <A HREF="accounting.html#QUOTAS">quota</A> and <A HREF="accounting.html#PAGELOG">page logging</A>
+support, there are several third-party solutions that can be found on
+<A HREF="http://www.cups.org/">www.cups.org</A>.</P>
+
+
+<H2 CLASS="title"><A NAME="QUOTAS">Quota Support</A></H2>
+
+<P>CUPS supports page and size-based quotas for each printer.
+The quotas are tracked individually for each user, but a single set of
+limits applies to all users for a particular printer. For example, you
+can limit every user to 5 pages per day on an expensive printer, but
+you cannot limit every user except Johnny.</P>
+
+<P>The <CODE>job-k-limit</CODE>, <CODE>job-page-limit</CODE>, and <CODE>job-quota-period</CODE>
+options determine whether and how quotas are enforced for a printer.
+The <CODE>job-quota-period</CODE> option determines the time interval for
+quota tracking. The interval is expressed in seconds, so a day is
+86,400, a week is 604,800, and a month is 2,592,000 seconds. The
+<CODE>job-k-limit</CODE> option specifies the job size limit in killobytes. The 
+<CODE>job-page-limit</CODE> option specifies the number of pages limit.</P>
+
+<P>For quotas to be enforced, the period and at least one of the limits
+must be set to a non-zero value. The following options will enable
+weekly quotas with the given size and page count limits:</P>
+
+<PRE CLASS="command">
+<KBD>/usr/sbin/lpadmin -p <I>printer</I> -o job-quota-period=604800 \
+    -o job-k-limit=1024 ENTER</KBD>
+<KBD>/usr/sbin/lpadmin -p <I>printer</I> -o job-quota-period=604800 \
+    -o job-page-limit=100 ENTER</KBD>
+</PRE>
+
+<P>Or, you can combine all three options on the same line.</P>
+
+<P>While there is no way to query the current quota state for a particular
+user, any application can request a list of jobs for a user and printer that
+can be used to easily determine that information.</P>
+
+
+<H2 CLASS="title"><A NAME="PAGELOG">Page Logging</A></H2>
+
+<P>CUPS logs every page that is printed on a system to the
+<VAR><A HREF="ref-page_log.html">page_log</A></VAR> file. Page logging
+is only available for drivers that provide page accounting information,
+typically all PostScript and CUPS raster devices. Raw queues and queues
+using third-party solutions such as Foomatic generally do not have
+useful page accounting information available.</P>
+ 
+
+</DIV>
+</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD CLASS="trailer">CUPS and the CUPS logo are trademarks of
+<A HREF="http://www.apple.com">Apple Inc.</A> Copyright 2007-2013 Apple
+Inc. All rights reserved.</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

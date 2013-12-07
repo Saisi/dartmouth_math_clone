@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VDP.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEL:=proc(L,N,T)<br>
+local i,j,List,Deltat,Val,Time,PL,n;<br>
+with(plots);<br>
+Digits:=5;<br>
+n:=nops(L);<br>
+PL:=[];<br>
+for j from 1 to n <br>
+do<br>
+Val:=L[j];<br>
+Time:=0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(Val[2]<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+-Val[1]+Val[2]*(1-(Val[2])^2)<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+PL:=[op(PL),Make3(List)];<br>
+od;<br>
+PL;<br>
+end: <br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][2][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end: </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>S0:=DEL([[.01,0],[.01*cos(((2*Pi)/4)),.01*sin(((2*Pi)/4))],[3,0],[3*cos(((2*Pi)/4)),3*sin(((2*Pi)/4))],[-.94747, .94318]],2000,20): </font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>display(listplot(S0[5],color=black,thickness=2),listplot(S0[1],color=red,thickness=1),listplot(S0[2],color=red,thickness=1),listplot(S0[3],color=blue,thickness=1),listplot(S0[4],color=blue,thickness=1));</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/Van/VDP1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+</basefont>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Choice of for truncation</TITLE>
+<META NAME="description" CONTENT="Choice of for truncation">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="previous" HREF="node60.html">
+<LINK REL="up" HREF="node58.html">
+<LINK REL="next" HREF="node62.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html929"
+  HREF="node62.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html927"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html923"
+  HREF="node60.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html930"
+  HREF="node62.html">The choice of norm</A>
+<B> Up:</B> <A NAME="tex2html928"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<B> Previous:</B> <A NAME="tex2html924"
+  HREF="node60.html">Truncating the singular generalized</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00633000000000000000">
+Choice of <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> for truncation</A>
+</H2>
+
+<P>
+The criterion for choosing <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> is that it be
+close to, but larger than, the machine precision[<A
+ HREF="node161.html#numrec">161</A>] <!-- MATH
+ $\epsilon_{mach}
+\approx 10^{-16}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img752.gif"
+ ALT="$\epsilon_{mach}
+\approx 10^{-16}$">.
+I have found that pushing <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $">
+too close to <!-- MATH
+ $\epsilon_{mach}$
+ -->
+<IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img753.gif"
+ ALT="$\epsilon_{mach}$"> (or smaller) <EM>does</EM> affect the quality of
+the returned eigenvector <!-- MATH
+ ${\mathbf x}^{(1)}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img711.gif"
+ ALT="${\mathbf x}^{(1)}$"> from the recipe in the
+previous section.
+One simple measure of this is the difference
+<!-- MATH
+ $\delta f \equiv [{\mathbf x}^{(1)}]^{{\mbox{\tiny T}}} F {\mathbf x}^{(1)}  - \lambda_1^{-1}$
+ -->
+<IMG
+ WIDTH="186" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img754.gif"
+ ALT="$\delta f \equiv [{\mathbf x}^{(1)}]^{{\mbox{\tiny T}}} F {\mathbf x}^{(1)} - \lambda_1^{-1}$">,
+which should be zero.
+For <!-- MATH
+ $\epsilon = 10^{-16}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img755.gif"
+ ALT="$\epsilon = 10^{-16}$"> I found <!-- MATH
+ $|\delta f| < 10^{-6}$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img756.gif"
+ ALT="$\vert\delta f\vert &lt; 10^{-6}$"> while
+for <!-- MATH
+ $\epsilon = 10^{-14}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img757.gif"
+ ALT="$\epsilon = 10^{-14}$"> it drops to <!-- MATH
+ $|\delta f| < 10^{-9}$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img758.gif"
+ ALT="$\vert\delta f\vert &lt; 10^{-9}$">.
+It is unknown how the contamination by other (error) eigenvectors varies
+with <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $">.
+However I believe that since the errors
+mainly occur in the evaluation of small eigenvalue/eigenvector pairs of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$">,
+any contamination is mainly by harmless (null-space) vectors.
+
+<P>
+On the other hand, <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> also provides an approximate lower bound
+for the tension that can be reported.
+Therefore, in order to preserve the full depth of the tension minima,
+as small an <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> as possible should be used.
+In practice, tension minima rarely are smaller than <IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img759.gif"
+ ALT="$10^{-8}$"> using RPWs,
+but with better basis sets they can reach typical values of <IMG
+ WIDTH="47" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img760.gif"
+ ALT="$10^{-11}$">
+in systems under investigation.
+
+<P>
+A choice of <!-- MATH
+ $\epsilon = 10^{-14}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img757.gif"
+ ALT="$\epsilon = 10^{-14}$"> has proved optimal for calculations in
+this and the next chapter.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html929"
+  HREF="node62.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html927"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html923"
+  HREF="node60.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html930"
+  HREF="node62.html">The choice of norm</A>
+<B> Up:</B> <A NAME="tex2html928"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<B> Previous:</B> <A NAME="tex2html924"
+  HREF="node60.html">Truncating the singular generalized</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

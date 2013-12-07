@@ -1,0 +1,317 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Alex Barnett: research summary</title>
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" link="#000099" vlink="#551A8B"
+alink="#FF0000" background="http://www.math.dartmouth.edu/~ahb/images/water_back2.gif" nosave>
+
+<center><h1> <font color="#9f1f9f" face="helvetica">
+Alex Barnett: Research summary </font></h1>
+
+<h4>(somewhat out of date)</h4>
+</center>
+
+The below is somewhat out of date, and addresses only eigenvalue problems and medical imaging. Instead I recommend you read my
+<a href="sta.pdf">personal statement for tenure review</a>, and
+my other <a href="pubs.html">talks and publications</a>.
+You may also benefit from reading my <a href="nonres.html">
+old nontechnical introduction</a> first.
+
+<p>
+In general I work at the intersection of numerical analysis
+and mathematical physics. In much of my work physical insight has allowed
+radical improvements in numerical methods; in turn, the development
+of efficient numerical methods has allowed a deeper investigation and
+understanding of physical
+phenomena, particularly in quantum systems.
+I am also working on a medical imaging inverse problem, where due
+to the complexity of the problem, many levels of approximation are necessary
+and physical insight is essential.
+For this noisy real-world application, a statistical understanding
+of the imaging process is important---this contrasts much existing work in
+the field of inverse problems.
+
+<p>Also
+here are some recent (up to Nov 2006)
+pages I have put up on certain special topics:
+<ul>
+<li><a href="basis.html">Global basis sets for Helmholtz boundary value problem</a>
+<li><a href="mush/index.html">Quantum mushroom billiards</a>
+<li><a href="rpws/index.html">Random plane waves</a>
+</ul>
+
+
+
+<h2>Numerical methods for the Dirichlet eigenproblem</h2>
+
+Solving for the eigenvalues <i>E<sub>j</sub></i> and eigenfunctions <i>&phi;
+<sub>j</sub></i>
+of the Laplace operator
+on some domain (in 2 or higher dimensions)
+with Dirichlet boundary conditions is a classical
+problem of mathematical physics, but which poses numerical challenges
+when high <i>E</i> or level numbers are desired.
+As well as technological applications in high-frequency cavity and
+waveguide resonances,
+such as dielectric micro-cavity laser design,
+there is also a growing interest in
+the semiclassical properties of eigenfunctions
+in fields from quantum physics to number theory (see next section).
+
+<p>
+Finite Element or finite-difference type methods are impractical when
+there is a large number of wavelengths across the system, therefore
+boundary methods are necessary.
+I have been developing variants of
+the `Method of Particular Solutions' (MPS), which can be viewed as
+approximating trial eigenfunctions by a linear sum of basis functions
+which satisfy the PDE (the Helmholtz equation at some trial
+energy parameter <i>E</i>) in the domain.
+Approximations to the eigenvalues are then found by searching for <i>E</i>
+values where the minimum achievable
+<i>boundary norm</i> becomes very small.
+The MPS was largely abandoned by the numerical analysis community in the
+1980's, however many exciting independent developments have occured in
+the physics (quantum chaos) community since then, using similar ideas,
+upon which I base my work.
+
+<p>
+In my thesis work I placed the domain norm and boundary norm on an
+equal footing, thus tackling the problem that there can exist nontrivial
+basis combinations which are exponentially small everywhere in the domain.
+I also derived formulae allowing the domain norm to be evaluated using
+boundary integrals alone, improving efficiency.
+I also gave the first account of the working of the powerful
+`scaling method' of
+Vergini, which can be seen as an accelerated MPS, whose relative
+efficiency grows like <i>O(k)</i> where <i>k=E<sup>1/2</sup></i>.
+The scaling method
+produces <i>O(k)</i> eigenfunctions with a single matrix eigenproblem,
+whereas the usual MPS requires several such eigenproblems to find
+each eigenfunction.
+In typical quantum chaotic studies <i>E~10<sup>6</sup></i> therefore the
+method is a thousand times faster than any other known method
+(this includes boundary integral equation [BIE] methods).
+Recently I have analysed the <i>E</i>-dependent spectral problem which
+arises when minimizing the boundary norm while holding the domain norm
+constant.
+By studying the spectrum of the resulting boundary operator (similar to the
+Dirichlet-Neumann map) <i>before</i> numerical discretization, I have
+found that a special choice of weight function allows the classical
+eigenvalue inclusion bounds of Kuttler-Sigillito to be improved,
+again by factor <i>O(k)</i>.
+This relied on converting the spectral problem into a form in which
+perturbation theory in <i>(E-E<sub>j</sub>)</i> could be used.
+
+<p>
+I am now analysing the intrinsic errors of eigenfunction and eigenvalues
+computed by the scaling method, using the same tool.
+Despite its use within the quantum chaos community, such errors
+have not been yet understood.
+In both the scaling method, and the improved inclusion bounds, the
+role of the matrix <i>Q<sub>ij</sub></i> of
+inner products of the eigenfunction
+normal derivative functions, under the boundary weight function <b>r.n</b>
+is vital. Here <b>r</b> is the position vector and <b>n</b> the unit normal.
+I have recently proved a <i>quasi-orthogonality</i> result
+(the matrix <i>Q</i> is close to diagonal,
+with bounds on the off-diagonal growth),
+independent of the domain shape.
+I intend to work on such questions as:
+can similar acceleration techniques can be applied to
+BIE methods for the eigenproblem? Can the scaling method be adapted
+for generalized (mixed) homogeneous boundary conditions?
+Can a star-shaped restriction on domain shapes be lifted---empirical
+evidence suggests the answer is yes, but can this be formalized?
+How can quadrature best be performed in evaluating boundary integrals
+of basis functions?
+Can the scaling method be extended
+to manifolds of constant negative curvature?
+
+
+<p>
+Basis sets for the linear space of Helmholtz solutions, necessary for the
+MPS and scaling methods, are not well understood.
+In the original MPS work regular Bessel functions were used, and the
+physics community has based much work on sets of plane waves.
+I have developed <a href="basis.html">basis sets of Neumann functions</a>
+(fundamental solutions)
+placed on a curve exterior to the domain, which appear to represent
+all eigenfunctions accurately, even for nonconvex domains with
+corners. I am analysing approximation properties of such bases,
+in the semiclassical limit. Can bases for re-entrant corners be developed?
+Are there shapes for which convential BIE will be the only option?
+
+
+<h2>Quantum ergodicity in billiards</h2>
+
+The main mathematical result of the field of
+<i>quantum chaos</i>, that is, the study of the semiclassical behaviour of
+quantized (wave) versions of chaotic dynamics systems,
+is the Quantum Ergodicity Theorem (QET).
+This states that in the high-energy limit, diagonal (<i>i=j</i>)
+matrix elements
+<i>A<sub>ij</sub>=\&lt;&phi;<sub>i</sub>, A &phi;<sub>j</sub>&gt;</i>
+tend to the classical (phase space)
+average of an operator <i>A</i>, with the possible exception of a subset
+which must have vanishing measure.
+However, what is the rate of this convergence, and what is the density
+of the subset at finite energies?
+I have used cutting-edge numerical methods (discussed in the previous section)
+to answer such questions
+in uniformly-hyperbolic
+<i>billiard systems</i> (bounded Euclidean manifolds with boundary)
+at unprecedented high energies and accuracies.
+I have found that the rate of decay of the variance of <i>A<sub>ii</sub></i>
+can be explained by the semiclassical prediction
+~<i>E<sub>i</sub><sup>-1/2</sup></i> of Feingold-Peres and
+Wilkinson,
+but that convergence
+to this prediction is remarkably slow, with a deviation
+of several % persisting
+at of order the 100,000th level.
+An understanding of this slow convergence remains an open issue.
+
+<p>
+The Quantum Unique Ergodicity (QUE) conjecture of Rudnick-Sarnak, made
+in the context of negatively-curved manifolds, is that
+there is <i>no exceptional subset</i> in the QET.
+There is much recent interest in QUE within pure mathematics (number theory and
+ergodic theory).
+QUE has recently been proven by Lindenstrauss for automorphic forms,
+where the infinite number of symmetries allows an analytic approach.
+In billiards no such analytic machinery is known, however
+I have found strong numerical evidence for QUE in a uniformly-hyperbolic
+billiard system.
+
+<p>
+To what extent do eigenfunctions behave like random sums of plane waves
+(the prediction of a Random Matrix Theory [RMT] model)?
+Many open issues remain in this area.
+Correlations between eigenfunctions cannot be predicted by RMT,
+since they involve the dynamics of the system. 
+For instance, the
+variance of off-diagonal matrix elements <i>A<sub>ij</sub></i> is
+proven to converge to a classical autocorrelation function.
+I have tested this convergence and again found it suprisingly slow.
+The prediction for diagonal variance is related by a factor <i>g</i>
+to nearby off-diagonal variance. The RMT (GOE) prediction is <i>g</i>=2,
+however, there is little justification for this in actual systems.
+What if the system possesses other symmetries?
+This connects to recent work of Sarnak showing that <i>g</i> depends
+on level number <i>i</i> in automorphic forms, its value being
+an <i>L</i>-function. 
+When there are slow decay of correlations
+(`bouncing ball' modes), the diagonal
+variance would be predicted to diverge---what is fact happens here?
+Even less is known about matrix element statistics in
+mixed systems with sticky islands other power-law decays.
+I have also started work with E. Bogomolny on levels-spacing statistics
+in triangular billiards with certain symmetries (Veech polygons).
+
+<p>
+There are several applications of this work.
+In quantum physics, such matrix elements form the backbone of study of
+driven systems and transition rates (Fermi Golden Rule).
+Off-diagonal matrix element variance corresponds to <i>dissipation</i>
+(heating) rate under periodic driving.
+In `quantum dots' (cold confined 2D electron gases) chaotic effects
+have been instrumental in understanding fluctuations in electrical
+conduction.
+Quantum dots are now model systems for study of spins ('spintronics')
+and are promising candidates for quantum computers.
+
+
+<h2>The Diffuse Optical Tomography (DOT) inverse problem</h2>
+
+In any efficient method, forward and inverse problems remain intimately
+connected. However here I will try to isolate some of the issues:
+
+<p>
+<b> Forward problem</b>:
+DOT requires numerical simulation of the forward problem,
+that is, the passage of photons through a medium of complex
+geometry, in our case the human head. 
+We approximate the time-dependent transport equation by the
+diffusion equation, since it can be solved much more rapidly.
+In tests against Monte Carlo simulations
+we have found diffusion to be adequate.
+In iterative or Bayesian approaches to inverse problems,
+the forward model must be called a large number of times during the
+optimization (fitting process)
+or exploration of the posterior probability density function.
+The scalp/skull/brain system is approximately a layered medium,
+for which we were surprised to find a lack of efficient diffusion solvers.
+I therefore have developed an efficient layered solver
+which makes use of the symmetry, a 1D finite-difference method in the <i>z</i>
+direction, and a logarithmic timestepping scheme
+motivated by the physical diffusion mode decay, giving ~0.1 sec CPU run time
+in relevant regimes.
+There are many pressing goals such as applying this timestepping scheme
+to more general 3D finite-difference discretizations.
+Since MRI data is cartesian, and triangulation in 3D is a tricky problem,
+we expect this to be superior to currently-used Finite Element schemes.
+Discretization errors due to poor representation of the smooth head
+surface by a cartesian grid should be overcome by the inclusion of
+immersed interface methods into the finite-difference scheme.
+The <i>gradient</i> (Jacobean) of model outputs with respect to inputs
+is vital to the optimization procedure, therefore I intend to apply adjoint
+differentiation techniques to these forward models.
+
+<p>
+<b>Inverse problem</b>:
+To make extraction of useful brain activity tractable,
+our key approach, proposed by David Boas and his group in Boston,
+is to use structural MRI to define the subject's head geometry, then use
+some kind of segmented optical model with a reduced number of
+parameters (of order 10 or 100 unknowns) in order to fit the optical signals.
+Use can be then made of information about each tissue type:
+optical parameters of the skull are fixed, and the scalp
+oxygenation correlates strongly with `global' physiological parameters.
+Thus changes in the brain can be isolated with more certainty.
+I have performed a simulated feasibility study of this segmented approach,
+fitting <i>baseline</i> brain parameters, a nontrivial problem in itself.
+This used a Bayesian approach, enabling the full probability density
+function (PDF) in the parameter space to be estimated. This gives
+marginal PDFs on each parameter, and correlations.  Ultimately in an
+imaging problem with many unknowns, low resolution,
+and noisy (single photon counting) data collection,
+I argue that such statistical approaches will be the best way forward,
+despite the higher computational cost.
+
+<p>
+Currently in my work PDFs are explored using Markov chain Monte Carlo (MCMC)
+methods, such as Metropolis algorithms,
+however there is much to be gained by testing hybrid MCMC methods
+and combining with gradient-based optimization.
+In the limit of small noise, the posterior PDF peak approaches Gaussian,
+and we have established what range of imaging parameters this approximation
+is adequate.
+With a Gaussian PDF approximation, expensive MCMC can be replaced with
+much cheaper optimation followed by estimation of the Hessian (inverse of
+covariance) matrix.
+I have implemented this method on layered medium fits, with various
+numbers of layers, where the layer thicknesses themselves are unknowns.
+Questions such as whether estimation of skull/scalp layer thickness
+by DOT or via MRI give more accurate DOT optical parameter fits,
+and the effect of introduction of (unknown) calibration parameters
+on the fit are vital to answer in order to advance the reliability
+of the technology.
+
+<hr>
+
+<!--<a href="http://astrosun.tn.cornell.edu/staff/loredo/bayes">
+Bayesian</a> approach to inference and data modelling. Download my
+<a href="http://monsoon.harvard.edu/~barnett/papers/i3.ps.gz">
+undergraduate thesis</a> (.ps.gz 421kb)
+written with excellent advisor
+<a href="http://wol.ra.phy.cam.ac.uk/mackay/homepage.html">David
+MacKay</a> at Cambridge, UK.-->
+
+
+</body>
+</html>
+
+

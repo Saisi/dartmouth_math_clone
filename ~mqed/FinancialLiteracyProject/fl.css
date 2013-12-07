@@ -1,0 +1,281 @@
+/* Intended <div> layout:
+
++-----------------------+
+| header                |
++-----------------------+
++-----------------------+ 
+| menu                  |
++-----------------------+ 
++-----------------------+ 
+|                       |
+| contents              |
+|                       |
+|                       |
++-----------------------+ 
++-----------------------+
+| footer                |
++-----------------------+
+
+2010.08 jamesg */
+
+a {
+    color:#0088aa;
+    text-decoration:none;
+}
+
+a:hover {
+    color:#0088aa;
+    text-decoration:none;
+}
+
+ul { 
+    list-style-type: disc;  
+}
+
+h1 {font-family:"Times New Roman", Times, serif; margin-top: 7px;}
+
+h1 a {color:#006666;}
+
+h1 a:hover {color:#0088aa;}
+
+h2 {
+  font: 1.6em "Times New Roman", Times, serif;
+}
+
+h2 a {color:#006666;}
+
+h2 a:hover {color:#0088aa;}
+
+h3 {font-family:"Times New Roman", Times, serif;}
+
+body {
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    width:850px; /* body.width > {menu + contents}.width + 4*padding */
+    background-color:#006666;
+    color:#006666;
+    font:13px arial,sans-serif;
+    /*font-family:Arial,Helvetica,sans-serif;*/ 
+    border:solid 0px #ff99ff;
+    -moz-border-radius: 15px;
+	border-radius: 15px;
+
+}
+
+#wrapper {
+	width:850px;
+	border: solid 0px red;
+}
+
+#masthead {
+    width:830px;
+	display:inline-block;
+    /*height:280px; */
+    margin:10px 0px 3px 0px;
+    padding:5px 10px 5px 10px;
+	border: solid 0px black;
+    background-color:#ffffcc;
+    }
+
+#logo {
+	float:left;
+	display:inline;
+    border:solid 0px red;
+}
+
+#bannertext {
+    padding:10px 10px 0px 0px; 
+    display:inline-block;
+    float: right; 	
+    font-family:"Times New Roman", Times, serif;
+    text-align:left;
+    font-size: 225%;
+    border:solid 0px red;
+}
+
+#menu {
+	margin:10px;
+	border: solid 1px #006600;
+	width:850px;
+	padding: 10px;
+	}
+	
+.topmenu {
+	float:right;
+	/*width:180px;*/
+	padding:7px;
+	font-size:medium;
+	font-style:italic;
+	text-align:center;
+	background-color:#fffff;
+	color:#006666;
+	}
+	
+.topmenu a:link {
+	background-color:#fffff;
+	color:#006666;
+	}
+	
+.topmenu a:hover {
+	background-color:#fbdd6f;
+	color:#ee2544;
+	}
+	
+/* removed 9/21/10, jg
+
+	#EBbutton a {
+	float:right;
+	top: 85px;
+	right: 550px;/*
+	width:200px;
+	padding: 3px 0px 3px 0px; 
+	font-size:110%;
+	font-style:italic;
+	text-align:center;
+	display:inline-block;
+	}
+
+
+#EBbutton a:hover {
+	background-color:#fbdd6f;
+	color:#ee2544;
+	}
+	
+#MATCbutton a {
+	float:left;
+	margin-left:5px;
+	margin-right:5px;
+	border: solid 1px #006600;
+	width:278px;
+	padding: 5px 0px 5px 0px; 
+	background-color:#ffa200;
+	font-size:110%;
+	text-align:center;
+	color:#006600;
+	display:inline-block;
+	}
+
+#MATCbutton a:hover { 
+	background-color:#006600;
+	color:#ffa200;
+	}
+	
+#LBbutton a {
+	float:right;
+	width:150px;
+	padding: 3px 0px 3px 0px; 
+	font-size:110%;
+	font-style:italic;
+	text-align:center;
+	display:inline-block;
+	}
+	
+	
+#LBbutton a:hover {
+	background-color:#fda213;
+	color:#7618aa;
+	}
+*/
+
+.main {
+	display: inline-block;
+    background-color:#ffffff;
+	width:810px;
+	margin: 0px 0px 0px 0px; 
+	padding: 7px 20px 10px 20px;
+	-moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    border-radius: 10px; /* CSS3 */
+	}
+	
+.left-menu {
+	display: inline-block;
+	float: left;
+    background-color:#ffffff;
+    min-height:300px;
+	width:135px;
+	margin: 3px 0px 0px 0px; 
+	padding: 0px 20px 10px 20px;
+	-moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    border-radius: 10px; /* CSS3 */
+	}
+	
+.right-menu {
+	display: inline-block;
+	float: right;
+    background-color:#ffffff;
+    min-height:300px;
+	width:135px;
+	margin: 3px 0px 0px 0px; 
+	padding: 0px 20px 10px 20px;
+	-moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    border-radius: 10px; /* CSS3 */
+	}
+	
+.right-content {
+	display: inline-block;
+	float: right;
+    background-color:#ffffff;
+    min-height:300px;
+	width:630px;
+	margin: 3px 0px 0px 0px; 
+	padding: 0px 20px 10px 20px;
+	-moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    border-radius: 10px; /* CSS3 */
+	}
+
+.left-content {
+	display: inline-block;
+	float: left;
+    background-color:#ffffff;
+    min-height:300px;
+	width:630px;
+	margin: 3px 0px 0px 0px; 
+	padding: 0px 20px 10px 20px;
+	-moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    border-radius: 10px; /* CSS3 */
+	}
+
+#footer { 
+	display: inline-block;
+    background-color:#ffffff;
+	width:810px;
+	margin: 3px 0px 3px 0px; 
+	padding: 5px 20px 5px 20px;
+    font-size: 80%;
+}
+
+.rounded-corners {
+  -moz-border-radius: 10px; /* Firefox */
+  -webkit-border-radius: 10px; /* Safari, Chrome */
+  border-radius: 10px; /* CSS3 */
+}
+
+.customh1 {
+	font-family:'Times New Roman', Times, serif; 
+	/*padding-top: 7px; */
+	font-size:200%; 
+	font-weight:bold;
+	color:#006666;
+	}
+	
+.customh2 {
+	font-family:'Times New Roman', Times, serif; 
+	font-size:150%; 
+	font-weight:bold;
+	font-style:italic;
+	color:#006666;
+	}
+	
+#instructnotelink {
+  font-size: 80%;
+  display: block;
+  position: relative;
+  top: 500px;
+}
+	

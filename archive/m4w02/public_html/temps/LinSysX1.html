@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>LinSysX.html</title>
+<!-- Created by Maple 7.00, APPLE_PPC_MAC -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEL:=proc(M,n,N,T)<br>
+local i,j,List,Deltat,Val,Time,PL;<br>
+with(plots);<br>
+Digits:=5;<br>
+PL:=[];<br>
+for j from 1 to n <br>
+do<br>
+Val:=[cos(j*((2*Pi)/n)),sin(j*((2*Pi)/n))];<br>
+Time:=0;<br>
+List:=[[0,Val]];<br>
+Deltat:=(T-0)/N;<br>
+for i from 1 to N<br>
+do <br>
+Val:=<br>
+[<br>
+evalf(<br>
+Val[1]+Deltat*(M[1][1]*Val[1]+M[1][2]*Val[2]<br>
+)<br>
+),<br>
+evalf(<br>
+Val[2]+Deltat*(<br>
+M[2][1]*Val[1]+M[2][2]*Val[2]<br>
+)<br>
+)<br>
+];<br>
+Time:=Time+Deltat;<br>
+List:=[op(List),[Time,Val]];<br>
+od;<br>
+PL:=[op(PL),listplot(Make3(List),color=red,thickness=2)];<br>
+od;<br>
+display(PL);<br>
+end:<br>
+<br>
+Make3:=proc(List)<br>
+local i,NewList;<br>
+NewList:=[]; <br>
+for i from 1 to nops(List)<br>
+do<br>
+NewList:=[op(NewList),[List[i][2][1],List[i][2][2]]];<br>
+od;<br>
+NewList <br>
+end:  <br>
+</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEL([[-1/2, -1], [1/2, 0]],10,250,20);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/LinSysX2/LinSysX1.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEL([[-.9090909091, -1], [.909090909e-1, 0]],20,500,20); </font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m4w02/temps/LinSysX2/LinSysX2.gif" width=337 height=250 alt="[Maple Plot]">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</basefont>
+</body>
+</html>

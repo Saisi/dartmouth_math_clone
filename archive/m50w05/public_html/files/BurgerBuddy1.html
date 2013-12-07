@@ -1,0 +1,172 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>BurgerBuddy.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>1/1.6;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_1.gif" width="69" height="12" alt=".6250000000" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Old:=1.6;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>New:=1.3;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=.95;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>RootNZScore:=evalf((Old-New)/New);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>V:=stats[statevalf,icdf,normald[0,1]](P);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=(V/(RootNZScore))^2;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_2.gif" width="49" height="12" alt="Old := 1.6" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_3.gif" width="54" height="12" alt="New := 1.3" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_4.gif" width="44" height="12" alt="P := .95" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_5.gif" width="152" height="12" alt="RootNZScore := .2307692308" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_6.gif" width="87" height="12" alt="V := 1.644853627" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_7.gif" width="88" height="12" alt="N := 50.80409374" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>factor(diff((theta)^alpha*exp(-x*theta),theta));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_8.gif" width="101" height="47" alt="-theta^alpha*exp(-x*theta)*(-alpha+x*theta)/theta" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>N:=55.4;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>stats[statevalf,cdf,gamma[N, New]](Old*N);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_9.gif" width="46" height="12" alt="N := 55.4" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_10.gif" width="69" height="12" alt=".9500017985" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P1:=plot(N*stats[statevalf,pdf,gamma[N, New]](N*t),t=0..2):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P2:=plot(stats[statevalf,pdf,normald[New,New/sqrt(50.8)]](t),t=0..2,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P1,P2);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br> </b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_11.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>sqrtOld:=1.6;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>New:=1.9;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P:=.05;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>RootNZScore:=evalf((Old-New)/New);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>V:=stats[statevalf,icdf,normald[0,1]](P);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>N:=(V/(RootNZScore))^2;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_12.gif" width="68" height="12" alt="sqrtOld := 1.6" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_13.gif" width="54" height="12" alt="New := 1.9" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_14.gif" width="44" height="12" alt="P := 0.5e-1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_15.gif" width="150" height="12" alt="RootNZScore := -.1578947368" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_16.gif" width="91" height="12" alt="V := -1.644853627" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_17.gif" width="88" height="12" alt="N := 108.5223542" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>N:=101;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>stats[statevalf,cdf,gamma[N, New]](New*N+(Old-New)*N);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_18.gif" width="43" height="12" alt="N := 101" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_19.gif" width="75" height="12" alt="0.4994805266e-1" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P1:=plot(N*stats[statevalf,pdf,gamma[N, New]](N*t),t=0..3):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>P2:=plot(stats[statevalf,pdf,normald[New,New/sqrt(N)]](t),t=0..3,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P1,P2);</font><font color="#ff0000" size="3" face="Monospaced"> </b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_20.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>FindA:=proc(a)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>local bet;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>bet:=(1.3)*a;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>evalf(</font><font color="#ff0000" size="3" face="Monospaced">
+<br>stats[statevalf,cdf,gamma[a, 1/bet]](1)-</font><font color="#ff0000" size="3" face="Monospaced">
+<br>stats[statevalf,cdf,gamma[a, 1/bet]](1/2)</font><font color="#ff0000" size="3" face="Monospaced">
+<br>);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>plot(FindA(a),a=0.1..30);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_21.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Alpha1:=25.3;</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Prob:=FindA(Alpha1);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Beta1:=(1.3)*Alpha1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>P1:=plot(stats[statevalf,pdf,gamma[Alpha1, 1/Beta1]](t),t=0..3):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>P2:=plot(stats[statevalf,pdf,gamma[Alpha1+30, 1/(Beta1 + 1.6*39)]](t),t=0..3,color=blue):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>with(plots):</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>display(P1,P2);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_22.gif" width="52" height="15" alt="Alpha1 := 25.3" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_23.gif" width="108" height="12" alt="Prob := .9003506544" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_24.gif" width="57" height="15" alt="Beta1 := 32.89" align="center">
+</font></p>
+<p align="center"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_25.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>t:=(25.3 + 30)/(32.9 + 30*(1.6));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>1/t;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_26.gif" width="89" height="12" alt="t := .6835599506" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m50w05/files/Burger/BurgerBuddy_27.gif" width="63" height="12" alt="1.462929475" align="center">
+</font></p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Heating rate example--non-interacting fermions</TITLE>
+<META NAME="description" CONTENT="Heating rate example--non-interacting fermions">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node25.html">
+<LINK REL="previous" HREF="node23.html">
+<LINK REL="up" HREF="node20.html">
+<LINK REL="next" HREF="node25.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html525"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html523"
+  HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html517"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html526"
+  HREF="node25.html">Relation to susceptibility</A>
+<B> Up:</B> <A NAME="tex2html524"
+  HREF="node20.html">Review of the linear</A>
+<B> Previous:</B> <A NAME="tex2html518"
+  HREF="node23.html">Stochastic energy spreading</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00324000000000000000"></A>
+<A NAME="sec:fermiheat"></A>
+<BR>
+Heating rate example--non-interacting fermions
+</H2>
+
+<P>
+Once the stochasticity of energy spreading is established,
+the quantum and classical pictures of dissipation coincide.
+Therefore the reader is referred to the general diffusion equation and
+expressions for heating rate in
+Sections&nbsp;<A HREF="node17.html#sec:ediffuse">2.1.4</A> and <A HREF="node18.html#sec:irrev">2.1.5</A> of the classical review.
+In these expressions, the classical <!-- MATH
+ $\tilde{C}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img54.gif"
+ ALT="$\tilde{C}_{{\mbox{\tiny E}}}(\omega)$"> should be replaced by <!-- MATH
+ $\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img243.gif"
+ ALT="$\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)$">,
+and the the classical <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img118.gif"
+ ALT="$g(E)$"> divided by <!-- MATH
+ $(2\pi \hbar)^d$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img326.gif"
+ ALT="$(2\pi \hbar)^d$">.
+
+<P>
+However I will for introductory purposes present here the simple example of
+non-interacting
+fermions in a driven chaotic system.
+This is relevant to nucleons in a deforming chaotic
+nucleus [<A
+ HREF="node161.html#kooninqm">118</A>,<A
+ HREF="node161.html#koonincl">120</A>,<A
+ HREF="node161.html#wall">29</A>], and to electrons in 
+small irregular metal particles[<A
+ HREF="node161.html#wilk90">201</A>], or in quantum dots[<A
+ HREF="node161.html#wlf">15</A>],
+subjected to external driving fields.
+The simplicity arises because all the heating occurs 
+at the Fermi edge.
+The Fermi `occupation function' <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img5.gif"
+ ALT="$f(E)$">
+is the appropriate initial distribution
+of single-particle states: the many-particle
+wavefunction is a Slater determinant
+of these states.
+At low temperatures <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img5.gif"
+ ALT="$f(E)$"> is close to a unit step-function,
+and subsequent diffusion smoothes out the step
+as shown in Fig.&nbsp;<A HREF="node23.html#fig:fermi">2.4</A>.
+One might ask how the exclusion principle affects the
+evolution of the many-particle system: the answer is that at all
+future times the many-particle
+wavefunction is
+correctly given by a Slater determinant of the single-particle states
+(this follows from unitarity of time-evolution, also see [<A
+ HREF="node161.html#wilk90">201</A>]),
+as long as any external interaction can be ignored.
+Thus we can get the heating rate by evolving the single-particle
+distribution function <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img193.gif"
+ ALT="$f$">.
+What follows is therefore identical to the classical case.
+The normalization is such that <!-- MATH
+ $N = \int g(E) f(E)$
+ -->
+<IMG
+ WIDTH="131" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img327.gif"
+ ALT="$N = \int g(E) f(E)$"> gives the number of
+particles in the system.
+
+<P>
+The diffusion equation is <!-- MATH
+ $\dot{f} = (D_{{\mbox{\tiny E}}} f')'$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img328.gif"
+ ALT="$\dot{f} = (D_{{\mbox{\tiny E}}} f')'$"> where a prime means
+<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img109.gif"
+ ALT="$E$">-derivative.
+The rate of increase in ensemble-averaged energy is
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:fermistep"></A>
+<!-- MATH
+ \begin{eqnarray}
+\langle \dot{E} \rangle &\; = \;& \int dE \, E \dot{f}(E) g(E)
+	\; = \;
+	-\int dE \, (E g(E))' D_{{\mbox{\tiny E}}} f' \nonumber \\& = & g(E_{{\mbox{\tiny F}}}) D_{{\mbox{\tiny F}}} ,
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img329.gif"
+ ALT="$\displaystyle \langle \dot{E} \rangle$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img271.gif"
+ ALT="$\textstyle \; = \;$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="337" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img330.gif"
+ ALT="$\displaystyle \int dE \, E \dot{f}(E) g(E)
+\; = \;
+-\int dE \, (E g(E))' D_{{\mbox{\tiny E}}} f'$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img159.gif"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img331.gif"
+ ALT="$\displaystyle g(E_{{\mbox{\tiny F}}}) D_{{\mbox{\tiny F}}} ,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.52)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the boundary term in the integration by parts vanishes, <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img332.gif"
+ ALT="$f'$"> is
+replaced by a negative delta-function, and a constant density
+of states <!-- MATH
+ $g(E_{{\mbox{\tiny F}}})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img333.gif"
+ ALT="$g(E_{{\mbox{\tiny F}}})$"> can be assumed near the Fermi energy.
+The diffusion rate at the Fermi energy I call <!-- MATH
+ $D_{{\mbox{\tiny F}}}$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img334.gif"
+ ALT="$D_{{\mbox{\tiny F}}}$">.
+Heating of the Fermi gas can be interpreted as friction on the
+parameter <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img50.gif"
+ ALT="$x$">.
+The friction coefficient
+<IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img41.gif"
+ ALT="$\mu$"> is defined by <!-- MATH
+ $\langle \dot{E}\rangle =
+\mu \langle \dot{x}^2 \rangle$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img335.gif"
+ ALT="$\langle \dot{E}\rangle =
+\mu \langle \dot{x}^2 \rangle$">. Comparing (<A HREF="node24.html#eq:fermistep">2.52</A>) and
+(<A HREF="node23.html#eq:deval">2.51</A>) gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mu(\omega) \; = \; \frac{g(E_{{\mbox{\tiny F}}})}{2} \tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:mufermi"></A><IMG
+ WIDTH="367" HEIGHT="44" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img336.gif"
+ ALT="\begin{displaymath}
+\mu(\omega) \; = \; \frac{g(E_{{\mbox{\tiny F}}})}{2} \tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.53)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+In the zero-frequency limit, <!-- MATH
+ $\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)\rightarrow \tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(0) \equiv \nu_{{\mbox{\tiny E}}}$
+ -->
+<IMG
+ WIDTH="180" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img337.gif"
+ ALT="$\tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(\omega)\rightarrow \tilde{C}^{{\mbox{\tiny qm}}}_{{\mbox{\tiny E}}}(0) \equiv \nu_{{\mbox{\tiny E}}}$">
+which is the (dc) fluctuations intensity of the observable <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img260.gif"
+ ALT="$\mathcal{F}$">.
+This resulting relation <!-- MATH
+ $\mu = \mbox{\small$\frac{1}{2}$}g(E_{{\mbox{\tiny F}}})  \nu_{{\mbox{\tiny F}}}$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img338.gif"
+ ALT="$\mu = \mbox{\small$\frac{1}{2}$}g(E_{{\mbox{\tiny F}}}) \nu_{{\mbox{\tiny F}}}$">
+is an example of a fluctuation-dissipation relation.
+Different relations arise in different ensembles--for instance
+the canonical ensemble produces the traditional fluctuation-dissipation
+relation at fixed temperature [<A
+ HREF="node161.html#landausp">127</A>,<A
+ HREF="node161.html#dittrich">65</A>,<A
+ HREF="node161.html#doronfrc">46</A>].
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html525"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html523"
+  HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html517"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html526"
+  HREF="node25.html">Relation to susceptibility</A>
+<B> Up:</B> <A NAME="tex2html524"
+  HREF="node20.html">Review of the linear</A>
+<B> Previous:</B> <A NAME="tex2html518"
+  HREF="node23.html">Stochastic energy spreading</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

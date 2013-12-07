@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Truncating the singular generalized eigenproblem</TITLE>
+<META NAME="description" CONTENT="Truncating the singular generalized eigenproblem">
+<META NAME="keywords" CONTENT="thesis_html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis_html.css">
+
+<LINK REL="next" HREF="node61.html">
+<LINK REL="previous" HREF="node59.html">
+<LINK REL="up" HREF="node58.html">
+<LINK REL="next" HREF="node61.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html921"
+  HREF="node61.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html919"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html913"
+  HREF="node59.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html922"
+  HREF="node61.html">Choice of for truncation</A>
+<B> Up:</B> <A NAME="tex2html920"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<B> Previous:</B> <A NAME="tex2html914"
+  HREF="node59.html">Numerical rank of the</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00632000000000000000"></A>
+<A NAME="sec:trunc"></A>
+<BR>
+Truncating the singular generalized eigenproblem
+</H2>
+
+<P>
+Following [<A
+ HREF="node161.html#v+s">195</A>,<A
+ HREF="node161.html#verginithesis">194</A>], the
+singular eigenproblem (<A HREF="node58.html#eq:geneigprob">5.14</A>) is handled by
+restriction of the solution vector
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$"> to the non-singular subspace of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$">.
+This means that the numerical null-space of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> is ignored.
+We have seen above (see Fig.&nbsp;<A HREF="node58.html#fig:fevecs">5.4</A>) that this null-space
+corresponds to directions in <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$"> which do not contribute to <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$">
+inside the billiard to more than an accuracy of <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $">.
+There is an exception: if <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$"> is very close to one of the <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img685.gif"
+ ALT="$k_\mu$">, then
+restriction of tension to <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> does not guarantee small values
+inside, however the only non-small <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> which can possibly exist is
+the eigenfunction <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img640.gif"
+ ALT="$\psi_\mu$"> itself which is already represented.
+In conclusion it is fine to ignore this subspace.
+
+<P>
+Diagonalizing <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> gives <!-- MATH
+ $F = V \Lambda V^{{\mbox{\tiny T}}}$
+ -->
+<IMG
+ WIDTH="91" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img738.gif"
+ ALT="$F = V \Lambda V^{{\mbox{\tiny T}}}$"> where <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$"> is
+orthogonal
+and <!-- MATH
+ $\Lambda = \mbox{diag}(\lambda^F_1 \cdots \lambda^F_N)$
+ -->
+<IMG
+ WIDTH="156" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img739.gif"
+ ALT="$\Lambda = \mbox{diag}(\lambda^F_1 \cdots \lambda^F_N)$">.
+This representation of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> is now <EM>truncated</EM> by removing
+the eigenvalues smaller than <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $"> thus:
+<!-- MATH
+ $\Lambda_r = \mbox{diag}(\lambda^F_1 \cdots \lambda^F_{N_r})$
+ -->
+<IMG
+ WIDTH="168" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img740.gif"
+ ALT="$\Lambda_r = \mbox{diag}(\lambda^F_1 \cdots \lambda^F_{N_r})$">, assuming
+descending eigenvalue order.
+<IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img741.gif"
+ ALT="$V_r$"> is set to the corresponding first <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img733.gif"
+ ALT="$N_r$"> columns of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img188.gif"
+ ALT="$V$">.
+The transformation
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G{\mathbf x} = \lambda F{\mathbf x} \hspace{0.2in}\hspace{0.2in}\longrightarrow \hspace{0.2in}\hspace{0.2in}
+	G'_r {\mathbf x}'_r = \lambda {\mathbf x}'_r
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:geneigtrans"></A><IMG
+ WIDTH="429" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img742.gif"
+ ALT="\begin{displaymath}
+G{\mathbf x} = \lambda F{\mathbf x} \hspace{0.2in}\hspace{0...
+...n}\hspace{0.2in}
+G'_r {\mathbf x}'_r = \lambda {\mathbf x}'_r
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+then follows, with the truncated <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$">-representation of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> defined
+by
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G'_r = \Lambda_r^{-1/2} V_r^{{\mbox{\tiny T}}} G V_r \Lambda_r^{-1/2} .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:truncfrepg"></A><IMG
+ WIDTH="374" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img743.gif"
+ ALT="\begin{displaymath}
+G'_r = \Lambda_r^{-1/2} V_r^{{\mbox{\tiny T}}} G V_r \Lambda_r^{-1/2} .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The eigenvectors are transformed forwards and backwards by
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\mathbf x}'_r = \Lambda_r^{1/2} V_r^{{\mbox{\tiny T}}} {\mathbf x}
+	\hspace{0.2in}\leftrightarrow \hspace{0.2in}
+	{\mathbf x} = V_r \Lambda_r^{-1/2} {\mathbf x}'_r .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:truncevecs"></A><IMG
+ WIDTH="428" HEIGHT="31" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img744.gif"
+ ALT="\begin{displaymath}
+{\mathbf x}'_r = \Lambda_r^{1/2} V_r^{{\mbox{\tiny T}}} {\m...
+...ce{0.2in}
+{\mathbf x} = V_r \Lambda_r^{-1/2} {\mathbf x}'_r .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+There is ambiguity in the latter relation since any vector in the
+numerical null-space could be added to <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img79.gif"
+ ALT="${\mathbf x}$">, but by design this
+is not numerically significant when it comes to the resulting wavefunction
+<!-- MATH
+ $\psi{({\mathbf r})}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img647.gif"
+ ALT="$\psi{({\mathbf r})}$"> in <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img653.gif"
+ ALT="$\mathcal{D}$">.
+
+<P>
+Therefore the recipe is to diagonalize <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$">, choose <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img17.gif"
+ ALT="$\epsilon $">
+and construct <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img745.gif"
+ ALT="$\Lambda_r$"> and
+<IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img741.gif"
+ ALT="$V_r$">. Then to construct <IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img746.gif"
+ ALT="$G'_r$">, which is diagonalized to give
+eigenvalues <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img712.gif"
+ ALT="$\lambda_n$"> and unit-norm eigenvectors <!-- MATH
+ ${\mathbf x}_r^{\prime (n)}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img747.gif"
+ ALT="${\mathbf x}_r^{\prime (n)}$">, for
+<!-- MATH
+ $n = 1 \cdots N_r$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img748.gif"
+ ALT="$n = 1 \cdots N_r$">. Finally the eigenvectors are rotated back using the
+second relation of
+(<A HREF="node60.html#eq:truncevecs">5.17</A>), to give <!-- MATH
+ ${\mathbf x}^{(n)}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img715.gif"
+ ALT="${\mathbf x}^{(n)}$">.
+In order to give the correct normalization <!-- MATH
+ ${\mathbf x}^{{\mbox{\tiny T}}}G {\mathbf x} = 1$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img749.gif"
+ ALT="${\mathbf x}^{{\mbox{\tiny T}}}G {\mathbf x} = 1$">,
+corresponding to unit wavefunction normalization in the billiard,
+the eigenvectors <!-- MATH
+ ${\mathbf x}^{(n)} / \lambda_n^{1/2}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img750.gif"
+ ALT="${\mathbf x}^{(n)} / \lambda_n^{1/2}$"> should be used.
+In particular, the `best' match to the BCs is given by the
+largest eigenvalue <IMG
+ WIDTH="47" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img751.gif"
+ ALT="$n=1$">.
+The corresponding tension of this best
+normalized wavefunction is then <!-- MATH
+ $\lambda_1^{-1}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img82.gif"
+ ALT="$\lambda_1^{-1}$">.
+This recipe was used to generate Fig.&nbsp;<A HREF="node57.html#fig:tensmin">5.2</A> by sweeping over <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img15.gif"
+ ALT="$k$">.
+
+<P>
+Note that it would also be possible to select the null-space using
+a different criterion. For instance since (<A HREF="node58.html#eq:geneigprob">5.14</A>) is really
+symmetric between <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img16.gif"
+ ALT="$F$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$">, the numerical null-space of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img18.gif"
+ ALT="$G$"> could be
+used instead. Since both are sensitive to <IMG
+ WIDTH="16" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="http://www.math.dartmouth.edu/~ahb/thesis_html/img644.gif"
+ ALT="$\psi$"> inside the billiard only,
+this would be equally valid. However, it will be convenient to remain with the
+above choice for reasons apparent in Section&nbsp;<A HREF="node62.html#sec:normmatrix">5.4</A>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html921"
+  HREF="node61.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/next.png"></A> 
+<A NAME="tex2html919"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/up.png"></A> 
+<A NAME="tex2html913"
+  HREF="node59.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://monsoon.harvard.edu/~barnett/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html922"
+  HREF="node61.html">Choice of for truncation</A>
+<B> Up:</B> <A NAME="tex2html920"
+  HREF="node58.html">Representation by a Helmholtz</A>
+<B> Previous:</B> <A NAME="tex2html914"
+  HREF="node59.html">Numerical rank of the</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Alex Barnett
+2001-10-03
+</ADDRESS>
+</BODY>
+</HTML>

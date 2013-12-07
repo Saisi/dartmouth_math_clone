@@ -1,0 +1,298 @@
+body {
+	font-size: 100%;
+	background: white;
+	margin: 0 0 0 0;
+	}
+
+
+td.aligned {
+	text-align: left;
+	vertical-align: top;
+}
+
+td.topnav { 
+	background-color: #006225;
+	}
+
+td.HRsidenav {
+	background-color: #EDEAD3;
+	vertical-align: middle;
+	}
+
+td.HRsidenav2 {
+	background-color: #EDEAD3;
+	}
+
+td.HRsidenavon { 
+	background-color: #fff;
+	}
+
+td.vertical
+	{
+	background-image: url("http://www.dartmouth.edu/kemeny/images/bkg-vertical.gif");
+	background-repeat: repeat-y;
+	}
+
+a:link { 
+	color: #847922; 
+	}
+
+a:active { 
+	color: #C97018; 
+	}
+
+a:visited { 
+	color: #9E9A7F;
+	}
+
+a.decade {
+	color: #006225;
+	text-decoration: none;
+	}
+
+a.decade:visited {
+	color: #7C7C7C;
+	text-decoration: none;
+	}
+
+a.decade:active {
+	color: #00CE4E;
+	text-decoration: none;
+	}
+
+a.headline {
+	color: #333333;
+	}
+
+a.headline:visited {
+	color: #666666;
+	}
+
+a.headline:active {
+	color: #000000;
+	}
+
+a.decade-on {
+	color: #006225;
+	text-decoration: none;
+	background: #fff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	}
+
+a.decade-on:visited {
+	color: #7C7C7C;
+	text-decoration: none;
+	background: #fff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	}
+
+a.decade-on:active {
+	color: #00CE4E;
+	text-decoration: none;
+	background: #fff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	}
+
+a.side {
+	color: #006225;
+	}
+
+a.side:visited {
+	color: #006225;
+	}
+
+a.side:active {
+	color: #00CE4E;
+	}
+	
+p, h1, h2, h3, h4, h5, ul {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	}
+
+h2 {
+	color: 006225;
+	margin-left: 20px;
+	margin-top: 10px;
+	padding-left: 20px;
+	padding-top: 10px;
+	}
+
+
+p {
+	font-size: 0.75em;
+	line-height: 1.5em;
+	}	
+
+.sidenav {
+	color: #006225;
+	font-weight: bold;
+	margin-top: 2px;
+	margin-right: 10px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+	padding: 2px 2px;
+	}	
+
+.rownav {
+	color: #B1B1B1;
+	font-weight: bold;
+	margin-top: 2px;
+	margin-right: 10px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+	padding: 2px 2px;
+	}
+
+.hrbody {
+	color: #333333;
+	margin-left: 20px;
+	margin-top: 10px;
+	padding-left: 20px;
+	padding-top: 10px;
+	}
+
+.hrbody2 {
+	color: #333333;
+	margin-left: 12px;
+	margin-top: 10px;
+	padding-left: 12px;
+	padding-top: 10px;
+	}
+
+.hrbody3 {
+	color: #333333;
+	margin-top: 5px;
+	padding-top: 5px;
+	}
+
+.hrbody4 {
+	color: #333333;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 20px;
+	}
+
+
+.year {
+	color: #006225;
+	font-weight: bold;
+	}
+
+.name {
+	color: #333333;
+	}
+
+.subhead {
+	color: #006225;
+	font-weight: bold;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 2px 2px;
+	}
+
+.key {
+	color: #333333;
+	font-family: Arial, Sans-Serif;
+	}
+
+.leadgift {
+	color: #006225;
+	font-weight: bold;
+	margin-left: 80px;
+	margin-bottom: 10px;
+	padding-left: 80px;
+	padding-bottom: 10px;
+	}
+
+.leadgift2 {
+	color: #006225;
+	font-size: 0.70em;
+	line-height: 1.5em;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	padding-bottom: 1px;
+	}
+
+H2.notpadded {
+	color: #006225;
+	margin-top: 0px;
+	padding-top: 0px;
+	}
+
+.charttext  {
+	color: #5d5d5d;
+	margin-top: 12px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	}
+
+.charttext2  {
+	color: #5d5d5d;
+	margin-top: 4px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	}
+
+.caption-green  {
+	color: #006225;
+	margin-top: 4px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	}
+
+.formhint {
+	color: #5d5d5d;
+	}
+
+.formleft {
+	color: #5d5d5d;
+	}
+
+.caption {
+	color: #5d5d5d;
+	}
+
+.footer {
+	color: #8f8f8f;
+	margin-left: 25px;
+	}
+
+form
+{
+	color: #5d5d5d;
+	font-size: 0.75em;
+	font-family: Arial, Helvetica, Verdana, Sans-Serif;
+}
+

@@ -1,0 +1,250 @@
+<STYLE TYPE="text/css">
+<!--
+
+* {color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+H2 {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 17px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+H2.red {
+  color: red;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 17px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+H3 {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 14px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+H3.red {
+  color: red;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 14px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+B {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+B.red {
+  color: red;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+
+TH {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+TD {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+
+SMALL {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 10px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+bold14pt {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 14px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+normal14pt {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 14px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+normal18pt {
+  color: black;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 18px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+normal24pt {
+  color: #000000;  /* can use hex codes for colors */
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 24px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+A {
+  color: navy;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+A:hover {
+  color: red;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+A.bold {
+  color: navy;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+A:hover.bold {
+  color: red;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-variant: normal;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+A.small {
+  color: navy;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 10px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+A:hover.small {
+  color: red;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 10px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+-->
+</STYLE>

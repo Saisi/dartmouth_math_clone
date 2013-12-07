@@ -1,0 +1,156 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>RandChance.html</title>
+<!-- Created by Maple 9.00, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>randomize();</font><font color="#ff0000" size="3" face="Monospaced">
+<br> R:=rand();</font><font color="#ff0000" size="3" face="Monospaced">
+<br> randomize(R);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> RandomStudent:=proc(L);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> L[stats[random,discreteuniform[1,nops(L)]](1)];</font><font color="#ff0000" size="3" face="Monospaced">
+<br> end:</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced"> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> with(combinat, randperm):</font><font color="#ff0000" size="3" face="Monospaced">
+<br> with(linalg):</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> Groups :=proc(L,n)</font><font color="#ff0000" size="3" face="Monospaced">
+<br> local R,i,k,k1,j,l,H,K;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> R := randperm(nops(L));</font><font color="#ff0000" size="3" face="Monospaced">
+<br> k1:=nops(L)/n;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> k:=floor(k1);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> K:=[];</font><font color="#ff0000" size="3" face="Monospaced">
+<br> for i from 0 to k-1 do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> H:=[i+1];</font><font color="#ff0000" size="3" face="Monospaced">
+<br> for j from 1 to n do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> H:=[op(H),L[R[n*i+j]]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> K:=[op(K),H];</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> if nops(L)-n*k &gt; 0</font><font color="#ff0000" size="3" face="Monospaced">
+<br> then</font><font color="#ff0000" size="3" face="Monospaced">
+<br> H:=[k+1];</font><font color="#ff0000" size="3" face="Monospaced">
+<br> for l from n*k+1 to nops(L)</font><font color="#ff0000" size="3" face="Monospaced">
+<br> do</font><font color="#ff0000" size="3" face="Monospaced">
+<br> H:=[op(H),L[R[l]]];</font><font color="#ff0000" size="3" face="Monospaced">
+<br> od;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> K:=[op(K),H];</font><font color="#ff0000" size="3" face="Monospaced">
+<br> fi;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> K;</font><font color="#ff0000" size="3" face="Monospaced">
+<br> matrix(K);</font><font color="#ff0000" size="3" face="Monospaced">
+<br> end:</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_1.gif" width="60" height="12" alt="1073418825" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_2.gif" width="96" height="12" alt="R := 971862653323" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_3.gif" width="72" height="12" alt="971862653323" align="center">
+</font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the protected names norm and trace have been redefined and unprotected</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Class:=[</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Anne S. Abbott",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Andrea M. B. Abeita",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "David M. Anderson",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Gillian M. Apps",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "James H. Austin V",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Kelly E. Baker",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Hillary L. Bakker",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Anne E. Bellerose",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Gino A. Beniamino",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Katherine L. Berry",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Katharine A. Birchall",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Paul T. Bode",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Jordan S. Boss",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Elizabeth J. Bultman",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Sarah Q. Chaudhry",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Katharine Chen",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Katieanne P. Christian",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Grace Y. Chung",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Ryan J. Counter",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Mariah P. Cunnick",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Robin M. Deliso",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Kaylie Dienelt",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Alexander M. Dinn",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Krista M. Dornfried",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Alexandra V. Garrison",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Lydia J. Gensheimer",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "A. Clare Gupta",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Laurence A. Hedden",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Matthew R. Heineman",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Marlon A. Henry",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Christine M. Huggins",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Bertina R. Jones",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Roselinde Kaiser",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Scott L. Kennedy",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Jennifer L. Kleinman",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Christin H. Lathrop",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Curtis B. Leitner",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Alexandra S. Levine",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Austin M. Lewis",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "E. Amory Loring",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Megan E. Lukaniec",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Heather F. Luntz",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Joshua J. Marcuse",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Megan L. McCulloch",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Kelly G. Mothner",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Sean S. Oh",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Mirelle Q. Phillips",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Samuel S. Rendall",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Jarrod R. Shoemaker",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Jamila D. Smith",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Megan E. Spillane",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Sarah E. Stoller",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Travis J. Tyler",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Pooja G. Viswanath",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Richard M. Winn",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Brandon R. Wright",</font><font color="#ff0000" size="3" face="Monospaced">
+<br>"Yifat Tamir",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "G. Andrew Mackin",</font><font color="#ff0000" size="3" face="Monospaced">
+<br> "Daniel E. Racic",</font><font color="#ff0000" size="3" face="Monospaced">
+<br>" Alexandra L. Topping"</font><font color="#ff0000" size="3" face="Monospaced">
+<br> ];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_4.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_5.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_6.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_7.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_8.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_9.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_10.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_11.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_12.gif" width="862" height="12" alt="Class := ["Anne S. Abbott", "Andrea M. B. Abeita", "David M. Anderson", "Gillian M. Apps", "James H. Austin V", "Kelly E. Baker", "Hillary L. Bakker", "Anne E. Bellerose", "Gino A. Beniamino", "Kather..." align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>"Here is the program selects a random student":</font><font color="#ff0000" size="3" face="Monospaced">
+<br> </font><font color="#ff0000" size="3" face="Monospaced">
+<br> RandomStudent(Class);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_13.gif" width="97" height="12" alt=""Megan E. Spillane"" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>"Here is the program that divides the class randomly into groups. The 5 below is the size of the groups, and you can change it to whatever you'd like. (If there are too few students in the final row I usually use the, to increase the size of any sparsely populated groups.":</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>Groups(Class,5);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="http://www.math.dartmouth.edu/~m5w04/files/images/RandChance_14.gif" width="770" height="301" alt="matrix([[1, "Elizabeth J. Bultman", "Megan L. McCulloch", "G. Andrew Mackin", "Ryan J. Counter", "E. Amory Loring"], [2, "Jordan S. Boss", "Megan E. Lukaniec", "Marlon A. Henry", "Bertina R. Jones", "..." align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

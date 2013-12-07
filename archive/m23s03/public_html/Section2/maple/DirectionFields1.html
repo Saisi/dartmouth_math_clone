@@ -1,0 +1,149 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>DirectionFields.html</title>
+<!-- Created by Maple 7.00, IBM INTEL LINUX -->
+</head>
+<body bgcolor="FFFFFF">
+<basefont size=3>
+<a name="MapleAutoBookmark1">
+<p align=left>
+</p>
+<p align=left>
+<b><font color=#000000 size=5>Introduction to differential equations. Direction fields</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>The following is a Maple command, and you should ignore it for the moment. It loads</font>
+</p>
+<p align=left>
+<font color=#000000>the package that deals with D(ifferential)E(quations).</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(DEtools):</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000> </font>
+<b><u><font color=#000000>Example 1.</font></u></b>
+</p>
+<p align=left>
+<font color=#000000>Next we enter a differential equation. The function diff(x(t),t) should simply be thought of as dx/dt.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(x(t),t)=1:</font></b>
+</p>
+<p align=left>
+<font color=#000000>And here comes its direction field:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE ,x(t), t=-3..3, x=-3..3, color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s03/Section2/maple/images/DirectionFields1.gif" width=529 height=490 alt="[Maple Plot]">
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>We can also draw the graphs of the solutions for some initial value problems.</font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( diff(x(t),t)=1 , x(t), t=-3..3, x=-3..3,<br>
+[[x(0)=0], [x(0)=1], [x(0)=2]], arrows=SMALL, <br>
+dirgrid=[30, 30], stepsize=.1,<br>
+linecolor=[red,black,green], color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s03/Section2/maple/images/DirectionFields2.gif" width=525 height=520 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000> </font>
+</p>
+<p align=left>
+<b><u><font color=#000000>Example 2.</font></u></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(x(t),t)=x(t):</font></b>
+</p>
+<p align=left>
+<font color=#000000>has direction field as follows:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( DE ,x(t), t=-3..3, x=-3..3, color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s03/Section2/maple/images/DirectionFields3.gif" width=587 height=521 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000>Again we can plot some solutions.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot( diff(x(t),t)=x(t), x(t), t=-3..3, x=-3..3,<br>
+[[x(0)=0], [x(0)=1], [x(0)=-2]], arrows=SMALL, <br>
+dirgrid=[30, 30], stepsize=.1,<br>
+linecolor=[RED,black,green], color=BLUE);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s03/Section2/maple/images/DirectionFields4.gif" width=521 height=511 alt="[Maple Plot]">
+</p>
+<p align=left>
+</p>
+<p align=left>
+<b><u><font color=#000000>Example 3.</font></u></b>
+</p>
+<p align=left>
+<font color=#000000>The equation   x''+x = 0.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DE := diff(x(t),t$2)=-x(t):</font></b>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>WARNING!  One cannot always draw the direction fields... :O(</font>
+</p>
+<p align=left>
+<font color=#000000>But once some initial conditions have been specified, the corresponding solution can be graphed. </font>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot(DE,x(t),t=-1.5*Pi..1.5*Pi,x=-1.5..1.5, [[x(0)=0,D(x)(0)=1],[x(0)=1,D(x)(0)=0]], linecolour=[red,green], stepsize=.05);</font></b>
+</p>
+<p align=center>
+<img src="http://www.math.dartmouth.edu/~m23s03/Section2/maple/images/DirectionFields5.gif" width=484 height=283 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000>(Big Q:   HOW did Maple do the graphs above?)</font>
+</p>
+<p align=center>
+<font color=#AAAAAA size="-1">
+Maple
+<sup>TM</sup> is a registered trademark of <a href="http://www.maplesoft.com" target=new><font color=#AAAAAA size="-1">Waterloo Maple Inc.</font></a><br>
+<font color=#AAAAAA size="-2">Math rendered by 
+<a href="http://www.dessci.com" target=new>
+<font color=#AAAAAA size="-2">
+WebEQ
+</font>
+</a>
+</font>
+</font>
+</p>
+</basefont>
+</body>
+</html>
